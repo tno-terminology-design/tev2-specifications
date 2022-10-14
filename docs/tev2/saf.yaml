@@ -43,6 +43,8 @@ scopes:  #
 #
 versions:
 - vsntag: mrgtest # this version MUST only be used for testing the MRG generator
+  altvsntags: # alternative verstiontags
+    - testing
   termselcrit:
   - "*@tev2" # import all tev2 terms.
 - vsntag: v0.1

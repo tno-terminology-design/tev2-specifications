@@ -41,7 +41,7 @@ A Machine Readable Glossary (MRG) is a YAML (or JSON) file that has three sectio
 ~~~ yaml
 terminology: # the fields below must match the corresponding data in the SAF
   scopetag: tev2 # scope, the terminology of which is contained in this MRG
-  scopedir: https://github.com/essif-lab/framework/tree/master/docs/tev2
+  scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/tev2
   curatedir: terms
   vsntag: v0.9.4
   altvsntags: [ latest ]

@@ -1,15 +1,15 @@
 const path = require('path');
 module.exports = {
-  title: 'eSSIF-Lab',
+  title: 'TEv2 Specifications',
   tagline: 'eSSIF-Lab Framework',
-  url: 'https://essif-lab.github.io',
-  baseUrl: process.env.STAGING && process.env.STAGING === 'true' ? '/framework/' : '/',
+  url: 'https://tno-terminology-design/tev2-specifcations.github.io',
+  baseUrl: process.env.STAGING && process.env.STAGING === 'true' ? '/tev2-specifications/' : '/',
   favicon: 'images/favicon.ico',
-  organizationName: 'essif-lab',
-  projectName: 'framework',
+  organizationName: 'tno-terminology-design',
+  projectName: 'tev2-specifications',
   onBrokenLinks: 'log',
   scripts: [
-    { src: '/framework/js/fix-location.js',
+    { src: '/tev2-specifications/js/fix-location.js',
       async: false,
       defer: false,
     },
@@ -22,60 +22,39 @@ module.exports = {
       },
     },
     navbar: {
-      // title: 'ESSIF-Lab',
-      logo: { src: 'images/essif-lab-logo.png', },
+      // title: 'TEv2',
+      logo: { src: 'images/TEv2-logo.png', },
       items: [
-        { to: 'docs/essifLab',                    label: 'eSSIF-Lab',     position: 'left'},
-        { to: 'docs/essifLab-project',            label: 'EU Project',    position: 'left'},
-        { to: 'docs/essifLab-pattern-list',       label: 'Mental Models', position: 'left'},
-        { to: 'docs/essifLab-glossary',           label: 'Glossary',      position: 'left'},
-        { to: 'docs/tev1/terminology-engine-v1',  label: 'TEv1',          position: 'right'},
-        { to: 'docs/tev2/tev2-overview',          label: 'TEv2',          position: 'right'},
+        { to: 'docs/tev2/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
         { to: 'docs/terminology-design/overview', label: 'Terminology Design', position: 'right'},
-        { href: 'https://github.com/essif-lab/framework', label: 'Github', position: 'right',
+        { href: 'https://github.com/tno-terminology-design/tev2-specifications', label: 'Github',     position: 'right',
         },
       ],
     },
     footer: {
       style: 'dark',
       links: [
-        { title: 'eSSIF-Lab',
-          items: [
-            { label: 'Community',  to: 'docs/essifLab' },
-            { label: 'Vision',     to: 'docs/essifLab-vision' },
-            { label: 'Objectives', to: 'docs/essifLab-objectives' },
-            { label: 'Principles', to: 'docs/essifLab-principles' },
-          ],
-        },
-        {
-          title: 'EU Project',
-          items: [
-            { label: 'Project', to: 'docs/essifLab-project' },
-            { label: 'Project website',  href: 'https://essif-lab.eu/' },
-            { label: '*Project* gitlab', href: 'https://gitlab.grnet.gr/essif-lab/essif-lab', },
-          ],
-        },
-        {
-          title: 'eSSIF-lab Framework',
-          items: [
-            { label: 'Framework', to: 'docs/essifLab-fw' },
-            // { label: 'Governance', to: 'docs/essifLab-fw-governance' },
-            // { label: 'Business-architecture', to: 'docs/essifLab-fw-bus-arch' },
-            { label: 'Conceptual architecture', to: 'docs/essifLab-fw-conceptual-architecture-framework' },
-          ],
-        },
-        {
-          title: 'eSSIF-lab Terminology',
-          items: [
-            { label: 'Introduction',  to: 'docs/essifLab-collaborative-understanding' },
-            { label: 'Glossary',      to: 'docs/essifLab-glossary' },
-            { label: 'Mental Models', to: 'docs/essifLab-pattern-list' },
-            { label: 'Github', href: 'https://github.com/essif-lab/framework/tree/master/docs/terms' },
-          ],
-        },
+        // {
+        //   title: 'TEv2 Specifications',
+        //   items: [
+        //     { label: 'Introduction',  to: 'docs/essifLab-collaborative-understanding' },
+        //     { label: 'Glossary',      to: 'docs/essifLab-glossary' },
+        //     { label: 'Mental Models', to: 'docs/essifLab-pattern-list' },
+        //     { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
+        //   ],
+        // },
+        // {
+        //   title: 'Terminology Design',
+        //   items: [
+        //     { label: 'Introduction',  to: 'docs/essifLab-collaborative-understanding' },
+        //     { label: 'Glossary',      to: 'docs/essifLab-glossary' },
+        //     { label: 'Mental Models', to: 'docs/essifLab-pattern-list' },
+        //     { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
+        //   ],
+        // },
       ],
       copyright: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-                    <span property="dct:title">The eSSIF-Lab Framework</span> is licensed under
+                    <span property="dct:title">The TEv2 specifications</span> are licensed under
                     <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
                     CC BY-SA 4.0
                       <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
@@ -84,9 +63,7 @@ module.exports = {
                              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
                       <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
                              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
-                    </a>.&nbsp&nbsp(Copyright © 2019-${new Date().getFullYear()} by <span property="cc:attributionName">eSSIF-Lab</span>).</p>
-                    Work mostly funded under EU H2020 Research and Innovation Programme
-                     - Grant Agreement Nº <a href=https://cordis.europa.eu/project/id/871932>871932</a>.`,
+                    </a>.&nbsp&nbsp(Copyright © 2022-${new Date().getFullYear()} by <span property="cc:attributionName">TNO</span>).</p>
     },
   },
   presets: [
@@ -95,7 +72,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/essif-lab/framework/blob/master/',
+          editUrl: 'https://github.com/tno-terminology-design/tev2-specifications/blob/master/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           breadcrumbs: false,
@@ -108,13 +85,13 @@ module.exports = {
   ],
   plugins: [
     [
-      '@docusaurus-terminology/parser',
-      { termsDir: './docs/terms',
-        glossaryFilepath: './docs/glossary.md',
-        noParseFiles: ['./docs/tev1/terminology-engine-v1.mdx'],
-        glossaryPatternSeparator: '^',
-        glossaryTermPatterns: ['term', 'concept']
-      }
+      // '@docusaurus-terminology/parser',
+      // { termsDir: './docs/terms',
+      //   glossaryFilepath: './docs/glossary.md',
+      //   noParseFiles: ['./docs/tev1/terminology-engine-v1.mdx'],
+      //   glossaryPatternSeparator: '^',
+      //   glossaryTermPatterns: ['term', 'concept']
+      // }
     ]
   ]
 };

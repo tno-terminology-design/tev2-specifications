@@ -7,16 +7,15 @@
 #
 scope:
   scopetag: tev2 # identifier that curators have determined for this terminology
-  scopedir: https://github.com/essif-lab/framework/tree/master/docs/tev2  # URL of the scope-directory
+  scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/tev2  # URL of the scope-directory
   curatedir: terms # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
   glossarydir: glossaries # directory where all glossary files and GDFs are located. Full URL is `scopedir`/`glossarydir`
   mrgfile: mrg-tev2-test.yaml # file that contains the (default) machine readable glossary. Full URL is `scopedir`/`mrgfile`
   hrgfile: glossary-tev2 # file that contains the (default) human readable glossary. Full URL is `scopedir`/`hrgfile`
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for terminological artifacts in this scope
-  issues: https://github.com/essif-lab/framework/issues # URL where issues can be raised and handled
-  website: https://essif-lab.github.io/framework/docs/tev2 # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Tterminology.
-  slack: https://trustoverip.slack.com/archives/C01BBNGRPUH # slack channel for discussions
+  issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled
+  website: https://tno-terminology-design.github.io/tev2-specifications/docs/tev2 # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Tterminology.
   curators: # contacting individual curators
   - name: RieksJ
     email: # we split up the email address to reduce the likelihood of the address being harvested for spamming

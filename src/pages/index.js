@@ -41,14 +41,14 @@ function Home() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
+          {/* <div className={styles.buttons}>
             <Link
               className={classnames(
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/essifLab')}>
-              Getting Started
+              to={useBaseUrl('docs/tev2/tev2-overview')}>
+              Terminology Engine v2
             </Link>
             &nbsp;&nbsp;&nbsp;
             <Link
@@ -56,17 +56,17 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/essifLab-project')}>
-              The EU Project
+              to={useBaseUrl('docs/terminology-design/overview')}>
+              Terminology Design
             </Link>
-          </div>
+          </div> */}
         </div>
       </header>
       <main>
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              <CustomFeature />
+              {/* <CustomFeature /> */}
             </div>
           </div>
         </section>

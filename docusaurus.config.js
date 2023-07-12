@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   title: 'TNO Terminology Design',
-  tagline: 'Toolbox Specifications and Methods',
+  tagline: 'Toolbox Specifications and Design Methods',
   url: 'https://tno-terminology-design.github.io',
   baseUrl: '/tev2-specifications/',
   favicon: 'images/logos/logo-tno-terminology-design.ico',
@@ -22,7 +22,7 @@ module.exports = {
       },
     },
     navbar: {
-      // title: 'TEv2',
+      title: 'Home',
       logo: { src: 'images/logos/tev2-new-babylon-medium.png', },
       items: [
         { to: 'docs/tev2/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
@@ -34,27 +34,42 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        // {
-        //   title: 'TEv2 Specifications',
-        //   items: [
-        //     { label: 'Introduction',  to: 'docs/essifLab-collaborative-understanding' },
-        //     { label: 'Glossary',      to: 'docs/essifLab-glossary' },
-        //     { label: 'Mental Models', to: 'docs/essifLab-pattern-list' },
-        //     { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
-        //   ],
-        // },
-        // {
-        //   title: 'Terminology Design',
-        //   items: [
-        //     { label: 'Introduction',  to: 'docs/essifLab-collaborative-understanding' },
-        //     { label: 'Glossary',      to: 'docs/essifLab-glossary' },
-        //     { label: 'Mental Models', to: 'docs/essifLab-pattern-list' },
-        //     { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
-        //   ],
-        // },
+        {
+          title: 'Terminology Design',
+          items: [
+            { label: 'Introduction',  to: 'docs/terminology-design/overview' },
+            { label: 'Methods',       to: 'docs/terminology-design/methods' },
+            { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
+          ],
+        },
+        {
+          title: 'TEv2 User Manuals',
+          items: [
+            { label: 'Curators',      to: 'docs/tev2/manuals/curator' },
+            { label: 'Contributors',  to: 'docs/tev2/manuals/contributor' },
+            { label: 'Authors',       to: 'docs/tev2/manuals/author' },
+            // { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
+          ],
+        },
+        {
+          title: 'TEv2 Specifications',
+          items: [
+            { label: 'Files',     to: 'docs/tev2/tev2-spec-files' },
+            { label: 'Syntaxes',  to: 'docs/tev2/tev2-syntax' },
+            { label: 'Toolbox',   to: 'docs/tev2/tev2-toolbox' },
+            { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
+          ],
+        },
+        {
+          title: 'Toolbox Repositories',
+          items: [
+            { label: 'MRGT',  href: 'https://github.com/trustoverip/ctwg-toolkit-mrg' },
+            { label: 'TRRT',  href: 'https://github.com/tno-terminology-design/trrt' },
+          ],
+        },
       ],
       copyright: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-                    <span property="dct:title">The TEv2 specifications</span> are licensed under
+                    <span property="dct:title">The TNO Terminology Design texts in this website</span> are licensed under
                     <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
                     CC BY-SA 4.0
                       <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"

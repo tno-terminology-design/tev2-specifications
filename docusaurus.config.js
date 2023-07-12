@@ -63,7 +63,7 @@ module.exports = {
                              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
                       <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
                              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
-                    </a>.&nbsp&nbsp(Copyright © 2022-${new Date().getFullYear()} by <span property="cc:attributionName">TNO</span>).</p>
+                    </a>.&nbsp&nbsp(Copyright © 2022-${new Date().getFullYear()} by <span property="cc:attributionName">TNO</span>).</p>`
     },
   },
   presets: [

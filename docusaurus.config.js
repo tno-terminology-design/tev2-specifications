@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
   title: 'TNO Terminology Design',
   tagline: 'Toolbox Specifications and Methods',
-  url: 'https://tno-terminology-design.github.io/tev2-specifcations/docs/tev2/tev2-overview',
+  url: 'https://tno-terminology-design.github.io',
   baseUrl: process.env.STAGING && process.env.STAGING === 'true' ? '/tev2-specifications/' : '/',
   favicon: 'images/favicon.ico',
   organizationName: 'tno-terminology-design',

@@ -82,9 +82,9 @@ module.exports = {
         },
       },
     ],
-  ],
-  plugins: [
-    [
+  ]
+  // plugins: [
+    // [
       // '@docusaurus-terminology/parser',
       // { termsDir: './docs/terms',
       //   glossaryFilepath: './docs/glossary.md',
@@ -92,6 +92,6 @@ module.exports = {
       //   glossaryPatternSeparator: '^',
       //   glossaryTermPatterns: ['term', 'concept']
       // }
-    ]
-  ]
+    // ]
+  // ]
 };

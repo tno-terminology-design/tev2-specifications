@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Toolbox Specifications and Methods',
   url: 'https://tno-terminology-design.github.io',
   baseUrl: '/tev2-specifications/',
-  favicon: 'images/favicon.ico',
+  favicon: 'images/logos/logo-tno-terminology-design.ico',
   organizationName: 'tno-terminology-design',
   projectName: 'tev2-specifications',
   onBrokenLinks: 'log',
@@ -23,10 +23,10 @@ module.exports = {
     },
     navbar: {
       // title: 'TEv2',
-      logo: { src: 'images/TEv2-logo.png', },
+      logo: { src: 'images/logos/tev2-new-babylon-medium.png', },
       items: [
         { to: 'docs/tev2/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
-        { to: 'docs/terminology-design/overview', label: 'Terminology Design', position: 'right'},
+        { to: 'docs/terminology-design/overview', label: 'Terminology Design', position: 'left'},
         { href: 'https://github.com/tno-terminology-design/tev2-specifications', label: 'Github',     position: 'right',
         },
       ],

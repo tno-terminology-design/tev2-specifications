@@ -3,7 +3,7 @@ module.exports = {
   title: 'TNO Terminology Design',
   tagline: 'Toolbox Specifications and Methods',
   url: 'https://tno-terminology-design.github.io',
-  baseUrl: process.env.STAGING && process.env.STAGING === 'true' ? '/tev2-specifications/' : '/',
+  baseUrl: '/tev2-specifications/',
   favicon: 'images/favicon.ico',
   organizationName: 'tno-terminology-design',
   projectName: 'tev2-specifications',

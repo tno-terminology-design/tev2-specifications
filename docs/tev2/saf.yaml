@@ -29,7 +29,7 @@ scopes:  #
 - scopetags: # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   - essiflab
   - essif-lab
-  scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
+  scopedir: https://github.com/tno-terminology-design/tev2-specifications/docs/tev2/tree/master/docs # URL of the scope-directory
 - scopetags: # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
   - ctwg
   - toip-ctwg

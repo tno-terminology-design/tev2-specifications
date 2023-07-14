@@ -1,3 +1,10 @@
+---
+id: tev2-readme
+sidebar_label: Contributing
+scopetag: tev2
+date: 20230731
+---
+
 # TEv2 Specifications
 
 [This repo](https://github.com/tno-terminology-design/tev2-specifications) contains the specifications for the various tools in the [TEv2 toolbox](@). They can best be read on the [website](https://tno-terminology-design.github.io/tev2-specifiations).

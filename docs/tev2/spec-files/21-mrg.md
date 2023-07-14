@@ -68,7 +68,7 @@ The following fields are defined for the sections `terminology`:
   <summary>Legend</summary>
 
 1. **`Name`** contains the field name;
-2. **`Req'd`** specifies whether (`Y`, or `Y*`) or not (`n`, or `F`) the field is required to be present as a header field. The `Y*` signifies that currently, the field is required, but that we envisage it to become optional when tooling becomes more mature, and will be able to automatically create the specified default value. The `F` means that we reserve this field for Future Use.
+2. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the field is required to be present as a header field. The `F` means that we reserve this field for Future Use.
 3. **`Description`** specifies the meaning of the field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
 </details>
@@ -90,7 +90,7 @@ The following fields are defined for the section `scopes`:
   <summary>Legend</summary>
 
 1. **`Name`** contains the field name;
-2. **`Req'd`** specifies whether (`Y`, or `Y*`) or not (`n`, or `F`) the field is required to be present as a header field. The `Y*` signifies that currently, the field is required, but that we envisage it to become optional when tooling becomes more mature, and will be able to automatically create the specified default value. The `F` means that we reserve this field for Future Use.
+2. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the field is required to be present as a header field. The `F` means that we reserve this field for Future Use.
 3. **`Description`** specifies the meaning of the field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
 </details>
@@ -139,7 +139,7 @@ The following table documents the fields that are used within the context of [TE
 | `vsntag`          | Y | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated.<br/>Must satisfy regex `[a-z0-9_-.]+`.  |
 | `term`            | Y | [Term](@) that is used to represent ([identify](@)) a [knowledge artifact](@) in this [scope](@).<br/>Must satisfy regex `[a-z0-9_-]+`. |
 | `termType`        | Y | [Text](term-type@) that [identifies](@) the kind of [knowledge artifact](@) that this [MRG entry](@) refers to. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), `term` (or `alias`), or `usecase`.<br/>Must satisfy regex `[a-z0-9_-]+`. |
-| `isa`             | n | [concept](@) of which this is a specialization. |
+| `isa`             | n | [knowledge artifact](@) of which this is a specialization. |
 | `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [ommunity](@))`. |
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). Such texts SHOULD be allowed to contain [term refs](@). |
 | `synonymOf`       | n | [term identifier](@) that [identifies](@) the [term](@) of which this is a [synonym](@). |

@@ -22,7 +22,7 @@ Every [scope](@) has (at least) one **Machine Readable Inventory**[^1] (that we 
 
 [^1]: The [MRG](@) is an inventory rather than a [glossary](@), because it contains _all_ [knowledge artifacts](@) that are [curated](@) within the [scope](@): apart from [terms](@), it also include e.g., [mental models](pattern@) and [use cases](@). We choose to maintain the [term](@) "Machine Readable Glossary" ([MRG](@)), because most of us would view it - initially, at least - as a list of [terms](@) and their [definitions](@).
 
-## File naming conventions
+## File naming conventions {#mrg-file-naming}
 
 Within (the [glossarydir](@) of) a particular [scopedir](@), we can generate (or import) and hence find all [MRG](@)-files that are needed within that [scope](@). We use the following file naming convention:
 

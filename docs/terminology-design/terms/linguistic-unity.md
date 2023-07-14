@@ -3,6 +3,7 @@
 term: linguistic-unity
 termType: concept
 isa:
+glossaryTerm:
 glossaryText: "the property of a [community](@) of having a [terminology](@) (language) that every member of the [community](@) uses."
 synonymOf:
 grouptags:

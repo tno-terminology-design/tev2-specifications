@@ -3,6 +3,7 @@
 term: domain-expert
 termType: concept
 isa:
+glossaryTerm:
 glossaryText: "a person that has expert [knowledge](@) about a specific topic (subject matter), or skills in a particular area (domain)."
 synonymOf: subject-matter-expert
 grouptags:

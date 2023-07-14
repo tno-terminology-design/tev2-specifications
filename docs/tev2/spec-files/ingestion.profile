@@ -4,6 +4,7 @@
 term: {{term}} # (required) word/phrase that represents a concept.
 termType: {{termType}} # (optional) kind of concept (e.g. `concept` (default), or `mental model`).
 isa: {{isa}} # (optional) concept of which this is a specialization.
+glossaryTerm:
 glossaryText: {{glossaryText}} # (required) text that summarizes the meaning of the term.
 synonyms: {{commaSeparatedSynonyms}} # (optional) other words/phrases that mean the same.
 groupTags: {{commaSeparatedKeywords}} # (optional) list of tags/keywords to which the term belongs.

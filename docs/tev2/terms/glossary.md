@@ -3,6 +3,7 @@
 term: glossary
 termType: concept
 isa:
+glossaryTerm:
 glossaryText: "an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context."
 synonymOf:
 grouptags:

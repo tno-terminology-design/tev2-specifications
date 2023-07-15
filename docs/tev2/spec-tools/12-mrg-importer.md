@@ -24,6 +24,10 @@ The entire section on Terminology Engine v 2 (TEv2) is still under construction.
 As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
 :::
 
+:::info Editor's Note
+This section is still under development. Issues that need to be addressed include how to deal with authentication of the tool in case getting an MRG from a non-public repository (or other service) requires that.
+:::
+
 The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [scopes section](/docs/tev2/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available. 
 
 There will shortly be an implementation of the tool:

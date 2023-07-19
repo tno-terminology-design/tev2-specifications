@@ -7,11 +7,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 function CustomFeature() {
-  const flagUrl = useBaseUrl('images/EU-flag.jpg');
-  const logoUrl = useBaseUrl('images/essif-lab-logo.png');
-  const title = 'Horizon 2020';
-  const description =
-    ' Funded by the European Commission, as part of the Horizon 2020 Research and Innovation Programme under grant agreement Nº 871932.';
+  // const flagUrl = useBaseUrl('images/EU-flag.jpg');
+  const logoUrl = useBaseUrl('images/logos/tev2-logo.png');
+  // const title = 'Horizon 2020';
+  // const description =
+  //   ' Funded by the European Commission, as part of the Horizon 2020 Research and Innovation Programme under grant agreement Nº 871932.';
 
   return (
     <div
@@ -21,11 +21,11 @@ function CustomFeature() {
         styles.centered,
       )}>
       <div className={styles.featuredImages}>
-        <img src={flagUrl} alt="Horizon 2020" />
-        <img src={logoUrl} alt="eSSIF-Lab logo" />
+        {/* <img src={flagUrl} alt="Horizon 2020" /> */}
+        <img src={logoUrl} alt="TEv2 logo" />
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      {/* <h3>{title}</h3> */}
+      {/* <p>{description}</p> */}
     </div>
   );
 }

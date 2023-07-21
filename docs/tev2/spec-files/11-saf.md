@@ -82,11 +82,12 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `scopedir`    | Y | URL of the location of the [scopedir](@) associated with the [scopetags](@) listed in the `scopetags` field. |
 | `curatedir`   | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`.|
 | `glossarydir` | Y | Path to the directory where all [glossary](@)-related files are located. Full URL is `<scopedir>`/`<glossarydir>`. This directory SHOULD contain one [MRG](@) for every element in the version-section in the [SAF](@), and one or multiple [HRGs](@). It MAY contain other files, e.g. containing instructions, headers, footers or other things that are necessary for generating specific [glossaries](@). |
+| `website`     | n | base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). |
+| `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@) is, `navpath` is for the rendered versions of [Curated Texts](@). |
 | `defaultvsn`  | Y | [versiontag](@) that [identifies](@) the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
 | `license`     | Y | File in the root of the [scopedir](@) that contains the (default) licensing data. |
 | `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [knowledge artifacts](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
 | `issues`      | n | URL where issues can be reported and handled.|
-| `website`     | n | base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). |
 | `curators`    | n | Data that can be used to contact individual [curators](@). |
 <!--
 | `dateformat`  | n | Regex (PCRE) that has named capturing groups for YYYY, MM and DD, and that can be used to parse the date fields used in this [scope](@) ) (provided another regex doesn't override it). When not provided, tools should use the regex "**(?P<YYYY\>\d{4})-?(?P<MM\>\d{2})-?(?P<DD\>\d{2})(?P<tzone\>Z&#124[+-]\d{2}:\d{2})?**" for this (noting that in certain contexts, `\` characters may need to be escaped). |

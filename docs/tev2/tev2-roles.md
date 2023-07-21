@@ -48,4 +48,4 @@ The [Manual for Curators](/docs/tev2/manuals/curator) documents how the [TEv2](@
 
 [Authors](@) may also identify any specific needs or mechanisms that help them do the aforementioned tasks, and communicate these needs to their [curators](@), or otherwise contribute to the further development of [TEv2](@) so that such needs and mechanisms may be supported.
 
-The [Manual for [Authors](@)](/docs/tev2/manuals/author) documents how the [TEv2](@) supports this role.
+The [Manual for Authors](/docs/tev2/manuals/author) documents how the [TEv2](@) supports this role.

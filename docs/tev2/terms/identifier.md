@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a character string that is being used for the identification of some [entity](@) (yet may refer to 0, 1, or more [entities](@), depending on the context within which it is being used)."
 synonymOf:
 grouptags:
-formPhrases: identifier{ss} identification
+formPhrases: identifier{ss}
 # Curation status
 status: proposed
 created: 2021-06-01
@@ -28,7 +28,7 @@ Note that while an identifier is used for identification purposes, <u>this does 
 Also note that [entities](@) need not be tangible in order to be [identified], thus enabling the use of [terms](@) as a means to  [identify](@) (and represent) [knowledge artifacts](@).
 
 ### Purpose
-[Parties](@) have a need to reason about [things](@) they [know](@) to exist, which requires them to have a conscious representation of such things, as well as the ability to identify (single) out individual entities. One way to do that is to tag an entity with a character string (label, name), that would then qualify as an identifier.
+[Parties](@) have a need to reason about [things](@) they know to exist, which requires them to have a conscious representation of such things, as well as the ability to identify (single) out individual entities. One way to do that is to tag an entity with a character string (label, name), that would then qualify as an identifier.
 
 Also, identifiers may serve identification purpose in communications between different [parties](@), the idea being that when one [party](@) mentions an identifier (that identifies some [entity](@) for this [party](@) ) to another [party](@), the latter would be able to determine the [entity](@) that the first is talking about. See the [Discussion](./identifier#discussion---scope-of-identification) below.
 

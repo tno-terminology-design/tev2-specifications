@@ -50,7 +50,7 @@ scope:
   scopetag: tev2 # identifier that curators have determined for this terminology
   scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/tev2  # URL of the scope-directory
   curatedir: terms # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
-  glossarydir: glossaries # directory where all glossary files and GDFs are located. Full URL is `scopedir`/`glossarydir`
+  glossarydir: glossaries # directory where all glossary files and related stuff are located. Full URL is `scopedir`/`glossarydir`
   defaultvsn: latest # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for knowledge artifacts in this scope
@@ -111,9 +111,11 @@ The `scopetags` section is a list that specifies a mapping between [scopetags](@
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
-- scopetags: [ essiflab, essif-lab ] # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: [ essiflab ] # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
-- scopetags: [ ctwg, toip-ctwg ] # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: [ essif-lab ] # define another scopetag for the same scopedir (just because you can)
+  scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
+- scopetag: [ ctwg ] # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
 ~~~
 
@@ -136,8 +138,8 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 | Name        | Req'd | Description |
 | ----------- | :---: | ----------- |
-| `scopetags`   | Y | List of at least one [scopetag](@), that the [curator(s)](@) of this [scope](@) have determined for the [terminology](@) of a specific [scope](@). The associated [scopedir](@) is specified in the section `scopes`.|
-| `scopedir`    | Y | URL of the location of the [scopedir](@) associated with the [scopetags](@) listed in the `scopetags` field. |
+| `scopetag`    | Y | A (single) [scopetag](@), that the [curator(s)](@) of this [scope](@) has decided to use to refer to (the [terminology](@) of) a specific [scope](@). |
+| `scopedir`    | Y | URL of the associated [scopedir](@). |
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 

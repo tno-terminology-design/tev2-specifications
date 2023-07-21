@@ -24,11 +24,14 @@ Every [scope](@) has (at least) one **Machine Readable Inventory**[^1] (that we 
 
 ## File naming conventions {#mrg-file-naming}
 
-Within (the [glossarydir](@) of) a particular [scopedir](@), we can generate (or import) and hence find all [MRG](@)-files that are needed within that [scope](@). We use the following file naming convention:
+The file naming conventions apply to one particular [scope](@), which implies that there is a single [SAF](@), a single [glossarydir](@), and a single [scopedir](@) (called `{scopedir}` here). Within this [scope](@), the meaning of [scopetags](@), i.e. the [scopes](@) to which they refer, are defined in/by the [SAF](@). 
+
+Within this [glossarydir](@) we can generate (or import), and hence also find all [MRG](@)-files that are needed within its [scope](@). We use the following file naming convention for such files:
 
 **`mrg.<scopetag>.<vsntag>.yaml`** is the name of a file that contains an actual [MRG](@), or it is a file that links (references) such a file, where:
-  - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@). Its value must either be that of the `scopetag`-field in the [scope section](docs/tev2/spec-files/saf#terminology) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/tev2/spec-files/saf#scopes) of that [SAF](@).
-  - **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `alatvsntag`-fields in the [versions section](/docs/tev2/spec-files/saf#versions) of the [SAF](@).
+
+- **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [scope section](docs/tev2/spec-files/saf#terminology) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/tev2/spec-files/saf#scopes) of that [SAF](@).
+- **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `alatvsntag`-fields in the [versions section](/docs/tev2/spec-files/saf#versions) of the [SAF](@).
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [MRG](@) that is relevant for that [scope](@).
 
@@ -75,7 +78,7 @@ The following fields are defined for the sections `terminology`:
 
 | Name       | Req'd | Description |
 | ---------- | :---: | :---------- |
-| `scopetag`   | Y | [Scopetag](@) of the [scope](@) in which the [MRG](@) is defined. This is the [scopetag](@) that the [curators](@) of the [scope](@) have chosen for this [scope](@).<br/>Must satisfy regex `[a-z0-9_-]+`. |
+| `scopetag`   | Y | [Scopetag](@) of the [scope](@) in which the [MRG](@) is defined.  |
 | `scopedir`   | Y | URL that locates the [scope directory](@) associated with that [scope](@). |
 | `curatedir`  | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`.|
 | `vsntag`     | Y | [versiontag](@) by which the [terminology](@) of this [MRG](@) can be distinguished from the other versions of the [terminology](@) (in other [MRGs](@)). Its value MUST match the `vsntag` field of the corresponding `versions` section in the [SAF](@) |
@@ -100,9 +103,9 @@ The following fields are defined for the section `scopes`:
 | `scopetag`   | Y | [Scopetag](@) of a third-party [scope](@), the [MRG](@) of which contains [MRG entries](@) that have been imported into the [MRG](@). This [scopetag](@) has been chosen by the [curators](@) of the [scope](@) of which the [MRG](@) is part, to refer to that particular third-party [scope](@). This [scopetag](@) may differ from the [scopetag](@) that the [curators](@) of that third-party [scope](@) have chosen for this [scope](@) <br/>Must satisfy regex `[a-z0-9_-]+`. |
 | `scopedir`   | Y | URL that locates the [scope directory](@) associated with that third-party [scope](@). |
 
-## MRG Entries {#mrg-entries}
+## MRG Entries (the `entries` section) {#mrg-entries}
 
-An [MRG](@) consists of a list of [MRG entries](@), the purpose of which is that the various tools can find all data that is relevant for the purpose that such a tool serves.
+The `entries` section of an [MRG](@) is a list of [MRG entries](@), the purpose of which is that the various tools can find all data that is relevant for the purpose that such a tool serves.
 
 An [MRG entry](@) has a few fields that are always present, because the [MRGT](@) generates them, as follows:
 
@@ -140,7 +143,7 @@ The following table documents the fields that are used within the context of [TE
 | `term`            | Y | [Term](@) that is used to represent ([identify](@)) a [knowledge artifact](@) in this [scope](@).<br/>Must satisfy regex `[a-z0-9_-]+`. |
 | `termType`        | Y | [Text](term-type@) that [identifies](@) the kind of [knowledge artifact](@) that this [MRG entry](@) refers to. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), `term` (or `alias`), or `usecase`.<br/>Must satisfy regex `[a-z0-9_-]+`. |
 | `isa`             | n | [knowledge artifact](@) of which this is a specialization. |
-| `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [ommunity](@))`. |
+| `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`. |
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). Such texts SHOULD be allowed to contain [term refs](@). |
 | `synonymOf`       | n | [term identifier](@) that [identifies](@) the [term](@) of which this is a [synonym](@). |
 | `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`.<br/>Must satisfy regex [`(?:\[\s*([a-z0-9_-]+)\s*(?:,\s*([a-z0-9_-]+))*\s*\])?`](https://www.debuggex.com/r/a51CXl1NzR3kwihT). |

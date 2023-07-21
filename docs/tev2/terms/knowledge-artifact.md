@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@)."
 synonymOf:
 grouptags:
-formPhrases: knowledge-artifact{ss}
+formPhrases: knowledge-artifact{ss}, knowledge-artefact{ss}
 # Curation status
 status: proposed
 created: 2022-07-27

@@ -24,14 +24,10 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 An **[ingestion profile](@)** is the specification of a method by which files that are in a particular place and format (e.g., wiki files) are turned into a [curated text](@).
 
-[Ingestion profiles](@)
-
-The (technical) structure and syntax for [curated texts](@) is specified [here](/docs/tev2/spec-files/ctext).
-
 The manuals for [contributors](/docs/tev2/manuals/contributor), [authors](/docs/tev2/manuals/author) and [curators](/docs/tev2/manuals/curator) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
 
 :::info Editor's Note
-Text needs to be revised from here onward. Here are some ideas to mention:
+Text needs to be revised. Here are some ideas to mention:
 - contributors can suggest contents as per the curators instructions;
 - [authors](@) can write the body of ctexts;
 - curators update the header of ctexts (conforming to the ctext specs);

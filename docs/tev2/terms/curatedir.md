@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a directory within a [scopedir](@) within which every file contains a [curated texts](@) for that [scope](@)."
 synonymOf:
 grouptags:
-formPhrases: glossary-director{yies}, curatedir{ss}
+formPhrases: curatedir{ss}, curate-director{yies}
 # Curation status
 status: proposed
 created: 2022-07-29

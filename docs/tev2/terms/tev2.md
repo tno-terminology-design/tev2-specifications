@@ -4,7 +4,7 @@ term: tev2
 termType: concept
 isa:
 glossaryTerm:
-glossaryText: "a set of specifications and tools that caters for the [curationa](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
+glossaryText: "a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
 synonymOf:
 grouptags:
 formPhrases:
@@ -26,7 +26,7 @@ As TEv2 is not (yet) available, the texts that specify the tool are still 'raw',
 :::
 
 ### Summary
-The **Terminology Enginve v2 (TEv2)** is a set of specifications and tools that caters for the [curationa](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
+The **Terminology Enginve v2 (TEv2)** is a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
 <!-- This summary is/should be literally quoted in the tev2-overview document -->
 

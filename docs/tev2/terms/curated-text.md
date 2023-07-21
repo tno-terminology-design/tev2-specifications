@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: a text that documents a [concept](@) or other [knowledge artifact](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).
 synonymOf:
 grouptags:
-formPhrases: curated-text{ss}, ctext{ss}
+formPhrases: curated-text{ss}, ctext{ss}, curated-file{ss}, cfile{ss}
 # Curation status
 status: proposed
 created: 2022-06-02

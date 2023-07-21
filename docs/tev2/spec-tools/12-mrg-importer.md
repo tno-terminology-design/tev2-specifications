@@ -83,36 +83,42 @@ The `<action>` parameter can take the following values:
 
 The [MRG importer](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalidities include non-existing directories or files, lack of write-permissions where needed, etc.
 
-Then, the [MRG importer](@) reads the [SAF](@) of the [scope](@) from which the [MRG importer](@) is called. For every element in the [scopes section](/tev2-specifications/docs/tev2/spec-files/saf#scopes), it will import the [MRG](@)-files of the versions that are actively maintained by (the [curators](@) of) that [scope](@) that the current [scope](@) specified a relation with, by 
-- getting the [scopetag](@) from the [SAF](@) that is used within that [scope](@) to refer to itself. This scopetag is found in the `scopetag`-field of the [scope section](/tev2-specifications/docs/tev2/spec-files/saf#terminology) of the [SAF](@). In the below step, we will use `<scopetag>` to refer to its value.
-- collecting all [versiontags](@) that are defined in the [SAF](@) of that [scope](@). This is the set of all [versiontags](@) that are either found in a `vsntag` or in an `altvsntags` field of an element in the [versions section](/tev2-specifications/docs/tev2/spec-files/saf#versions) of the [SAF](@)
-- For every such [versiontag](@) `<vsntag>`:
-  - it is checked whether or not the file `mrg.<scopetag>.<vsntag>.yaml` exists in the [glossarydir](@) of that [scope](@). If it doesn't exist, this results in the bahaviour as specified by the `<action>` value of the `onNotExist` parameter. Default is `throw`.
-  - 
+Then, the [MRG importer](@) reads the [SAF](@) of the [scope](@) from which the [MRG importer](@) is called. We will use the following names for values that are in the [SAF](@):
+- `{my-own-scopetag}` = `scopetag`-field from the `scope`-section
+- `{my-own-scopedir}` = `scopedir`-field from the `scope`-section
+- `{my-own-glossarydir}` = `glossarydir`-field from the `scope`-section
 
+The [MRG importer](@) also reads the [scopes section](/tev2-specifications/docs/tev2/spec-files/saf#scopes) of the [SAF](@), which specifies the 'other' [scopes](@) from which the actively maintained [MRGs](@) have to be imported. This [scopes section](/tev2-specifications/docs/tev2/spec-files/saf#scopes) contains elements that consist of two parts, whose values we will refer to by the following names:
+- `{import-scopetag}` = `scopetag`-field from the `scopes`-section of the [SAF](@)
+- `{import-scopedir}` = `scopedir`-field from the `scopes`-section of the [SAF](@)
 
+For every `{import-scopedir}`, the [MRG importer](@) will read its [SAF](@) to find out which [terminologies](@) are being actively maintained (we will use `{import-saf}` to refer to the contents of this [SAF](@)).
 
-the specified input files (in arbitrary order), and for each of them, produces an output file that is the same as the input file except for the fact that all [term refs](@) have been replaced with regular [markdown links](https://www.markdownguide.org/basic-syntax/#links), and (optionally) with additional texts that are to be used by third-party rendering tools for enhanced rendering of such links. An example of this would be text that can be used to enhance a link with a popup that contains the definition, or a description of the [term](@) that is being referenced.
+:::info Editor's note
+Reading a SAF may require authentication, e.g. when the scopedir of the other scope is in a private or enterprise repo. How the MRG importer will be dealing with this remains to be specified.
+:::
+
+We will use:
+- `{other-scopetag}` = the `scopetag`-field in the `scope` section of `{import-saf}`;
+- `{other-glossarydir}` = the `glossarydir`-field in the `scope` section of `{import-saf}`;
+
+The [versions-section](/tev2-specifications/docs/tev2/spec-files/saf#versions) in `{import-saf}` specifies which [terminologies](@) are actively maintained within the other [scope](@), and hence have to be imported. Every such [terminology](@) is specified by an entry in this section, and must hence be processed to import the associated [MRGs](@). 
+
+To specify one such process, we will use:
+- `{other-vsntag}` = `vsntag`-field in the element of the `versions` section of `{import-saf}`
+- `{other-altvsntags}` = `altvsntags`-field in an element of the `versions` section of `{import-saf}`
+
+To import the associated [MRGs](@), here is what we do:
+- read the file `{import-scopedir}/{import-glossarydir}/mrg.{other-scopetag}.{other-vsntag}.yaml`, which is the file that contains the [MRG](@) that needs to be imported. If that file doesn't exist, this results in the bahaviour as specified by the `<action>` value of the `onNotExist` parameter. Default is `throw`.
+- write the contents to `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.{other-vsntag}.yaml`, overwriting a file that has the same name if that were to exist.
+- for every [versiontag](@) in `{other-altvsntags}` (which we call `{other-altvsntag}`), a symbolic link `mrg.{import-scopetag}.{other-altvsntag}.yaml` is created in the `{my-scopedir}/{my-glossarydir}/` directory, that links to the `mrg.{import-scopetag}.{other-vsntag}.yaml` file that was just created in that same directory.
+
+:::note NOTE the change of the `scopetag` part in the filename!
+The name of the [MRG](@) in the [scope](@) from which it is imported may differ from the name of the [MRG](@) that is imported. The reason for this is that the names ([scopetags](@) that are used in these [scopes](@) to refer to the [scope](@) from where [MRGs](@) are imported, may differ.
+:::
 
 The [MRG importer](@) logs every error- and/or warning condition that it comes across while processing its configuration file, commandline parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
 
 ## Deploying the Tool
 
 The [MRG importer](@) comes with documentation that enables developers to ascertain its correct functioning (e.g. by using a test set of files, test scripts that exercise its parameters, etc.), and also enables them to deploy the tool in a git repo and author/modify CI-pipes to use that deployment.
-
-## Discussion Notes
-
-This section contains some notes of a discussion between Daniel and Rieks on these matters of some time ago.
-
-- A ToIP [glossary](@) will be put by default at `http://trustoverip.github.io/<terms-community>/glossary`, where `<terms-community>` is the name of the [terms-community](@). This allows every  [terms-community](@) to have its own [glossary](@). However, the above specifications allow [terms-communities](terms-community@) to [curate](@) multiple [scopes](scope@).
-- Storing [glossaries](glossary@) elsewhere was seen to break the (basic workings of the postprocessing tool, but the above specifications would fix that.
-- Entries, e.g. 'foo' can be referenced as `http://trustoverip.github.io/<community>/[glossary](@)#foo` (in case of a standalone glossary), and `http://trustoverip.github.io/<community>/document-that-includes-glossary-fragment#foo` (in case of a fragmented glossary).
-- There will be a new convention for content [authors](@) who want to reference [terms](term@) (let's call it the 'short form'). This topic is fully addressed above, and extended to be a bit more generic.
-- do we expect [glossaries](glossary@) that are generated by a [terms-community](@) to live at a fixed place (how do people find it, refer to its contents)? This topic is addressed
-- once [glossaries](glossary@) are generated, the idea is that all artifacts produced in a [terms-community](@) can use references to the [terms](term@) in the generated [glossaries](glossary@), e.g.:
-  - confluence pages: we need to see how such pages can be processed. [Authors](@) can remove links like they do now, they could use [term refs](@) as they see fit and then run TRRT.
-  - github pages (e.g. https://github.com/trustoverip/ctwg-terms). Check (it's a github repo).
-  - github wiki pages (e.g. https://github.com/trustoverip/ctwg-terms/wiki). Check (it's a github repo).
-  - github wiki home pages (e.g. https://github.com/trustoverip/ctwg-terms/wiki/Home). Check (it's a github repo).
-  - github-pages pages (e.g. https://github.com/trustoverip/ctwg-terms/docs
-- We could also see GGT and TRRT to be extended, e.g. to work in conjunction with LaTeX or word-processor documents. This needs some looking into, but [pandoc](https://pandoc.org/) may be useful here.

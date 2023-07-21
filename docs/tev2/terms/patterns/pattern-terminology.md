@@ -72,7 +72,7 @@ A [terms-community](@) is a [community](@) (whose members are called [curators](
     - [identify](@) a specific version of the [terminology](@) - the so-called [version tags](@).
 
 We refer the reader to
-- the [Curators Manual](@), for further details about [curation](@).
+- the [Curators Manual](/docs/tev2/manuals/curator), for further details about [curation](@).
 - the [governance and management pattern](pattern-governance-and-management@) to learn more about ways in which different [communities](@) can seek to serve each other.
 
 Note that for a [terms-community](@) to serve itself, it may want to commit to a [terminology](@) such as the one we are developing here.

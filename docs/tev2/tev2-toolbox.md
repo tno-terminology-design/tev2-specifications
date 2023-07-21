@@ -30,7 +30,7 @@ As mentioned in the [TEv2 overview](/docs/tev2/tev2-overview), the toolbox is en
 
 - the **Machine Readable Dictionary generation Tool ([MRDT](@))**. This tool generates a Machine Readable Inventory (that we call a Machine Readable Dictionary or [MRD](@)) of [terms](@) that originate from different (versions of) [terminologies](@), from various [scopes](@). [MRDs](@) are meant to be processed by a [HRDT](@), which turns it into (a specific format of) [HRD](@)).
 
-- the **Human Readable Dictionary generation Tool ([HRDT](@))**. This tool generates a a Human Readable [Dictionary](@) ([HRD](@)), that renders the [terms](@) from a [machine readable dictionary (MRD)](@) into one of several formats, e.g. HTML, or PDF. [HRDs](@) can be created for different purposes, e.g. to compare different [terminologies](@) (across [scopes](@)), or as a reference of what [terms](@) mean in different [scopes](@).
+- the **Human Readable Dictionary generation Tool ([HRDT](@))**. This tool generates a a Human Readable [Dictionary](@) ([HRD](@)), that renders the [terms](@) from a [machine readable dictionary (MRD)](mrd@) into one of several formats, e.g. HTML, or PDF. [HRDs](@) can be created for different purposes, e.g. to compare different [terminologies](@) (across [scopes](@)), or as a reference of what [terms](@) mean in different [scopes](@).
 
 These tools are intended to be called from the command-line, typically
 1. in a context where the user is developing (documents, papers, etc.) locally, and

@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a text that helps [parties](@) to have the same understanding about the meaning of (and [concepts](@) behind) a [term](@), ideally in such a way that these [parties](@) can determine whether or not they make the same distinction."
 synonymOf:
 grouptags:
-formPhrases: definition{ss}
+formPhrases: definition{ss}, good-definition{ss}, defined
 # Curation status
 status: proposed
 created: 2022-06-06
@@ -51,7 +51,7 @@ Working together is easier when you and your peers share the same ideas. We need
 A **definition** is a text that comprises at a minimum:
 - a [scope](@) that is curated ([controlled](@)) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@);
 - a [criterion](https://www.lexico.com/definition/criterion) that specifies the necessary and sufficient conditions for determining what does and what does not constitute some [concept](@) (idea, class of [entities](@));
-- a [name or phrase](@) that is used within the [scope](@) to refer to (unidentified, or arbitrary, or specific) [entities](@) that satisfy the criterion.
+- a [name or phrase](term@) that is used within the [scope](@) to refer to (unidentified, or arbitrary, or specific) [entities](@) that satisfy the criterion.
 
 ### Examples
 - The definition of the term [definition](@) (a) is defined in, and hence valid in the scope `eSSIFLab`, (b) specifies a criterion (see the `Criteria` section above), and (d) has a name (i.e. `definition`) associated with it. Since it satisfies the criteria of `definition`, it can be referred to as 'the definition of `definition`'.
@@ -68,4 +68,4 @@ You may want to create definitions that are both acceptable for business people 
 
 Note that the actual word or phrase you choose as the [term](@) name for a concept is much less important than the criteria you define. If in a particular [context](@) another name would be more suitable, you can define another [term](@) for that other context (scope) that still refers to the concept you created the definition for.
 
-The [Terminology Corpus](@) provides templates that help you do that, e.g. for [defining concepts](@) and for [defining terms](@). The report [On Terminology, and the Resolution of Related Issues](http://resolver.tudelft.nl/uuid:964a90da-da81-4d38-9f45-84f3f5fa96b3) provides further practical guidance for establishing and maintaining unambiguous and relevant terminology.
+The [Terminology Corpus](@) provides templates that help you do that, e.g. for [defining](@) [concepts](@) and for [defining](@) [terms](@). The report [On Terminology, and the Resolution of Related Issues](http://resolver.tudelft.nl/uuid:964a90da-da81-4d38-9f45-84f3f5fa96b3) provides further practical guidance for establishing and maintaining unambiguous and relevant terminology.

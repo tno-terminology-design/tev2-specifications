@@ -25,7 +25,7 @@ As TEv2 is not (yet) available, the texts that specify the tool are still 'raw',
 :::
 
 :::info Editor's Note
-This section is still under development. Issues that need to be addressed include how to deal with authentication of the tool in case getting an MRG from a non-public repository (or other service) requires that.
+This section is still under development. You'll see further editor's notes where issues exist.
 :::
 
 The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [scopes section](/docs/tev2/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available. 
@@ -110,6 +110,10 @@ To specify one such process, we will use:
 
 To import the associated [MRGs](@), here is what we do:
 - read the file `{import-scopedir}/{import-glossarydir}/mrg.{other-scopetag}.{other-vsntag}.yaml`, which is the file that contains the [MRG](@) that needs to be imported. If that file doesn't exist, this results in the bahaviour as specified by the `<action>` value of the `onNotExist` parameter. Default is `throw`.
+:::info Editor's note
+It may well be possible that contents of the mrg may need to be processed.
+This is due to the fact that `scopetag`s are 'local' names for referring to scopes and every scope gets to decide on its own scoptag names. So the meaning of 'scopetags' cannot be transferred across scopes. We have to use universal/fixed identifiers, such as a `scopedir`-URL to identify scopes. Still, local names can be useful (and are necessary), so we'll have to figure out what the impact of this is.
+ed:::
 - write the contents to `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.{other-vsntag}.yaml`, overwriting a file that has the same name if that were to exist.
 - for every [versiontag](@) in `{other-altvsntags}` (which we call `{other-altvsntag}`), a symbolic link `mrg.{import-scopetag}.{other-altvsntag}.yaml` is created in the `{my-scopedir}/{my-glossarydir}/` directory, that links to the `mrg.{import-scopetag}.{other-vsntag}.yaml` file that was just created in that same directory.
 

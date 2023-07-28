@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Mrg Importer
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: mrg-importer{ss}
 # Curation status

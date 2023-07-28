@@ -1,4 +1,4 @@
----# TEv2 Curated Text Header
+---
 term: hrg-entry
 termType: concept
 isa:

@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Self-sovereign Terminology
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: self-sovereign-terminolog{yies}
 # Curation status

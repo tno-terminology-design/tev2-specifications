@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Trrt
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: trrt{ss}
 # Curation status

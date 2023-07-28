@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Mrd
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: mrd{ss}, machine-readable-dictionar{yies}
 # Curation status

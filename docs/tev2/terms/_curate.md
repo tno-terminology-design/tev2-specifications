@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Curation
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: curate, curates, curated, curating, curation
 # Curation status

@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Tool
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: tool{ss}
 # Curation status

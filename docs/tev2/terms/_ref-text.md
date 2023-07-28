@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Ref Text
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: ref-text{ss}, reftext{ss}
 # Curation status

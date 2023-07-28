@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Define
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: define, defining
 # Curation status

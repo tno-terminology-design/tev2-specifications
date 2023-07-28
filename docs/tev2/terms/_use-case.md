@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Use-case
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: use-case{ss}
 # Curation status

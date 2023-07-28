@@ -55,7 +55,7 @@ A **definition** is a text that comprises at a minimum:
 
 ### Examples
 - The definition of the term [definition](@) (a) is defined in, and hence valid in the scope `eSSIFLab`, (b) specifies a criterion (see the `Criteria` section above), and (d) has a name (i.e. `definition`) associated with it. Since it satisfies the criteria of `definition`, it can be referred to as 'the definition of `definition`'.
-- The [concepts](@) defined within the scope eSSIFLab have definitions associated with them, where the criteria, relevance and terms are defined in the [concept-file](@) of that concept.
+- The [concepts](@) defined within a particular [scope](@) have definitions associated with them, where the criteria, relevance and [terms](@) are typically specified in the [curated text](@) for that [concept](@).
 
 ### Notes
 
@@ -66,6 +66,6 @@ You may want to create definitions that are both acceptable for business people 
 - you are convinced that the vast majority of people in your audience will *make the same judgements as you do when applying these criteria* in a situation that you and your audience consider relevant; and
 - the *ability to make this distinction is relevant* for one or more purposes of your intended audience.
 
-Note that the actual word or phrase you choose as the [term](@) name for a concept is much less important than the criteria you define. If in a particular [context](@) another name would be more suitable, you can define another [term](@) for that other context (scope) that still refers to the concept you created the definition for.
+Note that the actual word or phrase you choose as the [term](@) name for a [concept](@) is much less important than the criteria you define. If in a particular context another name would be more suitable, you can define another [term](@) for that other context (scope) that still refers to the concept you created the definition for.
 
 The [Terminology Corpus](@) provides templates that help you do that, e.g. for [defining](@) [concepts](@) and for [defining](@) [terms](@). The report [On Terminology, and the Resolution of Related Issues](http://resolver.tudelft.nl/uuid:964a90da-da81-4d38-9f45-84f3f5fa96b3) provides further practical guidance for establishing and maintaining unambiguous and relevant terminology.

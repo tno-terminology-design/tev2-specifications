@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Ingestion
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: ingest, ingests, ingested, ingesting, ingestion
 # Curation status

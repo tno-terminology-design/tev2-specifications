@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Ict
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: ict{ss}, integrity-checker-tool{ss}
 # Curation status

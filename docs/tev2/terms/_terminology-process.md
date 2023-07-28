@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Terminology Process
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: terminology-processes
 # Curation status

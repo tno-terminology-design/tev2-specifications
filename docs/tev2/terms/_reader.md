@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Reader
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: reader{ss}
 # Curation status

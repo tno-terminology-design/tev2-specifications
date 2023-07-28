@@ -1,4 +1,4 @@
----# TEv2 Curated Text Header
+---
 term: term-type
 termType: concept
 isa: identifier

@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Hrd
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: hrd{ss}, human-readable-dictionar{yies}
 # Curation status

@@ -1,4 +1,4 @@
----# TEv2 Curated Text Header
+---
 term: terminology-under-construction
 termType: concept
 isa:

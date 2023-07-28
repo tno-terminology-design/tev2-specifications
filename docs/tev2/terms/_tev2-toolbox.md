@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Tev2 Toolbox
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: tev2-toolboxes
 # Curation status

@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Terminological Artifact
 glossaryText: "glossary-text for '{original}'."
 hoverText: "hover-text for '{original}'."
-synonymOf: nan
+synonymOf:
 grouptags:
 formPhrases: terminological-artifact{ss}
 # Curation status

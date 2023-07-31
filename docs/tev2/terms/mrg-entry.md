@@ -20,13 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # MRG Entry
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
-### Summary
-
 An **MRG Entry** is a machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [knowledge artifact](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.).
 
 A [terminology](@) can be seen as the collection of [MRG entries](@) that hold all data related to the [terms](scoped-term@) that the [terminology](@) consists of.

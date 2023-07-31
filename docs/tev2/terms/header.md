@@ -7,7 +7,7 @@ termType: concept
 isa:
 glossaryTerm: Header (of a Curated Text)
 glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line."
-hoverText: "Header (of a Curated Text) the part at the beginning of that curated text, that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line."
+hoverText: "Header (of a Curated Text): the part at the beginning of that curated text, that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line."
 synonymOf:
 grouptags:
 formPhrases: header{ss}
@@ -23,14 +23,9 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Header
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
-### Summary
-
 The **Header (of a [Curated Text](@)** is the part at the beginning of that [curated text](@), that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line. The [header](@) is a set of key-value pairs (interleaved with comments) that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it.
+
+## Example
 
 <details>
   <summary>Example</summary>
@@ -72,3 +67,8 @@ A discussion on these other constructs is outside the scope of this document.
 
   </div>
 </details>
+
+## Notes
+
+- The header is crucial for categorizing and managing curated texts, enabling efficient retrieval and navigation of relevant information.
+- The information within the header ensures consistency and accuracy in the curation process.

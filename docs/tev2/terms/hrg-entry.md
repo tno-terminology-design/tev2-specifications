@@ -1,37 +1,27 @@
 ---
+# Docusaurus header
+id: hrg-entry
 # TEv2 Curated Text Header
 term: hrg-entry
 termType: concept
-isa:
-glossaryTerm:
+isa: glossary-entry
+glossaryTerm: HRG Entry
 glossaryText: "A specific kind of (human-readable) rendering of the combination of a [term](@) and a means that helps [readers](@) to understand the meaning of that [term](@) when it is used in a sentence."
-synonymOf:
-grouptags:
+hoverText: "HRG Entry: {(noRef {glossaryText})}"
+synonymOf: 
+grouptags: glossary-entries, reference-materials
 formPhrases: hrg-entr{yies}
 # Curation status
 status: proposed
-created: 2022-08-11
-updated: 2022-08-11
+created: 2023-07-31
+updated: 2023-07-31
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs/tev2)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl'
-export const mark = ({children}) => (
-  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
-    {children}
-  </span> );
-
 # HRG Entry
-
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
-### Summary
 
 An **HRG Entry** is a specific kind of (human-readable) rendering of the combination of a [term](@) and a means that helps readers to understand the meaning of that [term](@) when it is used in a sentence.
 

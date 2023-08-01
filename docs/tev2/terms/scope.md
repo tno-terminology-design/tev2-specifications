@@ -30,7 +30,7 @@ A **scope** is the extent of the [terms](@), [definitions](@) and other document
 
 Other documentation includes [curated texts](@), and artifacts that are generated from that, such as [glossaries](@), [dictionaries](@) and the like. It also includes [tags](@) that can be used e.g. to refer to other [scopes](@) ([scopetags](@)), identify different versions for artifacts ([versiontags](@)), or create particular groups of [terms](@) ([grouptags](@)).
 
-[Scopes](@), that is: their contents, must be [curated](@). Since this requires particular capabilities that the [owning](@) [community](@) may lack, we say that this [curation](@) is done by a so-called [terms community](@), whose [members](@) are individuals that do have such capabilities; they serve the [owning](@) [community](@) as the [curators](@) of the [scope](@).
+[Scopes](@), that is: their contents, must be [curated](@). Since this requires particular capabilities that the [owning](@) [community](@) may lack, we say that this [curation](@) is done by a so-called [terms community](@), whose members are individuals that do have such capabilities; they serve the [owning](@) [community](@) as the [curators](@) of the [scope](@).
 
 A [scope](@) can contain multiple [terminologies](@); it is expected that at least one such [terminology](@) is committed to by the [owning](@) [community](@).
 

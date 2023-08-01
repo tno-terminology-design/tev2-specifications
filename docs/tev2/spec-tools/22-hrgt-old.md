@@ -48,7 +48,7 @@ The [HRGT](@) operates on a single [MRG](@) of a [scope](@), which contains (dat
 The construction of a [HRG](@) can be envisaged as
 - selecting the [mrg entries](@) that must appear in the [HRG](@). Selection may depend on the specification of the kinds of [knowledge artifacts](@) that should be included, and/or specifying [tags](@) for the (groups of) [artifacts](knowledge-artifact@), or specific [terms](@);
 - alphabetically sorting these entries;
-- converting each entry into its 'rendered' format, thereby resolving any [term refs](@) (by appropriately calling the [TRRT](@)), adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
+- converting each entry into its 'rendered' format, thereby resolving any [TermRefs](@) (by appropriately calling the [TRRT](@)), adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
 - concatenating these rendered entries, optionally including/inserting some navigation bars (e.g. before a new letter starts);
 - constructing the [HRG](@) by adding (rendered) header- and footer-material and (optionally) licensing information.
 
@@ -67,7 +67,7 @@ The [HRGT](@) comes with documentation that enables developers to ascertain its 
 
 :::info Editor's note
 A specification is needed for the creation of a (simple) [HRG](@) (from an existing [HRG](@)).
-Any [term refs](@) need to be properly resolved.
+Any [TermRefs](@) need to be properly resolved.
 Titles of term entries may want to link to the original resource from which it was derived.
 Choice bars (e.g. `[ A B C D .... Z ]` may need to be inserted here and there).
 Meta-data (group tags, the scopetag of the scope where it was defined, contributors, versions, dates, etc.) may need to be included.

@@ -3,11 +3,11 @@
 term: term-ref
 termType: concept
 isa:
-glossaryTerm:
+glossaryTerm: TermRef
 glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/tev2/spec-syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [knowledge artifact](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
 synonymOf:
 grouptags:
-formPhrases: term-ref{ss}, term-reference{ss}
+formPhrases: term-ref{ss}, termref{ss}, term-reference{ss}
 # Curation status
 status: proposed
 created: 2022-06-06
@@ -28,11 +28,11 @@ As TEv2 is not (yet) available, the texts that specify the tool are still 'raw',
 ### Summary
 A **Term Ref** is a word or phrase that is [marked up (in a specific way)](/docs/tev2/spec-syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [knowledge artifact](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@).
 
-A [term ref](@) consists of two parts. The first part is the word or phrase that is marked up (the so-called `show text`). The second part is the actual reference that specifies the [concept](@) (or other [knowledge artifact](@)) to which the [term ref](@) refers. This second part is called a [term identifier](@).
+A [TermRef](@) consists of two parts. The first part is the word or phrase that is marked up (the so-called `show text`). The second part is the actual reference that specifies the [concept](@) (or other [knowledge artifact](@)) to which the [TermRef](@) refers. This second part is called a [term identifier](@).
 
-[Authors](@) need to know the [term ref syntax](/docs/tev2/spec-syntax/term-ref-syntax) that they are expected to use.
+[Authors](@) need to know the [TermRef syntax](/docs/tev2/spec-syntax/term-ref-syntax) that they are expected to use.
 
-[Curators](@), which are expected to control the ways in which authored texts are further processed (into rendered texts), will need to know the options provided by the [TRRT tool](/docs/tev2/spec-tools/trrt) in order to ensure that the [term refs](@) that are used in in authored text are rendered in the way(s) that are envisaged.
+[Curators](@), which are expected to control the ways in which authored texts are further processed (into rendered texts), will need to know the options provided by the [TRRT tool](/docs/tev2/spec-tools/trrt) in order to ensure that the [TermRefs](@) that are used in in authored text are rendered in the way(s) that are envisaged.
 
 ### Purpose
-[Term refs](@) make it easy for [authors](@) to associate some word(s) or phrase(s) with a specific [knowledge artifact](@), c.q. the [curated text](@) that (authoritatively) documents it. Also, [term refs](@) enable authored texts to be rendered in various ways, each of which is capable of converting such [term refs](@) into effects that help [readers](@) to (better) understand what the [author(s)](@) of the text intended when using a [term](@) or phrase.
+[TermRefs](@) make it easy for [authors](@) to associate some word(s) or phrase(s) with a specific [knowledge artifact](@), c.q. the [curated text](@) that (authoritatively) documents it. Also, [TermRefs](@) enable authored texts to be rendered in various ways, each of which is capable of converting such [TermRefs](@) into effects that help [readers](@) to (better) understand what the [author(s)](@) of the text intended when using a [term](@) or phrase.

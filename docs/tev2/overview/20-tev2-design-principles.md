@@ -15,7 +15,7 @@ The entire section on Terminology Engine v 2 (TEv2) is still under construction.
 As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
 :::
 
-[TEv2](@) not only contributes to dealing with ([authors](@)/groups that have their) individual [scoped](@) [terminologies](@), it specifically also contributes to the re-use of [terms](@) across [scopes](@), and the production of (documentary) artifacts in which such [terms](@) are used. All this is done while respecting the autonomy of the [communities](@) that [own](@essiflab) these [scopes](@). This is what we call [Self-Sovereign Terminology](@).
+[TEv2](@) not only contributes to dealing with ([authors](@)/groups that have their) individual [terminologies](@), it specifically also contributes to the re-use of [terms](@) across [scopes](@), and the production of (documentary) artifacts in which such [terms](@) are used. All this is done while respecting the autonomy of the [communities](@) that [own](@essiflab) these [scopes](@). This is what we call a Self-Sovereign Terminology.
 
 ## Text Conversion
 
@@ -30,7 +30,7 @@ The (documentary) artifacts we envisage are typically in the form of e.g. a (sta
 
 Many things that can be done with tools in the [toolbox](/docs/tev2/tev2-toolbox), such as the generation of [glossaries](@) or [dictionaries](@), the contents of which can be tailored, and they can be rendered in various formats. The toolbox has been designed to be extensible, which means that if at one point in time some tailoring or rendering features are missing, they can be added later, as needed.
 
-A particularly nice feature of the [toolbox](/docs/tev2/tev2-toolbox) is its capability of working with so-called [Term Refs](@), which are pieces of text that are [annotated](/docs/tev2/spec-syntax/term-ref-syntax) to refer to a particular [term](@), the effect of which in the rendered version of the text can help [readers](@) understand the meaning in which the [term](@) was used. The figure below shows an example of this: at the left you see a raw (markdown) text, where the terms **`community`**, **`own`** and **`terminology`** have been annotated to refer to [curated](@) [terms](@) (from specific [scopes](@)). At the right side you see the effect that tools from the [toolbox](/docs/tev2/tev2-toolbox) and other third party tools had as they rendered this text into an (HTML) web page: the texts are highlighted, and when the [reader](@) hovers its mouse over that text, a popup-balloon shows that contains the definition of the [term](@) that was referenced.
+A particularly nice feature of the [toolbox](/docs/tev2/tev2-toolbox) is its capability of working with so-called [TermRefs](@), which are pieces of text that are [annotated](/docs/tev2/spec-syntax/term-ref-syntax) to refer to a particular [term](@), the effect of which in the rendered version of the text can help [readers](@) understand the meaning in which the [term](@) was used. The figure below shows an example of this: at the left you see a raw (markdown) text, where the terms **`community`**, **`own`** and **`terminology`** have been annotated to refer to [curated](@) [terms](@) (from specific [scopes](@)). At the right side you see the effect that tools from the [toolbox](/docs/tev2/tev2-toolbox) and other third party tools had as they rendered this text into an (HTML) web page: the texts are highlighted, and when the [reader](@) hovers its mouse over that text, a popup-balloon shows that contains the definition of the [term](@) that was referenced.
 
 <p align="center">
 <img
@@ -39,7 +39,7 @@ A particularly nice feature of the [toolbox](/docs/tev2/tev2-toolbox) is its cap
 /><i>Figure 2: The effect of annotating texts with a Term Reference</i>
 </p>
 
-If you are familiar with [markdown](https://www.markdownguide.org/basic-syntax/), you will notice that the raw text contains syntax that resembles [markdown links](https://www.markdownguide.org/basic-syntax/#links), but it's not quite conformant: it contains the `@` character, which signals (within TEv2) that this is not an ordinary link, but a link that will be resolved by the [TRRT](@). The [TRRT](@) will convert these links (which we call [term refs](@)) such that they are rendered as shown in the right of the figure: that is: in purple boldface, and when you hover your mouse over the term, it will show the definition of that term.
+If you are familiar with [markdown](https://www.markdownguide.org/basic-syntax/), you will notice that the raw text contains syntax that resembles [markdown links](https://www.markdownguide.org/basic-syntax/#links), but it's not quite conformant: it contains the `@` character, which signals (within TEv2) that this is not an ordinary link, but a link that will be resolved by the [TRRT](@). The [TRRT](@) will convert these links (which we call [TermRefs](@)) such that they are rendered as shown in the right of the figure: that is: in purple boldface, and when you hover your mouse over the term, it will show the definition of that term.
 
 ## Text Conversion Steps
 

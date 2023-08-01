@@ -4,7 +4,7 @@ term: mental-model
 termType: concept
 isa: knowledge-artifact
 glossaryTerm:
-glossaryText: "A [knowledge artifact](@) that relates a set of [concepts](@) (ideas), relations between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called 'viewpoint', or 'way of thinking')."
+glossaryText: "A [knowledge artifact](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called 'viewpoint', or 'way of thinking')."
 synonymOf:
 grouptags:
 formPhrases: mental-model{ss}, pattern{ss}, conceptual-model{ss}
@@ -38,12 +38,12 @@ The [terminology pattern](pattern-terminology@) provides an overview of how this
 A (good) mental model can be used
 - to facilitate one's thinking and reasoning about a specific topic, and/or deepen one's understanding of it.
 - to effectively explain backgrounds of one's reasoning/understanding of the mental model's topic.
-- to efficiently discuss and improve [definitions](@) of the [concepts](@) and relations in the mental model.
+- to efficiently discuss and improve [definitions](@) of the [concepts](@) and [relations](@) in the mental model.
 - to write texts using precisely defined language.
 
 ### Criteria
 
-A limited set of [concepts](@) (preferably not exceeding 7+/-2)[^1], relations between such concepts, and constraints, such that together they form a coherent and consistent whole that can be used to explain one's thinking about a specific topic within a specific [scope](@).
+A limited set of [concepts](@) (preferably not exceeding 7+/-2)[^1], [relations](@) between such concepts, and constraints, such that together they form a coherent and consistent whole that can be used to explain one's thinking about a specific topic within a specific [scope](@).
 
 ### Notes
 
@@ -73,7 +73,7 @@ When assessing a model, start simple. Read the text, try to picture (or hear) wh
 
 ### On the Construction of Mental Models
 
-If you're acquianted with using mental models, you may want to construct your own. That is a task that needs to be taken on with care. You must allow the choices for its elements to be validated against many use-cases. Such validation instills trust that our model elements (concepts, relations, rules) are well-chosen. It also provides us with the experience (usually after some time) that it has made our thinking easier, and we are better equipped to resolve issues.
+If you're acquianted with using mental models, you may want to construct your own. That is a task that needs to be taken on with care. You must allow the choices for its elements to be validated against many use-cases. Such validation instills trust that our model elements ([concepts](@), [relations](@), rules) are well-chosen. It also provides us with the experience (usually after some time) that it has made our thinking easier, and we are better equipped to resolve issues.
 
 The careful construction is comparable to a quest: it takes time, multiple versions, and careful reflection. And it needs continuous validation of its parts, by throwing use-cases at it and verifying that the model can describe such cases, and do some reasoning with them.
 

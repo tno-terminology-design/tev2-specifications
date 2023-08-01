@@ -86,7 +86,7 @@ The columns in the following table are defined as follows:
 | :--      | :----      | :---: | :--: | :---------- |
 | `config` | `<path>`   | n | * | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter SHOULD NOT appear in the configuration file itself. |
 | `scopedir` | `<path>` | Y | * | Path to the [scopedir](@) within which the tool is to operate, i.e.: _this scopedir_. |
-| `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs]/tev2/spec-files/saf, [terminology construction](/docs/tev2/spec-tools/terminology-construction), [MRG specs]/tev2/spec-files/mrg, [Curated Texts](/docs/tev2/spec-files/ctext), [term refs](/docs/tev2/spec-syntax/term-ref-syntax)). |
+| `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs]/tev2/spec-files/saf, [terminology construction](/docs/tev2/spec-tools/terminology-construction), [MRG specs]/tev2/spec-files/mrg, [Curated Texts](/docs/tev2/spec-files/ctext), [TermRefs](/docs/tev2/spec-syntax/term-ref-syntax)). |
 | `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.alvsntags`.  |
 | `term` | `<term>` | n | -txt | [term](@) that [identifies](@) a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
 | `termtypes` | `<termtypes>` | n | -txt | List of texts that serve to identify a specific kind of [knowledge artifact](@), e.g. `concept`, or `pattern`. Every [curated file](@), whose (front-matter) field `termtype` appears as an element in the `<termtypes>` list, will be integrity-checked. |
@@ -159,8 +159,8 @@ For specific kinds of [MRG entries](@), the following additional constraints MUS
 <TabItem value="concept"><br/>
 
 The following constraints MUST hold for [MRG entries](@) of type `concept`:
-- if a `glossaryText` contains a [term ref](@), then the [term ref](@) SHOULD be resolvable <mark>(reference to the term-ref-integrity checks)</mark>.
-- `hoverText` MUST NOT contain any [term ref](@), nor any other [markdown links](https://www.markdownguide.org/basic-syntax/#links).
+- if a `glossaryText` contains a [TermRef](@), then the [TermRef](@) SHOULD be resolvable <mark>(reference to the term-ref-integrity checks)</mark>.
+- `hoverText` MUST NOT contain any [TermRef](@), nor any other [markdown links](https://www.markdownguide.org/basic-syntax/#links).
 
 </TabItem>
 <TabItem value="term"><br/>

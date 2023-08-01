@@ -26,7 +26,7 @@ As TEv2 is not (yet) available, the texts that specify the tool are still 'raw',
 :::
 
 ### Summary
-A **Scopetag** is a [tag](@) that is used to [identify](@) [scopes](@), e.g. in [term refs](@).
+A **Scopetag** is a [tag](@) that is used to [identify](@) [scopes](@), e.g. in [TermRefs](@).
 
 Scopetags [identify](@) a [scope](@) (from within a given [scope](@)), and hence can be used (within that given [scope](@)) to disambiguate [terms](@).
 
@@ -39,4 +39,4 @@ A **Scopetag** (of/within a [scope](@)) is a [tag](@) that is used within that [
 Examples of scopetags are `essif-lab`, `essiflab`, `toip`, or `ctwg`.
 
 ### Notes
-Discussions about which regex a tag should satisfy must be held with care. For example, one might argue that allowing the `.` character for [versiontags](@) might be beneficial. However, allowing a `.` character in a [scopetag](@) may cause problems with (the alternative syntax) of [term refs](@), as email address in square brackets might then qualify as a [term ref](@) while that is very likely not the [author](@)'s intention.
+Discussions about which regex a tag should satisfy must be held with care. For example, one might argue that allowing the `.` character for [versiontags](@) might be beneficial. However, allowing a `.` character in a [scopetag](@) may cause problems with (the alternative syntax) of [TermRefs](@), as email address in square brackets might then qualify as a [TermRef](@) while that is very likely not the [author](@)'s intention.

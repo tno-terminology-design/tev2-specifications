@@ -91,14 +91,14 @@ Then, the [HRGT](@) reads the specified input files (in arbitrary order), and pr
 - select the actual [MRG](@) that is to be used as an input;
 - select the (subset of) [MRG entries](@) from that [MRG](@) that must appear in the [HRG](@) - see [HRG Term Selection](/docs/tev2/spec-syntax/hrg-termselcrit) for details. Conceptually, this will result in an [MRG](@) that only contains [MRG entries](@) that need to appear in the [HRG](@) as well;
 - (alphabetically) sort these entries;
-- convert each entry into a specific 'rendered' format (as specified by the user), thereby resolving any [term refs](@) (by appropriately calling the [TRRT](@))[^1], adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
+- convert each entry into a specific 'rendered' format (as specified by the user), thereby resolving any [TermRefs](@) (by appropriately calling the [TRRT](@))[^1], adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
 :::info Editor's note
 The [TRRT](https://github.com/tno-terminology-design/trrt) has a nice setup for implementing [text conversion steps](/docs/tev2/overview/tev2-design-principles#text-conversion-steps). We should check that out and adapt the specifications text in this section so that this stuff can be reused as much as possible.
 :::
 - construct the [HRG](@) by adding (rendered) header- and footer-material and (optionally) licensing information;
 - write the [HRG](@) to the designated output file.
 
-[^1]: if the rendered output is such that [term refs](@) can still be recognized by the [TRRT](@), it may be more efficient to defer the resolution of [term refs](@) until after the [HRG](@) is completely generated.
+[^1]: if the rendered output is such that [TermRefs](@) can still be recognized by the [TRRT](@), it may be more efficient to defer the resolution of [TermRefs](@) until after the [HRG](@) is completely generated.
 
 :::info Editor's Note:
 A special case of [HRG](@) generation is when the default [HRG](@) is created for a particular [MRG](@), which typically consists of all [MRG entries](@) of that [MRG](@). In that case, the contents of the `hrgfile` field in `versions` section of the [SAF](@) whose `mrgfile` field [identifies](@) the [MRG](@) should become the name of the file that contains the generated [HRG](@). Additionally, if the [MRG](@) happens to be the default one for the scope (as can be seen by comparing its filename with the contents of the `mrgfile` field in the `scope` section of the [SAF](@)), then the contents of the `hrgfile` field in `scope` section of the [SAF](@) must also become the name of the file that contains the generated [HRG](@). Whether or not the [HRGT](@) is expected to operate in this mode is an option that can be provided at the commandline or in the configuration file.

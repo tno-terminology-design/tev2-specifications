@@ -19,7 +19,7 @@ This document specifies the syntax of [form phrases](@), i.e. texts that are
 - specified in the header field `formphrases` in [curated texts](@);
 - conformant to the (PCRE) regex `(?:\s*(?:[a-z0-9_-{}]+)\s*(?:,\s*([a-z0-9_-{}]+))*)?` (see [Debuggex](https://www.debuggex.com/r/20MNb2zgNwLDD-dD) for a visualization).
 - present in [MRG entries](@);
-- [used to convert](/docs/tev2/spec-tools/trrt#id) the `show text` parts of [term refs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs).
+- [used to convert](/docs/tev2/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs).
 
 Note that the [syntax of `formphrases`](/docs/tev2/spec-syntax/form-phrase-syntax) enables the use use of 'macro's, i.e. shorthand syntax that represent regexes that allow for extended matching.
 
@@ -36,7 +36,7 @@ formPhrases: actor{ss}
 
 The part `{ss}` is a macro, that suppose it is associated with the regex `(?:'?s|\(s\))?`.
 
-When the [trrt](@) converts a [ref text](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/tev2/spec-tools/trrt#term) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the formphrase `actor{ss}`.
+When the [trrt](@) converts a [TermRef](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/tev2/spec-tools/trrt#term) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the formphrase `actor{ss}`.
 
 This is done as follows:
 1. all macros in the formphrase are replaced with their respective regexes, thereby transforming the formphrase into a regex itself;

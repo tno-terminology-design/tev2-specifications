@@ -27,7 +27,7 @@ From the [TEv2](@) perspective, [users](@) may contribute by [creating or editin
 
 A [user](@) can take the template, and follow the associated instructions (e.g. provide content for the various sections). That's basically it.
 
-A [user](@) can use [term refs](@) to mark the terms that it wants to be linked to a specific meaning ([knowledge artifact](@)).
+A [user](@) can use [TermRefs](@) to mark the terms that it wants to be linked to a specific meaning ([knowledge artifact](@)).
 
 ## Curators tasks
 

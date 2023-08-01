@@ -37,6 +37,6 @@ Currently (October 3, 2022), one tool is available, i.e. the [MRGT](/docs/tev2/s
 
 Tools that we would like to see developed first include:
 
-- [TRRT](/docs/tev2/spec-tools/12-trrt.md), which converts [term-ref syntax](/docs/tev2/spec-syntax/11-term-ref-syntax.md) into one (out of multiple choices of) renderable syntax(es).
+- [TRRT](/docs/tev2/spec-tools/12-trrt.md), which converts [TermRef syntax](/docs/tev2/spec-syntax/11-term-ref-syntax.md) into one (out of multiple choices of) renderable syntax(es).
 - ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/tev2/spec-files/00-ctext.md);
 - rendering tools that are needed to accommodated terminology support for [ReSpec](https://dev.w3.org/2008/video/mediaann/ReSpec.js/documentation.html) environments, such as often used for W3C standards.

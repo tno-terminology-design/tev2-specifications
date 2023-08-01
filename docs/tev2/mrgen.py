@@ -10,6 +10,12 @@ import glob
 import datetime
 import sys
 
+import ruamel.yaml
+import yaml
+
+print(ruamel.yaml.__version__)
+print(yaml.__version__)
+
 # Create Terminology section
 
 def construct_terminology_section(saf_data, version_tag):

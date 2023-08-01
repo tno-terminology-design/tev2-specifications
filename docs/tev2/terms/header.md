@@ -5,9 +5,9 @@ id: header
 term: header
 termType: concept
 isa:
-glossaryTerm: Header (of a Curated Text)
-glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line."
-hoverText: "Header (of a Curated Text): the part at the beginning of that curated text, that starts with a line that (only) contains the text `---`, and that ends with a second occurrance of such a line."
+glossaryTerm: "Header (of a Curated Text)"
+glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrance of such a line."
+hoverText: "Header (of a Curated Text): the part at the beginning of that curated text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrance of such a line."
 synonymOf:
 grouptags:
 formPhrases: header{ss}

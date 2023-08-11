@@ -111,7 +111,7 @@ After the [MRG](@) file has been written, the [MRGT](@) will create,  a [symboli
 
 An [MRG entry](@) is either
 - a copy of an (existing) [MRG entry](@) that is found in an [MRG](@) that lives in another [scope](@), or
-- it is constructed from a [curated text](@), which lives in a file in (one of the subdirectories of) the [curatedir](@) of the current [scope](@), as [specified](/docs/spec-files/saf#terminology) in the `curatedir` field of the [SAF](@).
+- it is constructed from a [curated text](@), the [header](@) of which always lives in a [curated file](@) that is located in the [curatedir](@) of the current [scope](@), as [specified](/docs/spec-files/saf#terminology) in the `curatedir` field of the [SAF](@), and the [body](@) of which can either be found in that same file, or in the file that can be found at the location in the [scopedir](@) as specified by the `bodyFile`-field in the [header](@) of the [curated text](@).
 
 #### Copying an MRG Entry from an existing MRG
 
@@ -142,7 +142,7 @@ Constructing an [MRG entry](@) from a [curated text](@) is done as follows:
 | `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the `scope` section of the [SAF](@). |
 | `locator`      | path, relative to `scopedir`/`curatedir`/, of the [curated text](@). |
 | `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@), where the rendered version of the [curated text](@) is located. |
-| `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [curated text](@). |
+| `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be in a another file that that which contains the [header](@) of the [curated text](@) |
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 

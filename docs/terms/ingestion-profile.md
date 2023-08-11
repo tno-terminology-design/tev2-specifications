@@ -29,10 +29,10 @@ The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manua
 :::info Editor's Note
 Text needs to be revised. Here are some ideas to mention:
 - contributors can suggest contents as per the curators instructions;
-- [authors](@) can write the body of ctexts;
-- curators update the header of ctexts (conforming to the ctext specs);
-- curators specify the process by which ctexts progress/mature, and get statuses assigned;
-- curators generate artifacts from 'decided on' ctexts, so that
+- [authors](@) can write the body of [curated texts](@);
+- curators update the header of [curated texts](@) (conforming to the ctext specs);
+- curators specify the process by which [curated texts](@) progress/mature, and get statuses assigned;
+- curators generate artifacts from 'decided on' [curated texts](@), so that
   - rendering tools or generation tools used in other scopes can generate artifacts and
   - people can subsequently access nicely rendered, human readable versions
 :::

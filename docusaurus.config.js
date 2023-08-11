@@ -80,6 +80,9 @@ module.exports = {
                              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
                     </a>.&nbsp&nbsp(Copyright © 2022-${new Date().getFullYear()} by <span property="cc:attributionName">TNO</span>).</p>`
     },
+    prism: {
+        additionalLanguages: ['handlebars', 'regex', 'bash'],
+    },
   },
   presets: [
     [

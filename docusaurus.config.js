@@ -25,8 +25,7 @@ module.exports = {
       title: 'Home',
       logo: { src: 'images/logos/tev2-new-babylon-medium.png', },
       items: [
-        { to: 'docs/tev2/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
-        { to: 'docs/terminology-design/overview', label: 'Terminology Design', position: 'left'},
+        { to: 'docs/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
         { href: 'https://github.com/tno-terminology-design/tev2-specifications', label: 'Github',     position: 'right',
         },
       ],
@@ -35,28 +34,20 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Terminology Design',
-          items: [
-            { label: 'Introduction',  to: 'docs/terminology-design/overview' },
-            { label: 'Methods',       to: 'docs/terminology-design/methods' },
-            { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
-          ],
-        },
-        {
           title: 'TEv2 User Manuals',
           items: [
-            { label: 'Curators',      to: 'docs/tev2/manuals/curator' },
-            { label: 'Contributors',  to: 'docs/tev2/manuals/contributor' },
-            { label: 'Authors',       to: 'docs/tev2/manuals/author' },
+            { label: 'Curators',      to: 'docs/manuals/curator' },
+            { label: 'Contributors',  to: 'docs/manuals/contributor' },
+            { label: 'Authors',       to: 'docs/manuals/author' },
             // { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
           ],
         },
         {
           title: 'TEv2 Specifications',
           items: [
-            { label: 'Files',     to: 'docs/tev2/tev2-spec-files' },
-            { label: 'Syntaxes',  to: 'docs/tev2/tev2-syntax' },
-            { label: 'Toolbox',   to: 'docs/tev2/tev2-toolbox' },
+            { label: 'Files',     to: 'docs/tev2-spec-files' },
+            { label: 'Syntaxes',  to: 'docs/tev2-syntax' },
+            { label: 'Toolbox',   to: 'docs/tev2-toolbox' },
             { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
           ],
         },

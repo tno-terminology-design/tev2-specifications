@@ -1,0 +1,69 @@
+Here is a template that I want you to fill in for Terms whose meanings I will be specifying. The template uses texts between curly brackets, e.g. `{varname}` as placeholders for particular variables that I will specify below. 
+
+~~~
+---
+# Docusaurus header
+id: {termid}
+# TEv2 Curated Text Header
+term: {termid}
+termType: concept
+isa: {isaconcept}
+glossaryTerm: {term-hr}
+glossaryText: "{glossaryText}"
+hoverText: "{term-hr}: \{(noRef \{glossaryText\})\}"
+synonymOf: {synonymOf}
+grouptags: {grouptags}
+formPhrases: {formphrases}
+# Curation status
+status: proposed
+created: {today's date}
+updated: {today's date}
+# Origins/Acknowledgements
+contributors: RieksJ
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+---
+
+# {term-hr}
+
+A **{term-hr}** is {criterion-for-the-term}. 
+~~~
+
+The placeholder variables have the following meanings:
+
+- {termid}: The unique identifier for the term. Must be all lowercase and whitespace is represented with a single `-`character.
+- {isaconcept}: The concept of which the Term is a subclass. For example a `grouptag` would be a subclass of `tag`.
+- {term-hr}: The human-readable term or concept name.
+- {criterion-for-the-term}: A text that different people can use to determine whether or not something is an instance/example of the term. It must be formally evaluatable to a yes/no.
+- {glossarytext}: The {criterion} of the term, as it would appear in a glossary. If appropriate one or two sentences may be added for further (necessary) clarifications.
+- {hovertext}: Text that appears when a user hovers over the term. It is to be as specified. For example, if the term has {term-hr}='Definition', then the hoverText-line MUST be: `hoverText: "Definition: {(noRef {glossaryText})}`, so you wouldn't fill in the value of 'glossaryText here.
+- {synonymOf}: The primary term if this entry represents a synonym or alias.
+- {formphrases}: Phrases or words that users may commonly use to refer to this concept. Typically, they are phrases that express a (optional) plural form, possessive extensions (e.g. `'s` as in `an owner's job`), verb-conjugation forms, and the like. Also, they should all be in lower-case, and (sequences of) spaces or other strange characters should be converted to a single `-`character.
+- {today's date}: The date it is today. I want you to provide its value.
+
+For the Term that an instance of this template will be documenting, I want you to come with proper values for each of these variables. I want you to always present filled-in templates as a markdown text that I can copy into VSCode.
+
+Also, I want you to add sections of text that help readers understand the concept that the Term that is being documented refers to, such as:
+- Examples. When providing examples, please make sure they are relevant within the context for which we are defining the Term.
+- Notes. Any observation that you think help readers to better understand the concept can be placed here.
+- Miscellanous. Put anything here that you think may help readers to better understand the concept, such as a summary.
+
+DO NOT inlucde a section called References, unless you can provide actual, existing references to resources on the Internet (NOT on `example.com` or similar domains), or in books, that are REALLY relevant. If you do, provide one or two sentences that state this actual relevance. In case of doubt, DO NOT inclue such a section.
+
+You should not add sections for which I would need to provide the contents, or that contain texts such as `example.com`.
+
+The context in which I want to develop these terms is one in which there is a set of objectives that a group of parties work and collaborate to realize. Thus, they need to establish (curate) a set of concepts that are relevant to this particular collaboration, and for each of them, create definitions, i.e. pairs of (criterion, term), where `criterion` is a text that they can use to determine whether or not something is an instance/example of the concept, and `term` is a word or phrase that they will be using to refer to that concept, or to an arbitary instance thereof.
+
+The texts (which I will call 'curated texts' or 'ctexts') you will be constructing from the template specified earlier, will each  document one such term. Curators will create machine readable glossaries (MRGs) from a set of such terms. Also, they will be creating human readable glossaries (HRGs) from a subset of the terms documented in an MRG. Glossaries do not contain terms that have multiple meanings (there is no ambiguity in glossary terms). Also, we will have both machine readable and human readable dictionaries (MRDs and HRDs), which are terms originate from various glossaries, and hence can be ambiguous (so an entry in such a dictionary typically lists the glossary from which a particular meaning of a term was taken).
+
+The tools that are used to generate glossaries and dictionaries have names that is the abbreviation of the document with an added `T` (for `Tool`), so the MRGT would be the tool that generates an MRG. So we have the `MRGT`, `HRGT`, `MRDT` and `HRDT`. We also have the `ICT` (integrity checker tool), whose purpose is to check the integrity (conformity to the specifications) of the various files that contain an MRG, HRG, MRD, HRD, CTEXT, or SAF (the SAF or Scope Administration File contains data about the scope within which the terms are curated, which includes the location of the glossaries, dictionaries, and ctexts, but also the criteria that state what each such glossary/dictionary contains, and other meta-data). There is also the MRG-importer tool, whose task is to collect MRGs from other scopes, make some conversions of their filenames and conents, and make them available for the other tools to use. The SAF contains data that specifies from which scopes such MRGs should be imported.
+
+Are you ready to provide me with filled in templates?
+
+
+
+--- 
+I want you to ALWAYS 
+1. present the filled-in template as a markdown text that I can copy into VSCode.
+2. use the phrase `{(noRef {glossaryText})}` literally as that in a hoverText, so the line would read as `hoverText: "<defined-term>: {(noRef {glossaryText})}", where <defined-term> is the value of the variable `{term-hr}`.
+3. specify an individual form phrase in lower-case, and replace any (sequences of) spaces or other strange characters therein with a single `-`character.

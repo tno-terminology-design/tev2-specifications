@@ -20,8 +20,7 @@ entries:
 # Docusaurus \(see https://docusaurus\.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter\):
     hoverText: Error - the reference cannot be resolved.
     sidebar_label: Term ref not found
-    displayed_sidebar: tev2SideBar
-    scopetag: tev2
+        scopetag: tev2
     locator: <locator>/@
     navurl: <navurl>/@
     headingids:

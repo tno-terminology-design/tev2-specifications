@@ -1,7 +1,6 @@
 ---
 id: contributors-repo
 sidebar_label: Using Git Repo Markdown
-scopetag: tev2
 date: 20220513
 ---
 

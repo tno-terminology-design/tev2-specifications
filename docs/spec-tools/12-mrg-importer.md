@@ -1,8 +1,6 @@
 ---
 id: mrg-importer
 sidebar_label: MRG Importer
-displayed_sidebar: tev2SideBar
-scopetag: tev2
 date: 20230731
 ---
 

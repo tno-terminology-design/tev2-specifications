@@ -1,7 +1,5 @@
 ---
 id: tev2-installation
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220303
 ---
 

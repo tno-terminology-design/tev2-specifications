@@ -1,8 +1,6 @@
 ---
 id: form-phrase-syntax
 sidebar_label: Form Phrases
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220808
 ---
 

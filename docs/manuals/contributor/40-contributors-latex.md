@@ -1,7 +1,6 @@
 ---
 id: contributors-LaTeX
 sidebar_label: Using LaTeX
-scopetag: tev2
 date: 20220513
 ---
 

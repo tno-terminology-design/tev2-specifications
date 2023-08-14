@@ -1,7 +1,6 @@
 ---
 id: tev2-readme
 sidebar_label: Contributing
-scopetag: tev2
 date: 20220402
 ---
 

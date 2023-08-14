@@ -1,8 +1,6 @@
 ---
 id: ctext
 sidebar_label: Curated Texts
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220713
 ---
 
@@ -45,7 +43,6 @@ Every [curated text](@) consists of two parts: a ([YAML](https://yaml.org/spec/1
 # Docusaurus front matter
 id: ctext
 sidebar_label: Curated Texts
-hide_table_of_contents: true
 # TEv2 Curated Text Header
 term: curated-text
 termType: concept

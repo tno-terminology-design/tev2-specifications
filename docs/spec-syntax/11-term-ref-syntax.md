@@ -1,8 +1,6 @@
 ---
 id: term-ref-syntax
 sidebar_label: Term References
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220303
 ---
 

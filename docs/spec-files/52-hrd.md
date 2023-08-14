@@ -1,8 +1,6 @@
 ---
 id: hrd
 sidebar_label: HRD (Human Readable Dictionary)
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220503
 ---
 

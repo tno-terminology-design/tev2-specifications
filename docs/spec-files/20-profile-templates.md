@@ -1,8 +1,6 @@
 ---
 id: profile-templates
 sidebar_label: Profile Templates
-hide_table_of_contents: true
-scopetag: tev2
 date: 20220816
 ---
 

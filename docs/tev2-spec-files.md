@@ -1,7 +1,5 @@
 ---
 id: tev2-spec-files
-hide_table_of_contents: false
-scopetag: tev2
 date: 20220819
 ---
 

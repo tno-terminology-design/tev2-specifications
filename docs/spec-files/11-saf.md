@@ -1,8 +1,6 @@
 ---
 id: saf
 sidebar_label: SAF (Scope Admin File)
-hide_table_of_contents: true
-scopetag: tev2
 date: 20230103
 ---
 

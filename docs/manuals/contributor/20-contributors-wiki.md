@@ -1,7 +1,6 @@
 ---
 id: contributors-wiki
 sidebar_label: Using Wikis (Markdown)
-scopetag: tev2
 date: 20220513
 ---
 

@@ -1,4 +1,6 @@
 const path = require('path');
+
+const terminology_design = require('./footer-links/terminology-design.json');
 const manuals = require('./footer-links/manuals.json');
 const specifications = require('./footer-links/specifications.json');
 const repositories = require('./footer-links/repositories.json');
@@ -38,6 +40,7 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
+        { title: terminology_design.title, items: terminology_design.items },
         { title: manuals.title, items: manuals.items },
         { title: specifications.title, items: specifications.items, },
         { title: repositories.title, items: repositories.items },

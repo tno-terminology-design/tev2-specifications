@@ -1,14 +1,12 @@
 ---
-id: contributor
+id: contributor-overview
 sidebar_label: Contributors
-displayed_sidebar: tev2SideBar
-scopetag: tev2
 date: 20220513
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Contributors Manual
+# Contributors Manual - Overview
 
 <img
   alt="This page is under construction"

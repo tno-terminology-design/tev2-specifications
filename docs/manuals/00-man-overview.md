@@ -1,15 +1,11 @@
 ---
-id: tev2-roles
-sidebar_label: Roles
-displayed_sidebar: tev2SideBar
-scopetag: tev2
+id: man-overview
 date: 20220513
 ---
 
-# TEv2 - Roles
+# Manuals
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
-
 export const mark = ({children}) => (
   <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
     {children}
@@ -20,7 +16,12 @@ The entire section on Terminology Engine v 2 (TEv2) is still under construction.
 As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
 :::
 
-Individual people may participate in a variety of roles, each of which requires specific capabilities. They are summarized in the following sections:
+Individual people may participate in any of the following roles:
+- [**Contributors**](#contributor) contribute to the further development of a [terminology](@).
+- [**Curators**](#curator) maintain the [terminology](@) and ensure it becomes available for use.
+- [**Authors**](#author) write texts that use the [terms](@) defined in one or more [terminologies](@)
+
+Each role requires specific capabilities. They are summarized in the following sections:
 
 ## Contributors {#contributor}
 

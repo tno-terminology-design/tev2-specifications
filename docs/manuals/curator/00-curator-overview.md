@@ -1,8 +1,6 @@
 ---
-id: curator
+id: curator-overview
 sidebar_label: Curators
-displayed_sidebar: tev2SideBar
-scopetag: tev2
 date: 20220513
 ---
 

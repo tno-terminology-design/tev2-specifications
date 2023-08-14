@@ -29,7 +29,17 @@ const copyright = require('./footer-links/copyright.json');
     },
 ~~~
 
-4. Make sure to regularly update the contents of the `footer-links`-directory that you have created, which you can do in a github action (or similar) when you deploy your site. Alternatively, you can do that 'manually' while updating your repository, by executing either `update.ps1` in PowerShell or `update.sh` in Bash. 
+4. Make sure to regularly update the contents of the `footer-links`-directory that you have created, which you can do in a github action (or similar) when you deploy your site. Alternatively, you can do that 'manually' while updating your repository, by executing either `update.ps1` in PowerShell, as in
 
-At this moment, these scripts have not been tested and therefor may not (yet) work. 
-Please create an issue or pull request specifying problems you encounter and solutions you found.
+~~~ ps
+powershell -ExecutionPolicy Bypass -File ".\update.ps1"
+~~~
+
+or `update.sh` in Bash, as in
+
+~~~ Bash
+chmod +x update.sh
+./update.sh
+~~~
+
+At this moment, the Bash script has not been tested at all; the PS-script has been run a few Times. So there may be issues. If you encounter ThemeProvider, please raise an issue (preferably with a pull request that suggests a resolution).

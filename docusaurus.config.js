@@ -1,7 +1,12 @@
 const path = require('path');
+const manuals = require('./footer-links/manuals.json');
+const specifications = require('./footer-links/specifications.json');
+const repositories = require('./footer-links/repositories.json');
+const copyright = require('./footer-links/copyright.json');
+
 module.exports = {
   title: 'TNO Terminology Design',
-  tagline: 'Toolbox Specifications and Design Methods',
+  tagline: 'TEv2 Toolbox Specifications and Manuals',
   url: 'https://tno-terminology-design.github.io',
   baseUrl: '/tev2-specifications/',
   favicon: 'images/logos/logo-tno-terminology-design.ico',
@@ -25,7 +30,7 @@ module.exports = {
       title: 'Home',
       logo: { src: 'images/logos/tev2-new-babylon-medium.png', },
       items: [
-        { to: 'docs/tev2-overview',          label: 'TEv2 Overview',      position: 'left'},
+        { to: 'docs/tev2-overview', label: 'TEv2 Overview', position: 'left'},
         { href: 'https://github.com/tno-terminology-design/tev2-specifications', label: 'Github',     position: 'right',
         },
       ],
@@ -33,43 +38,11 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'TEv2 User Manuals',
-          items: [
-            { label: 'Curators',      to: 'docs/manuals/curator' },
-            { label: 'Contributors',  to: 'docs/manuals/contributor' },
-            { label: 'Authors',       to: 'docs/manuals/author' },
-            // { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
-          ],
-        },
-        {
-          title: 'TEv2 Specifications',
-          items: [
-            { label: 'Files',     to: 'docs/tev2-spec-files' },
-            { label: 'Syntaxes',  to: 'docs/tev2-syntax' },
-            { label: 'Toolbox',   to: 'docs/tev2-toolbox' },
-            { label: 'Github', href: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs/terms' },
-          ],
-        },
-        {
-          title: 'Toolbox Repositories',
-          items: [
-            { label: 'MRGT',  href: 'https://github.com/trustoverip/ctwg-toolkit-mrg' },
-            { label: 'TRRT',  href: 'https://github.com/tno-terminology-design/trrt' },
-          ],
-        },
+        { title: manuals.title, items: manuals.items },
+        { title: specifications.title, items: specifications.items, },
+        { title: repositories.title, items: repositories.items },
       ],
-      copyright: `<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-                    <span property="dct:title">The TNO Terminology Design texts in this website</span> are licensed under
-                    <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-                    CC BY-SA 4.0
-                      <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                             src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
-                      <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                             src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
-                      <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
-                             src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
-                    </a>.&nbsp&nbsp(Copyright © 2022-${new Date().getFullYear()} by <span property="cc:attributionName">TNO</span>).</p>`
+      copyright: copyright.text.replace("[20XX-20YY]",`2022-${new Date().getFullYear()}`)
     },
     prism: {
         additionalLanguages: ['handlebars', 'regex', 'bash'],

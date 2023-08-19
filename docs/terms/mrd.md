@@ -10,7 +10,7 @@ glossaryText: "a type of [dictionary](@) that is formatted in a way that can be 
 hoverText: "Machine Readable Dictionary (MRD): {(noRef {glossaryText})}"
 synonymOf:
 grouptags:
-formPhrases: machine-readable-dictionary, mrd, machine-readable-dictionary-mrd
+formPhrases: machine-readable-dictionar{yies}, mrd{ss}, machine-readable-dictionary-mrd{ss}
 # Curation status
 status: proposed
 created: 2023-07-31

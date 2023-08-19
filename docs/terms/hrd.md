@@ -10,7 +10,7 @@ glossaryText: "a [dictionary](@) that presents terms and their meanings in a for
 hoverText: "HRD: {(noRef {glossaryText})}"
 synonymOf:
 grouptags: dictionary, reference-materials
-formPhrases: hrd, human-readable-dictionary, human-readable-dictionary-hrd
+formPhrases: hrd{ss}, human-readable-dictionar{yies}, human-readable-dictionary-hrd{ss}
 # Curation status
 status: proposed
 created: 2023-07-31

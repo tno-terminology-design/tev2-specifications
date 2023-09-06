@@ -21,6 +21,18 @@ jobs:
         with:
           node-version: 16
 
+      # TNO Terminology Design tools
+      - name: Install terminology tools globally
+        run: npm install -g @tno-terminology-design/trrt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
+
+      - name: Run terminology tools
+        run: |
+          mrg-import -c $config
+          mrgt -c $config
+          trrt -c $config
+        env:
+          config: docs/config.yaml
+
       - name: Install Dependencies
         run: npm install
 

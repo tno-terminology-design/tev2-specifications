@@ -2,7 +2,7 @@
 
 ## General
 scopedir: docs
-onNotExist: throw
+onNotExist: warn
 
 ## Machine Readable Glossary Tool
 vsntag: test

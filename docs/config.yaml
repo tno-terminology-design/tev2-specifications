@@ -1,0 +1,18 @@
+# TNO Terminology Design tools configuration file (yaml)
+
+## General
+scopedir: docs
+onNotExist: throw
+
+## Machine Readable Glossary Tool
+vsntag: test
+
+## Term Reference Resolution Tool
+output: .
+interpreter: (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))(?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\) # `alt` or `basic` are also valid
+converter: '<a href="{{navurl}}{{#trait}}#{{/trait}}{{trait}}" title="{{capFirst term}}: {{noRefs glossaryText type="markdown"}}">{{showtext}}</a>' # `http`, `essif` or `markdown` are also valid
+force: true
+
+### glob pattern strings for files to be processed
+input:
+  - "**/*.md"

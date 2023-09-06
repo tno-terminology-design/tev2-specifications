@@ -28,9 +28,7 @@ scope:
 #
 scopes:  #
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/tno-terminology-design/tev2-specifications/docs/tree/master/docs # URL of the scope-directory
-- scopetag: ctwg # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
+  scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/main/docs # URL of the scope-directory
 #
 # The third section specifies the versions that are actively maintained by the curators.
 # For each version, the set of terms is selected that constitute the terminology.
@@ -47,7 +45,7 @@ versions:
     - secondAltVsnTag
   termselcrit:
     - "tags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
-    - "termids[party,community]@essif-lab:0.9.4" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
+    - "terms[party,community]@essif-lab:0.9.4" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
     - "-tags[terminology]" # remove all terms tagged with the grouptag `terminology`
     - "*@tev2" # import all terms defined in the scope `tev2`
   status: proposed

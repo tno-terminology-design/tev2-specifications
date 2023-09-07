@@ -7,7 +7,6 @@ termType: concept
 isa:
 glossaryTerm: Term Selection Criteria
 glossaryText: "criteria that are used within a particular [scope](@) for the selection of [terms](@) that are part of a particular [terminology](@)."
-hoverText: "Term Selection Criteria: {(noRef {glossaryText})}"
 synonymOf: selection-criteria
 grouptags: glossary-entries, terminology-management
 formPhrases: term-selection-criteria, selection-criteria

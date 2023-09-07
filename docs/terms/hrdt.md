@@ -7,7 +7,6 @@ termType: concept
 isa: tool
 glossaryTerm: Human Readable Dictionary Tool (HRDT)
 glossaryText: "a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@)."
-hoverText: "Human Readable Dictionary Tool (HRDT): {(noRef {glossaryText})}"
 synonymOf: 
 grouptags: tools, dictionary-tools
 formPhrases: human-readable-dictionary-tool{ss}, hrd-tool{ss}, hrdt{ss}

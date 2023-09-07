@@ -7,7 +7,6 @@ termType: concept
 isa: tool
 glossaryTerm: Human Readable Glossary Tool (HRGT)
 glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
-hoverText: "HRGT: {(noRef {glossaryText})}"
 synonymOf: human-readable-glossary-tool
 grouptags: tools, glossary-tools
 formPhrases: hrgt{ss}, machine-readable-glossary-tool{ss}, machine-readable-glossary-tool{ss}-hrtt{ss}

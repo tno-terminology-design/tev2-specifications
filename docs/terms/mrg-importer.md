@@ -7,7 +7,6 @@ termType: concept
 isa:
 glossaryTerm: MRG Importer
 glossaryText: "is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope's](@) [SAF](@), and putting them in the [scope's](@) [glossarydir](@)."
-hoverText: "MRG Importer: {(noRef {glossaryText})}"
 synonymOf: mrg-import-tool
 grouptags: glossary-entries, terminology-management-tools
 formPhrases: mrg-importer, mrg-import-tool

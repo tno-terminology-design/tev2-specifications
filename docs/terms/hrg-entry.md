@@ -7,7 +7,6 @@ termType: concept
 isa: glossary-entry
 glossaryTerm: HRG Entry
 glossaryText: "A specific kind of (human-readable) rendering of the combination of a [term](@) and a means that helps [readers](@) to understand the meaning of that [term](@) when it is used in a sentence."
-hoverText: "HRG Entry: {(noRef {glossaryText})}"
 synonymOf: 
 grouptags: glossary-entries, reference-materials
 formPhrases: hrg-entr{yies}

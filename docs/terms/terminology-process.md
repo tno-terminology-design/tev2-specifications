@@ -7,7 +7,6 @@ termType: concept
 isa:
 glossaryTerm: Terminology Process
 glossaryText: "a method for recognizing misunderstandings as such, and creating or maintaining [definitions](@) that resolve them."
-hoverText: "Terminology Process: {(noRef {glossaryText})}"
 synonymOf:
 grouptags:
 formPhrases: terminology-processes

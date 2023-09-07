@@ -7,7 +7,6 @@ termType: concept
 isa: glossary
 glossaryTerm: Human Readable Glossary (HRG)
 glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
-hoverText: "HRG: {(noRef {glossaryText})}"
 synonymOf:
 grouptags: glossaries, data-structures
 formPhrases: hrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-hrg{ss}

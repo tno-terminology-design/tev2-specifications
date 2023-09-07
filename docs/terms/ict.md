@@ -7,7 +7,6 @@ termType: acronym
 isa: tool
 glossaryTerm: Integrity Checker Tool (ICT)
 glossaryText: "a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data."
-hoverText: "Integrity Checker Tool (ICT): {(noRef {glossaryText})}"
 synonymOf: integrity-checker
 grouptags: tools, quality-assurance
 formPhrases: ict, integrity-checker

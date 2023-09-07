@@ -5,7 +5,6 @@ termType: concept
 isa: tool
 glossaryTerm: TRRT (TermRef Rendering Tool)
 glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
-hoverText: "TRRT (TermRef Rendering Tool): {(noRef {glossaryText})}"
 synonymOf: trrt
 grouptags: tev2-tool, tev2-toolbox
 formPhrases: trrt{ss}, termref-rendering-tool{ss}

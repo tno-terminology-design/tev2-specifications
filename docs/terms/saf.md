@@ -7,7 +7,7 @@ termType: concept
 isa:
 glossaryTerm: Scope Administration File (SAF)
 glossaryText: "a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@)."
-hoverText: "SAF: {(noRef {glossaryText})}"
+hoverText: "SAF: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: terminology-management
 formPhrases: saf{ss}, scope-administration-file{ss}, scope-administration-file{ss}-saf{ss}, saf{ss}-scope-administration-file{ss}

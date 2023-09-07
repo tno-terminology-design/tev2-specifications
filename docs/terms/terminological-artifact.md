@@ -5,7 +5,6 @@ termType: concept
 isa: 
 glossaryTerm: Terminological Artifact
 glossaryText: "a basic building block of meaning or representation, i.e., a 'semantic unit' within the 'mind' of a [scope](@), such as a [concept](@), a [relation](@), or a [property](@)."
-hoverText: "Terminological Artifact: {(noRef {glossaryText})}"
 synonymOf: terminological-artifact
 grouptags: glossary-entries, terminology-management
 formPhrases: terminological-artifact, semantic-unit, cognitive-science-unit

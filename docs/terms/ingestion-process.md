@@ -7,7 +7,7 @@ termType: concept
 isa: 
 glossaryTerm: Ingestion (Process)
 glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [terminologic artifacts](@) and that adhere to the [TEv2-specifications](/docs/spec-files/ctext)."
-hoverText: "Ingestion Process: {(noRef {glossaryText})}"
+hoverText: "Ingestion Process: {{noRefs glossaryText}}"
 synonymOf: 
 grouptags: 
 formPhrases: ingestion-process, ingestion-processes

@@ -7,7 +7,6 @@ termType: concept
 isa:
 glossaryTerm: Moustache Variable
 glossaryText: "a placeholder in the form of a 'moustache' tag, e.g. `{{variable_name}}``, within some text. They are used, e.g., by the [TRRT](@), where they get their values from an [interpreter](@), and where they are used in a selected [converter](@) for the purpose of replacing [TermRefs](@) with [renderable refs](@)."
-hoverText: "Moustache Variable: {(noRef {glossaryText})}"
 synonymOf:
 grouptags:
 formPhrases: moustache-variable{ss}

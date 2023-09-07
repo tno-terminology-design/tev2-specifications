@@ -7,7 +7,6 @@ termType: concept
 isa:
 glossaryTerm: Terminology Under Construction
 glossaryText: "a set of [terms](@) (that is initially empty), to which [terms](@) can be added or removed as specified by [term selection criteria](@), so as to ultimately result in a proper [terminology](@)."
-hoverText: "Terminology Under Construction: {(noRef {glossaryText})}"
 synonymOf:
 grouptags:
 formPhrases:

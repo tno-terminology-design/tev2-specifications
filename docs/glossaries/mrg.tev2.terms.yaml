@@ -13,7 +13,7 @@ entries:
     sidebar_label: 'Term ref not found'
     scopetag: 'tev2'
     locator: '@.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/@'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/@'
     headingids:
       - 'error---the-reference-cannot-be-resolved'
       - '"@"'
@@ -35,7 +35,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'author.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/author'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author'
     headingids:
       - 'author'
   - id: 'body'
@@ -56,7 +56,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'body.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/body'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/body'
     headingids:
       - 'body'
       - 'summary'
@@ -76,7 +76,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'concept.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/concept'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/concept'
     headingids:
       - 'concept'
       - 'summary'
@@ -101,7 +101,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'conceptualization.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/conceptualization'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/conceptualization'
     headingids:
       - 'conceptualization'
       - 'summary'
@@ -123,7 +123,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'converter.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/converter'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter'
     headingids:
       - 'converter'
   - term: 'corpus'
@@ -142,7 +142,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'corpus.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/corpus'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/corpus'
     headingids:
       - 'corpus'
       - 'short-description'
@@ -165,7 +165,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'curate.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/curate'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/curate'
     headingids:
       - 'curate'
       - 'notes'
@@ -185,7 +185,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'curated-text.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/curated-text'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/curated-text'
     headingids:
       - 'curated-text'
       - 'summary'
@@ -207,7 +207,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'curatedir.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/curatedir'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/curatedir'
     headingids:
       - 'curatedir'
       - 'summary'
@@ -229,7 +229,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'curator.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/curator'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/curator'
     headingids:
       - 'curator-(of-a-scope)'
       - 'examples'
@@ -251,7 +251,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'define.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/define'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/define'
     headingids:
       - 'define'
       - 'examples'
@@ -272,7 +272,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'definition.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/definition'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/definition'
     headingids:
       - 'definition'
       - 'summary'
@@ -296,7 +296,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'dictionary.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/dictionary'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/dictionary'
     headingids:
       - 'dictionary'
       - 'summary'
@@ -320,7 +320,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'formatted-text.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/formatted-text'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/formatted-text'
     headingids:
       - 'formatted-text'
       - 'examples'
@@ -341,7 +341,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'formphrase.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/formphrase'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/formphrase'
     headingids:
       - 'form-phrase'
       - 'examples'
@@ -364,7 +364,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'glossary.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/glossary'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/glossary'
     headingids:
       - 'glossary'
       - 'summary'
@@ -387,7 +387,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'glossarydir.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/glossarydir'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/glossarydir'
     headingids:
       - 'glossarydir'
       - 'summary'
@@ -407,7 +407,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'grouptag.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/grouptag'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/grouptag'
     headingids:
       - 'grouptag'
       - 'summary'
@@ -431,7 +431,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'header.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/header'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/header'
     headingids:
       - 'header'
       - 'example'
@@ -452,7 +452,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrd.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/hrd'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrd'
     headingids:
       - 'hrd---human-readable-dictionary'
       - 'examples'
@@ -473,7 +473,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrdt.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/hrdt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrdt'
     headingids:
       - 'hrdt---human-readable-dictionary-tool'
   - id: 'hrg-entry'
@@ -493,7 +493,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrg-entry.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/hrg-entry'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrg-entry'
     headingids:
       - 'hrg-entry'
       - 'purpose'
@@ -514,7 +514,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrg.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/hrg'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrg'
     headingids:
       - 'hrg---human-readable-glossary'
   - id: 'hrgt'
@@ -534,7 +534,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrgt.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/hrgt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrgt'
     headingids:
       - 'hrgt---human-readable-glossary-tool'
   - id: 'ict'
@@ -554,7 +554,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'ict.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/ict'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/ict'
     headingids:
       - 'integrity-checker-tool-(ict)'
   - term: 'identifier'
@@ -573,7 +573,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'identifier.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/identifier'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/identifier'
     headingids:
       - 'identifier'
       - 'short-description'
@@ -596,7 +596,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'identify.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/identify'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/identify'
     headingids:
       - 'identify'
       - 'short-description'
@@ -618,7 +618,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'ingestion-process.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion-process'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion-process'
     headingids:
       - 'ingestion-(process)'
       - 'examples'
@@ -639,7 +639,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'ingestion-profile.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion-profile'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion-profile'
     headingids:
       - 'ingestion-profile'
       - 'summary'
@@ -662,7 +662,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'interpreter.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/interpreter'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/interpreter'
     headingids:
       - 'interpreter'
   - term: 'knowledge-artifact'
@@ -681,7 +681,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'knowledge-artifact.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/knowledge-artifact'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/knowledge-artifact'
     headingids:
       - 'knowledge-artifact'
       - 'summary'
@@ -703,7 +703,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mental-model.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mental-model'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mental-model'
     headingids:
       - 'mental-model'
       - 'summary'
@@ -729,7 +729,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'moustache-variable.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/moustache-variable'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/moustache-variable'
     headingids:
       - 'moustache-variable'
       - 'notes'
@@ -750,7 +750,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrd.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrd'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrd'
     headingids:
       - 'machine-readable-dictionary'
       - 'examples'
@@ -772,7 +772,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrdt.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrdt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrdt'
     headingids:
       - 'mrdt---machine-readable-dictionary-tool'
   - term: 'mrg-entry'
@@ -791,7 +791,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrg-entry.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg-entry'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg-entry'
     headingids:
       - 'mrg-entry'
       - 'purpose'
@@ -812,7 +812,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrg-importer.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg-importer'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg-importer'
     headingids:
       - 'mrg-importer'
       - 'examples'
@@ -835,7 +835,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrg.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg'
     headingids:
       - 'mrg---machine-readable-glossary'
   - id: 'mrgt'
@@ -856,7 +856,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrgt.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/mrgt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrgt'
     headingids:
       - 'mrgt---machine-readable-glossary-tool'
   - id: 'property'
@@ -876,7 +876,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'property.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/property'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/property'
     headingids:
       - 'property-(of-a-concept)'
       - 'examples'
@@ -898,7 +898,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'reader.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/reader'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/reader'
     headingids:
       - 'reader'
   - id: 'relation'
@@ -918,7 +918,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'relation.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/relation'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/relation'
     headingids:
       - 'relation-(between-concepts)'
       - 'examples'
@@ -939,7 +939,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'renderable-ref.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/renderable-ref'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/renderable-ref'
     headingids:
       - 'renderable-ref'
       - 'summary'
@@ -962,7 +962,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'saf.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/saf'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/saf'
     headingids:
       - 'saf-(scope-administration-file)'
       - 'specifications-and-examples'
@@ -983,7 +983,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'scope.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/scope'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/scope'
     headingids:
       - 'scope'
       - 'summary'
@@ -1003,7 +1003,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'scoped-term.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/scoped-term'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/scoped-term'
     headingids:
       - 'scoped-term'
       - 'summary'
@@ -1023,7 +1023,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'scopedir.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/scopedir'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/scopedir'
     headingids:
       - 'scope-directory'
       - 'summary'
@@ -1045,7 +1045,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'scopetag.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/scopetag'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/scopetag'
     headingids:
       - 'scopetag'
       - 'summary'
@@ -1068,7 +1068,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'semantics.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/semantics'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/semantics'
     headingids:
       - 'semantics'
       - 'summary'
@@ -1090,7 +1090,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'synonym.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/synonym'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/synonym'
     headingids:
       - 'synonym'
       - 'summary'
@@ -1111,7 +1111,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'tag.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/tag'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tag'
     headingids:
       - 'tag'
       - 'summary'
@@ -1134,7 +1134,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-identifier.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term-identifier'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-identifier'
     headingids:
       - 'term-identifier'
   - term: 'term-ref'
@@ -1153,7 +1153,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-ref.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term-ref'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-ref'
     headingids:
       - 'term-ref'
       - 'summary'
@@ -1175,7 +1175,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-selection-criteria.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term-selection-criteria'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-selection-criteria'
     headingids:
       - 'term-selection-criteria'
       - 'examples'
@@ -1196,7 +1196,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-syntax.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term-syntax'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-syntax'
     headingids:
       - 'term-syntax'
       - 'summary'
@@ -1218,7 +1218,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-type.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term-type'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-type'
     headingids:
       - 'term-type'
   - term: 'term'
@@ -1237,7 +1237,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/term'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term'
     headingids:
       - 'term'
       - 'summary'
@@ -1261,7 +1261,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'terminological-artifact.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/terminological-artifact'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terminological-artifact'
     headingids:
       - 'terminological-artifact'
   - id: 'terminology-process'
@@ -1281,7 +1281,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'terminology-process.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology-process'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology-process'
     headingids:
       - 'terminology-process'
       - 'prerequisites'
@@ -1306,7 +1306,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'terminology-under-construction.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology-under-construction'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology-under-construction'
     headingids:
       - 'terminology-under-construction'
   - term: 'terminology'
@@ -1324,7 +1324,7 @@ entries:
     glossaryText: 'a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [knowledge artifacts](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics.'
     scopetag: 'tev2'
     locator: 'terminology.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology'
     headingids:
       - 'terminology'
       - 'summary'
@@ -1345,7 +1345,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'terms-community.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/terms-community'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terms-community'
     headingids:
       - 'terms-community'
       - 'summary'
@@ -1370,7 +1370,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'tev2-tool.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2-tool'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2-tool'
     headingids:
       - 'tev2-tool'
       - 'description'
@@ -1393,7 +1393,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'tev2-toolbox.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2-toolbox'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2-toolbox'
     headingids:
       - 'tev2-toolbox'
       - 'description'
@@ -1416,7 +1416,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'tev2.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2'
     headingids:
       - 'tev2-(terminology-engine,-version-2)'
       - 'summary'
@@ -1437,7 +1437,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'trrt.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/trrt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/trrt'
     headingids:
       - 'trrt---termref-rendering-tool'
   - term: 'versiontag'
@@ -1456,7 +1456,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'versiontag.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/versiontag'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/versiontag'
     headingids:
       - 'versiontag'
       - 'summary'
@@ -1479,7 +1479,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'vocabulary.md'
-    navurl: 'https:/tno-terminology-design.github.io/tev2-specifications/docs/terms/vocabulary'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/vocabulary'
     headingids:
       - 'vocabulary'
       - 'summary'

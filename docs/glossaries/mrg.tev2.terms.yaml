@@ -112,7 +112,6 @@ entries:
     isa: null
     glossaryTerm: 'Converter'
     glossaryText: 'a software component that takes the output of an [interpreter](@), i.e., the set of moustache variables it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the moustache variables to produce the transformed output.'
-    hoverText: 'Converter: {(noRef {glossaryText})}'
     synonymOf: 'text-converter'
     grouptags: null
     formPhrases: 'converter{ss}'
@@ -155,7 +154,6 @@ entries:
     isa: null
     glossaryTerm: 'Curate'
     glossaryText: 'to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of objectives.'
-    hoverText: 'Curate: {(noRef glossaryText)}'
     synonymOf: null
     grouptags: 'terminology'
     formPhrases: 'curates, curated, curating, curation'
@@ -219,7 +217,7 @@ entries:
     isa: null
     glossaryTerm: 'Curator (of a Scope)'
     glossaryText: 'a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives.'
-    hoverText: 'Curator: {(noRef glossaryText)}'
+    hoverText: 'Curator: {(noRefs glossaryText)}'
     synonymOf: null
     grouptags: 'terminology'
     formPhrases: 'curator{ss}, terminology-curator{ss}'
@@ -242,7 +240,6 @@ entries:
     isa: null
     glossaryTerm: 'Define'
     glossaryText: 'to provide a criterion and a [term](@), where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [terminological artifact](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof.'
-    hoverText: 'Define: {(noRef glossaryText)}'
     synonymOf: null
     grouptags: 'terminology'
     formPhrases: 'defines, defined, defining'
@@ -312,7 +309,6 @@ entries:
     isa: 'text-format'
     glossaryTerm: 'Formatted Text'
     glossaryText: 'a text that has been processed and arranged to have a specific layout, style, and presentation, making it visually appealing and easy to read.'
-    hoverText: 'Formatted Text: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'formatted-text{ss}'
@@ -336,7 +332,6 @@ entries:
     isa: null
     glossaryTerm: 'Form Phrase (of a [term](@))'
     glossaryText: 'a word or phrase, other than the actual [term](@) that, when used in a [TermRef](@) would typically also refer to this [term](@). Form phrases may include plural forms, possessive extensions, verb-conjugation forms, and other variations.'
-    hoverText: 'Form Phrase: {(noRef {glossaryText})}'
     formPhrases: 'form-phrase{ss}'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
@@ -446,7 +441,6 @@ entries:
     isa: 'dictionary'
     glossaryTerm: 'Human Readable Dictionary (HRD)'
     glossaryText: 'a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically.'
-    hoverText: 'HRD: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'dictionary, reference-materials'
     formPhrases: 'hrd{ss}, human-readable-dictionar{yies}, human-readable-dictionary-hrd{ss}'
@@ -468,7 +462,6 @@ entries:
     isa: 'tool'
     glossaryTerm: 'Human Readable Dictionary Tool (HRDT)'
     glossaryText: 'a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@).'
-    hoverText: 'Human Readable Dictionary Tool (HRDT): {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'tools, dictionary-tools'
     formPhrases: 'human-readable-dictionary-tool{ss}, hrd-tool{ss}, hrdt{ss}'
@@ -489,7 +482,6 @@ entries:
     isa: 'glossary-entry'
     glossaryTerm: 'HRG Entry'
     glossaryText: 'A specific kind of (human-readable) rendering of the combination of a [term](@) and a means that helps [readers](@) to understand the meaning of that [term](@) when it is used in a sentence.'
-    hoverText: 'HRG Entry: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'glossary-entries, reference-materials'
     formPhrases: 'hrg-entr{yies}'
@@ -511,7 +503,6 @@ entries:
     isa: 'glossary'
     glossaryTerm: 'Human Readable Glossary (HRG)'
     glossaryText: 'a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding.'
-    hoverText: 'HRG: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'glossaries, data-structures'
     formPhrases: 'hrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-hrg{ss}'
@@ -532,7 +523,6 @@ entries:
     isa: 'tool'
     glossaryTerm: 'Human Readable Glossary Tool (HRGT)'
     glossaryText: 'a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).'
-    hoverText: 'HRGT: {(noRef {glossaryText})}'
     synonymOf: 'human-readable-glossary-tool'
     grouptags: 'tools, glossary-tools'
     formPhrases: 'hrgt{ss}, machine-readable-glossary-tool{ss}, machine-readable-glossary-tool{ss}-hrtt{ss}'
@@ -553,7 +543,6 @@ entries:
     isa: 'tool'
     glossaryTerm: 'Integrity Checker Tool (ICT)'
     glossaryText: 'a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data.'
-    hoverText: 'Integrity Checker Tool (ICT): {(noRef {glossaryText})}'
     synonymOf: 'integrity-checker'
     grouptags: 'tools, quality-assurance'
     formPhrases: 'ict, integrity-checker'
@@ -595,7 +584,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: null
-    glossaryText: "an [act](@), by or on behalf of a [party](@), that results in the selection of either\n- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or\n- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
+    glossaryText: 'an [act](@), by or on behalf of a [party](@), that results in the selection of either&#10- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@).'
     synonymOf: null
     grouptags: null
     formPhrases: 'identif{yies}, identif{ying}, identifiable, identification'
@@ -617,7 +606,7 @@ entries:
     isa: null
     glossaryTerm: 'Ingestion (Process)'
     glossaryText: 'the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [terminologic artifacts](@) and that adhere to the [TEv2-specifications](/docs/spec-files/ctext).'
-    hoverText: 'Ingestion Process: {(noRef {glossaryText})}'
+    hoverText: 'Ingestion Process: {{noRefs glossaryText}}'
     synonymOf: null
     grouptags: null
     formPhrases: 'ingestion-process, ingestion-processes'
@@ -662,7 +651,6 @@ entries:
     isa: null
     glossaryTerm: 'Interpreter'
     glossaryText: 'a software component that reads a (source) text of a specific format, such as a wiki-page or JSON file, and produces a set of [moustache variables](@) based on a predefined profile. These [variables](moustache-variables@) represent extracted data or metadata from the source text.'
-    hoverText: 'Interpreter: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'interpreter{ss}'
@@ -730,7 +718,6 @@ entries:
     isa: null
     glossaryTerm: 'Moustache Variable'
     glossaryText: 'a placeholder in the form of a ''moustache'' tag, e.g. `{{variable_name}}``, within some text. They are used, e.g., by the [TRRT](@), where they get their values from an [interpreter](@), and where they are used in a selected [converter](@) for the purpose of replacing [TermRefs](@) with [renderable refs](@).'
-    hoverText: 'Moustache Variable: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'moustache-variable{ss}'
@@ -752,7 +739,6 @@ entries:
     isa: 'dictionary'
     glossaryTerm: 'Machine Readable Dictionary (MRD)'
     glossaryText: 'a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@).'
-    hoverText: 'Machine Readable Dictionary (MRD): {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'machine-readable-dictionar{yies}, mrd{ss}, machine-readable-dictionary-mrd{ss}'
@@ -775,7 +761,6 @@ entries:
     isa: 'tool'
     glossaryTerm: 'Machine Readable Dictionary Tool (MRDT)'
     glossaryText: 'a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@).'
-    hoverText: 'Machine Readable Dictionary Tool (MRDT): {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'tools, dictionary-tools'
     formPhrases: 'machine-readable-dictionary-tool{ss}, mrd-tool{ss}, mrdt{ss}'
@@ -816,7 +801,6 @@ entries:
     isa: null
     glossaryTerm: 'MRG Importer'
     glossaryText: 'is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope''s](@) [SAF](@), and putting them in the [scope''s](@) [glossarydir](@).'
-    hoverText: 'MRG Importer: {(noRef {glossaryText})}'
     synonymOf: 'mrg-import-tool'
     grouptags: 'glossary-entries, terminology-management-tools'
     formPhrases: 'mrg-importer, mrg-import-tool'
@@ -839,7 +823,7 @@ entries:
     isa: 'glossary'
     glossaryTerm: 'Machine Readable Glossary (MRG)'
     glossaryText: 'a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems.'
-    hoverText: 'MRG: {(noRef {glossaryText})}'
+    hoverText: 'MRG: {{noRefs glossaryText}}'
     synonymOf: null
     grouptags: 'glossaries, data-structures'
     formPhrases: 'mrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-mrg{ss}'
@@ -860,7 +844,7 @@ entries:
     isa: 'tool'
     glossaryTerm: 'Machine Readable Glossary Tool (MRGT)'
     glossaryText: 'a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/spec-tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).'
-    hoverText: 'MRGT: {(noRef {glossaryText})}'
+    hoverText: 'MRGT: {{noRefs glossaryText}}'
     synonymOf: 'machine-readable-glossary-tool'
     grouptags: 'tools, glossary-tools'
     formPhrases: 'mrgt{ss}, machine-readable-glossary-tool{ss}, machine-readable-glossary-tool{ss}-mrgt{ss}'
@@ -881,7 +865,6 @@ entries:
     isa: null
     glossaryTerm: 'Property (of a Concept)'
     glossaryText: 'a connection or association between a [concept](@) and a primitive data element, such as a text or a number, that represents some characteristic that instances of the [concept](@) may have.'
-    hoverText: 'Property (of a Concept): {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'conceptual-modeling'
     formPhrases: 'propert{yies}'
@@ -904,7 +887,6 @@ entries:
     isa: null
     glossaryTerm: 'Reader'
     glossaryText: 'a person that reads a text that is authored by another person (its [author](@)]), and that tries to understand the meaning of this text in the way its [author](@) intended.'
-    hoverText: 'Reader: {(noRef {Reader})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'reader{ss}'
@@ -925,7 +907,6 @@ entries:
     isa: null
     glossaryTerm: 'Relation (between Concepts)'
     glossaryText: 'a (significant) connection or association between two or more [concepts](@). These connections define the way these [concepts](@) are interrelated, providing insights into how they interact and influence each other.'
-    hoverText: 'Relation (between Concepts): {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: 'conceptual-modeling'
     formPhrases: 'relation{ss}'
@@ -969,7 +950,7 @@ entries:
     isa: null
     glossaryTerm: 'Scope Administration File (SAF)'
     glossaryText: 'a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@).'
-    hoverText: 'SAF: {(noRef {glossaryText})}'
+    hoverText: 'SAF: {{noRefs glossaryText}}'
     synonymOf: null
     grouptags: 'terminology-management'
     formPhrases: 'saf{ss}, scope-administration-file{ss}, scope-administration-file{ss}-saf{ss}, saf{ss}-scope-administration-file{ss}'
@@ -1183,7 +1164,6 @@ entries:
     isa: null
     glossaryTerm: 'Term Selection Criteria'
     glossaryText: 'criteria that are used within a particular [scope](@) for the selection of [terms](@) that are part of a particular [terminology](@).'
-    hoverText: 'Term Selection Criteria: {(noRef {glossaryText})}'
     synonymOf: 'selection-criteria'
     grouptags: 'glossary-entries, terminology-management'
     formPhrases: 'term-selection-criteria, selection-criteria'
@@ -1270,7 +1250,6 @@ entries:
     isa: null
     glossaryTerm: 'Terminological Artifact'
     glossaryText: 'a basic building block of meaning or representation, i.e., a ''semantic unit'' within the ''mind'' of a [scope](@), such as a [concept](@), a [relation](@), or a [property](@).'
-    hoverText: 'Terminological Artifact: {(noRef {glossaryText})}'
     synonymOf: 'terminological-artifact'
     grouptags: 'glossary-entries, terminology-management'
     formPhrases: 'terminological-artifact, semantic-unit, cognitive-science-unit'
@@ -1291,7 +1270,6 @@ entries:
     isa: null
     glossaryTerm: 'Terminology Process'
     glossaryText: 'a method for recognizing misunderstandings as such, and creating or maintaining [definitions](@) that resolve them.'
-    hoverText: 'Terminology Process: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'terminology-processes'
@@ -1317,7 +1295,6 @@ entries:
     isa: null
     glossaryTerm: 'Terminology Under Construction'
     glossaryText: 'a set of [terms](@) (that is initially empty), to which [terms](@) can be added or removed as specified by [term selection criteria](@), so as to ultimately result in a proper [terminology](@).'
-    hoverText: 'Terminology Under Construction: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: null
@@ -1382,7 +1359,6 @@ entries:
     isa: 'definition'
     glossaryTerm: 'TEv2 Tool'
     glossaryText: 'any software application or utility designed to support and streamline various tasks related to terminology management following the TEv2 specifications.'
-    hoverText: 'TEv2 Tool: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: 'tev2-tool{ss}, tool{ss}'
@@ -1406,7 +1382,6 @@ entries:
     isa: 'definition'
     glossaryTerm: 'TEv2 Toolbox'
     glossaryText: 'the collection of tools designed to support and facilitate the process of terminology management following the [TEv2 specifications](/docs/overview). These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets.'
-    hoverText: 'TEv2 Toolbox: {(noRef {glossaryText})}'
     synonymOf: null
     grouptags: null
     formPhrases: null
@@ -1451,7 +1426,6 @@ entries:
     isa: 'tool'
     glossaryTerm: 'TRRT (TermRef Rendering Tool)'
     glossaryText: 'a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@).'
-    hoverText: 'TRRT (TermRef Rendering Tool): {(noRef {glossaryText})}'
     synonymOf: 'trrt'
     grouptags: 'tev2-tool, tev2-toolbox'
     formPhrases: 'trrt{ss}, termref-rendering-tool{ss}'

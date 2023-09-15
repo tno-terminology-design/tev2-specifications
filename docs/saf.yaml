@@ -27,7 +27,7 @@ scope:
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
-- scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/main/docs # URL of the scope-directory
 #
 # The third section specifies the versions that are actively maintained by the curators.

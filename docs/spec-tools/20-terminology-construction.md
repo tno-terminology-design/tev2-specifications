@@ -54,7 +54,7 @@ The following instructions can be used for adding [MRG entries](@) (whitespace i
 
 | Instruction | What it does when processed |
 | :---------- | :---------- |
-| `terms[party]@essiflab:v3.1` | gets version `v3.1` of the [MRG](@) from the scope `essiflab`, finds the [MRG entry](@) associated with the [term](@) `party`, and adds a copy to the [terminology under construction](@). |
+| `terms[party]@essif-lab:v3.1` | gets version `v3.1` of the [MRG](@) from the scope `essiflab`, finds the [MRG entry](@) associated with the [term](@) `party`, and adds a copy to the [terminology under construction](@). |
 | `tags[management,governance]@toip` | gets the default version of the [MRG](@) from the scope `toip`, finds the [MRG entries](@) that have `management` and/or `governance` as one of their [grouptags](@), and adds a copy for each of them to the [terminology under construction](@). |
 | `* @essif-lab` | gets the default version of the [MRG](@) from the scope `essif-lab`, and adds a copy of all of its [MRG entries](@) to the [terminology under construction](@). |
 | `* @` | creates an [MRG entry](@) for every [curated text](@) in the current [scope](@), and adds them to the [terminology under construction](@). |

@@ -3,7 +3,7 @@
 term: renderable-ref
 termType: concept
 isa:
-glossaryTerm:
+glossaryTerm: Renderable Ref
 glossaryText: "a text with which the [TRRT](@) replaces a [TermRef](@), that can be processed by specific third party rendering tools, the result of which is a rendering of the original [TermRef](@) that has additional characteristics that help [readers](@) to (better) understand the intention of its [author](@)."
 synonymOf:
 grouptags:

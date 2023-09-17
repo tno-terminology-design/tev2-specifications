@@ -3,7 +3,7 @@
 term: terms-community
 termType: concept
 isa: community
-glossaryTerm:
+glossaryTerm: Terms Community
 glossaryText: "a [community](@) that maintains a [terminology](@) for the purpose of avoiding misunderstandings between its members as they collaborate."
 synonymOf:
 grouptags:

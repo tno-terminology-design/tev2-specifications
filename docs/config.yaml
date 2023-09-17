@@ -16,7 +16,7 @@ interpreter:        # type of interpreter, either: a regex, "alt", or "basic"
 converter: >-       # Type of converter, either: a mustache template, "http", or "markdown"
   <a
   href="{{navurl}}{{#if trait}}#{{trait}}{{/if}}"
-  title="{{#if hoverText}}{{hoverText}}{{else}}{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}: {{noRefs glossaryText type="markdown"}}{{/if}}"
+  hovertext="{{#if hoverText}}{{hoverText}}{{else}}{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}: {{noRefs glossaryText type="markdown"}}{{/if}}"
   >{{showtext}}</a>
 force: true         # toggle overwriting of existing files
 input:              # glob pattern strings for files to be processed by the TRRT

@@ -31,7 +31,7 @@ jobs:
           mrgt -c $config
           trrt -c $config
         env:
-          config: docs/config.yaml
+          config: docs/terminology-config.yaml
 
       - name: Install Dependencies
         run: npm install

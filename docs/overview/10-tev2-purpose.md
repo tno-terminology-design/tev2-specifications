@@ -8,11 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # TEv2 - Purpose
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. [curation](@)) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
 The main objective of [TEv2](@) is to provide support to [communities](@) that actively seek to [understand one another](/docs/overview/tev2-common-understanding), first within the [community](@) itself, but also across [communities](@) that also use [TEv2](@).

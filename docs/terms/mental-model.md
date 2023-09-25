@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Mental Model
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 
 A **Pattern**, **[mental model](https://en.wikipedia.org/wiki/Mental_model)** or **[conceptual model](https://en.wikipedia.org/wiki/Conceptual_model)**) is [knowledge artifact](@) that relates a set of [concepts](@) (ideas), relations between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called 'viewpoint', or 'way of thinking'). Typically, the number of [concepts](@) is limited, e.g. to [the magical number 7, plus or minus 2](http://psychclassics.yorku.ca/Miller/), so that individuals can grasp it without making too many mistakes. The quality of a [pattern](@) is directly proportional to its fitness for serving its intended purpose(s), e.g., as a basis for architecting, designing, and implementing IT components and their [governance](@) processes.

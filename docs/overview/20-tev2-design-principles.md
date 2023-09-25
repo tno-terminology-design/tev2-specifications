@@ -8,11 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # TEv2 - Design Principles
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 [TEv2](@) not only contributes to dealing with ([authors](@)/groups that have their) individual [terminologies](@), it specifically also contributes to the re-use of [terms](@) across [scopes](@), and the production of (documentary) artifacts in which such [terms](@) are used. All this is done while respecting the autonomy of the [communities](@) that [own](@essif-lab) these [scopes](@). This is what we call a Self-Sovereign Terminology.
 
 ## Text Conversion

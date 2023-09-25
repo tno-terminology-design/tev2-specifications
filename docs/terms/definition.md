@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Definition
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 A **Definition** is a text that helps [parties](@) to have the same understanding about the meaning of a [term](@), and hence enables communications. The quality of a definition is the extent in which parties can use it to actually demonstrate that they have the same understanding.
 

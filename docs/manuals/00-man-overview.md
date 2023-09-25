@@ -11,11 +11,6 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 Individual people may participate in any of the following roles:
 - [**Contributors**](#contributor) contribute to the further development of a [terminology](@).
 - [**Curators**](#curator) maintain the [terminology](@) and ensure it becomes available for use.

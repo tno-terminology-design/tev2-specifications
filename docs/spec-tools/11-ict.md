@@ -21,11 +21,6 @@ The text below will need a thorough revision due to various changes that have no
 
 # Integrity Checker Tool (ICT)
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 The **Integrity Checker Tool ([ICT](@))** tests the integrity of (a selection of) the data in files that are [curated](@) within a particular [scope](@), i.e. the [SAF](@), the [MRGs](@), and [curated texts](@). The integrity checking of other data, e.g. [formatted texts](@), such as [HRGs](@), is outside the scope of the [ICT](@).
 
 In order for the [ICT](@) to be used optimally, it will assume for specific kinds of files that the integrity of other files is guaranteed, as follows:

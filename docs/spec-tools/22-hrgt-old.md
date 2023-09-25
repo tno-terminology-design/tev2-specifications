@@ -18,11 +18,6 @@ export const mark = ({children}) => (
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)), that renders (a selection of the [terms](@) of) the [terminology](@) of a specific [scope](@) into one of several formats, e.g. HTML, or PDF. This rendering may be subject to further processing by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](/docs/tev2-toolbox)).
 
 :::info Editor's note

@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Renderable Ref
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 A **Renderable Ref(erence)** is a text with which the [TRRT](@) replaces a [TermRef](@), that can be processed by specific third party rendering tools, the result of which is a rendering of the original [TermRef](@) that has additional characteristics that help [readers](@) to (better) understand the intention of its [author](@).
 

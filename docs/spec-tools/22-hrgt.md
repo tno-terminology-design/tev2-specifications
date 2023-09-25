@@ -17,11 +17,6 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of the [terminology](@) of a specific [scope](@). 
 
 The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named `mrg.<scopetag>.<vsntag>.yaml`, where the combination of `<scopetag>` and `<vsntag>` identify a particular [terminology](@). See the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming) for details.

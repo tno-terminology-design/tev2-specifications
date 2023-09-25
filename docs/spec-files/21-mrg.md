@@ -11,11 +11,6 @@ import TabItem from '@theme/TabItem';
 
 # Machine Readable Glossary (MRG)
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 Every [scope](@) has (at least) one **Machine Readable Inventory**[^1] (that we call a **Machine Readable Glossary** or [MRG](@)), that renders the [terminology](@) of a specific [scope](@) into a specific, well-defined format that is described in this document. An [MRG](@) is meant to be used by the tools from the [toolbox](/docs-toolbox), e.g. for creating a [HRG](@), or to help resolve [TermRefs](@). A [scope](@) may have multiple [MRGs](@), each of which represents a specific version of its [terminology](@).
 
 [^1]: The [MRG](@) is an inventory rather than a [glossary](@), because it contains _all_ [knowledge artifacts](@) that are [curated](@) within the [scope](@): apart from [terms](@), it also include e.g., [mental models](pattern@) and [use cases](@). We choose to maintain the [term](@) "Machine Readable Glossary" ([MRG](@)), because most of us would view it - initially, at least - as a list of [terms](@) and their [definitions](@).

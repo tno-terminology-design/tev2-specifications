@@ -15,11 +15,6 @@ import TabItem from '@theme/TabItem';
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 This document specifies the contents of the [Human Readable Glossary](hrg@) file ([HRG](@)).
 
 A [HRG](@) is a [glossary](@) is meant to be readable by humans, so that they can find out the meaning of [terms](@) as they are used in the context in which that [glossary](@) is valid. Thus, [HRGs](@) come in human readable formats, such as HTML or PDF.

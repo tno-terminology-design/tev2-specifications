@@ -13,11 +13,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 /><br/><br/>
 
 :::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
-:::caution
 This section on 'Installation' can really be written only after the rest is complete. The contents of this page is just a set of ideas that may well have been deprecated already.
 :::
 

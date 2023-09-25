@@ -16,11 +16,6 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 When [curators](@) generate an [HRG](@) from a particular [MRG](@), they may want to specify the [terms](@) to be included in the [HRG](@) (or preventing specific [MRG entries](@) from being included).
 
 This can be done by using the same mechanism for [terminology construction](/docs/spec-tools/terminology-construction) as is used for generating [MRGs](@). The differences are that there is only one source, i.e. the particular [MRG](@) from which the [HRG](@) is generated. Thus, references to [terms](@) that have no corresponding [MRG entry](@) in that [MRG](@) are invalid. Also, there is no need for renaming syntax.

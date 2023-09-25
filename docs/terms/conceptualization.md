@@ -23,11 +23,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Conceptualization
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 
 A **conceptualization** is a mental representation or abstract idea formed by a [party](@) to categorize, organize, and make sense of information, experiences, objects, or abstract notions; it allows the [party](@) to recognize similarities and differences between [entities](@) or events.

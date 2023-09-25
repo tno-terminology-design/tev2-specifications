@@ -12,11 +12,6 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 [TEv2](@) uses specific syntaxes:
 - the **[TermReference Syntax](/docs/spec-syntax/term-ref-syntax)** is the syntax allowed to author [TermRefs](@) (in source documents, see <mark>reference needed</mark>);
 - the **[Form Phrases Syntax](/docs/spec-syntax/form-phrase-syntax)**, i.e. the syntax that [authors](@) need to specify [form phrases](@) (in the `formPhrases` field of [curated texts](@) - see the [curated text file specs](/docs/spec-files/ctext));

@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Semantics
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 We use the term **semantics** to refer to the mapping between (tangible) [terms](@) and (intangible) [concepts](@) (their meaning, the ideas behind it). Semantics are scoped, i.e. every [scope](@) has its own semantic mapping. This implies that every [party](@) has - and maintains - its own (subjective) semantics, which is its subjective mapping of a set of terms onto the concepts/ideas in its [knowledge](@). The (erroneous) assumption that [parties](@) would (automagically) share a semantics is the cause of many misunderstandings, and hence should be identified and deleted as soon as possible.
 

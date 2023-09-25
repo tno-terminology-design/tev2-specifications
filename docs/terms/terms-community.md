@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Terms Community
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 A **terms-community** is a [community](@) that maintains a [terminology](@) for the purpose of its members to avoid misunderstandings in their collaborations. They do so by:
 - [defining](@) a set of [terms](@) that are specific to them, and that are relevant for its members to interact as they seek to realize their individual [objectives](@).

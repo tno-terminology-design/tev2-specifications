@@ -7,11 +7,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # TEv2 - Files (Structure, Specs)
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 [TEv2](@) expects [communities](@) to have directory that is easily accessible by IT tools, and in which - apart from other stuff it may keep there - is designated to contain all sorts of curated documentation. Thus, this directory (or one or more of its subdirectories) can be designated as [scope directories](@) for the [scopes](@) that the [community](@) owns.
 
 The [scopedir](@) may contain may contain lots of directories and files that are of no relevance for [TEv2](@), but it also contains files that are, such as:

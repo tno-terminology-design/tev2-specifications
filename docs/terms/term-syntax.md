@@ -25,11 +25,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
                   MAKE SURE YOU ALSO UPDATE THE DEBUGGEX URL**
 -->
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 **Term Syntax** is is the set of rules that defines the combinations of symbols (characters, texts) that are considered to be correctly structured terms (definition adapted from [Wikipedia](https://en.wikipedia.org/wiki/Syntax_(programming_languages))).
 

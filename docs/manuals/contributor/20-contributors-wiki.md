@@ -13,11 +13,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 One way in which [curators](@) may decide that [users](@) can contribute, is by providing a [wiki](https://en.wikipedia.org/wiki/Wiki) that the [users](@) are encouraged to edit, discuss, and evolve to a level of maturity that warrants the text to be [ingested](@) into the [scope's](@) [corpus](@). The [curators](@) SHOULD specify the procedures, the code of conduct, etc. that support and enable the maturing of these texts, and how it is decided that such texts can become part of the [scope's](@) [corpus](@). That's outside the scope of this document.
 
 ## Users contributions

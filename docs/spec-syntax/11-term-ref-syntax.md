@@ -8,11 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Term References - Syntax
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 As an [author](@) or [curator](@), you want to be able to mark words or phrases, and have them refer to (the documentation of) a particular [concept](@) or other [knowledge artifact](@). Such marked-up words or phrases are called [TermRefs](@). This text specifies the syntax that you can use to [author](@) [TermRefs](@).
 
 :::info Editor's note

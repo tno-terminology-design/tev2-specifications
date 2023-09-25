@@ -20,11 +20,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Vocabulary
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 ### Summary
 A **vocabulary** is the complete set of words and phrases that one or more people and/or organizations have at their disposal for reasoning and communicating about any topic. Since they are often interested in specific topics, [terminologies](@) may be subsets of their vocabularies.
 

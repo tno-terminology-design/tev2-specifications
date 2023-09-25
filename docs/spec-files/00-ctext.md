@@ -8,11 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Curated Texts
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 A **[curated text](@)** is a text that documents a [knowledge artifact](@) within a specific [scope](@). This page specifies the syntax that [curators](@) must ensure that all [curated texts](@) comply with, and that [authors](@) are expected to follow.
 
 The documentation of a [knowledge artifact](@) includes, e.g.:

@@ -8,11 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Form Phrases - Syntax
 
-:::caution
-The entire section on Terminology Engine v 2 (TEv2) is still under construction.<br/>
-As TEv2 is not (yet) available, the texts that specify the tool are still 'raw', i.e. not yet processed.<br/>[readers](@) will need to see through some (currently unprocessed) notational conventions.
-:::
-
 This document specifies the syntax of [form phrases](@), i.e. texts that are
 - specified in the header field `formphrases` in [curated texts](@);
 - conformant to the (PCRE) regex `(?:\s*(?:[a-z0-9_-{}]+)\s*(?:,\s*([a-z0-9_-{}]+))*)?` (see [Debuggex](https://www.debuggex.com/r/20MNb2zgNwLDD-dD) for a visualization).

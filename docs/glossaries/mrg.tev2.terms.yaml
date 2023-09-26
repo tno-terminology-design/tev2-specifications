@@ -668,7 +668,7 @@ entries:
   - term: 'semantic-unit'
     termType: 'concept'
     isa: null
-    glossaryTerm: 'Knowledge Artifact'
+    glossaryTerm: 'Semantic Unit'
     glossaryText: 'something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@).'
     synonymOf: null
     grouptags: null

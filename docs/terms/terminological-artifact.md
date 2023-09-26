@@ -7,7 +7,7 @@ glossaryTerm: Terminological Artifact
 glossaryText: "a basic building block of meaning or representation, i.e., a 'semantic unit' within the 'mind' of a [scope](@), such as a [concept](@), a [relation](@), or a [property](@)."
 synonymOf: terminological-artifact
 grouptags: glossary-entries, terminology-management
-formPhrases: terminological-artifact, semantic-unit, cognitive-science-unit
+formPhrases: terminological-artifact, cognitive-science-unit
 status: proposed
 created: 2023-07-31
 updated: 2023-07-31

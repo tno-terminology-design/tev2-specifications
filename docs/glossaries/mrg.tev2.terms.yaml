@@ -687,6 +687,25 @@ entries:
       - 'summary'
       - 'purpose'
       - 'criteria'
+  - term: 'knowledge-artifact'
+    termType: 'concept'
+    isa: null
+    glossaryTerm: 'Knowledge Artifact'
+    glossaryText: 'DEPRECATED. The concept to which this term referred is now called a [semantic unit](@).'
+    synonymOf: null
+    grouptags: null
+    formPhrases: 'knowledge-artifact{ss}, knowledge-artefact{ss}'
+    status: 'deprecated'
+    created: 2022-07-27T00:00:00.000Z
+    updated: 2023-09-27T00:00:00.000Z
+    contributors: 'RieksJ'
+    attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
+    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
+    scopetag: 'tev2'
+    locator: 'knowledge-artifact.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/knowledge-artifact'
+    headingids:
+      - 'knowledge-artifact'
   - term: 'mental-model'
     termType: 'concept'
     isa: 'semantic-unit'
@@ -1252,7 +1271,7 @@ entries:
     glossaryText: 'a basic building block of meaning or representation, i.e., a ''semantic unit'' within the ''mind'' of a [scope](@), such as a [concept](@), a [relation](@), or a [property](@).'
     synonymOf: 'terminological-artifact'
     grouptags: 'glossary-entries, terminology-management'
-    formPhrases: 'terminological-artifact, semantic-unit, cognitive-science-unit'
+    formPhrases: 'terminological-artifact, cognitive-science-unit'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z

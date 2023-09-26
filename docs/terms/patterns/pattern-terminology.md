@@ -3,8 +3,8 @@
 term: pattern-terminology
 termType: pattern
 isa:
-glossaryTerm:
-glossaryText: "The eSSIF-Lab Terminology Pattern describes the relations between Terminology Terms such as 'Concept', 'Term', 'Pattern', 'Mental Model', 'Glossary' etc."
+glossaryTerm: "Terminology Pattern"
+glossaryText: "a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc."
 synonymOf:
 grouptags:
 formPhrases: mental-model{ss}
@@ -22,8 +22,10 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-This [mental model](@) aims to serve the following purposes:
-- enabling members of a [community](@), as well as other [parties](@), to document their understanding of the [concepts](@) and other [semantic units](@) (e.g., [mental models](@)) that are relevant for their purposes (i.e., realizing their [objectives](@)).
+This [mental model](@) describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc.
+
+It aims to serve the following purposes:
+- enabling members of a [community](@), as well as other [parties](@), to document their understanding of the [concepts](@) and other [semantic units](@) (e.g., [mental models](@)) that are relevant for their purposes (i.e., for realizing their [objectives](@)).
 - provide a solid basis for the design and development of a [set of IT tools](/docs-overview) that support [communities](@) as they document their [knowledge](@).
 
 ### Introduction
@@ -76,9 +78,9 @@ Note that for a [terms-community](@) to serve itself, it may want to commit to a
 
 Every [terminology](@) is scoped, i.e. part of a [scope](@). This [scope](@) consists of various other things, including [definitions](@), ([typed](term-type@)) [scoped terms](@), [curated texts](@), [MRG entries](@), various kinds of [tags](@), and more (see the figure above). These components of the [scope](@) exist for as long as the [scope](@) exists.
 
-The central [concept](@) in this part is the [curated text](@), as it [documents](/docs/spec-files/ctext) a specific [semantic unit](@), provides its [definition](@) (when appropriate), and specifies the [scoped term](@) that represents such [artifacts](semantic-unit@) as well as its [synonyms](@). It also contains various other data, e.g. the [term type](@) (which is also the type of the [semantic unit](@)),  the list of [grouptags](@) that identify the groups of [semantic units](@) to which (the [artifact](semantic-unit@) that) it (documents,) belongs, etc. Basically, *any* changes to documentation or attributes related to a particular [semantic unit](@) are done in its [curated text](@).
+The central [concept](@) in this part is the [curated text](@), as it [documents](/docs/spec-files/ctext) a specific [semantic unit](@), provides its [definition](@) (when appropriate), and specifies the [scoped term](@) that represents such [semantic unit](@) as well as its [synonyms](@). It also contains various other data, e.g. the [term type](@) (which is also the type of the [semantic unit](@)),  the list of [grouptags](@) that identify the groups of [semantic units](@) to which (the [semantic unit](@) that) it (documents,) belongs, etc. Basically, *any* changes to documentation or attributes related to a particular [semantic unit](@) are done in its [curated text](@).
 
-Another important [concept](@) is the [MRG entry](@), i.e. a [(machine readable) representation](http://localhost:3000/docs/spec-files/mrg#mrg-entries) of the meta data of a [semantic unit](@) that it refers to. Note that this [semantic unit](@) need not reside in the [knowledge](@) of the [community](@) that owns the [scope](@) (in which case it would mainly consists of the header data of the [curated text](@) that documents the [semantic unit](@)), but can also reside in another [knowledge](@) (in which case it would be a copy of an [MRG entry](@) in an [MRG](@) of a [scope](@) that documents that [artifact](semantic-unit@)).
+Another important [concept](@) is the [MRG entry](@), i.e. a [(machine readable) representation](http://localhost:3000/docs/spec-files/mrg#mrg-entries) of the meta data of a [semantic unit](@) that it refers to. Note that this [semantic unit](@) need not reside in the [knowledge](@) of the [community](@) that owns the [scope](@) (in which case it would mainly consists of the header data of the [curated text](@) that documents the [semantic unit](@)), but can also reside in another [knowledge](@) (in which case it would be a copy of an [MRG entry](@) in an [MRG](@) of a [scope](@) that documents that [semantic unit](@)).
 
 The [MRG](@) for a specific [terminology](@) of the [scope](@) is a [structure](/docs/spec-files/mrg#mrg-structure) that consists of some meta-data followed by a set of such [MRG entries](@) (with some meta data added). Within a [scope](@), multiple [terminologies](@) (and hence also multiple [MRGs](@)) can exist, e.g., which are distinguished between by their [version tags](@).
 

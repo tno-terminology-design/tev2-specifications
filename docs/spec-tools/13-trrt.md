@@ -179,7 +179,7 @@ If omitted (in which case the preceding `:`-character may also be omitted from t
 
 #### `term` (optional) {#id}
 
-`term` is a text that [identifies](@) a [semantic unit](@), and is specified in the [curated text](@) that documents that [artifact](semantic-unit@) (in a specific version of the  [terminology](@) of a specific [scope](@)). It will be matched against the `term` fields of [MRG entries](@) in the [MRG](@) that documents said [terminology](@).
+`term` is a text that [identifies](@) a [semantic unit](@), and is specified in the [curated text](@) that documents that [semantic unit](@) (in a specific version of the  [terminology](@) of a specific [scope](@)). It will be matched against the `term` fields of [MRG entries](@) in the [MRG](@) that documents said [terminology](@).
 
 If omitted, <!-- and the `term` field is empty as well, --> it is generated as follows (assuming the [MRG](@) to be used has already been [identified](@)):
 

@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 ## Summary
 
-A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@). A large variety of traits can be documented, such as the [(scoped) term](@) that is used within the [scope](@) to represent the [artifact](semantic-unit@), a [definition](@), explanatory texts, examples, etc., etc.; anything that helps others understand the intricacy of these [artifacts](@).
+A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@). A large variety of traits can be documented, such as the [(scoped) term](@) that is used within the [scope](@) to represent the [semantic unit](@), a [definition](@), explanatory texts, examples, etc., etc.; anything that helps others understand the intricacy of these [semantic units](@).
 
 The (technical) structure and syntax for [curated texts](@) is specified [here](/docs/spec-files/ctext).
 

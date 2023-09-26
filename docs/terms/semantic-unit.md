@@ -25,7 +25,7 @@ A **Knowledge Artifact** is something that can be thought of as existing in a pa
 
 Examples include ideas, or [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), examples, use-cases, hypotheses, etc.
 
-Within [TEv2](@), every [semantic unit](@) that exists in some [knowledge](@) may be documented in multiple [scopes](@), by at most one [curated text](@) per [scope](@). This [curated text](@) specifies the [(scoped) term](@) that represents the [artifact](semantic-unit@) within its [scope](@). Also, it may contain the [definition](@) that helps people determine whether or not something qualifies as an instance of that [artifact](semantic-unit@).
+Within [TEv2](@), every [semantic unit](@) that exists in some [knowledge](@) may be documented in multiple [scopes](@), by at most one [curated text](@) per [scope](@). This [curated text](@) specifies the [(scoped) term](@) that represents the [semantic unit](@)) within its [scope](@). Also, it may contain the [definition](@) that helps people determine whether or not something qualifies as an instance of that [semantic unit](@).
 
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 

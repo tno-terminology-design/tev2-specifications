@@ -25,7 +25,7 @@ An **Identifier** is a character string that is being used for identification pu
 
 Note that while an identifier is used for identification purposes, <u>this does not automatically imply that it actually identifies (singles out) anything</u>. It also depends on what [RFC 3986](https://tools.ietf.org/html/rfc3986) calls the 'scope of identification', or what [Pfitzmann and Hansen (2010)](https://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.34.pdf) refer to as an 'identifiability set', which are relevant for explaining whether or not (and if so: what) an identifier actually identifies (singles out) in a given context. See the [Discussion](./identifier#discussion---scope-of-identification) below.
 
-Also note that [entities](@) need not be tangible in order to be [identified], thus enabling the use of [terms](@) as a means to  [identify](@) (and represent) [knowledge artifacts](@).
+Also note that [entities](@) need not be tangible in order to be [identified], thus enabling the use of [terms](@) as a means to  [identify](@) (and represent) [semantic units](@).
 
 ### Purpose
 [Parties](@) have a need to reason about [entities](@), i.e. things they know to exist, which requires them to have a conscious representation of such things, as well as the ability to identify (single) out individual entities. One way to do that is to tag an entity with a character string (label, name), that would then qualify as an identifier.

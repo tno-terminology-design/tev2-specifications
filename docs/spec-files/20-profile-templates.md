@@ -51,7 +51,7 @@ This template allows [interpreters](@) for ingestible content to be created, e.g
 | :---------------- | :------------------- | :----: | :------: | :---------- |
 | `term`            | {{`term`}}             | Y  |            | word/phrase that represents a concept. |
 | `termType`        | {{`termType`}}         | n  | `concept`  | kind of concept (e.g. `concept` (default), or `mental model`). |
-| `isa`             | {{`isa`}}              | n  |            | knowledge artifact of which this is a specialization. |
+| `isa`             | {{`isa`}}              | n  |            | semantic unit of which this is a specialization. |
 | `glossaryText`    | {{`glossaryText`}}     | Y  |            | text that summarizes the meaning of the term. |
 | `synonyms`        | {{`synonymsList`}}     | n  |            | other words/phrases that mean the same. |
 | `grouptags`       | {{`grouptagsList`}}    | n  |            | comma-separated list of tags/keywords to which the term belongs. |

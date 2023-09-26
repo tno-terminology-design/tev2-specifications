@@ -46,7 +46,7 @@ scope:
   glossarydir: glossaries # directory where all glossary files and related stuff are located. Full URL is `scopedir`/`glossarydir`
   defaultvsn: latest # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
-  statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for knowledge artifacts in this scope
+  statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
   issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled
   website: https://tno-terminology-design.github.io/tev2-specifications/docs-overview # base URL for creating links to rendered versions of Curated Texts
   curators: # contacting individual curators
@@ -79,7 +79,7 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@) is, `navpath` is for the rendered versions of [Curated Texts](@). |
 | `defaultvsn`  | Y | [versiontag](@) that [identifies](@) the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
 | `license`     | Y | File in the root of the [scopedir](@) that contains the (default) licensing data. |
-| `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [knowledge artifacts](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
+| `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [semantic units](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
 | `issues`      | n | URL where issues can be reported and handled.|
 | `curators`    | n | Data that can be used to contact individual [curators](@). |
 <!--

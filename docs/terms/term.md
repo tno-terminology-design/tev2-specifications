@@ -4,7 +4,7 @@ term: term
 termType: concept
 isa: identifier
 glossaryTerm:
-glossaryText: "a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [knowledge artifact](@) (in some [scope](@))."
+glossaryText: "a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@) (in some [scope](@))."
 synonymOf:
 grouptags:
 formPhrases: term{ss}, word{ss}, phrase{ss}
@@ -21,24 +21,24 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Term
 
 ### Summary
-A **Term** is a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [knowledge artifact](@), e.g. a [concept](@), [relation](@) or [mental model](@), in a particular [scope](@):
+A **Term** is a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@), e.g. a [concept](@), [relation](@) or [mental model](@), in a particular [scope](@):
 
 - a single [term](@) may (and typically does) have different meanings ([semantics](@)) in different [scopes](@)/contexts. For example, in the context of a beauty-salon, the term 'nail' has a different meaning than in the context of constructing buildings.
 - different [terms](@) (in the same, or different [scopes](@)/contexts) may have the same meaning (i.e. represent the same [concept](@) ([synonymity](https://en.wikipedia.org/wiki/Synonym), [alias](https://www.merriam-webster.com/dictionary/alias)).
 
-The precise meaning of a [term](@) thus depends on the [scope](@)/context in which it is used. We use the phrase [scoped term](@) to refer to a term that is part of one particular [scope](@)/context, and refers to a single [concept](@) (or other [knowledge artifact](@)), and hence is unambiguous.
+The precise meaning of a [term](@) thus depends on the [scope](@)/context in which it is used. We use the phrase [scoped term](@) to refer to a term that is part of one particular [scope](@)/context, and refers to a single [concept](@) (or other [semantic unit](@)), and hence is unambiguous.
 
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 The [TermRef](@) [syntax specification](/docs/spec-syntax/term-ref-syntax) specifies the syntax that [authors](@) should use as they want to use a specific [term](@) in their text.
 
 ### Purpose
-Understanding words or phrases uttered by others requires that we are able to 'translate' them into terms that we habitually use, i.e. with the meaning of which we are familiar. While this is mostly an (unconscious) automatism, and it is often also not necessary to be very precise, this may be different when they relate to stuff we find important. The ability to represent a specific [concept](@) (or other [knowledge artifact](@)) with a specific text or phrase, where this 'representation' is limited to a specific (or several) context(s), helps us to better interpret these words, which is: to properly understand what others actually try to convey in spoken or written language.
+Understanding words or phrases uttered by others requires that we are able to 'translate' them into terms that we habitually use, i.e. with the meaning of which we are familiar. While this is mostly an (unconscious) automatism, and it is often also not necessary to be very precise, this may be different when they relate to stuff we find important. The ability to represent a specific [concept](@) (or other [semantic unit](@)) with a specific text or phrase, where this 'representation' is limited to a specific (or several) context(s), helps us to better interpret these words, which is: to properly understand what others actually try to convey in spoken or written language.
 
 ### Criteria
-A term is a word or phrase (i.e.: text) that is used in at least one [scope](@)/context, in each of which it represents (and [identifies](@))) one specific [knowledge artifact](@) that is part of the [knowledge](@) of the [community](@) that [owns](@) that [scope](@).
+A term is a word or phrase (i.e.: text) that is used in at least one [scope](@)/context, in each of which it represents (and [identifies](@))) one specific [semantic unit](@) that is part of the [knowledge](@) of the [community](@) that [owns](@) that [scope](@).
 
 ### Notes
-There is an important [distinction](https://simple.wikipedia.org/wiki/Concept) between [concepts](@) (and other [knowledge artifacts](@)) and the (multitude of) terms (names, labels) that we need to be able to talk and reason (argue) about them. Please consider that
+There is an important [distinction](https://simple.wikipedia.org/wiki/Concept) between [concepts](@) (and other [semantic units](@)) and the (multitude of) terms (names, labels) that we need to be able to talk and reason (argue) about them. Please consider that
 
 * different [terms](@) are used in different contexts for representing a single [concept](@);
 * in different contexts, a single [term](@) may represent different [concepts](@);

@@ -4,7 +4,7 @@ term: mrg-entry
 termType: concept
 isa:
 glossaryTerm: MRG Entry
-glossaryText: "A machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [knowledge artifact](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.)."
+glossaryText: "A machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [semantic unit](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.)."
 synonymOf:
 grouptags:
 formPhrases: mrg-entr{yies}
@@ -20,11 +20,11 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # MRG Entry
 
-An **MRG Entry** is a machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [knowledge artifact](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.).
+An **MRG Entry** is a machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [semantic unit](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.).
 
 A [terminology](@) can be seen as the collection of [MRG entries](@) that hold all data related to the [terms](scoped-term@) that the [terminology](@) consists of.
 
-The contents of an [MRG entry](@) may vary, depending on the type of [knowledge artifact](@) that it documents. The kinds of data that are common for all [knowledge artifacts](@) are documented [here](http://localhost:3000/docs/spec-files/mrg#mrg-entries).
+The contents of an [MRG entry](@) may vary, depending on the type of [semantic unit](@) that it documents. The kinds of data that are common for all [semantic units](@) are documented [here](http://localhost:3000/docs/spec-files/mrg#mrg-entries).
 
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 
@@ -32,7 +32,7 @@ The [terminology construction section](/docs/spec-tools/terminology-construction
 
 ### Purpose
 
-[MRG entries](@) provide all (meta) data about a particular [knowledge artifact](@) that IT-tools might need for their own purposes.
+[MRG entries](@) provide all (meta) data about a particular [semantic unit](@) that IT-tools might need for their own purposes.
 
 As an example, consider a [terms-community](@) that would like to have an overview of all [terms](@) that it uses in a human readable way, and decides it needs a ([human readable](hrg@)) [glossary](@) of these [terms](@). Thus, they need a [tool](hrgt@) that knows how to find all these [terms](@) and their [definitions](@), and (after sorting them) render them into some human readable form. This [tool](hrgt@) would look for the [MRG](@) for that [terminology](@), which contains the [MRG entries](@) that contain all data that  the [tool](hrgt@) needs.
 

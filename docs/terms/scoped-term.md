@@ -4,7 +4,7 @@ term: scoped-term
 termType: concept
 isa: term
 glossaryTerm: Scoped Term
-glossaryText: "a [term](@) that represents (and [identifies](@)) a specific [knowledge artifact](@) of a particular [community](@) (or [party](@))."
+glossaryText: "a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@))."
 grouptags:
 formPhrases: scoped-term{ss} # note: this includes `(scoped) terms`, as brackets are replaced with `-`, and multiple `-`s are replaced by a single `-`
 # Curation status
@@ -20,4 +20,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Scoped Term
 
 ### Summary
-A **scoped term** is a [term](@) that represents (and [identifies](@)) a specific [knowledge artifact](@) of a particular [community](@) (or [party](@)).
+A **scoped term** is a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@)).

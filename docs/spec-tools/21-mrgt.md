@@ -17,7 +17,7 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-The **Machine Readable Glossary generation Tool ([MRGT](@))** generates a Machine Readable Glossary or [MRG](@)) for (a specific version of) the [terminology](@) of a specific [scope](@) into a specific, well-defined [format](/docs/spec-files/mrg). An [MRG](@) contains so-called [MRG entries](@) for every [term](@) in its [scope](@), which represent not only [concepts](@) but also other [knowledge artifacts](@) of other kinds, such as [mental models](@) and [use cases](@).
+The **Machine Readable Glossary generation Tool ([MRGT](@))** generates a Machine Readable Glossary or [MRG](@)) for (a specific version of) the [terminology](@) of a specific [scope](@) into a specific, well-defined [format](/docs/spec-files/mrg). An [MRG](@) contains so-called [MRG entries](@) for every [term](@) in its [scope](@), which represent not only [concepts](@) but also other [semantic units](@) of other kinds, such as [mental models](@) and [use cases](@).
 
 The (newly generated) [MRG](@) is meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As it contains every [term](@) that is used in the [scope](@), and includes all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
@@ -86,8 +86,8 @@ The corresponding entry in the [SAF](@) specifies (a specific version of) a [ter
 The [MRG](@) is then created as follows (starting with an empty file):
 
 1. The [MRG](@) `terminology` section is created, by copying [relevant fields](/docs/spec-files/mrg#mrg-terminology) from the `terminology` section in the [SAF](@).
-2. Then, [terminology construction](/docs/spec-tools/terminology-construction) takes place, which can be thought of as constructing a set of tuples `{ [term, grouptags] }`, where `term` [identifies](@) (the [curated text](@) that documents) the particular [knowledge artifact](@), and `grouptags` is a set of [grouptags](@) associated with that tuple.
-3. For every tuple in this set, an [MRG entry](@) is created, and added to the [MRG](@) under construction. The structure of each such [entry](mrg-entry@) depends on the type of the [knowledge artifact](@) that the [term](@) represents, as the [header](@) of a [curated text](@) depends on that type.
+2. Then, [terminology construction](/docs/spec-tools/terminology-construction) takes place, which can be thought of as constructing a set of tuples `{ [term, grouptags] }`, where `term` [identifies](@) (the [curated text](@) that documents) the particular [semantic unit](@), and `grouptags` is a set of [grouptags](@) associated with that tuple.
+3. For every tuple in this set, an [MRG entry](@) is created, and added to the [MRG](@) under construction. The structure of each such [entry](mrg-entry@) depends on the type of the [semantic unit](@) that the [term](@) represents, as the [header](@) of a [curated text](@) depends on that type.
 
 After the [MRG](@) has been created, it is written to the file `mrg.<scopetag>.<vsntag>.yaml`, where:
 - `<scopetag>` is the [scopetag](@) that is used within the [scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [scope section](docs/spec-files/saf#terminology) of the [SAF](@).

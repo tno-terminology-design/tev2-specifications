@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Curator (of a Scope)
 
-A **Curator** is a person responsible for curating, managing, and maintaining [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives. They carefully select, organize, and present the [terminology](@), ensuring that the [definitions](@) are clear, precise, and reflect the [community's](@) agreed-upon understanding of the [concepts](@) (and other [knowledge artifacts](@)) they use.
+A **Curator** is a person responsible for curating, managing, and maintaining [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives. They carefully select, organize, and present the [terminology](@), ensuring that the [definitions](@) are clear, precise, and reflect the [community's](@) agreed-upon understanding of the [concepts](@) (and other [semantic units](@)) they use.
 
 ### Examples
 

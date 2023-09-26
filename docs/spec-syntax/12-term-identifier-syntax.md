@@ -16,9 +16,9 @@ The synaxes that can be used for a [term identifier](@) are:
 
 where
 
-**`term`** is the [(scoped) term](@) that [identifies](@) the [knowledge artifact](@) that is identified. It must satisfy the regex `[a-z0-9_-]+`.
+**`term`** is the [(scoped) term](@) that [identifies](@) the [semantic unit](@) that is identified. It must satisfy the regex `[a-z0-9_-]+`.
 
-**`scopetag`** is a [tag](@) that [identifies](@) the [scope](@) of the [terminology](@) that contains the [knowledge artifact](@) that is identified It must satisfy the regex `[a-z0-9_-]+`. Also, it must either be mentioned in the `scopes` section of the [SAF](@) of the current [scope](@), or it must be the [scopetag](@) of the current [scope](@) itself.
+**`scopetag`** is a [tag](@) that [identifies](@) the [scope](@) of the [terminology](@) that contains the [semantic unit](@) that is identified It must satisfy the regex `[a-z0-9_-]+`. Also, it must either be mentioned in the `scopes` section of the [SAF](@) of the current [scope](@), or it must be the [scopetag](@) of the current [scope](@) itself.
 
 **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. It must satisfy the regex `[a-z0-9_-\.]+`.
 

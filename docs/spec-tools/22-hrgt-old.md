@@ -22,8 +22,8 @@ The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Re
 
 :::info Editor's note
 The envisaged versatility of the [HRGT](@) is likely to imply requirements regarding, e.g.:
-- the kinds of [knowledge artifacts](@) that should be listed;
-- whether or not to include/exclude specific (groups of) [artifacts](knowledge-artifact@);
+- the kinds of [semantic units](@) that should be listed;
+- whether or not to include/exclude specific (groups of) [artifacts](semantic-unit@);
 - the format (e.g. HTML, PDF, LaTeX) to generate towards, and the structure of each [HRG entry](@);
 - the beginning (header) and ending (footer) of the [HRG](@) file
 and possibly some other stuff.
@@ -35,10 +35,10 @@ There is currently one implementation of the tool:
 - the repo in which the tool is being developed is [<mark>tbd</mark>].
 - the documentation is [<mark>tbd</mark>].
 
-The [HRGT](@) operates on a single [MRG](@) of a [scope](@), which contains (data and/or pointers to) _all_ [knowledge artifacts](@) of that [scope](@).
+The [HRGT](@) operates on a single [MRG](@) of a [scope](@), which contains (data and/or pointers to) _all_ [semantic units](@) of that [scope](@).
 
 The construction of a [HRG](@) can be envisaged as
-- selecting the [mrg entries](@) that must appear in the [HRG](@). Selection may depend on the specification of the kinds of [knowledge artifacts](@) that should be included, and/or specifying [tags](@) for the (groups of) [artifacts](knowledge-artifact@), or specific [terms](@);
+- selecting the [mrg entries](@) that must appear in the [HRG](@). Selection may depend on the specification of the kinds of [semantic units](@) that should be included, and/or specifying [tags](@) for the (groups of) [artifacts](semantic-unit@), or specific [terms](@);
 - alphabetically sorting these entries;
 - converting each entry into its 'rendered' format, thereby resolving any [TermRefs](@) (by appropriately calling the [TRRT](@)), adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
 - concatenating these rendered entries, optionally including/inserting some navigation bars (e.g. before a new letter starts);

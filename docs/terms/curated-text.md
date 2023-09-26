@@ -4,7 +4,7 @@ term: curated-text
 termType: concept
 isa:
 glossaryTerm: Curated Text
-glossaryText: a text that documents a [concept](@) or other [knowledge artifact](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).
+glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).
 synonymOf:
 grouptags:
 formPhrases: curated-text{ss}, ctext{ss}, curated-file{ss}, cfile{ss}
@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 ## Summary
 
-A **[curated text](@)** is a text that documents a [concept](@) or other [knowledge artifact](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@). A large variety of traits can be documented, such as the [(scoped) term](@) that is used within the [scope](@) to represent the [artifact](knowledge-artifact@), a [definition](@), explanatory texts, examples, etc., etc.; anything that helps others understand the intricacy of these [artifacts](@).
+A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@). A large variety of traits can be documented, such as the [(scoped) term](@) that is used within the [scope](@) to represent the [artifact](semantic-unit@), a [definition](@), explanatory texts, examples, etc., etc.; anything that helps others understand the intricacy of these [artifacts](@).
 
 The (technical) structure and syntax for [curated texts](@) is specified [here](/docs/spec-files/ctext).
 
@@ -49,4 +49,4 @@ The precise conditions that [headers](@) and [bodies](@) of [curated texts](@) m
 
 ## Notes
 
-The intention of [curated texts](@) is to document a [knowledge artifact](@), which is something that has a place in the way of thinking within a [scope](@). Ways of working (e.g. installation procedures), reports on research to be published in papers, etc., are NOT thought of as part of the [scope's](@) [terminology](@), and hence should not be documented as a [curated text](@). Having said that, this is not a closed discussion; we can think of arguments to the opposite, so who knows...
+The intention of [curated texts](@) is to document a [semantic unit](@), which is something that has a place in the way of thinking within a [scope](@). Ways of working (e.g. installation procedures), reports on research to be published in papers, etc., are NOT thought of as part of the [scope's](@) [terminology](@), and hence should not be documented as a [curated text](@). Having said that, this is not a closed discussion; we can think of arguments to the opposite, so who knows...

@@ -13,11 +13,11 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-In order for a [community](@) (e.g. a workgroup, taskforce, project/product team, department, etc.) to realize its [objectives](@), it is beneficial that its members have a common set of the ideas, [concepts](@) and other [knowledge artifacts](@) that are relevant for realizing these [objectives](@). The ability to realize such a common understanding, and to demonstrate that this is actually the case, is a critical capability for success.
+In order for a [community](@) (e.g. a workgroup, taskforce, project/product team, department, etc.) to realize its [objectives](@), it is beneficial that its members have a common set of the ideas, [concepts](@) and other [semantic units](@) that are relevant for realizing these [objectives](@). The ability to realize such a common understanding, and to demonstrate that this is actually the case, is a critical capability for success.
 
 The Terminology Engine (v2) is a set of specifications and tools that (technically) facilitate such capabilities, by recognizing that each [community](@) wants (and needs):
 - its own [terminology](@) that can develop over time (producing different versions);
-- to autonomously [define](@) specific [terms](@), create its particular documentation for its [concepts](@) or other [knowledge artifacts](@);
+- to autonomously [define](@) specific [terms](@), create its particular documentation for its [concepts](@) or other [semantic units](@);
 - to 'import' (borrow, include, use) specific [terms](@) that are defined by other [communities](@);
 - to make its own [terminologies](@) available for other [communities](@) to 'import';
 - to generate tangible artifacts such as [glossaries](@), [dictionaries](@) and other documentation (specifications, white papers, etc.) that actually use the [terminology](@) as committed to by (each member of) the [community](@).

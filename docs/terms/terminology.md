@@ -14,15 +14,15 @@ contributors: RieksJ
 attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 glossaryTerm:
-glossaryText: "a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [knowledge artifacts](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics."
+glossaryText: "a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [semantic units](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics."
 ---
 
 # Terminology
 
 ### Summary
-A **terminology** is a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [knowledge artifacts](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics. It may be viewed as a topic-specific subset of that [party's](@) [vocabulary](@).
+A **terminology** is a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [semantic units](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics. It may be viewed as a topic-specific subset of that [party's](@) [vocabulary](@).
 
-As each [term](@) in the [terminology](@) comes with all sorts of related data, such as a [definition](@), [documentation](curated-text@) about the [knowledge artifact](@) that it represents, [terms](@) that can be used as synonyms, etc., and since (pointers to) all that data is gathered in a single [MRG entry](@), we can also say that a [terminology](@) consists of the set of [MRG entries](@) that hold such data of the [terms](@) that the [terminology](@) consists of.
+As each [term](@) in the [terminology](@) comes with all sorts of related data, such as a [definition](@), [documentation](curated-text@) about the [semantic unit](@) that it represents, [terms](@) that can be used as synonyms, etc., and since (pointers to) all that data is gathered in a single [MRG entry](@), we can also say that a [terminology](@) consists of the set of [MRG entries](@) that hold such data of the [terms](@) that the [terminology](@) consists of.
 
 As a consequence, it is easy [to generate](/docs/spec-tools/mrgt) an [MRG](@) for a [terminology](@), as this is basically the collection of the [MRG entries](@) that constitute the [terminology](@) (apart from [some meta-data](/docs/spec-files/mrg#mrg-structure), of course). And from there, [human readable glossaries](hrg@) can be [derived](/docs/spec-tools/hrgt).
 
@@ -35,4 +35,4 @@ The [terminology pattern](pattern-terminology@) provides an overview of how this
 The [terminology construction section](/docs/spec-tools/terminology-construction) describes how to construct a [terminology](@) by selecting (groups of) [terms](scoped-term@), and manipulating such selections.
 
 ### Purpose
-In order for [parties](@) to properly reason and/or communicate ideas ([concepts](@) and other [knowledge artifacts](@)) about some topic - in particular when it is a specialist topic - they have to establish a set of [terms](@), the meaning of which should be [defined](@) (or otherwise documented) in such a way that the likelihood of misunderstandings between them is minimized. This set of terms is called a `**terminology**`
+In order for [parties](@) to properly reason and/or communicate ideas ([concepts](@) and other [semantic units](@)) about some topic - in particular when it is a specialist topic - they have to establish a set of [terms](@), the meaning of which should be [defined](@) (or otherwise documented) in such a way that the likelihood of misunderstandings between them is minimized. This set of terms is called a `**terminology**`

@@ -22,7 +22,7 @@ Each role requires specific capabilities. They are summarized in the following s
 
 Contributors provide inputs that are relevant for the construction, further development and maintenance of a [terminology](@). They participate in discussions and other ways in which a collaborative and common understanding within the [community](@) (e.g. a Work Group, Task Force, Project Team) is fostered. How such contributions are to be provided, and how the collaborative and common understanding is fostered, is up to the [community](@) leadership.
 
-Contributors can also be tasked to check/proofread authored documents to ensure that references to [terms](@) and/or other [knowledge artifacts](@) are correct, i.e.: as intended by the [author](@), and understandable by [readers](@).
+Contributors can also be tasked to check/proofread authored documents to ensure that references to [terms](@) and/or other [semantic units](@) are correct, i.e.: as intended by the [author](@), and understandable by [readers](@).
 
 Finally, contributors may identify any specific needs or mechanisms that help them do the aforementioned tasks, and communicate these needs to their [curators](@), or otherwise contribute to the further development of [TEv2](@) so that such needs and mechanisms may be supported.
 
@@ -30,7 +30,7 @@ The [Manual for Contributors](/docs/manuals/contributor) documents how the [TEv2
 
 ## Curators {#curator}
 
-[Curators](@) (i.e. the members of a so-called [terms community](@)) manage the (contents of the) [scope(s)](@) on behalf of the [community](@) (whose [knowledge artifacts](@) are being documented within that [scope](@)). [Curators](@) may serve (i.e.: [curate](@) the [scopes](@)) of multiple [communities](@).
+[Curators](@) (i.e. the members of a so-called [terms community](@)) manage the (contents of the) [scope(s)](@) on behalf of the [community](@) (whose [semantic units](@) are being documented within that [scope](@)). [Curators](@) may serve (i.e.: [curate](@) the [scopes](@)) of multiple [communities](@).
 
 A [curator](@) is tasked with describing the [scope](@) particulars, [curating](@) its [curated texts](@), generating the various [glossaries](@) ([MRGs](@) and [HRGs](@)), [dictionaries](@) (if and when necessary and possible), and other tangible, 'rendered artifacts' (e.g. static websites, PDFs, whitepapers) as agreed with the [community](@).
 

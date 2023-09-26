@@ -62,9 +62,9 @@ entries:
       - 'summary'
   - term: 'concept'
     termType: 'concept'
-    isa: 'knowledge-artifact'
+    isa: 'semantic-unit'
     glossaryTerm: null
-    glossaryText: 'a [knowledge artifact](@) that captures the ideas/thoughts behind a classification of [entities](@) (what makes [entities](@) in that class ''the same'').'
+    glossaryText: 'a [semantic unit](@) that captures the ideas/thoughts behind a classification of [entities](@) (what makes [entities](@) in that class ''the same'').'
     synonymOf: null
     grouptags: null
     formPhrases: 'concept{ss}'
@@ -173,7 +173,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'Curated Text'
-    glossaryText: 'a text that documents a [concept](@) or other [knowledge artifact](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).'
+    glossaryText: 'a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).'
     synonymOf: null
     grouptags: null
     formPhrases: 'curated-text{ss}, ctext{ss}, curated-file{ss}, cfile{ss}'
@@ -665,14 +665,14 @@ entries:
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/interpreter'
     headingids:
       - 'interpreter'
-  - term: 'knowledge-artifact'
+  - term: 'semantic-unit'
     termType: 'concept'
     isa: null
     glossaryTerm: 'Knowledge Artifact'
     glossaryText: 'something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@).'
     synonymOf: null
     grouptags: null
-    formPhrases: 'knowledge-artifact{ss}, knowledge-artefact{ss}'
+    formPhrases: 'semantic-unit{ss}'
     status: 'proposed'
     created: 2022-07-27T00:00:00.000Z
     updated: 2022-07-27T00:00:00.000Z
@@ -680,18 +680,18 @@ entries:
     attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
-    locator: 'knowledge-artifact.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/knowledge-artifact'
+    locator: 'semantic-unit.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/semantic-unit'
     headingids:
-      - 'knowledge-artifact'
+      - 'semantic-unit'
       - 'summary'
       - 'purpose'
       - 'criteria'
   - term: 'mental-model'
     termType: 'concept'
-    isa: 'knowledge-artifact'
+    isa: 'semantic-unit'
     glossaryTerm: 'Mental Model'
-    glossaryText: 'A [knowledge artifact](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called ''viewpoint'', or ''way of thinking'').'
+    glossaryText: 'A [semantic unit](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called ''viewpoint'', or ''way of thinking'').'
     synonymOf: null
     grouptags: null
     formPhrases: 'mental-model{ss}, pattern{ss}, conceptual-model{ss}'
@@ -779,7 +779,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'MRG Entry'
-    glossaryText: 'A machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [knowledge artifact](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.).'
+    glossaryText: 'A machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [semantic unit](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.).'
     synonymOf: null
     grouptags: null
     formPhrases: 'mrg-entr{yies}'
@@ -992,7 +992,7 @@ entries:
     termType: 'concept'
     isa: 'term'
     glossaryTerm: 'Scoped Term'
-    glossaryText: 'a [term](@) that represents (and [identifies](@)) a specific [knowledge artifact](@) of a particular [community](@) (or [party](@)).'
+    glossaryText: 'a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@)).'
     grouptags: null
     formPhrases: 'scoped-term{ss}'
     status: 'proposed'
@@ -1122,7 +1122,7 @@ entries:
     termType: 'concept'
     isa: 'identifier'
     glossaryTerm: 'Term Identifier'
-    glossaryText: 'a [text](identifier@) that [identifies](@) a [knowledge artifact](@) within a particular [scope](@), and hence also the [curated text](@) that describes it. The part between the parentheses `(` and `)` of [term refs](@) contains a term identifier (if it doesn''t have a `#{{trait}}`).'
+    glossaryText: 'a [text](identifier@) that [identifies](@) a [semantic unit](@) within a particular [scope](@), and hence also the [curated text](@) that describes it. The part between the parentheses `(` and `)` of [term refs](@) contains a term identifier (if it doesn''t have a `#{{trait}}`).'
     synonymOf: null
     grouptags: null
     formPhrases: 'term-identifier{ss}'
@@ -1141,7 +1141,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'TermRef'
-    glossaryText: 'a word or phrase that is [marked up (in a specific way)](/docs/spec-syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [knowledge artifact](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@).'
+    glossaryText: 'a word or phrase that is [marked up (in a specific way)](/docs/spec-syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@).'
     synonymOf: null
     grouptags: null
     formPhrases: 'term-ref{ss}, termref{ss}, term-reference{ss}'
@@ -1206,7 +1206,7 @@ entries:
     termType: 'concept'
     isa: 'identifier'
     glossaryTerm: 'Term Type'
-    glossaryText: 'a [text](identifier@) that [identifies](@) a particular *kind* of [knowledge artifact](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`).'
+    glossaryText: 'a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`).'
     synonymOf: null
     grouptags: null
     formPhrases: 'term-type{ss}'
@@ -1225,7 +1225,7 @@ entries:
     termType: 'concept'
     isa: 'identifier'
     glossaryTerm: null
-    glossaryText: 'a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [knowledge artifact](@) (in some [scope](@)).'
+    glossaryText: 'a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@) (in some [scope](@)).'
     synonymOf: null
     grouptags: null
     formPhrases: 'term{ss}, word{ss}, phrase{ss}'
@@ -1321,7 +1321,7 @@ entries:
     attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     glossaryTerm: null
-    glossaryText: 'a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [knowledge artifacts](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics.'
+    glossaryText: 'a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [semantic units](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics.'
     scopetag: 'tev2'
     locator: 'terminology.md'
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/terminology'

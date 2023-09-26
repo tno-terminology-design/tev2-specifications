@@ -11,8 +11,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 Constructing a [terminology](@) consists of specifying the set of [terms](scoped-term@) that the [terminology](@) consists of, and making sure there is an [MRG entry](@) that holds all associated (meta) data that other (e.g. third party) tools may need. In other words, it consists of constructing the set of [MRG entries](@) for the [terms](scoped-term@) of the [terminology](@).
 
-An [MRG entry](@) contains (meta) data about (the [(scoped) term](@) that represents/[identifies](@)) a specific [knowledge artifact](@) (an illustration can be found in the [terminology support pattern](/docs/terms/patterns/pattern-terminology#formalized-model)). For constructing a [terminology](@), the following such data is relevant (as it enables one to [identify](@) (groups of) [terms](scoped-term@) that are to become part of that [terminology](@)):
-- the (preferred) [(scoped) term](@) that represents the [knowledge artifact](@), and its synonymous [terms](scoped-term@);
+An [MRG entry](@) contains (meta) data about (the [(scoped) term](@) that represents/[identifies](@)) a specific [semantic unit](@) (an illustration can be found in the [terminology support pattern](/docs/terms/patterns/pattern-terminology#formalized-model)). For constructing a [terminology](@), the following such data is relevant (as it enables one to [identify](@) (groups of) [terms](scoped-term@) that are to become part of that [terminology](@)):
+- the (preferred) [(scoped) term](@) that represents the [semantic unit](@), and its synonymous [terms](scoped-term@);
 - various [tags](@), amongst which are the [grouptags](@) that indicate the groups of [terms](scoped-term@) that the [term](scoped-term@) is a member of.
 
 The process for creating a [terminology](@) is as follows:
@@ -36,7 +36,7 @@ The following instructions can be used for adding [MRG entries](@) (whitespace i
 
 | Instruction<sup>*)</sup>   | The instruction creates, and subsequently adds an [MRG entry](@) for every [curated text](@) ... |
 | :------------------------- | :--------------------------------------------------------------------- |
-| `terms [ <termslist> ]`    | that documents the [knowledge artifact](@) that is represented by a [term](@) that appears in the `<termslist>`. |
+| `terms [ <termslist> ]`    | that documents the [semantic unit](@) that is represented by a [term](@) that appears in the `<termslist>`. |
 | `tags [ <grouptagslist> ]`| that has an element in the list of [grouptags](@) that also appears in the `<grouptagslist>`. |
 | `*`                        | that exists within the current [scope](@). |
 

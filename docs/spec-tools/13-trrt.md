@@ -21,7 +21,7 @@ export const mark = ({children}) => (
 Term ref resolution is the same process as we use for ingestion, and other conversions, as (will be) explained in the [profiles template section](/docs/spec-files/profile-templates). When that 'conversion pattern' is stable and properly documented, we need to revise this section to align with those descriptions.
 :::
 
-The **Term Ref(erence) Resolution Tool ([TRRT](@))** takes files that contain so-called [TermRefs](@) and outputs a copy of these files in which these [TermRefs](@) are converted into so-called [renderable refs](@), i.e. texts that can be further processed by tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains markups that help [readers](@) to quickly find more explanations of the [concept](@) or other [knowledge artifact](@) that is being referenced.
+The **Term Ref(erence) Resolution Tool ([TRRT](@))** takes files that contain so-called [TermRefs](@) and outputs a copy of these files in which these [TermRefs](@) are converted into so-called [renderable refs](@), i.e. texts that can be further processed by tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains markups that help [readers](@) to quickly find more explanations of the [concept](@) or other [semantic unit](@) that is being referenced.
 
 There is currently one implementation of the tool:
 - the repo is [here](https://github.com/tno-terminology-design/trrt).
@@ -57,7 +57,7 @@ which is text that a markdown interpreter will render into a text `the purpose o
   </a>,
 ~~~
 
-which is code that will render the text `the purpose of actors` as a (boldface) hyperlink, that, when clicked, will navigate to the `purpose` section of the page that documents (the [knowledge artifact](@) called `actor`.
+which is code that will render the text `the purpose of actors` as a (boldface) hyperlink, that, when clicked, will navigate to the `purpose` section of the page that documents (the [semantic unit](@) called `actor`.
 
 </TabItem>
 <TabItem value="essiflab-style">
@@ -179,7 +179,7 @@ If omitted (in which case the preceding `:`-character may also be omitted from t
 
 #### `term` (optional) {#id}
 
-`term` is a text that [identifies](@) a [knowledge artifact](@), and is specified in the [curated text](@) that documents that [artifact](knowledge-artifact@) (in a specific version of the  [terminology](@) of a specific [scope](@)). It will be matched against the `term` fields of [MRG entries](@) in the [MRG](@) that documents said [terminology](@).
+`term` is a text that [identifies](@) a [semantic unit](@), and is specified in the [curated text](@) that documents that [artifact](semantic-unit@) (in a specific version of the  [terminology](@) of a specific [scope](@)). It will be matched against the `term` fields of [MRG entries](@) in the [MRG](@) that documents said [terminology](@).
 
 If omitted, <!-- and the `term` field is empty as well, --> it is generated as follows (assuming the [MRG](@) to be used has already been [identified](@)):
 
@@ -202,7 +202,7 @@ Perhaps the [TRRT](@) may use this tool as a means for generating the `term` fie
 
 #### `trait` (optional) {#trait}
 
-`trait` [identifies](@) a particular kind of descriptive text that is associated with the [knowledge artifact](@). If specified, it must be one of the elements in the list of headingid's as specified in [the `headingids` field](/docs/spec-files/mrg#mrg-entries) of the [MRG entry](@). If omitted, the preceding `#`-character should also be omitted.
+`trait` [identifies](@) a particular kind of descriptive text that is associated with the [semantic unit](@). If specified, it must be one of the elements in the list of headingid's as specified in [the `headingids` field](/docs/spec-files/mrg#mrg-entries) of the [MRG entry](@). If omitted, the preceding `#`-character should also be omitted.
 
 ### Locating the identified MRG Entry
 
@@ -267,8 +267,8 @@ where:
 :::info Editor's note
 The implementation of the `<Term ...>` ... `</Term>` construct will differ from that which is used by eSSIF-Lab, because a [term](@) that is defined in this, or another [scope](@), lives in the [curated file](@) at `scopedir`/`curatedir`/`locator`, where
 - `scopedir` is the URL that locates the [scope directory](@) of that [scope](@);
-- `curatedir` is the directory in that `scopedir` where [knowledge artifacts](@) (c.q. [curated texts](@)) live; its value is found both in the [SAF](@) and in the [MRG](@) of the [scope](@);
-- `locator` is the path (including filename), relative to `scopedir`/`curatedir`/, of the [curated file](@) that describes the [knowledge artifact](@) that is being referred to.
+- `curatedir` is the directory in that `scopedir` where [semantic units](@) (c.q. [curated texts](@)) live; its value is found both in the [SAF](@) and in the [MRG](@) of the [scope](@);
+- `locator` is the path (including filename), relative to `scopedir`/`curatedir`/, of the [curated file](@) that describes the [semantic unit](@) that is being referred to.
 :::
 
 </TabItem>

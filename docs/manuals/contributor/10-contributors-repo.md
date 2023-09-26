@@ -17,9 +17,9 @@ One way in which [curators](@) may decide that [users](@) can contribute, is by 
 
 ## Users contributions
 
-From the [TEv2](@) perspective, [users](@) contribute by creating and changing the markdown pages that describe the various [knowledge artifacts](@), such as  [concepts](@) , [use-cases](@), [mental models](@), etc.
+From the [TEv2](@) perspective, [users](@) contribute by creating and changing the markdown pages that describe the various [semantic units](@), such as  [concepts](@) , [use-cases](@), [mental models](@), etc.
 
-A [user](@) can use [TermRefs](@) to mark the [terms](@) that it wants to be linked to a specific meaning ([knowledge artifact](@)).
+A [user](@) can use [TermRefs](@) to mark the [terms](@) that it wants to be linked to a specific meaning ([semantic unit](@)).
 
 ## Curators tasks
 

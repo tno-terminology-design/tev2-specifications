@@ -19,4 +19,4 @@ In practice, this means that [TEv2](@) provides tools and mechanisms that:
 
 These contributions are what so-called [curators](@) of the [scope](@) seek to deliver. They are the ones that make sure that there is a [location](scopedir@) where people can contribute to the development of the [terminology](@) of a [scope](@), and tools are installed and operational that enable [authors](@) to use them as they publish their documents. [Curators](@) have their own [manual](/docs/manuals/curator).
 
-The [eSSIF-Lab website](/docs/essifLab) already shows the first ideas of what that might look like (popups on [terms](@) showing their [definition](@)).
+This website shows what that might look like (popups on [terms](@) showing their [definition](@)).

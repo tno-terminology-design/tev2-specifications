@@ -1,5 +1,7 @@
 ---
 id: terminology-construction
+toc_min_heading_level: 2
+toc_max_heading_level: 2
 date: 20231002
 ---
 
@@ -112,7 +114,7 @@ Remove all terms from [terminology-under-construction], whose [MRG entry](@) con
 
 In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
 
-## `rename <term> [ <fieldmodifierlist> ]`.
+### `rename <term> [ <fieldmodifierlist> ]`.
 
 <details>
 <summary>Syntax examples</summary>

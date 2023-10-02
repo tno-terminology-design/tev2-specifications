@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # Terminology Construction
 
 [Curators](@) need the ability to construct (different versions of) the [terminology](@) for any [scope](@) they [curate](@). This page documents
-1. the way in which a [curator](@) can specify this for a [scope](@) that (s)he [curates](@), and
+1. the way in which a [curator](@) can specify this for a [scope](@) that they [curate](@), and
 2. how that specification is used to create the associated [terminology](@).
 
 The actual creation of a [terminology](@), and the subsequent generation of the [MRG](@) that contains it, is done by the [MRGT](@).
@@ -30,7 +30,7 @@ A [curator](@) specifies a [terminology](@) by creating a new entry in the [`ver
 The creation of a [terminology](@) is equivalent with the creation of the set of [MRG entries](@) that document each of the [terms](@) therein. Thus, the process for creating a [terminology](@) can be described as follows:
 1. start with an empty set of [MRG entries](@) - we use the term "[terminology under construction](@)" to refer to this set.
 2. sequentially process the list of [term selection criteria](@) as specified in the appropriate entry of the [`versions` section](tev2-specifications/docs/spec-files/saf#versions) of the [SAF](@), i.e. instructions which allow for
-  - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents is obtained from an [MRG](@) other than the one that is being created.
+  - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.
   - [removing](#syntax-remove) [MRG entries](@) from the [terminology under construction](@);
   - [modifying attributes](#syntax-rename) of a specific [MRG entry](@) in the [terminology under construction](@), e.g. for renaming a term that originated from another [scope](@).
 ## Prerequisites
@@ -43,15 +43,15 @@ In the syntax specification for [term selection criteria](@), we use the followi
 
 | Symbol | Description |
 | :----- | :---------- |
-| `<key>` | a text that corresponds with a field name in a [MRG entry](@) or the [header](@) (front-matter) of a [curated text](@), e.g., `term`, `grouptags`, `status`. |
-| `<value>` | a text that is used to [identify](@) an [MRG entry](@) or a [curated text](@). |
-| `<source>` | an (**optional**) text of the form `@<terminology-identifier>`, that [identifies](@) the source from where [terms](@) are to be selected.<br/> If omitted, the source is the set of [curated texts](@) that are maintained within the current scope. .<br/>If specified, the source is the [MRG](@) identified by `<terminology-identifier>` (where `<terminology-identifier>` is a [terminology-identifier](@)). Note that this [MRG](@) is expected to have been [made available](mrg-importer@) within the current scope. |
+| `<key>` | A text that corresponds with a field name in a [MRG entry](@) or the [header](@) (front-matter) of a [curated text](@), e.g., `term`, `grouptags`, `status`. |
+| `<value>` | A text that is used to [identify](@) an [MRG entry](@) or a [curated text](@). |
+| `<source>` | An (**optional**) text of the form `@<terminology-identifier>`, that [identifies](@) the source from where [terms](@) are to be selected.<br/> If omitted, the source is the set of [curated texts](@) that are maintained within the current scope.<br/>If specified, the source is the [MRG](@) identified by `<terminology-identifier>` (where `<terminology-identifier>` is a [terminology-identifier](@)). Note that this [MRG](@) is expected to have been [made available](mrg-importer@) within the current scope. |
 
 ## Adding Terms {#syntax-add}
 
 Adding terms is done using instructions that identify one or more [MRG entries](@) or [curated texts](@) that are not in the [terminology-under-construction](@).
 
-The `<source>` parameter, if it is provided, specifies the [MRG](@) within which [MRG entries](@) are to be searched. If the `<source>` parameter is not provided, the set of [curated texts](@) in the current scope are used for searching. Both [MRG entries](@) and [headers](@) of [curated texts](@) contain fields that are examined to determine whether or not the [MRG entry](@) or [curated text](@) are to be used for inclusing in the [terminology-under-construction](@).
+The `<source>` parameter, if it is provided, specifies the [MRG](@) within which [MRG entries](@) are to be searched. If the `<source>` parameter is not provided, the set of [curated texts](@) in the current scope is used for searching. Both [MRG entries](@) and [headers](@) of [curated texts](@) contain fields that are examined to determine whether or not the [MRG entry](@) or [curated text](@) are to be used for inclusion in the [terminology-under-construction](@).
 
 ### `* <source>`
 
@@ -119,7 +119,7 @@ In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accomm
 <details>
 <summary>Syntax examples</summary>
 
-| Instruction | What it does when it is processed |
+| Instruction | What it does when it is processed: |
 | :---------- | :---------- |
 | `rename party partij` | renames the [term](@) that is currently associated with the [term](@) `party` into `partij`. |
 
@@ -127,13 +127,13 @@ In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accomm
 
 where:
 
-| symbol                | description |
-| --------------------- | :---------- |
-| `<term>`              | the [term](@) of the tuple that will be selected for renaming. |
-| `<fieldmodifierlist>` | a (non-empty) comma-separated list of `<fieldmodifier>`s. |
-| `<fieldmodifier>`     | a `<key>:<value>` pair. |
-| `<key>`               | a text that identifies a field in an [MRG entry], the value of which is to be changed, e.g. `formphrases`, `grouptags`, etc. |
-| `<value>`             | a text that will replace the existing text of the field identified by `<key>`.  |
+| Symbol                | Description |
+| :-------------------- | :---------- |
+| `<term>`              | The [term](@) of the tuple that will be selected for renaming. |
+| `<fieldmodifierlist>` | A (non-empty) comma-separated list of `<fieldmodifier>`s. |
+| `<fieldmodifier>`     | A `<key>:<value>` pair. |
+| `<key>`               | A text that identifies a field in an [MRG entry], the value of which is to be changed, e.g. `formphrases`, `grouptags`, etc. |
+| `<value>`             | A text that will replace the existing text of the field identified by `<key>`.  |
 
 This syntax is processed by first selecting the tuple (in the tuple set that is being constructed) that has the specified `<term>` as its `term`-field, and then sequentially processing the `<fieldmodifier>`s in the `<fieldmodifierlist>`, which means that the existing text of the field that is identified by the `<key>` element of the `<fieldmodifier>` is replaced by the text specified by the `<value>` element of that `<fieldmodifier>`.
 

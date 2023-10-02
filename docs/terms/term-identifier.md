@@ -4,9 +4,7 @@ termType: concept
 isa: identifier
 bodyFile: /spec-syntax/12-term-identifier-syntax.md
 glossaryTerm: Term Identifier
-glossaryText: "a [text](identifier@) that [identifies](@) a [semantic unit](@) within a particular [scope](@), and hence also the [curated text](@) that describes it.)."
-synonymOf:
-grouptags:
+glossaryText: "a [text](identifier@), of the form `<term>@<terminology-identifier>`, that [identifies](@) a [semantic unit](@) within a particular [terminology](@). If `<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
 formPhrases: term-identifier{ss}
 # Curation status
 status: proposed

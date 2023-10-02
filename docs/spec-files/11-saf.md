@@ -19,7 +19,7 @@ This document specifies the structure of such [SAFs](@).
 
 ## Scope Administration File Field Descriptions
 
-A [SAF](@) has three main parts:
+A [SAF](@) has three main parts, which we refer to as 'sections':
 1. The **`scope`** (singular) section defines meta-data concerning the [scope](@) itself, both for technical use and human use. It shows where directories and files live that ar part of the [scope](@), and also ways in which people can contribute, raise issues, see what's going on, discuss, etc.
 2. The **`scopes`** (plural) section contains a mapping between [scopetags](@) that are used within the [scope](@), and the associated [scopedirs](@). This enables tools to find the [SAF](@) of these [scopes](@), and from there all other directories, files etc. that live within them, e.g. to use/import their data.
 3. The **`versions`** section specifies all versions of the [terminology](@) that are actively maintained by the [curators](@) of the [scope](@), and for each of them, the set of [terms](@) that constitute this [terminology](@).
@@ -136,7 +136,11 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 
-The third section in the [SAF](@) specifies the [terminology](@) of the [scope](@), in multiple versions that are actively maintained by the [curators](@). For each version, the set of [terms](@) is selected that constitute that version's [terminology](@). Also, additional data is provided regarding the state/validity of the [terminology](@) over time, which may of interest for the [curators](@) of other scopes as they need to decide whether or not to import [terms](@) from such a [terminology](@).
+The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection criteria](@). The [Terminology Construction page](/tev2-specifications/docs/spec-tools/terminology-construction) documents the kinds of [term selection criteria](@) that are available, and how they work in the [term](@) selection process.
+
+This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may of interest for the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
+
+There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/tev2-specifications/docs/spec-files/saf#terminology) of the [SAF](@).
 
 <details>
   <summary>Example of a `versions` section</summary>

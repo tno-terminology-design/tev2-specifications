@@ -4,7 +4,8 @@ termType: concept
 isa: identifier
 bodyFile: /spec-syntax/13-terminology-identifier-syntax.md
 glossaryTerm: Terminology Identifier
-glossaryText: "a [text](identifier@) that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@)."
+glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@)."
+hoverText: "a [text](identifier@), of the form @`<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@). If `<scopetag>` or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
 synonymOf:
 grouptags:
 formPhrases: terminology-identifier{ss}

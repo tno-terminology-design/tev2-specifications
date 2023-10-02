@@ -30,7 +30,7 @@ This naming convention enables tools (as well as [curators](@) and others) that 
 
 ## MRG structure
 
-A Machine Readable Glossary (MRG) is a YAML (or JSON) file that has three sections:
+A Machine Readable Glossary (MRG) is a YAML (or JSON) file that has three main parts, which we refer to as 'sections':
 - **`terminology`** specifies the characteristics of the [terminology](@) of the [scope](@). This includes the [scopetag](@) and [scopedir](@) of the [scope](@), as well as the license under which the contents of the [MRG](@) can be used.
 - **`scopes`** specifies which (other) [scopes](@) are relevant to this [terminology](@). This includes the [scopetag](@) and [scopedir](@) of any such [scope](@).
 - **`entries`** contains an (unsorted) list of [MRG entries](@).
@@ -99,6 +99,8 @@ The following fields are defined for the section `scopes`:
 ## MRG Entries (the `entries` section) {#mrg-entries}
 
 The `entries` section of an [MRG](@) is a list of [MRG entries](@), the purpose of which is that the various tools can find all data that is relevant for the purpose that such a tool serves.
+
+This `entries` section documentents the [terminology](@) that is [identified] by each of the [versiontags](@) in either the `vsntag` field or the `altvsntag` field in the `terminology` section of the [MRG](@).
 
 An [MRG entry](@) has a few fields that are always present, because the [MRGT](@) generates them, as follows:
 

@@ -28,9 +28,9 @@ scope:
 #
 scopes:  #
 - scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/essif-lab/framework/docs # URL of the scope-directory
+  scopedir: https://github.com/essif-lab/framework/blob/master/docs # URL of the scope-directory
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/essif-lab/framework/docs # URL of the scope-directory
+  scopedir: https://github.com/essif-lab/framework/blob/master/docs # URL of the scope-directory
 #
 # The third section specifies the versions that are actively maintained by the curators.
 # For each version, the set of terms is selected that constitute the terminology.

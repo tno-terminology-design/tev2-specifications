@@ -43,100 +43,124 @@ In the syntax specification for [term selection criteria](@), we use the followi
 
 | Symbol | Description |
 | :----- | :---------- |
-| `<key>` | a text that corresponds with a field name in a [MRG entry](@) or the [header](@) (front-matter) of a [curated text](@), e.g., `term`, `grouptags`, `status`. |
+| `<key>` | a text that corresponds with a field name in an [MRG entry](@) of a desginated [MRG](@), or the [header](@) (front-matter) of a [curated text](@). Examples: `term`, `grouptags`, `status`. |
 | `<value>` | a text that is used to [identify](@) an [MRG entry](@) or a [curated text](@). |
-| `<source>` | an (**optional**) text of the form `@<terminology-identifier>`, that [identifies](@) the source from where [terms](@) are to be selected.<br/> If omitted, the source is the set of [curated texts](@) that are maintained within the current scope. .<br/>If specified, the source is the [MRG](@) identified by `<terminology-identifier>` (where `<terminology-identifier>` is a [terminology-identifier](@)). Note that this [MRG](@) is expected to have been [made available](mrg-importer@) within the current scope. |
 
 ## Adding Terms {#syntax-add}
 
-Adding terms is done using instructions that identify one or more [MRG entries](@) or [curated texts](@) that are not in the [terminology-under-construction](@).
+Adding terms is done using instructions that 
+1. identify a (set of) [term(s)](@) that is to be added to the [terminology-under-construction](@).
+2. specify the source from which an [MRG entries](@) will be created for each of these [terms](@).
 
-The `<source>` parameter, if it is provided, specifies the [MRG](@) within which [MRG entries](@) are to be searched. If the `<source>` parameter is not provided, the set of [curated texts](@) in the current scope are used for searching. Both [MRG entries](@) and [headers](@) of [curated texts](@) contain fields that are examined to determine whether or not the [MRG entry](@) or [curated text](@) are to be used for inclusing in the [terminology-under-construction](@).
+By default, the source is the the set of [curated texts](@) of the current scope.
 
-### `* <source>`
+However, any (existing) [MRG](@) can be used as an alternative source, by adding the text `@<terminology-identifier>` to the instruction that selects the [terms](@), where `<terminology-identifier>` is the [terminology identifier](@) that identifies the [MRG](@). Note that this [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
 
-Add all terms from the source specified by `<source>`. If `<source>` is omitted, all terms are added that have a [curated text](@) in the current [scope].
+### Add all terms from a specific source {#syntax-add-all-terms}
+
+The following syntaxes are available for adding all terms from a specific source to the [terminology under construction](@):
+- **`*`**<br/>Add all [terms](@) that are described by a [curated texts](@) in the current scope.<br/>&nbsp;
+- **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as [identified](@) by the [terminology-identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
 
 <details><summary>Examples:</summary>
 
-  | Examples: | The syntax is an instruction to add all terms: |
-  | :-------- | :--- |
-  | *              | that have a [curated text](@) in the current scope. |
-  | * @            | that are in the default version of the [terminology](@) of the current scope. |
-  | * @tev2        | that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`. |
-  | *&nbsp;@tev2:latest | that are in the latest version of the [terminology](@) of the [scope](@) identified by `tev2`. |
-  | * @:latest     | that are in the latest version of the [terminology](@) of the current scope. |
+  | Examples:  | Meaning: |
+  | :-------   | :------  |
+  | *&nbsp;@tev2:v1 | Add all [terms](@) that are in version `v1` of the [terminology](@) of the [scope](@) identified by `tev2`, i.e., in [MRG](@) file `mrg.tev2.v1.yaml`. |
+  | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.<defaultvsn>.yaml`, where `<defaultvsn>` is the value of the `defaultvsn` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) that is located in the [scopedir](@) associated with the [scopetag](@) `tev2`. |
+  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) of the current scope. |
+  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.<defaultvsn>.yaml`, where:<br/>- `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) of the current scope, and<br/>- `<defaultvsn>` is the value of the `defaultvsn` field in that same [SAF](@). |
+  | *          | Add all [terms](@) that are described by a [curated text](@) in the current scope. |
 
 The difference between `*` and `* @` is that the first takes [curated texts](@) as source, whereas the latter takes an existing [MRG](@) as source, being the [MRG](@) that contains the default version of the [terminology](@) of the current scope. This allows [terminologies](@) to be defined in terms of their predecessors.
 
 </details>
 
-### `<key> [ <value1>, <value2>, ... ] <source>`
+### Add selected terms from a specific source {#syntax-add-selected-terms}
 
-Add every term from the designated `<source>`, whose specification contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
+The following syntaxes are available for adding a selection of terms from a specific source to the [terminology under construction](@):
+- **`<key>` [ `<value>`, `<value2>`, ... ]**, where:
+  - `<key>` is a text that corresponds with a field name in a [header](@) (front-matter) of a [curated text](@), such as `term`, `grouptags`, `status`, etc.
+  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected for inclusion in the [terminology under construction](@).<br/>&nbsp;
+- **`<key>` [ `<value>`, `<value2>`, ... ] `@<tid>`**, where:
+  - `<tid>` is a [terminology identifier](@) that [identifies](@) an [MRG](@) (that must have been made available in the [glossarydir](@) of the current scope).
+  - `<key>` is a text that corresponds with a field name in an [MRG entry](@) that resides in that [MRG](@), such as `term`, `grouptags`, `status`, etc.
+  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) from that [MRG](@) is to be selected for inclusion in the [terminology under construction](@).
+ 
+These instructions will add every term from the designated source, whose specification contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
 <details><summary>Examples:</summary>
 
-  | Syntax: | The syntax is an instruction to add all terms: |
-  | :------------------------- | :--- |
-  | term [actor]               | from the current scope, that have a `term` field whose value is `actor`. |
-  | term [actor,party]@tev2    | from the latest [terminology](@) of [scope](@) `tev2`, that have a `term` field whose value is `actor` or `party`. |
-  | status[proposed,approved]  | from the current scope, that have a `status` field whose value is `proposed` or `approved`. |
-  | grouptags[x,y,z]@essif-lab | from the latest [terminology](@) of [scope](@) `essif-lab`, that have a `grouptags` field whose value is `x`, `y`, or `z`. |
-  | somefield []               | from the current scope, that have a field `somefield` that has no value specified. |
-
+  | Syntax: | Meaning: |
+  | :-----  | :------  |
+  | term [actor]               | select every [curated text](@) from the current scope, that has a `term` field in its [header](@) of which the value is `actor`. |
+  | status[proposed,approved]  | select every [curated text](@) from the current scope, that has a `status` field in its [header](@) of which the value is `proposed` or `approved`. |
+  | somefield []               | select every [curated text](@) from the current scope, that has a field `somefield` that has no value specified. |
+  | term [actor,party]@tev2:v1 | select every [MRG entry](@) from [MRG](@) of [scope](@) `tev2` that has [version](versiontag@) `v1`, that has a `term` field whose value is `actor` or `party`. |
+  | grouptags[x,y,z]@essif-lab | select every [MRG entry](@) from the default [MRG](@) of [scope](@) `essif-lab`, that has a `grouptags` field whose value is `x`, `y`, or `z`. |
+  
 </details>
 
 ## Removing Terms {#syntax-remove}
 
 Removing terms is equivalent to removing selected [MRG entries](@) from the [terminology under construction](@). The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, and a source may not be specified, as it is always the [terminology under construction](@).
-### `-<key> [ <value1>, <value2>, ... ]`
 
-Remove all terms from [terminology-under-construction], whose [MRG entry](@) contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
+The following syntaxes are available for removing a selection of terms from the [terminology under construction](@):
+- **-`<key>` [ `<value>`, `<value2>`, ... ]**, where:
+  - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), , such as `term`, `grouptags`, `status`, etc.
+  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) is to be removed from the [terminology under construction](@).
+
+This syntax removes every [MRG entry](@) from the [terminology-under-construction](@) that has a field named `<key>`, and where (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
 <details><summary>Examples:</summary>
 
-  | Syntax: | The syntax is an instruction to remove all terms from the [terminology under construction](@) that have: |
-  | :------------------------- | :--- |
-  | -term [actor]              | a `term` field whose value is `actor`. |
-  | -status[proposed,approved] | a `status` field whose value is `proposed` or `approved`. |
-  | -grouptags[x,y,z]          | a `grouptags` field of which one of the listed [grouptags](@) is `x`, `y`, or `z`. |
-  | -somefield []              | a `somefield` field that has no value specified. |
+  | Syntax: | Meaning: |
+  | :-----  | :------  |
+  | -term [actor]              | remove all entries that have a `term` field whose value is `actor`. |
+  | -status[proposed,approved] | remove all entries that have a `status` field whose value is `proposed` or `approved`. |
+  | -grouptags[x,y,z]          | remove all entries that have a `grouptags` field of which one of the listed [grouptags](@) is `x`, `y`, or `z`. |
+  | -somefield []              | remove all entries that have a `somefield` field that has no value specified. |
 
 </details>
 
-## Rename/rewrite Term Attributes {#syntax-rename}
-
-<img
-  alt="From this point onward, texts are under construction"
-  src={useBaseUrl('images/wip/wip-under-construction-from-here-onward.png')}
-/><br/><br/>
-
-In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
-
-### `rename <term> [ <fieldmodifierlist> ]`.
-
-<details>
-<summary>Syntax examples</summary>
-
-| Instruction | What it does when it is processed |
-| :---------- | :---------- |
-| `rename party partij` | renames the [term](@) that is currently associated with the [term](@) `party` into `partij`. |
-
-</details>
-
-where:
-
-| symbol                | description |
-| --------------------- | :---------- |
-| `<term>`              | the [term](@) of the tuple that will be selected for renaming. |
-| `<fieldmodifierlist>` | a (non-empty) comma-separated list of `<fieldmodifier>`s. |
-| `<fieldmodifier>`     | a `<key>:<value>` pair. |
-| `<key>`               | a text that identifies a field in an [MRG entry], the value of which is to be changed, e.g. `formphrases`, `grouptags`, etc. |
-| `<value>`             | a text that will replace the existing text of the field identified by `<key>`.  |
-
-This syntax is processed by first selecting the tuple (in the tuple set that is being constructed) that has the specified `<term>` as its `term`-field, and then sequentially processing the `<fieldmodifier>`s in the `<fieldmodifierlist>`, which means that the existing text of the field that is identified by the `<key>` element of the `<fieldmodifier>` is replaced by the text specified by the `<value>` element of that `<fieldmodifier>`.
+## Rename/rewrite term fields {#syntax-rename}
 
 :::info Editor's note
 The ability to rename terms as they are imported may introduce some issues related to other field-names, such as `term`, `formphrases`, `synonyms`, `glossaryText`s and possibly some others. Perhaps this syntax should therefore be extended, enabling [curators](@) to simultaneously change these (and other) fields in the [MRG entry](@).
 :::
+
+In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
+
+The following syntaxes are available for renaming fields in an [MRG entry] that is part of the [terminology under construction](@):
+- **`rename` `<term>` [ `<key>`:`<value>`, `<key2>:<value2>`, ... ]**, where:
+  - `<term>` is the value of the `term` field in the [MRG entry](@) of the [terminology under construction](@) that is selected for the renaming process. Note that this value is an [identifier](@) for that [MRG entry](@).
+  - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc.
+  - `<value>` is a text that will replace the existing text of the field identified by `<key>`. If the text contains multiple words, it is advised to surround it with quotes.
+
+Here is how it works. First, the [MRG Entry](@) is searched that has a `term` field whose value is `<term>`. If found, all `<key>`:`<value>` pairs are processed in the sequence they are specified. Processing a `<key>`:`<value>` pair consists of looking for a field named `<key>` in the selected [MRG entry](@). We now have the following situations:
+- if the `<key>` field exists, and
+  - if the `<value>` is not empty, then the contents of the field is overwritten by `<value>`;
+  - if the `<value>` is empty, then the contents of the field is deleted;
+- if the `<key>` field does not exists, and
+  - if the `<value>` is not empty, then a new field named `<key>` with the specified `<value>` is added to the [MRG entry](@);
+  - if the `<value>` is empty, then nothing is done.
+
+<details>
+<summary>Renaming examples</summary>
+
+- **`rename party [ status:accepted, hoverText:"A natural person or a legal person" ]`**:
+  - searches for the [MRG entry](@) whose `term` field has value `party`, and (when found)
+  - changes (or creates) its `status` field to so that it contains `accepted`, and 
+  - changes (or creates) its `hoverText` field to so that it contains `"A natural person or a legal person"`.
+
+- **`rename party [ term:partij, formPhrases:"partij{en}", hoverText:"Een natuurlijk persoon of een rechtspersoon" ]`**
+  - searches for the [MRG entry](@) whose `term` field has value `party`, and (when found)
+  - changes (or creates) its `term` field to so that it contains `partij`;
+  - changes (or creates) its `status` field to so that it contains `approved`.
+  - changes (or creates) its `hoverText` field to so that it contains `"A natural or legal person"`
+  
+- **`rename party [ hoverText: ]`**
+  - searches for the [MRG entry](@) whose `term` field has value `party`, and (when found)
+  - removes the contents from the `hoverText` field if such a field exists.<br/>
+
+</details>

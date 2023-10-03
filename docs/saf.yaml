@@ -28,7 +28,9 @@ scope:
 #
 scopes:  #
 - scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/main/docs # URL of the scope-directory
+  scopedir: https://github.com/essif-lab/framework/docs # URL of the scope-directory
+- scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+  scopedir: https://github.com/essif-lab/framework/docs # URL of the scope-directory
 #
 # The third section specifies the versions that are actively maintained by the curators.
 # For each version, the set of terms is selected that constitute the terminology.
@@ -38,6 +40,15 @@ versions:
 - vsntag: terms # this version contains all terms that are curated within this scope
   altvsntags: [ latest ] # alternative verstiontags
   termselcrit:
+  - "*@tev2" # import all tev2 terms.
+- vsntag: documentation # terms that are needed for this specification
+  termselcrit:
+  - "terms[act,actor,action,community,control,entity,knowledge]@essif-lab" 
+  - "terms[manage,management,govern,governance,objective,owner,owned]@essif-lab" 
+  - "terms[partial-identity,identifier,identity]@essif-lab" 
+  - "terms[pattern-party-actor-action,pattern-jurisdiction]@essif-lab" 
+  - "terms[pattern-terminology]@essif-lab" 
+  - "terms[pattern-identity,pattern-identification]@essif-lab"
   - "*@tev2" # import all tev2 terms.
 - vsntag: test # this version MUST only be used for testing the MRG generator
   altvsntags: # alternative verstiontags

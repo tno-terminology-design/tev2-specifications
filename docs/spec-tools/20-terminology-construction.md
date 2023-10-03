@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # Terminology Construction
 
 [Curators](@) need the ability to construct (different versions of) the [terminology](@) for any [scope](@) they [curate](@). This page documents
-1. the way in which a [curator](@) can specify this for a [scope](@) that (s)he [curates](@), and
+1. the way in which a [curator](@) can specify this for a [scope](@) that they [curate](@), and
 2. how that specification is used to create the associated [terminology](@).
 
 The actual creation of a [terminology](@), and the subsequent generation of the [MRG](@) that contains it, is done by the [MRGT](@).
@@ -30,7 +30,7 @@ A [curator](@) specifies a [terminology](@) by creating a new entry in the [`ver
 The creation of a [terminology](@) is equivalent with the creation of the set of [MRG entries](@) that document each of the [terms](@) therein. Thus, the process for creating a [terminology](@) can be described as follows:
 1. start with an empty set of [MRG entries](@) - we use the term "[terminology under construction](@)" to refer to this set.
 2. sequentially process the list of [term selection criteria](@) as specified in the appropriate entry of the [`versions` section](tev2-specifications/docs/spec-files/saf#versions) of the [SAF](@), i.e. instructions which allow for
-  - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents is obtained from an [MRG](@) other than the one that is being created.
+  - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.
   - [removing](#syntax-remove) [MRG entries](@) from the [terminology under construction](@);
   - [modifying attributes](#syntax-rename) of a specific [MRG entry](@) in the [terminology under construction](@), e.g. for renaming a term that originated from another [scope](@).
 ## Prerequisites
@@ -164,3 +164,19 @@ Here is how it works. First, the [MRG Entry](@) is searched that has a `term` fi
   - removes the contents from the `hoverText` field if such a field exists.<br/>
 
 </details>
+
+where:
+
+| symbol                | description |
+| --------------------- | :---------- |
+| `<term>`              | the [term](@) of the tuple that will be selected for renaming. |
+| `<fieldmodifierlist>` | a (non-empty) comma-separated list of `<fieldmodifier>`s. |
+| `<fieldmodifier>`     | a `<key>:<value>` pair. |
+| `<key>`               | a text that identifies a field in an [MRG entry], the value of which is to be changed, e.g. `formphrases`, `grouptags`, etc. |
+| `<value>`             | a text that will replace the existing text of the field identified by `<key>`.  |
+
+This syntax is processed by first selecting the tuple (in the tuple set that is being constructed) that has the specified `<term>` as its `term`-field, and then sequentially processing the `<fieldmodifier>`s in the `<fieldmodifierlist>`, which means that the existing text of the field that is identified by the `<key>` element of the `<fieldmodifier>` is replaced by the text specified by the `<value>` element of that `<fieldmodifier>`.
+
+:::info Editor's note
+The ability to rename terms as they are imported may introduce some issues related to other field-names, such as `term`, `formphrases`, `synonyms`, `glossaryText`s and possibly some others. Perhaps this syntax should therefore be extended, enabling [curators](@) to simultaneously change these (and other) fields in the [MRG entry](@).
+:::

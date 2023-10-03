@@ -138,7 +138,7 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection criteria](@). The [Terminology Construction page](/tev2-specifications/docs/spec-tools/terminology-construction) documents the kinds of [term selection criteria](@) that are available, and how they work in the [term](@) selection process.
 
-This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may of interest for the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
+This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may be of interest to the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
 
 There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/tev2-specifications/docs/spec-files/saf#terminology) of the [SAF](@).
 

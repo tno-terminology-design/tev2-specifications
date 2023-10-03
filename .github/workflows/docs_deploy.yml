@@ -27,7 +27,7 @@ jobs:
 
       - name: Run terminology tools
         run: |
-          mrg-import -c $config
+          # mrg-import -c $config # temporarily disable mrg-import
           mrgt -c $config
           trrt -c $config
         env:

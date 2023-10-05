@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
-The **Machine Readable Dictionary generation Tool ([MRDT](@))** generates a Machine Readable Inventory (that we call a Machine Readable Dictionary or [MRD](@)) of [terms](@) that originate from different (versions of) [terminologies](@), from various [scopes](@). The inventory has a specific, well-defined [format](/docs/spec-files/mrd). Like [MRGs](@), the contents of [MRDs](@) is determined by a list of [term selection criteria](@), which specify the (sets of) terms that are to be included.
+The **Machine Readable Dictionary generation Tool ([MRDT](@))** generates a Machine Readable Inventory (that we call a Machine Readable Dictionary or [MRD](@)) of [terms](@) that originate from different (versions of) [terminologies](@), from various [scopes](@). The inventory has a specific, well-defined [format](/docs/spec-files/mrd). Like [MRGs](@), the contents of [MRDs](@) is determined by a list of [term selection instructions](@), which specify the (sets of) terms that are to be included.
 
 [MRDs](@) are meant to be processed by the other tools in the [toolbox](/docs/tev2-toolbox), specifically by one of the [HRDTs](@), which would then create a [Human Readable Dictionary](@) (or [HRD](@)).
 

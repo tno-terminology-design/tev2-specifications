@@ -5,7 +5,7 @@ id: term-selection-criteria
 term: term-selection-criteria
 termType: concept
 isa:
-glossaryTerm: Term Selection Criteria
+glossaryTerm: Term Selection Instructions
 glossaryText: "criteria that are used within a particular [scope](@) for the selection of [terms](@) that are part of a particular [terminology](@)."
 synonymOf: selection-criteria
 grouptags: glossary-entries, terminology-management
@@ -20,9 +20,9 @@ attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
-# Term Selection Criteria
+# Term Selection Instructions
 
-**Term Selection Criteria** are criteria that are used within a particular [scope](@) for the selection of [terms](@) that are part of a particular [terminology](@).
+**Term Selection Instructions** are criteria that are used within a particular [scope](@) for the selection of [terms](@) that are part of a particular [terminology](@).
 
 Criteria can be formulated for constructing a [terminology](@), by
 - selecting [terms](@) [that are to be added](/docs/spec-tools/terminology-construction#syntax-add) to the [terminology-under-construction](@). These [terms](@) can be specified by [curated texts](@) from the [scope](@) itself, or specified within [MRGs](@) that are curated in) other [scopes](@).
@@ -30,7 +30,7 @@ Criteria can be formulated for constructing a [terminology](@), by
 
 These criteria are essential for determining which terms should be included in an [MRG](@) (and [HRGs](@)) that are maintained within the [scope](@).
 
-Term selection criteria serve as guidelines for curators and stakeholders to identify and select relevant terms based on predefined rules or filters.
+Term selection instructions serve as guidelines for curators and stakeholders to identify and select relevant terms based on predefined rules or filters.
 
 ## Examples
 
@@ -39,5 +39,5 @@ Term selection criteria serve as guidelines for curators and stakeholders to ide
 
 ## Notes
 
-- Term selection criteria are essential for ensuring that the terminological assets in a scope are relevant, accurate, and comprehensive.
-- Curators use term selection criteria to tailor the terminology to the specific needs and objectives of the community or project.
+- Term selection instructions are essential for ensuring that the terminological assets in a scope are relevant, accurate, and comprehensive.
+- Curators use term selection instructions to tailor the terminology to the specific needs and objectives of the community or project.

@@ -21,7 +21,12 @@ export const mark = ({children}) => (
 This section is still under development. You'll see further editor's notes where issues exist.
 :::
 
-The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [scopes section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available. 
+The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [scopes section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available.
+
+This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `stag` that exists in the [scopes section](/docs/spec-files/saf#scopes) of its [SAF](@):
+- `mrg.stag.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology] specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
+- `mrg.stag.<altvsntag>.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.
+- `mrg.stag.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [scope section](/docs/spec-files/saf#scope) of the [SAF](@) of [scope](@) `stag`.
 
 There will shortly be an implementation of the tool:
 - the repo for the code of the tool is [here](https://github.com/tno-terminology-design/mrg-import).
@@ -100,15 +105,18 @@ The [versions-section](/tev2-specifications/docs/spec-files/saf#versions) in `{i
 To specify one such process, we will use:
 - `{other-vsntag}` = `vsntag`-field in the element of the `versions` section of `{import-saf}`
 - `{other-altvsntags}` = `altvsntags`-field in an element of the `versions` section of `{import-saf}`
+- `{other-defaultvsn}` = `defaultvsn`-field in the `scope` section of `{import-saf}`
 
 To import the associated [MRGs](@), here is what we do:
 - read the file `{import-scopedir}/{import-glossarydir}/mrg.{other-scopetag}.{other-vsntag}.yaml`, which is the file that contains the [MRG](@) that needs to be imported. If that file doesn't exist, this results in the bahaviour as specified by the `<action>` value of the `onNotExist` parameter. Default is `throw`.
 :::info Editor's note
 It may well be possible that contents of the mrg may need to be processed.
 This is due to the fact that `scopetag`s are 'local' names for referring to scopes and every scope gets to decide on its own scoptag names. So the meaning of 'scopetags' cannot be transferred across scopes. We have to use universal/fixed identifiers, such as a `scopedir`-URL to identify scopes. Still, local names can be useful (and are necessary), so we'll have to figure out what the impact of this is.
-ed:::
+:::
 - write the contents to `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.{other-vsntag}.yaml`, overwriting a file that has the same name if that were to exist.
 - for every [versiontag](@) in `{other-altvsntags}` (which we call `{other-altvsntag}`), a symbolic link `mrg.{import-scopetag}.{other-altvsntag}.yaml` is created in the `{my-scopedir}/{my-glossarydir}/` directory, that links to the `mrg.{import-scopetag}.{other-vsntag}.yaml` file that was just created in that same directory.
+
+After all [MRGs](@) are imported a symbolic link `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.yaml` is created (or overwritten if it already exists), which points to the file `mrg.{import-scopetag}.{other-defaultvsn}.yaml`. 
 
 :::note NOTE the change of the `scopetag` part in the filename!
 The name of the [MRG](@) in the [scope](@) from which it is imported may differ from the name of the [MRG](@) that is imported. The reason for this is that the names ([scopetags](@) that are used in these [scopes](@) to refer to the [scope](@) from where [MRGs](@) are imported, may differ.

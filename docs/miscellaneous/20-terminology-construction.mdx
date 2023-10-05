@@ -19,17 +19,17 @@ The actual creation of a [terminology](@), and the subsequent generation of the 
 
 ## Specifying the contents of a terminology {#specifying-terminology}
 
-A [curator](@) specifies a [terminology](@) by creating a new entry in the [`versions` section](tev2-specifications/docs/spec-files/saf#versions) of the [SAF](@) (of the [scope](@) in which the [terminology](@) is to reside). This entry will contain 
+A [curator](@) specifies a [terminology](@) by creating a new entry in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) in which the [terminology](@) is [curated](@). This entry will contain 
 
 - one or more [versiontags](@) that allow the [terminology](@) to be [identified](@) (within its [scope](@)), 
-- the [term selection criteria](@) that specify the [terms](@) that are to be included (or removed) from the [terminology as it is being constructed](terminology-under-construction@), and
-- some meta-data (see the [documentation](tev2-specifications/docs/spec-files/saf#versions).
+- the [term selection instructions](@) that specify the [terms](@) that are to be included (or removed) from the [terminology as it is being constructed](terminology-under-construction@), and
+- some meta-data (see the [documentation](/docs/spec-files/saf#versions).
 
 ## Process for creating a terminology
 
 The creation of a [terminology](@) is equivalent with the creation of the set of [MRG entries](@) that document each of the [terms](@) therein. Thus, the process for creating a [terminology](@) can be described as follows:
 1. start with an empty set of [MRG entries](@) - we use the term "[terminology under construction](@)" to refer to this set.
-2. sequentially process the list of [term selection criteria](@) as specified in the appropriate entry of the [`versions` section](tev2-specifications/docs/spec-files/saf#versions) of the [SAF](@), i.e. instructions which allow for
+2. sequentially process the list of [term selection instructions](@) as specified in the appropriate entry of the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@), i.e. instructions which allow for
   - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.
   - [removing](#syntax-remove) [MRG entries](@) from the [terminology under construction](@);
   - [modifying attributes](#syntax-rename) of a specific [MRG entry](@) in the [terminology under construction](@), e.g. for renaming a term that originated from another [scope](@).
@@ -39,7 +39,7 @@ In this text, we will use the terms:
 - **current scope** for the [scope](@) within which the [terminology](@) is being created and
 - **current version** for the [version](@) of the [terminology](@) that is being created.
 
-In the syntax specification for [term selection criteria](@), we use the following symbols:
+In the syntax specification for [term selection instructions](@), we use the following symbols:
 
 | Symbol | Description |
 | :----- | :---------- |

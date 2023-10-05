@@ -104,11 +104,11 @@ The `scopetags` section is a list that specifies a mapping between [scopetags](@
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
-- scopetag: [ essiflab ] # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
-- scopetag: [ essif-lab ] # define another scopetag for the same scopedir (just because you can)
+- scopetag: essif-lab # define another scopetag for the same scopedir (just because you can)
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
-- scopetag: [ ctwg ] # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: ctwg # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
 ~~~
 
@@ -136,7 +136,7 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 
-The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection criteria](@). The [Terminology Construction page](/tev2-specifications/docs/spec-tools/terminology-construction) documents the kinds of [term selection criteria](@) that are available, and how they work in the [term](@) selection process.
+The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). The [Terminology Construction page](/tev2-specifications/docs/spec-tools/terminology-construction) documents the kinds of [term selection instructions](@) that are available, and how they work in the [term](@) selection process.
 
 This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may be of interest to the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
 
@@ -156,7 +156,7 @@ versions:
     altvsntags: # alternative verstiontags
       - latest
       - 0x921456
-    termselcrit:
+    termselection:
       - "tags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
       - "terms[party,community](@essif-lab:0.9.4)" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
       - "*@tev2" # import all terms defined in the scope `tev2`
@@ -166,7 +166,7 @@ versions:
   - vsntag: test # a versiontag that identifies this version from all other versions in the SAF
     altvsntags: # alternative verstiontags
       - 0x654129
-    termselcrit:
+    termselection:
       - "*@essif-lab" # import all terms defined in the scope `essif-lab`
       - "-tags[terminology]" # remove all terms tagged with the grouptag `terminology`
       - "*@tev2" # import all terms defined in the scope `tev2`
@@ -190,7 +190,7 @@ The following fields are defined for the `versions` section of a [SAF](@):
 | `vsntag`      | Y | [Versiontag](@) that that is used to [identify](@) this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version.<br/>Must satisfy regex `[a-z0-9_-\.]+`. |
 | `altvsntags`  | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version.<br/>Must satisfy regex `[a-z0-9_-\.]+`. |
 | `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of this [SAF](@)). The purpose of this field is to allow different versions of the [scope's](@) [terminology](@) to have different licenses. |
-| `termselcrit` | Y | List of [term selection criteria](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See [Terminology Construction](/docs/spec-tools/terminology-construction) for details. |
+| `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See [Terminology Construction](/docs/spec-tools/terminology-construction) for details. |
 | `status`      | n | Text that [identifies](@) the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
 | `from`        | F | Date at which it was decided to establish this version. |
 | `to`          | F | Date at which this version will expire (or has expired). |

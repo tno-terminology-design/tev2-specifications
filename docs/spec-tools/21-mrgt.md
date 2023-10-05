@@ -21,14 +21,11 @@ The **Machine Readable Glossary generation Tool ([MRGT](@))** generates a Machin
 
 The (newly generated) [MRG](@) is meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As it contains every [term](@) that is used in the [scope](@), and includes all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
-There is currently one (JAVA) implementation of the tool:
-- the repo is [here](https://github.com/trustoverip/ctwg-toolkit-mrg/)
-- the documentation is [here](https://github.com/trustoverip/ctwg-toolkit-mrg#readme)
-- the (deprecated) specifications for this tool are [here](https://essif-lab.github.io/framework/docs/spec-tools/mrgt)
-
-A new implementation is envisaged (but not yet available), which will be built similar to the [TRRT](@) and [MRG Importer](@).
+There is currently one implementation of the tool (but not yet fully available), which will be built similar to the [TRRT](@) and [MRG Importer](@). [^previous]
 - the repo is [here](https://github.com/tno-terminology-design/mrgt).
-- the documentation is [<mark>tbd</mark>].
+- the documentation is [<mark>provided in this web page</mark>].
+
+[^1]: An older (JAVA) implementation exists, but is not compatible with the current specifications:<br/>- the repo is [here](https://github.com/trustoverip/ctwg-toolkit-mrg/)<br/>- the documentation is [here](https://github.com/trustoverip/ctwg-toolkit-mrg#readme)<br/>- the (deprecated) specifications for this tool are [here](https://essif-lab.github.io/framework/docs/spec-tools/mrgt)
 
 ## Installing the Tool
 
@@ -79,17 +76,22 @@ The `<action>` parameter can take the following values:
 
 ## Generating an MRG
 
-The [MRGT](@) starts by reading the [SAF](@) that exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
+Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
 
-The corresponding entry in the [SAF](@) specifies (a specific version of) a [terminology](@). It not only includes meta-data for that [terminology](@), but also the set of '[term selection criteria](@)' that specify how the [terminology](@) needs to be [constructed](/docs/spec-tools/terminology-construction), and the file to which the result needs to be written.
+The corresponding entry in the [SAF](@) specifies (a specific version of) a [terminology](@). It not only includes meta-data for that [terminology](@), but also the set of '[term selection instructions](@)' that specify how the [terminology](@) needs to be [constructed](/docs/spec-tools/terminology-construction), and the file to which the result needs to be written.
 
-The [MRG](@) is then created as follows (starting with an empty file):
+The [MRG](@) is created by 
 
-1. The [MRG](@) `terminology` section is created, by copying [relevant fields](/docs/spec-files/mrg#mrg-terminology) from the `terminology` section in the [SAF](@).
-2. Then, [terminology construction](/docs/spec-tools/terminology-construction) takes place, which can be thought of as constructing a set of tuples `{ [term, grouptags] }`, where `term` [identifies](@) (the [curated text](@) that documents) the particular [semantic unit](@), and `grouptags` is a set of [grouptags](@) associated with that tuple.
-3. For every tuple in this set, an [MRG entry](@) is created, and added to the [MRG](@) under construction. The structure of each such [entry](mrg-entry@) depends on the type of the [semantic unit](@) that the [term](@) represents, as the [header](@) of a [curated text](@) depends on that type.
+1. creating an empty [terminology under construction](@), and filling it by processing the [term selection instructions](@) that are specified in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) that [curates](@) the [terminology](@). This process is described in [MRG Term Selection Syntax](/docs/spec-syntax/mrg-termselection-syntax). When completed, the [terminology under construction](@) contains the (non-empty) set of [MRG entries](@) that document all  [terms](@) within the specified [terminology](@).
 
-After the [MRG](@) has been created, it is written to the file `mrg.<scopetag>.<vsntag>.yaml`, where:
+2. creating an [MRG](@), consisting of 
+  - a [`terminology` section](/docs/spec-files/mrg#mrg-terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
+  - a [`scopes` section](/docs/spec-files/mrg#mrg-scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
+  - an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which is obtained by copying the [MRG-entries](@) contained in the [terminology under construction](@).
+
+3. waiting until all other [MRGs](@) that are to be created in this run of the [MRGT](@) have completed step 2 of their generation process, after which all [MRG-entries](@) that have a non-empty `synonymOf` field will be processed. 
+
+4. the end-result will be written to the file `mrg.<scopetag>.<vsntag>.yaml`, where:
 - `<scopetag>` is the [scopetag](@) that is used within the [scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [scope section](docs/spec-files/saf#terminology) of the [SAF](@).
 - `<vsntag>` is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. NOTE that [versiontags](@) that are listed in the `altvsntags`-field of such an element MUST NOT be used in the [MRG](@)-filename.
 
@@ -158,4 +160,4 @@ The [MRGT](@) comes with documentation that enables developers to ascertain its 
 
 ## Notes
 
-[^1]: The algorithm ensures that an [MRG entry](@) for a [term](@) that is a [synonym](@) of another [term](@) identical to the [MRG entry](@) for that other [term](@), but if the [curated text](@) that specifies the [synonym](@) has additional front matter (e.g. a slightly modified `glossaryText` field), that front matter is retained in the [MRG entry](@). It is up to the [author](@) of the [curated text](@) to make sure this does not pose any problems, and up to the [ICT](@) to do appropriate checks.
+[^previous]: The algorithm ensures that an [MRG entry](@) for a [term](@) that is a [synonym](@) of another [term](@) identical to the [MRG entry](@) for that other [term](@), but if the [curated text](@) that specifies the [synonym](@) has additional front matter (e.g. a slightly modified `glossaryText` field), that front matter is retained in the [MRG entry](@). It is up to the [author](@) of the [curated text](@) to make sure this does not pose any problems, and up to the [ICT](@) to do appropriate checks.

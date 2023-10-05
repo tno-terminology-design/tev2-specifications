@@ -10,7 +10,7 @@ A **Terminology Identifier** a [text](identifier@) that [identifies](@) a [termi
 
 ## Syntax
 
-The syntaxes that can be used for a [term identifier](@) are as follows (note that such syntax is typically preceeded by the `@`-character): 
+The syntaxes that can be used for a [terminology identifier](@) are as follows (note that such syntax is typically preceeded by the `@`-character): 
 
 - (empty string, null)
 - `scopetag`
@@ -19,7 +19,9 @@ The syntaxes that can be used for a [term identifier](@) are as follows (note th
 
 where
 
-- the empty string (null) [identifies](@) the [terminology](@) in the current [scope](@) that has the current version (or default version if there is no current version).
+- the empty string (null) [identifies](@) the [terminology](@) that is being used by default in the context in which the [terminology identifier](@) is being used. Typically, that would be the default version of the [terminology](@) in the current [scope](@). [^1]
+
+[^1]: When a [terminology](@) [is being constructed](/tev2-specifications/docs/spec-tools/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
 
 - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
 

@@ -39,10 +39,10 @@ scopes:  #
 versions:
 - vsntag: terms # this version contains all terms that are curated within this scope
   altvsntags: [ latest ] # alternative verstiontags
-  termselcrit:
+  termselection:
   - "*@tev2" # import all tev2 terms.
 - vsntag: documentation # terms that are needed for this specification
-  termselcrit:
+  termselection:
   - "terms[act,actor,action,community,control,entity,knowledge]@essif-lab" 
   - "terms[manage,management,govern,governance,objective,owner,owned]@essif-lab" 
   - "terms[partial-identity,identifier,identity]@essif-lab" 
@@ -54,7 +54,7 @@ versions:
   altvsntags: # alternative verstiontags
     - firstAltVsnTag
     - secondAltVsnTag
-  termselcrit:
+  termselection:
     - "tags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
     - "terms[party,community]@essif-lab:0.9.4" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
     - "-tags[terminology]" # remove all terms tagged with the grouptag `terminology`

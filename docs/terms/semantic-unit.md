@@ -4,7 +4,8 @@ term: semantic-unit
 termType: concept
 isa:
 glossaryTerm: Semantic Unit
-glossaryText: "something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@)."
+glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)). Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
+hoverText: "a basic building block of meaning or representation that exists within the 'mind' of a party, e.g., a concept, relation, or property. Parties use terms (words/phrases) to refer to these intangible building blocks."
 synonymOf:
 grouptags:
 formPhrases: semantic-unit{ss}
@@ -20,17 +21,23 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Semantic Unit
 
-### Summary
-A **Semantic Unit** is something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@); as such, one could also see it as some [entity](@) that exists within such a [knowledge](@).
+## Summary
+A **Semantic Unit** is a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)).
 
-Examples include ideas, or [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), examples, use-cases, hypotheses, etc.
+Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc.
 
-Within [TEv2](@), every [semantic unit](@) that exists in some [knowledge](@) may be documented in multiple [scopes](@), by at most one [curated text](@) per [scope](@). This [curated text](@) specifies the [(scoped) term](@) that represents the [semantic unit](@)) within its [scope](@). Also, it may contain the [definition](@) that helps people determine whether or not something qualifies as an instance of that [semantic unit](@).
+In the context of cognitive science, a semantic unit represents a distinct and well-defined element of [terminology](@), such as a [concept](@), a [relation](@), a [property](@), or any other fundamental building block that contributes to the structure and understanding of a specialized domain or subject.
+
+[Parties](@) use [terms](@) to refer to such building blocks, and as such they are relevant to know about in the context of [terminology](@) [curation](@). Also, [terms](@) can be grouped into [terminologies](@).
+
+[Parties](@) may create a [definition](@) for a [semantic unit](@) by associating the criterion with the [term](@) that it uses to determine what is, and what is not, an instance (or example) of the [semantic unit](@).
+
+Within [TEv2](@), [semantic units](@) can be [defined](@) in, and described by [curated texts](@) that belong to a particular [scope](@). They can be clustered to form [terminologies](@), for which [glossaries](@) (both [machine readable](mrg@) and [human readable](hrg@)) can be generated
 
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 
-### Purpose
+## Purpose
 [Semantic units](@) exist because they are somehow relevant for realizing [objectives](@) of the [party](@) that has this [knowledge](@). Since [parties](@) rarely realize their [objectives](@) all by themselves, they will need to find ways to communicate them (their meanings) to other [parties](@) and/or [actors](@) that work for/with them, such that the lot of them have something we might call a 'common understanding'. To realize this 'common understanding', the [owner](@) of (the [knowledge](@) that contains) the [semantic units](@) must actively (consciously) understand and distinguish between each of them, specify names ([terms](@)) that represent them, and create and maintain [curated texts](@), [definitions](@) and perhaps other stuff.
 
-### Criteria
-A **Semantic unit** is something that can be thought of as existing in a particular [knowledge](@), e.g. a [concept](@), or a [mental model](@); as such, one could also see it as some [entity](@) that exists within such a [knowledge](@).
+## Criteria
+A **Semantic unit** is something that can be thought of as a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)). Typically, [parties](@) have (at least) ont [term](@) that they use to refer thereto. 

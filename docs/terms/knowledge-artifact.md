@@ -5,7 +5,7 @@ termType: concept
 isa:
 glossaryTerm: Knowledge Artifact
 glossaryText: "See: [semantic unit](@). (term is deprecated)"
-synonymOf:
+synonymOf: semantic-unit
 grouptags:
 formPhrases: knowledge-artifact{ss}
 # Curation status

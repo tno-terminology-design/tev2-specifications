@@ -116,7 +116,7 @@ An [MRG entry](@) has a few fields that are always present, because the [MRGT](@
 
 An [MRG entry](@) has additional fields that come from the front matter of the [curated text](@) that the [MRG entry](@) represents. Some fields are
 - mandatory for all [curated texts](@), and hence will always appear in an [MRG entry](@); these appear in the table below.
-- optional for [curated texts](@) - typically, e.g. to accommodate for differences in the types [terminological artifacts](@) that [curated texts](@) document; these also appear in the table below.
+- optional for [curated texts](@) - typically, e.g. to accommodate for differences in the types [semantic units](@) that [curated texts](@) document; these also appear in the table below.
 - optional in the sense that they are intended to be processed by TEv2 tool plugins - these are not documented here.
 - optional in the sense that they are intended to be used by third party rendering tools, such as Docusaurus or Jekyll - these are also not documented here.
 
@@ -145,7 +145,7 @@ The following table documents the fields that are used within the context of [TE
 | `bodyFile`        | n | Path, relative to the [scopedir](@), that contains the [body](@) of this [curated text](@). If not specified, the [body](@) in this file serves as the [body](@) of the [curated text](@). |
 | `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`. |
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
-| `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [terminological artifact](@) for which this is a [synonym](@). |
+| `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
 | `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`.<br/>Must satisfy regex [`(?:\[\s*([a-z0-9_-]+)\s*(?:,\s*([a-z0-9_-]+))*\s*\])?`](https://www.debuggex.com/r/a51CXl1NzR3kwihT). |
 | `formPhrases`     | n | List of [texts](formphrase@) that are [used to convert](/docs/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/spec-syntax/form-phrase-syntax). |
 | `status`          | n | Text that identifies the status of the term. ([Communities](@) of) [scopes](@) may specify values for this field. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |

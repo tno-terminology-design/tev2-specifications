@@ -74,7 +74,7 @@ The `<action>` parameter can take the following values:
 | `'ignore'` | processing continues as if nothing happened. |
 
 
-## Generating an MRG
+## Generating an MRG {#mrgt-creating-mrg-entries}
 
 Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
 
@@ -82,12 +82,17 @@ The corresponding entry in the [SAF](@) specifies (a specific version of) a [ter
 
 The [MRG](@) is created by 
 
-1. creating an empty [terminology under construction](@), and filling it by processing the [term selection instructions](@) that are specified in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) that [curates](@) the [terminology](@). This process is described in [MRG Term Selection Syntax](/docs/spec-syntax/mrg-termselection-syntax). When completed, the [terminology under construction](@) contains the (non-empty) set of [MRG entries](@) that document all  [terms](@) within the specified [terminology](@).
+1. creating a [terminology under construction](@) that is initially empty, and filling it by:
+    - processing the [term selection instructions](@) that are specified in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) that [curates](@) the [terminology](@), as described in [MRG Term Selection Syntax](/docs/spec-syntax/mrg-termselection-syntax). The result of such processing is that for every [term](@) that is selected, an [MRG entry] is added to the [terminology under construction](@) that consists of 
+      - (by default) the [header](@) of the [curated text](@) that documents the [semantic unit](@) that the [term](@) refers to, or 
+      - (in case a specific [terminology](@) is specified from which the [term](@) is to be selected), this is the corresponding [MRG entry](@) as retrieved from the [MRG](@) of a designated [terminology](@).
+    - [adding a set of specific fields](#mrgt-create-mrg-entry) to each of the [MRG entries](@) in the [terminology under construction] (or modifying such fields if they already exist).
+  - When completed, the [terminology under construction](@) contains the (non-empty) set of [MRG entries](@) that document all  [terms](@) within the specified [terminology](@).
 
 2. creating an [MRG](@), consisting of 
   - a [`terminology` section](/docs/spec-files/mrg#mrg-terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
   - a [`scopes` section](/docs/spec-files/mrg#mrg-scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
-  - an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which is obtained by copying the [MRG-entries](@) contained in the [terminology under construction](@).
+  - an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which consists of (the [MRG-entries](@) contained in) the [terminology under construction](@).
 
 3. waiting until all other [MRGs](@) that are to be created in this run of the [MRGT](@) have completed step 2 of their generation process, after which all [MRG-entries](@) that have a non-empty `synonymOf` field will be processed. 
 
@@ -101,11 +106,11 @@ The [MRG](@) file must be written to the [glossarydir](@) of the [scope](@), whi
 
 After the [MRG](@) file has been written, the [MRGT](@) will create,  a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) for every [versiontag](@) that it finds in the `altvsntags`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The symbolic link will point to the file that has just been written and contains the [MRG](@) that has just been generated. The name of this symbolic link is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
 
-### Creating an MRG Entry
+### Creating an MRG Entry {#mrgt-create-mrg-entry}
 
 An [MRG entry](@) is either
 - a copy of an (existing) [MRG entry](@) that is found in an [MRG](@) that lives in another [scope](@), or
-- it is constructed from a [curated text](@), the [header](@) of which always lives in a [curated file](@) that is located in the [curatedir](@) of the current [scope](@), as [specified](/docs/spec-files/saf#terminology) in the `curatedir` field of the [SAF](@), and the [body](@) of which can either be found in that same file, or in the file that can be found at the location in the [scopedir](@) as specified by the `bodyFile`-field in the [header](@) of the [curated text](@).
+- it is constructed from a [curated text](@), the [header](@) of which lives in a [curated file](@) that is located in the [curatedir](@) of the current [scope](@), as [specified](/docs/spec-files/saf#terminology) in the `curatedir` field of the [SAF](@), and the [body](@) of which can either be found in that same file, or in the file that can be found at the location in the [scopedir](@) as specified by the `bodyFile`-field in the [header](@) of the [curated text](@).
 
 #### Copying an MRG Entry from an existing MRG
 

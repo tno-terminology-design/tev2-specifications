@@ -1,6 +1,8 @@
 ---
 id: mrg-termselection-syntax
 sidebar_label: MRG Term Selection
+toc_min_heading_level: 2
+toc_max_heading_level: 2
 date: 20231006
 ---
 
@@ -54,17 +56,19 @@ In this text, we will use the terms **current scope** for the [scope](@) within 
 
 ## Adding Terms {#syntax-add}
 
-Selecting [terms](@) to be added to the [terminology under construction](@) consists of:
+Selecting and subsequently adding [terms](@) to the [terminology under construction](@) consists of:
 1. [identifying](@) such [terms](@), and.
-2. [identifying](@) the source from which the corresponding [MRG entries](@) will be created.
+2. [identifying](@) the source from which data is to be taken for constructing the associated [MRG entries](@).
+3. [creating a new MRG entry](/docs/spec-tools/mrgt#mrgt-create-mrg-entry) based on the data that documents the [semantic unit](@) that is [identified](@) by the [term](@) and that exists in the designated source.
+4. adding this new [MRG entry](@) to the [terminology under construction](@), overwriting an existing one that might exist for the [identified](@) [term](@).
 
-By default, this source is the the set of [curated texts](@) of the current scope. However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<terminology-identifier>` part to the instruction, where `<terminology-identifier>` is the [terminology identifier](@) that identifies the [terminology](@) of which the [MRG](@) contains the [MRG entries](@) for its [terms](@).
+By default, this source is the the set of [curated texts](@) of the current scope. However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<terminology-identifier>` part to the instruction, where `<terminology-identifier>` is the [terminology identifier](@) identifies the [terminology](@) from which the [term](@) is to be added. The data for constructing the associated [MRG entries](@) will be taken from the [MRG](@) associated with that [terminology](@).
 
-### Add all terms from a specific source {#syntax-add-all-terms}
+### Selecting all terms from a particular source {#syntax-add-all-terms}
 
-The following syntaxes are available for adding all terms from a specific source to the [terminology under construction](@):
-- **`*`**<br/>Add all [terms](@) that are described by a [curated texts](@) in the current scope.<br/>&nbsp;
-- **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as [identified](@) by the [terminology-identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
+The following syntaxes are available for selecting all terms from a specific source for inclusion into the [terminology under construction](@):
+- **`*`**<br/>Add all [terms](@) for which there are [curated texts](@) in the current scope.<br/>&nbsp;
+- **`* @<tid>`**<br/>Add all [terms](@) from the [terminology](@) that is [identified] by the [terminology-identifier](@) `<tid>`. The associated [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
 
 <details><summary>Examples:</summary>
 
@@ -80,36 +84,36 @@ The difference between `*` and `* @` is that the first takes [curated texts](@) 
 
 </details>
 
-### Add selected terms from a specific source {#syntax-add-selected-terms}
+### Selecting specific terms from a particular source {#syntax-add-selected-terms}
 
-The following syntaxes are available for adding a selection of terms from a specific source to the [terminology under construction](@):
+The following syntaxes are available for selectiing [terms](@) from a specific source:
 - **`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in a [header](@) (front-matter) of a [curated text](@), such as `term`, `grouptags`, `status`, etc.
-  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected for inclusion in the [terminology under construction](@).<br/>&nbsp;
+  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected.<br/>&nbsp;
 - **`<key>` [ `<value>`, `<value2>`, ... ] `@<tid>`**, where:
-  - `<tid>` is a [terminology identifier](@) that [identifies](@) an [MRG](@) (that must have been made available in the [glossarydir](@) of the current scope).
+  - `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added.
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) that resides in that [MRG](@), such as `term`, `grouptags`, `status`, etc.
-  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) from that [MRG](@) is to be selected for inclusion in the [terminology under construction](@).
+  - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [term](@) from the designated [terminology](@) is to be selected.
  
-These instructions will add every term from the designated source, whose specification contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
+These instructions will select every [term](@) whose specification (as taken from the designated source) contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
 <details><summary>Examples:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |
-  | term [actor]               | select every [curated text](@) from the current scope, that has a `term` field in its [header](@) of which the value is `actor`. |
-  | status[proposed,approved]  | select every [curated text](@) from the current scope, that has a `status` field in its [header](@) of which the value is `proposed` or `approved`. |
-  | somefield []               | select every [curated text](@) from the current scope, that has a field `somefield` that has no value specified. |
-  | term [actor,party]@tev2:v1 | select every [MRG entry](@) from [MRG](@) of [scope](@) `tev2` that has [version](versiontag@) `v1`, that has a `term` field whose value is `actor` or `party`. |
-  | grouptags[x,y,z]@essif-lab | select every [MRG entry](@) from the default [MRG](@) of [scope](@) `essif-lab`, that has a `grouptags` field whose value is `x`, `y`, or `z`. |
+  | term [actor]               | select every [term](@) in the current scope, that is described by a [curated text](@) of which the [header](@) has a `term` field with the value `actor`. |
+  | status[proposed,approved]  | select every [term](@) in the current scope, that is described by a [curated text](@) of which the [header](@) has a `status` field with the value `proposed` or `approved`. |
+  | somefield []               | select every [term](@) in the current scope, that is described by a [curated text](@) of which the [header](@) has a `somefield` field that has no value specified. |
+  | term [actor,party]@tev2:v1 | select every [term](@) in the [terminology](@) [identified](@) by `@tev2:v1`, that is described by an [MRG entry](@) (in the corresponding [MRG](@)) that has a `term` field with the value `actor` or `party`. |
+  | grouptags[x,y,z]@essif-lab | select every [term](@) in the default [terminology](@) of [scope](@) `essif-lab`, that is described by an [MRG entry](@) (in the corresponding [MRG](@)) that has a `grouptags` field whose value is `x`, `y`, or `z`. |
   
 </details>
 
-## Remove Terms {#syntax-remove}
+## Removing Terms {#syntax-remove}
 
-Removing terms is equivalent to removing selected [MRG entries](@) from the [terminology under construction](@). The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, and a source may not be specified, as it is always the [terminology under construction](@).
+Selecting and subsequently removing [terms](@) to the [terminology under construction](@) consists of [identifying](@) such [terms](@), and removing the corresponding [MRG entries](@) from the [terminology under construction](@) if such exist.
 
-The following syntaxes are available for removing a selection of terms from the [terminology under construction](@):
+The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, as follows:
 - **-`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), , such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) is to be removed from the [terminology under construction](@).
@@ -127,7 +131,7 @@ This syntax removes every [MRG entry](@) from the [terminology-under-constructio
 
 </details>
 
-## Rename/rewrite term fields {#syntax-rename}
+## Renaming/rewriting term fields {#syntax-rename}
 
 :::info Editor's note
 The ability to rename terms as they are imported may introduce some issues related to other field-names, such as `term`, `formphrases`, `synonyms`, `glossaryText`s and possibly some others. Perhaps this syntax should therefore be extended, enabling [curators](@) to simultaneously change these (and other) fields in the [MRG entry](@).

@@ -29,7 +29,7 @@ A [HRG](@) is a [glossary](@) is meant to be readable by humans, so that they ca
 Within (the [glossarydir](@) of) a particular [scopedir](@), we can generate (or import) and hence find all [HRG](@)-files that are needed within that [scope](@). We use the following file naming convention:
 
 **`hrg.<scopetag>.<vsntag>.<output>`** is the name of a file that contains an actual [HRG](@), or it is a file that links (references) such a file, where:
-  - **`<scopetag>.<vsntag>`** is taken from the [MRG](@)-file from which the [HRG](@) is generated. See [MRG file naming](/docs/spec-files/mrg#mrg-file-naming) for details.
+  - **`<scopetag>.<vsntag>`** is taken from the [MRG](@)-file from which the [HRG](@) is generated. See [MRG file naming](/docs/spec-files/mrg#mrg-file-naming-conventions) for details.
   - **`<output>`** is a text that has been provided by the user that generated the [HRG](@). It includes the file extension (e.g., PDF, HTML, etc.) that is appropriate for its contents. See [HRG generation](/docs/spec-tools/hrgt#calling-the-tool) for details.
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [HRG](@) that is relevant for that [scope](@).

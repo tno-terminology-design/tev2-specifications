@@ -1,10 +1,10 @@
 ---
-id: hrg-termselection-syntax
+id: hrg-term-selection-syntax
 sidebar_label: HRG Term Selection
 date: 20230103
 ---
 
-# HRG Term Selection Syntax
+# HRG Term Selection Instruction Syntax
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 

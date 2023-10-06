@@ -26,7 +26,7 @@ A [SAF](@) has three main parts, which we refer to as 'sections':
 
 The following sections specify the fields for each of these parts.
 
-### SAF Terminology - Defining the Scope itself {#terminology}
+### SAF Terminology - Defining the Scope itself {#scope-section}
 
 <details>
   <summary>Example of a `scope` section</summary>
@@ -76,7 +76,7 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `curatedir`   | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`.|
 | `glossarydir` | Y | Path to the directory where all [glossary](@)-related files are located. Full URL is `<scopedir>`/`<glossarydir>`. This directory SHOULD contain one [MRG](@) for every element in the version-section in the [SAF](@), and one or multiple [HRGs](@). It MAY contain other files, e.g. containing instructions, headers, footers or other things that are necessary for generating specific [glossaries](@). |
 | `website`     | n | base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). |
-| `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@) is, `navpath` is for the rendered versions of [Curated Texts](@). |
+| `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@), is `navpath` for the rendered versions of [Curated Texts](@). |
 | `defaultvsn`  | Y | [versiontag](@) that [identifies](@) the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
 | `license`     | Y | File in the root of the [scopedir](@) that contains the (default) licensing data. |
 | `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [semantic units](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
@@ -136,11 +136,11 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 
-The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). The [Terminology Construction page](/tev2-specifications/docs/spec-tools/terminology-construction) documents the kinds of [term selection instructions](@) that are available, and how they work in the [term](@) selection process.
+The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). The [Terminology Construction page](/docs/spec-tools/terminology-construction) documents the kinds of [term selection instructions](@) that are available, and how they work in the [term](@) selection process.
 
 This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may be of interest to the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
 
-There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/tev2-specifications/docs/spec-files/saf#terminology) of the [SAF](@).
+There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@).
 
 <details>
   <summary>Example of a `versions` section</summary>

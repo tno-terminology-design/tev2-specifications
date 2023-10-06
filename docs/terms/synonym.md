@@ -4,7 +4,7 @@ term: synonym
 termType: concept
 isa: term
 glossaryTerm:
-glossaryText: "a [term](@) that has the same (or similar) meaning as another [term](@)."
+glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@)."
 synonymOf:
 grouptags:
 formPhrases: synonym{ss}
@@ -21,11 +21,18 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Synonym
 
 ## Summary
-A **synonym** is a [term](@) that has the same (or similar) meaning as another [term](@) (of which it is the [synonym](@)).
+A **synonym** is a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (of which it is the [synonym](@)).
 
 While from a theoretical point of view a [term](@) and its [synonyms](@) are identical, in practice they are more 'equivalent', i.e. while they have the same meaning, when using one or the other in a sentence, there is often one term that is preferred over the other.
 
-[TEv2](@) does not assume that if a [term](@) is a [synonym](@) of another [term](@), this other [term](@) is also a [synonym](@) of the first. This allows for treating a [term](@) that is a [synonym](@) in other ways than [terms](@) that are not. This allows, e.g., to create [HRG entries](@) for [synonyms](@) that simply refer to the [term](@) that they are a synonym of, rather than repeating the description of such a [term](@).
+## The `SynonymOf` field {#synonym-of}
+
+When using [synonyms](@) in documentation, chances are that not only a different [term](@) is used, but also that (minor) changes are required, e.g., in the [glossaryTerm](@) and [glossaryText](@) fields, possibly also the [hoverText](@) field, and maybe others.  in other fields of 
+
+ by means of a [curated text](@) in which:
+- the [header](@) contains 
+
+does not assume that if a [term](@) is a [synonym](@) of another [term](@), this other [term](@) is also a [synonym](@) of the first. This allows for treating a [term](@) that is a [synonym](@) in other ways than [terms](@) that are not. This allows, e.g., to create [HRG entries](@) for [synonyms](@) that simply refer to the [term](@) that they are a synonym of, rather than repeating the description of such a [term](@).
 
 ## Purpose
-Within the context of [TEv2](@), the [defining](@) [synonyms](@) for a [term](@) is needed so that [HRGs](@) can be made better readable without taking away control over the structure of an [HRG](@) entry
+Within the context of [TEv2](@), the ability to [define](@) [synonyms](@) for a [term](@) is needed so that [HRGs](@) can be made better readable without taking away control over the structure of an [HRG](@) entry.

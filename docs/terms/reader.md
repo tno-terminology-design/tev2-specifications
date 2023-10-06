@@ -6,7 +6,7 @@ term: reader
 termType: concept
 isa:
 glossaryTerm: Reader
-glossaryText: "a person that reads a text that is authored by another person (its [author](@)]), and that tries to understand the meaning of this text in the way its [author](@) intended."
+glossaryText: "a person that reads a text that is authored by another person (its [author](@)), and that tries to understand the meaning of this text in the way its [author](@) intended."
 synonymOf:
 grouptags:
 formPhrases: reader{ss}
@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Reader
 
-An **Reader** is a person that reads a text that is authored by another person (its [author](@)]), and that tries to understand the meaning of this text in the way its [author](@) intended.
+An **Reader** is a person that reads a text that is authored by another person (its [author](@)), and that tries to understand the meaning of this text in the way its [author](@) intended.
 
 It is vital that the message that the [author](@) intends to convey gets across. Whitepapers, opinion papers, specifications, standardization texts, advertisements, memo's, mails, etc. could just as well not have been written if the intended readers do not pick up the meaning of that meaning.
 

@@ -1,31 +1,22 @@
 ---
 id: mrgt
 sidebar_label: MR Glossary Generation
-date: 20221127
+date: 20231006
 ---
 
 # Machine Readable Glossary Generation Tool
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine Readable Glossaries ([MRGs](@)) for one specific, or all [terminology](@) versions that are [curated](@) within a specific [scope](@). [MRGs](@) come in a specific, well-defined [format](/docs/spec-files/mrg). They contain some meta-data, followed by a list of so-called [MRG entries](@), one for every [term](@) in its [scope](@), which represent [concepts](@) and other [semantic units](@) that are known within that [scope](@).
 
-<!-- Use 'Mark' as an HTML tag, e.g. <mark>text to mark</Mark?-->
-export const mark = ({children}) => (
-  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
-    {children}
-  </span> );
-
-The **Machine Readable Glossary generation Tool ([MRGT](@))** generates a Machine Readable Glossary or [MRG](@)) for (a specific version of) the [terminology](@) of a specific [scope](@) into a specific, well-defined [format](/docs/spec-files/mrg). An [MRG](@) contains so-called [MRG entries](@) for every [term](@) in its [scope](@), which represent not only [concepts](@) but also other [semantic units](@) of other kinds, such as [mental models](@) and [use cases](@).
-
-The (newly generated) [MRG](@) is meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As it contains every [term](@) that is used in the [scope](@), and includes all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
+The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
 There is currently one implementation of the tool (but not yet fully available), which will be built similar to the [TRRT](@) and [MRG Importer](@). [^previous]
 - the repo is [here](https://github.com/tno-terminology-design/mrgt).
 - the documentation is [<mark>provided in this web page</mark>].
 
-[^1]: An older (JAVA) implementation exists, but is not compatible with the current specifications:<br/>- the repo is [here](https://github.com/trustoverip/ctwg-toolkit-mrg/)<br/>- the documentation is [here](https://github.com/trustoverip/ctwg-toolkit-mrg#readme)<br/>- the (deprecated) specifications for this tool are [here](https://essif-lab.github.io/framework/docs/spec-tools/mrgt)
+[^previous]: An older (JAVA) implementation exists, but is not compatible with the current specifications:<br/>- the repo is [here](https://github.com/trustoverip/ctwg-toolkit-mrg/)<br/>- the documentation is [here](https://github.com/trustoverip/ctwg-toolkit-mrg#readme)<br/>- the (deprecated) specifications for this tool are [here](https://essif-lab.github.io/framework/docs/spec-tools/mrgt)
 
 ## Installing the Tool
 
@@ -61,7 +52,7 @@ The columns in the following table are defined as follows:
 | :------------- | :------------ | :---: | :---------- |
 | `config`       | `<path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
 | `scopedir`     | `<path>`        | Y | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [MRG importer](@). |
-| `vsntag`       | `<vsntag>`      | n | [versiontag](@) for which the [MRG](@) needs to be (re)generated. When omitted, an [MRG](@) will be generated for every version of the [terminology](@) that is specified in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) |
+| `vsntag`       | `<vsntag>`      | n | [versiontag](@) for which the [MRG](@) needs to be (re)generated. When omitted, an [MRG](@) will be generated for every version of the [terminology](@) that is specified in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@) |
 | `onNotExist`   | `<action>`      | n | specifies the action to take in case a `vsntag` was specified, but wasn't found in the [SAF](@). Default is `'throw'`. |
 
 The `<action>` parameter can take the following values:
@@ -73,75 +64,18 @@ The `<action>` parameter can take the following values:
 | `'log'`    | a message is written to a log(file) and processing continues. |
 | `'ignore'` | processing continues as if nothing happened. |
 
+## Running the Tool
 
-## Generating an MRG {#mrgt-creating-mrg-entries}
+One run of the [MRGT](@) either
+- generates an [MRG](@) for one specific [terminology](@) version within the current scope (which is the case when the `version` parameter was specified), or it
+- generates multiple [MRGs](@), i.e., one for every version of the [terminology](@) that is [curated](@) within the current scope (which is the case when the `version` parameter is omitted).
 
-Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
+Running the tool comprises the following phases:
 
-The corresponding entry in the [SAF](@) specifies (a specific version of) a [terminology](@). It not only includes meta-data for that [terminology](@), but also the set of '[term selection instructions](@)' that specify how the [terminology](@) needs to be [constructed](/docs/spec-tools/terminology-construction), and the file to which the result needs to be written.
-
-The [MRG](@) is created by 
-
-1. creating a [terminology under construction](@) that is initially empty, and filling it by:
-    - processing the [term selection instructions](@) that are specified in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) that [curates](@) the [terminology](@), as described in [MRG Term Selection Syntax](/docs/spec-syntax/mrg-termselection-syntax). The result of such processing is that for every [term](@) that is selected, an [MRG entry] is added to the [terminology under construction](@) that consists of 
-      - (by default) the [header](@) of the [curated text](@) that documents the [semantic unit](@) that the [term](@) refers to, or 
-      - (in case a specific [terminology](@) is specified from which the [term](@) is to be selected), this is the corresponding [MRG entry](@) as retrieved from the [MRG](@) of a designated [terminology](@).
-    - [adding a set of specific fields](#mrgt-create-mrg-entry) to each of the [MRG entries](@) in the [terminology under construction] (or modifying such fields if they already exist).
-  - When completed, the [terminology under construction](@) contains the (non-empty) set of [MRG entries](@) that document all  [terms](@) within the specified [terminology](@).
-
-2. creating an [MRG](@), consisting of 
-  - a [`terminology` section](/docs/spec-files/mrg#mrg-terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
-  - a [`scopes` section](/docs/spec-files/mrg#mrg-scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
-  - an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which consists of (the [MRG-entries](@) contained in) the [terminology under construction](@).
-
-3. waiting until all other [MRGs](@) that are to be created in this run of the [MRGT](@) have completed step 2 of their generation process, after which all [MRG-entries](@) that have a non-empty `synonymOf` field will be processed. 
-
-4. the end-result will be written to the file `mrg.<scopetag>.<vsntag>.yaml`, where:
-- `<scopetag>` is the [scopetag](@) that is used within the [scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [scope section](docs/spec-files/saf#terminology) of the [SAF](@).
-- `<vsntag>` is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. NOTE that [versiontags](@) that are listed in the `altvsntags`-field of such an element MUST NOT be used in the [MRG](@)-filename.
-
-The [MRG](@) file must be written to the [glossarydir](@) of the [scope](@), which is located at `<scopedir>/<glossarydir>`, where
-- `<scopedir>` is the home-directory of the [scope](@), and
-- `<glossarydir>` is the path to the directorty where all [glossary](@)-related files are located. Its value can be found in the [scope section](/docs/spec-files/saf#terminology) of the [SAF](@).
-
-After the [MRG](@) file has been written, the [MRGT](@) will create,  a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) for every [versiontag](@) that it finds in the `altvsntags`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The symbolic link will point to the file that has just been written and contains the [MRG](@) that has just been generated. The name of this symbolic link is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
-
-### Creating an MRG Entry {#mrgt-create-mrg-entry}
-
-An [MRG entry](@) is either
-- a copy of an (existing) [MRG entry](@) that is found in an [MRG](@) that lives in another [scope](@), or
-- it is constructed from a [curated text](@), the [header](@) of which lives in a [curated file](@) that is located in the [curatedir](@) of the current [scope](@), as [specified](/docs/spec-files/saf#terminology) in the `curatedir` field of the [SAF](@), and the [body](@) of which can either be found in that same file, or in the file that can be found at the location in the [scopedir](@) as specified by the `bodyFile`-field in the [header](@) of the [curated text](@).
-
-#### Copying an MRG Entry from an existing MRG
-
-:::info
-A prerequisite for generating an [MRG](@) that includes [MRG entries](@) from [MRGs](@) that are maintained in other [scopes](@), is that such other [MRGs](@) must be available in the [glossarydir](@) of the [scope](@) within which the [MRGT](@) is run. This can be achieved by running the [MRG importer](@) [tool](/docs/spec-tools/mrg-importer). If the [MRG](@) that is to be generated doesn't include such [MRG entries](@), the [MRG importer](@) need not be invoked.
-:::
-
-:::info Editor's note
-this section needs to be reviewed/revisded to ensure it fits with the [MRG importer](@) specs.
-:::
-
-In case the [MRG entry](@) is a copy, the `vsntag` [field](/docs/spec-files/mrg#mrg-entries) of that [MRG entry](@) should be given the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#mrg-terminology) of the [MRG](@) from which [MRG entry](@) contents was copied.
-
-#### Constructing an MRG Entry from a Curated Text
-
-Constructing an [MRG entry](@) from a [curated text](@) is done as follows:
-1. create an empty/new [MRG entry](@);
-2. if the `synonymOf` field contains a [term identifier](@) that [identifies](@)
-   - a [curated text](@) in the [scope](@) in which the [MRG](@) is being created, then copy the entire front matter of that [curated text](@) into the [MRG entry](@);[^1]
-   - an [MRG entry](@) in an [MRG](@) other than the [MRG](@) that is being created, then copy that [MRG entry](@) into the [MRG entry](@) that has just been created;
-3. if the `synonymOf` field contains a text that is not a [term identifier](@), raise an [appropriate warning](#exceptions);
-4. copy every field in the front-matter of the [curated text](@) into the [MRG entry](@); if the field already exists in the [MRG entry](@), it will be overwritten;
-5. discard every field that has a field name that, when converted into lowercase, matches any of the field names in the table below;
-6. add the fields in the below table with the specified contents, as follows:
-
-| Field          | Value(s) that are assigned to the fields |
-| -------------- | :---------- |
-| `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the `scope` section of the [SAF](@). |
-| `locator`      | path, relative to `scopedir`/`curatedir`/, of the [curated text](@). |
-| `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@), where the rendered version of the [curated text](@) is located. |
-| `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be in a another file that that which contains the [header](@) of the [curated text](@) |
+1. In the first phase, a provisional [MRG](@) is created for all [terminology](@) versions that are to be created. Each [MRG](@) contains a provisional [MRG entry](@) for every [term](@) contained in its (version of the) [terminology](@). This provisional [MRG entry](@) either contains 
+    - all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
+    - all fields in the [MRG entry](@) that comes from another [MRG](@) (typically from another [scope](@)). How this works precisely is specified in the [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syntax).<br/>
+    Note that in case the [MRG entry](@) is a copy of another [MRG entry](@), the `vsntag` [field](/docs/spec-files/mrg#mrg-entries) of that [MRG entry](@) must be given the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#mrg-terminology) of the [MRG](@) from which [MRG entry](@) contents was copied.
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 

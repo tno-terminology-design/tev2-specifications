@@ -21,12 +21,12 @@ export const mark = ({children}) => (
 This section is still under development. You'll see further editor's notes where issues exist.
 :::
 
-The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [scopes section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available.
+The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available.
 
-This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `stag` that exists in the [scopes section](/docs/spec-files/saf#scopes) of its [SAF](@):
-- `mrg.stag.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology] specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
+This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `stag` that exists in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@):
+- `mrg.stag.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology](@) specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
 - `mrg.stag.<altvsntag>.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.
-- `mrg.stag.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [scope section](/docs/spec-files/saf#scope) of the [SAF](@) of [scope](@) `stag`.
+- `mrg.stag.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of [scope](@) `stag`.
 
 There will shortly be an implementation of the tool:
 - the repo for the code of the tool is [here](https://github.com/tno-terminology-design/mrg-import).
@@ -86,7 +86,7 @@ Then, the [MRG importer](@) reads the [SAF](@) of the [scope](@) from which the 
 - `{my-own-scopedir}` = `scopedir`-field from the `scope`-section
 - `{my-own-glossarydir}` = `glossarydir`-field from the `scope`-section
 
-The [MRG importer](@) also reads the [scopes section](/tev2-specifications/docs/spec-files/saf#scopes) of the [SAF](@), which specifies the 'other' [scopes](@) from which the actively maintained [MRGs](@) have to be imported. This [scopes section](/tev2-specifications/docs/spec-files/saf#scopes) contains elements that consist of two parts, whose values we will refer to by the following names:
+The [MRG importer](@) also reads the [`scopes` section](/docs/spec-files/saf#scopes) of the [SAF](@), which specifies the 'other' [scopes](@) from which the actively maintained [MRGs](@) have to be imported. This [`scopes` section](/docs/spec-files/saf#scopes) contains elements that consist of two parts, whose values we will refer to by the following names:
 - `{import-scopetag}` = `scopetag`-field from the `scopes`-section of the [SAF](@)
 - `{import-scopedir}` = `scopedir`-field from the `scopes`-section of the [SAF](@)
 
@@ -100,7 +100,7 @@ We will use:
 - `{other-scopetag}` = the `scopetag`-field in the `scope` section of `{import-saf}`;
 - `{other-glossarydir}` = the `glossarydir`-field in the `scope` section of `{import-saf}`;
 
-The [versions-section](/tev2-specifications/docs/spec-files/saf#versions) in `{import-saf}` specifies which [terminologies](@) are actively maintained within the other [scope](@), and hence have to be imported. Every such [terminology](@) is specified by an entry in this section, and must hence be processed to import the associated [MRGs](@). 
+The [`versions` section](/docs/spec-files/saf#versions) in `{import-saf}` specifies which [terminologies](@) are actively maintained within the other [scope](@), and hence have to be imported. Every such [terminology](@) is specified by an entry in this section, and must hence be processed to import the associated [MRGs](@). 
 
 To specify one such process, we will use:
 - `{other-vsntag}` = `vsntag`-field in the element of the `versions` section of `{import-saf}`

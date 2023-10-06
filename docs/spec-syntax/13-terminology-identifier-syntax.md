@@ -21,11 +21,11 @@ where
 
 - the empty string (null) [identifies](@) the [terminology](@) that is being used by default in the context in which the [terminology identifier](@) is being used. Typically, that would be the default version of the [terminology](@) in the current [scope](@). [^1]
 
-[^1]: When a [terminology](@) [is being constructed](/tev2-specifications/docs/spec-tools/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
+[^1]: When a [terminology](@) [is being constructed](/docs/spec-tools/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
 
 - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
 
-- **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [scope section](/docs/spec-files/saf#terminology) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
+- **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
 
 
 ## Examples

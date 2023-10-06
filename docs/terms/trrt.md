@@ -2,12 +2,14 @@
 id: trrt
 term: trrt
 termType: concept
-isa: tool
-glossaryTerm: TRRT (TermRef Rendering Tool)
+isa:
+bodyFile: /spec-tools/trrt
+glossaryTerm: TermRef Rendering Tool
+glossaryAlias: TRRT
 glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
-synonymOf: trrt
+synonymOf:
 grouptags: tev2-tool, tev2-toolbox
-formPhrases: trrt{ss}, termref-rendering-tool{ss}
+formPhrases: trrt{ss}, termref-rendering-tool{ss}, term-ref-rendering-tool{ss}
 status: proposed
 created: 2023-07-31
 updated: 2023-07-31
@@ -18,4 +20,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # TRRT - TermRef Rendering Tool
 
-The **TRRT** (Terminology Relational-Rendering Tool) is an essential component of the TEv2 toolbox, designed to facilitate the visualization and rendering of semantic units and their interrelationships within a specific terminology. The TRRT takes a [TermRef](@) as input, finds the [MRG](@) and the [entry](mrg-entry@) therin that is being referenced, and replaces that with a [renderable ref](@), thus enabling the term to be rendered with various decorations and other characteristics.
+The **TRRT** ([TermRef](@) Rendering Tool) is an essential component of the TEv2 toolbox, designed to facilitate the visualization and rendering of [semantic units](@) and their interrelationships within a specific [terminology](@). The TRRT takes a [TermRef](@) as input, finds the [MRG](@) and the [entry](mrg-entry@) therin that is being referenced, and replaces that with a [renderable ref](@), thus enabling the term to be rendered with various decorations and other characteristics.

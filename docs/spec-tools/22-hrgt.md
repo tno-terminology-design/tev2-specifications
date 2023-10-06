@@ -19,7 +19,7 @@ export const mark = ({children}) => (
 
 The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of the [terminology](@) of a specific [scope](@). 
 
-The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named `mrg.<scopetag>.<vsntag>.yaml`, where the combination of `<scopetag>` and `<vsntag>` identify a particular [terminology](@). See the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming) for details.
+The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named `mrg.<scopetag>.<vsntag>.yaml`, where the combination of `<scopetag>` and `<vsntag>` identify a particular [terminology](@). See the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming-conventions) for details.
 
 The selection of the [MRG entries](@) that are to be included in the [HRG](@), as well as the specification of the output format, headers, footers, etc., can be configured as well as customized. Thus, the [HRGT](@) provides a flexible means for creating all sorts of outputs that are either already human readable or can be processed further by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](/docs/tev2-toolbox)).
 

@@ -15,7 +15,7 @@ Every [scope](@) has (at least) one **Machine Readable Inventory**[^1] (that we 
 
 [^1]: The [MRG](@) is an inventory rather than a [glossary](@), because it contains _all_ [semantic units](@) that are [curated](@) within the [scope](@): apart from [terms](@), it also include e.g., [mental models](pattern@) and [use cases](@). We choose to maintain the [term](@) "Machine Readable Glossary" ([MRG](@)), because most of us would view it - initially, at least - as a list of [terms](@) and their [definitions](@).
 
-## File naming conventions {#mrg-file-naming}
+## File naming conventions {#mrg-file-naming-conventions}
 
 The file naming conventions apply to one particular [scope](@), which implies that there is a single [SAF](@), a single [glossarydir](@), and a single [scopedir](@). Within this [scope](@), the meaning of [scopetags](@), i.e. the [scopes](@) to which they refer, are defined in/by the [SAF](@). 
 
@@ -23,10 +23,10 @@ Within this [glossarydir](@) we can generate (or import), and hence also find al
 
 - **`mrg.<scopetag>.<vsntag>.yaml`** is the name of a file that contains an actual [MRG](@), or it is a file that links (references) such a file, where:
 
-  - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [scope section](docs/spec-files/saf#terminology) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/spec-files/saf#scopes) of that [SAF](@).
-  - **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `alatvsntag`-fields in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@).
+  - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/spec-files/saf#scopes) of that [SAF](@).
+  - **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `altvsntag`-fields in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@).
 
-- **`mrg.<scopetag>.yaml`** is the name of the (symbolic link) file that links to the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [scope section](docs/spec-files/saf#terminology) of the [SAF](@). 
+- **`mrg.<scopetag>.yaml`** is the name of the (symbolic link) file that links to the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@). 
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [MRG](@) that is relevant for that [scope](@).
 
@@ -58,7 +58,7 @@ entries: # here follows an (unsorted) list of MRG entries
 
 </details>
 
-### MRG `Terminology` section {#mrg-terminology}
+## MRG `Terminology` section {#mrg-terminology}
 
 The following fields are defined for the sections `terminology`:
 
@@ -80,7 +80,7 @@ The following fields are defined for the sections `terminology`:
 | `altvsntags` | n | List of alternative [versiontags](@) that can be used to [identify](@) this version. Each of the values MUST be in the list of [versiontags](@) in the `altvsntags` field of the the corresponding `versions` section in the [SAF](@). |
 | `license`    | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. Its value MUST match the `license` field of the corresponding `versions` section in the [SAF](@), or if that isn't specified, the `license` field of the `scope` section in the [SAF](@). |
 
-### MRG `scopes` section {#mrg-scopes}
+## MRG `scopes` section {#mrg-scopes}
 
 The following fields are defined for the section `scopes`:
 
@@ -108,11 +108,13 @@ An [MRG entry](@) has a few fields that are always present, because the [MRGT](@
 
 | Field          | Value(s) that are assigned to the fields |
 | -------------- | :---------- |
-| `scopetag`     | [Scopetag](@) that [identifies](@) the [scope](@) from within which the contents of the [MRG entry](@) is obtained. This is either [scope](@) from within which the [MRG](@) has been generated, or the [scope](@) from which the [MRG entry](@) was imported. In the latter case, the [`scopes` section](#mrg-scopes) in the [MRG](@) MUST contain a mapping between the `scopetag` and its associated [scope directory](@). |
-| `vsntag`       | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated.<br/>Must satisfy regex `[a-z0-9_-.]+`.  |
+| `scopetag`     | [Scopetag](@) that [identifies](@) the [scope](@) from within which the contents of the [MRG entry](@) is obtained.[^2] This is either [scope](@) from within which the [MRG](@) has been generated, or the [scope](@) from which the [MRG entry](@) was imported. In the latter case, the [`scopes` section](#mrg-scopes) in the [MRG](@) MUST contain a mapping between the `scopetag` and its associated [scope directory](@). |
+| `vsntag`       | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated. |
 | `locator`      | path, relative to `scopedir`/`curatedir`/, where `scopedir` can be obtained from the `scopes` section of the [MRG](@), and `curatedir` can be obtained from the [SAF](@) that lives in this `scopedir`, where the [curated text](@) lives from which the contents of the [MRG entry](@) was constructed. |
-| `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) (that lives in the `scopedir` as specified in the `scopes` section of the [MRG](@)), where the rendered version of the [curated text](@) is located. |
+| `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) (that lives in the `scopedir` as specified in the `scopes` section of the [MRG](@)), where the rendered version of the [curated text](@) is located. |
 | `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that exist in the file that contains the [body](@) of the [curated text](@), and can serve as `trait` in a [TermRef](@). |
+
+[^2]: One purpose of having the `scopetag` field is for determining which [MRG entries](@) in a [terminology under construction](@) require further processing. See [processing synonyms] for an example.
 
 An [MRG entry](@) has additional fields that come from the front matter of the [curated text](@) that the [MRG entry](@) represents. Some fields are
 - mandatory for all [curated texts](@), and hence will always appear in an [MRG entry](@); these appear in the table below.

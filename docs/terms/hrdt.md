@@ -4,7 +4,7 @@ id: hrdt
 # TEv2 Curated Text Header
 term: hrdt
 termType: concept
-isa: tool
+isa:
 glossaryTerm: Human Readable Dictionary Tool (HRDT)
 glossaryText: "a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@)."
 synonymOf: 

@@ -67,9 +67,9 @@ The following syntaxes are available for adding all terms from a specific source
   | Examples:  | Meaning: |
   | :-------   | :------  |
   | *&nbsp;@tev2:v1 | Add all [terms](@) that are in version `v1` of the [terminology](@) of the [scope](@) identified by `tev2`, i.e., in [MRG](@) file `mrg.tev2.v1.yaml`. |
-  | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.<defaultvsn>.yaml`, where `<defaultvsn>` is the value of the `defaultvsn` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) that is located in the [scopedir](@) associated with the [scopetag](@) `tev2`. |
-  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) of the current scope. |
-  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.<defaultvsn>.yaml`, where:<br/>- `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@) of the current scope, and<br/>- `<defaultvsn>` is the value of the `defaultvsn` field in that same [SAF](@). |
+  | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.<defaultvsn>.yaml`, where `<defaultvsn>` is the value of the `defaultvsn` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) that is located in the [scopedir](@) associated with the [scopetag](@) `tev2`. |
+  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) of the current scope. |
+  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.<defaultvsn>.yaml`, where:<br/>- `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) of the current scope, and<br/>- `<defaultvsn>` is the value of the `defaultvsn` field in that same [SAF](@). |
   | *          | Add all [terms](@) that are described by a [curated text](@) in the current scope. |
 
 The difference between `*` and `* @` is that the first takes [curated texts](@) as source, whereas the latter takes an existing [MRG](@) as source, being the [MRG](@) that contains the default version of the [terminology](@) of the current scope. This allows [terminologies](@) to be defined in terms of their predecessors.
@@ -131,7 +131,7 @@ The ability to rename terms as they are imported may introduce some issues relat
 
 In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
 
-The following syntaxes are available for renaming fields in an [MRG entry] that is part of the [terminology under construction](@):
+The following syntaxes are available for renaming fields in an [MRG entry](@) that is part of the [terminology under construction](@):
 - **`rename` `<term>` [ `<key>`:`<value>`, `<key2>:<value2>`, ... ]**, where:
   - `<term>` is the value of the `term` field in the [MRG entry](@) of the [terminology under construction](@) that is selected for the renaming process. Note that this value is an [identifier](@) for that [MRG entry](@).
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc.

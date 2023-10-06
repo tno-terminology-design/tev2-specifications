@@ -4,7 +4,7 @@ id: mrdt
 # TEv2 Curated Text Header
 term: mrdt
 termType: concept
-isa: tool
+isa:
 glossaryTerm: Machine Readable Dictionary Tool (MRDT)
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
 synonymOf: 

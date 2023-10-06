@@ -7,7 +7,7 @@ termType: concept
 isa:
 glossaryTerm: Converter
 glossaryText: "a software component that takes the output of an [interpreter](@), i.e., the set of moustache variables it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the moustache variables to produce the transformed output."
-synonymOf: text-converter
+synonymOf:
 grouptags: 
 formPhrases: converter{ss}
 # Curation status

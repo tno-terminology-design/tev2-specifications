@@ -23,7 +23,7 @@ where
 - **`terminology-identifier`** is the combination of a `scopetag`:`vsntag`, where
 
   - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
-  - **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [scope section](/docs/spec-files/saf#terminology) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
+  - **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
 
 ## Examples
 

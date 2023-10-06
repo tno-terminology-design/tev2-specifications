@@ -120,7 +120,7 @@ The columns in the following table are defined as follows:
 | `input`    | `<globpattern>` | n | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) that specifies the set of (input) files that are to be processed. |
 | `output`   | `<dir>`         | Y | (Root) directory where output files are to be written. This directory is specified as an absolute or relative path. |
 | `scopedir` | `<path>`        | Y | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [TRRT](@). |
-| `version`  | `<versiontag>`  | n | Version of the [terminology](@) that is to be used to resolve [TermRefs](@) for which neither a `scope` nor a `version` part has been specified (which is the most common case). It MUST match either the `vsntag` field, or an element of the `altvsntags` field as specified in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@). When not specified, its value is taken from the `defaultvsn` field in the [terminology section](/docs/spec-files/mrg#mrg-terminology) of the default [MRG](@) (which is [identified](@) by the contents of the `mrgfile` field (in the [`scope` section](/docs/spec-files/saf#terminology) of the [SAF](@)). |
+| `version`  | `<versiontag>`  | n | Version of the [terminology](@) that is to be used to resolve [TermRefs](@) for which neither a `scope` nor a `version` part has been specified (which is the most common case). It MUST match either the `vsntag` field, or an element of the `altvsntags` field as specified in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@). When not specified, its value is taken from the `defaultvsn` field in the [`terminology` section](/docs/spec-files/mrg#mrg-terminology) of the default [MRG](@) (which is [identified](@) by the contents of the `mrgfile` field (in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@)). |
 | `interpreter` | `<type>`     | n | Allows for the switching between interpreter types. By default the `AltInterpreter` and `StandardInterpreter` are available. When this parameter is omitted, the basic [TermRef](@) syntax is used. |
 | `converter` | `<type>`       | n | The type of converter which creates the [renderable refs](@). When this parameter is omitted, the Markdown converter is used. |
 
@@ -135,7 +135,7 @@ The [TermRef](@) resolution process has three steps:
 
 The following kinds of [TermRef](@) syntaxes are (to be) supported:
 - the [basic syntax](/docs/spec-syntax/term-ref-syntax#basic-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
-- the [alternative syntax](/docs/spec-syntax/term-ref-syntax#alternative-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text@], which may be inconvenient.
+- the [alternative syntax](/docs/spec-syntax/term-ref-syntax#alternative-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
 
 Interpretation of a [TermRef](@) leads to the population of the following variables (or, in case regexes are used, named capturing groups):
 
@@ -173,9 +173,9 @@ If not specified, the current [scope](@) (from which the [TRRT](@) is being call
 
 #### `vsntag` (optional) {#vsntag}
 
-`vsntag` is a [versiontag](@) that [identifies](@) the version of the [terminology](@) in the [scope](@) (as [identified] by the `scopetag`). It MUST appear either in the `vsntag` field, or as one of the elements in the `altvsntags` field of the [SAF](@) that contains the administration of that [scope](@).
+`vsntag` is a [versiontag](@) that [identifies](@) the version of the [terminology](@) in the [scope](@) (as [identified](@) by the `scopetag`). It MUST appear either in the `vsntag` field, or as one of the elements in the `altvsntags` field of the [SAF](@) that contains the administration of that [scope](@).
 
-If omitted (in which case the preceding `:`-character may also be omitted from the syntax), its value will [identify](@) the default [MRG](@) of the [scope](@) (as [specified](/docs/spec-files/saf#terminology) in the `mrgfile` field os the [SAF](@)).
+If omitted (in which case the preceding `:`-character may also be omitted from the syntax), its value will [identify](@) the default [MRG](@) of the [scope](@) (as [specified](/docs/spec-files/saf#scope-section) in the `mrgfile` field os the [SAF](@)).
 
 #### `term` (optional) {#id}
 
@@ -210,7 +210,7 @@ As soon as the variables have been provided with a value, the [MRG](@) can be fo
 
 1. **get the [scopedir](@) and [SAF](@) associated with the `scope` variable of the [TermRef](@)**. If the value of the `scopetag` variable is the [scopetag](@) of the current [scope](@) (as specified when the [tool was called](#calling-the-tool)), then use the current [scopedir](@). Otherwise, look up the [scopedir](@) from the [`scopes` section](/docs/spec-files/saf#scopes) of the current [SAF](@). From the resulting [scopedir](@), read the [SAF](@) (i.e. the `saf.yaml` file in the root of the [scopedir](@)).
 
-2. **get the [MRG](@) associated with the `vsntag` of the [TermRef](@)**. Search the element in the [versions section](docs/spec-files/mrg#versions) of the [SAF](@) where the `vsntag` variable is either the value of the `vsntag` field, or appears as one of the elements in the `altvsntags` field. Then, obtain the filename of the [MRG](@) from the `mrgfile` field of that element.
+2. **get the [MRG](@) associated with the `vsntag` of the [TermRef](@)**. Search the element in the [`versions` section](docs/spec-files/mrg#versions) of the [SAF](@) where the `vsntag` variable is either the value of the `vsntag` field, or appears as one of the elements in the `altvsntags` field. Then, obtain the filename of the [MRG](@) from the `mrgfile` field of that element.
 
 3. **identify the [MRG entry](@) associated with the `id` field of the [TermRef](@)**. Get the [MRG](@) from the location specified by the URL `<scopedir>`/`<glossarydir>`/`<mrgfile>` (which are all in the context of [scope](@) as identified by the `scopetag` variable). The [MRG entry](@) will be [identified](@) by a process that starts with the set of all [entries](mrg-entry@) that exist in the selected [MRG](@), and then weeding out any non-matching [entries](mrg-entry@) by applying the following steps:
     - since `term` must be present, all [entries](mrg-entry@) are removed whose `term` field differs from the `term` variable;

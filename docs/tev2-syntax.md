@@ -14,5 +14,5 @@ export const mark = ({children}) => (
 
 [TEv2](@) uses specific syntaxes:
 - the **[TermReference Syntax](/docs/spec-syntax/term-ref-syntax)** is the syntax allowed to author [TermRefs](@) (in source documents, see <mark>reference needed</mark>);
-- the **[Form Phrases Syntax](/docs/spec-syntax/form-phrase-syntax)**, i.e. the syntax that [authors](@) need to specify [form phrases](@) (in the `formPhrases` field of [curated texts](@) - see the [curated text file specs](/docs/spec-files/ctext));
+- the **[Form Phrases Syntax](/docs/spec-syntax/form-phrase-syntax)**, i.e. the syntax that [authors](@) need to specify [form phrases](@) (in the `formPhrases` field of [curated texts](@) - see the [curated text file specs](/docs/spec-files/ctext-file));
 - the **[Terminology Construction Syntax](/docs/spec-tools/terminology-construction)**, i.e. the syntax for the [term selection instructions](@) that [curators](@) need to specify the contents of a [terminology](@).

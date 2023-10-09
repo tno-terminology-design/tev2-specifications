@@ -5,7 +5,7 @@ id: mrg-importer
 term: mrg-importer
 termType: concept
 isa:
-bodyFile: /spec-tools/12-mrg-importer.md
+bodyFile: /spec-tools/mrg-importer
 glossaryTerm: MRG Importer
 glossaryText: "is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope's](@) [SAF](@), and putting them in the [scope's](@) [glossarydir](@)."
 synonymOf:

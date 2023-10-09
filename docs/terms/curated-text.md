@@ -4,10 +4,10 @@ term: curated-text
 termType: concept
 isa:
 glossaryTerm: Curated Text
-glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).
+glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
 synonymOf:
 grouptags:
-formPhrases: curated-text{ss}, ctext{ss}, curated-file{ss}, cfile{ss}
+formPhrases: curated-text{ss}, ctext{ss}
 # Curation status
 status: proposed
 created: 2022-06-02
@@ -20,11 +20,22 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Curated Text
 
-## Summary
+A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
 
-A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@). A large variety of traits can be documented, such as the [(scoped) term](@) that is used within the [scope](@) to represent the [semantic unit](@), a [definition](@), explanatory texts, examples, etc., etc.; anything that helps others understand the intricacy of these [semantic units](@).
+A [curated text](@) consists of two parts: 
+- a [header](@), which is a set of key-value pairs that are designed to facilitate automated processing;
+- a [body](@), that contains texts that are designed for human interpretation.
 
-The (technical) structure and syntax for [curated texts](@) is specified [here](/docs/spec-files/ctext).
+[Curated texts](@) live in [curated files](@), that may have been generated, e.g. from [ingress tools](docs/overview/tev2-architecture#ingress-tools), or may have been constructed manually (using a text editor).
+
+[Curated texts](@) are used for a variety of purposes, as they (may) contain texts that:
+- are included in [MRGs](@) (one [MRG entries](@) for each [curated text](@));
+- are included in [HRGs](@), and (in future), [dictionaries](@);
+- help [readers](@) get a more in-depth understanding of the [semantic unit](@) that is being documented
+- help [readers](@) to find out other, related [concepts](@) or other [semantic units](@) related to that which is being described,
+etc.
+
+The (technical) structure and syntax for files that contain [curated texts](@) is specified [here](/docs/spec-files/curated-text-file).
 
 The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manuals/[author](@)) and [curators](/docs/manuals/curator) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
 
@@ -32,7 +43,7 @@ The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manua
 Text needs to be revised from here onward. Here are some ideas to mention:
 - contributors can suggest contents as per the curators instructions;
 - [authors](@) can write the [body](@) of [curated texts](@);
-- curators update the header of [curated texts](@) (conforming to the [ctext specifications](/docs/spec-files/ctext);
+- curators update the header of [curated texts](@) (conforming to the [ctext specifications](/docs/spec-files/ctext-file);
 - curators specify the process by which [curated texts](@) progress/mature, and get statuses assigned;
 - curators generate artifacts from 'decided on' [curated texts](@), so that
   - rendering tools or generation tools used in other scopes can generate artifacts and

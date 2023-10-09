@@ -1,52 +1,31 @@
 ---
-id: ctext
-sidebar_label: Curated Texts
-date: 20220713
+id: curated-text-file
+date: 20231009
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Curated Texts
+# Curated Text Files
 
-A **[curated text](@)** is a text that documents a [semantic unit](@) within a specific [scope](@). This page specifies the syntax that [curators](@) must ensure that all [curated texts](@) comply with, and that [authors](@) are expected to follow.
-
-The documentation of a [semantic unit](@) includes, e.g.:
-- the [term(s)](@) that are used within its [scope](@) to represent that [semantic unit](@);
-- a [definition](@) by which [readers](@) should be able to distinguish between instances and non-instances of that [semantic unit](@)
-- administrative attributes, e.g., various [tags](@), dates, status, etc.
-- processing attributes, e.g., formphrases, etc.,
-- rendering attributes, e.g., texts to use for generating [glossaries](@), document titles, pop-ups, etc.
-
-Within the constraints for [curated texts](@) as specified in this document, there is still lots of freedom regarding what [authors](@) (of such [texts](curated-text@)) could do, or not do. The [curators](@) of the [scope](@) are expected to provide guidance to these [authors](@) about additional constraints they require them to follow.
-
-## Context
-
-In principle[^1], a [curated text](@) resides in a file which we call a **[curated file](@)**. All [curated files](@) of a [scope](@) are expected to live in (a subdirectory of) its [scopedir](@), which we call the [curatedir](@), and whose location within the [scopedir](@) is specified in the [SAF](@). [Curated files](@) are expected to be processable using the [terminology tools](/docs-toolbox). However, [curators](@) may decide that they are also to be processable by other, third party tools, e.g., for the purpose of making rendered versions of such files available to some public. Examples of such tools include [Docusaurus v2](https://docusaurus.io/docs), or [github pages](https://pages.github.com/).
-
-[^1]: There are exceptions. In some contexts, documentation files may already exist that would properly describe a particular term. For [TEv2](@), the documentation of the [MRG](@) is an example: it specifies everything you might want to know about machine readable glossary files. If we could use that file to provide the [curated text](@) for [MRGs](@), that would be very convenient. Since [curated texts](@) consist of a [header](@) and a [body](@), instead of stuffing them both in a single [curated file](@), we have the possibility to have only the [header](@) in a [curated file](@), and leave the [body](@) in the existing document.
-
-## Structure
-
-Every [curated text](@) consists of two parts: a ([YAML](https://yaml.org/spec/1.2.2/)) **[header](@)**, which is also called the 'frontmatter', and a ([markdown](https://www.markdownguide.org/basic-syntax/)) **[body](@)**. The [header](@) is a set of key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it. Typically the [header](@) and the [body](@) are placed in a single [file](curated-file@). 
+Every [curated text](@) consists of two parts:
+1. the [header](@) (also called the 'frontmatter' of the [curated text](@)). It a set of ([YAML](https://yaml.org/spec/1.2.2/)) key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it. 
+2. the [body](@), that contains all other documentation. It has no fixed structure. When the [curated text](@) is to processed using a static site generator such as [Docusaurus v2](https://docusaurus.io/docs), or [github pages](https://pages.github.com/), it would typically contain ([markdown](https://www.markdownguide.org/basic-syntax/)).
 
 <details>
-  <summary>Example</summary>
+  <summary>Example of a [curated text file](@) that contains a complete [curated text](@)</summary>
   <div>
 
 ~~~ yaml
 ---
 # Docusaurus front matter
-id: ctext
+id: ctext-file
 sidebar_label: Curated Texts
 # TEv2 Curated Text Header
 term: curated-text
 termType: concept
-isa:
 glossaryTerm: Curated Text
-glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a specific [community](@) or other [party](@), and is located within a [scope](@) that is owned by that [community](@)/[party](@).
-synonymOf:
-grouptags:
-formPhrases: curated-text{ss}, ctext{ss}
+glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
+formPhrases: curated-text{ss}
 # TEv2 Curation status
 status: proposed
 created: 2022-06-02
@@ -74,11 +53,21 @@ A discussion on these other constructs is outside the scope of this document.
   </div>
 </details>
 
-[Headers](@) of [curated texts](@) are used by [TEv2](@) tools, but may also contain entries that are used by other tools, such as static site generators. The example above shows some entries that are used by (the static site generator) Docusaurus. In order to avoid confusion about which entries serve what purposes, it is advised to mark them as separate sections, as shown in the example. 
+A [curated text file](@) typically contains the complete [curated text](@). However, the [body](@) can be stored in a separate [file](body-file@), in which case, the [header](@) specifies where the [body file](@) is located.
 
-## Header Fields {#header-fields}
+[Curated text files](@) live in a (sub)directory of the [scopedir](@), which we call its [curatedir](@). The path of the [curatedir](@) (relative to the [scopedir](@)) can be found in the `curatedir` field of the [scope section](/docs/spec-files/saf#scope-section) in the [SAF](@).
 
-[TEv2](@) requires a number of fields to exist, to ensure its correct functioning. However, for specific features of different tools, additional fields may be specified. Here is a list of the fields that are are available for genenic use across the tools:
+This page specifies the syntax for [curated texts](@), which boils down to specifying the structure of their [headers](@), as [bodies](@) do not have any requirements for their structure that the [TEv2 tools](@) need.
+
+## Header Structure {#header}
+
+A [curated text](@) starts with three dashes `---`, which indicates the start of its (YAML) [header](@). This is followed by a sequence of key-value pairs (and comments). The [header](@) is terminated with onother three dashes and a new line.
+
+[Headers](@) of [curated texts](@) are used by [TEv2](@) tools, but may also contain entries that are used by other tools, such as static site generators. The example above shows some entries that are used by (the static site generator) Docusaurus. In order to avoid confusion about which entries serve what purposes, it is advised to put them  in different sections and separate these with comments, as shown in the example. 
+
+## Predefined TEv2 Header Fields {#header-fields}
+
+Different [TEv2 tools](@) use header fields in [headers](@) for various purposes. Below is a list of fields that are known to be used by tools that either exist or are under construction. This list is by no means complete, because as tools may be extended, and new tools can be added, it is possible that other fields may have be in use in particular [scopes](@). 
 
 <details>
   <summary>Legend</summary>

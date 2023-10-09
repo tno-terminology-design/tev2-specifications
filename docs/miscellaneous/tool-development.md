@@ -48,7 +48,7 @@ For the date of the tooling status, see the "<i>last updated on</i>" text at the
 - [TRRT](/docs/spec-tools/trrt), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
 
 ### High priority
-- ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/spec-files/00-ctext.md);
+- ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/spec-files/curated-text-file);
 - [HRGT](/docs/spec-tools/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
 
 ### Medium priority:

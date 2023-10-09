@@ -2,7 +2,7 @@
 term: terminology-identifier
 termType: concept
 isa: identifier
-bodyFile: /spec-syntax/13-terminology-identifier-syntax.md
+bodyFile: /spec-syntax/terminology-identifier-syntax
 glossaryTerm: Terminology Identifier
 glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@). If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
 hoverText: "a text (identifier), of the form `<scopetag>:<vsntag>`, that identifies a terminology from within a particular scope. If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."

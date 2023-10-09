@@ -5,7 +5,7 @@ id: mrgt
 term: mrgt
 termType: concept
 isa:
-bodyFile: /spec-tools/21-mrgt.md
+bodyFile: /spec-tools/mrgt
 glossaryTerm: Machine Readable Glossary Tool
 glossaryAlias: MRGT
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/spec-tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."

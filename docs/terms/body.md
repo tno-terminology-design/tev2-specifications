@@ -6,8 +6,7 @@ term: body
 termType: concept
 isa:
 glossaryTerm: Body (of a Curated Text)
-glossaryText: "the part of a [curated text](@) that comes after its [header](@), i.e. behind the so-called 'front-matter'."
-hoverText: "Body (of a Curated Text) the part of a curated text that comes after its its header (also called the 'front-matter')."
+glossaryText: "the part of a [curated text](@) that contains arbitrarily structured documentation about the [semantic unit](@) that the [curated text](@) documents. Bodies live either in [curated text files](@) (behind the [header](@)), or in separate so-called [body files](@)."
 synonymOf:
 grouptags:
 formPhrases: bod{yies}
@@ -23,12 +22,12 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Body
 
-### Summary
+A [body](@) is the part of a [curated text](@) that contains arbitrarily structured documentation about the [semantic unit](@) that the [curated text](@) documents.
 
-Every [curated text](@) consists of two parts. The first part starts with a line containing `---`, and ends with a similar line. This part is called the [header (of the curated text)](header@). The second part is what comes after the [header](@), and that is the [body (of the curated text)](body@). 
+Bodies live either in [curated text files](@) (behind the [header](@)), or in separate so-called [body files](@).
 
 <details>
-  <summary>Example</summary>
+  <summary>Example of a [curated text](@) that contains a [body](@), that is located immediately behind the [header](@).</summary>
   <div>
 
 ~~~ yaml
@@ -40,15 +39,24 @@ Every [curated text](@) consists of two parts. The first part starts with a line
 # Curated Text
 A curated text starts with three dashes `---`.
 This indicates the start of its (YAML) header.
-Typically, the header consists of a sequence of key-value pairs.
-The header is terminated with onother three dashes and a new line.
+Typically, the [header](@) consists of a sequence of key-value pairs.
+The [header](@) is terminated with onother three dashes and a new line.
 
-The body of the curated text starts behind the header block.
-It is typically markdown, but other constructs may be inserted
-that contribute to the rendering of these texts in a (static) website.
-An example of this is [MDX](https://mdxjs.com/).
-A discussion on these other constructs is outside the scope of this document.
+The [body](@) of the [curated text](@) 
+- either starts behind the header block.
+  It is typically markdown, but other constructs may be inserted
+  that contribute to the rendering of these texts in a (static) website.
+  An example of this is [MDX](https://mdxjs.com/).
+  A discussion on these other constructs is outside the scope of this document.
+- or it is located in a separate `[body file](@)`
+  that is located somewhere within the [scopedir](@).
+  In this case, the [header](@) must contain a field `bodyFile`
+  that specifies the location (relative to the [scopedir](@)) of that file.
 ~~~
 
   </div>
 </details>
+
+The [body](@) of a [curated text](@) can either be stored 
+- in the [curated text file](@), which would then contain the entire [curated text](@), or
+- as a separate [file](body-file@) (somewhere within the [scopedir](@)), in which case the [header](@) (that is in the [curated text file](@)) must contain a field `bodyFile` that specifies the location of the [body file](@).

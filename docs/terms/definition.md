@@ -4,7 +4,7 @@ term: definition
 termType: concept
 isa:
 glossaryTerm:
-glossaryText: "a text that helps [parties](@) to have the same understanding about the meaning of (and [concepts](@) behind) a [term](@), ideally in such a way that these [parties](@) can determine whether or not they make the same distinction."
+glossaryText: "the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@)."
 synonymOf:
 grouptags:
 formPhrases: definition{ss}, good-definition{ss}
@@ -21,7 +21,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Definition
 
 ### Summary
-A **Definition** is a text that helps [parties](@) to have the same understanding about the meaning of a [term](@), and hence enables communications. The quality of a definition is the extent in which parties can use it to actually demonstrate that they have the same understanding.
+A **Definition** is the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). The quality of a definition is the extent in which [parties](@) can use it to actually demonstrate that they have the same understanding.
 
 The problem that definitions (as we see them) contribute to solving is misunderstandings that may arise as every [party](@) has its own [knowledge](@) and autonomously determines the [semantics](@) it uses to express itself in texts/speech/pictures, and interpret that of other parties. The fact that the semantics of parties is subjective makes it realistic to assume that the meaning that a party intends to convey as it expresses itself is not the same as how another party interprets that expression - a 'misunderstanding'.
 

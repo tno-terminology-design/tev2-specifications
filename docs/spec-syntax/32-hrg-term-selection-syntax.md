@@ -33,7 +33,7 @@ If generating an [HRG](@) requires the selection of terms, the instructions are 
 
 The following instructions can be used for adding [terms](@) (whitespace in the syntax is disregarded):
 
-| Instruction                | The instruction adds every [MRG entry](@) from the [MRG](@) to the [terminology under construction](@) ... |
+| Instruction                | The instruction adds every [MRG entry](@) from the [MRG](@) to the [provisional MRG](@) ... |
 | :------------------------- | :--------------------------------------------------------------------- |
 | `terms [ <termslist> ]`    | whose `term`-field is an element of `<termslist>`. |
 | `tags  [ <grouptagslist> ]`| whose `grouptags` field contains an element that is also an element of `<grouptagslist>`. |
@@ -41,7 +41,7 @@ The following instructions can be used for adding [terms](@) (whitespace in the 
 
 Notes:
 - `<termslist>` and `<grouptagslist>` are comma-separated lists of [terms](@) and [grouptags](@) respectively.
-- An [MRG entry](@) will only be added to the [terminology under construction](@) if it does not already exist.
+- An [MRG entry](@) will only be added to the [provisional MRG](@) if it does not already exist.
 
 <details>
 <summary>Examples</summary>
@@ -58,7 +58,7 @@ Notes:
 
 The following instructions can be used for removing [terms](@) from the set of selected [terms](@) (whitespace in the syntax is disregarded):
 
-| Instruction   | The instruction removes every [MRG entry](@) from the [terminology under construction](@) ... |
+| Instruction   | The instruction removes every [MRG entry](@) from the [provisional MRG](@) ... |
 | :------------------------- | :--------------------------------------------------------------------- |
 | `-terms [ <termslist> ]` | whose `term`-field is an element of `<termslist>`. |
 | `-tags  [ <grouptagslist> ]` | whose `grouptags` field contains an element that is also an element of `<groutagslist>`. |

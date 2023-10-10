@@ -1,6 +1,6 @@
 ---
 id: ict
-sidebar_label: Integrity Checking
+sidebar_label: ICT - Integrity Checker Tool
 date: 20220421
 ---
 

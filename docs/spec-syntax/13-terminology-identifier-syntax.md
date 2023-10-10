@@ -37,7 +37,7 @@ In the following examples, we assume that
 
 | terminology-identifier | refers to |
 | :--------------------- | :-------- |
-| `@`                    | the default terminology of the current scope (i.e., `myscope`). |
+| `@`                    | the default terminology of the [current scope](@) (i.e., `myscope`). |
 | `@tev2`                | the default terminology of the scope `tev2` |
 | `@tev2:terms`          | the terminology that contains all [terms](@) that are defined within the scope `tev2` |
-| `@:terms`              | the terminology that contains all [terms](@) that are defined within the current scope (i.e.: `myscope`). |
+| `@:terms`              | the terminology that contains all [terms](@) that are defined within the [current scope](@) (i.e.: `myscope`). |

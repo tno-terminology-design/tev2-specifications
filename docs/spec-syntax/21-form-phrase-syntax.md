@@ -9,14 +9,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 # Form Phrases - Syntax
 
 This document specifies the syntax of [form phrases](@), i.e. texts that are
-- specified in the header field `formphrases` in [curated texts](@);
+- specified in the header field `formPhrases` in [curated texts](@);
 - conformant to the (PCRE) regex `(?:\s*(?:[a-z0-9_-{}]+)\s*(?:,\s*([a-z0-9_-{}]+))*)?` (see [Debuggex](https://www.debuggex.com/r/20MNb2zgNwLDD-dD) for a visualization).
 - present in [MRG entries](@);
 - [used to convert](/docs/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs).
 
-Note that the [syntax of `formphrases`](/docs/spec-syntax/form-phrase-syntax) enables the use use of 'macro's, i.e. shorthand syntax that represent regexes that allow for extended matching.
+Note that the [syntax of `formPhrases`](/docs/spec-syntax/form-phrase-syntax) enables the use use of 'macro's, i.e. shorthand syntax that represent regexes that allow for extended matching.
 
-A formphrase 'macro' is a set of characters between braces `{` and `}` that are shorthand for a matcher regex, and can be used by [authors](@) to conventiently specify a set of phrases that, when matched, would refer to the [curated text](@) in which they are specified.
+A [formphrase](@) 'macro' is a set of characters between braces `{` and `}` that are shorthand for a matcher regex, and can be used by [authors](@) to conventiently specify a set of phrases that, when matched, would refer to the [curated text](@) in which they are specified.
 
 <details>
    <summary>Example and explanation of how it works</summary>
@@ -29,10 +29,10 @@ formPhrases: actor{ss}
 
 The part `{ss}` is a macro, that suppose it is associated with the regex `(?:'?s|\(s\))?`.
 
-When the [trrt](@) converts a [TermRef](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/spec-tools/trrt#term) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the formphrase `actor{ss}`.
+When the [trrt](@) converts a [TermRef](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/spec-tools/trrt#term) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the [formphrase](@) `actor{ss}`.
 
 This is done as follows:
-1. all macros in the formphrase are replaced with their respective regexes, thereby transforming the formphrase into a regex itself;
+1. all macros in the [formphrase](@) are replaced with their respective regexes, thereby transforming the [formphrase](@) into a regex itself;
 2. a regex engine is called that determines whether or not `show-text` satisfies that regex. If (and only if) it does, there is a match.
 
 </details>
@@ -40,7 +40,7 @@ This is done as follows:
 An `term` is said to match such an element if and only if the regex that consists of the list element (with the macro replaced with the regex that it is shorthand for) matches that `term`.
 
 :::info Editor's note
-As the [trrt](@) has not yet been fully specified, nor implemented, the table below must currently be seen as a set of macro's that we intend to implement, but may not yet be there. The workaround is to replace a formphrase that is an element in the list of formphrases in a [curated text](@) with the set of words that it stands for. If you maintain [curated texts](@) with a good editor, e.g. VSCode, that should not be an issue as these macros are easily found and replaced by their expansions.
+As the [trrt](@) has not yet been fully specified, nor implemented, the table below must currently be seen as a set of macro's that we intend to implement, but may not yet be there. The workaround is to replace a [formphrase](@) that is an element in the list of [formphrases](@) in a [curated text](@) with the set of words that it stands for. If you maintain [curated texts](@) with a good editor, e.g. VSCode, that should not be an issue as these macros are easily found and replaced by their expansions.
 :::
 
 | macro    |           regex                       |     example     | texts that the example matches |

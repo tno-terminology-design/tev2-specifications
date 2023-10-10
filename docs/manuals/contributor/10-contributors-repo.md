@@ -23,6 +23,6 @@ A [user](@) can use [TermRefs](@) to mark the [terms](@) that it wants to be lin
 
 ## Curators tasks
 
-:::note Editor's note:
+:::info Editor's note:
 Text has to be provided here
 :::

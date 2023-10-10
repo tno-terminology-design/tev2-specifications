@@ -1,6 +1,6 @@
 ---
 id: trrt
-sidebar_label: Term Ref Resolution
+sidebar_label: TRRT - Term Ref Resolution Tool
 date: 20220421
 ---
 
@@ -186,13 +186,13 @@ If omitted, <!-- and the `term` field is empty as well, --> it is generated as f
 - set `term`:=`showtext`;
 - convert every character in the (regex) range `[A-Z]` to lower-case;
 - convert every sequence of characters `[^A-Za-z_-]+` to (a single) `-` character;
-- if the resulting `term` [matches an element in the list of texts](/docs/spec-syntax/form-phrase-syntax) in the `formphrases` field of an [MRG entry](@), then replace `term` with the contents of the `term`-field of that same [MRG entry](@).
+- if the resulting `term` [matches an element in the list of texts](/docs/spec-syntax/form-phrase-syntax) in the `formPhrases` field of an [MRG entry](@), then replace `term` with the contents of the `term`-field of that same [MRG entry](@).
 
 :::info Editor's note
-We should clarify the extent to which this `matching` supports formphrase macro's, Currently, this is documented as part of the [form-phrase syntax](/docs/spec-syntax/form-phrase-syntax) which doesn't seem right.
+We should clarify the extent to which this `matching` supports [formphrase](@) macro's, Currently, this is documented as part of the [form-phrase syntax](/docs/spec-syntax/form-phrase-syntax) which doesn't seem right.
 :::
 
-It is an error if the resulting `term` does not [identify](@) an [MRG entry](@) in the selected [MRG](@). This may mean that the `showtext` has misspellings, the `term` field was not specified where it had to, or the list of `formphrases` in some [MRG entry](@) should have included more elements.
+It is an error if the resulting `term` does not [identify](@) an [MRG entry](@) in the selected [MRG](@). This may mean that the `showtext` has misspellings, the `term` field was not specified where it had to, or the list of `[formphrases](@)` in some [MRG entry](@) should have included more elements.
 
 :::info Editor's note
 [The Porter Stemming Algorithm](https://tartarus.org/martin/PorterStemmer/) is a process for removing the commoner morphological and inflexional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up Information Retrieval systems. The mentioned site links to lots of freely useable code that the TRRT might want to consider using.

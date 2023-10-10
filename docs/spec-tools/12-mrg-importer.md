@@ -23,6 +23,8 @@ This section is still under development. You'll see further editor's notes where
 
 The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available.
 
+## MRG files and symbolic links
+
 This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `stag` that exists in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@):
 - `mrg.stag.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology](@) specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
 - `mrg.stag.<altvsntag>.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.

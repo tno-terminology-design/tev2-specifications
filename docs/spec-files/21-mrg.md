@@ -114,7 +114,7 @@ An [MRG entry](@) has a few fields that are always present, because the [MRGT](@
 | `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) (that lives in the `scopedir` as specified in the `scopes` section of the [MRG](@)), where the rendered version of the [curated text](@) is located. |
 | `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that exist in the file that contains the [body](@) of the [curated text](@), and can serve as `trait` in a [TermRef](@). |
 
-[^2]: One purpose of having the `scopetag` field is for determining which [MRG entries](@) in a [terminology under construction](@) require further processing. See [processing synonyms] for an example.
+[^2]: One purpose of having the `scopetag` field is for determining which [MRG entries](@) in a [provisional MRG](@) require further processing. See [processing synonyms] for an example.
 
 An [MRG entry](@) has additional fields that come from the front matter of the [curated text](@) that the [MRG entry](@) represents. Some fields are
 - mandatory for all [curated texts](@), and hence will always appear in an [MRG entry](@); these appear in the table below.

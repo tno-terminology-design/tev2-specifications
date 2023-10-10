@@ -2,7 +2,7 @@
 term: term-identifier
 termType: concept
 isa: identifier
-bodyFile: /spec-syntax/term-identifier-syntax
+bodyFile: /spec-syntax/12-term-identifier-syntax.md
 glossaryTerm: Term Identifier
 glossaryText: "a [text](identifier@), of the form `<term>@<terminology-identifier>`, that [identifies](@) a [semantic unit](@) within a particular [terminology](@). If `<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
 formPhrases: term-identifier{ss}

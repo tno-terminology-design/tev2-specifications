@@ -1,6 +1,6 @@
 ---
 id: trrt
-sidebar_label: TRRT - Term Ref Resolution Tool
+sidebar_label: Term Ref Resolution Tool (TRRT)
 date: 20220421
 ---
 

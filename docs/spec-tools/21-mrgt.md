@@ -1,6 +1,6 @@
 ---
 id: mrgt
-sidebar_label: MRGT - MRG Generation Tool
+sidebar_label: MRG Generation (MRGT)
 date: 20231006
 ---
 

@@ -1,5 +1,6 @@
 ---
-id: terminology-construction
+id: mrg-terminology-construction
+sidebar_label: MRG Terminology Construction
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 date: 20231002

@@ -18,12 +18,12 @@ export const mark = ({children}) => (
   </span> );
 
 :::info Editor's note
-Since the below text was drafted, changes have been made to the syntax by which [terms](@) can be selected for inclusion in [MRGs](@), as described in the page on [terminology construction](docs/spec-tools/terminology-construction). It seems beneficial to use the same syntax for selecting [terms](@) for inclusion in the [HRG](@) (except that the syntax for [identifying](@) the source is not needed, as this is always a single [MRG](@)), in which case the below text needs to be thorougly revised.
+Since the below text was drafted, changes have been made to the syntax by which [terms](@) can be selected for inclusion in [MRGs](@), as described in the page on [terminology construction](docs/spec-tools/mrg-terminology-construction). It seems beneficial to use the same syntax for selecting [terms](@) for inclusion in the [HRG](@) (except that the syntax for [identifying](@) the source is not needed, as this is always a single [MRG](@)), in which case the below text needs to be thorougly revised.
 :::
 
 When [curators](@) generate an [HRG](@) from a particular [MRG](@), they may want to specify the [terms](@) to be included in the [HRG](@) (or preventing specific [MRG entries](@) from being included).
 
-This can be done by using the same mechanism for [terminology construction](/docs/spec-tools/terminology-construction) as is used for generating [MRGs](@). The differences are that there is only one source, i.e. the particular [MRG](@) from which the [HRG](@) is generated. Thus, references to [terms](@) that have no corresponding [MRG entry](@) in that [MRG](@) are invalid. Also, there is no need for renaming syntax.
+This can be done by using the same mechanism for [terminology construction](/docs/spec-tools/mrg-terminology-construction) as is used for generating [MRGs](@). The differences are that there is only one source, i.e. the particular [MRG](@) from which the [HRG](@) is generated. Thus, references to [terms](@) that have no corresponding [MRG entry](@) in that [MRG](@) are invalid. Also, there is no need for renaming syntax.
 
 
 

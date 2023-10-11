@@ -15,7 +15,7 @@ We use keywords such as “shall”, “should”, “may” etc. as defined by 
 ### Capitalization of words in mid-sentence
 A word in mid-sentence that is capitalized is a [term](@) that has a [definition](@) in the [Corpus of Terminology](corpus@). This allows readers to distinguish between the more colloquial meanings of words (by not capitalizing them) and those that are actually defined. We appreciate any feedback regarding our (im)proper use of this kind of capitalization of words.
 
-:::note
+:::warning
 We are working towards deprecating this convention, as we now have better ways of referring to words that are defined in the eSSIF-Lab Corpus.
 :::
 

@@ -31,7 +31,7 @@ A [user](@) can use [TermRefs](@) to mark the terms that it wants to be linked t
 
 2. [Create a (git) repository](https://docs.github.com/en/get-started/quickstart/create-a-repo), either a brand new one, or [from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-:::note Editor's note:
+:::info Editor's note:
 Additional steps need to be written here.
 The idea is
 :::

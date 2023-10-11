@@ -21,7 +21,7 @@ where
 
 - the empty string (null) [identifies](@) the [terminology](@) that is being used by default in the context in which the [terminology identifier](@) is being used. Typically, that would be the default version of the [terminology](@) in the current [scope](@). [^1]
 
-[^1]: When a [terminology](@) [is being constructed](/docs/spec-tools/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
+[^1]: When a [terminology](@) [is being constructed](/docs/spec-tools/mrg-terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
 
 - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
 
@@ -37,7 +37,7 @@ In the following examples, we assume that
 
 | terminology-identifier | refers to |
 | :--------------------- | :-------- |
-| `@`                    | the default terminology of the current scope (i.e., `myscope`). |
+| `@`                    | the default terminology of the [current scope](@) (i.e., `myscope`). |
 | `@tev2`                | the default terminology of the scope `tev2` |
 | `@tev2:terms`          | the terminology that contains all [terms](@) that are defined within the scope `tev2` |
-| `@:terms`              | the terminology that contains all [terms](@) that are defined within the current scope (i.e.: `myscope`). |
+| `@:terms`              | the terminology that contains all [terms](@) that are defined within the [current scope](@) (i.e.: `myscope`). |

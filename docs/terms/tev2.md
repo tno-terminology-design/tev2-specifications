@@ -3,7 +3,7 @@
 term: tev2
 termType: concept
 isa:
-glossaryTerm:
+glossaryTerm: TEv2
 glossaryText: "a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
 synonymOf:
 grouptags:

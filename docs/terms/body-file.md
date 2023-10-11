@@ -5,7 +5,7 @@ id: body-file
 term: body-file
 termType: concept
 isa: curated-file
-bodyFile: /spec-files/body-file
+bodyFile: /spec-files/01-body-file.md
 glossaryTerm: Body File
 glossaryText: "a file that is located somewhere within the [scopedir](@), and that contains the [body](@) of a [curated text](@). The [header](@) of that [curated text](@) has a field `bodyFile` that specifes its location within the [scopedir](@)."
 synonymOf:

@@ -3,7 +3,7 @@
 term: curated-text-file
 termType: concept
 isa: curated-file
-bodyFile: /spec-files/curated-text-file
+bodyFile: /spec-files/00-curated-text-file.md
 glossaryTerm: Curated Text File
 glossaryText: a file that contains either a (complete) [curated text](@), or the [header](@) of that [curated text](@) and a reference to the [file](body-file@) that contains its [body](@).
 grouptags:

@@ -1,6 +1,6 @@
 ---
 id: hrgt
-sidebar_label: HR Glossary Generation
+sidebar_label: HRG Generation (HRGT)
 date: 20230103
 ---
 
@@ -17,11 +17,11 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of the [terminology](@) of a specific [scope](@). 
+The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of one [terminology](@) within a specific [scope](@).
 
-The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named `mrg.<scopetag>.<vsntag>.yaml`, where the combination of `<scopetag>` and `<vsntag>` identify a particular [terminology](@). See the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming-conventions) for details.
+The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named following the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming-conventions).
 
-The selection of the [MRG entries](@) that are to be included in the [HRG](@), as well as the specification of the output format, headers, footers, etc., can be configured as well as customized. Thus, the [HRGT](@) provides a flexible means for creating all sorts of outputs that are either already human readable or can be processed further by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](/docs/tev2-toolbox)).
+The selection of the [MRG entries](@) that are to be included in the [HRG](@), as well as the specification of the output format, headers, footers, etc., can be configured as well as customized. Thus, the [HRGT](@) provides a flexible means for creating all sorts of outputs that are either already human readable or can be processed further by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc.
 
 There is currently one implementation of the tool underway:
 - the repo in which the tool is being developed is [<mark>tbd</mark>].
@@ -54,11 +54,11 @@ The columns in the following table are defined as follows:
 | :-----------| :---: | :---------- |
 | `config`      | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
 | `scopedir`    | n | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [HRGT](@). If omitted, the current directory is assumed to tbe the [scope directory](@). |
-| `input`       | n | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) that specifies the set of (input) files ([MRGs](@)) that are to be processed. If omitted, the [HRG](@) is generated for the default [MRG](@) of the current scope (as specified in the `mrgfile` field of the `scope` section in its [SAF](@). |
+| `input`       | n | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) that specifies the set of (input) files ([MRGs](@)) that are to be processed. If omitted, the [HRG](@) is generated for the default [MRG](@) of the [current scope](@) (as specified in the `mrgfile` field of the `scope` section in its [SAF](@). |
 | `output`      | n | text that is used as the last part of the name of the file(s) that contain(s) the generated [HRG(s)](@). This text must specify an appropriate extension, such as HTML or PDF. The filename(s) will be of the form `hrg.<scopetag>.<vsntag>.<output>`, where `<scopetag>` is the [scopetag](@) of the [scope](@) within which the [HRG](@) is generated, and `<vsntag>` [identifies](@) the version of the [terminology](@) in that [scope](@). From this, it follows that an [MRG](@)-file exists named `mrg.<scopetag>.<vsntag>.yaml`, which is used as the source for the entries in the [HRG](@). |
-| `termselection` | n | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). If omitted, all [MRG entries](@) from the source [MRG](@) will be selected. See [Terminology Construction](/docs/spec-tools/terminology-construction) for details. |
+| `termselection` | n | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). If omitted, all [MRG entries](@) from the source [MRG](@) will be selected. See [Terminology Construction](/docs/spec-tools/mrg-terminology-construction) for details. |
 | `method`      | n | <mark>Text, the syntax and semantics of which remain to be specified (see also the Editor's note below).</mark> When this parameter is omitted, the [HRG](@) is generated as an HTML file. |
-| `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of the [SAF](@) of the current scope). The purpose of this field is to enable different [HRGs](@) to have different licenses. |
+| `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of the [SAF](@) of the [current scope](@)). The purpose of this field is to enable different [HRGs](@) to have different licenses. |
 
 :::info Editor's Note:
 We may want to consider:

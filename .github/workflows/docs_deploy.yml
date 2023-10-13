@@ -33,6 +33,12 @@ jobs:
         env:
           config: docs/terminology-config.yaml
 
+      - name: Commit glossaries to repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update Glossaries
+          file_pattern: 'docs/glossaries/mrg.*.yaml'
+      
       - name: Install Dependencies
         run: npm install
 

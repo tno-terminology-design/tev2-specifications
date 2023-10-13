@@ -5,7 +5,6 @@ date: 20220421
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -57,8 +56,7 @@ npm install tno-terminology-design/ict -g
 </details>
 
 <details>
-  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.
-</summary>
+  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.</summary>
 
 <Tabs
   defaultValue="cmd.exe"

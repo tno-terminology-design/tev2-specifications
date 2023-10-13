@@ -7,6 +7,8 @@ date: 20231006
 # Machine Readable Glossary Generation Tool
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine Readable Glossaries ([MRGs](@)) for one specific, or all [terminology](@) versions that are [curated](@) within a specific [scope](@). [MRGs](@) come in a specific, well-defined [format](/docs/spec-files/mrg). They contain some meta-data, followed by a list of so-called [MRG entries](@), one for every [term](@) in its [scope](@), which represent [concepts](@) and other [semantic units](@) that are known within that [scope](@).
 
@@ -27,8 +29,7 @@ npm install tno-terminology-design/mrgt -g
 ~~~
 
 <details>
-  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.
-</summary>
+  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.</summary>
 
 <Tabs
   defaultValue="cmd.exe"
@@ -37,7 +38,7 @@ npm install tno-terminology-design/mrgt -g
     {label: 'PowerShell(Windows)', value: 'powershell'},
     {label: 'Bash (Linux/Mac)', value: 'bash'},
   ]}>
-  
+
 <TabItem value="cmd.exe"><br/>
 
 1. **Node.js and NPM**: Ensure Node.js and NPM are installed.

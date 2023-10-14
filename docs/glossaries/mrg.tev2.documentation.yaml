@@ -58,6 +58,9 @@ entries:
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/body'
     headingids:
       - 'body'
+      - 'here-is-where-the-header-stuff-of-the-curated-text-goes.'
+      - 'the-body-of-the-curated-text-starts-below-the-next-line.'
+      - 'curated-text'
   - id: 'body-file'
     term: 'body-file'
     termType: 'concept'
@@ -76,7 +79,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'body-file.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/01-body-file'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/body-file'
     headingids:
       - 'body-files'
   - term: 'concept'
@@ -243,9 +246,16 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'curated-text-file.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/00-curated-text-file'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/curated-text-file'
     headingids:
       - 'curated-text-files'
+      - 'docusaurus-front-matter'
+      - 'tev2-curated-text-header'
+      - 'tev2-curation-status'
+      - 'origins/acknowledgements'
+      - 'curated-text'
+      - 'header-structure-{#header}'
+      - 'predefined-tev2-header-fields-{#header-fields}'
   - term: 'curatedir'
     termType: 'concept'
     isa: null
@@ -503,9 +513,16 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'header.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/00-curated-text-file'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/curated-text-file'
     headingids:
       - 'curated-text-files'
+      - 'docusaurus-front-matter'
+      - 'tev2-curated-text-header'
+      - 'tev2-curation-status'
+      - 'origins/acknowledgements'
+      - 'curated-text'
+      - 'header-structure-{#header}'
+      - 'predefined-tev2-header-fields-{#header-fields}'
   - id: 'hrd'
     term: 'hrd'
     termType: 'concept'
@@ -607,7 +624,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'hrgt.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/22-hrgt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/hrgt'
     headingids:
       - 'human-readable-glossary-generation-tool'
       - 'installing-the-tool'
@@ -634,7 +651,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'ict.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/11-ict'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/ict'
     headingids:
       - 'integrity-checker-tool-(ict)'
       - 'installing-the-tool'
@@ -673,6 +690,8 @@ entries:
       - 'purpose'
       - 'criterion'
       - 'examples'
+      - 'notes'
+      - 'discussion---scope-of-identification'
   - term: 'identify'
     termType: 'concept'
     isa: null
@@ -928,7 +947,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrg-importer.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/13-mrg-importer'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/mrg-importer'
     headingids:
       - 'mrg-import-tool'
       - 'mrg-files-and-symbolic-links'
@@ -956,7 +975,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrgt.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/21-mrgt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/mrgt'
     headingids:
       - 'machine-readable-glossary-generation-tool'
       - 'installing-the-tool'
@@ -988,6 +1007,30 @@ entries:
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/navpath'
     headingids:
       - 'navpath'
+  - term: 'pattern-terminology'
+    termType: 'pattern'
+    isa: null
+    glossaryTerm: 'Terminology Pattern'
+    glossaryText: 'a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc.'
+    synonymOf: null
+    grouptags: null
+    formPhrases: null
+    status: 'proposed'
+    created: 2022-06-06T00:00:00.000Z
+    updated: 2022-06-06T00:00:00.000Z
+    contributors: 'RieksJ'
+    attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
+    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
+    scopetag: 'tev2'
+    locator: 'patterns/pattern-terminology.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/patterns/pattern-terminology'
+    headingids:
+      - 'create-and-maintain-terminologies'
+      - 'introduction'
+      - 'formalized-model'
+      - 'white:-parties,-communities-{#white}'
+      - 'green:-scopes---data-artifacts-for-referencing-and-documenting-knowledge-{#green}'
+      - 'yellow:-intangible-concepts-{#yellow}'
   - id: 'property'
     term: 'property'
     termType: 'concept'
@@ -1330,6 +1373,7 @@ entries:
       - 'purpose'
       - 'criteria'
       - 'notes'
+      - 'footnotes'
   - term: 'term-identifier'
     termType: 'concept'
     isa: 'identifier'
@@ -1345,7 +1389,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'term-identifier.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-syntax/12-term-identifier-syntax'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-syntax/term-identifier-syntax'
     headingids:
       - 'term-identifier'
       - 'syntax'
@@ -1450,7 +1494,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'terminology-identifier.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-syntax/13-terminology-identifier-syntax'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-syntax/terminology-identifier-syntax'
     headingids:
       - 'terminology-identifiers'
       - 'syntax'
@@ -1590,7 +1634,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'trrt.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/12-trrt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/trrt'
     headingids:
       - 'term-reference-resolution-tool'
       - 'installing-the-tool'

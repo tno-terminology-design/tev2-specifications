@@ -624,12 +624,13 @@ entries:
     locator: 'hrgt.md'
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/hrgt'
     headingids:
-      - 'human-readable-glossary-generation-tool'
+      - 'human-readable-glossary-generator-tool-(hrgt)'
+      - 'what-the-hrgt-does'
       - 'installing-the-tool'
       - 'calling-the-tool'
+      - 'mrg-ref-conversion'
       - 'processing,-errors-and-warnings'
       - 'deploying-the-tool'
-      - 'discussion-notes'
   - id: 'ict'
     term: 'ict'
     termType: 'acronym'
@@ -927,16 +928,16 @@ entries:
     headingids:
       - 'mrg-entry'
       - 'purpose'
-  - id: 'mrg-importer'
-    term: 'mrg-importer'
+  - id: 'mrg-import'
+    term: 'mrg-import'
     termType: 'concept'
     isa: null
-    bodyFile: '/spec-tools/13-mrg-importer.md'
+    bodyFile: '/spec-tools/13-mrg-import.md'
     glossaryTerm: 'MRG Importer'
     glossaryText: 'is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope''s](@) [SAF](@), and putting them in the [scope''s](@) [glossarydir](@).'
     synonymOf: null
     grouptags: 'glossary-entries, terminology-management-tools'
-    formPhrases: 'mrg-importer, mrg-import-tool'
+    formPhrases: 'mrg-import, mrg-import-tool'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -945,10 +946,10 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     locator: 'mrg-importer.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/mrg-importer'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/mrg-import'
     headingids:
       - 'mrg-import-tool'
-      - 'mrg-files-and-symbolic-links'
+      - 'mrg-files'
       - 'installing-the-tool'
       - 'calling-the-tool'
       - 'processing,-errors-and-warnings'

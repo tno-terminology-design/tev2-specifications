@@ -134,29 +134,30 @@ trrt [ <paramlist> ] [ <globpattern> ]
 ~~~
 
 where:
-- `<paramlist>` (optional) is a list of key-value pairs
+- `<paramlist>` is an (optional) list of parameters, as specified in the table below.
 - [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
 
 <details>
   <summary>Legend</summary>
 
 The columns in the following table are defined as follows:
-1. **`Key`** is the text to be used as a key.
-2. **`Value`** represents the kind of value to be used.
-3. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
-4. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+1. **`Parameter`** specifies the parameter and further specifications
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
+If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
 </details>
 
-| Key        | Value         | Req'd | Description |
-| :--------- | :------------ | :---: | :---------- |
-| `config`   | `<path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
-| `input`    | `<globpattern>` | n | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) that specifies the set of (input) files that are to be processed. |
-| `output`   | `<dir>`         | Y | (Root) directory where output files are to be written. This directory is specified as an absolute or relative path. |
-| `scopedir` | `<path>`        | Y | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [TRRT](@). |
-| `version`  | `<versiontag>`  | n | Version of the [terminology](@) that is to be used to resolve [TermRefs](@) for which neither a `scope` nor a `version` part has been specified (which is the most common case). It MUST match either the `vsntag` field, or an element of the `altvsntags` field as specified in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@). When not specified, its value is taken from the `defaultvsn` field in the [`terminology` section](/docs/spec-files/mrg#mrg-terminology) of the default [MRG](@) (which is [identified](@) by the contents of the `mrgfile` field (in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@)). |
-| `interpreter` | `<type>`     | n | Allows for the switching between interpreter types. By default the `AltInterpreter` and `StandardInterpreter` are available. When this parameter is omitted, the basic [TermRef](@) syntax is used. |
-| `converter` | `<type>`       | n | The type of converter which creates the [renderable refs](@). When this parameter is omitted, the Markdown converter is used. |
+| Parameter                                | Req'd | Description |
+| :--------------------------------------- | :---: | :---------- |
+| `-V`, `--version`                          | n | output the version number of the tool. |
+| `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
+| `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
+| `-int`, `--interpreter <type> or <regex>`  | n | Type of interpreter, either: a regex, alt, or basic. |
+| `-con`, `--converter <type> or <mustache>` | n | Type of converter, either: a mustache template, http, or markdown. |
+| `-f`, `--force`                            | n | Allow overwriting of existing files. |
+| `-h`, `--help`                             | n | display help for command. |
 
 ## Term Ref Resolution
 

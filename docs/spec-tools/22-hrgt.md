@@ -1,49 +1,36 @@
 ---
 id: hrgt
-sidebar_label: HRG Generation (HRGT)
-date: 20230103
+sidebar_label: Human Readable Glossary Tool (HRGT)
+date: 20220421
 ---
 
-# Human Readable Glossary Generation Tool
+# Human Readable Glossary Generator Tool (HRGT)
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<!-- Use 'Mark' as an HTML tag, e.g. <mark>text to mark</Mark?-->
-export const mark = ({children}) => (
-  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
-    {children}
-  </span> );
+The **Human Readable Glossary Generator Tool ([HRGT](@))** takes files that contain so-called [MRGRefs](@) and outputs a copy of these files in which these [MRGRefs](@) are converted into so-called [HRG lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains one or more sections that help [readers](@) to quickly find [terms](@) and (summaries of) their intended meanings.
 
-The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of one [terminology](@) within a specific [scope](@).
+There is currently one implementation of the tool:
+- the repo is [here](https://github.com/tno-terminology-design/tev2-tools).
 
-The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named following the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming-conventions).
+## What the HRGT does
 
-The selection of the [MRG entries](@) that are to be included in the [HRG](@), as well as the specification of the output format, headers, footers, etc., can be configured as well as customized. Thus, the [HRGT](@) provides a flexible means for creating all sorts of outputs that are either already human readable or can be processed further by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc.
-
-There is currently one implementation of the tool underway:
-- the repo in which the tool is being developed is [<mark>tbd</mark>].
-- the documentation is [<mark>tbd</mark>].
+The [HRGT](@) operates on a set of files, as specified by its commandline arguments or configuration file, each of which is processed as follows:
+1. Copy the file to its intended destination (as specified by its commandline arguments or configuration file), and use the latter for further processing;
+2. Find every [MRGRef](@), and replace each of them with the [HRG](@) that contains the [terms](@) of the [terminology](@) as specified by the [MRGRef](@).
 
 ## Installing the Tool
 
 The tool can be installed from the command line and made globally available by executing
 
-<details>
-  <summary><Mark>This section is written when there's an actual tool to install</Mark></summary>
-
-We expect that it will be something like
-
 ~~~
 npm install -g @tno-terminology-design/hrgt
 ~~~
 
-</details>
-
 <details>
-  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.
-</summary>
+  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.</summary>
 
 <Tabs
   defaultValue="cmd.exe"
@@ -52,7 +39,7 @@ npm install -g @tno-terminology-design/hrgt
     {label: 'PowerShell(Windows)', value: 'powershell'},
     {label: 'Bash (Linux/Mac)', value: 'bash'},
   ]}>
-  
+
 <TabItem value="cmd.exe"><br/>
 
 1. **Node.js and NPM**: Ensure Node.js and NPM are installed.
@@ -79,84 +66,87 @@ npm install -g @tno-terminology-design/hrgt
 
 ## Calling the Tool
 
-The behavior of the [HRGT](@) can be configured per call e.g. by a configuration file and/or command-line parameters. The command-line syntax is as follows:
+The behavior of the [TRRT](@) can be configured per call e.g. by a configuration file and/or command-line parameters. The command-line syntax is as follows:
 
 ~~~
 hrgt [ <paramlist> ] [ <globpattern> ]
 ~~~
 
 where:
-- `<paramlist>` (optional) is a list of key-value pairs
+- `<paramlist>` is an (optional) list of parameters, as specified in the table below.
 - [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
 
 <details>
   <summary>Legend</summary>
 
 The columns in the following table are defined as follows:
-1. **`Key`** is the text to be used as a key.
-2. **`Value`** represents the kind of value to be used.
-3. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
-4. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+1. **`Parameter`** specifies the parameter and further specifications
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
+If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
 </details>
 
-| Key         | Req'd | Description |
-| :-----------| :---: | :---------- |
-| `config`      | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
-| `scopedir`    | n | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [HRGT](@). If omitted, the current directory is assumed to tbe the [scope directory](@). |
-| `input`       | n | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) that specifies the set of (input) files ([MRGs](@)) that are to be processed. If omitted, the [HRG](@) is generated for the default [MRG](@) of the [current scope](@) (as specified in the `mrgfile` field of the `scope` section in its [SAF](@). |
-| `output`      | n | text that is used as the last part of the name of the file(s) that contain(s) the generated [HRG(s)](@). This text must specify an appropriate extension, such as HTML or PDF. The filename(s) will be of the form `hrg.<scopetag>.<vsntag>.<output>`, where `<scopetag>` is the [scopetag](@) of the [scope](@) within which the [HRG](@) is generated, and `<vsntag>` [identifies](@) the version of the [terminology](@) in that [scope](@). From this, it follows that an [MRG](@)-file exists named `mrg.<scopetag>.<vsntag>.yaml`, which is used as the source for the entries in the [HRG](@). |
-| `termselection` | n | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). If omitted, all [MRG entries](@) from the source [MRG](@) will be selected. See [Terminology Construction](/docs/spec-tools/mrg-terminology-construction) for details. |
-| `method`      | n | <mark>Text, the syntax and semantics of which remain to be specified (see also the Editor's note below).</mark> When this parameter is omitted, the [HRG](@) is generated as an HTML file. |
-| `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of the [SAF](@) of the [current scope](@)). The purpose of this field is to enable different [HRGs](@) to have different licenses. |
+| Parameter                                | Req'd | Description |
+| :--------------------------------------- | :---: | :---------- |
+| `-V`, `--version`                          | n | output the version number of the tool. |
+| `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
+| `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
+| `-int`, `--interpreter <type> or <regex>`  | n | Type of interpreter, either: a regex, alt, or basic. |
+| `-con`, `--converter <type> or <mustache>` | n | Type of converter, either: a mustache template, http, or markdown. |
+| `-f`, `--force`                            | n | Allow overwriting of existing files. |
+| `-h`, `--help`                             | n | display help for command. |
 
-:::info Editor's Note:
-We may want to consider:
-- changing the `input` parameter from a globpattern to a list of versiontags for which the HRG is to be generated.
-- revising the spec of the `output` parameter, depending on the kind of control that [curators](@) need.
-- add a `version` parameter, the value of which is a [versiontag](@), and the meaning of which is that (a) the input file is the [MRG](@) associated with that [versiontag](@), and (b) the output file will be registered in the `hrgfile` entry of the appropriate element of the `versions` section of the [SAF](@), and also, if appropriate, in the `scope` section of the [SAF](@). Doing this requires additional texts in subsequent sections.
-:::
+## MRG Ref Conversion
 
-:::info Editor's Note:
-Various `method`s are envisaged, yet remain to be properly specified. A method may specify:
-- what a single entry contains
-- that the contents of particular files are to be used as header or footer;
-- that a particular kind of navigation bar is to be inserted at specific places (e.g. between two subsequent entries that start with a different character);
-- ...
-:::
+The [MRGRef](@) conversion process consists of the following steps:
+1. Interpret the [MRGRef](@), finding the [MRG](@) for which entries are to be listed, as well as the texts to use as leader and trailer to surround the generated [HRG list](@).
+2. Create an empty [HRG list](@);
+3. Sort the [MRG entries](@) alphabetically (using the `glossaryTerm` field as a sorting key);[^1]
+4. Convert each [MRG entry](@) into an [HRG entry](@), and add it to the [HRG list](@);
+5. Overwrite the [MRGRef](@) with a new [MRGRef](@), replacing it with (a) the leader text, (b) the contents of the [HRG list](@), and (c) the trailer text.
+
+[^1]: Ideally, sorting should be done on the [HRG list](@), because these are the entries that should appear in a sorted form. However, as there is no a priori fixed structure for [HRG entries](@), it is difficult to sort the [HRG list](@) after it has been generated. Therefore, sorting is done on the [MRG entries](@), using the `glossaryTerm` field, which may, or may not exist. For [MRG entries](@) that do not have a `glossaryTerm` field, we suggest to use the `term`-field instead.
+
+By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
+
+An [MRGRefs](@) has the following syntax:
+
+~~~ markdown
+...
+<!--<hrg={tid}>-->{text to be replaced with hrg-list}<!--</hrg>-->
+...
+~~~
+
+Interpretation (that is expected to be configured as a particular 'interpreter') of an [MRGRef](@) leads to the population of the following variables (or, in case regexes are used, named capturing groups):
+
+| Name      | Description |
+| :-------- | :---------- |
+| `leader`  | the character string that is used at the start of a [HRG](@), which must be expected to include newlines. If empty (not specified), there will be no leading texts. |
+| `tid`     | a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, it defaults to the default [terminology](@) of the [current scope](@). |
+| `trailer` | the character string that is used at the end of a [HRG](@), which must be expected to include newlines. If empty (not specified), there will be no leading texts. |
+
+The `tid` specifies (implicitly/default or explicitly) the [MRG](@) whose entries will be processed and converted (which is also expected to exist as a particular 'converter') into a complete [HRG](@) that can readily be inserted at the position of the [MRGRef](@). 
+
+Then, the [HRGT] will convert this into the following markdown:
+
+~~~ markdown
+...
+{leader}
+{result-of-converter-processing}
+{trailer}
+...
+~~~
 
 ## Processing, Errors and Warnings
 
 The [HRGT](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalidities include non-existing directories or files, lack of write-permissions where needed, etc.
 
-Then, the [HRGT](@) reads the specified input files (in arbitrary order), and processes each of them, as follows:
-- select the actual [MRG](@) that is to be used as an input;
-- select the (subset of) [MRG entries](@) from that [MRG](@) that must appear in the [HRG](@) - see [HRG Term Selection](/docs/spec-syntax/hrg-termselection-syntax) for details. Conceptually, this will result in an [MRG](@) that only contains [MRG entries](@) that need to appear in the [HRG](@) as well;
-- (alphabetically) sort these entries;
-- convert each entry into a specific 'rendered' format (as specified by the user), thereby resolving any [TermRefs](@) (by appropriately calling the [TRRT](@))[^1], adding hyperlinks to the [curated text](@) that the entry relates to, 'meta-data' (e.g. the associated [grouptags](@), contributors, etc.), and anything else, as required for the particular kind of [HRG](@) that is being generated;
-:::info Editor's note
-The [TRRT](https://github.com/tno-terminology-design/trrt) has a nice setup for implementing [text conversion steps](/docs/overview/tev2-design-principles#text-conversion-steps). We should check that out and adapt the specifications text in this section so that this stuff can be reused as much as possible.
-:::
-- construct the [HRG](@) by adding (rendered) header- and footer-material and (optionally) licensing information;
-- write the [HRG](@) to the designated output file.
-
-[^1]: if the rendered output is such that [TermRefs](@) can still be recognized by the [TRRT](@), it may be more efficient to defer the resolution of [TermRefs](@) until after the [HRG](@) is completely generated.
-
-:::info Editor's Note:
-A special case of [HRG](@) generation is when the default [HRG](@) is created for a particular [MRG](@), which typically consists of all [MRG entries](@) of that [MRG](@). In that case, the contents of the `hrgfile` field in `versions` section of the [SAF](@) whose `mrgfile` field [identifies](@) the [MRG](@) should become the name of the file that contains the generated [HRG](@). Additionally, if the [MRG](@) happens to be the default one for the scope (as can be seen by comparing its filename with the contents of the `mrgfile` field in the `scope` section of the [SAF](@)), then the contents of the `hrgfile` field in `scope` section of the [SAF](@) must also become the name of the file that contains the generated [HRG](@). Whether or not the [HRGT](@) is expected to operate in this mode is an option that can be provided at the commandline or in the configuration file.
-:::
+Then, the [HRGT](@) reads the specified input files (in arbitrary order), and for each of them, produces an output file that is the same as the input file except for the fact that all [TermRefs](@) have been replaced with regular [markdown links](https://www.markdownguide.org/basic-syntax/#links), and (optionally) with additional texts that are to be used by third-party rendering tools for enhanced rendering of such links. An example of this would be text that can be used to enhance a link with a popup that contains the definition, or a description of the [term](@) that is being referenced.
 
 The [HRGT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, commandline parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
 
 ## Deploying the Tool
 
 The [HRGT](@) comes with documentation that enables developers to ascertain its correct functioning (e.g. by using a test set of files, test scripts that exercise its parameters, etc.), and also enables them to deploy the tool in a git repo and author/modify CI-pipes to use that deployment.
-
-## Discussion Notes
-
-This section contains some notes of a discussion between Daniel and Rieks on these matters of some time ago, which pertains to glossaries in the context of ToIP.
-
-- A ToIP [glossary](@) will be put by default at `http://trustoverip.github.io/<terms-community>/glossary`, where `<terms-community>` is the name of the [terms-community](@). This allows every  [terms-community](@) to have its own [glossary](@). However, the above specifications allow [terms-communities](terms-community@) to [curate](@) multiple [scopes](scope@).
-- Storing [glossaries](glossary@) elsewhere was seen to break the (basic workings of the postprocessing tool, but the above specifications would fix that.
-- Entries, e.g. 'foo' can be referenced as `http://trustoverip.github.io/<community>/[glossary](@)#foo` (in case of a standalone glossary), and `http://trustoverip.github.io/<community>/document-that-includes-glossary-fragment#foo` (in case of a fragmented glossary).
-- We could also see GGT and TRRT to be extended, e.g. to work in conjunction with LaTeX or word-processor documents. This needs some looking into, but [pandoc](https://pandoc.org/) may be useful here.

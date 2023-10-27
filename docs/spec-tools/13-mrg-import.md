@@ -1,6 +1,6 @@
 ---
-id: mrg-importer
-sidebar_label: MRG Importer
+id: mrg-import
+sidebar_label: MRG Import
 date: 20230731
 ---
 
@@ -16,18 +16,16 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-:::info Editor's Note
-This section is still under development. You'll see further editor's notes where issues exist.
-:::
-
 The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) within which it is run, obtains a local copy of all [MRGs](@) that are available in the [scopes](@) that are mentioned in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@). This makes life easy for various tools, e.g., the [MRGT](@) and the [TRRT](@), that can now assume that all [MRGs](@) that they may need to consult in order to do their job, are readily available.
 
-## MRG files and symbolic links
+## MRG files
 
-This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `stag` that exists in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@):
-- `mrg.stag.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology](@) specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
-- `mrg.stag.<altvsntag>.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.
-- `mrg.stag.yaml` is a symbolic link to the `mrg.stag.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of [scope](@) `stag`.
+This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `st` that exists in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@):
+- `mrg.st.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology](@) specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
+- `mrg.st.<altvsntag>.yaml` is a copy of the `mrg.st.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.[^1]
+- `mrg.st.yaml` is a copy of the `mrg.st.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of [scope](@) `st`.
+
+[^1]: Previous versions of the specifications said this would be a symbolic link to the [MRG](@) rather than a copy thereof. However, symbolic links created for the purpose of functioning in a (Git) repo would not work in a local development context (e.g. on a Windows machine), and vice versa. To remedy this, and taking into consideration that [MRGs](@) are relatively small in size, made us decide to use actual copies. Note that you can still see which files are copies by inspecting the first section of the [MRGs](@), which lists the [versiontag](@) and the [altvsntags](@) of the [terminology](@) that the [MRG](@) documents.
 
 There will shortly be an implementation of the tool:
 - the repo for the code of the tool is [here](https://github.com/tno-terminology-design/mrg-import).
@@ -84,25 +82,26 @@ The behavior of the [MRG importer](@) can be configured per call e.g. by a confi
 mrg-import [ <paramlist> ]
 ~~~
 
-where:
-- `<paramlist>` (optional) is a list of key-value pairs
+where `<paramlist>` is an (optional) list of parameters.
 
 <details>
   <summary>Legend</summary>
 
 The columns in the following table are defined as follows:
-1. **`Key`** is the text to be used as a key.
-2. **`Value`** represents the kind of value to be used.
-3. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
-4. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+1. **`Parameter`** specifies the parameter and further specifications
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
+If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
 </details>
 
-| Key            | Value         | Req'd | Description |
-| :------------- | :------------ | :---: | :---------- |
-| `config`       | `<path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
-| `scopedir`     | `<path>`        | Y | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [MRG importer](@). |
-| `onNotExist`   | `<action>`      | n | specifies the action to take in case an MRG file that was expected to exist, does not exist. Default is `'throw'`. |
+| Key                          | Req'd | Description |
+| :--------------------------- | :---: | :---------- |
+| `-c`, `--config <path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-s`, `--scopedir <path>`      | Y | Path of the scope directory from which the tool is called. |
+| `-o`, `--onNotExist <action>`  | n | The action in case an MRG file unexpectedly does not exist. |
+| `-V`, `--version`              | n | output the version number of the tool. |
+| `-h`, `--help`                 | n | display help for command. |
 
 The `<action>` parameter can take the following values:
 

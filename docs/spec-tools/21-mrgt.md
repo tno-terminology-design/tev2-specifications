@@ -71,26 +71,27 @@ The behavior of the [MRGT](@) can be configured per call e.g. by a configuration
 mrgt [ <paramlist> ]
 ~~~
 
-where:
-- `<paramlist>` (optional) is a list of key-value pairs
+where `<paramlist>` is an (optional) list of parameters.
 
 <details>
   <summary>Legend</summary>
 
 The columns in the following table are defined as follows:
-1. **`Key`** is the text to be used as a key.
-2. **`Value`** represents the kind of value to be used.
-3. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
-4. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+1. **`Parameter`** specifies the parameter and further specifications
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
+If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
 </details>
 
-| Key            | Value         | Req'd | Description |
-| :------------- | :------------ | :---: | :---------- |
-| `config`       | `<path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter MUST NOT appear in the configuration file itself. |
-| `scopedir`     | `<path>`        | Y | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [MRG importer](@). |
-| `vsntag`       | `<vsntag>`      | n | [versiontag](@) for which the [MRG](@) needs to be (re)generated. When omitted, an [MRG](@) will be generated for every version of the [terminology](@) that is specified in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@) |
-| `onNotExist`   | `<action>`      | n | specifies the action to take in case a `vsntag` was specified, but wasn't found in the [SAF](@). Default is `'throw'`. |
+| Key                         | Req'd | Description |
+| :-------------------------- | :---: | :---------- |
+| `-c`, `--config <path>`       | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-h`, `--help`                | n | display help for command. |
+| `-o`, `--onNotExist <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
+| `-s`, `--scopedir <path>`     | n | Path of the scope directory from which the tool is called. |
+| `-v`, `--vsntag <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
+| `-V`, `--version`             | n | output the version number of the tool. |
 
 The `<action>` parameter can take the following values:
 

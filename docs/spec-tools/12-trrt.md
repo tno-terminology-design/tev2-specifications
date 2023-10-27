@@ -87,7 +87,7 @@ In order to convert [TermRefs](@) into [renderable refs](@), [TRRT](@) expects t
 The tool can be installed from the command line and made globally available by executing
 
 ~~~
-npm install tno-terminology-design/trrt -g
+npm install -g @tno-terminology-design/trrt
 ~~~
 
 <details>

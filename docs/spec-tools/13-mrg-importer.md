@@ -38,7 +38,7 @@ There will shortly be an implementation of the tool:
 The tool can be installed from the command line and made globally available by executing
 
 ~~~
-npm install tno-terminology-design/mrg-import -g
+npm install -g @tno-terminology-design/mrg-import
 ~~~
 
 <details>

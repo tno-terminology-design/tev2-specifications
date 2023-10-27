@@ -25,7 +25,7 @@ There is currently one implementation of the tool (but not yet fully available),
 The tool can be installed from the command line and made globally available by executing
 
 ~~~
-npm install tno-terminology-design/mrgt -g
+npm install -g @tno-terminology-design/mrgt
 ~~~
 
 <details>

@@ -50,7 +50,7 @@ The tool can be installed from the command line and made globally available by e
 We expect that it will be something like
 
 ~~~
-npm install tno-terminology-design/ict -g
+npm install -g @tno-terminology-design/ict
 ~~~
 
 </details>

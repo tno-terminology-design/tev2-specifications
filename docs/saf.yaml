@@ -47,7 +47,7 @@ versions:
   - "term[actor,action,community,control,entity,knowledge]@essif-lab"
   - "rename action [term:act, formPhrases:'act{ss}']"
   - "term[action]@essif-lab"
-  - "term[manage,management,govern,governance,objective,owner,owned]@essif-lab" 
+  - "term[manage,management,governance,objective,owner,owned]@essif-lab" 
   - "term[partial-identity,identifier,identity]@essif-lab" 
   - "term[pattern-party-actor-action,pattern-jurisdiction]@essif-lab" 
   - "term[pattern-identity,pattern-identification]@essif-lab"
@@ -58,9 +58,8 @@ versions:
     - secondAltVsnTag
   termselection:
     - "grouptags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
-    - "term[party,community]@essif-lab:0.9.4" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
+    - "term[party,community]@essif-lab:documentation" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
     - "-grouptags[terminology]" # remove all terms tagged with the grouptag `terminology`
-    - "*" # import all terms defined in the scope `tev2`
   status: proposed
   from: 20220312
   to:

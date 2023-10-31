@@ -16,6 +16,10 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
+:::warning This document will soon be deprecated
+There is a [new specification of the HRGT](/docs/spec-tools/hrgt).
+:::
+
 The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of one [terminology](@) within a specific [scope](@).
 
 The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selection of) its [MRG entries](@) into one of the supported output formats, e.g. HTML, or PDF. The file that contains the [MRG](@) is named following the [MRG file naming conventions](/docs/spec-files/mrg#mrg-file-naming-conventions).

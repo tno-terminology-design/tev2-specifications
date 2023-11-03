@@ -43,6 +43,7 @@ scope:
   scopetag: tev2 # identifier that curators have determined for this terminology
   scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs  # URL of the scope-directory
   curatedir: terms # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
+  defaulttype: concept # default type of 
   glossarydir: glossaries # directory where all glossary files and related stuff are located. Full URL is `scopedir`/`glossarydir`
   defaultvsn: latest # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
@@ -73,11 +74,12 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | :---------- | :---: | :---------- |
 | `scopetag`    | Y | [Scopetag](@) that [curators](@) of this scope have determined for this [terminology](@). The associated [scopedir](@) is specified in the section `scopes`. |
 | `scopedir`    | Y | URL of the location of the [scopedir](@) associated with the [scopetags](@) listed in the `scopetags` field. |
-| `curatedir`   | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`.|
+| `curatedir`   | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`. `curatedir` may also be an empty string. |
 | `glossarydir` | Y | Path to the directory where all [glossary](@)-related files are located. Full URL is `<scopedir>`/`<glossarydir>`. This directory SHOULD contain one [MRG](@) for every element in the version-section in the [SAF](@), and one or multiple [HRGs](@). It MAY contain other files, e.g. containing instructions, headers, footers or other things that are necessary for generating specific [glossaries](@). |
 | `defaultvsn`  | Y | [versiontag](@) that [identifies](@) the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
-| `website`     | n[^1] | base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). |
-| `navpath`     | n[^1] | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@), is `navpath` for the rendered versions of [Curated Texts](@). |
+| `defaulttype` | n | text that is used to identify the default kind of [semantic unit](@) for a [curated text](@). It is the default value for the `type`-field in [curated texts](@). Default value for `defaulttype` is `concept`. |
+| `website`     | n | base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). If not specified, it is assumed to be the empty string. |
+| `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered. What `curatedir` is for [Curated Texts](@), is `navpath` for the rendered versions of [Curated Texts](@). If not specified, it is assumed to be the empty string. |
 | `bodyFileID`  | n | Name of the field in the front matter of a [body file](@) used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the [body file](@) will be used. | 
 | `license`     | n | File in the root of the [scopedir](@) that contains the (default) licensing data. |
 | `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [semantic units](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
@@ -87,8 +89,6 @@ The following fields are defined for the `scope` section of a [SAF](@):
 <!--
 | `dateformat`  | n | Regex (PCRE) that has named capturing groups for YYYY, MM and DD, and that can be used to parse the date fields used in this [scope](@) ) (provided another regex doesn't override it). When not provided, tools should use the regex "**(?P<YYYY\>\d{4})-?(?P<MM\>\d{2})-?(?P<DD\>\d{2})(?P<tzone\>Z&#124[+-]\d{2}:\d{2})?**" for this (noting that in certain contexts, `\` characters may need to be escaped). |
 -->
-
-[^1]: If this field does not exist, or is empty, this means that [Curated Texts](@) are not expected to be rendered in a web context. Note that this also influences the results of [TEv2 tools](@) such as the [MRGT](@).
 
 ### SAF Scopes - Mapping Scopetags and Scopedirs {#scopes}
 

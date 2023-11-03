@@ -49,14 +49,14 @@ For the date of the tooling status, see the "<i>last updated on</i>" text at the
 
 ### High priority
 - ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/spec-files/curated-text-file);
-- [HRGT](/docs/spec-tools/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
+- [HRGT](/docs/spec-tools-envisaged/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
 
 ### Medium priority:
-- [ICT](/docs/spec-tools/ict), which allows for integrity checking. The current specifications are outdated and first need to be revised.
+- [ICT](/docs/spec-tools-envisaged/ict), which allows for integrity checking. The current specifications are outdated and first need to be revised.
 
 ### Lower priority:
 - extensions for the [TRRT](@), and perhaps other tools, so that they can be used in [ReSpec](https://dev.w3.org/2008/video/mediaann/ReSpec.js/documentation.html) environments, such as often used for W3C standards.
-- [MRDT](/docs/spec-tools/mrdt) and [HRDT](/docs/spec-tools/hrdt)
+- [MRDT](/docs/spec-tools-envisaged/mrdt) and [HRDT](/docs/spec-tools-envisaged/hrdt)
 
 
 ## Starting to contribute

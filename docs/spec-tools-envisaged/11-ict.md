@@ -4,6 +4,8 @@ sidebar_label: Integrity Checker Tool (ICT)
 date: 20220421
 ---
 
+# Integrity Checker Tool (ICT)
+
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

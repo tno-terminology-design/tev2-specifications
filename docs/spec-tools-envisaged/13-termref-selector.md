@@ -4,9 +4,11 @@ sidebar_label: TermRef Selector
 date: 20231031
 ---
 
-# TermRef Selector
+# TermRef Selector Tool
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 export const mark = ({children}) => (
   <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>

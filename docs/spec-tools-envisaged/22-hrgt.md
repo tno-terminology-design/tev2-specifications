@@ -111,33 +111,55 @@ The [MRGRef](@) conversion process consists of the following steps:
 
 By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
 
-An [MRGRefs](@) has the following syntax:
+An [MRGRef](@) has the following syntax:
 
 ~~~ markdown
-...
-<!--<hrg={tid}>-->{text to be replaced with hrg-list}<!--</hrg>-->
-...
+{% hrg="<tid>" converter="<glossarylayout>" %}
 ~~~
 
-Interpretation (that is expected to be configured as a particular 'interpreter') of an [MRGRef](@) leads to the population of the following variables (or, in case regexes are used, named capturing groups):
+where
+- `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
+- `<glossarylayout>` is a text that specifies either 
+    - a predefined way in which glossary entries are being formatted, such as `markdowntable` or
+    - a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
 
-| Name      | Description |
-| :-------- | :---------- |
-| `leader`  | the character string that is used at the start of a [HRG](@), which must be expected to include newlines. If empty (not specified), there will be no leading texts. |
-| `tid`     | a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, it defaults to the default [terminology](@) of the [current scope](@). |
-| `trailer` | the character string that is used at the end of a [HRG](@), which must be expected to include newlines. If empty (not specified), there will be no leading texts. |
+<details>
+  <summary>Example: MRGRef for generating a HRG in a markdown table format.</summary>
 
-The `tid` specifies (implicitly/default or explicitly) the [MRG](@) whose entries will be processed and converted (which is also expected to exist as a particular 'converter') into a complete [HRG](@) that can readily be inserted at the position of the [MRGRef](@). 
-
-Then, the [HRGT] will convert this into the following markdown:
+The following is an example where `<glossarylayout>` is specified using the predefined format `markdowntable`:
 
 ~~~ markdown
-...
-{leader}
-{result-of-converter-processing}
-{trailer}
-...
+| Term | Description |
+| :--- | :---------- |
+{% hrg="tev2" converter="markdowntable" %}
 ~~~
+
+The same result can be produced using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
+
+~~~ markdown
+| Term | Description |
+| :--- | :---------- |
+{% hrg="tev2" converter=
+| {{glossaryTerm}} | {{glossaryText}} |
+" %}
+~~~
+
+The result of this (generated from an [MRG](@) that holds the terms [Glossary](@), [Curator](@) and [Definition](@), would look something like this:
+
+| Term | Description |
+| :--- | :---------- |
+| Glossary | an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context. |
+| Curator (of a Scope) | a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives. |
+| Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
+
+</details>
+
+The following table specifies a number of glossarylayouts. The E/O column states whether the layout is envisaged, or (already) operational:
+
+| `<glossarylayout>` | E/O | Description |
+| :----------------- | :-: | :---------- |
+| `markdowntable`     | E | This format generates one (markdown) line, i.e,:<br/> \| `{{glossaryTerm}}` \| `{{glossaryText}}` \|<br/> for every [MRG entry](@) from the source [MRG](@). |
+| `essiflab-like`     | E | HRG entries are generated that are similar to what is shown in the [essif-lab glossary](https://essif-lab.github.io/framework/docs/essifLab-glossary) |
 
 ## Processing, Errors and Warnings
 

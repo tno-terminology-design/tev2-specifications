@@ -17,7 +17,7 @@ export const mark = ({children}) => (
   </span> );
 
 :::warning This document will soon be deprecated
-There is a [new specification of the HRGT](/docs/spec-tools/hrgt).
+There is a [new specification of the HRGT](/docs/spec-tools-envisaged/hrgt).
 :::
 
 The **Human Readable Glossary generation Tool ([HRGT](@))** generates a Human Readable [Glossary](@) ([HRG](@)) that consists of (a selection of) the [terms](@) that are part of one [terminology](@) within a specific [scope](@).

@@ -24,4 +24,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 **HRDT** stands for **Human Readable Dictionary Tool**. It refers to a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@).
 
-The [TEv2](@) specifications (will) have a [HRDT specification](/docs/spec-tools/hrdt)
+The [TEv2](@) specifications (will) have a [HRDT specification](/docs/spec-tools-envisaged/hrdt)

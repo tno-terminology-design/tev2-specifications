@@ -8,7 +8,7 @@ isa:
 bodyFile: /spec-tools/22-hrgt.md
 glossaryTerm: Human Readable Glossary Tool
 glossaryAlias: HRGT
-glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools-envisaged/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
 synonymOf:
 grouptags: tools, glossary-tools
 formPhrases: hrgt{ss}, human-readable-glossary-tool{ss}, human-readable-glossary-tool{ss}-hrtt{ss}, hrt{ss}-human-readable-glossary-tool{ss}
@@ -24,4 +24,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # HRGT - Human Readable Glossary Tool
 
-**HRGT** stands for **Human Readable Glossary Tool**. It is a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).
+**HRGT** stands for **Human Readable Glossary Tool**. It is a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools-envisaged/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).

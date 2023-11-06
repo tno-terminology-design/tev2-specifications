@@ -1,5 +1,6 @@
-// Purpose: filter out the non-termref-related broken links as logged when building a docker image of the static website.
-// the log is expected to live in `docs/**/*.log`.
+// Purpose: filter out the non-termref-related broken links as logged
+//          when building a docker image of the static website.
+//          The log is expected to live in `docs/**/*.log`.
 
 // This is a script that can be run by the Batch Replacer extension of VSCode.
 // Press Ctrl-Shift-P as you are editing this script, then search for `Batch Replacer`, and execute it.

@@ -1,11 +1,12 @@
 ---
-id: tev2-toolbox-envisaged
+id: overview-spec-tools-envisaged
+sidebar_label: Overview
 date: 20231031
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Envisaged (New) Tools for the TEv2 Terminology Toolbox
+# Overview - Envisaged TEv2 Tools
 
 This is the place where we develop specifications for new tools that we envisage will at some point become part of the [TEv2 Toolbox](@):
 

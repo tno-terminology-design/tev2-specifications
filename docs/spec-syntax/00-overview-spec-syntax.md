@@ -1,16 +1,12 @@
 ---
-id: tev2-syntax
+id: overview-spec-syntax
+sidebar_label: Overview
 date: 20220819
 ---
 
-# TEv2 - Syntax (Specs)
+# Overview - TEv2 Syntax
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
-
-export const mark = ({children}) => (
-  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
-    {children}
-  </span> );
 
 [TEv2](@) uses specific syntaxes:
 - the **[TermReference Syntax](/docs/spec-syntax/term-ref-syntax)** is the syntax that enables [authors](@) to mark [terms](@) that they use such that [readers](@) will be informed about their specific meaning while reading, and can learn more about such [terms](@) by clicking on them. You can see how that works in this sentence, by hovering over this [term](@), and clicking on it if you want to know more about it;

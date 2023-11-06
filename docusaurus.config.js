@@ -32,7 +32,7 @@ module.exports = {
       title: 'Home',
       logo: { src: 'images/logos/tev2-new-babylon-medium.png', },
       items: [
-        { to: 'docs/tev2-overview', label: 'TEv2 Overview', position: 'left'},
+        { to: 'docs/overview/overview-tev2', label: 'TEv2 Overview', position: 'left'},
         { href: 'https://github.com/tno-terminology-design/tev2-specifications', label: 'Github',     position: 'right',
         },
       ],

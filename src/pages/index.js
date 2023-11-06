@@ -47,7 +47,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/tev2-overview')}>
+              to={useBaseUrl('/docs/overview/overview-tev2')}>
               Terminology Engine v2
             </Link>
           </div> */}

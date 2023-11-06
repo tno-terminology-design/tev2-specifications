@@ -1,11 +1,12 @@
 ---
-id: tev2-spec-files
+id: overview-spec-files
+sidebar_label: Overview
 date: 20220819
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# TEv2 - Files (Structure, Specs)
+# Overview - Files (Structure, Specs)
 
 [TEv2](@) expects [communities](@) to have directory that is easily accessible by IT tools, and in which - apart from other stuff it may keep there - is designated to contain all sorts of curated documentation. Thus, this directory (or one or more of its subdirectories) can be designated as [scope directories](@) for the [scopes](@) that the [community](@) owns.
 

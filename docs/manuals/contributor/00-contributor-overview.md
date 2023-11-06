@@ -1,5 +1,5 @@
 ---
-id: contributor-overview
+id: overview-contributor
 sidebar_label: Contributors
 date: 20220513
 ---

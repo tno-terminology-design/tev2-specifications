@@ -1,12 +1,12 @@
 ---
-id: tev2-overview
-sidebar_label: TEv2 Overview
+id: overview-tev2
+sidebar_label: Introduction
 date: 20220303
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Terminology Engine v2 - Overview
+# Introducing Terminology Engine v2 (TEv2)
 
 The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. [curation](@)) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 

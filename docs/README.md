@@ -10,7 +10,7 @@ date: 20220402
 This documentation is based on the [ToIP TT-Tools Proposal](https://tno-terminology-design.github.io/tev2-specifications/docs/toip-terminology-toolbox) memo, which we currently keep as a reference.
 :::
 
-The '[Terminology Engine v2 (TEv2)](https://tno-terminology-design.github.io/tev2-specifications/docs/tev2-overview)' consists of two parts:
+The '[Terminology Engine v2 (TEv2)](https://tno-terminology-design.github.io/tev2-specifications/docs/overview/overview-tev2)' consists of two parts:
 1. The [Terminology Toolbox](https://tno-terminology-design.github.io/tev2-specifications/docs/tev2-toolbox) is a set of (extendable) command-line tools that can be used for generic purposes, such as resolving [TermReferences](term-ref@), and creating glossaries.
 2. The use of these, and other tools (in our case: [Docusaurus](https://docusaurus.io/), and [github CI/CD](https://resources.github.com/ci-cd/)), for facilitating the [curation](curate@) of [terminologies](terminology@) by [terms communities](terms-community@).
 

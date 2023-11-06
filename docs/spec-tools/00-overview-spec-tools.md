@@ -1,13 +1,14 @@
 ---
-id: tev2-toolbox
+id: overview-spec-tools
+sidebar_label: overview
 date: 20231031
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# TEv2 Terminology Toolbox
+# Overview - TEv2 Terminology Tools (existing)
 
-As mentioned in the [TEv2 overview](/docs/tev2-overview), the toolbox contains a number of tools. The ones that exist (or are sufficiently mature to use) include:
+As mentioned in the [TEv2 overview](/docs/overview/overview-tev2), the toolbox contains a number of tools. The ones that exist (or are sufficiently mature to use) include:
 
 - the **Term Ref(erence) Resolution Tool ([TRRT](trrt@))**. This tool takes files that contain so-called [TermRefs](@) and outputs a copy of these files in which these [TermRefs](@) are converted into so-called [renderable refs](@), i.e. texts that can be further processed by tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains markups that help [readers](@) to quickly find more explanations of the [concept](@) or other [semantic unit](@) that is being referenced.
 

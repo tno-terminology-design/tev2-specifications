@@ -31,7 +31,7 @@ There are various things that make the further development of [TEv2](@) challeng
 
 :::tip Reading Materials
 In order to appreciate and come to grips with these challenges, it will definitely help if you read up on some more backgrounds of what we try to do. Here are some pointers:
-- The [TEv2 Overview](/docs/tev2-overview) (and its sub-documents) will provide you with with such backgrounds.
+- The [TEv2 Overview](/docs/overview/overview-tev2) (and its sub-documents) will provide you with with such backgrounds.
 - Other documented topics include:
   - [file structure spec](/docs/tev2-spec-files)
   - [syntax specifications](/docs/tev2-syntax)

@@ -28,6 +28,7 @@ The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manua
 
 :::info Editor's Note
 Text needs to be revised. Here are some ideas to mention:
+
 - contributors can suggest contents as per the curators instructions;
 - [authors](@) can write the body of [curated texts](@);
 - curators update the header of [curated texts](@) (conforming to the ctext specs);

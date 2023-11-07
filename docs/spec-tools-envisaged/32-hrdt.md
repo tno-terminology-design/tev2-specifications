@@ -21,6 +21,7 @@ export const mark = ({children}) => (
 The **Human Readable Dictionary generation Tool ([HRDT](@))** generates a Human Readable [Dictionary](@) ([HRD](@)), that renders the [terms](@) from a [machine readable dictionary (MRD)](mrd@) into one of several formats, e.g. HTML, or PDF. This rendering may be subject to further processing by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](/docs/tev2-toolbox)).
 
 [HRDs](@) can be created for different purposes, e.g. to
+
 - compare [terminologies](@) between different [scopes](@), which helps e.g. when aligning [terminologies](@) between them.
 - provide an overview of what various [scopes](@) utilize specific [terms](@) for (education).
 

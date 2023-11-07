@@ -30,5 +30,6 @@ In order for people (or organizations) to properly reason and/or communicate, th
 A **vocabulary** is the set of words and phrases (including [terms](@)) one or more [parties](@) use for reasoning and communicating about anything they like.
 
 ### Examples
+
 - The set of words that you know is your vocabulary.
 - The set of words listed in an English dictionary is a vocabulary of the English language (of its authoring organization)

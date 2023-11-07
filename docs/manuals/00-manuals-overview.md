@@ -12,6 +12,7 @@ export const mark = ({children}) => (
   </span> );
 
 Individual people may participate in any of the following roles:
+
 - [**Contributors**](#contributor) contribute to the further development of a [terminology](@).
 - [**Curators**](#curator) maintain the [terminology](@) and ensure it becomes available for use.
 - [**Authors**](#author) write texts that use the [terms](@) defined in one or more [terminologies](@)

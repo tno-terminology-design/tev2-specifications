@@ -31,6 +31,7 @@ This setting allows for the creation of an MRG that contains overly many [MRG en
 ## How it is envisaged to work
 
 Like the [TRRT](@), the [TermRef Selector](@) 
+
 - expects the [MRGs](@) that it should use to lookup the terms, to exist in the [glossarydir](@) of the [current scope](@);
 - looks for any [term refs](@) in the input documents, and attempts to locate the associated [entry](mrg-entry@) in the designated [MRG](@).
 

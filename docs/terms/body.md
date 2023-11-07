@@ -43,6 +43,7 @@ Typically, the [header](@) consists of a sequence of key-value pairs.
 The [header](@) is terminated with onother three dashes and a new line.
 
 The [body](@) of the [curated text](@) 
+
 - either starts behind the header block.
   It is typically markdown, but other constructs may be inserted
   that contribute to the rendering of these texts in a (static) website.
@@ -58,5 +59,6 @@ The [body](@) of the [curated text](@)
 </details>
 
 The [body](@) of a [curated text](@) can either be stored 
+
 - in the [curated text file](@), which would then contain the entire [curated text](@), or
 - as a separate [file](body-file@) (somewhere within the [scopedir](@)), in which case the [header](@) (that is in the [curated text file](@)) must contain a field `bodyFile` that specifies the location of the [body file](@).

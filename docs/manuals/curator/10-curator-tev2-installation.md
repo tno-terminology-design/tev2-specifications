@@ -21,6 +21,7 @@ This page should only document the generic stuff. Any installation details that 
 :::
 
 TEv2 is a tool for [curating](@) [terminology](@)-related data from the perspective of a single [scope](@). Installation comprises
+
 - setting up, or appointing an (online) directory that will serve as a [scope directory](@);
 - creating a [Scope Administration File (SAF)](docs/spec-files/saf), and providing the configuration of the [scope](@) and its [terminology](@);
 - installing the [tev2-toolbox](/docs/tev2-toolbox);

@@ -28,6 +28,7 @@ where
 ## Examples
 
 In the following examples, we assume that 
+
 - `tev2` is a [scopetag](@) that [identifies](@) the [scope](@) in which the [TEv2](@) [terminology](@) is being [curated](@). 
 - `terms` is a [vsntag](@) that [identifies](@) the [terminology](@) that consists of all [terms](@) that are [defined](@) within the [scope](@) identified by `tev2`.
 - `myscope` is a [scopetag](@) that [identifies](@) the current [scope](@).

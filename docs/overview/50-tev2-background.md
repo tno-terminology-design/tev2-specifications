@@ -15,6 +15,7 @@ The traditional tool for fostering common understanding is using [glossaries](@)
 Traditional tools usually come with drawbacks that reduce their practical usefulness in this electronic era. [Dictionaries](@) leave their user to decide which of the various meanings that a term may have was intended. [Glossaries](@) typically provide a single meaning for a term, but lack a specification of the scope/context in which it is applied or where it is authoritative. And documents rarely explain the ideas (concepts) behind terms they use.
 
 The eSSIF-Lab terminology effort is an attempt to improve on this, by
+
 - creating and using tools that help authors and readers to understand the texts the create/read;
 - creating and maintaining a [Terminology Corpus](corpus@) that documents such understanding;
 - automatically regenerate artifacts such as [glossaries](@) or [dictionaries](@)) as the [corpus](@) is being updated.

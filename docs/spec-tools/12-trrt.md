@@ -23,6 +23,7 @@ Term ref resolution is the same process as we use for ingestion, and other conve
 The **Term Ref(erence) Resolution Tool ([TRRT](@))** takes files that contain so-called [TermRefs](@) and outputs a copy of these files in which these [TermRefs](@) are converted into so-called [renderable refs](@), i.e. texts that can be further processed by tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains markups that help [readers](@) to quickly find more explanations of the [concept](@) or other [semantic unit](@) that is being referenced.
 
 There is currently one implementation of the tool:
+
 - the repo is [here](https://github.com/tno-terminology-design/trrt).
 - the documentation is [here](https://tno-terminology-design.github.io/trrt).
 
@@ -134,6 +135,7 @@ trrt [ <paramlist> ] [ <globpattern> ]
 ~~~
 
 where:
+
 - `<paramlist>` is an (optional) list of parameters, as specified in the table below.
 - [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
 
@@ -169,6 +171,7 @@ The [TermRef](@) resolution process has three steps:
 ### Interpretation of the Term Ref
 
 The following kinds of [TermRef](@) syntaxes are (to be) supported:
+
 - the [basic syntax](/docs/spec-syntax/term-ref-syntax#basic-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
 - the [alternative syntax](/docs/spec-syntax/term-ref-syntax#alternative-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
 
@@ -301,6 +304,7 @@ where:
 
 :::info Editor's note
 The implementation of the `<Term ...>` ... `</Term>` construct will differ from that which is used by eSSIF-Lab, because a [term](@) that is defined in this, or another [scope](@), lives in the [curated file](@) at `scopedir`/`curatedir`/`locator`, where
+
 - `scopedir` is the URL that locates the [scope directory](@) of that [scope](@);
 - `curatedir` is the directory in that `scopedir` where [semantic units](@) (c.q. [curated texts](@)) live; its value is found both in the [SAF](@) and in the [MRG](@) of the [scope](@);
 - `locator` is the path (including filename), relative to `scopedir`/`curatedir`/, of the [curated file](@) that describes the [semantic unit](@) that is being referred to.
@@ -312,6 +316,7 @@ The implementation of the `<Term ...>` ... `</Term>` construct will differ from 
 </details>
 
 The essentials of the rewriting start with the [scopedir](@) of the [scope](@) from which the [TRRT](@) is called, and proceed as follows:
+
 - access the [SAF](@), and in case the `scopetag` is not of this [scope](@), look up the [scopedir](@) associated with that `scopetag` and obtain its [SAF](@);
 - using the `vsntag`, locate the [MRG](@) (or if `vsntag` isn't specified, use the [scope's](@) default [MRG](@)-file as specified in the [scope's](@) [SAF](@));
 - Find the [MRG entry](@) that has a `term`-field that is the same as `term`;

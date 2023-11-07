@@ -25,6 +25,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 This [mental model](@) describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc.
 
 It aims to serve the following purposes:
+
 - enabling members of a [community](@), as well as other [parties](@), to document their understanding of the [concepts](@) and other [semantic units](@) (e.g., [mental models](@)) that are relevant for their purposes (i.e., for realizing their [objectives](@)).
 - provide a solid basis for the design and development of a [set of IT tools](/docs-overview) that support [communities](@) as they document their [knowledge](@).
 
@@ -48,6 +49,7 @@ Here is a visual representation of this pattern, using the following **[notation
 />
 
 The figure shows three areas:
+
 - the [white area](#white) has the [concepts](@) that deal with the organization of this.
 - the [green area](#green) represents a [scope](@), in which at most one [terminology](@) lives, and that also includes [tags](@), [scoped terms](@) and [definitions](@). The (contents of the) [scope](@) is curated (developed, maintained) by a single so-called [terms-community](@).
 - the [yellow area](#yellow) represents a [knowledge](@), in which intangible artifacts such as [objectives](@) and [concepts](@) reside.
@@ -69,6 +71,7 @@ A [terms-community](@) is a [community](@) (whose members are called [curators](
     - [identify](@) a specific version of the [terminology](@) - the so-called [version tags](@).
 
 We refer the reader to
+
 - the [Curators Manual](/docs/manuals/curator), for further details about [curation](@).
 - the [governance and management pattern](pattern-governance-and-management@) to learn more about ways in which different [communities](@) can seek to serve each other.
 
@@ -89,11 +92,13 @@ A [community](@) will typically a [HRG](@) - the human readable equivalent of an
 Note that a [HRG](@) is derived from a single [MRG](@). We foresee that in the future, [dictionaries](@), which document [terms](@) from multiple [terminologies](@), can also be generated, but that would not be part of a specific [scope](@), but rather an activity that a [terms community](@) could do itself.
 
 Apart from the multiplicity constrained that are showed in the figure, some additional rules apply:
+
 - every [scoped term](@) should identify at least one [MRG entry](@), and hence be part of (at least) one of the [scope's](@) [terminologies](@).
 - The [scoped term](@) (and every of its [synonyms](@)) that is specified by a [curated text](@), represents the [semantic unit](@) that this [curated text](@) documents.
 - If a [curated text](@) contains a [definition](@), then that [definition](@) defines the [semantic unit](@) that the [curated text](@) documents, and the [scoped term](@) (and every of its [synonyms](@)) that is specified by that [curated text](@) will (implicitly) refer to that definition.
 
 When we say that a [terms-community](@) [curates](@) a [scope](@), this means that the [terms-community](@)
+
 - [manages](@) (creates/maintains) the set of [definitions](@) that define [concepts](@) that are relevant for realizing its [objectives](@);
 - [manages](@) (creates/maintains) all [terminologies](@) of the [scope](@), and designate which of them is to be considered the default [terminology](@).
 - ensures that a [terminology](@) consists of:

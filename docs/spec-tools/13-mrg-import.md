@@ -21,6 +21,7 @@ The **[MRG](@) Import Tool ([MRG importer](@))** ensures that the [scope](@) wit
 ## MRG files
 
 This means concretely that within the [glossarydir](@) of a [scope](@) that has run the [MRG importer](@), the following files are available for every [scopetag](@) `st` that exists in the [`scopes` section](/docs/spec-files/saf#scopes) of its [SAF](@):
+
 - `mrg.st.<vsntag>.yaml` contains the actual [MRG entries](@) for the [terminology](@) specified in the [`versions`-section](/docs/spec-files/saf#versions) whose `vsntag` field contains `<vsntag>`.
 - `mrg.st.<altvsntag>.yaml` is a copy of the `mrg.st.<vsntag>.yaml` file  where `<alvsntag>` is one of the alternative [versiontags](@) by which the [MRG](@) can be referenced.[^1]
 - `mrg.st.yaml` is a copy of the `mrg.st.<vsntag>.yaml` file  where `<vsntag>` is the value of the `defaultvsn`-field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of [scope](@) `st`.
@@ -28,6 +29,7 @@ This means concretely that within the [glossarydir](@) of a [scope](@) that has 
 [^1]: Previous versions of the specifications said this would be a symbolic link to the [MRG](@) rather than a copy thereof. However, symbolic links created for the purpose of functioning in a (Git) repo would not work in a local development context (e.g. on a Windows machine), and vice versa. To remedy this, and taking into consideration that [MRGs](@) are relatively small in size, made us decide to use actual copies. Note that you can still see which files are copies by inspecting the first section of the [MRGs](@), which lists the [versiontag](@) and the [altvsntags](@) of the [terminology](@) that the [MRG](@) documents.
 
 There will shortly be an implementation of the tool:
+
 - the repo for the code of the tool is [here](https://github.com/tno-terminology-design/mrg-import).
 - the documentation is [<mark>tbd</mark>].
 
@@ -117,11 +119,13 @@ The `<action>` parameter can take the following values:
 The [MRG importer](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalidities include non-existing directories or files, lack of write-permissions where needed, etc.
 
 Then, the [MRG importer](@) reads the [SAF](@) of the [scope](@) from which the [MRG importer](@) is called. We will use the following names for values that are in the [SAF](@):
+
 - `{my-own-scopetag}` = `scopetag`-field from the `scope`-section
 - `{my-own-scopedir}` = `scopedir`-field from the `scope`-section
 - `{my-own-glossarydir}` = `glossarydir`-field from the `scope`-section
 
 The [MRG importer](@) also reads the [`scopes` section](/docs/spec-files/saf#scopes) of the [SAF](@), which specifies the 'other' [scopes](@) from which the actively maintained [MRGs](@) have to be imported. This [`scopes` section](/docs/spec-files/saf#scopes) contains elements that consist of two parts, whose values we will refer to by the following names:
+
 - `{import-scopetag}` = `scopetag`-field from the `scopes`-section of the [SAF](@)
 - `{import-scopedir}` = `scopedir`-field from the `scopes`-section of the [SAF](@)
 
@@ -132,22 +136,26 @@ Reading a SAF may require authentication, e.g. when the scopedir of the other sc
 :::
 
 We will use:
+
 - `{other-scopetag}` = the `scopetag`-field in the `scope` section of `{import-saf}`;
 - `{other-glossarydir}` = the `glossarydir`-field in the `scope` section of `{import-saf}`;
 
 The [`versions` section](/docs/spec-files/saf#versions) in `{import-saf}` specifies which [terminologies](@) are actively maintained within the other [scope](@), and hence have to be imported. Every such [terminology](@) is specified by an entry in this section, and must hence be processed to import the associated [MRGs](@). 
 
 To specify one such process, we will use:
+
 - `{other-vsntag}` = `vsntag`-field in the element of the `versions` section of `{import-saf}`
 - `{other-altvsntags}` = `altvsntags`-field in an element of the `versions` section of `{import-saf}`
 - `{other-defaultvsn}` = `defaultvsn`-field in the `scope` section of `{import-saf}`
 
 To import the associated [MRGs](@), here is what we do:
+
 - read the file `{import-scopedir}/{import-glossarydir}/mrg.{other-scopetag}.{other-vsntag}.yaml`, which is the file that contains the [MRG](@) that needs to be imported. If that file doesn't exist, this results in the bahaviour as specified by the `<action>` value of the `onNotExist` parameter. Default is `throw`.
 :::info Editor's note
 It may well be possible that contents of the mrg may need to be processed.
 This is due to the fact that `scopetag`s are 'local' names for referring to scopes and every scope gets to decide on its own scoptag names. So the meaning of 'scopetags' cannot be transferred across scopes. We have to use universal/fixed identifiers, such as a `scopedir`-URL to identify scopes. Still, local names can be useful (and are necessary), so we'll have to figure out what the impact of this is.
 :::
+
 - write the contents to `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.{other-vsntag}.yaml`, overwriting a file that has the same name if that were to exist.
 - for every [versiontag](@) in `{other-altvsntags}` (which we call `{other-altvsntag}`), a symbolic link `mrg.{import-scopetag}.{other-altvsntag}.yaml` is created in the `{my-scopedir}/{my-glossarydir}/` directory, that links to the `mrg.{import-scopetag}.{other-vsntag}.yaml` file that was just created in that same directory.
 

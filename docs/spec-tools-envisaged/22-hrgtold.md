@@ -27,6 +27,7 @@ The [HRGT](@) takes one specific [MRG](@) as its input, and converts (a selectio
 The selection of the [MRG entries](@) that are to be included in the [HRG](@), as well as the specification of the output format, headers, footers, etc., can be configured as well as customized. Thus, the [HRGT](@) provides a flexible means for creating all sorts of outputs that are either already human readable or can be processed further by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc.
 
 There is currently one implementation of the tool underway:
+
 - the repo in which the tool is being developed is [<mark>tbd</mark>].
 - the documentation is [<mark>tbd</mark>].
 
@@ -90,6 +91,7 @@ hrgt [ <paramlist> ] [ <globpattern> ]
 ~~~
 
 where:
+
 - `<paramlist>` is an (optional) list of parameters, as specified in the table below.
 - [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
 
@@ -117,6 +119,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 
 :::info Editor's Note:
 Various `method`s are envisaged, yet remain to be properly specified. A method may specify:
+
 - what a single entry contains
 - that the contents of particular files are to be used as header or footer;
 - that a particular kind of navigation bar is to be inserted at specific places (e.g. between two subsequent entries that start with a different character);
@@ -128,6 +131,7 @@ Various `method`s are envisaged, yet remain to be properly specified. A method m
 The [HRGT](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalidities include non-existing directories or files, lack of write-permissions where needed, etc.
 
 Then, the [HRGT](@) reads the specified input files (in arbitrary order), and processes each of them, as follows:
+
 - select the actual [MRG](@) that is to be used as an input;
 - select the (subset of) [MRG entries](@) from that [MRG](@) that must appear in the [HRG](@) - see [HRG Term Selection](/docs/spec-syntax/hrg-termselection-syntax) for details. Conceptually, this will result in an [MRG](@) that only contains [MRG entries](@) that need to appear in the [HRG](@) as well;
 - (alphabetically) sort these entries;
@@ -135,6 +139,7 @@ Then, the [HRGT](@) reads the specified input files (in arbitrary order), and pr
 :::info Editor's note
 The [TRRT](https://github.com/tno-terminology-design/trrt) has a nice setup for implementing [text conversion steps](/docs/overview/tev2-design-principles#text-conversion-steps). We should check that out and adapt the specifications text in this section so that this stuff can be reused as much as possible.
 :::
+
 - construct the [HRG](@) by adding (rendered) header- and footer-material and (optionally) licensing information;
 - write the [HRG](@) to the designated output file.
 

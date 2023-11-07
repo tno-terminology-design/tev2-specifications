@@ -37,6 +37,7 @@ The creation of a [terminology](@) is equivalent with the creation of the set of
 ## Prerequisites
 
 In this text, we will use the terms:
+
 - **current scope** for the [scope](@) within which the [terminology](@) is being created and
 - **current version** for the [version](@) of the [terminology](@) that is being created.
 
@@ -60,6 +61,7 @@ However, any (existing) [MRG](@) can be used as an alternative source, by adding
 ### Add all terms from a specific source {#syntax-add-all-terms}
 
 The following syntaxes are available for adding all terms from a specific source to the [terminology under construction](@):
+
 - **`*`**<br/>Add all [terms](@) that are described by a [curated texts](@) in the current scope.<br/>&nbsp;
 - **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as [identified](@) by the [terminology-identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
 
@@ -80,6 +82,7 @@ The difference between `*` and `* @` is that the first takes [curated texts](@) 
 ### Add selected terms from a specific source {#syntax-add-selected-terms}
 
 The following syntaxes are available for adding a selection of terms from a specific source to the [terminology under construction](@):
+
 - **`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in a [header](@) (front-matter) of a [curated text](@), such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected for inclusion in the [terminology under construction](@).<br/>&nbsp;
@@ -107,6 +110,7 @@ These instructions will add every term from the designated source, whose specifi
 Removing terms is equivalent to removing selected [MRG entries](@) from the [terminology under construction](@). The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, and a source may not be specified, as it is always the [terminology under construction](@).
 
 The following syntaxes are available for removing a selection of terms from the [terminology under construction](@):
+
 - **-`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), , such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) is to be removed from the [terminology under construction](@).
@@ -133,12 +137,14 @@ The ability to rename terms as they are imported may introduce some issues relat
 In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
 
 The following syntaxes are available for renaming fields in an [MRG entry](@) that is part of the [terminology under construction](@):
+
 - **`rename` `<term>` [ `<key>`:`<value>`, `<key2>:<value2>`, ... ]**, where:
   - `<term>` is the value of the `term` field in the [MRG entry](@) of the [terminology under construction](@) that is selected for the renaming process. Note that this value is an [identifier](@) for that [MRG entry](@).
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [terminology under construction](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc.
   - `<value>` is a text that will replace the existing text of the field identified by `<key>`. If the text contains multiple words, it is advised to surround it with quotes.
 
 Here is how it works. First, the [MRG Entry](@) is searched that has a `term` field whose value is `<term>`. If found, all `<key>`:`<value>` pairs are processed in the sequence they are specified. Processing a `<key>`:`<value>` pair consists of looking for a field named `<key>` in the selected [MRG entry](@). We now have the following situations:
+
 - if the `<key>` field exists, and
   - if the `<value>` is not empty, then the contents of the field is overwritten by `<value>`;
   - if the `<value>` is empty, then the contents of the field is deleted;

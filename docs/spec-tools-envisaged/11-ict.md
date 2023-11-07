@@ -145,6 +145,7 @@ The checks that are done on files depend on the kind of file that is being check
 The [SAF](@) must be a file that contains valid YAML syntax.
 
 The integrity of a [SAF](@) requires the following conditions to be satisfied for the key's in the `scope` section:
+
 - `scopedir` must point to the directory in which the [SAF](@) is stored for public use (i.e. in this scopedir).
 - `curatedir`, when appended to the value of "`scopedir`/", must point to the directory that stores the [curated files](@).
 - `glossarydir` must point to an existing directory.
@@ -153,10 +154,12 @@ The integrity of a [SAF](@) requires the following conditions to be satisfied fo
 - `license` must be an existing file in the directory pointed to by `scopedir`.
 
 The integrity of a [SAF](@) requires the following conditions to be satisfied for every element in the `scopes` section:
+
 - `scopetags` must be a nonempty list of [scopetags](@).
 - `scopedir` must be a valid URL, that points to an existing directory resource.
 
 The integrity of a [SAF](@) requires the following conditions to be satisfied for every element in the `versions` section:
+
 - `vsntag` SHOULD not appear as an element in the `altvsntags` field of this `version` element, and it MUST NOT appear in the `vsntag` or `altvsntags` fields of any other element in the `versions` section.
 - `altvsntags` must be a (possibly empty) list of [versiontags](@), each of which SHOULD not appear in the `vsntag` field of the element, and MUST NOT appear in the `vsntag` or `altvsntags` fields of any other element in the `versions` section.
 - `termselection` must be a non-emptly list of [term selection instructions](@).
@@ -171,16 +174,19 @@ The integrity checking comprises every (group of) test(s) as specified in this s
 The [MRG](@) MUST have sections named `terminology`, `scopes`, and `entries`.
 
 Integrity checks for the `terminology` section include:
+
 - `scopedir` must point to the directory in which the [SAF](@) is stored for public use (i.e. in this scopedir).
 - `vsntag` must be a [versiontag](@) that SHOULD not appear as an element in the `altvsntags` field.
 - `altvsntags` must be a (possibly empty) list of [versiontags](@), none of which appear in the `vsntag` field.
 - `license` must be an existing file in the directory pointed to by `scopedir`.
 
 Integrity checks for the `scopes` section include:
+
 - `scopetags` must be a nonempty list of [scopetags](@).
 - `scopedir` must be a valid URL, that points to an existing directory resource other than the [scopedir](@) of the current [scope](@). This directory MUST contain a [SAF](@). <mark>Do we need an option to test the integrity of such [SAFs](@)?</mark>
 
 Integrity checks for the `entries` section consist of one part that is generic for all entries, and another part that depends on the value of the `termtype` field (so that checking of e.g. entries of type `concept` and of type `pattern` can have different checks.) The checks that every entry must pass include the following:
+
 - `scopetag` MUST also appear as the value of `terminology.scopetag`, or as an element in one of the `scopes.scopetags` elements.
 - `termtype` SHOULD be <mark>tbd.</mark>
 - `grouptags` MUST be a list of [grouptag](@) elements.
@@ -203,6 +209,7 @@ For specific kinds of [MRG entries](@), the following additional constraints MUS
 <TabItem value="concept"><br/>
 
 The following constraints MUST hold for [MRG entries](@) of type `concept`:
+
 - if a `glossaryText` contains a [TermRef](@), then the [TermRef](@) SHOULD be resolvable <mark>(reference to the term-ref-integrity checks)</mark>.
 - `hoverText` MUST NOT contain any [TermRef](@), nor any other [markdown links](https://www.markdownguide.org/basic-syntax/#links).
 
@@ -238,16 +245,19 @@ Checks need to be added to ensure congruence between terms and any synonyms that
 ### Curated Text integrity
 
 The integrity of any [curated text](@) file requires the integrity conditions of the [MRG](@) file to be satisfied, as well as the following conditions:
+
 -  <mark>TBD</mark>
 
 #### Concepts
 
 The integrity of any [curated text](@) file that has `termType: concept` requires the integrity conditions of a [curated text](@) file to be satisfied, as well as the following conditions:
+
 -  <mark>TBD</mark>
 
 #### Patterns
 
 The integrity of any [curated text](@) file that has `termType: concept` requires the integrity conditions of a [curated text](@) file to be satisfied, as well as the following conditions:
+
 -  <mark>TBD</mark>
 
 

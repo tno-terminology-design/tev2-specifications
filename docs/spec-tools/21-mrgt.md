@@ -15,6 +15,7 @@ The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine 
 The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
 There is currently one implementation of the tool (but not yet fully available), which will be built similar to the [TRRT](@) and [MRG Importer](@). [^previous]
+
 - the repo is [here](https://github.com/tno-terminology-design/mrgt).
 - the documentation is [<mark>provided in this web page</mark>].
 
@@ -105,6 +106,7 @@ The `<action>` parameter can take the following values:
 ## Running the Tool
 
 One run of the [MRGT](@) either
+
 - generates an [MRG](@) for one specific [terminology](@) version within the [current scope](@) (which is the case when the `version` parameter was specified), or it
 - generates multiple [MRGs](@), i.e., one for every version of the [terminology](@) that is [curated](@) within the [current scope](@) (which is the case when the `version` parameter is omitted).
 
@@ -118,6 +120,7 @@ Running the tool comprises the following phases:
 Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
 
 In this phase, for every [terminology](@) version that is to be created, one [provisional MRG](@) is created, that contains a [provisional MRG entry](@) for every [term](@) contained in the particular version of the [terminology](@). This [provisional MRG entry](@) either contains:
+
 - all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
 - all fields in the [MRG entry](@) that comes from another [MRG](@) (typically from another [scope](@)). 
 
@@ -126,10 +129,12 @@ The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syn
 #### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrgt-mrg-filenames}
 
 When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopetag>.<vsntag>.yaml` is constructed, where:
+
 - `<scopetag>` is the [scopetag](@) that is used within the [current scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@).
 - `<vsntag>` is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated.
 
 If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
+
 - a [`terminology` section](/docs/spec-files/mrg#mrg-terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
 - a [`scopes` section](/docs/spec-files/mrg#mrg-scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
 - an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
@@ -143,6 +148,7 @@ Next, the [MRGT](@) will create a [symbolic link](https://en.wikipedia.org/wiki/
 This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files and symbolic links have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of synonyms, to use the newly generated [provisional MRG entries](@)
 
 When a [provisional MRG entry](@) in (one of) the created [provisional MRGs](@) has a `synonymOf` field that contains a [term identifier](@), this will now refer to either
+
 - an [MRG entry](@) in one of the [MRGs](@) that either already existed, or
 - a [provisional MRG entry](@) in a [provisional MRG] that has just been created.
 This (possibly [provisional](provisional-mrg-entry@)) [MRG entry](@) is then copied, after which all fields in the [provisional MRG entry](@) that contained the [term identifier](@) are added thereto, overwriting any already existing fields, or adding fields that did not yet exist. Then, the resulting data is used to replace the [provisional MRG entry](@) that contained the [term identifier](@).

@@ -58,10 +58,13 @@ A **line with a hollow diamond** at one end represents an [aggregation](https://
 The following notational conventions are not used by [UML](https://www.uml-diagrams.org/), but are specific to our use.
 
 We use a **coloring convention** to distinguish between what is 'officially' part of the eSSIF-Lab models, and parts that are not.
+
 - **blue** is used to color the lines and other symbols that are part of the 'official' models. Typically, they are explicitly defined or otherwise explained, e.g. in a [mental model](@). Their definitions/meanings may differ from 'common knowledge'.
 - **red** is used to color the lines and other symbols that are part of our 'common knowledge', and hence need not be explicitly defined. They appear to explain where eSSIF-Lab models link to these commonly known/used concepts. We think of them as necessary in order to bridge possible gaps between 'common understanding' and the eSSIF-Lab ways of thinking. Whenever a 'red concept' is nevertheless defined, this is for the purpose of conveying what we conceive the 'common knowledge' to be.
 
 We use a **line typing convention** within a diagram, as follows:
+
+- 
 - **solid lines** are used for lines and other symbols that are part of the [mental model](@) that is represented by the diagram;
 - **dashed lines** are used for lines and other symbols that are (authoritatively) defined elsewhere.
 For example, the concept [party](@) is authoritatively defined in the [party, actor and action pattern](pattern-party-actor-action@essif-lab), so the diagram there shows a solid (blue) line for that concept. It also appears in other diagrams, e.g. in the [jurisdiction pattern](pattern-jurisdiction@essif-lab), where the concept is represented with a (blue) dashed line.

@@ -31,6 +31,7 @@ scope:
   defaultvsn: latest # vsntag that identifies the default terminology. A link to the MRG is located at `scopedir`/`glossarydir`/mrg.`scopetag`.yaml
 ...
 scopes:
+
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
 - scopetag: tev2 # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
@@ -67,6 +68,7 @@ However, any (existing) [MRG](@) can be designated as an alternative source, by 
 ### Selecting all terms from a particular source {#syntax-add-all-terms}
 
 The following syntaxes are available for selecting all [terms](@) from a specific source for inclusion into the [provisional MRG](@):
+
 - **`*`**<br/>Add all [terms](@) for which there are [curated texts](@) in the [current scope](@).<br/>&nbsp;
 - **`* @<tid>`**<br/>Add all [terms](@) from the [terminology](@) that is [identified](@) by the [terminology-identifier](@) `<tid>`. The associated [MRG](@) must exist in the [glossarydir](@) of the [current scope](@), which can be arranged by calling the [MRG importer](@).
 
@@ -87,6 +89,7 @@ The difference between `*` and `* @` is that the first takes [curated texts](@) 
 ### Selecting specific terms from a particular source {#syntax-add-selected-terms}
 
 The following syntaxes are available for selecting a subset of the [terms](@) from a specific source:
+
 - **`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in a [header](@) (front-matter) of a [curated text](@), such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected.<br/>&nbsp;
@@ -114,6 +117,7 @@ These instructions will select every [term](@) whose specification (as taken fro
 Selecting and subsequently removing [provisional MRG entries](@)) from the [provisional MRG](@) consists of [identifying](@) and removing them.
 
 The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, as follows:
+
 - **-`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [provisional MRG](@), , such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) is to be removed from the [provisional MRG](@).
@@ -140,12 +144,14 @@ The ability to rename [terms](@) as they are imported may introduce issues relat
 In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) (better: modifying fields in [provisional MRG entries](@)) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only the [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed, e.g. the `formPhrases`.
 
 The following syntaxes are available for renaming fields in a [provisional MRG entry](@) that is part of the [provisional MRG](@):
+
 - **`rename` `<term>` [ `<key>`:`<value>`, `<key2>:<value2>`, ... ]**, where:
   - `<term>` is the value of the `term` field in the [provisional MRG entry](@) that is selected for the renaming process. Note that this value is an [identifier](@) for that [provisional MRG entry](@).
   - `<key>` is a text that corresponds with a field name in a [provisional MRG entry](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc.
   - `<value>` is a text that will replace the existing text of the field identified by `<key>`. If the text contains multiple words, it is advised to surround it with (single or double) quotes.
 
 Here is how it works. First, the [provisional MRG Entry](@) is searched that has a `term` field whose value is `<term>`. If found, all `<key>`:`<value>` pairs are processed in the sequence they are specified. Processing a `<key>`:`<value>` pair consists of looking for a field named `<key>` in the selected [MRG entry](@). We now have the following situations:
+
 - if the `<key>` field exists, and
   - if the `<value>` is not empty, then the contents of the field is overwritten by `<value>`;
   - if the `<value>` is empty, then the contents of the field is deleted;

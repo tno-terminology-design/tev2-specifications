@@ -33,6 +33,7 @@ This naming convention enables tools (as well as [curators](@) and others) that 
 ## MRG structure
 
 A Machine Readable Glossary (MRG) is a YAML (or JSON) file that has three main parts, which we refer to as 'sections':
+
 - **`terminology`** specifies the characteristics of the [terminology](@) of the [scope](@). This includes the [scopetag](@) and [scopedir](@) of the [scope](@), as well as the license under which the contents of the [MRG](@) can be used.
 - **`scopes`** specifies which (other) [scopes](@) are relevant to this [terminology](@). This includes the [scopetag](@) and [scopedir](@) of any such [scope](@).
 - **`entries`** contains an (unsorted) list of [MRG entries](@).
@@ -117,6 +118,7 @@ An [MRG entry](@) has a few fields that are always present, because the [MRGT](@
 [^2]: One purpose of having the `scopetag` field is for determining which [MRG entries](@) in a [provisional MRG](@) require further processing. See [processing synonyms] for an example.
 
 An [MRG entry](@) has additional fields that come from the front matter of the [curated text](@) that the [MRG entry](@) represents. Some fields are
+
 - mandatory for all [curated texts](@), and hence will always appear in an [MRG entry](@); these appear in the table below.
 - optional for [curated texts](@) - typically, e.g. to accommodate for differences in the types [semantic units](@) that [curated texts](@) document; these also appear in the table below.
 - optional in the sense that they are intended to be processed by TEv2 tool plugins - these are not documented here.

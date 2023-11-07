@@ -22,6 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 ### Summary
 A **terms-community** is a [community](@) that maintains a [terminology](@) for the purpose of its members to avoid misunderstandings in their collaborations. They do so by:
+
 - [defining](@) a set of [terms](@) that are specific to them, and that are relevant for its members to interact as they seek to realize their individual [objectives](@).
 - determining which [terms](@) they will be using within their [community](@) in the meaning as [defined](@) by others.
 

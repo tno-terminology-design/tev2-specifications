@@ -21,6 +21,7 @@ In the simple form, a single [form phrase](@) is a sequence of characters [`[a-z
 The `formPhrases`-field is used by the [trrt](@) in its attempts to [convert the `showtext`](/docs/spec-tools/trrt#showtext) part of a [term ref](@) into a string that can serve as the `term` of that [term ref](@).
 
 The [trrt](@) does so by looping over the [terms](@) of the designated [terminology](@), and checking whether or not such a [term](@) is a match, as follows:
+
 - First, the [trrt](@) simplifies the `showtext`, by converting uppercase characters to lowercase, and replacing (sequences of) special characters and spaces with a single `-` character. Thus a `showtext` with value `Form - Phrase` would be converted into `form-phrase`.
 - Then, the [trrt](@) checks whether the result matches the contents of the `term`-field, and is done when that's the case. 
 - If there is no match, the [trrt](@) checks whether the result matches any of the [form phrases](@) in the `formPhrases` field. If that is the case, there is a match, and the [term ref](@) of which the `showtext` is a part will be referring to the matching [term](@).

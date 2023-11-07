@@ -31,6 +31,7 @@ There are various things that make the further development of [TEv2](@) challeng
 
 :::tip Reading Materials
 In order to appreciate and come to grips with these challenges, it will definitely help if you read up on some more backgrounds of what we try to do. Here are some pointers:
+
 - The [TEv2 Overview](/docs/overview/overview-tev2) (and its sub-documents) will provide you with with such backgrounds.
 - Other documented topics include:
   - [file structure spec](/docs/tev2-spec-files)
@@ -44,17 +45,21 @@ For the date of the tooling status, see the "<i>last updated on</i>" text at the
 
 ### Under development
 
+
 - [MRGT](/docs/spec-tools/mrgt), which is in [this toip repo](https://github.com/trustoverip/ctwg-toolkit-mrg). The tool works, but still has some [bugs/issues](https://github.com/trustoverip/ctwg-toolkit-mrg/issues) that need to be fixed.
 - [TRRT](/docs/spec-tools/trrt), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
 
 ### High priority
+
 - ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/spec-files/curated-text-file);
 - [HRGT](/docs/spec-tools-envisaged/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
 
 ### Medium priority:
+
 - [ICT](/docs/spec-tools-envisaged/ict), which allows for integrity checking. The current specifications are outdated and first need to be revised.
 
 ### Lower priority:
+
 - extensions for the [TRRT](@), and perhaps other tools, so that they can be used in [ReSpec](https://dev.w3.org/2008/video/mediaann/ReSpec.js/documentation.html) environments, such as often used for W3C standards.
 - [MRDT](/docs/spec-tools-envisaged/mrdt) and [HRDT](/docs/spec-tools-envisaged/hrdt)
 

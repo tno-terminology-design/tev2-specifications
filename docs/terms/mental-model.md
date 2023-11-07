@@ -31,6 +31,7 @@ The [terminology pattern](pattern-terminology@) provides an overview of how this
 ### Purpose
 
 A (good) mental model can be used
+
 - to facilitate one's thinking and reasoning about a specific topic, and/or deepen one's understanding of it.
 - to effectively explain backgrounds of one's reasoning/understanding of the mental model's topic.
 - to efficiently discuss and improve [definitions](@) of the [concepts](@) and [relations](@) in the mental model.
@@ -54,6 +55,7 @@ In other words: your choice of mental model isn't going to change the world for 
 Having said that, the crux of using a mental model is that you commit to it for as long as you use it. This means you take whatever the model says to be the case, and you do not allow (parts of) other models or ways of thinking interfere, because it will make you inconsistent and incoherent.
 
 For some people this is really easy:
+
 - Mathematicians have loads of models, a notorious set are the three geometries ([Euclidian](https://en.wikipedia.org/wiki/Euclidean_geometry), [Elliptic](https://en.wikipedia.org/wiki/Non-Euclidean_geometry#Elliptic_geometry) and [Hyperbolic](https://en.wikipedia.org/wiki/Non-Euclidean_geometry#Hyperbolic_geometry)). Depending on what they are doing, they choose one of the three, i.e. the one that fits their purpose best.
 - Physicists have them too, e.g. in the [duality principle of light](https://en.wikipedia.org/wiki/Wave%E2%80%93particle_duality)
 - Historians and astronomers are aware of the [geocentric world model](https://en.wikipedia.org/wiki/Geocentric_model) that was used to prepare astrological and astronomical charts for over 1500 years. Copernic, Galileo and Kepler came with the [heliocentric model of the universe](https://en.wikipedia.org/wiki/Heliocentrism), which is only taking another perspective on reality (making it easier to prepare such charts).

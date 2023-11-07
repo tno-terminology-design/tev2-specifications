@@ -3,11 +3,13 @@ The directory from which that script is called contains a a file `unique_fields.
 In that directory, there is a subdirectory `terms` that contains markdown files with some yaml frontmatter, and a markdown body. I use `terms directory` to refer to that directory. I use `term file` to refer to a markdown file therein.
 
 The script should process every line of the excel file (ignoring the first line, as it is the header line). In the instructions that follow, I use
+
 - `{today}` to refer to the text in `yyyymmdd` format that represents today's date which I expect you to compute;
 - `{<columnname>}` as the name of a variable that holds the contents of the row whose header is `<columnname>` (for example, `{termid}` would be variable that holds the contents of the cell in the row that is processed that is in the column named `termid`).
 - `{original}` is the name of a variable tht holds the contents of the cell in the column named `original`, where its contents has been modified by capitalizing the first characgter of every word therein
 
 When reading cells from the excel file, make sure that variables end up being proper texts, so:
+
 - cells must be read to produce texts, not floating point numbers or whatever;
 - cells that contain errors, are empty, void, null, NaN or similar, are considered to contain an empty string.
 

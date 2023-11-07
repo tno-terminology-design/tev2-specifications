@@ -106,10 +106,13 @@ The `scopes` section is a list that specifies a mapping between a [scopetag](@) 
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
+
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
+
 - scopetag: essif-lab # define another scopetag for the same scopedir (just because you can)
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
+
 - scopetag: ctwg # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
 ~~~

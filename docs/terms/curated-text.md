@@ -23,12 +23,14 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 A **[curated text](@)** is a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
 
 A [curated text](@) consists of two parts: 
+
 - a [header](@), which is a set of key-value pairs that are designed to facilitate automated processing;
 - a [body](@), that contains texts that are designed for human interpretation.
 
 [Curated texts](@) live in [curated files](@), that may have been generated, e.g. from [ingress tools](docs/overview/tev2-architecture#ingress-tools), or may have been constructed manually (using a text editor).
 
 [Curated texts](@) are used for a variety of purposes, as they (may) contain texts that:
+
 - are included in [MRGs](@) (one [MRG entries](@) for each [curated text](@));
 - are included in [HRGs](@), and (in future), [dictionaries](@);
 - help [readers](@) get a more in-depth understanding of the [semantic unit](@) that is being documented
@@ -41,6 +43,7 @@ The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manua
 
 :::info Editor's Note
 Text needs to be revised from here onward. Here are some ideas to mention:
+
 - contributors can suggest contents as per the curators instructions;
 - [authors](@) can write the [body](@) of [curated texts](@);
 - curators update the header of [curated texts](@) (conforming to the [ctext specifications](/docs/spec-files/ctext-file);

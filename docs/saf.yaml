@@ -28,6 +28,7 @@ scope:
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
+
 - scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
@@ -38,6 +39,7 @@ scopes:  #
 # See the Glossary Generation Tool (GGT) for details about the syntax and semantics.
 #
 versions:
+
 - vsntag: terms # this version contains all terms that are curated within this scope
   termselection:
   - "*" # import all tev2 terms.

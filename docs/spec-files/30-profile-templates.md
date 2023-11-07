@@ -14,11 +14,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 /><br/><br/>
 
 We use a generic pattern for the profile-based transformation of texts from one form into another. The idea is
+
 - to specify a profile, i.e. a  set of so-called 'moustache'-variables;
 - to create various text interpreters, each of which can read and process a particular kind of file, and populate the 'moustache'-variables;
 - to create various text transformers, each of which can write a new file based on the contents of the input file and the value of the variables.
 
 This pattern allows us, e.g.
+
 - to write various text interpreters for ingestable files, and have one text transformer make sure they are all converted into a valid [curated text](@).
 - to write various text transformers that produce different flavours of [HRGs](@) from an existing [MRG](@).
 - to produce code snippets that can be used in CI/CD-streets for all sorts of conversions that may be needed as [communities](@) seek to produce rendered artifacts (e.g. static websites, PDFs, etc.)
@@ -29,6 +31,7 @@ This ingestion profile specifies the set of 'moustache'-variables that [interpre
 
 :::info Editor's note
 The [transformer](@) that outputs a [curated text](@) still needs to be specified. Specifically, the specification should document what needs to be done in case a [curated text](@) exists whose `term` field matches the `term` field of the newly ingested file. Answers should be given for questions like:
+
 - is the entire front matter going to be constructed from scratch, or is the front matter of the existing [curated text](@) going to be reused, and if so:
 - what if a field is specified with a value that differs from the field in the existing [curated text](@) - this has to be answered for each field individually.
 - etc.

@@ -30,6 +30,7 @@ All parties have learned, with varying degrees of sophistication, to identify mi
 A common mechanism for reducing the likelihood of misunderstandings to occur, is to associate terms with texts that are crafted to help parties have the same understanding, i.e. definitions. This mechanism is sometimes overrated in the sense that definitions are often considered to be universally valid rather than only useful in specific [scopes](@).
 
 Therefore, we insist that such texts
+
 - are associated with a [scope](@) within which they are considered to be valid/useful (for the [objectives](@) that [parties](@) pursue in that [scope](@));
 - are phrased as a [criterion](https://www.lexico.com/definition/criterion) that every such [party](@) can evaluate so as to determine whether or not something qualifies to be referred to by that term.
 The quality of such texts is the extent in which parties reach the same conclusion as they evaluate the criterion in an arbitrary use-case that is relevant for the scope.
@@ -44,11 +45,13 @@ Working together is easier when you and your peers share the same ideas. We need
 
 ### Criteria
 A **definition** is a text that comprises at a minimum:
+
 - a [scope](@) that is curated ([controlled](@)) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@);
 - a [criterion](https://www.lexico.com/definition/criterion) that specifies the necessary and sufficient conditions for determining what does and what does not constitute some [concept](@) (idea, class of [entities](@));
 - a [name or phrase](term@) that is used within the [scope](@) to refer to (unidentified, or arbitrary, or specific) [entities](@) that satisfy the criterion.
 
 ### Examples
+
 - The definition of the term [definition](@) (a) is defined in, and hence valid in the scope `eSSIFLab`, (b) specifies a criterion (see the `Criteria` section above), and (d) has a name (i.e. `definition`) associated with it. Since it satisfies the criteria of `definition`, it can be referred to as 'the definition of `definition`'.
 - The [concepts](@) defined within a particular [scope](@) have definitions associated with them, where the criteria, relevance and [terms](@) are typically specified in the [curated text](@) for that [concept](@).
 

@@ -24,6 +24,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 A **Renderable Ref(erence)** is a text with which the [TRRT](@) replaces a [TermRef](@), that can be processed by specific third party rendering tools, the result of which is a rendering of the original [TermRef](@) that has additional characteristics that help [readers](@) to (better) understand the intention of its [author](@).
 
 For example, when rendering a [TermRef](@)
+
 - for a static website, the [renderable ref](@) might contain texts that would produce the effect that, when a [reader](@) browses to that website and hovers its mouse over a [renderable ref](@), this will produce a popup that contains its [definition](@).
 - for a PDF, the [renderable ref](@) might contain texts that would enable generator tools to produce a [glossary](@) of all [terms](@) that were referenced within the paper, which could then automatically be inserted as an appendix to the PDF.
 

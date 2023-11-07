@@ -13,6 +13,7 @@ import TabItem from '@theme/TabItem';
 The **Human Readable Glossary Generator Tool ([HRGT](@))** takes files that contain so-called [MRGRefs](@) and outputs a copy of these files in which these [MRGRefs](@) are converted into so-called [HRG lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains one or more sections that help [readers](@) to quickly find [terms](@) and (summaries of) their intended meanings.
 
 There is currently one implementation of the tool:
+
 - the repo is [here](https://github.com/tno-terminology-design/tev2-tools).
 
 ## What the HRGT does
@@ -73,6 +74,7 @@ hrgt [ <paramlist> ] [ <globpattern> ]
 ~~~
 
 where:
+
 - `<paramlist>` is an (optional) list of parameters, as specified in the table below.
 - [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
 
@@ -118,6 +120,7 @@ An [MRGRef](@) has the following syntax:
 ~~~
 
 where
+
 - `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
 - `<glossarylayout>` is a text that specifies either 
     - a predefined way in which glossary entries are being formatted, such as `markdowntable` or

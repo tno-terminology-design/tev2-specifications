@@ -15,6 +15,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 :::info Editor's note:
 Text needs to be drafted to work out the idea that LaTeX is a raw text that can be highly configured. For starters, it would be helpful if LaTeX [authors](@) could
+
 - specify [TermRefs](@) in their documents, and
 - specify a location where a [glossary](@) could be inserted.
 

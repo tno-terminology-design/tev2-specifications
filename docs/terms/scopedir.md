@@ -24,6 +24,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 A **scope directory** is a directory in a computer file system that contains all files that are either being [curated](@) within a particular [scope](@), or generated to serve some purpose within that [scope](@).
 
 Specifically, every [scope directory](@) contains at least:
+
 - a [Scope Administration File](saf@) or [SAF](@), that specifies details about the [scope](@) itself, identifies other [scopes](@) that it will be using, and the various [terminologies](@) that are maintained within the [scope](@);
 - a so-called [curatedir](@), i.e. some subdirectory within the [scopedir](@) where all [curated texts](@) live;
 - a so-called [glossarydir](@), i.e. some subdirectory within the [scopedir](@) where all ([machine-readable](mrg@) and [human readable](hrg@)) [glossaries](@) live.

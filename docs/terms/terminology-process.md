@@ -26,6 +26,7 @@ The eSSIF-Lab **terminology process** is a method for recognizing misunderstandi
 
 ## Prerequisites
 This process focuses on the creation and maintenance of qualitatively good definitions, i.e. [definitions](@) that satisfy the following quality criteria:
+
 - the [definition](@) is associated with a [scope](@) that is explicitly defined, i.e. any [party](@) can unambiguously determine whether or not the definition applies;
 - the [criteria](https://www.lexico.com/definition/criterion) of the definition are well-formed, meaning that all stakeholders make the same judgements c.q. reach the same conclusions when using these criteria in a given situation that is relevant within the scope.
 - the definition is relevant, which means that stakeholders have identified cases that demonstrate how the use of this definition helps them realize their objectives and/or address issues that prevent them from doing so, or they have agreed that relevance is obvious.

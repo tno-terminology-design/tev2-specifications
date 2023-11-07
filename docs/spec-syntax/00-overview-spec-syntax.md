@@ -9,6 +9,7 @@ date: 20220819
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 [TEv2](@) uses specific syntaxes:
+
 - the **[TermReference Syntax](/docs/spec-syntax/term-ref-syntax)** is the syntax that enables [authors](@) to mark [terms](@) that they use such that [readers](@) will be informed about their specific meaning while reading, and can learn more about such [terms](@) by clicking on them. You can see how that works in this sentence, by hovering over this [term](@), and clicking on it if you want to know more about it;
 - the **[Term Identifier Syntax](/docs/spec-syntax/term-identifier-syntax)** enables [authors](@) to refer to a particular [term](@) in a specific version of a [terminology](@). This syntax is also used in the [TermReference Syntax](/docs/spec-syntax/term-ref-syntax).
 - the **[Terminology Identifier Syntax](/docs/spec-syntax/terminology-identifier-syntax)** enables [authors](@) to refer to a specific version of a [terminology](@), as documented by an [MRG](@). This syntax can be used, e.g., as part of the [Term Identifier Syntax](/docs/spec-syntax/term-identifier-syntax).

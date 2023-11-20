@@ -47,8 +47,7 @@ npm install -g @tno-terminology-design/hrgt
 </details>
 
 <details>
-  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.
-</summary>
+  <summary>Before running the tool from the command line, make sure you have met the necessary prerequisites depending on your operating environment.</summary>
 
 <Tabs
   defaultValue="cmd.exe"

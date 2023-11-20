@@ -65,7 +65,8 @@ The following syntaxes are available for adding all terms from a specific source
 - **`*`**<br/>Add all [terms](@) that are described by a [curated texts](@) in the current scope.<br/>&nbsp;
 - **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as [identified](@) by the [terminology-identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the current scope.
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Examples:  | Meaning: |
   | :-------   | :------  |
@@ -93,7 +94,8 @@ The following syntaxes are available for adding a selection of terms from a spec
  
 These instructions will add every term from the designated source, whose specification contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |
@@ -117,7 +119,8 @@ The following syntaxes are available for removing a selection of terms from the 
 
 This syntax removes every [MRG entry](@) from the [terminology-under-construction](@) that has a field named `<key>`, and where (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |

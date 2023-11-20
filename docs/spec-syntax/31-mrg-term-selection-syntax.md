@@ -72,7 +72,8 @@ The following syntaxes are available for selecting all [terms](@) from a specifi
 - **`*`**<br/>Add all [terms](@) for which there are [curated texts](@) in the [current scope](@).<br/>&nbsp;
 - **`* @<tid>`**<br/>Add all [terms](@) from the [terminology](@) that is [identified](@) by the [terminology-identifier](@) `<tid>`. The associated [MRG](@) must exist in the [glossarydir](@) of the [current scope](@), which can be arranged by calling the [MRG importer](@).
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Examples:  | Meaning: |
   | :-------   | :------  |
@@ -100,7 +101,8 @@ The following syntaxes are available for selecting a subset of the [terms](@) fr
  
 These instructions will select every [term](@) whose specification (as taken from the designated source) contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |
@@ -124,7 +126,8 @@ The syntax is similar to one that is used for adding terms, but it is preceeded 
 
 This syntax removes every [provisional MRG entry](@) from the [provisional MRG](@) that has a field named `<key>`, and where (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
-<details><summary>Examples:</summary>
+<details>
+  <summary>Examples:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |

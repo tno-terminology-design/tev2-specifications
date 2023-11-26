@@ -29,6 +29,7 @@ entries:
       - 'short-description'
       - 'purpose'
       - 'criterion'
+    vsntag: 'test'
   - id: 'party'
     title: 'Party'
     displayed_sidebar: 'essifLabSideBar'
@@ -50,3 +51,4 @@ entries:
       - 'criterion'
       - 'examples'
       - 'related-terms'
+    vsntag: 'test'

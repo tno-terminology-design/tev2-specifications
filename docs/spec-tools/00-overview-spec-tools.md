@@ -16,4 +16,6 @@ As mentioned in the [TEv2 overview](/docs/overview/overview-tev2), the toolbox c
 
 - the **Machine Readable Glossary generation Tool ([MRGT](@))**. This tool reads the [SAF](@) of a [scope](@) to find the instructions by which it creates an [MRG](@) for each of the versions of the [terminology](@) that are maintained within that [scope](@).
 
+- the **[Human Readable Glossary generation Tool](/docs/spec-tools-envisaged/HRGT)** (or [HRGT](@)). This tool reads the [MRG](@) of a [scope](@), resolves any [TermRefs](@) as necessary, and creates a rendering that results in a [HRG](@).
+
 Other tools are [envisaged](/doc/tev2-toolbox-envisaged).

@@ -20,7 +20,7 @@ There is currently one implementation of the tool:
 
 The [HRGT](@) operates on a set of files, as specified by its commandline arguments or configuration file, each of which is processed as follows:
 1. Copy the file to its intended destination (as specified by its commandline arguments or configuration file), and use the latter for further processing;
-2. Find every [MRGRef](@), and replace each of them with the [HRG](@) that contains the [terms](@) of the [terminology](@) as specified by the [MRGRef](@).
+2. Find every [MRGRef](@), and replace each of them with the [HRG](@) that contains the (alphabetically sorted) [terms](@) of the [terminology](@) as specified by the [MRGRef](@).
 
 ## Installing the Tool
 
@@ -111,76 +111,32 @@ The [MRGRef](@) conversion process consists of the following steps:
 
 [^1]: Ideally, sorting should be done on the [HRG list](@), because these are the entries that should appear in a sorted form. However, as there is no a priori fixed structure for [HRG entries](@), it is difficult to sort the [HRG list](@) after it has been generated. Therefore, sorting is done on the [MRG entries](@), using the `glossaryTerm` field, which may, or may not exist. For [MRG entries](@) that do not have a `glossaryTerm` field, we suggest to use the `term`-field instead.
 
+[MRGRefs](@) themselves specify how [HRG entries](@) are formatted. Please refer to the [MRGRef Syntax specifications](/docs/spec-syntax/mrg-ref-syntax) for the details.
+
 By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
 
-An [MRGRef](@) has the following syntax:
+## Example
 
-~~~ markdown
-{% hrg="<tid>" converter="<glossarylayout>" %}
-~~~
+Suppose that within the current [scope](@):
+- `myterms:test` is the [terminology identifier](@) for the [terminology](@) that contains [definitions](@) for the terms [Glossary](@), [Curator](@) and [Definition](@);
+- the associated [MRG](@) for that [terminology](@) has been imported, making that [terminology](@) available within the current scope;
+- we have a regular markdown file, within which we want to embed a [markdown table](https://www.markdownguide.org/extended-syntax/#tables) which lists all [definitions](@) from that [terminology](@).
 
-where
-
-- `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
-- `<glossarylayout>` is a text that specifies either 
-    - a predefined way in which glossary entries are being formatted, such as `markdowntable` or
-    - a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
-
-The following table specifies a number of glossarylayouts. The E/O column states whether the layout is envisaged, or (already) operational:
-
-| `<glossarylayout>` | E/O | Description |
-| :----------------- | :-: | :---------- |
-| `markdowntable`     | O | This format generates one (markdown) line, i.e,:<br/> \| `{{glossaryTerm}}` \| `{{glossaryText}}` \|<br/> for every [MRG entry](@) from the source [MRG](@). |
-| `essiflab`          | O | HRG entries are generated that are similar to what is shown in the [essif-lab glossary](https://essif-lab.github.io/framework/docs/essifLab-glossary) |
-
-<details>
-  <summary>Example MRGRefs for generating various HRGs.</summary>
-
-<Tabs
-  defaultValue="markdowntable"
-  values={[
-    {label: 'Markdown Table', value: 'markdowntable'},
-    {label: 'eSSIF-Lab Style', value: 'essiflab'},
-    {label: 'Complex example', value: 'complex'},
-  ]}>
-  
-<TabItem value="markdowntable">
-The following is an example where `&lt;glossarylayout&gt;` is specified using the predefined format `markdowntable`:
+The table would then be specified as follows:
 
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="tev2" converter="markdowntable" %}
+{% hrg="myterms:test" converter="markdowntable" %}
 ~~~
 
-The same result can be produced using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
-
-~~~ markdown
-| Term | Description |
-| :--- | :---------- |
-{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |/n" %}
-~~~
-
-The result of this (generated from an [MRG](@) that holds the terms [Glossary](@), [Curator](@) and [Definition](@), would look something like this:
+When this markdown file is processed by the [HRGT](@), a new file is created where the above text has been converted into the following:
 
 | Term | Description |
 | :--- | :---------- |
 | Glossary | an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context. |
 | Curator (of a Scope) | a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives. |
 | Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
-
-</TabItem>
-
-<TabItem value="essiflab">
-@Ca5e: please fill in the example as used by essif-lab
-</TabItem>
-
-<TabItem value="complex">
-@Ca5e: please document the custom functions that you created, and provide some examples for them. You could use additional tabs if needed.
-</TabItem>
-</Tabs>
-
-</details>
 
 ## Processing, Errors and Warnings
 

@@ -34,6 +34,7 @@ The creation of a [terminology](@) is equivalent with the creation of the set of
   - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.
   - [removing](#syntax-remove) [MRG entries](@) from the [terminology under construction](@);
   - [modifying attributes](#syntax-rename) of a specific [MRG entry](@) in the [terminology under construction](@), e.g. for renaming a term that originated from another [scope](@).
+
 ## Prerequisites
 
 In this text, we will use the terms:

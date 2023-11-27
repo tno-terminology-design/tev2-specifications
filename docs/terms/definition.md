@@ -46,7 +46,7 @@ Working together is easier when you and your peers share the same ideas. We need
 ### Criteria
 A **definition** is a text that comprises at a minimum:
 
-- a [scope](@) that is curated ([controlled](@)) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@);
+- a [scope](@) that is [curated](@) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@);
 - a [criterion](https://www.lexico.com/definition/criterion) that specifies the necessary and sufficient conditions for determining what does and what does not constitute some [concept](@) (idea, class of [entities](@));
 - a [name or phrase](term@) that is used within the [scope](@) to refer to (unidentified, or arbitrary, or specific) [entities](@) that satisfy the criterion.
 

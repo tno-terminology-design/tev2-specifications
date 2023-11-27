@@ -10,7 +10,7 @@ glossaryText: "the process that is run by a [terms-community](@), in which their
 hoverText: "Ingestion Process: {{noRefs glossaryText}}"
 synonymOf: 
 grouptags: 
-formPhrases: ingestion-process, ingestion-processes
+formPhrases: ingestion-process, ingestion-processes, ingest, ingests, ingested, ingestion
 # Curation status
 status: proposed
 created: 2023-07-31
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Ingestion (Process)
 
-**Ingestion** (or the **ingestion process**) is the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [terminologic artifacts](@) and that adhere to the [TEv2-specifications](/docs/spec-files/ctext-file).
+**Ingestion** (or the **ingestion process**) is the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + associated criteria) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [terminologic artifacts](@) and that adhere to the [TEv2-specifications](/docs/spec-files/ctext-file).
 
 It is typical that some of the members of the [terms-community](@) are the [curators](@) of the [scope](@) for which the [terminology](@) is being suggested, discussed and maintained.
 

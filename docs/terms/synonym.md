@@ -25,14 +25,19 @@ A **synonym** is a [term](@) that has the same (or sufficiently similar) meaning
 
 While from a theoretical point of view a [term](@) and its [synonyms](@) are identical, in practice they are more 'equivalent', i.e. while they have the same meaning, when using one or the other in a sentence, there is often one term that is preferred over the other.
 
-## The `SynonymOf` field {#synonym-of}
+## The `synonymOf` field {#synonym-of}
 
-When using [synonyms](@) in documentation, chances are that not only a different [term](@) is used, but also that (minor) changes are required, e.g., in the [glossaryTerm](@) and [glossaryText](@) fields, possibly also the [hoverText](@) field, and maybe others.  in other fields of 
+[Curated texts](@) have an (optional) `synonymOf`-field in their [headers](@). The contents of that field must be the [term identifier](@) that can be dereferenced from the current [scope](@) to the [semantic unit](@) (or associated [MRG entry](@)) for which the [term](@) that is being documented is a synonym.
 
- by means of a [curated text](@) in which:
-- the [header](@) contains 
+## How Synonyms Work
 
-does not assume that if a [term](@) is a [synonym](@) of another [term](@), this other [term](@) is also a [synonym](@) of the first. This allows for treating a [term](@) that is a [synonym](@) in other ways than [terms](@) that are not. This allows, e.g., to create [HRG entries](@) for [synonyms](@) that simply refer to the [term](@) that they are a synonym of, rather than repeating the description of such a [term](@).
+Consider a `synonym`, i.e., a [curated text](@) that has a `synonymOf` field that contains a dereferenceable [term identifier](@). Let's say that the `original` is what the `synonym` is a synonym of. Here's how we construct an [MRG entry](@) for the `synonym` (assuming that the [MRG entry](@) of the original exists:
+
+1. Creating a copy of the [MRG entry](@) of the `original`.
+2. Copy all fields in the [header](@) of the `synonym` into that copy, overwriting fields that already exist.
+3. Add all required [MRG entry](@) fields as usual, possibly (again) overwriting fields that already exist.
+
+This way of working allows [curators](@) to tailor specific fields, such as the [glossary texts](@) field, or the [form phrases](@) fields for the `synonym`.
 
 ## Purpose
 Within the context of [TEv2](@), the ability to [define](@) [synonyms](@) for a [term](@) is needed so that [HRGs](@) can be made better readable without taking away control over the structure of an [HRG](@) entry.

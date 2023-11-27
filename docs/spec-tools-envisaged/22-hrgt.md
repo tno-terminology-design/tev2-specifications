@@ -126,10 +126,26 @@ where
     - a predefined way in which glossary entries are being formatted, such as `markdowntable` or
     - a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
 
-<details>
-  <summary>Example: MRGRef for generating a HRG in a markdown table format.</summary>
+The following table specifies a number of glossarylayouts. The E/O column states whether the layout is envisaged, or (already) operational:
 
-The following is an example where `<glossarylayout>` is specified using the predefined format `markdowntable`:
+| `<glossarylayout>` | E/O | Description |
+| :----------------- | :-: | :---------- |
+| `markdowntable`     | O | This format generates one (markdown) line, i.e,:<br/> \| `{{glossaryTerm}}` \| `{{glossaryText}}` \|<br/> for every [MRG entry](@) from the source [MRG](@). |
+| `essiflab`          | O | HRG entries are generated that are similar to what is shown in the [essif-lab glossary](https://essif-lab.github.io/framework/docs/essifLab-glossary) |
+
+<details>
+  <summary>Example MRGRefs for generating various HRGs.</summary>
+
+<Tabs
+  defaultValue="markdowntable"
+  values={[
+    {label: 'Markdown Table', value: 'markdowntable'},
+    {label: 'eSSIF-Lab Style', value: 'essiflab'},
+    {label: 'Complex example', value: 'complex'},
+  ]}>
+  
+<TabItem value="markdowntable">
+The following is an example where `&lt;glossarylayout&gt;` is specified using the predefined format `markdowntable`:
 
 ~~~ markdown
 | Term | Description |
@@ -142,9 +158,7 @@ The same result can be produced using a [handlebars expression](https://handleba
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="tev2" converter=
-| {{glossaryTerm}} | {{glossaryText}} |
-" %}
+{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |/n" %}
 ~~~
 
 The result of this (generated from an [MRG](@) that holds the terms [Glossary](@), [Curator](@) and [Definition](@), would look something like this:
@@ -155,14 +169,18 @@ The result of this (generated from an [MRG](@) that holds the terms [Glossary](@
 | Curator (of a Scope) | a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives. |
 | Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
 
+</TabItem>
+
+<TabItem value="essiflab">
+@Ca5e: please fill in the example as used by essif-lab
+</TabItem>
+
+<TabItem value="complex">
+@Ca5e: please document the custom functions that you created, and provide some examples for them. You could use additional tabs if needed.
+</TabItem>
+</Tabs>
+
 </details>
-
-The following table specifies a number of glossarylayouts. The E/O column states whether the layout is envisaged, or (already) operational:
-
-| `<glossarylayout>` | E/O | Description |
-| :----------------- | :-: | :---------- |
-| `markdowntable`     | E | This format generates one (markdown) line, i.e,:<br/> \| `{{glossaryTerm}}` \| `{{glossaryText}}` \|<br/> for every [MRG entry](@) from the source [MRG](@). |
-| `essiflab-like`     | E | HRG entries are generated that are similar to what is shown in the [essif-lab glossary](https://essif-lab.github.io/framework/docs/essifLab-glossary) |
 
 ## Processing, Errors and Warnings
 

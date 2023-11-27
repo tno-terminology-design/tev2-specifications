@@ -253,7 +253,7 @@ The following text needs to replace the text below:
             1. If `<termtype>:` is specified, only keep MRG entries whose `termtype` field equals the value specified by `<termtype>`;
             2. If `<term>` is specified, only keep MRG entries whose `term` field equals the value specified by `<term>`;
             4. If `<term>` is NOT specified, only keep MRG entries whose `formFields` contents are a match with `<showtext>`.
-            5. If the set of MRG entries that are kept includes more than one element, then keep only the MRG entries whose `termtype` field contains the value specified by the `defaulttermtype` field as specifiedin the MRG.
+            5. If the set of MRG entries that are kept includes more than one element, then keep only the MRG entries whose `termType` field contains the value specified by the `defaulttype` field as specifiedin the MRG.
         3. Now we're done with selecting. In case the number of elements in the set of MRG entries is
             1. 0: (empty set): an appropriate exception ('not found', or so) must be raised.
             2. 1: (term identified): the conversion step should continue using the selected MRG entry;
@@ -268,7 +268,7 @@ As soon as the variables have been provided with a value, the [MRG](@) can be fo
 
 3. **identify the [MRG entry](@) associated with the `id` field of the [TermRef](@)**. Get the [MRG](@) from the location specified by the URL `<scopedir>`/`<glossarydir>`/`<mrgfile>` (which are all in the context of [scope](@) as identified by the `scopetag` variable). The [MRG entry](@) will be [identified](@) by a process that starts with the set of all [entries](mrg-entry@) that exist in the selected [MRG](@), and then weeding out any non-matching [entries](mrg-entry@) by applying the following steps:
     - since `term` must be present, all [entries](mrg-entry@) are removed whose `term` field differs from the `term` variable;
-    - then, if the variable `termtype` is present, all [entries](mrg-entry@) whose `termtype` field has a different value from what that variable holds, are removed from the set;
+    - then, if the variable `termtype` is present, all [entries](mrg-entry@) whose `termType` field has a different value from what that variable holds, are removed from the set;
     - If the resulting set contains exactly one [MRG entry](@), this is the one that is selected; otherwise, a warning is raised.
 
 ### Rewriting the Term Ref with a Renderable Ref

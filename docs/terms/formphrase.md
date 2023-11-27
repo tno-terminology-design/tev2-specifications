@@ -7,7 +7,7 @@ termType: concept
 isa:
 glossaryTerm: Form Phrase (of a [term](@))
 glossaryText: "a word or phrase, other than the actual [term](@) that, when used in a [TermRef](@) would typically also refer to this [term](@). Form phrases may include plural forms, possessive extensions, verb-conjugation forms, and other variations."
-formPhrases: form-phrase{ss}
+formPhrases: formphrase{ss}, form-phrase{ss}
 # Curation status
 status: proposed
 created: 2023-07-31

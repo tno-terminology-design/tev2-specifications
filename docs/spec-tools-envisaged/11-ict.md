@@ -133,7 +133,6 @@ The columns in the following table are defined as follows:
 | `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs](docs/spec-files/saf), [terminology construction](/docs/spec-tools/mrg-terminology-construction), [MRG specs](/docs/spec-files/mrg), [Curated Texts](/docs/spec-files/ctext-file), [TermRefs](/docs/spec-syntax/term-ref-syntax)). |
 | `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.alvsntags`.  |
 | `term` | `<term>` | n | -txt | [term](@) that [identifies](@) a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
-| `termtypes` | `<termtypes>` | n | -txt | List of texts that serve to identify a specific kind of [semantic unit](@), e.g. `concept`, or `pattern`. Every [curated file](@), whose (front-matter) field `termtype` appears as an element in the `<termtypes>` list, will be integrity-checked. |
 | `grouptags` | `<grouptags>` | n | -txt | List of [grouptags](@). Every [curated file](@), whose (front-matter) field `grouptags` has an element that also appears as an element in the `<grouptags>` list, will be integrity-checked. |
 
 ## Integrity Checks
@@ -185,10 +184,10 @@ Integrity checks for the `scopes` section include:
 - `scopetags` must be a nonempty list of [scopetags](@).
 - `scopedir` must be a valid URL, that points to an existing directory resource other than the [scopedir](@) of the current [scope](@). This directory MUST contain a [SAF](@). <mark>Do we need an option to test the integrity of such [SAFs](@)?</mark>
 
-Integrity checks for the `entries` section consist of one part that is generic for all entries, and another part that depends on the value of the `termtype` field (so that checking of e.g. entries of type `concept` and of type `pattern` can have different checks.) The checks that every entry must pass include the following:
+Integrity checks for the `entries` section consist of one part that is generic for all entries, and another part that depends on the value of the `termType` field (so that checking of e.g. entries of type `concept` and of type `pattern` can have different checks.) The checks that every entry must pass include the following:
 
 - `scopetag` MUST also appear as the value of `terminology.scopetag`, or as an element in one of the `scopes.scopetags` elements.
-- `termtype` SHOULD be <mark>tbd.</mark>
+- `termType` SHOULD be <mark>tbd.</mark>
 - `grouptags` MUST be a list of [grouptag](@) elements.
 - `license` MUST be an existing file in the directory pointed to by `scopedir`.
 - `status` SHOULD match an element in the list `scope.statuses` of the [SAF](@).
@@ -217,7 +216,7 @@ The following constraints MUST hold for [MRG entries](@) of type `concept`:
 <TabItem value="term"><br/>
 
 :::info Editor's note
-As header fields for `term` termtypes need to be discussed, we do not yet specify any constraints
+As header fields for `term` termTypes need to be discussed, we do not yet specify any constraints
 :::
 
 </TabItem>

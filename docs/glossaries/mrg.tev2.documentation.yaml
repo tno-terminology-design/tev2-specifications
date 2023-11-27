@@ -137,7 +137,7 @@ entries:
     term: 'body-file'
     termType: 'concept'
     isa: 'curated-file'
-    bodyFile: '/spec-files/01-body-file.md'
+    bodyFile: '/spec-files/11-body-file.md'
     glossaryTerm: 'Body File'
     glossaryText: 'a file that is located somewhere within the [scopedir](@), and that contains the [body](@) of a [curated text](@). The [header](@) of that [curated text](@) has a field `bodyFile` that specifes its location within the [scopedir](@).'
     synonymOf: null
@@ -152,8 +152,9 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:body-file'
     locator: 'body-file.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/01-body-file'
-    headingids: []
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/body-file'
+    headingids:
+      - 'body-files'
     vsntag: 'documentation'
   - id: 'community'
     title: 'Community'
@@ -361,7 +362,7 @@ entries:
   - term: 'curated-text-file'
     termType: 'concept'
     isa: 'curated-file'
-    bodyFile: '/spec-files/00-curated-text-file.md'
+    bodyFile: '/spec-files/10-curated-text-file.md'
     glossaryTerm: 'Curated Text File'
     glossaryText: 'a file that contains either a (complete) [curated text](@), or the [header](@) of that [curated text](@) and a reference to the [file](body-file@) that contains its [body](@).'
     grouptags: null
@@ -375,8 +376,16 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:curated-text-file'
     locator: 'curated-text-file.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/00-curated-text-file'
-    headingids: []
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/curated-text-file'
+    headingids:
+      - 'curated-text-files'
+      - 'docusaurus-front-matter'
+      - 'tev2-curated-text-header'
+      - 'tev2-curation-status'
+      - 'origins/acknowledgements'
+      - 'curated-text'
+      - 'header-structure-{#header}'
+      - 'predefined-tev2-header-fields-{#header-fields}'
     vsntag: 'documentation'
   - term: 'curatedir'
     termType: 'concept'
@@ -546,7 +555,7 @@ entries:
     isa: null
     glossaryTerm: 'Form Phrase (of a [term](@))'
     glossaryText: 'a word or phrase, other than the actual [term](@) that, when used in a [TermRef](@) would typically also refer to this [term](@). Form phrases may include plural forms, possessive extensions, verb-conjugation forms, and other variations.'
-    formPhrases: 'form-phrase{ss}'
+    formPhrases: 'formphrase{ss}, form-phrase{ss}'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -636,6 +645,20 @@ entries:
       - 'glossarydir'
       - 'summary'
     vsntag: 'documentation'
+  - id: 'glossaryterm'
+    term: 'glossaryterm'
+    termType: 'concept'
+    isa: null
+    glossaryTerm: 'Glossary Term'
+    glossaryText: 'a human readable text that will be used as the [term](@) in a [definition](@) as presented in a [HRG](@).'
+    formPhrases: 'glossaryterm{ss}, glossary-term{ss}'
+    scopetag: 'tev2'
+    termid: 'concept:glossaryterm'
+    locator: 'glossaryterm.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/glossaryterm'
+    headingids:
+      - 'glossary-term'
+    vsntag: 'documentation'
   - id: 'governance'
     title: 'Governance'
     displayed_sidebar: 'essifLabSideBar'
@@ -683,7 +706,7 @@ entries:
     term: 'header'
     termType: 'concept'
     isa: null
-    bodyFile: '/spec-files/00-curated-text-file.md'
+    bodyFile: '/spec-files/10-curated-text-file.md'
     glossaryTerm: 'Header (of a Curated Text)'
     glossaryText: 'the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent ''-''characters, and that ends with a second occurrance of such a line. Headers live in [curated text files](@).'
     synonymOf: null
@@ -698,10 +721,16 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:header'
     locator: 'header.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/00-curated-text-file'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/curated-text-file'
     headingids:
-      - 'header'
-      - 'notes'
+      - 'curated-text-files'
+      - 'docusaurus-front-matter'
+      - 'tev2-curated-text-header'
+      - 'tev2-curation-status'
+      - 'origins/acknowledgements'
+      - 'curated-text'
+      - 'header-structure-{#header}'
+      - 'predefined-tev2-header-fields-{#header-fields}'
     vsntag: 'documentation'
   - id: 'hrd'
     term: 'hrd'
@@ -711,7 +740,7 @@ entries:
     glossaryText: 'a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically.'
     synonymOf: null
     grouptags: 'dictionary, reference-materials'
-    formPhrases: 'hrd{ss}, human-readable-dictionar{yies}, human-readable-dictionary-hrd{ss}'
+    formPhrases: 'hrd{ss}, human-readable-dictionar{yies}, human-readable-dictionar{yies}-hrd{ss}'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -756,7 +785,7 @@ entries:
     glossaryText: 'a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding.'
     synonymOf: null
     grouptags: 'glossaries, data-structures'
-    formPhrases: 'hrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-hrg{ss}'
+    formPhrases: 'hrg{ss}, human-readable-glossar{yies}, human-readable-glossar{yies}-hrg{ss}'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -828,7 +857,7 @@ entries:
     term: 'ict'
     termType: 'acronym'
     isa: null
-    bodyFile: '/spec-tools/11-ict.md'
+    bodyFile: '/spec-tools-envisaged/11-ict.md'
     glossaryTerm: 'Integrity Checker Tool'
     glossaryAlias: 'ICT'
     glossaryText: 'a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data.'
@@ -844,9 +873,23 @@ entries:
     scopetag: 'tev2'
     termid: 'acronym:ict'
     locator: 'ict.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/11-ict'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools-envisaged/ict'
     headingids:
       - 'integrity-checker-tool-(ict)'
+      - 'integrity-checker-tool-(ict)'
+      - 'installing-the-tool'
+      - 'calling-the-tool'
+      - 'parameters-(command-line-arguments)'
+      - 'integrity-checks'
+      - 'saf-integrity'
+      - 'mrg-integrity'
+      - 'header-fields-for-`termtype:-relation`'
+      - 'curated-text-integrity'
+      - 'concepts'
+      - 'patterns'
+      - 'processing,-errors-and-warnings'
+      - 'deploying-the-tool'
+      - 'discussion-notes'
     vsntag: 'documentation'
   - term: 'identifier'
     termType: 'concept'
@@ -1892,7 +1935,7 @@ entries:
     termType: 'concept'
     isa: 'identifier'
     glossaryTerm: null
-    glossaryText: 'a text of the form `<termtype>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@).'
+    glossaryText: 'a text of the form `<termType>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@).'
     synonymOf: null
     grouptags: null
     formPhrases: 'termid{ss}, term-id{ss}'

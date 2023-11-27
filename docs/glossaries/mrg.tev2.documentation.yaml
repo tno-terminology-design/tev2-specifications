@@ -813,9 +813,16 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:hrgt'
     locator: 'hrgt.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/22-hrgt'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/hrgt'
     headingids:
-      - 'hrgt---human-readable-glossary-tool'
+      - 'human-readable-glossary-generator-tool-(hrgt)'
+      - 'what-the-hrgt-does'
+      - 'installing-the-tool'
+      - 'calling-the-tool'
+      - 'mrg-ref-conversion'
+      - 'example'
+      - 'processing,-errors-and-warnings'
+      - 'deploying-the-tool'
     vsntag: 'documentation'
   - id: 'ict'
     term: 'ict'
@@ -1047,7 +1054,7 @@ entries:
     termType: 'concept'
     isa: 'semantic-unit'
     glossaryTerm: 'Mental Model'
-    glossaryText: 'A [semantic unit](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called ''viewpoint'', or ''way of thinking'').'
+    glossaryText: 'a [semantic unit](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called ''viewpoint'', or ''way of thinking'').'
     synonymOf: null
     grouptags: null
     formPhrases: 'mental-model{ss}, pattern{ss}, conceptual-model{ss}'
@@ -1211,6 +1218,41 @@ entries:
       - 'calling-the-tool'
       - 'processing,-errors-and-warnings'
       - 'deploying-the-tool'
+    vsntag: 'documentation'
+  - term: 'mrg-ref'
+    termType: 'concept'
+    isa: null
+    bodyFile: '/spec-syntax/41-mrg-ref-syntax.md'
+    glossaryTerm: 'MRGRef'
+    glossaryText: 'a text that is [marked up (in a specific way)](/docs/spec-syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@).'
+    synonymOf: null
+    grouptags: null
+    formPhrases: 'mrg-ref{ss}, mrgref{ss}'
+    status: 'proposed'
+    created: 2023-11-27T00:00:00.000Z
+    updated: 2023-11-27T00:00:00.000Z
+    contributors: 'RieksJ'
+    attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
+    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
+    scopetag: 'tev2'
+    termid: 'concept:mrg-ref'
+    locator: 'mrg-ref.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-syntax/mrg-ref-syntax'
+    headingids:
+      - 'mrg-references---syntax'
+      - 'predefined-glossary-converters'
+      - 'converter-for-markdown-tables'
+      - 'converter-for-essif-lab-glossary-look-alikes'
+      - 'docusaurus-header-fields:'
+      - 'glossary'
+      - 'docusaurus-header-fields:'
+      - 'glossary'
+      - 'docusaurus-header-fields:'
+      - 'glossary'
+      - '[glossary](/docs/terms/glossary)'
+      - '[curator-(of-a-scope)](/docs/terms/curator)'
+      - '[definition](/docs/terms/definition)'
+      - 'custom-glossary-converters-{#custom-glossary-converters}'
     vsntag: 'documentation'
   - id: 'mrgt'
     term: 'mrgt'
@@ -1756,13 +1798,13 @@ entries:
   - term: 'term-identifier'
     termType: 'concept'
     isa: 'identifier'
-    bodyFile: '/spec-syntax/12-term-identifier-syntax.md'
+    bodyFile: '/spec-syntax/21-term-identifier-syntax.md'
     glossaryTerm: 'Term Identifier'
-    glossaryText: 'a [text](identifier@), of the form `<term>@<terminology-identifier>`, that [identifies](@) a [semantic unit](@) within a particular [terminology](@). If `<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed.'
+    glossaryText: 'a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@). If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed.'
     formPhrases: 'term-identifier{ss}'
     status: 'proposed'
     created: 2022-11-24T00:00:00.000Z
-    updated: 2022-11-24T00:00:00.000Z
+    updated: 2023-11-24T00:00:00.000Z
     contributors: 'RieksJ'
     attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
@@ -1773,6 +1815,7 @@ entries:
     headingids:
       - 'term-identifier'
       - 'syntax'
+      - 'semantics---looking-for-mrg-entries-{#term-identifiers-mrg-semantics}'
       - 'examples'
     vsntag: 'documentation'
   - term: 'term-ref'
@@ -1842,6 +1885,29 @@ entries:
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-type'
     headingids:
       - 'term-type'
+      - 'default-term-type'
+      - 'recommended-term-types'
+    vsntag: 'documentation'
+  - term: 'termid'
+    termType: 'concept'
+    isa: 'identifier'
+    glossaryTerm: null
+    glossaryText: 'a text of the form `<termtype>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@).'
+    synonymOf: null
+    grouptags: null
+    formPhrases: 'termid{ss}, term-id{ss}'
+    status: 'proposed'
+    created: 2022-06-06T00:00:00.000Z
+    updated: 2022-08-09T00:00:00.000Z
+    contributors: 'RieksJ'
+    attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
+    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
+    scopetag: 'tev2'
+    termid: 'concept:termid'
+    locator: 'termid.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/termid'
+    headingids:
+      - 'term-id'
     vsntag: 'documentation'
   - term: 'terminology'
     termType: 'concept'
@@ -1868,7 +1934,7 @@ entries:
   - term: 'terminology-identifier'
     termType: 'concept'
     isa: 'identifier'
-    bodyFile: '/spec-syntax/13-terminology-identifier-syntax.md'
+    bodyFile: '/spec-syntax/31-terminology-identifier-syntax.md'
     glossaryTerm: 'Terminology Identifier'
     glossaryText: 'a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@). If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones.'
     hoverText: 'a text (identifier), of the form `<scopetag>:<vsntag>`, that identifies a terminology from within a particular scope. If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones.'

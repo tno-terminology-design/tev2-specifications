@@ -276,7 +276,7 @@ entries:
     glossaryText: 'the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@).'
     synonymOf: null
     grouptags: null
-    formPhrases: 'corpus, corpora, corpus-of-terminology'
+    formPhrases: 'corpus, corpora, corpus-of-terminology, corpus-of-a-terminology'
     status: 'proposed'
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
@@ -1275,11 +1275,11 @@ entries:
     termType: 'concept'
     isa: null
     bodyFile: '/spec-tools/13-mrg-import.md'
-    glossaryTerm: 'MRG Importer'
+    glossaryTerm: 'MRG Import (Tool)'
     glossaryText: 'is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope''s](@) [SAF](@), and putting them in the [scope''s](@) [glossarydir](@).'
     synonymOf: null
     grouptags: 'glossary-entries, terminology-management-tools'
-    formPhrases: 'mrg-import, mrg-import-tool'
+    formPhrases: 'mrg-import, mrg-importer, mrg-import-tool'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z

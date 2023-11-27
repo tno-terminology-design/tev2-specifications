@@ -529,6 +529,20 @@ entries:
     headingids:
       - 'glossary-term'
     vsntag: 'terms'
+  - id: 'glossarytext'
+    term: 'glossarytext'
+    termType: 'concept'
+    isa: null
+    glossarytext: 'Glossary Text'
+    glossaryText: 'a human readable text that will be used as the [definition](@) for a particular [term](@), as presented in a [HRG](@).'
+    formPhrases: 'glossarytext{ss}, glossary-text{ss}'
+    scopetag: 'tev2'
+    termid: 'concept:glossarytext'
+    locator: 'glossarytext.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/glossarytext'
+    headingids:
+      - 'glossary-text'
+    vsntag: 'terms'
   - term: 'grouptag'
     termType: 'concept'
     isa: 'tag'
@@ -673,6 +687,28 @@ entries:
       - 'hrg-entry'
       - 'purpose'
     vsntag: 'terms'
+  - id: 'hrg-list'
+    term: 'hrg-list'
+    termType: 'concept'
+    isa: null
+    glossaryTerm: 'HRG List'
+    glossaryText: 'a list of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc.'
+    synonymOf: null
+    grouptags: null
+    formPhrases: 'hrg-list{ss}'
+    status: 'proposed'
+    created: 2023-07-31T00:00:00.000Z
+    updated: 2023-07-31T00:00:00.000Z
+    contributors: 'RieksJ'
+    attribution: '[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)'
+    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
+    scopetag: 'tev2'
+    termid: 'concept:hrg-list'
+    locator: 'hrg-list.md'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/hrg-list'
+    headingids:
+      - 'hrg-list'
+    vsntag: 'terms'
   - id: 'hrgt'
     term: 'hrgt'
     termType: 'concept'
@@ -800,7 +836,7 @@ entries:
     hoverText: 'Ingestion Process: {{noRefs glossaryText}}'
     synonymOf: null
     grouptags: null
-    formPhrases: 'ingestion-process, ingestion-processes'
+    formPhrases: 'ingestion-process, ingestion-processes, ingest, ingests, ingested, ingestion'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -1495,6 +1531,7 @@ entries:
       - 'synonym'
       - 'summary'
       - 'the-`synonymof`-field-{#synonym-of}'
+      - 'how-synonyms-work'
       - 'purpose'
     vsntag: 'terms'
   - term: 'tag'
@@ -1879,7 +1916,7 @@ entries:
     glossaryText: 'a [tag](@) that is used to [identify](@) a specific version of a [terminology](@) from within a specific [scope](@).'
     synonymOf: null
     grouptags: null
-    formPhrases: 'versiontag{ss}, version-tag{ss}'
+    formPhrases: 'versiontag{ss}, version-tag{ss}, vsntag{ss}'
     status: 'proposed'
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-07-28T00:00:00.000Z

@@ -172,8 +172,8 @@ The [TermRef](@) resolution process has three steps:
 
 The following kinds of [TermRef](@) syntaxes are (to be) supported:
 
-- the [basic syntax](/docs/spec-syntax/term-ref-syntax#basic-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
-- the [alternative syntax](/docs/spec-syntax/term-ref-syntax#alternative-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
+- the [basic syntax](/docs/spec-syntax/term-ref-basic-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
+- the [alternative syntax](/docs/spec-syntax/term-ref-alt-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
 
 Interpretation of a [TermRef](@) leads to the population of the following variables (or, in case regexes are used, named capturing groups):
 
@@ -182,7 +182,7 @@ Interpretation of a [TermRef](@) leads to the population of the following variab
 
 Finding a [TermRef](@) in the file can be done by using a regular expressions (regexes - you can use [debuggex](https://www.debuggex.com/) to see what these regexps do (make sure you choose PCRE as the regex flavor to work with)).
 
-- For the [basic syntax](/docs/spec-syntax/term-ref-syntax#basic-syntax), you can use the PCRE regex
+- For the [basic syntax](/docs/spec-syntax/term-ref-basic-syntax), you can use the PCRE regex
   - [``(?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))``](https://www.debuggex.com/r/G1uvznpNG1mhqEx5) to find the `[` that starts a [TermRef](@), and
   - [``(?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)``](https://www.debuggex.com/r/36D57uOvsnyPehh3) to find the various parts of the [TermRef](@) as (named) capturing groups.
 
@@ -243,6 +243,22 @@ Perhaps the [TRRT](@) may use this tool as a means for generating the `term` fie
 `trait` [identifies](@) a particular kind of descriptive text that is associated with the [semantic unit](@). If specified, it must be one of the elements in the list of headingid's as specified in [the `headingids` field](/docs/spec-files/mrg#mrg-entries) of the [MRG entry](@). If omitted, the preceding `#`-character should also be omitted.
 
 ### Locating the identified MRG Entry
+
+:::info Editor's note
+The following text needs to replace the text below:
+
+
+        1. Initially, all MRG entries from the designated MRG are selected (the idea is to limit the number of selected entries step by step, until there is no more than one)
+        2. In step 2, we process the If the termref, as follows:
+            1. If `<termtype>:` is specified, only keep MRG entries whose `termtype` field equals the value specified by `<termtype>`;
+            2. If `<term>` is specified, only keep MRG entries whose `term` field equals the value specified by `<term>`;
+            4. If `<term>` is NOT specified, only keep MRG entries whose `formFields` contents are a match with `<showtext>`.
+            5. If the set of MRG entries that are kept includes more than one element, then keep only the MRG entries whose `termtype` field contains the value specified by the `defaulttermtype` field as specifiedin the MRG.
+        3. Now we're done with selecting. In case the number of elements in the set of MRG entries is
+            1. 0: (empty set): an appropriate exception ('not found', or so) must be raised.
+            2. 1: (term identified): the conversion step should continue using the selected MRG entry;
+            3. 2 or more an appropriate exception ('too many candidates found', or so) must be raised.
+:::
 
 As soon as the variables have been provided with a value, the [MRG](@) can be found by following a sequence of steps:
 

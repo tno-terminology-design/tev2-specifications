@@ -12,7 +12,7 @@ This document specifies the syntax of [form phrases](@), i.e. texts that are spe
 
 [^1]: Since [MRG entries](@) include the [header](@) of such [curated texts](@), the `formPhrases` field can also be found therein.
 
-[Form phrases](@) are [used to automatically convert](/docs/spec-tools/trrt#id) the `show text` parts of [term refs](@) into `term`s, for the purpose of accommodating, e.g., plural forms (for nouns) or conjugate forms (for verbs). This facilitates the work for [authors](@), as this no longer requires them to explicitly mention the `term` part in a [term ref](@) when the `showtext` they use matches one of the [form phrases](@).
+[Form phrases](@) are [used to automatically convert](/docs/spec-tools/trrt#id) the `show text` parts of [term refs](@) into `[termid](@)`s, for the purpose of accommodating, e.g., plural forms (for nouns) or conjugate forms (for verbs). This facilitates the work for [authors](@), as this no longer requires them to explicitly mention the `term` part in a [term ref](@) when the `showtext` they use matches one of the [form phrases](@).
 
 ## Simple Form Phrases
 

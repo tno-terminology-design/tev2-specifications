@@ -1,12 +1,12 @@
 ---
-id: term-ref-syntax
-sidebar_label: Term References
-date: 20220303
+id: term-ref-alt-syntax
+sidebar_label: TermRefs - Alt Syntax
+date: 20231123
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Term References - Syntax
+# Term References - Alternative Syntax
 
 As an [author](@) or [curator](@), you want to be able to mark words or phrases, and have them refer to (the documentation of) a particular [concept](@) or other [semantic unit](@). Such marked-up words or phrases are called [TermRefs](@). This text specifies the syntax that you can use to [author](@) [TermRefs](@).
 

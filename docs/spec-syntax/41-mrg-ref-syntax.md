@@ -43,13 +43,15 @@ The predefined glossarylayouts are:
 An [MRGref](@) that specifies `converter="markdowntable"` as its glossary layout is appropriate for generating a [glossary](@) as a markdown table within a regular markdown file. Suppose that markdown file contains the following text:
 
 <Tabs
-  defaultValue="markdowntable"
+  groupId="converter-specs"
+  defaultValue="predefined"
   values={[
-    {label: 'Predefined layout', value: 'markdowntable'},
-    {label: 'Customized layout', value: 'handlebars'},
+    {label: 'Using predefined layout', value: 'predefined'},
+    {label: 'Simple customized layout', value: 'simple'},
+    {label: 'Actual implementation', value: 'actual'},
   ]}>
 
-<TabItem value="markdowntable"><br/>
+<TabItem value="predefined"><br/>
 
 Specifying the [MRGref](@) using the predefined glossary layout called `markdowntable`:
 
@@ -61,7 +63,7 @@ Specifying the [MRGref](@) using the predefined glossary layout called `markdown
 ~~~
 </TabItem>
 
-<TabItem value="handlebars"><br/>
+<TabItem value="simple"><br/>
 
 Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
 
@@ -75,7 +77,27 @@ Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.
 Note that this is a simple handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
 </TabItem>
 
+<TabItem value="actual"><br/>
+
+Specifying the [MRGref](@) using the [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars) as it was originally implemented, is done as follows:
+
+:::warning Editor's note
+@Ca5e: please check that the handlebar expression that is ACTUALLY USED for the `essiflab` converter is specified here below.
+:::
+
+~~~ markdown
+| Term | Description |
+| :--- | :---------- |
+{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |/n" %}
+---
+~~~
+
+Note that this is a simple handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
+</TabItem>
+
 </Tabs>
+
+---
 
 Under the assumption that the [terminology identifier](@) `tev2` refers to a [terminology](@) (and associated [MRG](@)) that holds [definitions](@) for the [terms](@) `Glossary`, `Curator` and `Definition`, the result could e.g., look something like this:
 
@@ -93,13 +115,15 @@ Under the assumption that the [terminology identifier](@) `tev2` refers to a [te
 An [MRGref](@) that specifies `converter="essiflab"` as its glossary layout is appropriate for generating a [glossary](@) that is similar to the one used by [eSSIF-Lab](https://essif-lab.github.io/framework/docs/essifLab-glossary). The markdown file that would produce this would be as follows:
 
 <Tabs
-  defaultValue="essiflab"
+  groupId="converter-specs"
+  defaultValue="predefined"
   values={[
-    {label: 'Predefined layout', value: 'essiflab'},
-    {label: 'Customized layout', value: 'handlebars'},
+    {label: 'Using predefined layout', value: 'predefined'},
+    {label: 'Simple customized layout', value: 'simple'},
+    {label: 'Actual implementation', value: 'actual'},
   ]}>
 
-<TabItem value="essiflab"><br/>
+<TabItem value="predefined"><br/>
 
 Specifying the [MRGref](@) using the predefined glossary layout called `essiflab`:
 
@@ -119,9 +143,14 @@ Here endeth the glossary.
 ~~~
 </TabItem>
 
-<TabItem value="handlebars"><br/>
+<TabItem value="simple"><br/>
 
 Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
+
+:::warning Editor's note
+@Ca5e: please check that the SIMPLE converter handlebar expression in the below example sufficiently describes what the `essiflab` layout is about.
+The actual, more difficult version should be placed in the next chapter (customizing )
+:::
 
 ~~~ markdown
 ---
@@ -132,8 +161,33 @@ sidebar_label: Glossary
 
 # Glossary
 
-{% hrg="tev2" converter="@Ca5e: please specify the SIMPLE converter handlebar expression for essif-lab" %}
+{% hrg="tev2" converter="/n## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})/n/n{{#if glossaryText}}{{glossaryText}}{{else}}Error: no glossary text has been specified for this term.{{/if}}/n" %}
 
+---
+Here endeth the glossary.
+~~~
+
+Note that this is a simple handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
+</TabItem>
+
+<TabItem value="actual"><br/>
+
+Specifying the [MRGref](@) using the [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars) as it was originally implemented, is done as follows:
+
+:::warning Editor's note
+@Ca5e: please check that the handlebar expression that is ACTUALLY USED for the `essiflab` converter is specified here below.
+:::
+
+~~~ markdown
+---
+# Docusaurus header fields:
+id: glossary
+sidebar_label: Glossary
+---
+
+# Glossary
+
+{% hrg="tev2" converter="/n## [{{glossaryTerm}}]({{localize navurl}})/n/n{{glossaryText}}/n" %}
 ---
 Here endeth the glossary.
 ~~~

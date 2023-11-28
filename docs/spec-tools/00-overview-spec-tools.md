@@ -19,3 +19,7 @@ As mentioned in the [TEv2 overview](/docs/overview/overview-tev2), the toolbox c
 - the **[Human Readable Glossary generation Tool](/docs/spec-tools-envisaged/HRGT)** (or [HRGT](@)). This tool reads the [MRG](@) of a [scope](@), resolves any [TermRefs](@) as necessary, and creates a rendering that results in a [HRG](@).
 
 Other tools are [envisaged](/doc/tev2-toolbox-envisaged).
+
+:::info Configuration files
+Every [TEv2 tool](@) can be called using a (YAML) configuration file that specifies the parameters (arguments) that otherwise would need to be supplied on the commandline. Configuration files can also be combined. See the section on [Configuration Files](/docs/spec-files/configuration-file) for further details.
+:::

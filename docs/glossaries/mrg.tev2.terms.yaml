@@ -1118,6 +1118,8 @@ entries:
       - 'glossary'
       - 'docusaurus-header-fields:'
       - 'glossary'
+      - 'docusaurus-header-fields:'
+      - 'glossary'
       - '[glossary](/docs/terms/glossary)'
       - '[curator-(of-a-scope)](/docs/terms/curator)'
       - '[definition](/docs/terms/definition)'

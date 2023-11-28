@@ -61,7 +61,7 @@ Here below, you can find the items you can specify in the various configuration 
 
 The columns in the following table are defined as follows:
 1. **`Parameter`** specifies the parameter and further specifications.
-2. **`Req'd`** specifies whether (`Y`) or not (`n`) the parameter is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the parameter is required to be present when the tool is being called for actual processing (so not in case a `help` or `version` parameter is specified). If `Y`, the parameter MUST either be present in the configuration file, or as a command-line parameter.
 3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
 If a parameter is specified on the command line, it must be preceeded by the `--` (e.g., as in `--scopedir`), or the alternative short form can be used as described in the specifications of the individual tools.

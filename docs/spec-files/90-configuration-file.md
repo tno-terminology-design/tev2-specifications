@@ -36,7 +36,7 @@ hrgt
   converter: essiflab # type of converter (predefined, or a handlebars expression)
   force: true         # toggle overwriting of existing files
   input:              # glob pattern strings for files to be processed by the HRGT
-    - "**/*.md"
+    - "/docs/glossary*.md"
 
 ## Term Reference Resolution Tool
 trrt

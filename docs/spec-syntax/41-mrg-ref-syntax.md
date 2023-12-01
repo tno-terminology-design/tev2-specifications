@@ -12,26 +12,41 @@ import TabItem from '@theme/TabItem';
 
 [MRG References](@) (or [MRGRefs](@) for short) are textual constructs that refer to a specific [terminology](@) within a particular [scope](@). The purpose of an [MRG Reference](@) is that it can be converted (by the [HRGT](@)) into a text that contains a [human readable glossary](@) of the [terms](@) contained in that [terminology](@).
 
-An [MRGRef](@) has the following syntax:
+The syntax for [MRGRefs](@) is not fixed. While there is a default syntax, [curators](@) can define their own syntax, and specify that as a command-line parameter or a parameter in the configuration file for appropriate tools, such as the [HRGT](@). If an interpreter is not specified, it defaults to `basic`, the associated syntax of which is specified below. 
+
+## Default MRGRef Syntax {#default-mrgref-syntax}
+
+The default syntax for [MRGRefs](@) is as follows:
 
 ~~~ markdown
-{% hrg="<tid>" converter="<glossarylayout>" %}
+{% hrg="<tid>" converter="<converter>" %}
 ~~~
 
 where
 
 - `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
-- `<glossarylayout>` is a text that specifies either: 
-    - a predefined way in which glossary entries are being formatted, such as `markdowntable` or `essiflab`;
+- `converter="<converter>` specifies the converter that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
+- `<converter>` is a text that specifies either: 
+    - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essiflab`;
     - a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
 
-## Predefined Glossary Converters
+## Predefined MRGRef Interpreters {#predefined-mrgref-interpreters}
+
+Predefined glossary interpreters have the advantage that they are easy to use. However, it is possible that in particular contexts, they pose problems. For such cases, [curators](@) can specify custom formats.
+
+The predefined interpreters for detecting [MRGRefs](@) are as follows:
+
+| `<interpreter>` | Description |
+| :-------------- | :---------- |
+| `basic`         | `{% hrg="<tid>" converter="<converter>" %}`, where `converter="<converter>"` is optional. This is the default intepreter for [MRGRefs](@). |
+
+## Predefined MRGRef Converters {#predefined-mrgref-converters}
 
 Predefined glossary layouts have the advantage that they are easy to use, and provide for a (small) range of generally useful layouts. Also, using them would produce acceptable results even in non-standard conditions, e.g., when a [curated text](@) does not specify its `glossaryTerm` field. 
 
 However, [curators](@) can specify other formats. To help them do this, the examples we provide for the predefined formats also show how the same, or similar, results can be achieved by customized specificaitons of the glossary layouts.
 
-The predefined glossarylayouts are:
+The predefined converters for glossary generation are:
 
 | `<glossarylayout>` | Description |
 | :----------------- | :---------- |

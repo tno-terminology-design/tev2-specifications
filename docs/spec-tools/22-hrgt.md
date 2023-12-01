@@ -95,15 +95,16 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <regex>`  | n | Type of interpreter, either: a regex, alt, or basic. |
-| `-con`, `--converter <type> or <mustache>` | n | Type of converter, either: a mustache template, http, or markdown. |
+| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the interpreter to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre). |
+| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the converter to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
-## MRG Ref Conversion
+## MRG Ref Handling
 
-The [MRGRef](@) conversion process consists of the following steps:
-1. Interpret the [MRGRef](@), finding the [MRG](@) for which entries are to be listed, as well as the texts to use as leader and trailer to surround the generated [HRG list](@).
+All input files are processed as follows:
+1. Find the [MRGRef](@) as defined by the `interpreter` parameter.
+2. Interpret the [MRGRef](@), which may include processing parameters, such as `converter="<converter>` that have been provided 
 2. Create an empty [HRG list](@);
 3. Sort the [MRG entries](@) alphabetically (using the `glossaryTerm` field as a sorting key);[^1]
 4. Convert each [MRG entry](@) into an [HRG entry](@), and add it to the [HRG list](@);
@@ -127,7 +128,7 @@ The table would then be specified as follows:
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="myterms:test" converter="markdowntable" %}
+{% hrg="myterms:test" interpreter="basic" converter="markdowntable" %}
 ~~~
 
 When this markdown file is processed by the [HRGT](@), a new file is created where the above text has been converted into the following:

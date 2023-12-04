@@ -138,6 +138,8 @@ Parameters that are specific to the [mrgt](/docs/spec-tools/mrgt) can be put in 
 | :------------------- | :---: | :---------- |
 | `onNotExist: <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
 | `vsntag: <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
+| `prune: <bool>`        | n | If `<bool>` is `true`, remove all files in the [glossarydir](@) with filename `mrg.<something>.yaml`, where the filename does not contain an [MRG](@) whose filename is specified in the [SAF](@). If `<bool>` is `false` or unspecified, this option does nothing. |
+
 
 The `<action>` parameter can take the following values:
 

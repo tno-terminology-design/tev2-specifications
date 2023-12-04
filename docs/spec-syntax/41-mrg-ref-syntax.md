@@ -85,7 +85,7 @@ Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |/n" %}
+{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |\n" %}
 ---
 ~~~
 
@@ -103,7 +103,7 @@ Specifying the [MRGref](@) using the [handlebars expression](https://handlebarsj
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |/n" %}
+{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |\n" %}
 ---
 ~~~
 
@@ -176,7 +176,7 @@ sidebar_label: Glossary
 
 # Glossary
 
-{% hrg="tev2" converter="/n## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})/n/n{{#if glossaryText}}{{glossaryText}}{{else}}Error: no glossary text has been specified for this term.{{/if}}/n" %}
+{% hrg="tev2" converter="\n### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}Error: no glossary text has been specified for this term.{{/if}}\n" %}
 
 ---
 Here endeth the glossary.
@@ -202,7 +202,7 @@ sidebar_label: Glossary
 
 # Glossary
 
-{% hrg="tev2" converter="/n## [{{glossaryTerm}}]({{localize navurl}})/n/n{{glossaryText}}/n" %}
+{% hrg="tev2" converter="\n## [{{glossaryTerm}}]({{localize navurl}})\n\n{{glossaryText}}\n" %}
 ---
 Here endeth the glossary.
 ~~~

@@ -44,8 +44,8 @@ versions:
   - "-term[@]" # exclude the `@` (which is only used for debugging purposes)
 - vsntag: patterns # this version contains all patterns we need within this scope
   termselection:
-  - termtype[pattern]
-  - termtype[pattern]@essif-lab
+  - termType[pattern]
+  - termType[pattern]@essif-lab
 - vsntag: documentation # terms that are needed for this specification
   altvsntags: [ latest ] # alternative verstiontags
   termselection:
@@ -55,5 +55,5 @@ versions:
   - "term[party]@essif-lab"
   - "term[manage,management,governance,objective,risk,owner,owned]@essif-lab" 
   - "term[partial-identity,identifier,identity]@essif-lab" 
-  - "term[pattern-identity,pattern-identification]@essif-lab"
+  - "term[identity,identification]@essif-lab"
   - "termType[concept,acronym,abbreviation]" # import all 

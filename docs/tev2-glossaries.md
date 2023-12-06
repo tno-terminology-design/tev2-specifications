@@ -7,30 +7,30 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# All TEv2 Glossaries
+# Glossary Generation Demo
 
 This page is evidence that an [HRG](@) can be generated for every [MRG](@) that is available within the scope. It also shows that [HRGs](@) can be generated in different formats.
 
 <Tabs
   defaultValue="default"
   values={[
-    {label: '"" (default)', value: 'default'},
-    {label: ':Terms', value: 'terms'},
-    {label: ':Documentation', value: 'documentation'},
-    {label: 'essif-lab:latest', value: 'latest'},
+    {label: 'TEv2 glossary',             value: 'default'},
+    {label: 'Curated Terms glossary',    value: 'terms'},
+    {label: 'Mental Model glossary',     value: 'patterns'},
+    {label: 'Latest eSSIF-Lab glossary', value: 'latest'},
   ]}>
 
 <TabItem value="default">
 
-This is the [glossary](@) for the default [terminology](@) within this [scope](@), in the format as defined in file `terminology-config.yaml`, which holds the default configurations for the [TEv2 tools](@) within the this [scope](@).
+Here is the [glossary](@) for the default [terminology](@) within this (TEv2) [scope](@), in the format as defined in file `terminology-config.yaml`, which holds the default configurations for the [TEv2 tools](@) within the this [scope](@).
 
-{% hrg="" %}
+{% hrg="tev2" %}
 
 </TabItem>
 
 <TabItem value="terms">
 
-This is the [glossary](@) for the [terminology](@) within this [scope](@), that only contains the [terms](@) that are actually [defined](@) (and [curated](@)) therein. It is formatted as a `markdowntable`.
+This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [scope](@). It is formatted as a `markdowntable`.
 
 | Term | Definition |
 | ---- | ---------- |
@@ -38,19 +38,20 @@ This is the [glossary](@) for the [terminology](@) within this [scope](@), that 
 
 </TabItem>
 
-<TabItem value="latest">
+<TabItem value="patterns">
 
-This is the [glossary](@) for the `latest` version of the [terminology](@) within this [scope](@). It is formatted as in `essiflab`.
+This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are known within this (TEv2) scope. It is formatted in a custom format (specified by a handlebars expression template).
 
-{% hrg=":latest" converter="essif" %}
+{% hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
+{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n" %}
 
 </TabItem>
 
-<TabItem value="documentation">
+<TabItem value="latest">
 
-This is the [glossary](@) for the [terminology](@) within this [scope](@) that is used for documentation purposes (version is `documentation`). It is formatted in `html`.
+This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted as in `essiflab`.
 
-{% hrg=":documentation" converter="html" %}
+{% hrg="essif-lab:latest" converter="essiflab" %}
 
 </TabItem>
 

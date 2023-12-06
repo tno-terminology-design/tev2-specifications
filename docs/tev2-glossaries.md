@@ -1,7 +1,7 @@
 ---
 id: tev2-glossaries
-toc_min_heading_level: 0
-toc_max_heading_level: 1
+toc_min_heading_level: 9
+toc_max_heading_level: 9
 date: 20231205
 ---
 
@@ -24,7 +24,9 @@ This page is evidence that an [HRG](@) can be generated for every [MRG](@) that 
 
 <TabItem value="default">
 
-Here is the [glossary](@) for the default [terminology](@) within this (TEv2) [scope](@), in the format as defined in file `terminology-config.yaml`, which holds the default configurations for the [TEv2 tools](@) within the this [scope](@).
+:::info
+This is the [glossary](@) for the default [terminology](@) within this (TEv2) [scope](@), in the format as defined in file `terminology-config.yaml`, which holds the default configurations for the [TEv2 tools](@) within the this [scope](@).
+:::
 
 {% hrg="tev2" %}
 
@@ -32,7 +34,9 @@ Here is the [glossary](@) for the default [terminology](@) within this (TEv2) [s
 
 <TabItem value="terms">
 
+:::info
 This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [scope](@). It is formatted as a `markdowntable`.
+:::
 
 | Term | Definition |
 | ---- | ---------- |
@@ -42,7 +46,9 @@ This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [
 
 <TabItem value="patterns">
 
+:::info
 This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are known within this (TEv2) scope. It is formatted in a custom format (specified by a handlebars expression template).
+:::
 
 {% hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
 {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n" %}
@@ -51,7 +57,9 @@ This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are know
 
 <TabItem value="latest">
 
+:::info
 This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted as in `essiflab`.
+:::
 
 {% hrg="essif-lab:latest" converter="essiflab" %}
 

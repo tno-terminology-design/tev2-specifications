@@ -28,7 +28,6 @@ scope:
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #
-
 - scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
 - scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
@@ -39,30 +38,22 @@ scopes:  #
 # See the Glossary Generation Tool (GGT) for details about the syntax and semantics.
 #
 versions:
-
 - vsntag: terms # this version contains all terms that are curated within this scope
   termselection:
   - "*" # import all tev2 terms.
+  - "-term[@]" # exclude the `@` (which is only used for debugging purposes)
+- vsntag: patterns # this version contains all patterns we need within this scope
+  termselection:
+  - termtype[pattern]
+  - termtype[pattern]@essif-lab
 - vsntag: documentation # terms that are needed for this specification
   altvsntags: [ latest ] # alternative verstiontags
   termselection:
   - "term[actor,action,community,control,entity,knowledge]@essif-lab"
-  - "rename action [term:act, formPhrases:'act{ss}']"
+  - "rename action [id:act, term:act, formPhrases:'act{ss}']"
   - "term[action]@essif-lab"
   - "term[party]@essif-lab"
   - "term[manage,management,governance,objective,risk,owner,owned]@essif-lab" 
   - "term[partial-identity,identifier,identity]@essif-lab" 
-  - "term[pattern-party-actor-action,pattern-jurisdiction]@essif-lab" 
   - "term[pattern-identity,pattern-identification]@essif-lab"
-  - "*" # import all tev2 terms.
-- vsntag: test # this version MUST only be used for testing the MRG generator
-  altvsntags: # alternative verstiontags
-    - firstAltVsnTag
-    - secondAltVsnTag
-  termselection:
-    - "grouptags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
-    - "term[party,community]@essif-lab:documentation" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
-    - "-grouptags[terminology]" # remove all terms tagged with the grouptag `terminology`
-  status: proposed
-  from: 20220312
-  to:
+  - "termType[concept,acronym,abbreviation]" # import all 

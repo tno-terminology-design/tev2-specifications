@@ -1,0 +1,7 @@
+terminology:
+  scopetag: 'tev2'
+  scopedir: 'https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs'
+  curatedir: 'terms'
+  vsntag: 'patterns'
+scopes: []
+entries: []

@@ -1,7 +1,7 @@
 ---
 id: tev2-glossaries
-toc_min_heading_level: 9
-toc_max_heading_level: 9
+toc_min_heading_level: 6
+toc_max_heading_level: 6
 date: 20231205
 ---
 

@@ -11,22 +11,14 @@ mrgt:
 
 ## Human Readable Glossary Tool
 hrgt:
-  interpreter: basic
-  converter: |+
-    ### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
-    {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n
+  interpreter: default          # Type of interpreter, i.e., a regex, or a predefined type (`default`)
+  converter: markdown-section-3 # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-table-row, `markdown-section-2`, `markdown-section-3`)
   input:
     - "tev2-gloss*.md"
 
 ## Term Reference Resolution Tool
 trrt:
-  interpreter: basic # type of interpreter, either: a regex, "alt", or "basic"
-  converter:
-    >- # Type of converter, either: a mustache template, "http", or "markdown"
-    <a
-    href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
-    hovertext="{{#if hoverText}}{{hoverText}}{{else}}{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}: {{noRefs glossaryText type="markdown"}}{{/if}}"
-    >{{showtext}}</a>
-  force: true # toggle overwriting of existing files
+  interpreter: default           # Type of interpreter, i.e., a regex, or a predefined type (`default`, `alt`)") // `basic` is deprecated
+  converter: html-hovertext-link # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`)")
   input: # glob pattern strings for files to be processed by the TRRT
     - "**/*.md"

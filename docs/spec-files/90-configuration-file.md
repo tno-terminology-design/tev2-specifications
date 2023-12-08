@@ -22,33 +22,26 @@ The following file has been used in the context of developing this documentation
 # TNO Terminology Design tools configuration file (yaml)
 
 ## General
-scopedir: docs      # path of the scope directory where the SAF is located
-onNotExist: warn    # the action in case something that is necessary for further processing didn't exist
+scopedir: . # path of the scope directory where the SAF is located
+onNotExist: warn # the action in case a `vsntag` was specified, but wasn't found in the SAF
+output: . # (root) directory for output files to be written to
 
 ## Machine Readable Glossary Tool
-mrgt
-  vsntag:             # versiontag for which the MRG needs to be (re)generated. Leave empty to process all versions
+mrgt:
+  vsntag: # versiontag for which the MRG needs to be (re)generated. Leave empty to process all versions
 
 ## Human Readable Glossary Tool
-hrgt
-  output: .           # (root) directory for output files to be written
-  interpreter: basic  # type of interpreter (predefined, or PCRE regex)
-  converter: essiflab # type of converter (predefined, or a handlebars expression)
-  force: true         # toggle overwriting of existing files
-  input:              # glob pattern strings for files to be processed by the HRGT
-    - "/docs/glossary*.md"
+hrgt:
+  interpreter: basic  # Type of interpreter, i.e., predefined (`basic`), or regex"
+  converter: essiflab # Type of interpreter, i.e., predefined (`basic`), or regex
+  input:
+    - "tev2-gloss*.md"
 
 ## Term Reference Resolution Tool
-trrt
-  output: .           # (root) directory for output files to be written
-  interpreter: basic  # type of interpreter (predefined, or PCRE regex)
-  converter: >-       # type of converter (predefined, or a handlebars expression)
-    <a
-    href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
-    hovertext="{{#if hoverText}}{{hoverText}}{{else}}{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}: {{noRefs glossaryText type="markdown"}}{{/if}}"
-    >{{showtext}}</a>
-  force: true         # toggle overwriting of existing files
-  input:              # glob pattern strings for files to be processed by the TRRT
+trrt:
+  interpreter: basic # Type of interpreter, i.e., predefined (`basic`, `alt`), or regex
+  converter: essiflab # Type of converter, i.e., predefined (`html`, `markdown`, `essiflab`, `glossarytext`), or mustache/handlebars template
+  input: # glob pattern strings for files to be processed by the TRRT
     - "**/*.md"
 ~~~
 

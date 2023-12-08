@@ -40,7 +40,7 @@ This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [
 
 | Term | Definition |
 | ---- | ---------- |
-{% hrg=":terms" converter="markdowntable" %}
+{% hrg=":terms" converter="markdown-table-row" %}
 
 </TabItem>
 
@@ -58,10 +58,10 @@ This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are know
 <TabItem value="latest">
 
 :::info
-This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted as in `essiflab`.
+This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted using `html-hovertext-link`.
 :::
 
-{% hrg="essif-lab:latest" converter="essiflab" %}
+{% hrg="essif-lab:latest" converter="html-hovertext-link" %}
 
 </TabItem>
 

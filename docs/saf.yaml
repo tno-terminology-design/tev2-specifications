@@ -49,9 +49,13 @@ versions:
 - vsntag: documentation # terms that are needed for this specification
   altvsntags: [ latest ] # alternative verstiontags
   termselection:
-  - "term[party,actor,action,community,control,entity,knowledge]@essif-lab"
-  - "rename action [id:act, term:act, formPhrases:'act{ss}']"
   - "term[action]@essif-lab"
-  - "term[manage,management,governance,objective,risk,owner,owned]@essif-lab" 
-  - "term[partial-identity,identifier,identity,identification]@essif-lab" 
+  - "rename action [id:act, term:act, formPhrases:'act{ss}']"
+  - "term[party,actor,onboarding,action,organization,community,entity,legal-entity]@essif-lab"
+  - "term[ssi,assertion,claim,credential,issue,verify,validate,transaction]@essif-lab"
+  - "term[manage,management,governance,risk,owner,owned]@essif-lab" 
+  - "term[jurisdiction,objective,control,expectation,obligation]@essif-lab"
+  - "term[control-objective,risk-objective,compliance-objective]@essif-lab" 
+  - "term[identity,partial-identity,identifier,identify,identification]@essif-lab"
+  - "term[concept,relation,property,pattern,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
   - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)

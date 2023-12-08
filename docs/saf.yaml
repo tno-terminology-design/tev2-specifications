@@ -49,11 +49,9 @@ versions:
 - vsntag: documentation # terms that are needed for this specification
   altvsntags: [ latest ] # alternative verstiontags
   termselection:
-  - "term[actor,action,community,control,entity,knowledge]@essif-lab"
+  - "term[party,actor,action,community,control,entity,knowledge]@essif-lab"
   - "rename action [id:act, term:act, formPhrases:'act{ss}']"
   - "term[action]@essif-lab"
-  - "term[party]@essif-lab"
   - "term[manage,management,governance,objective,risk,owner,owned]@essif-lab" 
-  - "term[partial-identity,identifier,identity]@essif-lab" 
-  - "term[identity,identification]@essif-lab"
-  - "termType[concept,acronym,abbreviation]" # import all 
+  - "term[partial-identity,identifier,identity,identification]@essif-lab" 
+  - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)

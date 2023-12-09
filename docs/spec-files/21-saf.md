@@ -6,16 +6,11 @@ date: 20230103
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Scope Administration File (SAF)
 
-Every [scope](@) MUST have exactly one Scope Administration File or [SAF](@), i.e. a file contains whatever needs to be administered in the [scope](@), and that various tools need to find e.g. the [scope's](@) [MRG](@), [curated texts](@), [scopetags](@), etc.
+A **Scope Administration File (SAF)** is a [YAML](https://yaml.org/) file, named `saf.yaml`, that provides a centralized record of the resources available in that [scope](@), facilitating their access by various tools involved in terminology management. It specifies where its [curated texts](@), [glossaries](@) etc. live, the relationships it has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@). The SAF of a [scope](@) is located in its [scopedir](@).
 
-The [SAF](@) MUST be located in the (root of the) [scopedir](@), and is called `saf.yaml`. It is to be created and maintained by the [curators](@) of the [scope](@).
-
-This document specifies the structure of such [SAFs](@).
+The directory within which the [SAF](@) lives, is the [scopedir](@) of the [scope](@) that it serves.
 
 ## Scope Administration File Field Descriptions
 

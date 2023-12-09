@@ -5,6 +5,7 @@ id: mrg
 term: mrg
 termType: concept
 isa: glossary
+bodyFile: "/spec-files/31-mrg.md"
 glossaryTerm: Machine Readable Glossary (MRG)
 glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems."
 hoverText: "MRG: {{noRefs glossaryText}}"
@@ -20,7 +21,3 @@ contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
-
-# MRG - Machine Readable Glossary
-
-An **MRG** is a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems. Unlike [dictionaries](@), the [terms](@) in an MRG are not ambiguous and have clear and well-defined [meanings](definition@).

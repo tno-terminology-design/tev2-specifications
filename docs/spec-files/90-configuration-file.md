@@ -153,7 +153,7 @@ It is described in section [MRG References syntax](/docs/spec-syntax/mrg-ref-syn
 
 Each of the predefined HRGT converters produces an alphabetically sorted list of some of the contents of the [MRG entries](@) that are in the [terminology](@) ([MRG](@)) as detected by the HRGT interpreter.The below table lists the predefined converters, and specifies what each such [MRG entry](@) is converted into.
 
-The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replaced with the contents of their corresponding fields from the [MRG entry](@). <!-- `{{glossaryTerm}}` is typically converted into a link to the rendered version of the [curated text](@) of the [semantic unit](@) to which the [TermRef](@) refers -->
+The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replaced with the contents of their corresponding fields from the [MRG entry](@). The `{{glossaryTerm}}` is typically converted into a link to the rendered version of the [curated text](@) of the [semantic unit](@) to which the [TermRef](@) refers.
 
 | converter | Convert every [MRG entry](@) into: |
 | :-------- | :------ |

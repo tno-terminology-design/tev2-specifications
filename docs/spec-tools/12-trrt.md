@@ -172,8 +172,8 @@ The [TermRef](@) resolution process has three steps:
 
 The following kinds of [TermRef](@) syntaxes are (to be) supported:
 
-- the [basic syntax](/docs/spec-syntax/term-ref-basic-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
-- the [alternative syntax](/docs/spec-syntax/term-ref-alt-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the basic syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
+- the [default syntax](/docs/spec-syntax/term-ref-default-syntax), i.e. \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`);
+- the [alternative syntax](/docs/spec-syntax/term-ref-alt-syntax), e.g. \[`show text`@\], which basically moves the `@`-character from the default syntax within the square brackets, which in many (if not most) cases is more convenient for [authors](@), but has the drawback that the rendering of the plain markdown text would be rendered as [show text](@), which may be inconvenient.
 
 Interpretation of a [TermRef](@) leads to the population of the following variables (or, in case regexes are used, named capturing groups):
 
@@ -182,7 +182,7 @@ Interpretation of a [TermRef](@) leads to the population of the following variab
 
 Finding a [TermRef](@) in the file can be done by using a regular expressions (regexes - you can use [debuggex](https://www.debuggex.com/) to see what these regexps do (make sure you choose PCRE as the regex flavor to work with)).
 
-- For the [basic syntax](/docs/spec-syntax/term-ref-basic-syntax), you can use the PCRE regex
+- For the [default syntax](/docs/spec-syntax/term-ref-default-syntax), you can use the PCRE regex
   - [``(?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))``](https://www.debuggex.com/r/G1uvznpNG1mhqEx5) to find the `[` that starts a [TermRef](@), and
   - [``(?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)``](https://www.debuggex.com/r/36D57uOvsnyPehh3) to find the various parts of the [TermRef](@) as (named) capturing groups.
 

@@ -9,7 +9,7 @@ Within the [TNO Terminology Design](@) effort, the [TRRT](@) is able to interpre
 2. [Conversion](#converter) works by using Mustache templates. Any values from the standard [interpreters](#interpreter), and all properties supplied in the matching [MRG Entry](@), can be used as [Mustache expressions](https://handlebarsjs.com/guide/expressions).
 
 ## Interpreter
-Different types of interpreters are present, allowing for the switching between the [basic syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom interpreter may also be set. All interpreters consist of a PCRE regular expression with named capturing groups that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
+Different types of interpreters are present, allowing for the switching between the [default syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom interpreter may also be set. All interpreters consist of a PCRE regular expression with named capturing groups that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
 
 The [TRRT](@) interpreter attempts to obtain the [term ref](@) properties: `showtext`, `id`, `trait`, `scopetag`, and `vsntag`. If `id` is not set, `showtext` is converted to lowercase, `'()` characters are removed, and any non-alphabetic, non-numeric characters are replaced by a `-`, leaving only alphabetic, numeric, underscore or dash characters as part of `id`.
 
@@ -34,14 +34,14 @@ Setting interpreters mainly allows for the use of different [term ref](@) syntax
 \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`)<br/>
 
 **Information**<br/>
-The default/basic interpreter uses a regex that can find [term refs](@) using the [basic syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the regex displayed below as the interpreter.
+The default/basic interpreter uses a regex that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the regex displayed below as the interpreter.
 
 ~~~regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))
 (?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)
 ~~~
 
-The first part of the regex pattern (displayed on the first line) is responsible for finding the start of a term ref using the [basic syntax](specifications#interpretation-of-the-term-ref). The second part of the regex pattern finds the various parts of the [term ref](@) and stores them as named capturing groups.
+The first part of the regex pattern (displayed on the first line) is responsible for finding the start of a term ref using the [default syntax](specifications#interpretation-of-the-term-ref). The second part of the regex pattern finds the various parts of the [term ref](@) and stores them as named capturing groups.
 
 </TabItem>
 <TabItem value="alternative">
@@ -54,7 +54,7 @@ The first part of the regex pattern (displayed on the first line) is responsible
 **Information**<br/>
 The alternative interpreter uses a regex that can find [term refs](@) using the [alternative syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Using '`alternative`' as the value of the interpreter, sets the regex displayed below as the interpreter.
 
-The alternative syntax moves the `@`-character from the basic syntax within the square brackets. This is particularly useful in the vast majority of cases, where the default processing of `showtext` results in `term`, and `trait` is absent.
+The alternative syntax moves the `@`-character from the default syntax within the square brackets. This is particularly useful in the vast majority of cases, where the default processing of `showtext` results in `term`, and `trait` is absent.
 
 ~~~regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+@[:a-z0-9_-]*\](?:\([#a-z0-9_-]+\))?)
@@ -108,7 +108,7 @@ The converter used inside the TNO Terminology Design repositories is more elabor
   <summary>Examples</summary>
 
 Every explored example uses the following (simplified) [MRG entry](@) properties. The converter also has access to the properties of the [term ref](@), which in this case is the term [Curator](@).<br/>
-For the examples, we imagine that the following [term ref](@), using the [basic syntax](specifications#interpretation-of-the-term-ref), was found by the interpreter: \[`Curators`\](#`examples`@`termdsn`:`main`).
+For the examples, we imagine that the following [term ref](@), using the [default syntax](specifications#interpretation-of-the-term-ref), was found by the interpreter: \[`Curators`\](#`examples`@`termdsn`:`main`).
 
 <details>
   <summary>MRG Entry</summary>

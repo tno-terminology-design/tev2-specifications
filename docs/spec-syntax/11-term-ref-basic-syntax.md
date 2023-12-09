@@ -1,20 +1,20 @@
 ---
-id: term-ref-basic-syntax
-sidebar_label: TermRefs - Basic Syntax
+id: term-ref-default-syntax
+sidebar_label: TermRefs - Default Syntax
 date: 20231123
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Term References - Basic Syntax (Default)
+# Term References - Default Syntax
 
 As an [author](@) or [curator](@), you want to be able to mark words or phrases, and have them refer to (the documentation of) a particular [concept](@) or other [semantic unit](@). Such marked-up words or phrases are called [TermRefs](@).
 
-The syntax for [TermRefs](@) isn't fixed. This file specifies one of the different ways in which this can be done, and call it the **'basic syntax' for [TermRefs][@]**.
+The syntax for [TermRefs](@) isn't fixed. This file specifies one of the different ways in which this can be done, and call it the **'default syntax' for [TermRefs][@]**.
 
-In the basic syntax,a [TermRef](@) can be thought of as a [Markdown link](https://www.markdownguide.org/basic-syntax/#links), but rather than linking to some URL or fragment, it refers to (a specific trait of) a specific [concept](@) or other [semantic unit](@), as defined in a particular [terminology](@).
+In the default syntax,a [TermRef](@) can be thought of as a [Markdown link](https://www.markdownguide.org/basic-syntax/#links), but rather than linking to some URL or fragment, it refers to (a specific trait of) a specific [concept](@) or other [semantic unit](@), as defined in a particular [terminology](@).
 
-The most general form of the basic syntax is:
+The most general form of the default syntax is:
 
 \[ `show text` \]( `termtype` : `term` # `trait` @ `scopetag` : `vsntag` )
 

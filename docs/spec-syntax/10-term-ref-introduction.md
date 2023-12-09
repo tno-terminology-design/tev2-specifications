@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 As an [author](@) or [curator](@), you want to be able to mark words or phrases, and have them refer to (the documentation of) a particular [concept](@) or other [semantic unit](@). Such marked-up words or phrases are called [TermRefs](@).
 
 The following syntaxes can be used out-of-the-box for [TermRefs](@):
-- the **[basic (default) syntax](./term-ref-basic-syntax)**, and
+- the **[basic (default) syntax](./term-ref-default-syntax)**, and
 - the **[alternative syntax](./term-ref-alt-syntax)**.
 
 ## Customizing TermRef Syntax

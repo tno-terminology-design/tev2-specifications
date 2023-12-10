@@ -33,9 +33,13 @@ jobs:
       - name: Run terminology tools
         run: |
           cd docs
+          mrg-import --version
           mrg-import -c terminology-config.yaml
+          mrgt       --version
           mrgt       -c terminology-config.yaml
+          hrgt -f    --version
           hrgt -f    -c terminology-config.yaml
+          trrt -f    --version
           trrt -f    -c terminology-config.yaml
 
       - name: Commit MRGs to repository

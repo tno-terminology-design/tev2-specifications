@@ -58,10 +58,10 @@ This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are know
 <TabItem value="latest">
 
 :::info
-This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted using `html-hovertext-link`.
+This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted using `markdown-section-3`.
 :::
 
-{% hrg="essif-lab:latest" converter="html-hovertext-link" %}
+{% hrg="essif-lab:latest" converter="markdown-section-3" %}
 
 </TabItem>
 

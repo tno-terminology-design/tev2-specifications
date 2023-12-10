@@ -36,12 +36,12 @@ jobs:
           mrg-import -c terminology-config.yaml
           mrgt       -c terminology-config.yaml
           hrgt -f    -c terminology-config.yaml
-          trrt       -c terminology-config.yaml
+          trrt -f    -c terminology-config.yaml
 
-      - name: Commit glossaries to repository
+      - name: Commit MRGs to repository
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update Glossaries
+          commit_message: Update MRGs
           file_pattern: 'docs/glossaries/mrg.*.yaml'
       
       - name: Install Dependencies

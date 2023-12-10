@@ -1406,6 +1406,7 @@ entries:
     term: 'mrg'
     termType: 'concept'
     isa: 'glossary'
+    bodyFile: '/spec-files/31-mrg.md'
     glossaryTerm: 'Machine Readable Glossary (MRG)'
     glossaryText: 'a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems.'
     hoverText: 'MRG: {{noRefs glossaryText}}'
@@ -1421,9 +1422,15 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:mrg'
     locator: 'mrg.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/mrg'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/mrg'
     headingids:
-      - 'mrg---machine-readable-glossary'
+      - 'machine-readable-glossary-(mrg)'
+      - 'file-naming-conventions-{#mrg-file-naming-conventions}'
+      - 'mrg-structure'
+      - 'mrg-`terminology`-section-{#mrg-terminology}'
+      - 'mrg-`scopes`-section-{#mrg-scopes}'
+      - 'mrg-entries-(the-`entries`-section)-{#mrg-entries}'
+      - 'footnotes'
     vsntag: 'documentation'
   - term: 'mrg-entry'
     termType: 'concept'
@@ -1456,7 +1463,7 @@ entries:
     glossaryText: 'is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope''s](@) [SAF](@), and putting them in the [scope''s](@) [glossarydir](@).'
     synonymOf: null
     grouptags: 'glossary-entries, terminology-management-tools'
-    formPhrases: 'mrg-import, mrg-importer, mrg-import-tool'
+    formPhrases: 'mrg-import, mrg-importer, mrg-import-tool, mrg-importer-tool'
     status: 'proposed'
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -1465,7 +1472,7 @@ entries:
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
     termid: 'concept:mrg-import'
-    locator: 'mrg-importer.md'
+    locator: 'mrg-import.md'
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/mrg-import'
     headingids:
       - 'mrg-import-tool'

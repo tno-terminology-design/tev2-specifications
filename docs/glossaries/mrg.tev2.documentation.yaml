@@ -1552,6 +1552,7 @@ entries:
       - 'storing-a-[provisional-mrg](@)-in-the-[glossarydir](@)-{#mrgt-mrg-filenames}'
       - 'phase-2:-post-processing-synonyms-{#mrgt-post-processing}'
       - 'phase-3:-post-processing-other-fields'
+      - 'phase-4:-checking-the-result'
       - 'exceptions,-warnings,-and-logging-{#exceptions}'
       - 'notes'
     vsntag: 'documentation'
@@ -1890,7 +1891,7 @@ entries:
     glossaryText: 'a text with which the [TRRT](@) replaces a [TermRef](@), that can be processed by specific third party rendering tools, the result of which is a rendering of the original [TermRef](@) that has additional characteristics that help [readers](@) to (better) understand the intention of its [author](@).'
     synonymOf: null
     grouptags: null
-    formPhrases: 'renderable-ref{ss}, renderable-reference{ss}'
+    formPhrases: 'renderable-ref{ss}, renderableref{ss}, renderable-reference{ss}'
     status: 'proposed'
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z

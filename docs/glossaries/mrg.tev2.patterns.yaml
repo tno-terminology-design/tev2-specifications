@@ -343,7 +343,8 @@ entries:
     attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
     originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
     scopetag: 'tev2'
-    locator: 'patterns\pattern-terminology.md'
+    termid: 'pattern:pattern-terminology'
+    locator: 'patterns/pattern-terminology.md'
     navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/patterns/pattern-terminology'
     headingids:
       - 'create-and-maintain-terminologies'
@@ -352,7 +353,6 @@ entries:
       - 'white:-parties,-communities-{#white}'
       - 'green:-scopes---data-artifacts-for-referencing-and-documenting-knowledge-{#green}'
       - 'yellow:-intangible-concepts-{#yellow}'
-    termid: 'pattern:pattern-terminology'
     vsntag: 'patterns'
   - id: 'pattern-world-model'
     displayed_sidebar: 'essifLabSideBar'

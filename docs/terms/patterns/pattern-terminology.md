@@ -1,6 +1,6 @@
 ---
 # TEv2 Curated Text Header
-term: pattern-terminology
+term: terminology
 termType: pattern
 isa:
 glossaryTerm: "Terminology Pattern"

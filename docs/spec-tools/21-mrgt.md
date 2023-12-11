@@ -10,6 +10,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::info Editor's note
+Documentation needs to be adjusted for:
+- Converting formPhrases: MRGT will write expanded formPhrase macros into MRGEntry `formPhrases` field
+:::
+
 The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine Readable Glossaries ([MRGs](@)) for one specific, or all [terminology](@) versions that are [curated](@) within a specific [scope](@). [MRGs](@) come in a specific, well-defined [format](/docs/spec-files/mrg). They contain some meta-data, followed by a list of so-called [MRG entries](@), one for every [term](@) in its [scope](@), which represent [concepts](@) and other [semantic units](@) that are known within that [scope](@).
 
 The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
@@ -90,10 +95,10 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-c`, `--config <path>`       | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-h`, `--help`                | n | display help for command. |
 | `-o`, `--onNotExist <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
-| `-p`, `--prune`               | n | Remove all files in the [glossarydir](@) with filename `mrg.<something>.yaml`, where the filename does not contain an [MRG](@) whose filename is specified in the [SAF](@). |
 | `-s`, `--scopedir <path>`     | n | Path of the scope directory from which the tool is called. |
 | `-v`, `--vsntag <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
 | `-V`, `--version`             | n | output the version number of the tool. |
+<!-- | `-p`, `--prune`               | n | Remove all files in the [glossarydir](@) with filename `mrg.<something>.yaml`, where the filename does not contain an [MRG](@) whose filename is specified in the [SAF](@). | -->
 
 The `<action>` parameter can take the following values:
 
@@ -126,6 +131,9 @@ In this phase, for every [terminology](@) version that is to be created, one [pr
 - all fields in the [MRG entry](@) that comes from another [MRG](@) (typically from another [scope](@)). 
 
 The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syntax) specifies precisely how [provisional MRGs](@) are created.
+
+After a [provisional MRG entry](@) is created, the following modifications are made:
+- in the `formPhrases` field, the [form phrase macros](/docs/spec-syntax/form-phrase-syntax#form-phrase-macros) are resolved. This means that the `formPhrases` field in an [MRG entry] is the list of all [form phrases](@). 
 
 #### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrgt-mrg-filenames}
 
@@ -168,6 +176,14 @@ Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so
 | `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be either in the [curated text file](@) or in a separate [body file](@). |
 
 The [MRGT](@) run is concluded after all these modifications have been written to their appropriate [MRG](@) files.
+
+### Phase 4: checking the result
+
+The last step consists of checking crucial properties that [MRGs](@) are relied on to have, and raising apropriate exceptions in case something is wrong. This helps [curators](@) that check the log outputs to become aware of things they may need to fix before these [MRGs](@) are further used (or published).
+
+In this step, the following checks are done (as a minimum):
+- The value of the `termid` field in one [MRG Entry](@) differs from the value of the `termid` field of all other [MRG Entries](@). This ensures that `termid` contains a unique identifier (primary key) within the context of the [MRG](@).
+
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 

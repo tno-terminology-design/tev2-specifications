@@ -61,7 +61,7 @@ formPhrases: actors, actor's, actor(s)
 ~~~
 </details>
 
-## Form phrase macros
+## Form phrase macros {#form-phrase-macros}
 
 When you have worked some time with [form phrases](@), you will have noticed some patterns. For example, there many nouns (such as `actor`, `term`, or `form phrase`) have a plural form that can be constructing by adding an `s`, and it is conventient to specify such a plural form as a [form phrase](@). These nouns also have other often recurring forms, that are constructed by adding, e.g., `'s`, or `(s)`.
 

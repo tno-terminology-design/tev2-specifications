@@ -13,6 +13,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
+[Curators](@) (i.e. the members of a so-called [terms community](@)) manage the (contents of the) [scope(s)](@) on behalf of the [community](@) (whose [semantic units](@) are being documented within that [scope](@)). [Curators](@) may serve (i.e.: [curate](@) the [scopes](@)) of multiple [communities](@).
+
+A [curator](@) is tasked with describing the [scope](@) particulars, [curating](@) its [curated texts](@), generating the various [glossaries](@) ([MRGs](@) and [HRGs](@)), [dictionaries](@) (if and when necessary and possible), and other tangible, 'rendered artifacts' (e.g. static websites, PDFs, whitepapers) as agreed with the [community](@).
+
+Also, [curators](@) are expected to specify the processes that enable contributors and [authors](@) to contribute to the contents of the [scope](@) (e.g. by providing suggestions for texts, discussing them, etc.), specifically any conditions/requriements that they have to be aware of and take into account, and that are needed to enable the [curators](@) to do their job.
+
 The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. [curation](@)) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
 The task of [curators](@) is to create/maintain the [scope directory](@) that they are tasked to [curate](@). This Curators Manual is intended to help them do this.

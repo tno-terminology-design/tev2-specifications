@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Define
 
-To **define** is to provide a clear and precise explanation of a concept or term, including its essential characteristics, to establish a shared understanding among a community working together on a particular set of objectives. This is done by:
+To **define** is to provide a clear and precise explanation of a concept or term, including its essential characteristics, to establish a shared understanding among a community working together on a particular set of [objectives](@). This is done by:
 1. providing a criterion, where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@))
 2. providing a [term](@), that is proposed for the purpose of referring to that [concept](@) itself, or an arbitrary instance thereof.
 
@@ -37,4 +37,4 @@ To **define** is to provide a clear and precise explanation of a concept or term
 
 ### Notes
 
-Defining concepts accurately is a foundational step in the curation process, as it establishes a common understanding of key terms within the community. A well-defined terminology ensures that individuals within the community can communicate effectively, resolve ambiguities, and work towards shared objectives with precision.
+Defining concepts accurately is a foundational step in the curation process, as it establishes a common understanding of key terms within the community. A well-defined terminology ensures that individuals within the community can communicate effectively, resolve ambiguities, and work towards shared [objectives](@) with precision.

@@ -27,4 +27,4 @@ A **moustache variable** is a placeholder in the form of a 'moustache' tag, e.g.
 ## Notes
 
 - Moustache variables serve as dynamic placeholders that allow flexible text transformation based on extracted information.
-- The use of moustache variables enables separation of concerns between data extraction and text conversion.
+- The use of [moustache variables](@) enables separation of concerns between data extraction and text conversion.

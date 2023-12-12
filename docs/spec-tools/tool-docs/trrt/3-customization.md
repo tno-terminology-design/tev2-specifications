@@ -120,7 +120,7 @@ For the examples, we imagine that the following [term ref](@), using the [defaul
   vsntag: 'main'
   termType: 'concept'
   glossaryTerm: 'Curator (of a Scope)'
-  glossaryText: 'a person responsible for [curating](@) the [terminologies](@) within a [scope](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives.'
+  glossaryText: 'a person responsible for [curating](@) the [terminologies](@) within a [scope](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@).'
   hoverText: '{{capFirst term}}: {{noRefs glossaryText}}'
   grouptags: 'terminology'
   formPhrases: 'curator{ss}, terminology-curator{ss}'

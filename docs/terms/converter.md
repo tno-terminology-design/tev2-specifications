@@ -6,7 +6,7 @@ term: converter
 termType: concept
 isa:
 glossaryTerm: Converter
-glossaryText: "a software component that takes the output of an [interpreter](@), i.e., the set of moustache variables it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the moustache variables to produce the transformed output."
+glossaryText: "a software component that takes the output of an [interpreter](@), i.e., the set of [moustache variables](@) it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the [moustache variables](@) to produce the transformed output."
 synonymOf:
 grouptags: 
 formPhrases: converter{ss}
@@ -22,6 +22,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Converter
 
-A **converter** is a software component that takes the output of an [interpreter](@), i.e., the set of moustache variables it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the moustache variables to produce the transformed output.
+A **converter** is a software component that takes the output of an [interpreter](@), i.e., the set of [moustache variables](@) it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the [moustache variables](@) to produce the transformed output.
 
 Converters are used, e.g., by the [TRRT](@) to create [renderable refs](@) from the [moustache variables](@) produced by [TermRefs](@).

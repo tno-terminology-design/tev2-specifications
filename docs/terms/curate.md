@@ -6,7 +6,7 @@ term: curate
 termType: concept
 isa:
 glossaryTerm: Curate
-glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of objectives."
+glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@)."
 synonymOf:
 grouptags: terminology, cm-party-actor-action
 formPhrases: curates, curated, curating, curation
@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Curate
 
-**Curate**: to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of objectives. The act of curation involves careful consideration of the relevance, clarity, and context of the [concepts](@) and their [definitions](@), ensuring that they are unambiguous and effectively support communication and collaboration within the [community](@).
+**Curate**: to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@). The act of curation involves careful consideration of the relevance, clarity, and context of the [concepts](@) and their [definitions](@), ensuring that they are unambiguous and effectively support communication and collaboration within the [community](@).
 
 ### Notes
 

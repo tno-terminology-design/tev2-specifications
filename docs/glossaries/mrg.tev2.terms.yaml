@@ -131,7 +131,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'Converter'
-    glossaryText: 'a software component that takes the output of an [interpreter](@), i.e., the set of moustache variables it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the moustache variables to produce the transformed output.'
+    glossaryText: 'a software component that takes the output of an [interpreter](@), i.e., the set of [moustache variables](@) it has produced, and processes these, possibly with other data from e.g. a [MRG](@), to generate a new, converted text in a different format. The converter uses the values assigned to the [moustache variables](@) to produce the transformed output.'
     synonymOf: null
     grouptags: null
     formPhrases: 'converter{ss}'
@@ -177,7 +177,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'Curate'
-    glossaryText: 'to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of objectives.'
+    glossaryText: 'to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@).'
     synonymOf: null
     grouptags: 'terminology, cm-party-actor-action'
     formPhrases: 'curates, curated, curating, curation'
@@ -292,7 +292,7 @@ entries:
     termType: 'concept'
     isa: null
     glossaryTerm: 'Curator (of a Scope)'
-    glossaryText: 'a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of objectives.'
+    glossaryText: 'a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@).'
     hoverText: 'Curator: {{noRefs glossaryText}}'
     synonymOf: null
     grouptags: 'terminology'
@@ -521,7 +521,7 @@ entries:
     term: 'glossarytext'
     termType: 'concept'
     isa: null
-    glossarytext: 'Glossary Text'
+    glossaryTerm: 'Glossary Text'
     glossaryText: 'a human readable text that will be used as the [definition](@) for a particular [term](@), as presented in a [HRG](@).'
     formPhrases: 'glossarytext{ss}, glossary-text{ss}'
     scopetag: 'tev2'
@@ -1023,15 +1023,8 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:mrg'
     locator: 'mrg.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/mrg'
-    headingids:
-      - 'machine-readable-glossary-(mrg)'
-      - 'file-naming-conventions-{#mrg-file-naming-conventions}'
-      - 'mrg-structure'
-      - 'mrg-`terminology`-section-{#mrg-terminology}'
-      - 'mrg-`scopes`-section-{#mrg-scopes}'
-      - 'mrg-entries-(the-`entries`-section)-{#mrg-entries}'
-      - 'footnotes'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/31-mrg'
+    headingids: []
     vsntag: 'terms'
   - term: 'mrg-entry'
     termType: 'concept'
@@ -1335,27 +1328,8 @@ entries:
     scopetag: 'tev2'
     termid: 'concept:saf'
     locator: 'saf.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/saf'
-    headingids:
-      - 'scope-administration-file-(saf)'
-      - 'scope-administration-file-field-descriptions'
-      - 'saf-terminology---defining-the-scope-itself-{#scope-section}'
-      - '#-this-is-a-scope-administration-file-that-can-be-used-in-conjunction-with-tev2.'
-      - '#-the-first-section-defines-meta-data-concerning-the-scope-itself,-both-for-technical-use-and-human-use.'
-      - 'it-shows-where-directories-and-files-live-that-ar-part-of-the-scope,-and-also'
-      - 'ways-in-which-people-can-contribute,-raise-issues,-see-what''s-going-on,-discuss,-etc.'
-      - 'scope:'
-      - 'saf-scopes---mapping-scopetags-and-scopedirs-{#scopes}'
-      - '#-the-second-section-contains-a-mapping-between-scopetags-that-are-used-within-the-scope,-and-the-associated-scopedirs.'
-      - 'this-enables-tools-to-find-the-[saf](@)-of-these-[scopes](@),-and-from-there-all-other-directories,-files-etc.'
-      - 'that-live-within-them,-e.g.-to-use/import-their-data.'
-      - 'scopes:-#'
-      - 'saf-versions---enabling-changes-and-updates-in-a-scope''s-terminology-{#versions}'
-      - '#-the-third-section-specifies-the-versions-that-are-actively-maintained-by-the-curators.'
-      - 'for-each-version,-the-set-of-terms-is-selected-that-constitute-the-terminology.'
-      - 'see-the-glossary-generation-tool-(ggt)-for-details-about-the-syntax-and-semantics.'
-      - 'versions:'
-      - 'notes'
+    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/21-saf'
+    headingids: []
     vsntag: 'terms'
   - term: 'scope'
     termType: 'concept'

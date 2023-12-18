@@ -328,32 +328,6 @@ entries:
       - 'formalized-model'
       - 'miscellaneous'
     vsntag: 'default'
-  - term: 'terminology'
-    termType: 'pattern'
-    isa: null
-    glossaryTerm: 'Terminology Pattern'
-    glossaryText: 'a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc.'
-    synonymOf: null
-    grouptags: null
-    formPhrases: null
-    status: 'proposed'
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
-    contributors: 'RieksJ'
-    attribution: '[eSSIF-Lab](https://essif-lab.github.io/framework)'
-    originalLicense: '[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)'
-    scopetag: 'tev2'
-    termid: 'pattern:terminology'
-    locator: 'patterns/pattern-terminology.md'
-    navurl: 'https://tno-terminology-design.github.io/tev2-specifications/docs/terms/patterns/pattern-terminology'
-    headingids:
-      - 'create-and-maintain-terminologies'
-      - 'introduction'
-      - 'formalized-model'
-      - 'white:-parties,-communities-{#white}'
-      - 'green:-scopes---data-artifacts-for-referencing-and-documenting-knowledge-{#green}'
-      - 'yellow:-intangible-concepts-{#yellow}'
-    vsntag: 'patterns'
   - id: 'pattern-world-model'
     displayed_sidebar: 'essifLabSideBar'
     termType: 'pattern'

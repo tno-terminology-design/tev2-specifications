@@ -9,7 +9,7 @@ glossaryTerm: Define
 glossaryText: "to provide a criterion and a [term](@), where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof."
 synonymOf:
 grouptags: terminology
-formPhrases: defines, defined, defining
+formPhrases: [ defines, defined, defining ]
 # Curation status
 status: proposed
 created: 20230723

@@ -8,7 +8,7 @@ glossaryText: "a basic building block of meaning or representation that exists w
 hoverText: "a basic building block of meaning or representation that exists within the 'mind' of a party, e.g., a concept, relation, or property. Parties use terms (words/phrases) to refer to these intangible building blocks."
 synonymOf:
 grouptags:
-formPhrases: semantic-unit{ss}
+formPhrases: [ semantic-unit{ss} ]
 # Curation status
 status: proposed
 created: 2022-07-27

@@ -9,7 +9,7 @@ glossaryTerm: Terminology Process
 glossaryText: "a method for recognizing misunderstandings as such, and creating or maintaining [definitions](@) that resolve them."
 synonymOf:
 grouptags:
-formPhrases: terminology-processes
+formPhrases: [ terminology-processes ]
 # Curation status
 status: proposed
 created: 20230723

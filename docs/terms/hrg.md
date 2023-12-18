@@ -9,7 +9,7 @@ glossaryTerm: Human Readable Glossary (HRG)
 glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
 synonymOf:
 grouptags: glossaries, data-structures
-formPhrases: hrg{ss}, human-readable-glossar{yies}, human-readable-glossar{yies}-hrg{ss}
+formPhrases: [ hrg{ss}, human-readable-glossar{yies}, human-readable-glossar{yies}-hrg{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

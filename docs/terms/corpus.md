@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@)."
 synonymOf:
 grouptags:
-formPhrases: corpus, corpora, corpus-of-terminology, corpus-of-a-terminology
+formPhrases: [ corpus, corpora, corpus-of-terminology, corpus-of-a-terminology ]
 # Curation status
 status: proposed
 created: 2022-06-06

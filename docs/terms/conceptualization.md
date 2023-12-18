@@ -10,7 +10,7 @@ glossaryText: "a mental representation or abstract idea formed by a [party](@) t
 hoverText: "Conceptualization: a mental representation or abstract idea formed by a party to categorize, organize, and make sense of information, experiences, objects, or abstract notions; it allows the party to recognize similarities and differences between entities or events."
 synonymOf:
 grouptags:
-formPhrases: conceptualization{ss}
+formPhrases: [ conceptualization{ss} ]
 # Curation status
 status: proposed
 created: 20230723

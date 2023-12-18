@@ -10,7 +10,7 @@ glossaryText: "a YAML file that contains essential data about a particular [scop
 hoverText: "SAF: a YAML file that contains essential data about a particular scope, such as the locations of the scope's curated texts, glossaries, and the specifications of the curated terminologies. The SAF is located in the so-called scopedir."
 synonymOf:
 grouptags: terminology-management
-formPhrases: saf{ss}, scope-administration-file{ss}, scope-administration-file{ss}-saf{ss}, saf{ss}-scope-administration-file{ss}
+formPhrases: [ saf{ss}, scope-administration-file{ss}, scope-administration-file{ss}-saf{ss}, saf{ss}-scope-administration-file{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

@@ -10,7 +10,7 @@ glossaryTerm: "Header (of a Curated Text)"
 glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrance of such a line. Headers live in [curated text files](@)."
 synonymOf:
 grouptags:
-formPhrases: header{ss}
+formPhrases: [ header{ss} ]
 # Curation status
 status: proposed
 created: 20230723

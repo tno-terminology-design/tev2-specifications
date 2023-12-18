@@ -11,7 +11,7 @@ glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) 
 hoverText: "MRG: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: glossaries, data-structures
-formPhrases: mrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-mrg{ss}
+formPhrases: [ mrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-mrg{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

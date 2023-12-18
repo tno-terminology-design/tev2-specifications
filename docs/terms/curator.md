@@ -10,7 +10,7 @@ glossaryText: "a person responsible for curating, managing, and maintaining the 
 hoverText: "Curator: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: terminology
-formPhrases: curator{ss}, terminology-curator{ss}
+formPhrases: [ curator{ss}, terminology-curator{ss} ]
 # Curation status
 status: proposed
 created: 20230723

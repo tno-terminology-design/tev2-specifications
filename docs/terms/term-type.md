@@ -7,7 +7,7 @@ glossaryTerm: Term Type
 glossaryText: "a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
 synonymOf:
 grouptags:
-formPhrases: term-type{ss}
+formPhrases: [ term-type{ss} ]
 # Curation status
 status: proposed
 created: 2022-06-06

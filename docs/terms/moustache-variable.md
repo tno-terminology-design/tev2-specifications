@@ -6,10 +6,10 @@ term: moustache-variable
 termType: concept
 isa:
 glossaryTerm: Moustache Variable
-glossaryText: "a placeholder in the form of a 'moustache' tag, e.g. `{{variable_name}}``, within some text. They are used, e.g., by the [TRRT](@), where they get their values from an [interpreter](@), and where they are used in a selected [converter](@) for the purpose of replacing [TermRefs](@) with [renderable refs](@)."
+glossaryText: "a placeholder in the form of a 'moustache' tag, e.g. `{{variable_name}}``, within some text. They are used, e.g., by the [TRRT](@), where they get their values from an [interpreter](@), and where they are used in a selected [converter](@) for the purpose of replacing [TermRefs](@) with [renderable refs](@). See also https://mustache.github.io/mustache.5.html"
 synonymOf:
 grouptags:
-formPhrases: moustache-variable{ss}
+formPhrases: [ moustache-variable{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

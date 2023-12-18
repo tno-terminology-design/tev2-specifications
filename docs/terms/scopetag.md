@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a [tag](@) that is used to [identify](@) [scopes](@) from within a specific [scope](@)"
 synonymOf:
 grouptags:
-formPhrases: scopetag{ss}, scope-tag{ss}
+formPhrases: [ scopetag{ss}, scope-tag{ss} ]
 # Curation status
 status: proposed
 created: 2022-06-06

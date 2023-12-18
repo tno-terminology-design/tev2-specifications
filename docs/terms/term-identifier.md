@@ -5,7 +5,7 @@ isa: identifier
 bodyFile: /spec-syntax/21-term-identifier-syntax.md
 glossaryTerm: Term Identifier
 glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@). If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
-formPhrases: term-identifier{ss}
+formPhrases: [ term-identifier{ss} ]
 # Curation status
 status: proposed
 created: 2022-11-24

@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "the sum or stock of words employed by a language, group, individual, or work or in a field of knowledge."
 synonymOf:
 grouptags:
-formPhrases: vocabular{yies}
+formPhrases: [ vocabular{yies} ]
 # Curation status
 status: proposed
 created: 2022-06-06

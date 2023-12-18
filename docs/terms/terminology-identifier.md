@@ -8,7 +8,7 @@ glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [i
 hoverText: "a text (identifier), of the form `<scopetag>:<vsntag>`, that identifies a terminology from within a particular scope. If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
 synonymOf:
 grouptags:
-formPhrases: terminology-identifier{ss}
+formPhrases: [ terminology-identifier{ss} ]
 # Curation status
 status: proposed
 created: 2023-09-29

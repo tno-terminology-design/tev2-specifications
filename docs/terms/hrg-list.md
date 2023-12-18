@@ -9,7 +9,7 @@ glossaryTerm: HRG List
 glossaryText: "a list of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc."
 synonymOf: 
 grouptags: 
-formPhrases: hrg-list{ss}
+formPhrases: [ hrg-list{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

@@ -9,7 +9,7 @@ glossaryTerm: Term Selection Instruction
 glossaryText: "an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@)."
 synonymOf:
 grouptags: glossary-entries, terminology-management
-formPhrases: term-selection-instruction{ss}, selection-instruction{ss}
+formPhrases: [ term-selection-instruction{ss}, selection-instruction{ss} ]
 # Curation status
 status: proposed
 created: 2023-07-31

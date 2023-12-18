@@ -10,7 +10,7 @@ glossaryText: "a person that creates a text that is meant to be read and underst
 hoverText: "Author: a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
 synonymOf:
 grouptags:
-formPhrases: author{ss}
+formPhrases: [ author{ss} ]
 # Curation status
 status: proposed
 created: 20230723

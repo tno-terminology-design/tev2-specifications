@@ -6,7 +6,7 @@ isa: term
 glossaryTerm: Scoped Term
 glossaryText: "a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@))."
 grouptags:
-formPhrases: scoped-term{ss} # note: this includes `(scoped) terms`, as brackets are replaced with `-`, and multiple `-`s are replaced by a single `-`
+formPhrases: [ scoped-term{ss} # note: this includes `(scoped) terms`, as brackets are replaced with `-`, and multiple `-`s are replaced by a single `-` ]
 # Curation status
 status: proposed
 created: 2022-06-06

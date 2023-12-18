@@ -5,7 +5,7 @@ id: mrg
 term: mrg
 termType: concept
 isa: glossary
-bodyFile: "/spec-files/71-mrg.md"
+bodyFile: "/spec-files/32-mrg.md"
 glossaryTerm: Machine Readable Glossary (MRG)
 glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems."
 hoverText: "MRG: {{noRefs glossaryText}}"

@@ -97,6 +97,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the interpreter to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre). |
 | `-con`, `--converter <type> or <hexpr>`    | n | Specifies the converter to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
+| `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
@@ -104,17 +105,30 @@ If a configuration file used, the long version of the parameter must be used (wi
 
 All input files are processed as follows:
 1. Find the [MRGRef](@) as defined by the `interpreter` parameter.
-2. Interpret the [MRGRef](@), which may include processing parameters, such as `converter="<converter>` that have been provided 
+2. Interpret the [MRGRef](@), which may include processing parameters, such as `converter="<converter>"` or `sort="<sortvalue>"` that have been provided 
 2. Create an empty [HRG list](@);
-3. Sort the [MRG entries](@) alphabetically (using the `glossaryTerm` field as a sorting key);[^1]
+3. Sort the [MRG entries](@) alphabetically (using the `sort` value if specified). By default, [MRG entries](@) are sorted by their `term` field, and then by the `termType` field. See also [HRG sorting](#hrg-sorting).
 4. Convert each [MRG entry](@) into an [HRG entry](@), and add it to the [HRG list](@);
 5. Overwrite the [MRGRef](@) with a new [MRGRef](@), replacing it with (a) the leader text, (b) the contents of the [HRG list](@), and (c) the trailer text.
-
-[^1]: Ideally, sorting should be done on the [HRG list](@), because these are the entries that should appear in a sorted form. However, as there is no a priori fixed structure for [HRG entries](@), it is difficult to sort the [HRG list](@) after it has been generated. Therefore, sorting is done on the [MRG entries](@), using the `glossaryTerm` field, which may, or may not exist. For [MRG entries](@) that do not have a `glossaryTerm` field, we suggest to use the `term`-field instead.
 
 [MRGRefs](@) themselves specify how [HRG entries](@) are formatted. Please refer to the [MRGRef Syntax specifications](/docs/spec-syntax/mrg-ref-syntax) for the details.
 
 By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
+
+## HRG Sorting {#hrg-sorting}
+
+A [HRG](@) is a sorted list of [HRG entries](@), where sorting can be done in various ways. By default (i.e. when the `sort` option isn't specified), this is done as specified by the (predefined) `default` sorting option. 
+
+The predefined sorting options are as follows:
+
+| Predefined option | What it does |
+| :---: | :--- |
+| `default` | Sorting of [HRG entries](@) is done by using the `term` field of their corresponding [MRG entries](entry@) as sort value. If multiple [entries](mrg-entry@) with the same `term` field contents, exist, these [entries](mrg-entry@) are then sorted according to their `termType` field, making the sort unique.[^1] |
+| `glossaryTerm` | Sorting of [HRG entries](@) is done by using the `glossaryTerm` field of their corresponding [MRG entries](@) as sort value. If the `glossaryTerm` field does not exist, the `default` value is taken. |
+
+[^1]: Note that the value of the `termid` field of an [MRG entry](@) is unique within the [MRG](@) that holds the [MRG entry](@) - it serves as a 'primary key'. That's why sorting first on the `term` field and then on the `termType` field makes the sort unique. Also note that this sorting differs from sorting on the `termid` field itself, as this would result in an [HRG](@) in which the [entries](hrg-entry@) are grouped according to their `termType` - thus [concepts](@), [patterns](@), and other kinds of [semantic units](@) are then grouped.
+
+Alternatively, you can specify a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template. Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sort "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
 
 ## Example
 

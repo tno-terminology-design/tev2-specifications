@@ -140,6 +140,7 @@ Parameters that are specific to the [hrgt](/docs/spec-tools/hrgt) can be put in 
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a predefined type (`default`). |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
+| `sort: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 ## Predefined HRGT interpreters
@@ -159,6 +160,12 @@ The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replac
 | `markdown-table-row` | a markdown table row of two cells, the first containing `{{glossaryTerm}}` and the second `{{glossaryText}}`. Of course, this will only work if the [MRGref](@) is preceeded by a markdown table header. |
 | `markdown-section-2` | a level 2 markdown section, using `{{glossaryTerm}}` as the header, and `{{glossaryText}}` as the (textual) contents of that section. |
 | `markdown-section-3` | same as `markdown-section-2`, except that it is a level 3 markdown section. |
+
+## Predefined sorting values
+
+There is only one predefined HRGT sorting value (called `default`). It need not be specified (as it is default). 
+
+It is described in section [HRG Sorting](/docs/spec-tools/hrgt#hrg-sorting).
 
 </TabItem>
 

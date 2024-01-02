@@ -24,4 +24,4 @@ A **moustache variable** is a set of [moustache variables](@) that specify the e
 
 For example, the moustache profile for [TRRT](@) [interpreters](@) consists of the [variables](moustache-variable@) `{{showtext}}`, `{{termType}}`, `{{term}}`, `{{trait}}`, `{{scopetag}}`, and `{{vsntag}}`. This means that every [interpreter](@)
 
-Every [TEv2 tool](@) that converts files, such as the [TRRT](@) or the [HRGT](@), have defined a moustache profile in their documentation (in the section on *XXX Interperters* where <XXX> is the name of the tool.
+Every [TEv2 tool](@) that converts files, such as the [TRRT](@) or the [HRGT](@), have defined a moustache profile in their documentation (in the section on *XXX Interperters* where \<XXX> is the name of the tool).

@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a [tag](@) that is used to group [terms](@) within a specific [scope](@)."
 synonymOf:
 grouptags:
-formPhrases: [ grouptag{ss}, group-tag{ss} ]
+formPhrases: [ "grouptag{ss}", "group-tag{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

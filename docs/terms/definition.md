@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@)."
 synonymOf:
 grouptags:
-formPhrases: [ definition{ss}, good-definition{ss} ]
+formPhrases: [ "definition{ss}", "good-definition{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

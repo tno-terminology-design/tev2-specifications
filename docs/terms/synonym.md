@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@)."
 synonymOf:
 grouptags:
-formPhrases: [ synonym{ss} ]
+formPhrases: [ "synonym{ss}" ]
 # Curation status
 status: proposed
 created: 2022-11-27

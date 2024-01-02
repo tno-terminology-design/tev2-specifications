@@ -7,7 +7,7 @@ bodyFile: /spec-files/10-curated-text-file.md
 glossaryTerm: Curated Text File
 glossaryText: a file that contains either a (complete) [curated text](@), or the [header](@) of that [curated text](@) and a reference to the [file](body-file@) that contains its [body](@).
 grouptags:
-formPhrases: [ curated-text-file{ss}, ctext-file{ss} ]
+formPhrases: [ "curated-text-file{ss}", "ctext-file{ss}" ]
 # Curation status
 status: proposed
 created: 20231009

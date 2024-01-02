@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a character string that is being used for the identification of some [entity](@) (yet may refer to 0, 1, or more [entities](@), depending on the context within which it is being used)."
 synonymOf:
 grouptags:
-formPhrases: [ identifier{ss} ]
+formPhrases: [ "identifier{ss}" ]
 # Curation status
 status: proposed
 created: 2021-06-01

@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a text of the form `<termType>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@)."
 synonymOf:
 grouptags:
-formPhrases: [ termid{ss}, term-id{ss} ]
+formPhrases: [ "termid{ss}", "term-id{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

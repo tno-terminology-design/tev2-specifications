@@ -9,7 +9,7 @@ glossaryTerm: Converter
 glossaryText: "a specification for constructing a text, for which it can use texts that are the values of [moustache variables](@)."
 synonymOf:
 grouptags: 
-formPhrases: [ converter{ss} ]
+formPhrases: [ "converter{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

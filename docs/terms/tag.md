@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "an alphanumeric string that is used to identify [scopes](@) (so called 'scopetags'), group [terms](@) (so called 'grouptags'), or identify a specific version of a [terminology](@) (so called 'versiontags') from within a specific [scope](@)."
 synonymOf:
 grouptags:
-formPhrases: [ tag{ss} ]
+formPhrases: [ "tag{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

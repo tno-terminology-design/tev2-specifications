@@ -4,7 +4,7 @@ term: terminology
 termType: concept
 grouptags:
 synonymOf:
-formPhrases: [ terminolog{yies} ]
+formPhrases: [ "terminolog{yies}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

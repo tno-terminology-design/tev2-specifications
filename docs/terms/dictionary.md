@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "an alphabetically sorted list of [terms](@) with various meanings that they may have in different contexts."
 synonymOf:
 grouptags:
-formPhrases: [ dictionar{yies} ]
+formPhrases: [ "dictionar{yies}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

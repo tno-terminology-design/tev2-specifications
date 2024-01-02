@@ -7,7 +7,7 @@ glossaryTerm: Knowledge Artifact
 glossaryText: "See: [semantic unit](@). (term is deprecated)"
 synonymOf: semantic-unit
 grouptags:
-formPhrases: [ knowledge-artifact{ss} ]
+formPhrases: [ "knowledge-artifact{ss}" ]
 # Curation status
 status: deprecated
 created: 2022-07-27

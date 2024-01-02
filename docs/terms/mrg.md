@@ -10,8 +10,8 @@ glossaryTerm: Machine Readable Glossary (MRG)
 glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/spec-files/mrg), to enable automated processing and integration with software systems."
 hoverText: "MRG: {{noRefs glossaryText}}"
 synonymOf:
-grouptags: glossaries, data-structures
-formPhrases: [ mrg{ss}, machine-readable-glossar{yies}, machine-readable-glossar{yies}-mrg{ss} ]
+grouptags: [ glossaries, data-structures ]
+formPhrases: [ "mrg{ss}", "machine-readable-glossar{yies}", "machine-readable-glossar{yies}-mrg{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Interpreter
 glossaryText: "a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre) that is used to locate a particular text construct (such as a [TermRef](@) or [MRGRef](@)) in a text, and that uses (PCRE) named groups to provide the values for the [moustache variables](@) in the [moustache profile](@) for which it is designed."
 grouptags:
-formPhrases: [ interpreter{ss} ]
+formPhrases: [ "interpreter{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

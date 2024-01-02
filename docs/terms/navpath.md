@@ -8,7 +8,7 @@ glossaryText: "the (name of the field in the [`scope`-section](/docs/spec-files/
 hoverText: "the path of the directory, relative to the base URL of a static website, that contains the rendered versions of curated texts."
 synonymOf:
 grouptags:
-formPhrases: [ navpath{ss}  ]
+formPhrases: [ "navpath{ss}" ]
 # Curation status
 status: proposed
 created: 2022-10-06

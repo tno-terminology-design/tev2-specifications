@@ -9,7 +9,7 @@ glossaryTerm: Provisional MRG
 glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/spec-tools/mrgt#mrgt-post-processing) to result in a proper [MRG](@)."
 synonymOf:
 grouptags:
-formPhrases: [ provisional-mrg{ss} ]
+formPhrases: [ "provisional-mrg{ss}" ]
 # Curation status
 status: proposed
 created: 20231010

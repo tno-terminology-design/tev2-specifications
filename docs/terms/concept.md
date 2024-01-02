@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "a [semantic unit](@) that captures the ideas/thoughts behind a classification of [entities](@) (what makes [entities](@) in that class 'the same')."
 synonymOf:
 grouptags:
-formPhrases: [ concept{ss} ]
+formPhrases: [ "concept{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

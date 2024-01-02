@@ -7,7 +7,7 @@ glossaryTerm: Mental Model
 glossaryText: "a [semantic unit](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called 'viewpoint', or 'way of thinking')."
 synonymOf:
 grouptags:
-formPhrases: [ mental-model{ss}, pattern{ss}, conceptual-model{ss} ]
+formPhrases: [ "mental-model{ss}", "pattern{ss}", "conceptual-model{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

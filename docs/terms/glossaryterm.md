@@ -7,7 +7,7 @@ termType: concept
 isa: 
 glossaryTerm: Glossary Term
 glossaryText: "a human readable text that will be used as the [term](@) in a [definition](@) as presented in a [HRG](@)."
-formPhrases: [ glossaryterm{ss}, glossary-term{ss} ]
+formPhrases: [ "glossaryterm{ss}", "glossary-term{ss}" ]
 ---
 
 # Glossary Term

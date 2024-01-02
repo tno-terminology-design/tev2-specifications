@@ -7,7 +7,7 @@ glossaryTerm: Glossarydir
 glossaryText: "a directory within a [scopedir](@) within which the different versions of its ([machine readable](mrg@) and [human readable](hrg@)) [glossaries](@) are created and maintained."
 synonymOf:
 grouptags:
-formPhrases: [ glossarydir{ss}, glossary-director{yies}  ]
+formPhrases: [ "glossarydir{ss}", "glossary-director{yies}"  ]
 # Curation status
 status: proposed
 created: 2022-07-29

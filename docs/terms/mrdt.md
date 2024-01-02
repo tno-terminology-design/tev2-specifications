@@ -8,8 +8,8 @@ isa:
 glossaryTerm: Machine Readable Dictionary Tool (MRDT)
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
 synonymOf: 
-grouptags: tools, dictionary-tools
-formPhrases: [ machine-readable-dictionary-tool{ss}, mrd-tool{ss}, mrdt{ss} ]
+grouptags: [ tools, dictionary-tools ]
+formPhrases: [ "machine-readable-dictionary-tool{ss}", "mrd-tool{ss}", "mrdt{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

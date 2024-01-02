@@ -7,7 +7,7 @@ glossaryTerm: TermRef
 glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/spec-syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
 synonymOf:
 grouptags:
-formPhrases: [ term-ref{ss}, termref{ss}, term-reference{ss} ]
+formPhrases: [ "term-ref{ss}", "termref{ss}", "term-reference{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

@@ -8,8 +8,8 @@ isa:
 glossaryTerm: Property (of a Concept)
 glossaryText: "a connection or association between a [concept](@) and a primitive data element, such as a text or a number, that represents some characteristic that instances of the [concept](@) may have."
 synonymOf: 
-grouptags: conceptual-modeling
-formPhrases: [ propert{yies} ]
+grouptags: [ conceptual-modeling ]
+formPhrases: [ "propert{yies}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

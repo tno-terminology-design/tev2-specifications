@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context."
 synonymOf:
 grouptags:
-formPhrases: [ glossar{yies} ]
+formPhrases: [ "glossar{yies}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

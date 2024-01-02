@@ -7,7 +7,7 @@ glossaryTerm:
 glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@) of the [scope](@)) needs to express, communicate and validate its [knowledge](@) as relevant to achieving a specific subset of its [objectives](@)."
 synonymOf:
 grouptags:
-formPhrases: [ scope{ss}, scope-context{ss} ]
+formPhrases: [ "scope{ss}", "scope-context{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

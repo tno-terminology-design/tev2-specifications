@@ -6,7 +6,7 @@ isa:
 glossaryTerm: Curated File
 glossaryText: a file that is located in the [scopedir](@) of a specific [scope](@), and is (therefore) [curated](@) by (one of) the [curators](@) of that [scope](@).
 grouptags:
-formPhrases: [ curated-file{ss} ]
+formPhrases: [ "curated-file{ss}" ]
 # Curation status
 status: proposed
 created: 20231009

@@ -7,7 +7,7 @@ termType: concept
 glossaryTerm: Moustache Profile
 glossaryText: "a set of [moustache variables](@) that specify the expected results or executing a particular [interpreter](@). For example, the moustache profile for [TRRT](@) [interpreters](@) consists of the [variables](moustache-variable@) `{{showtext}}`, `{{termType}}`, `{{term}}`, `{{trait}}`, `{{scopetag}}`, and `{{vsntag}}`."
 grouptags:
-formPhrases: [ moustache-profile{ss}, profile{ss} ]
+formPhrases: [ "moustache-profile{ss}", "profile{ss}" ]
 # Curation status
 status: proposed
 created: 2023-12-18

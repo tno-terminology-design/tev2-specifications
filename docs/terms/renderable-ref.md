@@ -7,7 +7,7 @@ glossaryTerm: Renderable Ref
 glossaryText: "a text with which the [TRRT](@) replaces a [TermRef](@), that can be processed by specific third party rendering tools, the result of which is a rendering of the original [TermRef](@) that has additional characteristics that help [readers](@) to (better) understand the intention of its [author](@)."
 synonymOf:
 grouptags:
-formPhrases: [ renderable-ref{ss}, renderableref{ss}, renderable-reference{ss} ]
+formPhrases: [ "renderable-ref{ss}", "renderableref{ss}", "renderable-reference{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06

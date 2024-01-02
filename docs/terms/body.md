@@ -9,7 +9,7 @@ glossaryTerm: Body (of a Curated Text)
 glossaryText: "the part of a [curated text](@) that contains arbitrarily structured documentation about the [semantic unit](@) that the [curated text](@) documents. Bodies live either in [curated text files](@) (behind the [header](@)), or in separate so-called [body files](@)."
 synonymOf:
 grouptags:
-formPhrases: [ bod{yies} ]
+formPhrases: [ "bod{yies}" ]
 # Curation status
 status: proposed
 created: 20230723

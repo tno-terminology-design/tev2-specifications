@@ -86,7 +86,7 @@ The following table specifies the [form phrase](@) macros that have currently be
 Suppose we have a [curated text](@) for the term `actor`, and in its front matter, we specify:
 
 ~~~ yaml
-formPhrases: [ identif{yies} ]
+formPhrases: [ 'identif{yies}' ]
 ~~~
 
 The part `{yies}` is a (predefined) macro, that is associated with the regex `(y|y's|ies)`.

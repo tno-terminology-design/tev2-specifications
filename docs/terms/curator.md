@@ -9,8 +9,8 @@ glossaryTerm: Curator (of a Scope)
 glossaryText: "a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@)."
 hoverText: "Curator: {{noRefs glossaryText}}"
 synonymOf:
-grouptags: terminology
-formPhrases: [ curator{ss}, terminology-curator{ss} ]
+grouptags: [ terminology ]
+formPhrases: [ "curator{ss}", "terminology-curator{ss}" ]
 # Curation status
 status: proposed
 created: 20230723

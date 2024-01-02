@@ -9,7 +9,7 @@ glossaryTerm: Formatted Text
 glossaryText: "a text that has been processed and arranged to have a specific layout, style, and presentation, making it visually appealing and easy to read."
 synonymOf:
 grouptags:
-formPhrases: [ formatted-text{ss} ]
+formPhrases: [ "formatted-text{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

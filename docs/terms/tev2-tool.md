@@ -9,7 +9,7 @@ glossaryTerm: TEv2 Tool
 glossaryText: "any software application or utility designed to support and streamline various tasks related to terminology management following the TEv2 specifications."
 synonymOf: 
 grouptags: 
-formPhrases: [ tev2-tool{ss}, tool{ss} ]
+formPhrases: [ "tev2-tool{ss}", "tool{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

@@ -38,20 +38,21 @@ The predefined interpreters for detecting [MRGRefs](@) are as follows:
 
 | `<interpreter>` | Description |
 | :-------------- | :---------- |
-| `basic`         | `{% hrg="<tid>" converter="<converter>" %}`, where `converter="<converter>"` is optional. This is the default intepreter for [MRGRefs](@). |
+| `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default intepreter for [MRGRefs](@). |
 
 ## Predefined MRGRef Converters {#predefined-mrgref-converters}
 
 Predefined glossary layouts have the advantage that they are easy to use, and provide for a (small) range of generally useful layouts. Also, using them would produce acceptable results even in non-standard conditions, e.g., when a [curated text](@) does not specify its `glossaryTerm` field. 
 
-However, [curators](@) can specify other formats. To help them do this, the examples we provide for the predefined formats also show how the same, or similar, results can be achieved by customized specificaitons of the glossary layouts.
+However, [curators](@) can specify other formats. To help them do this, the examples we provide for the predefined formats also show how the same, or similar, results can be achieved by customized specifications of the glossary layouts.
 
 The predefined converters for glossary generation are:
 
-| `<glossarylayout>` | Description |
-| :----------------- | :---------- |
-| `markdowntable`    | [HRG entries](@) are generated as a single markdown table row, where the first cell contains the term, and the second its description. |
-| `essiflab`         | [HRG entries](@) are generated that are similar to what is shown in the [essif-lab glossary](https://essif-lab.github.io/framework/docs/essifLab-glossary). |
+| `<glossarylayout>`      | Description |
+| :---------------------- | :---------- |
+| `markdown-table-row`    | [HRG entries](@) are compiled as a single markdown table row, where the first cell contains the term, and the second its description. |
+| `markdown-section-2`    | [HRG entries](@) are compiled as a markdown section, with the term as section header 2 `## `, and the description as the section body below. |
+| `markdown-section-3`    | [HRG entries](@) are compiled as a markdown section, with the term as section header 3 `### `, and the description as the section body below. |
 
 ### Converter for Markdown Tables
 
@@ -68,19 +69,19 @@ An [MRGref](@) that specifies `converter="markdowntable"` as its glossary layout
 
 <TabItem value="predefined"><br/>
 
-Specifying the [MRGref](@) using the predefined glossary layout called `markdowntable`:
+Specifying the [MRGref](@) using the predefined glossary layout called `markdown-table-row`.
 
-~~~ markdown
+```markdown
 | Term | Description |
 | :--- | :---------- |
 {% hrg="tev2" converter="markdowntable" %}
 ---
-~~~
+```
 </TabItem>
 
 <TabItem value="simple"><br/>
 
-Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
+Specifying the [MRGref](@) using a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows.
 
 ~~~ markdown
 | Term | Description |
@@ -94,27 +95,23 @@ Note that this is a simple handlebars expression, that is not very robust agains
 
 <TabItem value="actual"><br/>
 
-Specifying the [MRGref](@) using the [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars) as it was originally implemented, is done as follows:
-
-:::warning Editor's note
-@Ca5e: please check that the handlebar expression that is ACTUALLY USED for the `essiflab` converter is specified here below.
-:::
+Specifying the [MRGref](@) using the [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars) similar to the implementation [here](https://essif-lab.github.io/framework/docs/essifLab-glossary), is done as follows.
 
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="tev2" converter="| {{glossaryTerm}} | {{glossaryText}} |\n" %}
+{% hrg="tev2" converter=| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} |" %}
 ---
 ~~~
 
-Note that this is a simple handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
+This example is derived from the [terminology-config.yaml](https://github.com/essif-lab/framework/blob/master/docs/terminology-config.yaml) of the [essif-lab/framework](https://github.com/essif-lab/framework/tree/master) repository, which is explained further [below](#converter-for-essif-lab-glossary-look-alikes). The actual reference `{% hrg="" %}` uses all the defaults (set in the config).
 </TabItem>
 
 </Tabs>
 
 ---
 
-Under the assumption that the [terminology identifier](@) `tev2` refers to a [terminology](@) (and associated [MRG](@)) that holds [definitions](@) for the [terms](@) `Glossary`, `Curator` and `Definition`, the result could e.g., look something like this:
+Under the assumption that the [terminology identifier](@) `tev2` refers to a [terminology](@) (and associated [MRG](@)) that holds [definitions](@) for the [terms](@) `Glossary`, `Curator` and `Definition`, the result could e.g., look something like the following.
 
 ~~~ markdown
 | Term | Description |

@@ -269,8 +269,8 @@ entries:
       - "concept's"
       - "concept(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -380,8 +380,8 @@ entries:
       - "converter's"
       - "converter(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20230731
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -408,8 +408,8 @@ entries:
       - "profile's"
       - "profile(s)"
     status: "proposed"
-    created: 2023-12-18T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20231218
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -433,8 +433,8 @@ entries:
       - "corpus-of-terminology"
       - "corpus-of-a-terminology"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -553,8 +553,8 @@ entries:
       - "ctext's"
       - "ctext(s)"
     status: "proposed"
-    created: 2022-06-02T00:00:00.000Z
-    updated: 2022-08-04T00:00:00.000Z
+    created: 20220602
+    updated: 20220804
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -620,8 +620,8 @@ entries:
       - "curate-directory's"
       - "curate-directories"
     status: "proposed"
-    created: 2022-07-29T00:00:00.000Z
-    updated: 2022-07-29T00:00:00.000Z
+    created: 20220729
+    updated: 20220729
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -735,8 +735,8 @@ entries:
       - "good-definition's"
       - "good-definition(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -765,8 +765,8 @@ entries:
       - "dictionary's"
       - "dictionaries"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -846,8 +846,8 @@ entries:
       - "form-phrase's"
       - "form-phrase(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -876,8 +876,8 @@ entries:
       - "formatted-text's"
       - "formatted-text(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -904,8 +904,8 @@ entries:
       - "glossary's"
       - "glossaries"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -937,8 +937,8 @@ entries:
       - "glossary-directory's"
       - "glossary-directories"
     status: "proposed"
-    created: 2022-07-29T00:00:00.000Z
-    updated: 2022-07-29T00:00:00.000Z
+    created: 20220729
+    updated: 20220729
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1049,8 +1049,8 @@ entries:
       - "group-tag's"
       - "group-tag(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-07-28T00:00:00.000Z
+    created: 20220606
+    updated: 20220728
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1082,8 +1082,8 @@ entries:
       - "handlebars-expression's"
       - "handlebars-expression(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1164,8 +1164,8 @@ entries:
       - "human-readable-dictionaries-hrd's"
       - "human-readable-dictionaries-hrd(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1201,8 +1201,8 @@ entries:
       - "hrdt's"
       - "hrdt(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1249,8 +1249,8 @@ entries:
       - "human-readable-glossaries-hrg's"
       - "human-readable-glossaries-hrg(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1277,8 +1277,8 @@ entries:
       - "hrg-entry's"
       - "hrg-entries"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1304,8 +1304,8 @@ entries:
       - "hrg-list's"
       - "hrg-list(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1370,8 +1370,8 @@ entries:
       - "hrgt(s)-human-readable-glossary-tool's"
       - "hrgt(s)-human-readable-glossary-tool(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1390,11 +1390,6 @@ entries:
       - "sorting-the-[hrg-list](@)"
       - "hrgt-converter-profile-{#converter-profile}"
       - "hrgt-predefined-converters-{#predefined-converters}"
-      - "the-`markdown-link`-converter"
-      - "the-`html-link`-converter"
-      - "the-`html-hovertext-link`-converter"
-      - "the-`html-glossarytext-link`-converter"
-      - "hrgt-sorting-{#sorter}"
       - "hrgt-predefined-sorters-{#predefined-sorters}"
       - "example"
       - "processing,-errors-and-warnings"
@@ -1417,8 +1412,8 @@ entries:
       - "ict"
       - "integrity-checker"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1482,8 +1477,8 @@ entries:
       - "identifier's"
       - "identifier(s)"
     status: "proposed"
-    created: 2021-06-01T00:00:00.000Z
-    updated: 2021-06-01T00:00:00.000Z
+    created: 20210601
+    updated: 20210601
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1540,8 +1535,8 @@ entries:
       - "identifiable"
       - "identification"
     status: "proposed"
-    created: 2021-06-01T00:00:00.000Z
-    updated: 2021-06-01T00:00:00.000Z
+    created: 20210601
+    updated: 20210601
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1616,8 +1611,8 @@ entries:
       - "ingested"
       - "ingestion"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1643,8 +1638,8 @@ entries:
       - "ingestion-profile's"
       - "ingestion-profile(s)"
     status: "proposed"
-    created: 2022-08-17T00:00:00.000Z
-    updated: 2022-08-17T00:00:00.000Z
+    created: 20220817
+    updated: 20220817
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1671,8 +1666,8 @@ entries:
       - "interpreter's"
       - "interpreter(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20230731
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1695,8 +1690,8 @@ entries:
       - "interpreter-profile's"
       - "interpreter-profile(s)"
     status: "proposed"
-    created: 2023-12-18T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20231218
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1794,8 +1789,8 @@ entries:
       - "knowledge-artifact's"
       - "knowledge-artifact(s)"
     status: "deprecated"
-    created: 2022-07-27T00:00:00.000Z
-    updated: 2023-09-26T00:00:00.000Z
+    created: 20220727
+    updated: 20230926
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1885,8 +1880,8 @@ entries:
       - "conceptual-model's"
       - "conceptual-model(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-07T00:00:00.000Z
+    created: 20220606
+    updated: 20220607
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1917,8 +1912,8 @@ entries:
       - "moustache-variable's"
       - "moustache-variable(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20230731
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1952,8 +1947,8 @@ entries:
       - "machine-readable-dictionary-mrd's"
       - "machine-readable-dictionary-mrd(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1990,8 +1985,8 @@ entries:
       - "mrdt's"
       - "mrdt(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2040,8 +2035,8 @@ entries:
       - "machine-readable-glossaries-mrg's"
       - "machine-readable-glossaries-mrg(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2071,8 +2066,8 @@ entries:
       - "mrg-entry's"
       - "mrg-entries"
     status: "proposed"
-    created: 2022-08-11T00:00:00.000Z
-    updated: 2022-08-11T00:00:00.000Z
+    created: 20220811
+    updated: 20220811
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2101,8 +2096,8 @@ entries:
       - "mrg-import-tool"
       - "mrg-importer-tool"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2136,8 +2131,8 @@ entries:
       - "mrgref's"
       - "mrgref(s)"
     status: "proposed"
-    created: 2023-11-27T00:00:00.000Z
-    updated: 2023-11-27T00:00:00.000Z
+    created: 20231127
+    updated: 20231127
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2220,8 +2215,8 @@ entries:
       - "mrgt(s)-machine-readable-glossary-tool's"
       - "mrgt(s)-machine-readable-glossary-tool(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2285,8 +2280,8 @@ entries:
       - "navpath's"
       - "navpath(s)"
     status: "proposed"
-    created: 2022-10-06T00:00:00.000Z
-    updated: 2022-10-06T00:00:00.000Z
+    created: 20221006
+    updated: 20221006
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2541,8 +2536,8 @@ entries:
       - "property's"
       - "properties"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2653,8 +2648,8 @@ entries:
       - "regular-expression's"
       - "regular-expression(s)"
     status: "proposed"
-    created: 2023-12-19T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20231219
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2680,8 +2675,8 @@ entries:
       - "relation's"
       - "relation(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2715,8 +2710,8 @@ entries:
       - "renderable-reference's"
       - "renderable-reference(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-04T00:00:00.000Z
+    created: 20220606
+    updated: 20220804
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2831,8 +2826,8 @@ entries:
       - "saf(s)-scope-administration-file's"
       - "saf(s)-scope-administration-file(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2878,8 +2873,8 @@ entries:
       - "scope-context's"
       - "scope-context(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-04T00:00:00.000Z
+    created: 20220606
+    updated: 20220804
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2904,8 +2899,8 @@ entries:
       - "scoped-term's"
       - "scoped-term(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-04T00:00:00.000Z
+    created: 20220606
+    updated: 20220804
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2934,8 +2929,8 @@ entries:
       - "scope-directory's"
       - "scope-directories"
     status: "proposed"
-    created: 2022-07-29T00:00:00.000Z
-    updated: 2022-07-29T00:00:00.000Z
+    created: 20220729
+    updated: 20220729
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2966,8 +2961,8 @@ entries:
       - "scope-tag's"
       - "scope-tag(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-07-28T00:00:00.000Z
+    created: 20220606
+    updated: 20220728
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2996,8 +2991,8 @@ entries:
       - "semantic-unit's"
       - "semantic-unit(s)"
     status: "proposed"
-    created: 2022-07-27T00:00:00.000Z
-    updated: 2022-07-27T00:00:00.000Z
+    created: 20220727
+    updated: 20220727
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3021,8 +3016,8 @@ entries:
     formPhrases:
       - "semantics"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3050,8 +3045,8 @@ entries:
       - "sorter's"
       - "sorter(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20230731
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3096,8 +3091,8 @@ entries:
       - "synonym's"
       - "synonym(s)"
     status: "proposed"
-    created: 2022-11-27T00:00:00.000Z
-    updated: 2022-11-27T00:00:00.000Z
+    created: 20221127
+    updated: 20221127
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3125,8 +3120,8 @@ entries:
       - "tag's"
       - "tag(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3162,8 +3157,8 @@ entries:
       - "phrase's"
       - "phrase(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-09T00:00:00.000Z
+    created: 20220606
+    updated: 20220809
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3191,8 +3186,8 @@ entries:
       - "term-identifier's"
       - "term-identifier(s)"
     status: "proposed"
-    created: 2022-11-24T00:00:00.000Z
-    updated: 2023-11-24T00:00:00.000Z
+    created: 20221124
+    updated: 20231124
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3227,8 +3222,8 @@ entries:
       - "term-reference's"
       - "term-reference(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-04T00:00:00.000Z
+    created: 20220606
+    updated: 20220804
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3261,8 +3256,8 @@ entries:
       - "selection-instruction's"
       - "selection-instruction(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3292,8 +3287,8 @@ entries:
       - "termtype's"
       - "termtype(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2023-08-01T00:00:00.000Z
+    created: 20220606
+    updated: 20230801
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3323,8 +3318,8 @@ entries:
       - "term-id's"
       - "term-id(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-09T00:00:00.000Z
+    created: 20220606
+    updated: 20220809
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3345,8 +3340,8 @@ entries:
       - "terminology's"
       - "terminologies"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-08-11T00:00:00.000Z
+    created: 20220606
+    updated: 20220811
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3401,8 +3396,8 @@ entries:
       - "terminology-identifier's"
       - "terminology-identifier(s)"
     status: "proposed"
-    created: 2023-09-29T00:00:00.000Z
-    updated: 2023-09-29T00:00:00.000Z
+    created: 20230929
+    updated: 20230929
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3457,8 +3452,8 @@ entries:
       - "terms-community's"
       - "terms-communities"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3480,8 +3475,8 @@ entries:
     glossaryTerm: "TEv2"
     glossaryText: "a set of specifications and [tools](@) that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
     status: "proposed"
-    created: 2022-09-19T00:00:00.000Z
-    updated: 2022-09-19T00:00:00.000Z
+    created: 20220919
+    updated: 20220919
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3516,8 +3511,8 @@ entries:
       - "conversion-tool's"
       - "conversion-tool(s)"
     status: "proposed"
-    created: 2024-01-08T00:00:00.000Z
-    updated: 2024-01-08T00:00:00.000Z
+    created: 20240108
+    updated: 20240108
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3546,8 +3541,8 @@ entries:
       - "tool's"
       - "tool(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3571,8 +3566,8 @@ entries:
     grouptags: null
     formPhrases: []
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3637,8 +3632,8 @@ entries:
       - "term-ref-rendering-tool's"
       - "term-ref-rendering-tool(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3655,7 +3650,7 @@ entries:
       - "the-`basic`-(also:-`default`)-interpreter"
       - "the-`alt`-(alternative)-interpreter"
       - "processing-{#processing}"
-      - "finding-the-[mrg-entry](@)-associated-with-a-[termref](@)"
+      - "finding-the-[mrg-entry](@)-associated-with-a-[termref](@)-{#finding-mrg-entry}"
       - "trrt-converter-profile-{#converter-profile}"
       - "trrt-predefined-converters-{#predefined-converters}"
       - "the-`markdown-link`-converter"
@@ -3734,8 +3729,8 @@ entries:
       - "vsntag's"
       - "vsntag(s)"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-07-28T00:00:00.000Z
+    created: 20220606
+    updated: 20220728
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3763,8 +3758,8 @@ entries:
       - "vocabulary's"
       - "vocabularies"
     status: "proposed"
-    created: 2022-06-06T00:00:00.000Z
-    updated: 2022-06-06T00:00:00.000Z
+    created: 20220606
+    updated: 20220606
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"

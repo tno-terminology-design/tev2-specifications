@@ -3,8 +3,8 @@
 term: synonym
 termType: concept
 isa: term
-glossaryTerm:
-glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@)."
+glossaryTerm: Synonym (of a [term](@))
+glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@)."
 synonymOf:
 grouptags:
 formPhrases: [ "synonym{ss}" ]
@@ -21,7 +21,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Synonym
 
 ## Summary
-A **synonym** is a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (of which it is the [synonym](@)).
+A **synonym** is a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@).
 
 While from a theoretical point of view a [term](@) and its [synonyms](@) are identical, in practice they are more 'equivalent', i.e. while they have the same meaning, when using one or the other in a sentence, there is often one term that is preferred over the other.
 

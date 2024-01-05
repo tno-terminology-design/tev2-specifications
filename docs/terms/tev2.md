@@ -4,10 +4,7 @@ term: tev2
 termType: concept
 isa:
 glossaryTerm: TEv2
-glossaryText: "a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
-synonymOf:
-grouptags:
-formPhrases:
+glossaryText: "a set of specifications and [tools](@) that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
 # Curation status
 status: proposed
 created: 2022-09-19
@@ -21,7 +18,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # TEv2 (Terminology Engine, version 2)
 
 ### Summary
-The **Terminology Engine v2 (TEv2)** is a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
+The **Terminology Engine v2 (TEv2)** is a set of specifications and [tools](@) that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
 <!-- This summary is/should be literally quoted in the tev2-overview document -->
 

@@ -6,7 +6,7 @@ term: converter
 termType: concept
 isa:
 glossaryTerm: Converter
-glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [TEv2 text conversion tool](@) uses to create its output."
+glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
 synonymOf:
 grouptags: 
 formPhrases: [ "converter{ss}" ]
@@ -22,9 +22,9 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Converter
 
-A **converter** is a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [TEv2 text conversion tool](@) uses to create its output.
+A **converter** is a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output.
 
-The [specifications of the particular TEv2 tool](/docs/category/toolbox-specs) tell you which [converters](@) are predefined for that tool, and what the [converter profile](@) is that a customized [converter](@) may use.
+The [specifications](/docs/category/toolbox-specs) of the particular [tool](text-conversion-tool@) tell you which [converters](@) are predefined for that [tool](text-conversion-tool@), and what the [converter profile](@) is that a customized [converter](@) may use.
 
 :::info Editor's note
 We could perhaps add references to appropriate sections of relevant tools, so that readers can see examples of this.

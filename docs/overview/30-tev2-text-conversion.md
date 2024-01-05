@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Text Conversions
 
-One of the main features of [TEv2](@) tools consists of the various ways in which texts can be converted. 
+All [[text conversion tools](@)](@) in the [TEv2 toolbox](@) convert particular tools consists of the various ways in which texts can be converted. 
 
 <details>
   <summary>Examples of text conversions</summary>
@@ -23,7 +23,7 @@ Text conversions must work in different contexts. For example the context where 
 
 ## Text Conversion Tools {#tools}
 
-The text conversion tools in the [TEv2 toolbox](@), such as the [TRRT](@) and [HRGT](@), operate in a context as described in the below figure:
+The [text conversion tools](@) in the [TEv2 toolbox](@), such as the [TRRT](@) and [HRGT](@), operate in a context as described in the below figure:
 
 <p align="center">
 <img
@@ -32,13 +32,13 @@ The text conversion tools in the [TEv2 toolbox](@), such as the [TRRT](@) and [H
 /><i>Figure 1: Repeated conversions turn raw texts into formatted texts and/or curated texts</i>
 </p>
 
-Each such tool can be called to perform a [text conversion step](#steps), i.e. a process in which a specified set of (input, or source) files are converted into another set of (output, or target) files. While each text conversion tool has its particular way of working, they are all designed to follow a specific sequence of steps. This enables users to configure (customize) how the tool works whenever it is called. 
+Each such tool can be called to perform a [text conversion step](#steps), i.e. a process in which a specified set of (input, or source) files are converted into another set of (output, or target) files. While each [text conversion tool](@) has its particular way of working, they are all designed to follow a specific sequence of steps. This enables users to configure (customize) how the tool works whenever it is called. 
 
 Thus, the [TRRT](@), whose task is to convert [term refs](@) into [renderable refs](@), can be configured to use your own, [customized term ref syntax](/docs/spec-syntax/term-ref-syntax#customize). It can also be configured to produce your own particular flavor of [renderable refs](@), by specifying custom [converters](@).
 
 ## Text Conversion Steps {#steps}
 
-All text conversion tools convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below:
+All [text conversion tools](@) convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below:
 
 <p align="center">
 <img
@@ -61,7 +61,7 @@ A text conversion step works on a single source (file)[^1], as follows:
 
 ## What is specific for a Text Conversion Tool
 
-Every [TEv2](@) text conversion tool has one particular
+Every [TEv2](@) [text conversion tool](@) has one particular
 
 - [interpreter profile](@), i.e., a specification of the [named capturing groups](@) that an [interpreter](@) should populate if it is to be useable for that tool. The tool-specific [interpreter profile](@) is specified in the [documentation of that tool](/docs/category/toolbox-specs).
 
@@ -69,7 +69,7 @@ Every [TEv2](@) text conversion tool has one particular
 
 ## Configuration of a Text Conversion Tool
 
-Every time a [TEv2](@) text conversion tool is executed, it will use a particular
+Every time a [TEv2](@) [text conversion tool](@) is executed, it will use a particular
 
 - [interpreter](@), that it will use to find the text patterns that need to be replaced, and to populate the [named capturing groups](@) as defined in the [interpreter profile](@) of that [tool](tev2-tool@).
 
@@ -81,4 +81,4 @@ A [tool](tev2-tool@) can be instructed to use a particular [interpreter](@) and/
 - specifying it in a [configuration file](/docs/spec-files/configuration-file) that is used when calling the [tool](tev2-tool@);
 - specifying as a command-line argument that is used when calling the [tool](tev2-tool@) (this overrides any specifications in the [configuration file](/docs/spec-files/configuration-file) if that were also used).
 
-Particular text conversion tools may have the option of specifying the [converter](@) to be used as part of the text pattern that is located by the [interpreter](@) of the tool. An example of this is the [HRGT](@).
+Particular [text conversion tools](@) may have the option of specifying the [converter](@) to be used as part of the text pattern that is located by the [interpreter](@) of the tool. An example of this is the [HRGT](@).

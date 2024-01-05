@@ -19,7 +19,7 @@ An [MRG](@) is meant to be used by the tools from the [toolbox](/docs/category/t
 
 A [scope](@) may have multiple [MRGs](@), each of which represents a specific version of its [terminology](@).
 
-## File naming conventions {#mrg-file-naming-conventions}
+## File naming conventions {#file-naming-conventions}
 
 The file naming conventions apply to one particular [scope](@), which implies that there is a single [SAF](@), a single [glossarydir](@), and a single [scopedir](@). Within this [scope](@), the meaning of [scopetags](@), i.e. the [scopes](@) to which they refer, are defined in/by the [SAF](@). 
 
@@ -63,7 +63,7 @@ entries: # here follows an (unsorted) list of MRG entries
 
 </details>
 
-## MRG `Terminology` section {#mrg-terminology}
+## MRG `Terminology` section {#terminology}
 
 The following fields are defined for the sections `terminology`:
 
@@ -85,7 +85,7 @@ The following fields are defined for the sections `terminology`:
 | `altvsntags` | n | List of alternative [versiontags](@) that can be used to [identify](@) this version. Each of the values MUST be in the list of [versiontags](@) in the `altvsntags` field of the the corresponding `versions` section in the [SAF](@). |
 | `license`    | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. Its value MUST match the `license` field of the corresponding `versions` section in the [SAF](@), or if that isn't specified, the `license` field of the `scope` section in the [SAF](@). |
 
-## MRG `scopes` section {#mrg-scopes}
+## MRG `scopes` section {#scopes}
 
 The following fields are defined for the section `scopes`:
 
@@ -103,7 +103,7 @@ The following fields are defined for the section `scopes`:
 | `scopetag`   | Y | [Scopetag](@) of a third-party [scope](@), the [MRG](@) of which contains [MRG entries](@) that have been imported into the [MRG](@). This [scopetag](@) has been chosen by the [curators](@) of the [scope](@) of which the [MRG](@) is part, to refer to that particular third-party [scope](@). This [scopetag](@) may differ from the [scopetag](@) that the [curators](@) of that third-party [scope](@) have chosen for this [scope](@) <br/>Must satisfy [regex](@) `[a-z0-9_-]+`. |
 | `scopedir`   | Y | URL that locates the [scope directory](@) associated with that third-party [scope](@). |
 
-## MRG Entries (the `entries` section) {#mrg-entries}
+## MRG Entries (the `entries` section) {#entries}
 
 The `entries` section of an [MRG](@) is a list of [MRG entries](@), the purpose of which is that the various tools can find all data that is relevant for the purpose that such a tool serves.
 

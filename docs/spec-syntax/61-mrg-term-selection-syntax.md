@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Curators](@) must have the ability to determine which [terms](@) are, or are not part of a [terminology](@), as a prerequisite for generating a corresponding [MRG](@). This document specifies the syntax for the instructions that [curators](@) can use to do this, and also how these instructions are being processed, which leads to a [provisional MRG](@) that contains [provisional MRG entries](@) for each of these [terms](@). This processing is [the first step in MRG generation](/docs/spec-tools/mrgt#mrgt-constructing-provisional-mrg)
+[Curators](@) must have the ability to determine which [terms](@) are, or are not part of a [terminology](@), as a prerequisite for generating a corresponding [MRG](@). This document specifies the syntax for the instructions that [curators](@) can use to do this, and also how these instructions are being processed, which leads to a [provisional MRG](@) that contains [provisional MRG entries](@) for each of these [terms](@). This processing is [the first step in MRG generation](/docs/spec-tools/mrgt#constructing-provisional-mrg)
 
 ## Introduction
 
@@ -58,12 +58,12 @@ In this text, we will use the [term](@) **[current scope](@)** for the [scope](@
 Selecting and subsequently adding [terms](@) to the [provisional MRG](@) consists of:
 1. [identifying](@) such [terms](@);
 2. [identifying](@) the source from which data is to be taken for constructing the associated [MRG entries](@);
-3. [creating](/docs/spec-tools/mrgt#mrgt-create-mrg-entry) a [provisional MRG entry](@) for every [semantic unit](@) that is [identified](@), using the data that documents this [semantic unit](@) in the designated source, and flagging this [provisional MRG entry](@) for further processing if (and only if) the source is the set of [curated texts](@) of the [current scope](@), and the data contains a `synonymOf`-field that is not empty;
+3. [creating](/docs/spec-tools/mrgt#create-mrg-entry) a [provisional MRG entry](@) for every [semantic unit](@) that is [identified](@), using the data that documents this [semantic unit](@) in the designated source, and flagging this [provisional MRG entry](@) for further processing if (and only if) the source is the set of [curated texts](@) of the [current scope](@), and the data contains a `synonymOf`-field that is not empty;
 4. adding this [provisional MRG entry](@) to the [provisional MRG](@), possibly overwriting an [entry](provisional-mrg-entry@) if one already exists for the [identified](@) [term](@).
 
 By default, this source is the set of [curated texts](@) of the [current scope](@). For every [curated text](@) that documents a selected [term](@), a [provisional MRG entry](@) is created that contains the [header](@) of that [curated text](@), without the (first and last) lines that contain `---` (the front matter delimiters).
 
-However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG entry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/spec-files/mrg#mrg-entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#mrg-terminology) of the [MRG](@) from which the data was taken.
+However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG entry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/spec-files/mrg#entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#terminology) of the [MRG](@) from which the data was taken.
 
 ### Selecting all terms from a particular source {#syntax-add-all-terms}
 

@@ -27,6 +27,13 @@ where
 
 - **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/spec-files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
 
+## Finding the [MRG](@) that corresponds with a [Terminology Identifier](@)
+
+First, we assume that all [MRGs](@) (that have one or more [MRG entries](@)) that need to be referred to, are available in the [glossarydir](@) of the [current scope](@).
+
+Next, we have seen that every [terminology identifier](@) can be resolved into a valid [scopetag](@) and [versiontag](@).
+
+Since all [MRGs](@) follow the [MRG naming conventions](/docs/spec-files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
 
 ## Examples
 

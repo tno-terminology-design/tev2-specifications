@@ -1,5 +1,5 @@
 ---
-id: hrgt
+id: hrgt-deprecated
 sidebar_label: Human Readable Glossary Tool (HRGT)
 date: 20220421
 ---
@@ -10,11 +10,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The **Human Readable Glossary Generator Tool ([HRGT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [MRGRefs](@) as inputs, and that outputs (a copy of) these files in which these [MRGRefs](@) are converted into [hrg-lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc.
+The **Human Readable Glossary Generator Tool ([HRGT](@))** takes files that contain so-called [MRGRefs](@) and outputs a copy of these files in which these [MRGRefs](@) are converted into so-called [HRG lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc. The result of this is that the rendered document contains one or more sections that help [readers](@) to quickly find [terms](@) and (summaries of) their intended meanings.
 
-While [MRGRefs](@) have a [default syntax](/docs/spec-syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
+## What the HRGT does
 
-[hrg-lists](@) do not have a default structure, but there are various predefined ([converters](@)) that can be chosen (or specified) for the [HRGT](@) to use.
+The [HRGT](@) operates on a set of files, as specified by its command-line arguments or configuration file, each of which is processed as follows:
+1. Copy the file to its intended destination (as specified by its command-line arguments or configuration file), and use the latter for further processing;
+2. Find every [MRGRef](@), and replace each of them with the [HRG](@) that contains the (alphabetically sorted) [terms](@) of the [terminology](@) as specified by the [MRGRef](@).
 
 ## Installing the Tool
 
@@ -95,7 +97,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
-## HRG Generation {#what-it-does}
+## Human Readable Glossary Generation {#what-it-does}
 
 All [text conversion tools](@), including the [HRGT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/overview/tev2-text-conversion):
 
@@ -110,171 +112,55 @@ The following subsections specify the particulars for the [HRGT](@) [interpreter
 
 ### HRGT Interpreter Profile {#interpreter-profile}
 
-The [interpreter profile](@) of the [HRGT](@) consist of the following [named capturing groups](@):
-
-<details>
-  <summary>Legend</summary>
-
-1. **`Group`** name of the [capturing group](named-capturing-group@);
-2. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the [group](named-capturing-group@) is required to have non-empty contents. The `F` means that we reserve this field for Future Use.
-3. **`Description`** specifies the meaning (purpose) for which the contents of the [capturing group](named-capturing-group@) will be used.
-
-</details>
-
-| [Group](named-capturing-group@) | Req'd | Description |
-| --------------- | :---: | ----------- |
-| `hrg`           | n | a [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated. |
-| `converter`     | n | specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
-| `sorter`        | n | specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#sorter) for details. |
-
 ### HRGT Predefined Interpreters {#predefined-interpreters}
 
-The [HRGT](@) has only one predefined [intepreter](@), which is called `default`, the syntax of which is:
+[hier moet nog tekst]
+[MRGRefs](@) themselves specify how [HRG entries](@) are formatted. Please refer to the [MRGRef Syntax specifications](/docs/spec-syntax/mrg-ref-syntax) for the details.
 
-~~~ markdown
-{% hrg="<hrg>" converter="<converter>" sorter="<sorter>" %}
-~~~
+Default interpreter: `{%\s*hrg="(?<hrg>[^"]*)"\s*(?:converter="(?<converter>[^"]*)"\s*)?(?:sorter="(?<sorter>[^"]*)"\s*)?%}`
 
-where: 
-- `hrg` (optional) is a [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated.
-- `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details.
-- `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#sorter) for details.
+### HRGT Converter Profile (and its construction) {#converter-profile}
 
-For completeness, here is the [regex] that defines the `basic` or `default` [interpreter](@) for the [HRGT](@):
+The [converter profile](@) of the [HRGT](@) consists of 
+- a set of variables that are given values based on the [named capturing groups](@) of the [interpreter](@) that was used.
 
-~~~ regex
-{%\s*hrg="(?<hrg>[^"]*)"\s*(?:converter="(?<converter>[^"]*)"\s*)?(?:sorter="(?<sorter>[^"]*)"\s*)?%}
-~~~
+:::info Editor's note
+possibly, other variables can be populated from other sources
+:::
 
-### Processing {#processing}
-
-The purpose of the [HRGT](@) is to allow source texts to contain [MRGRefs](@) that are to be converted into [hrg-lists](@). 
-
-To do that, the [HRGT](@) uses the [interpreter](@) to locate subsequent [MRGRefs](@) in its input files, and for each of them, processes the [named capturing groups](@) that the [interpreter](@) populates. From this, it will attempt to find the [MRG](@) for which a corresponding [HRG](@) is to be generated. When found, it will walk through the [MRG entries](@) in that [MRG](@), and for each of them, populate [moustache variables](@) as specified in the [HRGT](@) [converter profile](@), and use the specified [converter](@) to produce the [HRG entries](@) that will be populating the [hrg-list](@). These [HRG entries](@) will be sorted according to the [sorter](@) that is specified.
-
-#### Finding the [MRG](@) associated with an [MRGRef](@) 
-
-The [MRG](@) file associated with an [MRGRef](@) is found by resolving the [terminology identifier](@) that is specified in the [named capturing group](@) `hrg`, which leads to a valid [scopetag](@) and [versiontag](@). 
-
-Since all [MRGs](@) follow the [MRG naming conventions](/docs/spec-files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
-
-#### Sorting the [HRG list](@)
-
-The [HRG list](@) contains elements that are assocated with one [MRG entry](@), one [HRG entry](@), and one value that is used for sorting. This value is the result from evaluating (the [handlebars expression](@) specified by) the [sorter](@), using [moustache variables](@) that come from the [converter profile](@) of the [HRGT](@). See [HRG Sorters](#sorter) for details.
-
-### HRGT Converter Profile {#converter-profile}
-
-The [converter profile](@) of the [TRRT](@) consists of a set of [moustache variables](@) that are populated from the following sources:
-
-- the [named capturing groups](@) as specified by the [interpreter profile](@) of the [TRRT](@);
-- the fields in the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to.
-
-<details>
-  <summary>Legend</summary>
-
-1. **`variable`** name of the [moustache variable](@) that is part of the [converter profile](@);
-2. **`source`** specifies where the contents of the variable comes from. 
-    - `NCG` means that the contents originates from a [named-capturing-group](@) that is populated by the [interpreter](@) that the [TRRT](@) has used;
-    - `ME` means that the contents originates from the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to.
-3. **`Description`** specifies how the value is derived from its source. '---' means that its contents is copied straight from the source, without modifications.
-
-</details>
-
-| Variable | Src | Description |
-| :------ | :---: | :--------- |
-| `showtext` | NCG | --- |
-| `trait`    | NCG | --- |
-| `scopetag` | ME  | --- |
-| `vsntag`   | ME  | --- |
-| `locator`  | ME  | --- |
-| `navurl`   | ME  | --- |
-| `termid`   | ME  | --- |
-| `termType` | ME  | --- |
-
-Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
+The [variables](@) are given the following values:
 
 ### HRGT Predefined Converters {#predefined-converters}
 
-The following tabs specify the predefined [converters](@) for the [TRRT](@).
+Onderstaande tekst komt uit de sources
+      "markdown-table-row":
+        "| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} |\n",
+      "markdown-section-2":
+        "## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n",
+      // 'markdown-section-2': "## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n",
+      "markdown-section-3":
+        "### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n"
+      // 'markdown-section-3': "### [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n"
 
-<Tabs
-  values={[
-    {label: 'markdown-link',          value: 'markdown-link'},
-    {label: 'html-link',              value: 'html-link'},
-    {label: 'html-hovertext-link',    value: 'html-hovertext-link'},
-    {label: 'html-glossarytext-link', value: 'html-glossarytext-link'},
-  ]}>
+## HRG Generation
 
-<TabItem value="markdown-link">
+All input files that are specified for processing are individually processed, as follows:
+1. If the input and output files are
+    - in different locations, copy the input file to its output location. All changes will be made in the output file.
+    - in the same location, raise an exception if the `-f` option is not set (false). This is to prevent accidental overwrites of the input file.
+2. In the output file, find the [MRGRef](@) as defined by the `interpreter` parameter (see [HRG Interpreters](#hrgt-interpreters) for details).
+3. Interpret the [MRGRef](@). When the `default` interpreter is found, this includes the identifying parameters, such as `converter="<converter>"` or `sort="<sort_value>"`, and using their values to override those found in the config file or command line.
+4. Create an empty [HRG list](@);
+5. Sort the [MRG entries](@), using the specified `sort` method, or the `default` sort method if that method isn't specified. See [HRG sorting](#sorter) for details.
+6. Convert each [MRG entry](@) into an [HRG entry](@), using the specified converter method, and add it to the [HRG list](@);
+7. In the output file, replace the [MRGRef](@) with the contents of the [HRG list](@).
 
-#### The `markdown-link` Converter
+By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
 
-The `markdown-link` converter is defined by the following [handlebars expression](@):
 
-~~~ ts
- [{{showtext}}]({{navurl}}{{#if trait}}#{{trait}}{{/if}})
-~~~
 
-</TabItem>
-
-<TabItem value="html-link">
-
-#### The `html-link` Converter
-
-The `html-link` converter is defined by the following [handlebars expression](@):
-
-~~~ html
- <a href="{{navurl}}{{#if trait}}#{{trait}}{{/if}}">{{showtext}}</a>
-~~~
-
-</TabItem>
-
-<TabItem value="html-hovertext-link">
-
-#### The `html-hovertext-link` Converter
-
-The `html-hovertext-link` converter is defined by the following [handlebars expression](@):
-
-~~~ html
- <a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
-    title="{{#if hoverText}}{{hoverText}}{{else}}{{#if glossaryTerm}}{{glossaryTerm}}
-           {{else}}{{capFirst term}}
-           {{/if}}: {{noRefs glossaryText type='markdown'}}{{/if}}"
-  >{{showtext}}</a>
-~~~
-
-This converter uses the following functions:
-- `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version in case the resource is located on the same site.
-- `capFirst`: capitalizes the first character of every word found in its argument.
-- `noRefs`: replaces every [term ref](@) (default syntax) that it finds in the text of its argument (i.e., in the `glossaryText`) with `{{capFirst showtext}}`.
-
-</TabItem>
-
-<TabItem value="html-glossarytext-link">
-
-#### The `html-glossarytext-link` Converter
-
-The `html-glossarytext-link` converter is defined by the following [handlebars expression](@):
-
-~~~ html
- '<a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
-     title="{{capFirst term}}: {{noRefs glossaryText type='markdown'}}"
-     >{{showtext}}</a>'
-~~~
-
-This converter uses the following functions:
-- `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version in case the resource is located on the same site.
-- `capFirst`: capitalizes the first character of every word found in its argument.
-- `noRefs`: replaces every [term ref](@) (default syntax) that it finds in the text of its argument (i.e., in the `glossaryText`) with `{{capFirst showtext}}`.
-
-</TabItem>
-
-</Tabs>
-
------
 
 ### HRGT Sorting {#sorter}
-### HRGT Predefined Sorters {#predefined-sorters}
 
 A [HRG](@) is a sorted list of [HRG entries](@), where sorting can be done in various ways. By default (i.e. when the `sort` option isn't specified), this is done as specified by the (predefined) `default` sorting option. 
 

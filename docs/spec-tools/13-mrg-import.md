@@ -28,11 +28,6 @@ This means concretely that within the [glossarydir](@) of a [scope](@) that has 
 
 [^1]: Previous versions of the specifications said this would be a symbolic link to the [MRG](@) rather than a copy thereof. However, symbolic links created for the purpose of functioning in a (Git) repo would not work in a local development context (e.g. on a Windows machine), and vice versa. To remedy this, and taking into consideration that [MRGs](@) are relatively small in size, made us decide to use actual copies. Note that you can still see which files are copies by inspecting the first section of the [MRGs](@), which lists the [versiontag](@) and the `altvsntags` (alternative [versiontags](@) that can be used) of the [terminology](@) that the [MRG](@) documents.
 
-There will shortly be an implementation of the tool:
-
-- the repo for the code of the tool is [here](https://github.com/tno-terminology-design/mrg-import).
-- the documentation is [<mark>tbd</mark>].
-
 ## Installing the Tool
 
 The tool can be installed from the command line and made globally available by executing

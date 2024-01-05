@@ -19,13 +19,6 @@ The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine 
 
 The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs/category/toolbox-specs), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
-There is currently one implementation of the tool (but not yet fully available), which will be built similar to the [TRRT](@) and [MRG Importer](@). [^previous]
-
-- the repo is [here](https://github.com/tno-terminology-design/mrgt).
-- the documentation is [<mark>provided in this web page</mark>].
-
-[^previous]: An older (JAVA) implementation exists, but is not compatible with the current specifications:<br/>- the repo is [here](https://github.com/trustoverip/ctwg-toolkit-mrg/)<br/>- the documentation is [here](https://github.com/trustoverip/ctwg-toolkit-mrg#readme)<br/>- the (deprecated) specifications for this tool are [here](https://essif-lab.github.io/framework/docs/spec-tools/mrgt)
-
 ## Installing the Tool
 
 The tool can be installed from the command line and made globally available by executing
@@ -121,7 +114,7 @@ Running the tool comprises the following phases:
 2. Post-processing the [entries](provisional-mrg-entry@) in that [provisional MRG](@);
 3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@), and creating/overwriting symbolic links, as appropriate.
 
-### Phase 1: constructing a [provisional MRG](@) {#mrgt-constructing-provisional-mrg}
+### Phase 1: constructing a [provisional MRG](@) {#constructing-provisional-mrg}
 
 Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
 
@@ -135,7 +128,7 @@ The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syn
 After a [provisional MRG entry](@) is created, the following modifications are made:
 - in the `formPhrases` field, the [form phrase macros](/docs/spec-syntax/form-phrase-syntax#form-phrase-macros) are resolved. This means that the `formPhrases` field in an [MRG entry] is the list of all [form phrases](@). 
 
-#### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrgt-mrg-filenames}
+#### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrg-filenames}
 
 When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopetag>.<vsntag>.yaml` is constructed, where:
 
@@ -144,15 +137,15 @@ When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopet
 
 If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
 
-- a [`terminology` section](/docs/spec-files/mrg#mrg-terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
-- a [`scopes` section](/docs/spec-files/mrg#mrg-scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
-- an [`entries` section]((/docs/spec-files/mrg#mrg-terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
+- a [`terminology` section](/docs/spec-files/mrg#terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/spec-files/saf#terminology) in the [SAF](@);
+- a [`scopes` section](/docs/spec-files/mrg#scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
+- an [`entries` section]((/docs/spec-files/mrg#terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
 
 Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@), a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
 
 Next, the [MRGT](@) will create a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) for every [versiontag](@) that exists in the `altvsntags`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The symbolic link will point to the file that has just been written and contains the [MRG](@) that has just been generated. The name of this symbolic link is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
 
-### Phase 2: post processing Synonyms {#mrgt-post-processing}
+### Phase 2: post processing Synonyms {#post-processing}
 
 This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files and symbolic links have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of synonyms, to use the newly generated [provisional MRG entries](@)
 
@@ -183,7 +176,6 @@ The last step consists of checking crucial properties that [MRGs](@) are relied 
 
 In this step, the following checks are done (as a minimum):
 - The value of the `termid` field in one [MRG Entry](@) differs from the value of the `termid` field of all other [MRG Entries](@). This ensures that `termid` contains a unique identifier (primary key) within the context of the [MRG](@).
-
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 

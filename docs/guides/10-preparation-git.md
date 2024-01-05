@@ -89,7 +89,7 @@ scopes:
 
 ### Adding Configurations for [Terminologies](@)
 
-Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](mrg#mrg-file-naming-conventions@).
+Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](mrg#file-naming-conventions@).
 
 The [versiontags](@) and the contents of a [terminology](@) are specified as an entry in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@). This section must contain at least:
 
@@ -149,7 +149,7 @@ versions:
 Notes:
 
 - The `altvsntag` field expects you to specify a list of alternative [versiontags](@); not just one.
-- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](mrg#mrg-file-naming-conventions@).
+- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](mrg#file-naming-conventions@).
 - If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/spec-syntax/mrg-term-selection-syntax) to the `termselection` field.
 
 </TabItem>

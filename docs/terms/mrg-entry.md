@@ -24,7 +24,7 @@ An **MRG Entry** is a machine-readable (and interpretable) artifact that contain
 
 A [terminology](@) can be seen as the collection of [MRG entries](@) that hold all data related to the [terms](scoped-term@) that the [terminology](@) consists of.
 
-The contents of an [MRG entry](@) may vary, depending on the type of [semantic unit](@) that it documents. The kinds of data that are common for all [semantic units](@) are documented [here](http://localhost:3000/docs/spec-files/mrg#mrg-entries).
+The contents of an [MRG entry](@) may vary, depending on the type of [semantic unit](@) that it documents. The kinds of data that are common for all [semantic units](@) are documented [here](http://localhost:3000/docs/spec-files/mrg#entries).
 
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 

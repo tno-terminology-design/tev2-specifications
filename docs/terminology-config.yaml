@@ -2,7 +2,7 @@
 
 ## General
 scopedir: .      # URL of the scope directory (where the SAF is located)
-onNotExist: warn # Action in case somthing doesn't exist
+onNotExist: warn # Action in case something doesn't exist
 output: .        # (root) directory for output files to be written to
 
 ## Machine Readable Glossary Tool

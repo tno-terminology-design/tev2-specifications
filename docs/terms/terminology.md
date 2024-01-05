@@ -24,7 +24,7 @@ A **terminology** is a set of [terms](scoped-term@) that are used within a singl
 
 As each [term](@) in the [terminology](@) comes with all sorts of related data, such as a [definition](@), [documentation](curated-text@) about the [semantic unit](@) that it represents, [terms](@) that can be used as synonyms, etc., and since (pointers to) all that data is gathered in a single [MRG entry](@), we can also say that a [terminology](@) consists of the set of [MRG entries](@) that hold such data of the [terms](@) that the [terminology](@) consists of.
 
-As a consequence, it is easy [to generate](/docs/spec-tools/mrgt) an [MRG](@) for a [terminology](@), as this is basically the collection of the [MRG entries](@) that constitute the [terminology](@) (apart from [some meta-data](/docs/spec-files/mrg#mrg-structure), of course). And from there, [human readable glossaries](hrg@) can be [derived](/docs/spec-tools-envisaged/hrgt).
+As a consequence, it is easy [to generate](/docs/spec-tools/mrgt) an [MRG](@) for a [terminology](@), as this is basically the collection of the [MRG entries](@) that constitute the [terminology](@) (apart from [some meta-data](/docs/spec-files/mrg#structure), of course). And from there, [human readable glossaries](hrg@) can be [derived](/docs/spec-tools-envisaged/hrgt).
 
 A [terminology](@) may be versioned, i.e. associated with a [versiontag](@). This allows multiple [terminologies](@) to exist within a single [scope](@), enabling the [scope](@) to have one for specific purposes (e.g. for the further development of its [terms](@), or for use within a whitepaper).
 

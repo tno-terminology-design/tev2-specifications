@@ -15,7 +15,7 @@ An **MRG** or **Machine Readable Glossary** is a [glossary](@)[^1] for a particu
 
 [^1]: Actually, the [MRG](@) is more of an inventory than a [glossary](@), because it contains _all_ [semantic units](@) that are [curated](@) within the [scope](@). Apart from [terms](@), it may also include e.g., [mental models](pattern@) and [use cases](@). We choose to maintain the [term](@) "Machine Readable Glossary" ([MRG](@)), because most of us would view it - initially, at least - as a list of [terms](@) and their [definitions](@).
 
-An [MRG](@) is meant to be used by the tools from the [toolbox](/docs-toolbox), e.g. for creating a [HRG](@), or to help resolve [TermRefs](@). 
+An [MRG](@) is meant to be used by the tools from the [toolbox](/docs/category/toolbox-specs), e.g. for creating a [HRG](@), or to help resolve [TermRefs](@). 
 
 A [scope](@) may have multiple [MRGs](@), each of which represents a specific version of its [terminology](@).
 
@@ -100,14 +100,14 @@ The following fields are defined for the section `scopes`:
 
 | Name       | Req'd | Description |
 | ---------- | :---: | :---------- |
-| `scopetag`   | Y | [Scopetag](@) of a third-party [scope](@), the [MRG](@) of which contains [MRG entries](@) that have been imported into the [MRG](@). This [scopetag](@) has been chosen by the [curators](@) of the [scope](@) of which the [MRG](@) is part, to refer to that particular third-party [scope](@). This [scopetag](@) may differ from the [scopetag](@) that the [curators](@) of that third-party [scope](@) have chosen for this [scope](@) <br/>Must satisfy regex `[a-z0-9_-]+`. |
+| `scopetag`   | Y | [Scopetag](@) of a third-party [scope](@), the [MRG](@) of which contains [MRG entries](@) that have been imported into the [MRG](@). This [scopetag](@) has been chosen by the [curators](@) of the [scope](@) of which the [MRG](@) is part, to refer to that particular third-party [scope](@). This [scopetag](@) may differ from the [scopetag](@) that the [curators](@) of that third-party [scope](@) have chosen for this [scope](@) <br/>Must satisfy [regex](@) `[a-z0-9_-]+`. |
 | `scopedir`   | Y | URL that locates the [scope directory](@) associated with that third-party [scope](@). |
 
 ## MRG Entries (the `entries` section) {#mrg-entries}
 
 The `entries` section of an [MRG](@) is a list of [MRG entries](@), the purpose of which is that the various tools can find all data that is relevant for the purpose that such a tool serves.
 
-This `entries` section documentents the [terminology](@) that is [identified] by each of the [versiontags](@) in either the `vsntag` field or the `altvsntag` field in the `terminology` section of the [MRG](@).
+This `entries` section documents the [terminology](@) that is [identified] by each of the [versiontags](@) in either the `vsntag` field or the `altvsntag` field in the `terminology` section of the [MRG](@).
 
 An [MRG entry](@) has a few fields that are always present, because the [MRGT](@) generates them, as follows:
 
@@ -147,18 +147,18 @@ The following table documents the fields that are used within the context of [TE
 | Name            | Req'd | Description |
 | --------------- | :---: | :---------- |
 | `scopetag`        | Y | [Scopetag](@) that [identifies](@) the [scope](@) from within which the contents of the [MRG entry](@) is [curated](@), and obtained. The [`scopes` section](#mrg-scopes) in the [MRG](@) SHOULD contain a mapping between the `scopetag` and its associated [scope directory](@).|
-| `vsntag`          | Y | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated.<br/>Must satisfy regex `[a-z0-9_-.]+`.  |
+| `vsntag`          | Y | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated.<br/>Must satisfy [regex](@) `[a-z0-9_-.]+`.  |
 | `locator`         | Y | path, relative to `scopedir`/`curatedir`/, where the [curated text](@) lives from which the contents of the [MRG entry](@) was constructed. The value of `scopedir` can be obtained from the `scopes` section of the [MRG](@), and that of `curatedir` can be obtained from the [SAF](@) that lives in this `scopedir`. |
 | `navurl`          | Y | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/spec-files/saf#scope-section) of the [SAF](@) (that lives in the `scopedir` as specified in the `scopes` section of the [MRG](@)), where the rendered version of the [curated text](@) is located. Its value will be empty if it cannot be constructed, e.g., because the `[navpath](@)` field in the [SAF](@) is empty or otherwise incorrect. |
 | `headingids`      | Y | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that exist in the file that contains the [body](@) of the [curated text](@), and can serve as `trait` in a [TermRef](@). |
 | `termid`          | Y | [Text](termid@) that unambiguously [identifies](@) the [semantic unit](@) within this [scope](@) that is documented by this [MRG entry](@). There MUST NOT be another [MRG entry](@) within the [MRG](@) that has a `termid` field with the same value. |
-| `term`            | Y | [Text](term-identifier@) that [identifies](@) a [semantic unit](@) within this [scope](@), and hence also the [curated text](@) that describes it, which includes its [definition](@). Its value is typically the value of the `glossaryTerm` field, where all characters are made lower-case, any text between parentheses is discarded, and any (sequences of) spaces (or other special characters) are replaced with a `-`character.<br/>The [`term`-field](/docs/spec-syntax/term-ref-syntax#term) of a [TermRef](@) that refers to this [curated text](@) must match this value.<br/>Must satisfy regex `[a-z0-9_-]+`. |
-| `termType`        | n | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`.<br/>Must satisfy regex `[a-z0-9_-]+`. |
+| `term`            | Y | [Text](term-identifier@) that [identifies](@) a [semantic unit](@) within this [scope](@), and hence also the [curated text](@) that describes it, which includes its [definition](@). Its value is typically the value of the `glossaryTerm` field, where all characters are made lower-case, any text between parentheses is discarded, and any (sequences of) spaces (or other special characters) are replaced with a `-`character.<br/>The [`term`-field](/docs/spec-syntax/term-ref-syntax#term) of a [TermRef](@) that refers to this [curated text](@) must match this value.<br/>Must satisfy [regex](@) `[a-z0-9_-]+`. |
+| `termType`        | n | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`.<br/>Must satisfy [regex](@) `[a-z0-9_-]+`. |
 | `bodyFile`        | n | Path, relative to the [scopedir](@), that contains the [body](@) of this [curated text](@). If not specified, the [body](@) in this file serves as the [body](@) of the [curated text](@). |
 | `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`. |
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
 | `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
-| `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`.<br/>Must satisfy regex [`(?:\[\s*([a-z0-9_-]+)\s*(?:,\s*([a-z0-9_-]+))*\s*\])?`](https://www.debuggex.com/r/a51CXl1NzR3kwihT). |
+| `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`. |
 | `formPhrases`     | n | List of [texts](formphrase@) that are [used to convert](/docs/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/spec-syntax/form-phrase-syntax).[^3] |
 
 [^3]: The `formPhrases` field in an [MRG Entry](@) is void of so-called [form phrase macros](/docs/spec-syntax/form-phrase-syntax#form-phrase-macros); it is simply a (possibly extensive) list of [form phrases](@).

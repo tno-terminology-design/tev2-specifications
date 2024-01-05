@@ -39,5 +39,5 @@ This naming convention enables tools (as well as [curators](@) and others) that 
 We need to decide whether this document actually describes 
 
 - (the possible structures of) HRGs, or
-- the ways in hwich the generation of an HRG can be specified
+- the ways in which the generation of an HRG can be specified
 :::

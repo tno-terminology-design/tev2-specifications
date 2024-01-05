@@ -20,4 +20,4 @@ If you are planning on modifying any code: a rebuild command is also available, 
 npm run rebuild
 ```
 
-The current available test ([\__tests__/trrt.test.js](https://github.com/tno-terminology-design/trrt/blob/main/__tests__/trrt.test.js)), runs the [TRRT](@) on the test files located in the `content` folder and checks if the number of terms that have been converted correspond with the amount of terms found by the external regex matching of the test script.
+The current available test ([\__tests__/trrt.test.js](https://github.com/tno-terminology-design/trrt/blob/main/__tests__/trrt.test.js)), runs the [TRRT](@) on the test files located in the `content` folder and checks if the number of terms that have been converted correspond with the amount of terms found by the external [regex](@) matching of the test script.

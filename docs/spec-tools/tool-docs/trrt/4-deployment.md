@@ -14,6 +14,7 @@ The GitHub repository of the [TRRT](@), located [here](https://github.com/tno-te
 ```
 
 This execution of the [TRRT](@) is run from the root of the repository, any input files that contain successfully converted [term refs](@) will be output starting from that location as well. The [scope directory](@) is set to `__tests__/content`, as this is where the SAF resides. Every file that matches the `'**/*.md'` glob pattern string is given to the [TRRT](@), in this case meaning every file in every directory ending with `.md` is seen as input.
+
 As the output directory is the same as the current directory, converted files will overwrite the existing files when we use the `force` flag. This forceful behavior is useful for deployment inside pipelines where the original files are usually not modified, but should be avoided during local use in order to preserve the original documents that include [term refs](@).
 
 ## Example Deployment Case

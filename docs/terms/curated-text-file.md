@@ -14,6 +14,6 @@ created: 20231009
 updated: 20231009
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

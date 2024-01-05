@@ -17,7 +17,7 @@ Documentation needs to be adjusted for:
 
 The **Machine Readable Glossary generation Tool ([MRGT](@))** generates Machine Readable Glossaries ([MRGs](@)) for one specific, or all [terminology](@) versions that are [curated](@) within a specific [scope](@). [MRGs](@) come in a specific, well-defined [format](/docs/spec-files/mrg). They contain some meta-data, followed by a list of so-called [MRG entries](@), one for every [term](@) in its [scope](@), which represent [concepts](@) and other [semantic units](@) that are known within that [scope](@).
 
-The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs-toolbox), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
+The (newly generated) [MRG(s)](@) are meant to be processed by the other tools in the [toolbox](/docs/category/toolbox-specs), regardless of whether such tools are called from within the context of another [scope](@). As they contain every [term](@) that is used in the [scope](@), and include all the relevant meta-data, an [MRG](@) serves as the single, authoritative source of that (version of the) [scope's](@) [terminology](@).
 
 There is currently one implementation of the tool (but not yet fully available), which will be built similar to the [TRRT](@) and [MRG Importer](@). [^previous]
 
@@ -87,7 +87,7 @@ The columns in the following table are defined as follows:
 2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
 3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
-If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
+If a configuration file used, the long version of the parameter must be used (without the preceding `--`).
 </details>
 
 | Key                         | Req'd | Description |
@@ -117,7 +117,7 @@ One run of the [MRGT](@) either
 - generates multiple [MRGs](@), i.e., one for every version of the [terminology](@) that is [curated](@) within the [current scope](@) (which is the case when the `version` parameter is omitted).
 
 Running the tool comprises the following phases:
-1. Consturcting a [provisional MRG](@);
+1. Constructing a [provisional MRG](@);
 2. Post-processing the [entries](provisional-mrg-entry@) in that [provisional MRG](@);
 3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@), and creating/overwriting symbolic links, as appropriate.
 
@@ -166,7 +166,7 @@ Effectively, this means that whenever a [term](@) is defined as a `synonym of` s
 
 ### Phase 3: post processing other fields
 
-Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the fieldname (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified:
+Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the field name (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified:
 
 | Field          | Value(s) that are assigned to the fields |
 | -------------- | :---------- |
@@ -179,7 +179,7 @@ The [MRGT](@) run is concluded after all these modifications have been written t
 
 ### Phase 4: checking the result
 
-The last step consists of checking crucial properties that [MRGs](@) are relied on to have, and raising apropriate exceptions in case something is wrong. This helps [curators](@) that check the log outputs to become aware of things they may need to fix before these [MRGs](@) are further used (or published).
+The last step consists of checking crucial properties that [MRGs](@) are relied on to have, and raising appropriate exceptions in case something is wrong. This helps [curators](@) that check the log outputs to become aware of things they may need to fix before these [MRGs](@) are further used (or published).
 
 In this step, the following checks are done (as a minimum):
 - The value of the `termid` field in one [MRG Entry](@) differs from the value of the `termid` field of all other [MRG Entries](@). This ensures that `termid` contains a unique identifier (primary key) within the context of the [MRG](@).

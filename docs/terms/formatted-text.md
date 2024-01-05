@@ -34,7 +34,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 - Formatted text enhances the readability and visual appeal of a document, making it more accessible to readers.
 - Different formatting options, such as fonts, colors, and alignments, contribute to the overall presentation of the text.
 
-## Miscellanous
+## Miscellaneous
 
 The term "Formatted Text" encompasses documents or text that have undergone processing to present them with a specific layout and style. This process includes applying formatting elements such as headings, bold and italic text, bullet points, tables, images, and more.
 

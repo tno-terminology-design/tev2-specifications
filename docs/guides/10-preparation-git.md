@@ -161,7 +161,7 @@ The contents of a [terminology](@) does not necessarily consist of all [terms] d
 - adding [terms](@) to a [terminology](@), either from [curated texts](@), or from [MRGs](@) that are imported from other [scopes](@);
 - removing [terms](@) from a [terminology](@), e.g. to compensate for a previous addition of too many terms;
 
-This process of contructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](/docs/spec-tools/mrgt#running-the-tool).
+This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](/docs/spec-tools/mrgt#running-the-tool).
 
 The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/spec-syntax/mrg-term-selection-syntax).
 
@@ -191,7 +191,7 @@ The below text was the contents of the [saf.yaml](https://github.com/tno-termino
 
 ```yaml
 #
-# This is a Scope Administration File that can be used in conjunction with [Terminology Engine v2](https://tno-terminology-design.github.io/tev2-specifications/docs/overview/overview-tev2).
+# This is a Scope Administration File that can be used in conjunction with [Terminology Engine v2](https://tno-terminology-design.github.io/tev2-specifications/docs/category/introduction-overview).
 #
 # The first section defines meta-data concerning the scope itself, both for technical use and human use.
 # It shows where directories and files live that ar part of the scope, and also
@@ -203,7 +203,7 @@ scope:
   curatedir: terms # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
   glossarydir: glossaries # directory where all glossary files and GDFs are located. Full URL is `scopedir`/`glossarydir`
   defaultvsn: documentation # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.tev2.latest.yaml
-  website: https://tno-terminology-design.github.io/tev2-specifications/docs # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Tterminology.
+  website: https://tno-terminology-design.github.io/tev2-specifications/docs # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Terminology.
   navpath: /terms # Path to the directory where Curated Texts are rendered. What `curatedir` is for Curated Texts is, `navpath` is for the rendered versions of Curated Texts.
   bodyFileID: id # Name of the field in the front matter of a [body file](@) used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the [body file](@) will be used. | 
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`

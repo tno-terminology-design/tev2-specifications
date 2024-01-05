@@ -14,7 +14,7 @@ created: 2022-06-06
 updated: 2022-07-28
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
@@ -28,7 +28,7 @@ Grouptags may be used within a [scope](@) to tag various sorts or [terms](@), th
 The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
 
 ### Criteria
-A **Grouptag** (of/within a [scope](@)) is a [tag](@) that is used within that [scope](@) to group [terms](@). It satisfies the regex `[a-z0-9_-]+`.
+A **Grouptag** (of/within a [scope](@)) is a [tag](@) that is used within that [scope](@) to group [terms](@). It satisfies the [regex](@) `[a-z0-9_-]+`.
 
 ### Examples
 Examples of grouptags are `meta-terms`, `governance-terms`, `paa-pattern-terms`, `essiflab`, or `ctwg`

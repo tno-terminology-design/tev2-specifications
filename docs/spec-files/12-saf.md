@@ -81,9 +81,6 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `issues`      | n | URL where issues can be reported and handled.|
 | `curators`    | n | Data that can be used to contact individual [curators](@). |
 | ...           | n | [Curators](@) are free to add additional, [scope](@)-specific fields if they like to. |
-<!--
-| `dateformat`  | n | Regex (PCRE) that has named capturing groups for YYYY, MM and DD, and that can be used to parse the date fields used in this [scope](@) ) (provided another regex doesn't override it). When not provided, tools should use the regex "**(?P<YYYY\>\d{4})-?(?P<MM\>\d{2})-?(?P<DD\>\d{2})(?P<tzone\>Z&#124[+-]\d{2}:\d{2})?**" for this (noting that in certain contexts, `\` characters may need to be escaped). |
--->
 
 [^1]: note that, contrary to the other fields, the name of this field has uppercase characters.
 
@@ -126,7 +123,7 @@ The following fields are defined for the `scopes` section of a [SAF](@):
 </details>
 
 :::info Editor's note
-It may be simpler to change the `scopetags`-field, which is currently a list of scopetags, into a `scopetag`-field, which would specifiy a single scopetag. This would encourage curators to use no more than one scopetag for each scope they refer to, but if they really wanted to, they could make multiple entries with different scopetags that refer to the same scopedir.
+It may be simpler to change the `scopetags`-field, which is currently a list of scopetags, into a `scopetag`-field, which would specify a single scopetag. This would encourage curators to use no more than one scopetag for each scope they refer to, but if they really wanted to, they could make multiple entries with different scopetags that refer to the same scopedir.
 :::
 
 | Name        | Req'd | Description |
@@ -187,8 +184,8 @@ The following fields are defined for the `versions` section of a [SAF](@):
 
 | Name        | Req'd | Description |
 | ----------- | :---: | ----------- |
-| `vsntag`      | Y | [Versiontag](@) that that is used to [identify](@) this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version.<br/>Must satisfy regex `[a-z0-9_-\.]+`. |
-| `altvsntags`  | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version.<br/>Must satisfy regex `[a-z0-9_-\.]+`. |
+| `vsntag`      | Y | [Versiontag](@) that that is used to [identify](@) this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version.<br/>Must satisfy [regex](@) `[a-z0-9_-\.]+`. |
+| `altvsntags`  | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version.<br/>Must satisfy [regex](@) `[a-z0-9_-\.]+`. |
 | `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of this [SAF](@)). The purpose of this field is to allow different versions of the [scope's](@) [terminology](@) to have different licenses. |
 | `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See [Terminology Construction](/docs/spec-tools/mrg-terminology-construction) for details. |
 | `status`      | n | Text that [identifies](@) the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |

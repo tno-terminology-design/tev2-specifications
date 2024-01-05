@@ -63,7 +63,7 @@ Selecting and subsequently adding [terms](@) to the [provisional MRG](@) consist
 
 By default, this source is the set of [curated texts](@) of the [current scope](@). For every [curated text](@) that documents a selected [term](@), a [provisional MRG entry](@) is created that contains the [header](@) of that [curated text](@), without the (first and last) lines that contain `---` (the front matter delimiters).
 
-However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG etry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/spec-files/mrg#mrg-entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#mrg-terminology) of the [MRG](@) from which the data was taken.
+However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG entry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/spec-files/mrg#mrg-entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/spec-files/mrg#mrg-terminology) of the [MRG](@) from which the data was taken.
 
 ### Selecting all terms from a particular source {#syntax-add-all-terms}
 
@@ -118,7 +118,7 @@ These instructions will select every [term](@) whose specification (as taken fro
 
 Selecting and subsequently removing [provisional MRG entries](@)) from the [provisional MRG](@) consists of [identifying](@) and removing them.
 
-The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, as follows:
+The syntax is similar to one that is used for adding terms, but it is preceded with a `-`sign, as follows:
 
 - **-`<key>` [ `<value>`, `<value2>`, ... ]**, where:
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [provisional MRG](@), , such as `term`, `grouptags`, `status`, etc.
@@ -144,7 +144,7 @@ This syntax removes every [provisional MRG entry](@) from the [provisional MRG](
 The ability to rename [terms](@) as they are imported may introduce issues related to other field-names, such as `term`, `formPhrases`, `synonyms`, `glossaryText`s and possibly some others. Perhaps this syntax should therefore be extended, enabling [curators](@) to simultaneously change these (and other) fields in the [MRG entry](@).
 :::
 
-In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) (better: modifying fields in [provisional MRG entries](@)) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only the [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed, e.g. the `formPhrases`.
+In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) (better: modifying fields in [provisional MRG entries](@)) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only the [term](@) that should be renamable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed, e.g. the `formPhrases`.
 
 The following syntaxes are available for renaming fields in a [provisional MRG entry](@) that is part of the [provisional MRG](@):
 

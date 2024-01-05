@@ -20,4 +20,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # TRRT - TermRef Rendering Tool
 
-The **TRRT** ([TermRef](@) Rendering Tool) is an essential component of the TEv2 toolbox, designed to facilitate the visualization and rendering of [semantic units](@) and their interrelationships within a specific [terminology](@). The TRRT takes a [TermRef](@) as input, finds the [MRG](@) and the [entry](mrg-entry@) therin that is being referenced, and replaces that with a [renderable ref](@), thus enabling the term to be rendered with various decorations and other characteristics.
+The **TRRT** ([TermRef](@) Rendering Tool) is an essential component of the TEv2 toolbox, designed to facilitate the visualization and rendering of [semantic units](@) and their interrelationships within a specific [terminology](@). The TRRT takes a [TermRef](@) as input, finds the [MRG](@) and the [entry](mrg-entry@) therein that is being referenced, and replaces that with a [renderable ref](@), thus enabling the term to be rendered with various decorations and other characteristics.

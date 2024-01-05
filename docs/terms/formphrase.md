@@ -26,14 +26,15 @@ Form phrases of a [term](@) can be specified in the [header](@) of the [curated 
 
 ## Examples
 
-1. "Form Phrases", "form phrase(s)" are both form phrase related to the term (noun) '[Form Phrase](@).
-2. "Identify", "identifying", "identifies", "identified" are all form phrases related to the term (verb) [identify](@)
-3. "MRG", "machine readable glossary (MRG)" are both form phrases related to the term "machine readable glossary".
+1. `"Form Phrases"`, `"form phrase(s)"` are both form phrase related to the term (noun) '[Form Phrase](@).
+2. `"Identify"`, `"identifying"`, `"identifies"`, `"identified"` are all form phrases related to the term (verb) [identify](@)
+3. `"MRG"`, `"machine readable glossary (MRG)"` are both form phrases related to the term [machine readable glossary](@).
 
 ## Notes
 
 - Form phrases allow for flexible expression of concepts, accommodating various linguistic variations that users may employ.
 - These phrases are commonly used to label and categorize concepts within glossaries and dictionaries.
+- It is a good habit to surround a form phrase with single or double quotes (which is needed anyway when it contains special characters).
 
 ## Miscellaneous
 

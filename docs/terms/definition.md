@@ -14,7 +14,7 @@ created: 2022-06-06
 updated: 2022-06-06
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
@@ -61,7 +61,7 @@ Note that this definition satisfies itself. Also note that a definition may be u
 
 You may want to create definitions that are both acceptable for business people (for whom it usually suffices that they get the gist of it) as for engineers (that need much more precision, up to the point where they can use it for formal reasoning). You face the challenge of conveying your intangible ideas or [concepts](@) with tangible words or phrases. You can do this by using [intensional definitions](https://en.wikipedia.org/wiki/Extensional_and_intensional_definitions), i.e. by defining criteria that specify *the necessary and sufficient conditions* for when the term you define should (not) be used. When defining such criteria, make sure they have the following properties:
 
-- you are convinced that the vast majority of people in your audience will *make the same judgements as you do when applying these criteria* in a situation that you and your audience consider relevant; and
+- you are convinced that the vast majority of people in your audience will *make the same judgments as you do when applying these criteria* in a situation that you and your audience consider relevant; and
 - the *ability to make this distinction is relevant* for one or more purposes of your intended audience.
 
 Note that the actual word or phrase you choose as the [term](@) name for a [concept](@) is much less important than the criteria you define. If in a particular context another name would be more suitable, you can define another [term](@) for that other context (scope) that still refers to the concept you created the definition for.

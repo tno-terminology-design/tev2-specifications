@@ -46,7 +46,7 @@ In the syntax specification for [term selection instructions](@), we use the fol
 
 | Symbol | Description |
 | :----- | :---------- |
-| `<key>` | a text that corresponds with a field name in an [MRG entry](@) of a desginated [MRG](@), or the [header](@) (front-matter) of a [curated text](@). Examples: `term`, `grouptags`, `status`. |
+| `<key>` | a text that corresponds with a field name in an [MRG entry](@) of a designated [MRG](@), or the [header](@) (front-matter) of a [curated text](@). Examples: `term`, `grouptags`, `status`. |
 | `<value>` | a text that is used to [identify](@) an [MRG entry](@) or a [curated text](@). |
 
 ## Adding Terms {#syntax-add}
@@ -110,7 +110,7 @@ These instructions will add every term from the designated source, whose specifi
 
 ## Removing Terms {#syntax-remove}
 
-Removing terms is equivalent to removing selected [MRG entries](@) from the [terminology under construction](@). The syntax is similar to one that is used for adding terms, but it is preceeded with a `-`sign, and a source may not be specified, as it is always the [terminology under construction](@).
+Removing terms is equivalent to removing selected [MRG entries](@) from the [terminology under construction](@). The syntax is similar to one that is used for adding terms, but it is preceded with a `-`sign, and a source may not be specified, as it is always the [terminology under construction](@).
 
 The following syntaxes are available for removing a selection of terms from the [terminology under construction](@):
 
@@ -138,7 +138,7 @@ This syntax removes every [MRG entry](@) from the [terminology-under-constructio
 The ability to rename terms as they are imported may introduce some issues related to other field-names, such as `term`, `formphrases`, `synonyms`, `glossaryText`s and possibly some others. Perhaps this syntax should therefore be extended, enabling [curators](@) to simultaneously change these (and other) fields in the [MRG entry](@).
 :::
 
-In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renameable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
+In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accommodate for the renaming of [terms](@) as they are 'imported' from [terminologies](@) other than the one that we are constructing. However, the analogy breaks down in the sense that it is not only a [term](@) that should be renamable (which is sufficient for [namespaces](https://en.wikipedia.org/wiki/Namespace)), but also certain attributes may need to be changed.
 
 The following syntaxes are available for renaming fields in an [MRG entry](@) that is part of the [terminology under construction](@):
 

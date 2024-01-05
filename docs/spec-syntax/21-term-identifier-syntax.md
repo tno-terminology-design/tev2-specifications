@@ -19,7 +19,7 @@ where:
 
 - **`termType`:** (optional) specifies the [kind of semantic unit](term-type@) that is to be [identified](@). Typical values are `concept:`, `relation:`, `pattern:` (or `mental-model:`), or `use-case:`. If not specified, its value defaults to that of the `defaulttype`-field in the [scope section](/docs/spec-files/saf#scope-section) of the [SAF](@).
 
-- **`term`** is required (must satisfy regex `[a-z0-9_-]+`). It is a text that is used to [identify](@) a [semantic unit](@) within the designated [terminology](@). It appears in the (required) `term`-field of [curated texts](@) and [MRG entries](@).
+- **`term`** is required (must satisfy [regex](@) `[a-z0-9_-]+`). It is a text that is used to [identify](@) a [semantic unit](@) within the designated [terminology](@). It appears in the (required) `term`-field of [curated texts](@) and [MRG entries](@).
 
 - **@`terminology-identifier`** (optional) specifies the [terminology](@) withi which the [semantic unit](@) is to be [identified](@). The `terminology-identifier` (without the `@` part) is the combination of a `scopetag`:`vsntag`, where
 

@@ -9,14 +9,14 @@ Within the [TNO Terminology Design](@) effort, the [TRRT](@) is able to interpre
 2. [Conversion](#converter) works by using Mustache templates. Any values from the standard [interpreters](#interpreter), and all properties supplied in the matching [MRG Entry](@), can be used as [Mustache expressions](https://handlebarsjs.com/guide/expressions).
 
 ## Interpreter
-Different types of interpreters are present, allowing for the switching between the [default syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom interpreter may also be set. All interpreters consist of a PCRE regular expression with named capturing groups that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
+Different types of interpreters are present, allowing for the switching between the [default syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom interpreter may also be set. All interpreters consist of a [regular expression](@) with [named capturing groups](@) that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
 
 The [TRRT](@) interpreter attempts to obtain the [term ref](@) properties: `showtext`, `id`, `trait`, `scopetag`, and `vsntag`. If `id` is not set, `showtext` is converted to lowercase, `'()` characters are removed, and any non-alphabetic, non-numeric characters are replaced by a `-`, leaving only alphabetic, numeric, underscore or dash characters as part of `id`.
 
 <details>
   <summary>Examples</summary>
 
-Setting interpreters mainly allows for the use of different [term ref](@) syntaxes. As long as the basic properties listed above can be obtained from the [term ref](@), any custom interpreter may be set. When a value of a named capturing group is empty, it is filled by the [TRRT](@) with (default) values according to the [specifications](specifications#interpretation-of-the-term-ref). The following examples attempt to illustrate the differences between the default, alternative and custom interpreters. 
+Setting interpreters mainly allows for the use of different [term ref](@) syntaxes. As long as the basic properties listed above can be obtained from the [term ref](@), any custom interpreter may be set. When a value of a [named capturing group](@) is empty, it is filled by the [TRRT](@) with (default) values according to the [specifications](specifications#interpretation-of-the-term-ref). The following examples attempt to illustrate the differences between the default, alternative and custom interpreters. 
 
 <Tabs
   defaultValue="basic"
@@ -34,14 +34,14 @@ Setting interpreters mainly allows for the use of different [term ref](@) syntax
 \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`)<br/>
 
 **Information**<br/>
-The default/basic interpreter uses a regex that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the regex displayed below as the interpreter.
+The default/basic interpreter uses a [regex](@) that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
 
 ~~~regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))
 (?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)
 ~~~
 
-The first part of the regex pattern (displayed on the first line) is responsible for finding the start of a term ref using the [default syntax](specifications#interpretation-of-the-term-ref). The second part of the regex pattern finds the various parts of the [term ref](@) and stores them as named capturing groups.
+The first part of the [regex](@) pattern (displayed on the first line) is responsible for finding the start of a term ref using the [default syntax](specifications#interpretation-of-the-term-ref). The second part of the [regex](@) pattern finds the various parts of the [term ref](@) and stores them as [named capturing groups](@).
 
 </TabItem>
 <TabItem value="alternative">
@@ -52,7 +52,7 @@ The first part of the regex pattern (displayed on the first line) is responsible
 \[`show text`@`scopetag`:`vsntag`\](`term`#`trait`)
 
 **Information**<br/>
-The alternative interpreter uses a regex that can find [term refs](@) using the [alternative syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Using '`alternative`' as the value of the interpreter, sets the regex displayed below as the interpreter.
+The alternative interpreter uses a [regex](@) that can find [term refs](@) using the [alternative syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Using '`alternative`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
 
 The alternative syntax moves the `@`-character from the default syntax within the square brackets. This is particularly useful in the vast majority of cases, where the default processing of `showtext` results in `term`, and `trait` is absent.
 
@@ -61,7 +61,7 @@ The alternative syntax moves the `@`-character from the default syntax within th
 (?<showtext>[^\n\]@]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+?))?\](?:\((?<id>[a-z0-9_-]*)(?:#(?<trait>[a-z0-9_-]+?))?\))?
 ~~~
 
-Similar to the other example interpreters, the first part of the regex pattern (displayed on the first line) is responsible for finding the start of a term ref and the second part of the regex pattern finds the various parts of the [term ref](@) and stores them as named capturing groups.
+Similar to the other example interpreters, the first part of the [regex](@) pattern (displayed on the first line) is responsible for finding the start of a term ref and the second part of the [regex](@) pattern finds the various parts of the [term ref](@) and stores them as [named capturing groups](@).
 
 </TabItem>
 <TabItem value="custom">
@@ -78,13 +78,13 @@ Writing custom interpreters is a precise task. Please make sure you understand t
 \ref{`show text`@`scopetag`:`vsntag`}(`term`#`trait`)
 
 **Information**<br/>
-Custom interpreters allow for the ability to use any kind of syntax to obtain the necessary [term ref](@) properties. The lines above show a combination of the `\ref{}` object referencing syntax used in LaTeX and the alternative syntax. Properties of this custom [term ref](@) syntax can be interpreted using the regex pattern below.
+Custom interpreters allow for the ability to use any kind of syntax to obtain the necessary [term ref](@) properties. The lines above show a combination of the `\ref{}` object referencing syntax used in LaTeX and the alternative syntax. Properties of this custom [term ref](@) syntax can be interpreted using the [regex](@) pattern below.
 
 ```regex
 (?:(?<=[^`\\])|^)\\ref{(?=[^@\}]+[:a-z0-9_-]*\}?)
 (?<showtext>[^\n\}@]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+?))?\}(?:\((?<id>[a-z0-9_-]*)(?:#(?<trait>[a-z0-9_-]+?))?\))?
 ```
-Similar to the other example interpreters, the first part of the regex pattern (displayed on the first line) is responsible for finding the start of a term ref and the second part of the regex pattern finds the various parts of the [term ref](@) and stores them as named capturing groups.<br/>
+Similar to the other example interpreters, the first part of the [regex](@) pattern (displayed on the first line) is responsible for finding the start of a term ref and the second part of the [regex](@) pattern finds the various parts of the [term ref](@) and stores them as [named capturing groups](@).<br/>
 
 </TabItem>
 </Tabs>
@@ -92,7 +92,7 @@ Similar to the other example interpreters, the first part of the regex pattern (
 </details>
 
 ## Converter
-Similar to the [interpreter](#interpreter), default converters are available, but custom ones may also be set. In this case they may be set through the use of [Mustache templates](https://handlebarsjs.com/guide/). Any values (named capturing groups) from the standard interpreters, and all properties supplied in the matching [MRG entry](@), can be used as [Mustache expressions](https://handlebarsjs.com/guide/expressions) (some contents enclosed using double curly braces `{{}}`). These template, which are handled by the [Handlebars](https://handlebarsjs.com/) package, provide a "simple" template to generate any text format.<br/>
+Similar to the [interpreter](#interpreter), default converters are available, but custom ones may also be set. In this case they may be set through the use of [Mustache templates](https://handlebarsjs.com/guide/). Any values ([named capturing groups](@)) from the standard interpreters, and all properties supplied in the matching [MRG entry](@), can be used as [Mustache expressions](https://handlebarsjs.com/guide/expressions) (some contents enclosed using double curly braces `{{}}`). These template, which are handled by the [Handlebars](https://handlebarsjs.com/) package, provide a "simple" template to generate any text format.<br/>
 The properties of the MRG entry that the [Mustache expressions](https://handlebarsjs.com/guide/expressions) may use, may also include expressions themselves. In addition, multiple [helper functions](#helper-functions) have been included to handle certain repetitive tasks.
 
 **A pre-configured [Handlebars](https://handlebarsjs.com/) playground can be found [here](https://handlebarsjs.com/playground.html#format=1&currentExample=%7B%22template%22%3A%22-%20Markdown%3A%20%5B%7B%7Bshowtext%7D%7D%5D(%7B%7Bnavurl%7D%7D%7B%7B%23trait%7D%7D%23%7B%7B%2Ftrait%7D%7D%7B%7Btrait%7D%7D)%5Cn-%20HTML%3A%20%3Ca%20href%3D%5C%22%7B%7Bnavurl%7D%7D%7B%7B%23trait%7D%7D%23%7B%7B%2Ftrait%7D%7D%7B%7Btrait%7D%7D%5C%22%3E%7B%7Bshowtext%7D%7D%3C%2Fa%3E%5Cn-%20eSSIF-Lab%3A%20%3Ca%20href%3D%5C%22%7B%7Bnavurl%7D%7D%7B%7B%23trait%7D%7D%23%7B%7B%2Ftrait%7D%7D%7B%7Btrait%7D%7D%5C%22%20title%3D%5C%22%7B%7BcapFirst%20term%7D%7D%3A%20%7B%7BnoRefs%20glossaryText%7D%7D%5C%22%3E%7B%7Bshowtext%7D%7D%3C%2Fa%3E%5Cn-%20Custom%3A%20%7B%7B%23ifValue%20termType%20equals%3D%5C%22concept%5C%22%7D%7D%3Ca%20href%3D%5C%22%7B%7Bnavurl%7D%7D%7B%7B%23trait%7D%7D%23%7B%7B%2Ftrait%7D%7D%7B%7Btrait%7D%7D%5C%22%3E%7B%7Bshowtext%7D%7D%3C%2Fa%3E%7B%7B%2FifValue%7D%7D%7B%7B%23ifValue%20termType%20equals%3D%5C%22image%5C%22%7D%7D%3Cimg%20src%3D%5C%22%7B%7Blocator%7D%7D.jpg%5C%22%20alt%3D%5C%22%7B%7Bshowtext%7D%7D%5C%22%20width%3D%5C%22500%5C%22%20height%3D%5C%22600%5C%22%3E%7B%7B%2FifValue%7D%7D%5Cn%22%2C%22partials%22%3A%5B%5D%2C%22input%22%3A%22%7B%5Cn%20%20showtext%3A%20%5C%22Curators%5C%22%2C%5Cn%20%20trait%3A%20%5C%22examples%5C%22%2C%5Cn%20%20term%3A%20%5C%22curator%5C%22%2C%5Cn%20%20scopetag%3A%20%5C%22termdsn%5C%22%2C%5Cn%20%20vsntag%3A%20%5C%22main%5C%22%2C%5Cn%20%20termType%3A%20%5C%22concept%5C%22%2C%5Cn%20%20glossaryTerm%3A%20%5C%22Curator%20(of%20a%20Scope)%5C%22%2C%5Cn%20%20glossaryText%3A%20%5C%22a%20person%20responsible%20for%20%5Bcurating%5D(%40)%20the%20%5Bterminologies%5D(%40)%20within%20a%20%5Bscope%5D(%40)%2C%20to%20ensure%20shared%20understanding%20among%20a%20%5Bcommunity%5D(%40)%20working%20together%20on%20a%20particular%20set%20of%20objectives.%5C%22%2C%5Cn%20%20grouptags%3A%20%5C%22terminology%5C%22%2C%5Cn%20%20locator%3A%20%5C%22curator%5C%22%2C%5Cn%20%20navurl%3A%20%5C%22terminology%2Fcurator.md%5C%22%5Cn%7D%5Cn%22%2C%22output%22%3A%22-%20Markdown%3A%20%5BCurators%5D(terminology%2Fcurator.md%23examples)%5Cn-%20HTML%3A%20%3Ca%20href%3D%5C%22terminology%2Fcurator.md%23examples%5C%22%3ECurators%3C%2Fa%3E%5Cn-%20eSSIF-Lab%3A%20%3Ca%20href%3D%5C%22terminology%2Fcurator.md%23examples%5C%22%20title%3D%5C%22Curator%3A%20a%20person%20responsible%20for%20Curating%20the%20Terminologies%20within%20a%20Scope%2C%20to%20ensure%20shared%20understanding%20among%20a%20Community%20working%20together%20on%20a%20particular%20set%20of%20objectives.%5C%22%3ECurators%3C%2Fa%3E%5Cn-%20Custom%3A%20%3Ca%20href%3D%5C%22terminology%2Fcurator.md%23examples%5C%22%3ECurators%3C%2Fa%3E%5Cn%22%2C%22preparationScript%22%3A%22const%20pattern%20%3D%20'%2F(%3F%3A%5B%5E%60%5C%5C%5C%5C%5C%5C%5C%5C%5D%7C%5E)%5C%5C%5C%5C%5B(%3F%3D%5B%5E%40%5C%5C%5C%5C%5D%5D%2B%5C%5C%5C%5C%5D%5C%5C%5C%5C(%5B%23a-z0-9_-%5D*%40%5B%3Aa-z0-9_-%5D*%5C%5C%5C%5C))(%3F%3Cshowtext%3E%5B%5E%5C%5C%5C%5Cn%5C%5C%5C%5C%5D%40%5D%2B)%5C%5C%5C%5C%5D%5C%5C%5C%5C((%3F%3A(%3F%3Cid%3E%5Ba-z0-9_-%5D*)%3F(%3F%3A%23(%3F%3Ctrait%3E%5Ba-z0-9_-%5D%2B))%3F)%3F%40(%3F%3Cscopetag%3E%5Ba-z0-9_-%5D*)(%3F%3A%3A(%3F%3Cvsntag%3E%5Ba-z0-9_-%5D%2B))%3F%5C%5C%5C%5C)%2Fg'%3B%5Cn%2F%2F%20Basic%20Term%20Ref%20syntax%2C%20but%20with%20escaped%20symbols%20to%20function%20correctly%5Cn%5Cnfunction%20noRefsHelper(text)%20%7B%5Cn%20%5Ctlet%20regex%20%3D%20new%20RegExp(pattern.replace(%2F%5E%5C%5C%2F%7C%5C%5C%2F%5Ba-z%5D*%24%2Fg%2C%20'')%2C%20'g')%3B%5Cn%20%20%20%20let%20matches%20%3D%20Array.from(text.matchAll(regex))%3B%5Cn%20%20%20%20if%20(matches.length%20%3E%200)%20%7B%5Cn%20%20%20%20%20%20%20%20%2F%2F%20Iterate%20over%20each%20match%20found%20in%20the%20text%20string%5Cn%20%20%20%20%5Ctfor%20(const%20match%20of%20matches)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20if%20(match.groups.showtext)%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20replace%20the%20match%20with%20the%20showtext%20property%20and%20make%20the%20first%20letter%20capitalized%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20text%20%3D%20text.replace(match%5B0%5D%2C%20capFirstHelper('%20'%20%2B%20match.groups.showtext))%3B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%20%20return%20text%3B%5Cn%7D%5Cn%5Cnfunction%20capFirstHelper(text)%20%7B%5Cn%5Ctconst%20words%20%3D%20text.split('%20')%3B%5Cn%20%20%20%20const%20capitalizedWords%20%3D%20words.map((word)%20%3D%3E%5Cn%20%20%20%20%5Ctword.charAt(0).toUpperCase()%20%2B%20word.slice(1)%5Cn%20%20%20%20)%3B%5Cn%20%20%20%20return%20capitalizedWords.join('%20')%3B%5Cn%7D%5Cn%5Cnfunction%20ifValueHelper(conditional%2C%20options)%20%7B%5Cn%20%20if%20(conditional%20%3D%3D%20options.hash.equals)%20%7B%5Cn%20%20%20%20return%20options.fn(this)%3B%5Cn%20%20%7D%5Cn%20%20else%20%7B%5Cn%20%20%20%20return%20options.inverse(this)%3B%5Cn%20%20%7D%5Cn%7D%5Cn%5CnHandlebars.registerHelper('noRefs'%2C%20noRefsHelper)%3B%5CnHandlebars.registerHelper('capFirst'%2C%20capFirstHelper)%3B%5CnHandlebars.registerHelper('ifValue'%2C%20ifValueHelper)%3B%5Cn%22%2C%22handlebarsVersion%22%3A%224.7.8%22%7D), this playground includes the [helper functions](#helper-functions) and also matches the example cases outlined below.** Note that although an [MRG entry](@) allows [Mustache expressions](https://handlebarsjs.com/guide/expressions) in its property values, the `input` box in the playground does not.
@@ -246,13 +246,13 @@ This simple helper with identifier `capFirst` replaces every word's first charac
 This helper with identifier `noRefs` attempts to use the configured syntax-`type` to convert all links it finds to the `showtext` term property value. It also capitalizes the `showtext` replacement using the `capFirst` helper.<br/>
 *It takes the input, finds matches using the configured syntax-`type` and uses the capitalized `showtext` property as a replacement, after which the output is returned.*
 
-Three standard values are available to be used as the value for the `type` option. Multiple values may be provided, in which case the values are interpreted in order from left to right. If no value is provided, '`interpreter`' is used as the default `type`. If a `type` is provided that does not match any of the standard `type` values, we assume the value is meant to be a custom regex.
+Three standard values are available to be used as the value for the `type` option. Multiple values may be provided, in which case the values are interpreted in order from left to right. If no value is provided, '`interpreter`' is used as the default `type`. If a `type` is provided that does not match any of the standard `type` values, we assume the value is meant to be a custom [regex](@).
 
 **Available type values**
-- '`interpreter`' uses the regex of the configured [interpreter](#interpreter) to find matches.
-- '`html`' uses the regex `<a\b[^>]*?>(?<showtext>.*?)<\/a>` to find HTML `<a>` tags and uses the value in between the opening and closing tag as `showtext`.
-- '`markdown`' uses the regex `\[(?<showtext>[^\]]+)\]\((?:[^)]+)\)` to find Markdown hyperlinks and uses the link text as `showtext`.
-- '`custom`' a value for `type` that does not match any of the standard `type` values is assumed to be a custom regex.
+- '`interpreter`' uses the [regex](@) of the configured [interpreter](#interpreter) to find matches.
+- '`html`' uses the [regex](@) `<a\b[^>]*?>(?<showtext>.*?)<\/a>` to find HTML `<a>` tags and uses the value in between the opening and closing tag as `showtext`.
+- '`markdown`' uses the [regex](@) `\[(?<showtext>[^\]]+)\]\((?:[^)]+)\)` to find Markdown hyperlinks and uses the link text as `showtext`.
+- '`custom`' a value for `type` that does not match any of the standard `type` values is assumed to be a custom [regex](@).
 
 ```hbs title="NoRefs example"
  {{noRefs glossaryText}}

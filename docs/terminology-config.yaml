@@ -1,24 +1,24 @@
 # TNO Terminology Design tools configuration file (yaml)
 
 ## General
-scopedir: . # path of the scope directory where the SAF is located
-onNotExist: warn # the action in case a `vsntag` was specified, but wasn't found in the SAF
-output: . # (root) directory for output files to be written to
+scopedir: .      # URL of the scope directory (where the SAF is located)
+onNotExist: warn # Action in case somthing doesn't exist
+output: .        # (root) directory for output files to be written to
 
 ## Machine Readable Glossary Tool
 mrgt:
-  vsntag: # versiontag for which the MRG needs to be (re)generated. Leave empty to process all versions
+  vsntag:        # versiontag of MRG to generate. Default: all MRGs
 
 ## Human Readable Glossary Tool
 hrgt:
-  interpreter: default          # Type of interpreter, i.e., a regex, or a predefined type (`default`)
-  converter: markdown-section-3 # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-table-row, `markdown-section-2`, `markdown-section-3`)
-  input:
+  interpreter: default           # `default` (default), or regex
+  converter: markdown-section-3  # `markdown-table-row, `markdown-section-2`, `markdown-section-3` or moustache/handlebars template
+  input:                         # glob pattern for files to be processed
     - "tev2-gloss*.md"
 
 ## Term Reference Resolution Tool
 trrt:
-  interpreter: default           # Type of interpreter, i.e., a regex, or a predefined type (`default`, `alt`)") // `basic` is deprecated
-  converter: html-hovertext-link # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`)")
-  input: # glob pattern strings for files to be processed by the TRRT
+  interpreter: default           # `default`, `alt`, or regex
+  converter: html-hovertext-link # `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`, mustache/handlebars template
+  input:                         # glob pattern for files to be processed
     - "**/*.md"

@@ -18,8 +18,8 @@ There is currently one implementation of the tool:
 
 ## What the HRGT does
 
-The [HRGT](@) operates on a set of files, as specified by its commandline arguments or configuration file, each of which is processed as follows:
-1. Copy the file to its intended destination (as specified by its commandline arguments or configuration file), and use the latter for further processing;
+The [HRGT](@) operates on a set of files, as specified by its command-line arguments or configuration file, each of which is processed as follows:
+1. Copy the file to its intended destination (as specified by its command-line arguments or configuration file), and use the latter for further processing;
 2. Find every [MRGRef](@), and replace each of them with the [HRG](@) that contains the (alphabetically sorted) [terms](@) of the [terminology](@) as specified by the [MRGRef](@).
 
 ## Installing the Tool
@@ -86,7 +86,7 @@ The columns in the following table are defined as follows:
 2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
 3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
-If a configuration file used, the long version of the parameter must be used (without the preceeding `--`).
+If a configuration file used, the long version of the parameter must be used (without the preceding `--`).
 </details>
 
 | Parameter                                | Req'd | Description |
@@ -95,27 +95,37 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the interpreter to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre). |
-| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the converter to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
+| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the interpreter to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
+| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the converter to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
 | `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
-## MRG Ref Handling
+## HRG Generation
 
-All input files are processed as follows:
-1. Find the [MRGRef](@) as defined by the `interpreter` parameter.
-2. Interpret the [MRGRef](@), which may include processing parameters, such as `converter="<converter>"` or `sort="<sortvalue>"` that have been provided 
-2. Create an empty [HRG list](@);
-3. Sort the [MRG entries](@) alphabetically (using the `sort` value if specified). By default, [MRG entries](@) are sorted by their `term` field, and then by the `termType` field. See also [HRG sorting](#hrg-sorting).
-4. Convert each [MRG entry](@) into an [HRG entry](@), and add it to the [HRG list](@);
-5. Overwrite the [MRGRef](@) with a new [MRGRef](@), replacing it with (a) the leader text, (b) the contents of the [HRG list](@), and (c) the trailer text.
-
-[MRGRefs](@) themselves specify how [HRG entries](@) are formatted. Please refer to the [MRGRef Syntax specifications](/docs/spec-syntax/mrg-ref-syntax) for the details.
+All input files that are specified for processing are individually processed, as follows:
+1. If the input and output files are
+    - in different locations, copy the input file to its output location. All changes will be made in the output file.
+    - in the same location, raise an exception if the `-f` option is not set (false). This is to prevent accidental overwrites of the input file.
+2. In the output file, find the [MRGRef](@) as defined by the `interpreter` parameter (see [HRG Interpreters](#hrgt-interpreters) for details).
+3. Interpret the [MRGRef](@). When the `default` interpreter is found, this includes the identifying parameters, such as `converter="<converter>"` or `sort="<sort_value>"`, and using their values to override those found in the config file or command line.
+4. Create an empty [HRG list](@);
+5. Sort the [MRG entries](@), using the specified `sort` method, or the `default` sort method if that method isn't specified. See [HRG sorting](#hrgt-sorting) for details.
+6. Convert each [MRG entry](@) into an [HRG entry](@), using the specified converter method, and add it to the [HRG list](@);
+7. In the output file, replace the [MRGRef](@) with the contents of the [HRG list](@).
 
 By cleanly separating [MRGRef](@) interpretation from the part where it is converted into a [HRG](@), it becomes easy to extend the capabilities of the [HRGT](@) to include ways for rendering [HRG entries](@), e.g. for LaTeX, PDF, docx, odt and other formats, as well as for formats that we currently do not even know we would like to have.
 
-## HRG Sorting {#hrg-sorting}
+### HRGT Interpreters {#hrgt-interpreters}
+
+[hier moet nog tekst]
+[MRGRefs](@) themselves specify how [HRG entries](@) are formatted. Please refer to the [MRGRef Syntax specifications](/docs/spec-syntax/mrg-ref-syntax) for the details.
+
+### HRGT Converters {#hrgt-converters}
+
+[hier moet nog tekst]
+
+### HRGT Sorting {#hrgt-sorting}
 
 A [HRG](@) is a sorted list of [HRG entries](@), where sorting can be done in various ways. By default (i.e. when the `sort` option isn't specified), this is done as specified by the (predefined) `default` sorting option. 
 
@@ -155,11 +165,11 @@ When this markdown file is processed by the [HRGT](@), a new file is created whe
 
 ## Processing, Errors and Warnings
 
-The [HRGT](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalidities include non-existing directories or files, lack of write-permissions where needed, etc.
+The [HRGT](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalid conditions include non-existing directories or files, lack of write-permissions where needed, etc.
 
 Then, the [HRGT](@) reads the specified input files (in arbitrary order), and for each of them, produces an output file that is the same as the input file except for the fact that all [TermRefs](@) have been replaced with regular [markdown links](https://www.markdownguide.org/basic-syntax/#links), and (optionally) with additional texts that are to be used by third-party rendering tools for enhanced rendering of such links. An example of this would be text that can be used to enhance a link with a popup that contains the definition, or a description of the [term](@) that is being referenced.
 
-The [HRGT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, commandline parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
+The [HRGT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, command-line parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
 
 ## Deploying the Tool
 

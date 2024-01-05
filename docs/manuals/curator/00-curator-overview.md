@@ -17,7 +17,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 A [curator](@) is tasked with describing the [scope](@) particulars, [curating](@) its [curated texts](@), generating the various [glossaries](@) ([MRGs](@) and [HRGs](@)), [dictionaries](@) (if and when necessary and possible), and other tangible, 'rendered artifacts' (e.g. static websites, PDFs, whitepapers) as agreed with the [community](@).
 
-Also, [curators](@) are expected to specify the processes that enable contributors and [authors](@) to contribute to the contents of the [scope](@) (e.g. by providing suggestions for texts, discussing them, etc.), specifically any conditions/requriements that they have to be aware of and take into account, and that are needed to enable the [curators](@) to do their job.
+Also, [curators](@) are expected to specify the processes that enable contributors and [authors](@) to contribute to the contents of the [scope](@) (e.g. by providing suggestions for texts, discussing them, etc.), specifically any conditions/requirements that they have to be aware of and take into account, and that are needed to enable the [curators](@) to do their job.
 
 The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. [curation](@)) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
@@ -42,4 +42,4 @@ This document provides an overview of the knowledge that [curators](@) may need 
 
 2. [Curation](@) of terminological contributions. This requires knowledge about the [file structure](/docs/spec-files/ctext-file) of [curated file](@).
 
-3. [generation](/docs/tev2-toolbox) of [curated texts](@). It is typical for a [terms community](@) to want to have a [glossary](@) of the [terms](@) they either have [defined](@) themselves, or are [defined](@) elsewhere but are to be used within that [community](@). However, other artifacts may be generated as well (a [dictionary](@), white papers, etc.) - this is all up to the [community](@).
+3. [generation](/docs/category/toolbox-specs) of [curated texts](@). It is typical for a [terms community](@) to want to have a [glossary](@) of the [terms](@) they either have [defined](@) themselves, or are [defined](@) elsewhere but are to be used within that [community](@). However, other artifacts may be generated as well (a [dictionary](@), white papers, etc.) - this is all up to the [community](@).

@@ -38,7 +38,7 @@ The predefined interpreters for detecting [MRGRefs](@) are as follows:
 
 | `<interpreter>` | Description |
 | :-------------- | :---------- |
-| `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default intepreter for [MRGRefs](@). |
+| `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default interpreter for [MRGRefs](@). |
 
 ## Predefined MRGRef Converters {#predefined-mrgref-converters}
 
@@ -48,7 +48,7 @@ However, [curators](@) can specify other formats. To help them do this, the exam
 
 The predefined converters for glossary generation are:
 
-| `<glossarylayout>`      | Description |
+| `<glossary layout>`      | Description |
 | :---------------------- | :---------- |
 | `markdown-table-row`    | [HRG entries](@) are compiled as a single markdown table row, where the first cell contains the term, and the second its description. |
 | `markdown-section-2`    | [HRG entries](@) are compiled as a markdown section, with the term as section header 2 `## `, and the description as the section body below. |
@@ -122,7 +122,7 @@ Under the assumption that the [terminology identifier](@) `tev2` refers to a [te
 ---
 ~~~
 
-### Converter for eSSIF-Lab Glossary look-alikes
+### Converter for eSSIF-Lab Glossary lookalikes
 
 An [MRGref](@) that specifies `converter="essiflab"` as its glossary layout is appropriate for generating a [glossary](@) that is similar to the one used by [eSSIF-Lab](https://essif-lab.github.io/framework/docs/essifLab-glossary). The markdown file that would produce this would be as follows:
 

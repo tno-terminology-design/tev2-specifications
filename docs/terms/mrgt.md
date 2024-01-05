@@ -12,7 +12,7 @@ glossaryText: "a software tool designed to create, manage, and process [Machine 
 hoverText: "MRGT: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: [ tools, glossary-tools ]
-formPhrases: [ "mrgt{ss}", "machine-readable-glossary-tool{ss}", "machine-readable-glossary-tool{ss}-mrgt{ss}", "mrgt{ss}-machin-readable-glossary-tool{ss}" ]
+formPhrases: [ "mrgt{ss}", "machine-readable-glossary-tool{ss}", "machine-readable-glossary-tool{ss}-mrgt{ss}", "mrgt{ss}-machine-readable-glossary-tool{ss}" ]
 # Curation status
 status: proposed
 created: 2023-07-31

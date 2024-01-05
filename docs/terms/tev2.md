@@ -14,14 +14,14 @@ created: 2022-09-19
 updated: 2022-09-19
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
 # TEv2 (Terminology Engine, version 2)
 
 ### Summary
-The **Terminology Enginve v2 (TEv2)** is a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
+The **Terminology Engine v2 (TEv2)** is a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@).
 
 <!-- This summary is/should be literally quoted in the tev2-overview document -->
 

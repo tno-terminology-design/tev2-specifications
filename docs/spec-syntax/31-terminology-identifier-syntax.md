@@ -10,7 +10,7 @@ A **Terminology Identifier** a [text](identifier@) that [identifies](@) a [termi
 
 ## Syntax
 
-The syntaxes that can be used for a [terminology identifier](@) are as follows (note that such syntax is typically preceeded by the `@`-character): 
+The syntaxes that can be used for a [terminology identifier](@) are as follows (note that such syntax is typically preceded by the `@`-character): 
 
 - (empty string, null)
 - `scopetag`

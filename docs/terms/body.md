@@ -40,7 +40,7 @@ Bodies live either in [curated text files](@) (behind the [header](@)), or in se
 A curated text starts with three dashes `---`.
 This indicates the start of its (YAML) header.
 Typically, the [header](@) consists of a sequence of key-value pairs.
-The [header](@) is terminated with onother three dashes and a new line.
+The [header](@) is terminated with another three dashes and a new line.
 
 The [body](@) of the [curated text](@) 
 

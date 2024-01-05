@@ -7,14 +7,14 @@ glossaryTerm: Term Type
 glossaryText: "a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
 synonymOf:
 grouptags:
-formPhrases: [ "term-type{ss}" ]
+formPhrases: [ "term-type{ss}", "termtype{ss}" ]
 # Curation status
 status: proposed
 created: 2022-06-06
 updated: 2023-08-01
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A **Term Type** is an [identifier](@) that is used to [identify](@) a particular *kind* of [semantic unit](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`).
 
-The ability to specify a [term type](@) as part of a [term](@) mimicks the common practice of disambiguating semantically overloaded [terms](@). With in the context of [TEv2](@), this is currently not used.
+The ability to specify a [term type](@) as part of a [term](@) mimics the common practice of disambiguating semantically overloaded [terms](@). With in the context of [TEv2](@), this is currently not used.
 
 ## Default Term Type
 

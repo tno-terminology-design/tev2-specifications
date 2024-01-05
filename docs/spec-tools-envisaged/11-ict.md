@@ -38,7 +38,7 @@ As the tool hasn't been made, and no practical experience has been gained, many 
 :::
 
 :::info Editor's Note
-There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/spec-files/saf) and [MRG spec](/docs/spec-files/mrg) define the regex for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its `hoverText`.
+There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/spec-files/saf) and [MRG spec](/docs/spec-files/mrg) define the [regex](@) for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its `hoverText`.
 :::
 
 
@@ -131,7 +131,7 @@ The columns in the following table are defined as follows:
 | `config` | `<path>`   | n | * | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter SHOULD NOT appear in the configuration file itself. |
 | `scopedir` | `<path>` | Y | * | Path to the [scopedir](@) within which the tool is to operate, i.e.: _this scopedir_. |
 | `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs](docs/spec-files/saf), [terminology construction](/docs/spec-tools/mrg-terminology-construction), [MRG specs](/docs/spec-files/mrg), [Curated Texts](/docs/spec-files/ctext-file), [TermRefs](/docs/spec-syntax/term-ref-syntax)). |
-| `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.alvsntags`.  |
+| `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.altvsntags`.  |
 | `term` | `<term>` | n | -txt | [term](@) that [identifies](@) a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
 | `grouptags` | `<grouptags>` | n | -txt | List of [grouptags](@). Every [curated file](@), whose (front-matter) field `grouptags` has an element that also appears as an element in the `<grouptags>` list, will be integrity-checked. |
 
@@ -161,7 +161,7 @@ The integrity of a [SAF](@) requires the following conditions to be satisfied fo
 
 - `vsntag` SHOULD not appear as an element in the `altvsntags` field of this `version` element, and it MUST NOT appear in the `vsntag` or `altvsntags` fields of any other element in the `versions` section.
 - `altvsntags` must be a (possibly empty) list of [versiontags](@), each of which SHOULD not appear in the `vsntag` field of the element, and MUST NOT appear in the `vsntag` or `altvsntags` fields of any other element in the `versions` section.
-- `termselection` must be a non-emptly list of [term selection instructions](@).
+- `termselection` must be a non-empty list of [term selection instructions](@).
 - `status` SHOULD be a non-empty field.
 
 ### MRG integrity
@@ -266,7 +266,7 @@ The [ICT](@) starts by reading its command-line and configuration file. If the c
 
 Then, the [ICT](@) <mark>TBD</mark>
 
-The [ICT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, commandline parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
+The [ICT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, command-line parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
 
 ## Deploying the Tool
 
@@ -274,4 +274,4 @@ The [ICT](@) comes with documentation that enables developers to ascertain its c
 
 ## Discussion Notes
 
-This section lists the topics that may need further discission
+This section lists the topics that may need further discussion

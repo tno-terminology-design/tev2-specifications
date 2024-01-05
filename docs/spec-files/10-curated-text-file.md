@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 Every [curated text](@) consists of two parts:
 
-1. the [header](@) (also called the 'frontmatter' of the [curated text](@)). It a set of ([YAML](https://yaml.org/spec/1.2.2/)) key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it.
+1. the [header](@) (also called the 'front matter' of the [curated text](@)). It a set of ([YAML](https://yaml.org/spec/1.2.2/)) key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it.
 2. the [body](@), that contains all other documentation. It has no fixed structure. When the [curated text](@) is to processed using a static site generator such as [Docusaurus v2](https://docusaurus.io/docs), or [github pages](https://pages.github.com/), it would typically contain ([markdown](https://www.markdownguide.org/basic-syntax/)).
 
 <details>
@@ -33,14 +33,14 @@ created: 2022-06-02
 updated: 2023-08-14
 # Origins/Acknowledgements
 contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 # Curated Text
 A curated text starts with three dashes `---`.
 This indicates the start of its (YAML) header.
 Typically, the header consists of a sequence of key-value pairs.
-The header is terminated with onother three dashes and a new line.
+The header is terminated with another three dashes and a new line.
 
 The body of the curated text typically starts behind the header block,
 but it can also be placed in another file within the `scopedir`.
@@ -61,7 +61,7 @@ This page specifies the syntax for [curated texts](@), which boils down to speci
 
 ## Header Structure {#header}
 
-A [curated text](@) starts with three dashes `---`, which indicates the start of its (YAML) [header](@). This is followed by a sequence of key-value pairs (and comments). The [header](@) is terminated with onother three dashes and a new line.
+A [curated text](@) starts with three dashes `---`, which indicates the start of its (YAML) [header](@). This is followed by a sequence of key-value pairs (and comments). The [header](@) is terminated with another three dashes and a new line.
 
 [Headers](@) of [curated texts](@) are used by [TEv2](@) tools, but may also contain entries that are used by other tools, such as static site generators. The example above shows some entries that are used by (the static site generator) Docusaurus. In order to avoid confusion about which entries serve what purposes, it is advised to put them in different sections and separate these with comments, as shown in the example.
 
@@ -78,23 +78,23 @@ Different [TEv2 tools](@) use header fields in [headers](@) for various purposes
 
 </details>
 
-| Name              | Req'd | Description                                                                                                                                                                                                                                                                                                                                                                                 |
-| ----------------- | :---: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `termType`        |   n   | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`.<br/>Must satisfy regex `[a-z0-9_-]+`. If not specified, its value defaults to the `defaulttype`-field in the [scope section](/docs/spec-files/saf#scope-section) of the [SAF](@). |
-| `term`            |   Y   | text that is used to refer to the [semantic unit](@) that is documented by this [curated text](@).<br/>Must satisfy regex `[a-z0-9_-]+`.                                                                                                                                                                                                                                                    |
-| `isa`             |   n   | [Term identifier](@) that [identifies](@) the [semantic unit](@) of which this is a specialization.                                                                                                                                                                                                                                                                                         |
-| `bodyFile`        |   n   | Path, relative to the [scopedir](@), that contains the [body](@) of this [curated text](@). If not specified, the [body](@) in this file serves as the [body](@) of the [curated text](@).                                                                                                                                                                                                  |
-| `glossaryTerm`    |   n   | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`.                                                                                                                                                                                                 |
-| `glossaryText`    |   n   | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@).                                                                                                                                                                                                                             |
-| `synonymOf`       |   n   | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@).                                                                                                                                                                                                                                                                 |
-| `grouptags`       |   n   | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`.<br/>Must satisfy regex [`(?:\[\s*([a-z0-9_-]+)\s*(?:,\s*([a-z0-9_-]+))*\s*\])?`](https://www.debuggex.com/r/a51CXl1NzR3kwihT).                                                 |
-| `formPhrases`     |   n   | List of [texts](formphrase@) that are [used to convert](/docs/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/spec-syntax/form-phrase-syntax).                                                                     |
-| `status`          |   n   | Text that identifies the status of the term. ([Communities](@) of) [scopes](@) may specify values for this field. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md).                                                                                                                                 |
-| `created`         |   n   | Date at which of the [curated text](@) was created, in the date format as used within this [scope](@).                                                                                                                                                                                                                                                                                      |
-| `updated`         |   n   | Date at which of the [curated text](@) was last modified, in the date format as used within this [scope](@).                                                                                                                                                                                                                                                                                |
-| `contributors`    |   n   | Text that shows (or refers to) the people that have contributed to this [curated text](@).                                                                                                                                                                                                                                                                                                  |
-| `attribution`     |   n   | Text that credits the original creation of the texts in the document.                                                                                                                                                                                                                                                                                                                       |
-| `originalLicense` |   n   | Reference to the license of the work from which the texts were derived.                                                                                                                                                                                                                                                                                                                     |
+| Name            | Req'd | Description |
+| --------------- | :---: | ----------- |
+| `termType`        | n | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`.<br/>Must satisfy [regex](@) `[a-z0-9_-]+`. If not specified, its value defaults to the `defaulttype`-field in the [scope section](/docs/spec-files/saf#scope-section) of the [SAF](@). |
+| `term`            | Y | text that is used to refer to the [semantic unit](@) that is documented by this [curated text](@).<br/>Must satisfy [regex](@) `[a-z0-9_-]+`. |
+| `isa`             | n | [Term identifier](@) that [identifies](@) the [semantic unit](@) of which this is a specialization. |
+| `bodyFile`        | n | Path, relative to the [scopedir](@), that contains the [body](@) of this [curated text](@). If not specified, the [body](@) in this file serves as the [body](@) of the [curated text](@). |
+| `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`. |
+| `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
+| `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
+| `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`. |
+| `formPhrases`     | n | List of [texts](formphrase@) that are [used to convert](/docs/spec-tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/spec-syntax/form-phrase-syntax). |
+| `status`          | n | Text that identifies the status of the term. ([Communities](@) of) [scopes](@) may specify values for this field. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
+| `created`         | n | Date at which of the [curated text](@) was created, in the date format as used within this [scope](@). |
+| `updated`         | n | Date at which of the [curated text](@) was last modified, in the date format as used within this [scope](@). |
+| `contributors`    | n | Text that shows (or refers to) the people that have contributed to this [curated text](@). |
+| `attribution`     | n | Text that credits the original creation of the texts in the document. |
+| `originalLicense` | n | Reference to the license of the work from which the texts were derived. |
 
 :::info Editor's note
 Do we need to provide more guidance, e.g., regarding the front matter fields that may be used by the [TRRT](@) for converting [TermRefs](@), e.g. with popovers (for which it is known that the `hoverText` field is used)?

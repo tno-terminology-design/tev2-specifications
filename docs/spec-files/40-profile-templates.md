@@ -13,6 +13,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
+:::info Editor's note
+This page may have become obsolete already.
+:::
+
 We use a generic pattern for the profile-based transformation of texts from one form into another. The idea is
 
 - to specify a profile, i.e. a  set of so-called 'moustache'-variables;
@@ -21,7 +25,7 @@ We use a generic pattern for the profile-based transformation of texts from one 
 
 This pattern allows us, e.g.
 
-- to write various text interpreters for ingestable files, and have one text transformer make sure they are all converted into a valid [curated text](@).
+- to write various text interpreters for ingestible files, and have one text transformer make sure they are all converted into a valid [curated text](@).
 - to write various text transformers that produce different flavours of [HRGs](@) from an existing [MRG](@).
 - to produce code snippets that can be used in CI/CD-streets for all sorts of conversions that may be needed as [communities](@) seek to produce rendered artifacts (e.g. static websites, PDFs, etc.)
 

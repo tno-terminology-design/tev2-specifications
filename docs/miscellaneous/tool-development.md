@@ -11,12 +11,12 @@ This page intends to provide (lots of pointers to) information that people may n
 
 ## What it is about
 
-At the core of [TEv2](@) is [text conversion](/docs/overview/tev2-design-principles): every [tool in the toolbox](/docs/tev2-toolbox) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/overview/tev2-design-principles#text-conversion-steps) that individual [tools](/docs/tev2-toolbox) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
+At the core of [TEv2](@) is [text conversion](/docs/overview/tev2-text-conversion): every [tool in the toolbox](/docs/category/toolbox-specs) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/overview/tev2-text-conversion#steps) that individual [tools](/docs/category/toolbox-specs) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
 
 There are various things that make the further development of [TEv2](@) challenging:
 
 1. the interop between individual tools: outputs of one tool must be fit for processing by another tool (which may include existing third party tools, such as static website generators), as described in the [TEv2 Architecture](/docs/overview/tev2-architecture).
-2. designing actual tools such that they can be easily extended (also by others) to accept different input formats, and/or produce different output formats, as described in the [text conversion steps pattern](/docs/overview/tev2-design-principles#text-conversion-steps)
+2. designing actual tools such that they can be easily extended (also by others) to accept different input formats, and/or produce different output formats, as described in the [text conversion steps pattern](/docs/overview/tev2-text-conversion#steps)
 3. designing tools such that they can be easily used in different contexts (e.g. whether or not to dockerize a tool)
 4. collaborating with other people that work on the tools such that the coherence and consistent working of tools that different people develop is guaranteed. We may need to better organize this.
 5. making the tools automatically testable, e.g. by running test suites as part of the CI/CD street we envisage that tools would have.
@@ -32,11 +32,11 @@ There are various things that make the further development of [TEv2](@) challeng
 :::tip Reading Materials
 In order to appreciate and come to grips with these challenges, it will definitely help if you read up on some more backgrounds of what we try to do. Here are some pointers:
 
-- The [TEv2 Overview](/docs/overview/overview-tev2) (and its sub-documents) will provide you with with such backgrounds.
+- The [TEv2 Overview](/docs/category/introduction-overview) (and its sub-documents) will provide you with with such backgrounds.
 - Other documented topics include:
   - [file structure spec](/docs/tev2-spec-files)
   - [syntax specifications](/docs/tev2-syntax)
-  - [specifications of individual tools](/docs/tev2-toolbox) - not all specifications hare already been drafted/checked.
+  - [specifications of individual tools](/docs/category/toolbox-specs) - not all specifications hare already been drafted/checked.
 :::
 
 ## Tooling status as of ...

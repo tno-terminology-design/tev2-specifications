@@ -11,8 +11,8 @@ grouptags:
 formPhrases: [ "mrg-ref{ss}", "mrgref{ss}" ]
 # Curation status
 status: proposed
-created: 2023-11-27
-updated: 2023-11-27
+created: 20231127
+updated: 20231127
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

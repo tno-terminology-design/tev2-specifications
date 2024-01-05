@@ -12,8 +12,8 @@ grouptags:
 formPhrases: [ "tev2-text-conversion-tool{ss}", "text-conversion-tool{ss}", "conversion-tool{ss}" ]
 # Curation status
 status: proposed
-created: 2024-01-08
-updated: 2024-01-08
+created: 20240108
+updated: 20240108
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

@@ -11,8 +11,8 @@ synonymOf:
 grouptags: [ tev2-tool, tev2-toolbox ]
 formPhrases: [ "trrt{ss}", "termref-rendering-tool{ss}", "term-ref-rendering-tool{ss}" ]
 status: proposed
-created: 2023-07-31
-updated: 2023-07-31
+created: 20230731
+updated: 20230731
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"

@@ -10,8 +10,8 @@ grouptags:
 formPhrases: [ "synonym{ss}" ]
 # Curation status
 status: proposed
-created: 2022-11-27
-updated: 2022-11-27
+created: 20221127
+updated: 20221127
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

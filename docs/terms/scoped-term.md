@@ -9,8 +9,8 @@ grouptags:
 formPhrases: [ "scoped-term{ss}" ] # note: this includes `(scoped) terms`, as brackets are replaced with `-`, and multiple `-`s are replaced by a single `-`
 # Curation status
 status: proposed
-created: 2022-06-06
-updated: 2022-08-04
+created: 20220606
+updated: 20220804
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

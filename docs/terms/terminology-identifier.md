@@ -11,8 +11,8 @@ grouptags:
 formPhrases: [ "terminology-identifier{ss}" ]
 # Curation status
 status: proposed
-created: 2023-09-29
-updated: 2023-09-29
+created: 20230929
+updated: 20230929
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

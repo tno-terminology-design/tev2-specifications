@@ -10,8 +10,8 @@ grouptags:
 formPhrases: [ "converter-profile{ss}", "profile{ss}" ]
 # Curation status
 status: proposed
-created: 2023-12-18
-updated: 2024-01-08
+created: 20231218
+updated: 20240108
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

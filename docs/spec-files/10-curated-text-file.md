@@ -29,8 +29,8 @@ glossaryText: a text that documents a [concept](@) or other [semantic unit](@) o
 formPhrases: [ "curated-text{ss}" ]
 # TEv2 Curation status
 status: proposed
-created: 2022-06-02
-updated: 2023-08-14
+created: 20220602
+updated: 20230814
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

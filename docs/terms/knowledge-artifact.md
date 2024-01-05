@@ -10,8 +10,8 @@ grouptags:
 formPhrases: [ "knowledge-artifact{ss}" ]
 # Curation status
 status: deprecated
-created: 2022-07-27
-updated: 2023-09-26
+created: 20220727
+updated: 20230926
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

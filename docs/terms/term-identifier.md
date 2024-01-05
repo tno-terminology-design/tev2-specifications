@@ -8,8 +8,8 @@ glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identif
 formPhrases: [ "term-identifier{ss}" ]
 # Curation status
 status: proposed
-created: 2022-11-24
-updated: 2023-11-24
+created: 20221124
+updated: 20231124
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

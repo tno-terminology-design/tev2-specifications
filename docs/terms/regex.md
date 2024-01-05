@@ -12,8 +12,8 @@ grouptags:
 formPhrases: [ "regex", "regexes", "regexp{ss}", "regular-expression{ss}" ]
 # Curation status
 status: proposed
-created: 2023-12-19
-updated: 2024-01-08
+created: 20231219
+updated: 20240108
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

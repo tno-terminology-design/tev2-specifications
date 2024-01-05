@@ -10,8 +10,8 @@ glossaryText: "a word or phrase, other than the actual [term](@) that, when used
 formPhrases: [ "formphrase{ss}", "form-phrase{ss}" ]
 # Curation status
 status: proposed
-created: 2023-07-31
-updated: 2023-07-31
+created: 20230731
+updated: 20230731
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

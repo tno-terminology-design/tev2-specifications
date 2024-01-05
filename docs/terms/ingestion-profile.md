@@ -10,8 +10,8 @@ grouptags:
 formPhrases: [ "ingestion-profile{ss}" ]
 # Curation status
 status: proposed
-created: 2022-08-17
-updated: 2022-08-17
+created: 20220817
+updated: 20220817
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

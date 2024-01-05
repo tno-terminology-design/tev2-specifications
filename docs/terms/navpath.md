@@ -11,8 +11,8 @@ grouptags:
 formPhrases: [ "navpath{ss}" ]
 # Curation status
 status: proposed
-created: 2022-10-06
-updated: 2022-10-06
+created: 20221006
+updated: 20221006
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

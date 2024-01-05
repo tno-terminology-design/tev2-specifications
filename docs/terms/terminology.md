@@ -7,8 +7,8 @@ synonymOf:
 formPhrases: [ "terminolog{yies}" ]
 # Curation status
 status: proposed
-created: 2022-06-06
-updated: 2022-08-11
+created: 20220606
+updated: 20220811
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

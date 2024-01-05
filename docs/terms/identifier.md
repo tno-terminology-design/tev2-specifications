@@ -10,8 +10,8 @@ grouptags:
 formPhrases: [ "identifier{ss}" ]
 # Curation status
 status: proposed
-created: 2021-06-01
-updated: 2021-06-01
+created: 20210601
+updated: 20210601
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

@@ -11,8 +11,8 @@ grouptags:
 formPhrases: [ "semantic-unit{ss}" ]
 # Curation status
 status: proposed
-created: 2022-07-27
-updated: 2022-07-27
+created: 20220727
+updated: 20220727
 # Origins/Acknowledgements
 contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"

@@ -555,32 +555,6 @@ entries:
       - "footnotes"
     termid: "concept:concept"
     vsntag: "default"
-  - id: "concept-file"
-    displayed_sidebar: "essifLabSideBar"
-    termType: "concept"
-    term: "concept-file"
-    formPhrases:
-      - "concept-file"
-      - "concept-files"
-      - "concept-file's"
-      - "concept-file(s)"
-    status: "draft"
-    grouptags: null
-    hoverText: "Concept-file: a file whose contents defines/specifies a Concept."
-    glossaryTerm: "Concept-file"
-    glossaryText: "a file whose contents defines/specifies a [concept](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "concept-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/concept-file"
-    headingids:
-      - "concept-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-      - "examples"
-    termid: "concept:concept-file"
-    vsntag: "default"
   - id: "control"
     displayed_sidebar: "essifLabSideBar"
     termType: "concept"
@@ -988,13 +962,13 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "essiflab"
-    termid: "concept:define"
     locator: "define.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/define"
     headingids:
       - "define"
       - "examples"
       - "notes"
+    termid: "concept:define"
     vsntag: "documentation"
   - id: "definition"
     displayed_sidebar: "essifLabSideBar"
@@ -1007,7 +981,6 @@ entries:
       - "definition(s)"
     status: "draft"
     grouptags: null
-    hoverText: "Definition: a text that helps Parties to have the same understanding about the meaning of (and Concepts behind) a Term, ideally in such a way that these Parties can determine whether or not they make the same distinction."
     glossaryTerm: "Definition"
     glossaryText: "a text that helps [parties](@) to have the same understanding about the meaning of (and [concept](@) behind) a [term](@), ideally in such a way that these [parties](@) can determine whether or not they make the same distinction."
     date: 20210601
@@ -1019,7 +992,6 @@ entries:
       - "short-description"
       - "purpose"
       - "criteria"
-      - "examples"
       - "related-concepts"
       - "notes"
     termid: "concept:definition"
@@ -1112,30 +1084,6 @@ entries:
       - "examples"
       - "related-concepts"
     termid: "concept:dictionary"
-    vsntag: "default"
-  - id: "dictionary-file"
-    termType: "concept"
-    term: "dictionary-file"
-    formPhrases:
-      - "dictionary-file"
-      - "dictionary-files"
-      - "dictionary-file's"
-      - "dictionary-file(s)"
-    status: "draft"
-    grouptags: null
-    hoverText: "Dictionary-file: a file whose contents specifies the contents of a Dictionary."
-    glossaryTerm: "Dictionary-file"
-    glossaryText: "a file whose contents specifies the contents of a [dictionary](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "dictionary-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/dictionary-file"
-    headingids:
-      - "dictionary-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-    termid: "concept:dictionary-file"
     vsntag: "default"
   - id: "documentation-interop"
     displayed_sidebar: "essifLabSideBar"
@@ -1407,26 +1355,6 @@ entries:
       - "related-concepts"
       - "notes"
     termid: "concept:glossary"
-    vsntag: "default"
-  - id: "glossary-file"
-    termType: "concept"
-    term: "glossary-file"
-    status: "draft"
-    grouptags: null
-    hoverText: "Glossary-file: a file whose contents defines/specifies a Glossary."
-    glossaryTerm: "Glossary-file"
-    glossaryText: "a file whose contents defines/specifies a [glossary](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "glossary-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/glossary-file"
-    formPhrases: []
-    headingids:
-      - "glossary-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-    termid: "concept:glossary-file"
     vsntag: "default"
   - id: "governance"
     displayed_sidebar: "essifLabSideBar"
@@ -1959,7 +1887,7 @@ entries:
     grouptags: null
     hoverText: "Jurisdiction: the composition of a Legal System (legislation, enforcement thereof, and conflict resolution), a Party that governs that Legal System, a scope within which that Legal System is operational, and one or more Objectives for the purpose of which the Legal System is operated."
     glossaryTerm: "Jurisdiction"
-    glossaryText: "the composition of a [legal system](@) (legislation, enforcement thereof, and conflict resolution), a [party](@) that governs that [legal system](@), a scope within which that [legal system](@) is operational, and one or more [objective](@) for the purpose of which the [legal system](@) is operated. See also the [Jurisdictions pattern](pattern-jurisdiction@)."
+    glossaryText: "the composition of a [legal system](@) (legislation, enforcement thereof, and conflict resolution), a [party](@) that governs that [legal system](@), a scope within which that [legal system](@) is operational, and one or more [objective](@) for the purpose of which the [legal system](@) is operated. See also the [Jurisdictions pattern](pattern:jurisdiction@)."
     date: 20210601
     scopetag: "essiflab"
     locator: "jurisdiction.md"
@@ -2646,28 +2574,6 @@ entries:
       - "notes"
     termid: "concept:pattern"
     vsntag: "default"
-  - id: "pattern-file"
-    displayed_sidebar: "essifLabSideBar"
-    termType: "concept"
-    term: "pattern-file"
-    formPhrases:
-      - "pattern-file"
-    status: "draft"
-    grouptags: null
-    hoverText: "Pattern-file: a file whose contents describes/documents a Pattern."
-    glossaryTerm: "Pattern-file"
-    glossaryText: "a file whose contents describes/documents a [pattern](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "pattern-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/pattern-file"
-    headingids:
-      - "pattern-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-    termid: "concept:pattern-file"
-    vsntag: "default"
   - id: "peer-actor"
     displayed_sidebar: "essifLabSideBar"
     termType: "concept"
@@ -2873,7 +2779,10 @@ entries:
     grouptags:
       - "conceptual-modeling"
     formPhrases:
-      - "propert{yies}"
+      - "property"
+      - "propertys"
+      - "property's"
+      - "properties"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -2881,13 +2790,13 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "essiflab"
-    termid: "concept:property"
     locator: "property.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/property"
     headingids:
       - "property-(of-a-concept)"
       - "examples"
       - "notes"
+    termid: "concept:property"
     vsntag: "documentation"
   - id: "qualified-data"
     displayed_sidebar: "essifLabSideBar"
@@ -2925,7 +2834,10 @@ entries:
     grouptags:
       - "conceptual-modeling"
     formPhrases:
-      - "relation{ss}"
+      - "relation"
+      - "relations"
+      - "relation's"
+      - "relation(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -2933,13 +2845,13 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "essiflab"
-    termid: "concept:relation"
     locator: "relation.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/relation"
     headingids:
       - "relation-(between-concepts)"
       - "examples"
       - "notes"
+    termid: "concept:relation"
     vsntag: "documentation"
   - id: "revocation-component"
     displayed_sidebar: "essifLabSideBar"
@@ -3217,32 +3129,6 @@ entries:
       - "notes"
     termid: "concept:scope"
     vsntag: "default"
-  - id: "scope-file"
-    displayed_sidebar: "essifLabSideBar"
-    termType: "concept"
-    term: "scope-file"
-    formPhrases:
-      - "scope-file"
-      - "scope-files"
-      - "scope-file's"
-      - "scope-file(s)"
-    status: "draft"
-    grouptags: null
-    hoverText: "Scope-file: a file whose contents defines/specifies a Scope."
-    glossaryTerm: "Scope-file"
-    glossaryText: "a file whose contents defines/specifies a [scope](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "scope-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/scope-file"
-    headingids:
-      - "scope-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-      - "references"
-    termid: "concept:scope-file"
-    vsntag: "default"
   - id: "scope-of-control"
     displayed_sidebar: "essifLabSideBar"
     termType: "concept"
@@ -3267,6 +3153,26 @@ entries:
       - "examples"
       - "notes"
     termid: "concept:scope-of-control"
+    vsntag: "default"
+  - id: "scoped-term"
+    displayed_sidebar: "essifLabSideBar"
+    termType: "concept"
+    term: "scoped-term"
+    status: "draft"
+    grouptags: null
+    hoverText: "Scoped Term: a Term, the meaning of which is determined by the Definition to which it refers in a specific Scope/context."
+    glossaryTerm: "Term (Scoped)"
+    glossaryText: "a [term](@), the meaning of which is determined by the [definition](@) to which it refers in a specific [scope](@)/context."
+    date: 20211101
+    scopetag: "essiflab"
+    locator: "scoped-term.md"
+    navurl: "https://essif-lab.github.io/framework/docs/terms/scoped-term"
+    formPhrases: []
+    headingids:
+      - "term-(scoped)"
+      - "short-description"
+      - "purpose"
+    termid: "concept:scoped-term"
     vsntag: "default"
   - id: "self-sovereign-identity"
     displayed_sidebar: "essifLabSideBar"
@@ -3325,7 +3231,10 @@ entries:
     synonymOf: null
     grouptags: null
     formPhrases:
-      - "semantic-unit{ss}"
+      - "semantic-unit"
+      - "semantic-units"
+      - "semantic-unit's"
+      - "semantic-unit(s)"
     status: "proposed"
     created: 2022-07-27T00:00:00.000Z
     updated: 2022-07-27T00:00:00.000Z
@@ -3333,7 +3242,6 @@ entries:
     attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "essiflab"
-    termid: "concept:semantic-unit"
     locator: "semantic-unit.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/semantic-unit"
     headingids:
@@ -3341,6 +3249,7 @@ entries:
       - "summary"
       - "purpose"
       - "criteria"
+    termid: "concept:semantic-unit"
     vsntag: "documentation"
   - id: "semantics"
     displayed_sidebar: "essifLabSideBar"
@@ -3573,31 +3482,6 @@ entries:
       - "notes"
       - "footnotes"
     termid: "concept:term"
-    vsntag: "default"
-  - id: "term-file"
-    displayed_sidebar: "essifLabSideBar"
-    termType: "concept"
-    term: "term-file"
-    formPhrases:
-      - "term-file"
-      - "term-files"
-      - "term-file's"
-      - "term-file(s)"
-    status: "draft"
-    grouptags: null
-    hoverText: "Term-file: a file whose contents defines/specifies a Term."
-    glossaryTerm: "Term-file"
-    glossaryText: "a file whose contents defines/specifies a [term](@)."
-    date: 20210601
-    scopetag: "essiflab"
-    locator: "term-file.md"
-    navurl: "https://essif-lab.github.io/framework/docs/terms/term-file"
-    headingids:
-      - "term-file"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-    termid: "concept:term-file"
     vsntag: "default"
   - id: "terminology"
     displayed_sidebar: "essifLabSideBar"

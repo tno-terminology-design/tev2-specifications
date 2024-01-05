@@ -185,7 +185,7 @@ entries:
     isa: "curated-file"
     bodyFile: "/spec-files/11-body-file.md"
     glossaryTerm: "Body File"
-    glossaryText: "a file that is located somewhere within the [scopedir](@), and that contains the [body](@) of a [curated text](@). The [header](@) of that [curated text](@) has a field `bodyFile` that specifes its location within the [scopedir](@)."
+    glossaryText: "a file that is located somewhere within the [scopedir](@), and that contains the [body](@) of a [curated text](@). The [header](@) of that [curated text](@) has a field `bodyFile` that specifies its location within the [scopedir](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -272,7 +272,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "concept.md"
@@ -371,7 +371,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Converter"
-    glossaryText: "a specification for constructing a text, for which it can use texts that are the values of [moustache variables](@)."
+    glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -381,7 +381,7 @@ entries:
       - "converter(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -391,6 +391,34 @@ entries:
     headingids:
       - "converter"
     termid: "concept:converter"
+    vsntag: "documentation"
+  - id: "converter-profile"
+    term: "converter-profile"
+    termType: "concept"
+    glossaryTerm: "Converter Profile"
+    glossaryText: "the set of [moustache variables](@) that are (made) available to [converters](@) of a particular [TEv2 tool](@), enabling them to produce the texts by which the [TEv2 tool](@) will replace the text constructs that are located by the [interpreter](@)."
+    grouptags: null
+    formPhrases:
+      - "converter-profile"
+      - "converter-profiles"
+      - "converter-profile's"
+      - "converter-profile(s)"
+      - "profile"
+      - "profiles"
+      - "profile's"
+      - "profile(s)"
+    status: "proposed"
+    created: 2023-12-18T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "converter-profile.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
+    headingids:
+      - "converter-profile"
+    termid: "concept:converter-profile"
     vsntag: "documentation"
   - term: "corpus"
     termType: "concept"
@@ -408,7 +436,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "corpus.md"
@@ -499,7 +527,7 @@ entries:
     created: 20231009
     updated: 20231009
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "curated-file.md"
@@ -528,7 +556,7 @@ entries:
     created: 2022-06-02T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "curated-text.md"
@@ -559,7 +587,7 @@ entries:
     created: 20231009
     updated: 20231009
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "curated-text-file.md"
@@ -595,7 +623,7 @@ entries:
     created: 2022-07-29T00:00:00.000Z
     updated: 2022-07-29T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "curatedir.md"
@@ -653,7 +681,7 @@ entries:
     created: 20231009
     updated: 20231009
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "current-scope.md"
@@ -710,7 +738,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "definition.md"
@@ -740,7 +768,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "dictionary.md"
@@ -860,7 +888,7 @@ entries:
       - "formatted-text"
       - "examples"
       - "notes"
-      - "miscellanous"
+      - "miscellaneous"
     termid: "concept:formatted-text"
     vsntag: "documentation"
   - term: "glossary"
@@ -879,7 +907,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "glossary.md"
@@ -912,7 +940,7 @@ entries:
     created: 2022-07-29T00:00:00.000Z
     updated: 2022-07-29T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "glossarydir.md"
@@ -1024,7 +1052,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-07-28T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "grouptag.md"
@@ -1036,13 +1064,43 @@ entries:
       - "examples"
     termid: "concept:grouptag"
     vsntag: "documentation"
+  - id: "handlebars-expression"
+    term: "handlebars-expression"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Handlebars Expression"
+    glossaryText: "a specific syntax used in the popular templating engine 'Handlebars', which enables one to specify texts (e.g., HTML templates) in which dynamic data (as provided, e.g., by [moustache variables](@)) is placed. See [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) for further details."
+    synonymOf: null
+    grouptags: null
+    formPhrases:
+      - "handlebar-expression"
+      - "handlebar-expressions"
+      - "handlebar-expression's"
+      - "handlebar-expression(s)"
+      - "handlebars-expression"
+      - "handlebars-expressions"
+      - "handlebars-expression's"
+      - "handlebars-expression(s)"
+    status: "proposed"
+    created: 2023-07-31T00:00:00.000Z
+    updated: 2023-07-31T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "handlebars-expression.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-expression"
+    headingids:
+      - "handlebars-expression"
+    termid: "concept:handlebars-expression"
+    vsntag: "documentation"
   - id: "header"
     term: "header"
     termType: "concept"
     isa: null
     bodyFile: "/spec-files/10-curated-text-file.md"
     glossaryTerm: "Header (of a Curated Text)"
-    glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrance of such a line. Headers live in [curated text files](@)."
+    glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrence of such a line. Headers live in [curated text files](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -1279,38 +1337,38 @@ entries:
       - "human-readable-glossary-tools"
       - "human-readable-glossary-tool's"
       - "human-readable-glossary-tool(s)"
-      - "human-readable-glossary-tool-hrtt"
-      - "human-readable-glossary-tool-hrtts"
-      - "human-readable-glossary-tool-hrtt's"
-      - "human-readable-glossary-tool-hrtt(s)"
-      - "human-readable-glossary-tools-hrtt"
-      - "human-readable-glossary-tools-hrtts"
-      - "human-readable-glossary-tools-hrtt's"
-      - "human-readable-glossary-tools-hrtt(s)"
-      - "human-readable-glossary-tool's-hrtt"
-      - "human-readable-glossary-tool's-hrtts"
-      - "human-readable-glossary-tool's-hrtt's"
-      - "human-readable-glossary-tool's-hrtt(s)"
-      - "human-readable-glossary-tool(s)-hrtt"
-      - "human-readable-glossary-tool(s)-hrtts"
-      - "human-readable-glossary-tool(s)-hrtt's"
-      - "human-readable-glossary-tool(s)-hrtt(s)"
-      - "hrt-human-readable-glossary-tool"
-      - "hrt-human-readable-glossary-tools"
-      - "hrt-human-readable-glossary-tool's"
-      - "hrt-human-readable-glossary-tool(s)"
-      - "hrts-human-readable-glossary-tool"
-      - "hrts-human-readable-glossary-tools"
-      - "hrts-human-readable-glossary-tool's"
-      - "hrts-human-readable-glossary-tool(s)"
-      - "hrt's-human-readable-glossary-tool"
-      - "hrt's-human-readable-glossary-tools"
-      - "hrt's-human-readable-glossary-tool's"
-      - "hrt's-human-readable-glossary-tool(s)"
-      - "hrt(s)-human-readable-glossary-tool"
-      - "hrt(s)-human-readable-glossary-tools"
-      - "hrt(s)-human-readable-glossary-tool's"
-      - "hrt(s)-human-readable-glossary-tool(s)"
+      - "human-readable-glossary-tool-hrgt"
+      - "human-readable-glossary-tool-hrgts"
+      - "human-readable-glossary-tool-hrgt's"
+      - "human-readable-glossary-tool-hrgt(s)"
+      - "human-readable-glossary-tools-hrgt"
+      - "human-readable-glossary-tools-hrgts"
+      - "human-readable-glossary-tools-hrgt's"
+      - "human-readable-glossary-tools-hrgt(s)"
+      - "human-readable-glossary-tool's-hrgt"
+      - "human-readable-glossary-tool's-hrgts"
+      - "human-readable-glossary-tool's-hrgt's"
+      - "human-readable-glossary-tool's-hrgt(s)"
+      - "human-readable-glossary-tool(s)-hrgt"
+      - "human-readable-glossary-tool(s)-hrgts"
+      - "human-readable-glossary-tool(s)-hrgt's"
+      - "human-readable-glossary-tool(s)-hrgt(s)"
+      - "hrgt-human-readable-glossary-tool"
+      - "hrgt-human-readable-glossary-tools"
+      - "hrgt-human-readable-glossary-tool's"
+      - "hrgt-human-readable-glossary-tool(s)"
+      - "hrgts-human-readable-glossary-tool"
+      - "hrgts-human-readable-glossary-tools"
+      - "hrgts-human-readable-glossary-tool's"
+      - "hrgts-human-readable-glossary-tool(s)"
+      - "hrgt's-human-readable-glossary-tool"
+      - "hrgt's-human-readable-glossary-tools"
+      - "hrgt's-human-readable-glossary-tool's"
+      - "hrgt's-human-readable-glossary-tool(s)"
+      - "hrgt(s)-human-readable-glossary-tool"
+      - "hrgt(s)-human-readable-glossary-tools"
+      - "hrgt(s)-human-readable-glossary-tool's"
+      - "hrgt(s)-human-readable-glossary-tool(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -1322,11 +1380,22 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/hrgt"
     headingids:
       - "human-readable-glossary-generator-tool-(hrgt)"
-      - "what-the-hrgt-does"
       - "installing-the-tool"
       - "calling-the-tool"
-      - "mrg-ref-handling"
-      - "hrg-sorting-{#hrg-sorting}"
+      - "hrg-generation-{#what-it-does}"
+      - "hrgt-interpreter-profile-{#interpreter-profile}"
+      - "hrgt-predefined-interpreters-{#predefined-interpreters}"
+      - "processing-{#processing}"
+      - "finding-the-[mrg](@)-associated-with-an-[mrgref](@)-"
+      - "sorting-the-[hrg-list](@)"
+      - "hrgt-converter-profile-{#converter-profile}"
+      - "hrgt-predefined-converters-{#predefined-converters}"
+      - "the-`markdown-link`-converter"
+      - "the-`html-link`-converter"
+      - "the-`html-hovertext-link`-converter"
+      - "the-`html-glossarytext-link`-converter"
+      - "hrgt-sorting-{#sorter}"
+      - "hrgt-predefined-sorters-{#predefined-sorters}"
       - "example"
       - "processing,-errors-and-warnings"
       - "deploying-the-tool"
@@ -1416,7 +1485,7 @@ entries:
     created: 2021-06-01T00:00:00.000Z
     updated: 2021-06-01T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "identifier.md"
@@ -1474,7 +1543,7 @@ entries:
     created: 2021-06-01T00:00:00.000Z
     updated: 2021-06-01T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "identify.md"
@@ -1577,7 +1646,7 @@ entries:
     created: 2022-08-17T00:00:00.000Z
     updated: 2022-08-17T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "ingestion-profile.md"
@@ -1594,7 +1663,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Interpreter"
-    glossaryText: "a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre) that is used to locate a particular text construct (such as a [TermRef](@) or [MRGRef](@)) in a text, and that uses (PCRE) named groups to provide the values for the [moustache variables](@) in the [moustache profile](@) for which it is designed."
+    glossaryText: "a [regex](@) that is used to locate a particular text construct (such as a [TermRef](@) or [MRGRef](@)) in a text, and that populates [named capturing groups](@) as specified in the [interpreter profile](@) of the particular [text conversion tool](@) for which it is designed."
     grouptags: null
     formPhrases:
       - "interpreter"
@@ -1603,7 +1672,7 @@ entries:
       - "interpreter(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
-    updated: 2023-12-18T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1613,6 +1682,30 @@ entries:
     headingids:
       - "interpreter"
     termid: "concept:interpreter"
+    vsntag: "documentation"
+  - term: "interpreter-profile"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Interpreter Profile"
+    glossaryText: "the set of [named capturing groups](@) that are an [interpreter](@) is expected to populate when it is used in the context of a specific [TEv2 tool](@) (such as the [TRRT](@) or [HRGT](@))."
+    grouptags: null
+    formPhrases:
+      - "interpreter-profile"
+      - "interpreter-profiles"
+      - "interpreter-profile's"
+      - "interpreter-profile(s)"
+    status: "proposed"
+    created: 2023-12-18T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "interpreter-profile.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/interpreter-profile"
+    headingids:
+      - "interpreter-profile"
+    termid: "concept:interpreter-profile"
     vsntag: "documentation"
   - id: "jurisdiction"
     displayed_sidebar: "essifLabSideBar"
@@ -1627,7 +1720,7 @@ entries:
     grouptags: null
     hoverText: "Jurisdiction: the composition of a Legal System (legislation, enforcement thereof, and conflict resolution), a Party that governs that Legal System, a scope within which that Legal System is operational, and one or more Objectives for the purpose of which the Legal System is operated."
     glossaryTerm: "Jurisdiction"
-    glossaryText: "the composition of a [legal system](@) (legislation, enforcement thereof, and conflict resolution), a [party](@) that governs that [legal system](@), a scope within which that [legal system](@) is operational, and one or more [objective](@) for the purpose of which the [legal system](@) is operated. See also the [Jurisdictions pattern](pattern-jurisdiction@)."
+    glossaryText: "the composition of a [legal system](@) (legislation, enforcement thereof, and conflict resolution), a [party](@) that governs that [legal system](@), a scope within which that [legal system](@) is operational, and one or more [objective](@) for the purpose of which the [legal system](@) is operated. See also the [Jurisdictions pattern](pattern:jurisdiction@)."
     date: 20210601
     scopetag: "essif-lab"
     locator: "jurisdiction.md"
@@ -1704,7 +1797,7 @@ entries:
     created: 2022-07-27T00:00:00.000Z
     updated: 2023-09-26T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "knowledge-artifact.md"
@@ -1795,7 +1888,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-07T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mental-model.md"
@@ -1810,40 +1903,12 @@ entries:
       - "on-the-construction-of-mental-models"
     termid: "concept:mental-model"
     vsntag: "documentation"
-  - id: "moustache-profile"
-    term: "moustache-profile"
-    termType: "concept"
-    glossaryTerm: "Moustache Profile"
-    glossaryText: "a set of [moustache variables](@) that specify the expected results or executing a particular [interpreter](@). For example, the moustache profile for [TRRT](@) [interpreters](@) consists of the [variables](moustache-variable@) `{{showtext}}`, `{{termType}}`, `{{term}}`, `{{trait}}`, `{{scopetag}}`, and `{{vsntag}}`."
-    grouptags: null
-    formPhrases:
-      - "moustache-profile"
-      - "moustache-profiles"
-      - "moustache-profile's"
-      - "moustache-profile(s)"
-      - "profile"
-      - "profiles"
-      - "profile's"
-      - "profile(s)"
-    status: "proposed"
-    created: 2023-12-18T00:00:00.000Z
-    updated: 2023-12-18T00:00:00.000Z
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "moustache-profile.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/moustache-profile"
-    headingids:
-      - "moustache-profile"
-    termid: "concept:moustache-profile"
-    vsntag: "documentation"
   - id: "moustache-variable"
     term: "moustache-variable"
     termType: "concept"
     isa: null
     glossaryTerm: "Moustache Variable"
-    glossaryText: "a placeholder in the form of a 'moustache' tag, e.g. `{{variable_name}}``, within some text. They are used, e.g., by the [TRRT](@), where they get their values from an [interpreter](@), and where they are used in a selected [converter](@) for the purpose of replacing [TermRefs](@) with [renderable refs](@). See also https://mustache.github.io/mustache.5.html"
+    glossaryText: "a placeholder in the form of a 'moustache' tag, e.g.: `{{variable_name}}`, that are used by [converters](@) to produce a text by which a text construct that is located by an [interpreter](@) will be replaced. See also https://mustache.github.io/mustache.5.html"
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -1853,7 +1918,7 @@ entries:
       - "moustache-variable(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -1985,11 +2050,11 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/spec-files/mrg"
     headingids:
       - "machine-readable-glossary-(mrg)"
-      - "file-naming-conventions-{#mrg-file-naming-conventions}"
+      - "file-naming-conventions-{#file-naming-conventions}"
       - "mrg-structure"
-      - "mrg-`terminology`-section-{#mrg-terminology}"
-      - "mrg-`scopes`-section-{#mrg-scopes}"
-      - "mrg-entries-(the-`entries`-section)-{#mrg-entries}"
+      - "mrg-`terminology`-section-{#terminology}"
+      - "mrg-`scopes`-section-{#scopes}"
+      - "mrg-entries-(the-`entries`-section)-{#entries}"
       - "footnotes"
     termid: "concept:mrg"
     vsntag: "documentation"
@@ -2009,7 +2074,7 @@ entries:
     created: 2022-08-11T00:00:00.000Z
     updated: 2022-08-11T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mrg-entry.md"
@@ -2074,7 +2139,7 @@ entries:
     created: 2023-11-27T00:00:00.000Z
     updated: 2023-11-27T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mrg-ref.md"
@@ -2085,7 +2150,7 @@ entries:
       - "predefined-mrgref-interpreters-{#predefined-mrgref-interpreters}"
       - "predefined-mrgref-converters-{#predefined-mrgref-converters}"
       - "converter-for-markdown-tables"
-      - "converter-for-essif-lab-glossary-look-alikes"
+      - "converter-for-essif-lab-glossary-lookalikes"
       - "docusaurus-header-fields:"
       - "glossary"
       - "docusaurus-header-fields:"
@@ -2138,22 +2203,22 @@ entries:
       - "machine-readable-glossary-tool(s)-mrgts"
       - "machine-readable-glossary-tool(s)-mrgt's"
       - "machine-readable-glossary-tool(s)-mrgt(s)"
-      - "mrgt-machin-readable-glossary-tool"
-      - "mrgt-machin-readable-glossary-tools"
-      - "mrgt-machin-readable-glossary-tool's"
-      - "mrgt-machin-readable-glossary-tool(s)"
-      - "mrgts-machin-readable-glossary-tool"
-      - "mrgts-machin-readable-glossary-tools"
-      - "mrgts-machin-readable-glossary-tool's"
-      - "mrgts-machin-readable-glossary-tool(s)"
-      - "mrgt's-machin-readable-glossary-tool"
-      - "mrgt's-machin-readable-glossary-tools"
-      - "mrgt's-machin-readable-glossary-tool's"
-      - "mrgt's-machin-readable-glossary-tool(s)"
-      - "mrgt(s)-machin-readable-glossary-tool"
-      - "mrgt(s)-machin-readable-glossary-tools"
-      - "mrgt(s)-machin-readable-glossary-tool's"
-      - "mrgt(s)-machin-readable-glossary-tool(s)"
+      - "mrgt-machine-readable-glossary-tool"
+      - "mrgt-machine-readable-glossary-tools"
+      - "mrgt-machine-readable-glossary-tool's"
+      - "mrgt-machine-readable-glossary-tool(s)"
+      - "mrgts-machine-readable-glossary-tool"
+      - "mrgts-machine-readable-glossary-tools"
+      - "mrgts-machine-readable-glossary-tool's"
+      - "mrgts-machine-readable-glossary-tool(s)"
+      - "mrgt's-machine-readable-glossary-tool"
+      - "mrgt's-machine-readable-glossary-tools"
+      - "mrgt's-machine-readable-glossary-tool's"
+      - "mrgt's-machine-readable-glossary-tool(s)"
+      - "mrgt(s)-machine-readable-glossary-tool"
+      - "mrgt(s)-machine-readable-glossary-tools"
+      - "mrgt(s)-machine-readable-glossary-tool's"
+      - "mrgt(s)-machine-readable-glossary-tool(s)"
     status: "proposed"
     created: 2023-07-31T00:00:00.000Z
     updated: 2023-07-31T00:00:00.000Z
@@ -2168,14 +2233,43 @@ entries:
       - "installing-the-tool"
       - "calling-the-tool"
       - "running-the-tool"
-      - "phase-1:-constructing-a-[provisional-mrg](@)-{#mrgt-constructing-provisional-mrg}"
-      - "storing-a-[provisional-mrg](@)-in-the-[glossarydir](@)-{#mrgt-mrg-filenames}"
-      - "phase-2:-post-processing-synonyms-{#mrgt-post-processing}"
+      - "phase-1:-constructing-a-[provisional-mrg](@)-{#constructing-provisional-mrg}"
+      - "storing-a-[provisional-mrg](@)-in-the-[glossarydir](@)-{#mrg-filenames}"
+      - "phase-2:-post-processing-synonyms-{#post-processing}"
       - "phase-3:-post-processing-other-fields"
       - "phase-4:-checking-the-result"
       - "exceptions,-warnings,-and-logging-{#exceptions}"
       - "notes"
     termid: "concept:mrgt"
+    vsntag: "documentation"
+  - id: "named-capturing-group"
+    term: "named-capturing-group"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Named Capturing Group"
+    glossaryText: "a sub-pattern within a [regex](@) (called a '[capturing group](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)') that has been given a name, allowing one to refer to that sub-pattern."
+    grouptags: null
+    formPhrases:
+      - "named-capturing-group"
+      - "named-capturing-groups"
+      - "named-capturing-group's"
+      - "named-capturing-group(s)"
+      - "capturing-group"
+      - "capturing-groups"
+      - "capturing-group's"
+      - "capturing-group(s)"
+    status: "proposed"
+    created: 20231220
+    updated: 20231220
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "named-capturing-group.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/named-capturing-group"
+    headingids:
+      - "named-capturing-group"
+    termid: "concept:named-capturing-group"
     vsntag: "documentation"
   - term: "navpath"
     termType: "concept"
@@ -2194,7 +2288,7 @@ entries:
     created: 2022-10-06T00:00:00.000Z
     updated: 2022-10-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "navpath.md"
@@ -2466,7 +2560,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Provisional MRG"
-    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/spec-tools/mrgt#mrgt-post-processing) to result in a proper [MRG](@)."
+    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/spec-tools/mrgt#post-processing) to result in a proper [MRG](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -2539,6 +2633,38 @@ entries:
       - "reader"
     termid: "concept:reader"
     vsntag: "documentation"
+  - id: "regex"
+    term: "regex"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Regular Expression (Regex)"
+    glossaryText: "a sequence of characters that specifies a text pattern that can be searched for within other, larger texts, for the purpose of, e.g., replacing the text pattern with some other text. Within [TEv2](@), we use a [JavaScript flavor (ECMAScript 2022)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)."
+    synonymOf: null
+    grouptags: null
+    formPhrases:
+      - "regex"
+      - "regexes"
+      - "regexp"
+      - "regexps"
+      - "regexp's"
+      - "regexp(s)"
+      - "regular-expression"
+      - "regular-expressions"
+      - "regular-expression's"
+      - "regular-expression(s)"
+    status: "proposed"
+    created: 2023-12-19T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "regex.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/regex"
+    headingids:
+      - "regular-expression-(regex)"
+    termid: "concept:regex"
+    vsntag: "documentation"
   - id: "relation"
     term: "relation"
     termType: "concept"
@@ -2592,7 +2718,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "renderable-ref.md"
@@ -2755,7 +2881,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "scope.md"
@@ -2781,7 +2907,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "scoped-term.md"
@@ -2811,7 +2937,7 @@ entries:
     created: 2022-07-29T00:00:00.000Z
     updated: 2022-07-29T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "scopedir.md"
@@ -2843,7 +2969,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-07-28T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "scopetag.md"
@@ -2873,7 +2999,7 @@ entries:
     created: 2022-07-27T00:00:00.000Z
     updated: 2022-07-27T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "semantic-unit.md"
@@ -2898,7 +3024,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "semantics.md"
@@ -2909,6 +3035,32 @@ entries:
       - "purpose"
       - "criteria"
     termid: "concept:semantics"
+    vsntag: "documentation"
+  - id: "sorter"
+    term: "sorter"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Sorter"
+    glossaryText: "a specification, in the form of a predefined value or a [handlebars expression](@), of the value that is to be used for sorting a list, e.g., for sorting [HRG entries](@) within a [HRG list](@)."
+    synonymOf: null
+    grouptags: null
+    formPhrases:
+      - "sorter"
+      - "sorters"
+      - "sorter's"
+      - "sorter(s)"
+    status: "proposed"
+    created: 2023-07-31T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "sorter.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/sorter"
+    headingids:
+      - "sorter"
+    termid: "concept:sorter"
     vsntag: "documentation"
   - id: "ssi"
     displayed_sidebar: "essifLabSideBar"
@@ -2934,8 +3086,8 @@ entries:
   - term: "synonym"
     termType: "concept"
     isa: "term"
-    glossaryTerm: null
-    glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@)."
+    glossaryTerm: "Synonym (of a [term](@))"
+    glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -2947,7 +3099,7 @@ entries:
     created: 2022-11-27T00:00:00.000Z
     updated: 2022-11-27T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "synonym.md"
@@ -2976,7 +3128,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "tag.md"
@@ -3013,7 +3165,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-09T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "term.md"
@@ -3042,7 +3194,7 @@ entries:
     created: 2022-11-24T00:00:00.000Z
     updated: 2023-11-24T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "term-identifier.md"
@@ -3078,15 +3230,15 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-04T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "term-ref.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/term-ref"
     headingids:
       - "term-ref"
-      - "summary"
       - "purpose"
+      - "example-characteristic-{#example}"
     termid: "concept:term-ref"
     vsntag: "documentation"
   - id: "term-selection-instruction"
@@ -3135,11 +3287,15 @@ entries:
       - "term-types"
       - "term-type's"
       - "term-type(s)"
+      - "termtype"
+      - "termtypes"
+      - "termtype's"
+      - "termtype(s)"
     status: "proposed"
     created: 2022-06-06T00:00:00.000Z
     updated: 2023-08-01T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "term-type.md"
@@ -3170,7 +3326,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-09T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "termid.md"
@@ -3192,7 +3348,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-08-11T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     glossaryTerm: null
     glossaryText: "a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [semantic units](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics."
@@ -3248,7 +3404,7 @@ entries:
     created: 2023-09-29T00:00:00.000Z
     updated: 2023-09-29T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "terminology-identifier.md"
@@ -3256,6 +3412,7 @@ entries:
     headingids:
       - "terminology-identifiers"
       - "syntax"
+      - "finding-the-[mrg](@)-that-corresponds-with-a-[terminology-identifier](@)"
       - "examples"
     termid: "concept:terminology-identifier"
     vsntag: "documentation"
@@ -3303,7 +3460,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "terms-community.md"
@@ -3321,28 +3478,60 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "TEv2"
-    glossaryText: "a set of specifications and tools that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
-    synonymOf: null
-    grouptags: null
-    formPhrases: []
+    glossaryText: "a set of specifications and [tools](@) that caters for the [curation](@) of [terminologies](@), as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual [scopes](@)."
     status: "proposed"
     created: 2022-09-19T00:00:00.000Z
     updated: 2022-09-19T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "tev2.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2"
+    formPhrases: []
     headingids:
       - "tev2-(terminology-engine,-version-2)"
       - "summary"
     termid: "concept:tev2"
     vsntag: "documentation"
+  - id: "tev2-text-conversion-tool"
+    term: "tev2-text-conversion-tool"
+    termType: "concept"
+    isa: "tev2-tool"
+    glossaryTerm: "TEv2 Text Conversion Tool"
+    glossaryText: "a [TEv2 tool](@) whose purpose is to convert particular text constructs (such as [TermRefs](@) or [MRGRefs](@)) that exist in one or more files with other texts, the contents of which consists of some fixed construct that is populated with elements derived from existing text constructs and/or other resources."
+    synonymOf: null
+    grouptags: null
+    formPhrases:
+      - "tev2-text-conversion-tool"
+      - "tev2-text-conversion-tools"
+      - "tev2-text-conversion-tool's"
+      - "tev2-text-conversion-tool(s)"
+      - "text-conversion-tool"
+      - "text-conversion-tools"
+      - "text-conversion-tool's"
+      - "text-conversion-tool(s)"
+      - "conversion-tool"
+      - "conversion-tools"
+      - "conversion-tool's"
+      - "conversion-tool(s)"
+    status: "proposed"
+    created: 2024-01-08T00:00:00.000Z
+    updated: 2024-01-08T00:00:00.000Z
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "tev2-text-conversion-tool.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2-text-conversion-tool"
+    headingids:
+      - "tev2-text-conversion-tools"
+    termid: "concept:tev2-text-conversion-tool"
+    vsntag: "documentation"
   - id: "tev2-tool"
     term: "tev2-tool"
     termType: "concept"
-    isa: "definition"
+    isa: null
     glossaryTerm: "TEv2 Tool"
     glossaryText: "any software application or utility designed to support and streamline various tasks related to terminology management following the TEv2 specifications."
     synonymOf: null
@@ -3375,7 +3564,7 @@ entries:
   - id: "tev2-toolbox"
     term: "tev2-toolbox"
     termType: "concept"
-    isa: "definition"
+    isa: null
     glossaryTerm: "TEv2 Toolbox"
     glossaryText: "the collection of tools designed to support and facilitate the process of terminology management following the [TEv2 specifications](/docs/overview). These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets."
     synonymOf: null
@@ -3457,18 +3646,22 @@ entries:
     locator: "trrt.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/trrt"
     headingids:
-      - "term-reference-resolution-tool"
-      - "installing-the-tool"
-      - "calling-the-tool"
-      - "term-ref-resolution"
-      - "interpretation-of-the-term-ref"
-      - "`showtext`-(required)-{#showtext}"
-      - "`scopetag`-(optional)-{#scopetag}"
-      - "`vsntag`-(optional)-{#vsntag}"
-      - "`term`-(optional)-{#id}"
-      - "`trait`-(optional)-{#trait}"
-      - "locating-the-identified-mrg-entry"
-      - "rewriting-the-term-ref-with-a-renderable-ref"
+      - "term-reference-resolution-tool-(trrt)"
+      - "installing-the-tool-{#install}"
+      - "calling-the-tool-{#call}"
+      - "term-ref-resolution-{#what-it-does}"
+      - "trrt-interpreter-profile-{#interpreter-profile}"
+      - "trrt-predefined-interpreters-{#predefined-interpreters}"
+      - "the-`basic`-(also:-`default`)-interpreter"
+      - "the-`alt`-(alternative)-interpreter"
+      - "processing-{#processing}"
+      - "finding-the-[mrg-entry](@)-associated-with-a-[termref](@)"
+      - "trrt-converter-profile-{#converter-profile}"
+      - "trrt-predefined-converters-{#predefined-converters}"
+      - "the-`markdown-link`-converter"
+      - "the-`html-link`-converter"
+      - "the-`html-hovertext-link`-converter"
+      - "the-`html-glossarytext-link`-converter"
       - "processing,-errors-and-warnings"
       - "deploying-the-tool"
     termid: "concept:trrt"
@@ -3544,7 +3737,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-07-28T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "versiontag.md"
@@ -3573,7 +3766,7 @@ entries:
     created: 2022-06-06T00:00:00.000Z
     updated: 2022-06-06T00:00:00.000Z
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "vocabulary.md"

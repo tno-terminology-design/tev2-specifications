@@ -1,5 +1,5 @@
 ---
-id: tev2-glossaries
+id: tev2-glossaries-demo
 toc_min_heading_level: 6
 toc_max_heading_level: 6
 date: 20231205
@@ -18,6 +18,7 @@ This page is evidence that an [HRG](@) can be generated for every [MRG](@) that 
   values={[
     {label: 'TEv2 glossary',             value: 'default'},
     {label: 'Curated Terms glossary',    value: 'terms'},
+    {label: 'Recent changes glossary',   value: 'recent-changes'},
     {label: 'Mental Model glossary',     value: 'patterns'},
     {label: 'Latest eSSIF-Lab glossary', value: 'latest'},
   ]}>
@@ -44,6 +45,18 @@ This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [
 
 </TabItem>
 
+<TabItem value="recent-changes">
+
+:::info
+This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [scope](@). It has a custom format, and is sorted according to the date of last change, as it appears in the [MRGEntry](@).
+:::
+
+| Term | Definition | Updated |
+| ---- | ---------- | ------- |
+{% hrg=":terms" converter="| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} | {{updated}} |\n" sorter="{{updated}}" %}
+
+</TabItem>
+
 <TabItem value="patterns">
 
 :::info
@@ -59,9 +72,11 @@ This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are know
 
 :::info
 This is the [glossary](@) for the `latest` version of the [terminology](@) within [scope](@) that we know as `essif-lab`. It is formatted using `markdown-section-3`.
+
+NOTE that the [HRG entries](@) are sorted by the value of their `glossaryText`.
 :::
 
-{% hrg="essif-lab:latest" converter="markdown-section-3" %}
+{% hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}" %}
 
 </TabItem>
 

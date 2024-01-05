@@ -91,7 +91,6 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-s`, `--scopedir <path>`     | n | Path of the scope directory from which the tool is called. |
 | `-v`, `--vsntag <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
 | `-V`, `--version`             | n | output the version number of the tool. |
-<!-- | `-p`, `--prune`               | n | Remove all files in the [glossarydir](@) with filename `mrg.<something>.yaml`, where the filename does not contain an [MRG](@) whose filename is specified in the [SAF](@). | -->
 
 The `<action>` parameter can take the following values:
 

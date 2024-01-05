@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 [MRG References](@) (or [MRGRefs](@) for short) are textual constructs that refer to a specific [terminology](@) within a particular [scope](@). The purpose of an [MRG Reference](@) is that it can be converted (by the [HRGT](@)) into a text that contains a [human readable glossary](@) of the [terms](@) contained in that [terminology](@).
 
-The syntax for [MRGRefs](@) is not fixed. While there is a default syntax, [curators](@) can define their own syntax, and specify that as a command-line parameter or a parameter in the configuration file for appropriate tools, such as the [HRGT](@). If an interpreter is not specified, it defaults to `basic`, the associated syntax of which is specified below. 
+The syntax for [MRGRefs](@) is not fixed. While there is a default syntax, [curators](@) can define their own syntax, and specify that as a command-line parameter or a parameter in the configuration file for appropriate tools, such as the [HRGT](@). If an [interpreter](@) is not specified, it defaults to `basic`, the associated syntax of which is specified below. 
 
 ## Default MRGRef Syntax {#default-mrgref-syntax}
 
@@ -25,7 +25,7 @@ The default syntax for [MRGRefs](@) is as follows:
 where
 
 - `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
-- `converter="<converter>` specifies the converter that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
+- `converter="<converter>` specifies the [converter](@) that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
 - `<converter>` is a text that specifies either: 
     - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essiflab`;
     - a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
@@ -38,7 +38,7 @@ The predefined interpreters for detecting [MRGRefs](@) are as follows:
 
 | `<interpreter>` | Description |
 | :-------------- | :---------- |
-| `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default interpreter for [MRGRefs](@). |
+| `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default [interpreter](@) for [MRGRefs](@). |
 
 ## Predefined MRGRef Converters {#predefined-mrgref-converters}
 

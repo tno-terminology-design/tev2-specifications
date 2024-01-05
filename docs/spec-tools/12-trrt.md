@@ -36,7 +36,7 @@ Consider the [TermRef](@) `[the purpose of actors](actor#purpose@essif-lab)`. Th
   [the purpose of actors](https://essif-lab.github.io/framework/docs/terms/actor#purpose)
 ~~~
 
-which is text that a markdown interpreter will render into a text `the purpose of actors` that hyperlinks to the path `https://essif-lab.github.io/framework/docs/terms/actor#purpose`.
+which is text that a markdown [interpreter](@) will render into a text `the purpose of actors` that hyperlinks to the path `https://essif-lab.github.io/framework/docs/terms/actor#purpose`.
 
 </TabItem>
 <TabItem value="html">
@@ -150,8 +150,8 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <[regex](@)>`  | n | Specifies the interpreter to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Converters](#trrt-interpreters) for details.  |
-| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the converter to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
+| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Converters](#trrt-interpreters) for details.  |
+| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
@@ -207,7 +207,7 @@ The most general form of the `basic` and `default` [interpreter](@) syntax is:
 where: 
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
 - `termType` (optional) is a [term type](@). It need not be specified if the `id` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
-- `id` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified <mark>reference needed</mark>.
+- `id` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii.c).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [header-id](@) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
@@ -225,7 +225,7 @@ This is particularly useful in the vast majority of cases, where the default pro
 
 The usefulness becomes even greater as the [TRRT](@) also implements more sophisticated ways to derive a `term` from a `show text`, e.g. to accommodate for plural forms (of nouns), or conjugate forms (for verbs).
 
-:::info Editor's note
+:::info
 This alternative notation will assume that the `showtext` part of a [TermRef](@) won't contain the `@` character. However, it is likely that some [authors](@) will want to use an email address as the `showtext` part of a *regular* link, e.g. as in `[rieks.joosten@tno.nl](mailto:rieks.joosten@tno.nl)`. However, since [scopetags](@) should not contain `.`-characters, `[rieks.joosten@tno.nl]` does not qualify as a `showtext` in our syntax. [Authors](@) should [use angle brackets to link to email addresses](https://www.markdownguide.org/basic-syntax/#urls-and-email-addresses), as in `<rieks.joosten@tno.nl>`.
 :::
 
@@ -251,7 +251,7 @@ The purpose of the [TRRT](@) is to allow source texts to contain [TermRefs](@) t
 
 To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRefs](@) in its input files, and for each of them, processes the [named capturing groups](@) that the [interpreter](@) populates. Then, it will attempt to find the [MRG entry](@) that documents the [semantic unit](@) to which the [term ref](@) refers. When found (without ambiguities), it will populate [moustache variables](@) as specified in its [converter profile](@), and use the specified [converter](@) to produce the text by which the [TermRef](@) will be replaced.
 
-#### Finding the [MRG entry](@) associated with a [TermRef](@)
+#### Finding the [MRG entry](@) associated with a [TermRef](@) {#finding-mrg-entry}
 
 1. Get the [MRG](@) file that is expected to contain the [MRG entry](@), by resolving the [terminology identifier](@) that consists of the [named capturing groups](@) `scopetag`:`vsntag`. Note that if `scopetag` wasn't populated, the [default scope](@) is assumed, and if `vsntag` isn't populated, the default version is used.
 2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termtype` and `id`, as follows:
@@ -274,32 +274,9 @@ Perhaps the [TRRT](@) may use this tool as a means for generating the `term` fie
 
 The [converter profile](@) of the [TRRT](@) consists of a set of [moustache variables](@) that are populated from the following sources:
 
-- the [named capturing groups](@) as specified by the [interpreter profile](@) of the [TRRT](@);
-- the fields in the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to.
+- the [named capturing groups](@) as specified by the [interpreter profile](@) of the [TRRT](@). Since only the [named capturing groups](@) `showtext` and `trait` are useful for a [converter](@), they are made available as [moustache variables](@) `{{showtext}}` and `{{trait}}` respectively.
 
-<details>
-  <summary>Legend</summary>
-
-1. **`variable`** name of the [moustache variable](@) that is part of the [converter profile](@);
-2. **`source`** specifies where the contents of the variable comes from. 
-    - `NCG` means that the contents originates from a [named-capturing-group](@) that is populated by the [interpreter](@) that the [TRRT](@) has used;
-    - `ME` means that the contents originates from the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to.
-3. **`Description`** specifies how the value is derived from its source. '---' means that its contents is copied straight from the source, without modifications.
-
-</details>
-
-| Variable | Src | Description |
-| :------ | :---: | :--------- |
-| `showtext` | NCG | --- |
-| `trait`    | NCG | --- |
-| `scopetag` | ME  | --- |
-| `vsntag`   | ME  | --- |
-| `locator`  | ME  | --- |
-| `navurl`   | ME  | --- |
-| `termid`   | ME  | --- |
-| `termType` | ME  | --- |
-
-Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
+- the fields in the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to. Each of the fields in that [MRG entry](@) is available as a [moustache variable](@).Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
 
 ### TRRT Predefined Converters {#predefined-converters}
 
@@ -317,7 +294,7 @@ The following tabs specify the predefined [converters](@) for the [TRRT](@).
 
 #### The `markdown-link` Converter
 
-The `markdown-link` converter is defined by the following [handlebars expression](@):
+The `markdown-link` [converter](@) is defined by the following [handlebars expression](@):
 
 ~~~ ts
  [{{showtext}}]({{navurl}}{{#if trait}}#{{trait}}{{/if}})
@@ -329,7 +306,7 @@ The `markdown-link` converter is defined by the following [handlebars expression
 
 #### The `html-link` Converter
 
-The `html-link` converter is defined by the following [handlebars expression](@):
+The `html-link` [converter](@) is defined by the following [handlebars expression](@):
 
 ~~~ html
  <a href="{{navurl}}{{#if trait}}#{{trait}}{{/if}}">{{showtext}}</a>
@@ -341,7 +318,7 @@ The `html-link` converter is defined by the following [handlebars expression](@)
 
 #### The `html-hovertext-link` Converter
 
-The `html-hovertext-link` converter is defined by the following [handlebars expression](@):
+The `html-hovertext-link` [converter](@) is defined by the following [handlebars expression](@) (newlines and whitespaces have been added for better readability, and should be ignored):
 
 ~~~ html
  <a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
@@ -351,7 +328,7 @@ The `html-hovertext-link` converter is defined by the following [handlebars expr
   >{{showtext}}</a>
 ~~~
 
-This converter uses the following functions:
+This [converter](@) uses the following functions:
 - `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version in case the resource is located on the same site.
 - `capFirst`: capitalizes the first character of every word found in its argument.
 - `noRefs`: replaces every [term ref](@) (default syntax) that it finds in the text of its argument (i.e., in the `glossaryText`) with `{{capFirst showtext}}`.
@@ -362,7 +339,7 @@ This converter uses the following functions:
 
 #### The `html-glossarytext-link` Converter
 
-The `html-glossarytext-link` converter is defined by the following [handlebars expression](@):
+The `html-glossarytext-link` [converter](@) is defined by the following [handlebars expression](@) (newlines and whitespaces have been added for better readability, and should be ignored):
 
 ~~~ html
  '<a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"
@@ -370,7 +347,7 @@ The `html-glossarytext-link` converter is defined by the following [handlebars e
      >{{showtext}}</a>'
 ~~~
 
-This converter uses the following functions:
+This [converter](@) uses the following functions:
 - `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version in case the resource is located on the same site.
 - `capFirst`: capitalizes the first character of every word found in its argument.
 - `noRefs`: replaces every [term ref](@) (default syntax) that it finds in the text of its argument (i.e., in the `glossaryText`) with `{{capFirst showtext}}`.

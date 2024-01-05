@@ -147,12 +147,12 @@ Parameters that are specific to the [hrgt](/docs/spec-tools/hrgt) can be put in 
 | `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`). See [HRGT interpreters](/docs/`spec-`tools/hrgt#interpreters) for details. |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](/docs/`spec-`tools/hrgt#converters) for details.|
-| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorting](/docs/`spec-`tools/hrgt#sorter) for details.|
+| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](/docs/`spec-`tools/hrgt#predefined-sorters) for details.|
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 ## Predefined HRGT interpreters
 
-There is only one predefined HRGT interpreter (called `default`). It need not be specified (as it is default). 
+There is only one predefined HRGT [interpreter](@) (called `default`). It need not be specified (as it is default). 
 
 It is described in section [MRG References syntax](/docs/spec-syntax/mrg-ref-syntax)
 
@@ -172,7 +172,7 @@ The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replac
 
 There is only one predefined HRGT sorting value (called `default`). It need not be specified (as it is default). 
 
-It is described in section [HRG Sorting](/docs/spec-tools/hrgt#sorter).
+It is described in section [HRGT sorters](/docs/spec-tools/hrgt#predefined-sorters).
 
 </TabItem>
 
@@ -189,7 +189,7 @@ Parameters that are specific to the [TRRT](/docs/spec-tools/trrt) can be put in 
 
 ## Predefined TRRT interpreters
 
-The predefined TRRT interpreter types are described elsewhere in the documentation, as follows:
+The predefined TRRT [interpreter](@) types are described elsewhere in the documentation, as follows:
 - `default`: section on [Default syntax](/docs/spec-syntax/term-ref-default-syntax)
 - `alt`: section on [Alternative syntax](/docs/spec-syntax/term-ref-alt-syntax)
 

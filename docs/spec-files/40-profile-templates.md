@@ -49,7 +49,7 @@ This template allows [interpreters](@) for ingestible content to be created, e.g
 1. **`Name`** contains the field name;
 2. **`Moustache`** specifies the name of the variable, in so-called [moustache](https://mustache.github.io/mustache.5.html) format
 3. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the field is required to be present as a header field. The `F` means that we reserve this field for Future Use.
-4/ **`Default`** specifies the value that the interpreter must use as a default value for the variable in case the interpreted text does not specify a value. If no default is specified, the default value is "empty" or "void".
+4/ **`Default`** specifies the value that the [interpreter](@) must use as a default value for the variable in case the interpreted text does not specify a value. If no default is specified, the default value is "empty" or "void".
 3. **`Description`** specifies the meaning of the field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
 </details>

@@ -9,14 +9,14 @@ Within the [TNO Terminology Design](@) effort, the [TRRT](@) is able to interpre
 2. [Conversion](#converter) works by using Mustache templates. Any values from the standard [interpreters](#interpreter), and all properties supplied in the matching [MRG Entry](@), can be used as [Mustache expressions](https://handlebarsjs.com/guide/expressions).
 
 ## Interpreter
-Different types of interpreters are present, allowing for the switching between the [default syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom interpreter may also be set. All interpreters consist of a [regular expression](@) with [named capturing groups](@) that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
+Different types of interpreters are present, allowing for the switching between the [default syntax](specifications#interpretation-of-the-term-ref) and [alternative syntax](specifications#interpretation-of-the-term-ref). To increase the flexibility of the [TRRT](@), a custom [interpreter](@) may also be set. All interpreters consist of a [regular expression](@) with [named capturing groups](@) that can store variables related to the [term ref](@) that are used to match an [MRG entry](@).
 
-The [TRRT](@) interpreter attempts to obtain the [term ref](@) properties: `showtext`, `id`, `trait`, `scopetag`, and `vsntag`. If `id` is not set, `showtext` is converted to lowercase, `'()` characters are removed, and any non-alphabetic, non-numeric characters are replaced by a `-`, leaving only alphabetic, numeric, underscore or dash characters as part of `id`.
+The [TRRT](@) [interpreter](@) attempts to obtain the [term ref](@) properties: `showtext`, `id`, `trait`, `scopetag`, and `vsntag`. If `id` is not set, `showtext` is converted to lowercase, `'()` characters are removed, and any non-alphabetic, non-numeric characters are replaced by a `-`, leaving only alphabetic, numeric, underscore or dash characters as part of `id`.
 
 <details>
   <summary>Examples</summary>
 
-Setting interpreters mainly allows for the use of different [term ref](@) syntaxes. As long as the basic properties listed above can be obtained from the [term ref](@), any custom interpreter may be set. When a value of a [named capturing group](@) is empty, it is filled by the [TRRT](@) with (default) values according to the [specifications](specifications#interpretation-of-the-term-ref). The following examples attempt to illustrate the differences between the default, alternative and custom interpreters. 
+Setting interpreters mainly allows for the use of different [term ref](@) syntaxes. As long as the basic properties listed above can be obtained from the [term ref](@), any custom [interpreter](@) may be set. When a value of a [named capturing group](@) is empty, it is filled by the [TRRT](@) with (default) values according to the [specifications](specifications#interpretation-of-the-term-ref). The following examples attempt to illustrate the differences between the default, alternative and custom interpreters. 
 
 <Tabs
   defaultValue="basic"
@@ -34,7 +34,7 @@ Setting interpreters mainly allows for the use of different [term ref](@) syntax
 \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`)<br/>
 
 **Information**<br/>
-The default/basic interpreter uses a [regex](@) that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
+The default/basic [interpreter](@) uses a [regex](@) that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
 
 ~~~regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))
@@ -52,7 +52,7 @@ The first part of the [regex](@) pattern (displayed on the first line) is respon
 \[`show text`@`scopetag`:`vsntag`\](`term`#`trait`)
 
 **Information**<br/>
-The alternative interpreter uses a [regex](@) that can find [term refs](@) using the [alternative syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Using '`alternative`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
+The alternative [interpreter](@) uses a [regex](@) that can find [term refs](@) using the [alternative syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Using '`alternative`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
 
 The alternative syntax moves the `@`-character from the default syntax within the square brackets. This is particularly useful in the vast majority of cases, where the default processing of `showtext` results in `term`, and `trait` is absent.
 
@@ -99,7 +99,7 @@ The properties of the MRG entry that the [Mustache expressions](https://handleba
 
 :::info
 
-The converter used inside the TNO Terminology Design repositories is more elaborate than the examples outlined below. The converter used can be found in the tev2-specifications repository inside its toolbox configuration file found [here](https://github.com/tno-terminology-design/tev2-specifications/blob/main/docs/config.yaml).
+The [converter](@) used inside the TNO Terminology Design repositories is more elaborate than the examples outlined below. The [converter](@) used can be found in the tev2-specifications repository inside its toolbox configuration file found [here](https://github.com/tno-terminology-design/tev2-specifications/blob/main/docs/config.yaml).
 
 :::
 
@@ -107,7 +107,7 @@ The converter used inside the TNO Terminology Design repositories is more elabor
 <details>
   <summary>Examples</summary>
 
-Every explored example uses the following (simplified) [MRG entry](@) properties. The converter also has access to the properties of the [term ref](@), which in this case is the term [Curator](@).<br/>
+Every explored example uses the following (simplified) [MRG entry](@) properties. The [converter](@) also has access to the properties of the [term ref](@), which in this case is the term [Curator](@).<br/>
 For the examples, we imagine that the following [term ref](@), using the [default syntax](specifications#interpretation-of-the-term-ref), was found by the interpreter: \[`Curators`\](#`examples`@`termdsn`:`main`).
 
 <details>
@@ -145,7 +145,7 @@ For the examples, we imagine that the following [term ref](@), using the [defaul
 
 <TabItem value="markdown">
 
-The most basic converter can be used by not specifiying a converter, or by setting '`markdown`', or the template string below, as the value of `converter`. In this case, the original `showtext` of the [term ref](@) properties is used in addition to the `navurl` property of the [MRG entry](@), with the `trait` property of the [term ref](@) (leading with a `#`-character) being added if it is available.
+The most basic [converter](@) can be used by not specifiying a converter, or by setting '`markdown`', or the template string below, as the value of `converter`. In this case, the original `showtext` of the [term ref](@) properties is used in addition to the `navurl` property of the [MRG entry](@), with the `trait` property of the [term ref](@) (leading with a `#`-character) being added if it is available.
 
 ```hbs title="Markdown Mustache template"
  [{{showtext}}]({{navurl}}{{#trait}}#{{/trait}}{{trait}})
@@ -159,7 +159,7 @@ Resulting in the following [renderable ref](@) Markdown that, when rendered, res
 </TabItem>
 <TabItem value="html">
 
-The HTML converter can be used by setting '`html`', or the template string below, as the value of `converter`. Similar to the Markdown converter, the original `showtext` of the [term ref](@) properties is used in addition to the `navurl` [MRG entry](@) property with the `trait` [term ref](@) property, leading with a `#`-character, being added if it is available.
+The HTML [converter](@) can be used by setting '`html`', or the template string below, as the value of `converter`. Similar to the Markdown converter, the original `showtext` of the [term ref](@) properties is used in addition to the `navurl` [MRG entry](@) property with the `trait` [term ref](@) property, leading with a `#`-character, being added if it is available.
 
 ```hbs title="HTML Mustache template"
  <a
@@ -176,7 +176,7 @@ Resulting in the following [renderable ref](@) HTML `<a>` tag that defines a hyp
 </TabItem>
 <TabItem value="essif">
 
-This example converter can be used by setting '`essif`', or the template string below, as the value of `converter`. In this case we would like our external rendering tool to display text when a [renderable ref](@) is being hovered over in a HTML context.
+This example [converter](@) can be used by setting '`essif`', or the template string below, as the value of `converter`. In this case we would like our external rendering tool to display text when a [renderable ref](@) is being hovered over in a HTML context.
 
 The `glossaryText` property in the [MRG entry](@) is unformatted currently; using it as the 'hover text' will make it start without any capitalization (`term` property is lowercase), and will use the unresolved [term ref](@) syntaxes (i.e., \[curating\](@)) as included in the `glossaryText`. To tidy up the values we use the [helper functions](#helper-functions), and skip the use of the `hoverText` property all together by being smart with our custom converter.
 
@@ -186,7 +186,7 @@ The `glossaryText` property in the [MRG entry](@) is unformatted currently; usin
  title="{{capFirst term}}: {{noRefs glossaryText}}">{{showtext}}</a>
 ```
 
-The above converter will result in the `title` html element being filled with the following renderable string.
+The above [converter](@) will result in the `title` html element being filled with the following renderable string.
 
 ```
  "Curator: a person responsible for Curating the Terminologies within a Scope, to ensure shared understanding among a Community working together on a particular set of objectives."
@@ -204,7 +204,7 @@ title="Curator: a person responsible for Curating the Terminologies within a Sco
 </TabItem>
 <TabItem value="custom">
 
-This example uses the [`ifValue`](#ifvalue) helper to conditionally render a block based on the `termType` [MRG entry](@) property value. When the type is of value `concept`, a converter similar to the HTML example is displayed. When the type is of value `image`, an image is displayed using the value of `locator`. The converter below attempts to show the creative possibilities of using the converters, expressions and helper functions.
+This example uses the [`ifValue`](#ifvalue) helper to conditionally render a block based on the `termType` [MRG entry](@) property value. When the type is of value `concept`, a [converter](@) similar to the HTML example is displayed. When the type is of value `image`, an image is displayed using the value of `locator`. The [converter](@) below attempts to show the creative possibilities of using the converters, expressions and helper functions.
 
 ```hbs title="Custom Mustache template"
  {{#ifValue termType equals="concept"}}<a href="{{navurl}}{{#trait}}#{{/trait}}{{trait}}">{{showtext}}</a>{{/ifValue}}
@@ -228,7 +228,7 @@ By changing the value of property `termType` in the `input` of the abovementione
 </details>
 
 ### Helper functions
-Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.html#helpers) have been specified in addition to the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html), which can be used within [Mustache expressions](https://handlebarsjs.com/guide/expressions) to modify the converter output. The `capFirst` and `noRefs` helpers are used inside the eSSIF-Lab converter template mentioned in the [example](#converter) section above. The `ifValue` helper is used inside the Custom converter template [example](#converter). The input to a helper function is always the evaluated value of the expression that follows the call, possibly with extra options.
+Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.html#helpers) have been specified in addition to the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html), which can be used within [Mustache expressions](https://handlebarsjs.com/guide/expressions) to modify the [converter](@) output. The `capFirst` and `noRefs` helpers are used inside the eSSIF-Lab [converter](@) template mentioned in the [example](#converter) section above. The `ifValue` helper is used inside the Custom [converter](@) template [example](#converter). The input to a helper function is always the evaluated value of the expression that follows the call, possibly with extra options.
 
 ```hbs title="Mustache expression format"
 // highlight-next-line

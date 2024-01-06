@@ -8,7 +8,7 @@ glossaryTerm: TermRef Rendering Tool
 glossaryAlias: TRRT
 glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
 synonymOf:
-grouptags: [ "tev"2-tool, tev2-toolbox ]
+grouptags: [ "tev2-tool", "tev2-toolbox" ]
 formPhrases: [ "trrt{ss}", "termref-rendering-tool{ss}", "term-ref-rendering-tool{ss}" ]
 status: proposed
 created: 20230731

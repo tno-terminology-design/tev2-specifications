@@ -23,7 +23,7 @@ The actual creation of a [terminology](@), and the subsequent generation of the 
 A [curator](@) specifies a [terminology](@) by creating a new entry in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@) of the [scope](@) in which the [terminology](@) is [curated](@). This entry will contain 
 
 - one or more [versiontags](@) that allow the [terminology](@) to be [identified](@) (within its [scope](@)), 
-- the [term selection instructions](@) that specify the [terms](@) that are to be included (or removed) from the [terminology as it is being constructed](terminology-under-construction@), and
+- the [term selection instructions](@) that specify the [terms](@) that are to be included (or removed) from the [terminology](@) as it is being constructed], and
 - some meta-data (see the [documentation](/docs/spec-files/saf#versions).
 
 ## Process for creating a terminology

@@ -11,7 +11,7 @@ glossaryAlias: MRGT
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/spec-tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
 hoverText: "MRGT: {{noRefs glossaryText}}"
 synonymOf:
-grouptags: [ tools, glossary-tools ]
+grouptags: [ "tools", "glossary-tools" ]
 formPhrases: [ "mrgt{ss}", "machine-readable-glossary-tool{ss}", "machine-readable-glossary-tool{ss}-mrgt{ss}", "mrgt{ss}-machine-readable-glossary-tool{ss}" ]
 # Curation status
 status: proposed

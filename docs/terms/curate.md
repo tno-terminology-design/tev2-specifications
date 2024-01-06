@@ -8,8 +8,8 @@ isa:
 glossaryTerm: Curate
 glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@)."
 synonymOf:
-grouptags: terminology, cm-party-actor-action
-formPhrases: [ curates, curated, curating, curation ]
+grouptags: [ "terminology", "cm-party-actor-action" ]
+formPhrases: [ "curates", "curated", "curating", "curation" ]
 # Curation status
 status: proposed
 created: 20230723

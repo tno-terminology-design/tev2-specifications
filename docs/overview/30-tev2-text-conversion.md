@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 # Text Conversions
 
-All [[text conversion tools](@)](@) in the [TEv2 toolbox](@) convert particular tools consists of the various ways in which texts can be converted. 
+All [text conversion tools](@) in the [TEv2 toolbox](@) convert particular tools consists of the various ways in which texts can be converted. 
 
 <details>
   <summary>Examples of text conversions</summary>

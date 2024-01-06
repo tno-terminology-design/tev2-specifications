@@ -39,7 +39,7 @@ where:
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
 - `termType` (optional) is a [term type](@). When not specified, it is given the default type for [semantic units](@) in the [current scope](@), which usually would be `concept`.
 - `term` (optional) is a [term](@). If not specified, its value is constructed based on the value of `showtext`, as specified in the [TRRT](/docs/spec-tools/trrt#id).
-- `trait` (optional) refers to a particular characteristic of the [semantic unit](@). If specified, it must be the [header-id](@) of the section in the [body](@) of a [curated text](@) that describes the characteristic. If not specified it refers to the whole of (the documentation of) the [semantic unit](@).
+- `trait` (optional) refers to a particular characteristic of the [semantic unit](@). If specified, it must be the [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic. If not specified it refers to the whole of (the documentation of) the [semantic unit](@).
 - `terminology-identifier` is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
 ## Examples

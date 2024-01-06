@@ -8,7 +8,7 @@ isa:
 glossaryTerm: Relation (between Concepts)
 glossaryText: "a (significant) connection or association between two or more [concepts](@). These connections define the way these [concepts](@) are interrelated, providing insights into how they interact and influence each other."
 synonymOf:
-grouptags: [ conceptual-modeling ]
+grouptags: [ "conceptual-modeling"  ]
 formPhrases: [ "relation{ss}" ]
 # Curation status
 status: proposed

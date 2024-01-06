@@ -73,7 +73,7 @@ A [terms-community](@) is a [community](@) (whose members are called [curators](
 We refer the reader to
 
 - the [Curators Manual](/docs/manuals/overview-curator), for further details about [curation](@).
-- the [governance and management pattern](pattern-governance-and-management@) to learn more about ways in which different [communities](@) can seek to serve each other.
+- the [governance and management pattern](pattern:governance-and-management@essif-lab) to learn more about ways in which different [communities](@) can seek to serve each other.
 
 Note that for a [terms-community](@) to serve itself, it may want to commit to a [terminology](@) such as the one we are developing here.
 

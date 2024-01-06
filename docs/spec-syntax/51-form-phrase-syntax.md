@@ -57,7 +57,7 @@ which would require the [trrt](@) to automatically convert such plurals or conju
 This can be done by specifying such plurals, conjugate forms, or any other texts as a [form phrase](@) and adding it to the `formPhrases` field (in the [header](@)) of the [curated text](@) that documents the base term (`actor` in our example), as follows:
 
 ~~~ yaml
-formPhrases: [ actor, actors, actor's, actor(s) ]
+formPhrases: [ "actor", "actors", "actor's", "actor(s)" ]
 ~~~
 </details>
 

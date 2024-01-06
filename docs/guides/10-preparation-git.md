@@ -149,7 +149,7 @@ versions:
 Notes:
 
 - The `altvsntag` field expects you to specify a list of alternative [versiontags](@); not just one.
-- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](mrg#file-naming-conventions@).
+- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](/docs/spec-files/mrg#file-naming-conventions@).
 - If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/spec-syntax/mrg-term-selection-syntax) to the `termselection` field.
 
 </TabItem>

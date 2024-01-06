@@ -208,7 +208,7 @@ where:
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
 - `termType` (optional) is a [term type](@). It need not be specified if the `id` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
 - `id` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii.c).
-- `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [header-id](@) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
+- `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
 For completeness, here is the [regex] that defines the `basic` or `default` [interpreter](@) for the [TRRT](@):

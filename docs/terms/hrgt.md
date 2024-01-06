@@ -10,7 +10,7 @@ glossaryTerm: Human Readable Glossary Tool
 glossaryAlias: HRGT
 glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/spec-tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
 synonymOf:
-grouptags: [ tools, glossary-tools ]
+grouptags: [ "tools", "glossary-tools" ]
 formPhrases: [ "hrgt{ss}", "human-readable-glossary-tool{ss}", "human-readable-glossary-tool{ss}-hrgt{ss}", "hrgt{ss}-human-readable-glossary-tool{ss}" ]
 # Curation status
 status: proposed

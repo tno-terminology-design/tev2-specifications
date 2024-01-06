@@ -10,7 +10,7 @@ glossaryText: "the process that is run by a [terms-community](@), in which their
 hoverText: "Ingestion Process: {{noRefs glossaryText}}"
 synonymOf: 
 grouptags: 
-formPhrases: [ ingestion-process, ingestion-processes, ingest, ingests, ingested, ingestion ]
+formPhrases: [ "ingestion-process", "ingestion-processes", ingest, ingests, ingested, ingestion ]
 # Curation status
 status: proposed
 created: 20230731

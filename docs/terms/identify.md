@@ -4,10 +4,10 @@ term: identify
 termType: concept
 isa:
 glossaryTerm:
-glossaryText: "an [act](@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
+glossaryText: "an [act](action@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
 synonymOf:
 grouptags:
-formPhrases: [ "identif{yies}", "identif{ying}", "identifiable", "identification" ]
+formPhrases: [ "identify", "identifying", "identifies", "identified", "identifiable", "identification" ]
 # Curation status
 status: proposed
 created: 20210601
@@ -21,7 +21,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Identify
 
 ### Short Description
-**Identification** is an [act](@), by or on behalf of a [party](@), that results in either the selection of
+**Identification** is an [act](action@), by or on behalf of a [party](@), that results in either the selection of
 1. a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or
 2. a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@).
 
@@ -33,4 +33,4 @@ Issues/misunderstandings related to identification can easily arise, because if 
 
 One of various well-known problems related to identification is the transfer of files/dossiers, e.g. in the health and education domains. Since (the contents of) such files represent knowledge about their [subject](@), and the [partial identity](@) of that [subject](@) that is [owned](@) by the [owner](@) of such files includes all [knowledge](@) about that [subject](@), the knowledge represented in the file are a part of this [partial identity](@). Now when such files are transferred to another party, the receiving party has to make sure that these files are associated with that party's [partial identity](@) of that same [subject](@).
 
-Non-human [actors](@) can also perform identification. However, since they cannot access the [partial identities](@) of the [party](@) on whose behalf they work (because these reside in the information domain - see the [identity pattern](@)), they have to do with may be referred to as a user/account registration. Such registrations contain 'user records' or 'accounts', each of which represents an excerpt of a specific [partial identity](@), that contains all necessary data for the non-human [actor](@) to execute the [actions](@) that it is tasked with. Typically, a user record would contain a username, i.e. an [identifier](@) that the [actor](@) can use to identify the user record. Also, it typically contains authentication data, e.g. a password, that the [actor](@) can use to ensure that the user is the actual [subject](@) of the user record (account) that it has selected. However, it would also contain additional data to facilitate further interactions between this [actor](@) and the user, e.g. role assignments or other attributes.
+Non-human [actors](@) can also perform identification. However, since they cannot access the [partial identities](@) of the [party](@) on whose behalf they work (because these reside in the information domain - see the [identity pattern](pattern:identity@essif-lab)), they have to do with may be referred to as a user/account registration. Such registrations contain 'user records' or 'accounts', each of which represents an excerpt of a specific [partial identity](@), that contains all necessary data for the non-human [actor](@) to execute the [actions](@) that it is tasked with. Typically, a user record would contain a username, i.e. an [identifier](@) that the [actor](@) can use to identify the user record. Also, it typically contains authentication data, e.g. a password, that the [actor](@) can use to ensure that the user is the actual [subject](@) of the user record (account) that it has selected. However, it would also contain additional data to facilitate further interactions between this [actor](@) and the user, e.g. role assignments or other attributes.

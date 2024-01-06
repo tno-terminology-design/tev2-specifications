@@ -57,5 +57,6 @@ versions:
   - "term[jurisdiction,objective,control,expectation,obligation]@essif-lab"
   - "term[control-objective,risk-objective,compliance-objective]@essif-lab" 
   - "term[identity,partial-identity,identifier,identify,identification]@essif-lab"
-  - "term[concept,relation,property,pattern,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
-  - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)
+  - "term[concept,relation,property,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
+  - "*" # import all tev2 terms.
+# - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)

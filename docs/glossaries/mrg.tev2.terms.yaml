@@ -253,7 +253,9 @@ entries:
     glossaryTerm: "Curate"
     glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@)."
     synonymOf: null
-    grouptags: "terminology, cm-party-actor-action"
+    grouptags:
+      - "terminology"
+      - "cm-party-actor-action"
     formPhrases:
       - "curates"
       - "curated"
@@ -1147,16 +1149,13 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "an [act](@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
+    glossaryText: "an [act](action@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
       - "identify"
-      - "identifys"
-      - "identify's"
-      - "identifies"
-      - "identifier"
       - "identifying"
+      - "identifies"
       - "identified"
       - "identifiable"
       - "identification"
@@ -2734,61 +2733,6 @@ entries:
       - "examples"
       - "notes"
     termid: "concept:tev2-toolbox"
-    vsntag: "terms"
-  - id: "trrt"
-    term: "trrt"
-    termType: "concept"
-    isa: null
-    bodyFile: "/spec-tools/12-trrt.md"
-    glossaryTerm: "TermRef Rendering Tool"
-    glossaryAlias: "TRRT"
-    glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
-    synonymOf: null
-    grouptags:
-      - "tev2-tool"
-      - "tev2-toolbox"
-    formPhrases:
-      - "trrt"
-      - "trrts"
-      - "trrt's"
-      - "trrt(s)"
-      - "termref-rendering-tool"
-      - "termref-rendering-tools"
-      - "termref-rendering-tool's"
-      - "termref-rendering-tool(s)"
-      - "term-ref-rendering-tool"
-      - "term-ref-rendering-tools"
-      - "term-ref-rendering-tool's"
-      - "term-ref-rendering-tool(s)"
-    status: "proposed"
-    created: 20230731
-    updated: 20230731
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "trrt.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/spec-tools/trrt"
-    headingids:
-      - "term-reference-resolution-tool-(trrt)"
-      - "installing-the-tool-{#install}"
-      - "calling-the-tool-{#call}"
-      - "term-ref-resolution-{#what-it-does}"
-      - "trrt-interpreter-profile-{#interpreter-profile}"
-      - "trrt-predefined-interpreters-{#predefined-interpreters}"
-      - "the-`basic`-(also:-`default`)-interpreter"
-      - "the-`alt`-(alternative)-interpreter"
-      - "processing-{#processing}"
-      - "finding-the-[mrg-entry](@)-associated-with-a-[termref](@)-{#finding-mrg-entry}"
-      - "trrt-converter-profile-{#converter-profile}"
-      - "trrt-predefined-converters-{#predefined-converters}"
-      - "the-`markdown-link`-converter"
-      - "the-`html-link`-converter"
-      - "the-`html-hovertext-link`-converter"
-      - "the-`html-glossarytext-link`-converter"
-      - "processing,-errors-and-warnings"
-      - "deploying-the-tool"
-    termid: "concept:trrt"
     vsntag: "terms"
   - term: "versiontag"
     termType: "concept"

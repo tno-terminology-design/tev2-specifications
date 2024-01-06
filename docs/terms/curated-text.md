@@ -39,21 +39,21 @@ etc.
 
 The (technical) structure and syntax for files that contain [curated texts](@) is specified [here](/docs/spec-files/curated-text-file).
 
-The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manuals/[author](@)) and [curators](/docs/manuals/curator) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
+The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manuals/[author](@)) and [curators](/docs/manuals/overview-curator) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
 
 :::info Editor's Note
 Text needs to be revised from here onward. Here are some ideas to mention:
 
 - contributors can suggest contents as per the curators instructions;
 - [authors](@) can write the [body](@) of [curated texts](@);
-- curators update the header of [curated texts](@) (conforming to the [ctext specifications](/docs/spec-files/ctext-file);
+- curators update the header of [curated texts](@) (conforming to the [ctext specifications](/docs/spec-files/curated-text-file);
 - curators specify the process by which [curated texts](@) progress/mature, and get statuses assigned;
 - curators generate artifacts from 'decided on' [curated texts](@), so that
   - rendering tools or generation tools used in other scopes can generate artifacts and
   - people can subsequently access nicely rendered, human readable versions
 :::
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
+The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
 ## Purpose
 

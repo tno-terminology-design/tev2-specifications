@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 ### Summary
 A **glossary** is an alphabetically sorted list of [terms](@) with explanations, usually aimed to help people understand texts around a certain (set of) topic(s) in (at least) one context. A glossary may also be created for the purpose of being included in other glossaries (as a construction aid to such glossaries), or for still other purposes.
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
+The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
 ### Purpose
 A glossary may serve various purposes, the most important one of which would be to help people understand texts around a certain (set of) topic(s) in some context(s).

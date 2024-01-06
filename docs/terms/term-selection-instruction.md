@@ -36,8 +36,8 @@ Term selection instructions serve as guidelines for curators and stakeholders to
 
 ## Examples
 
-1. There are [examples for adding terms ](/docs/spec-tools/mrg-terminology-construction#syntax-add) to a [terminology under construction](@).
-2. There are also [examples for removing terms](/docs/spec-tools/mrg-terminology-construction#syntax-remove) from a [terminology under construction](@). 
+1. There are [examples for adding terms ](/docs/spec-syntax/terminology-construction#syntax-add) to a [terminology under construction](@).
+2. There are also [examples for removing terms](/docs/spec-syntax/terminology-construction#syntax-remove) from a [terminology under construction](@). 
 
 ## Notes
 

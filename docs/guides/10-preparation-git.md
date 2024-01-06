@@ -29,7 +29,7 @@ Here is what John does to create the initial [SAF](@) so that he can use [TEv2](
 2. He creates a directory `docs` as the [scopedir](@) (so, the URL for the [scopedir](@) becomes: `https://github.com/johndoe/example/tree/main/docs`). If the directory already exists, he can simply use it.
 3. Within the `docs` directory, he creates two new directories:
     - `terms` that will contain all files that contain the [curated texts](@) he will be [developing](curate@).
-    - `glossaries`, that will contain all [glossary files](mrg@) that will he will be importing from other scopes, or generate himself.
+    - `glossaries`, that will contain all [machine readable glossaries](@) that will he will be importing from other scopes, or generate himself.
 
 <details>
     <summary>Within the `docs` directory, he creates a new file called `saf.yaml`.</summary>
@@ -89,7 +89,7 @@ scopes:
 
 ### Adding Configurations for [Terminologies](@)
 
-Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](mrg#file-naming-conventions@).
+Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](/docs/spec-files/mrg#file-naming-conventions@).
 
 The [versiontags](@) and the contents of a [terminology](@) are specified as an entry in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@). This section must contain at least:
 

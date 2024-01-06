@@ -72,7 +72,7 @@ A [terms-community](@) is a [community](@) (whose members are called [curators](
 
 We refer the reader to
 
-- the [Curators Manual](/docs/manuals/curator), for further details about [curation](@).
+- the [Curators Manual](/docs/manuals/overview-curator), for further details about [curation](@).
 - the [governance and management pattern](pattern-governance-and-management@) to learn more about ways in which different [communities](@) can seek to serve each other.
 
 Note that for a [terms-community](@) to serve itself, it may want to commit to a [terminology](@) such as the one we are developing here.
@@ -81,7 +81,7 @@ Note that for a [terms-community](@) to serve itself, it may want to commit to a
 
 Every [terminology](@) is scoped, i.e. part of a [scope](@). This [scope](@) consists of various other things, including [definitions](@), ([typed](term-type@)) [scoped terms](@), [curated texts](@), [MRG entries](@), various kinds of [tags](@), and more (see the figure above). These components of the [scope](@) exist for as long as the [scope](@) exists.
 
-The central [concept](@) in this part is the [curated text](@), as it [documents](/docs/spec-files/ctext-file) a specific [semantic unit](@), provides its [definition](@) (when appropriate), and specifies the [scoped term](@) that represents such [semantic unit](@) as well as its [synonyms](@). It also contains various other data, e.g. the [term type](@) (which is also the type of the [semantic unit](@)),  the list of [grouptags](@) that identify the groups of [semantic units](@) to which (the [semantic unit](@) that) it (documents,) belongs, etc. Basically, *any* changes to documentation or attributes related to a particular [semantic unit](@) are done in its [curated text](@).
+The central [concept](@) in this part is the [curated text](@), as it [documents](/docs/spec-files/curated-text-file) a specific [semantic unit](@), provides its [definition](@) (when appropriate), and specifies the [scoped term](@) that represents such [semantic unit](@) as well as its [synonyms](@). It also contains various other data, e.g. the [term type](@) (which is also the type of the [semantic unit](@)),  the list of [grouptags](@) that identify the groups of [semantic units](@) to which (the [semantic unit](@) that) it (documents,) belongs, etc. Basically, *any* changes to documentation or attributes related to a particular [semantic unit](@) are done in its [curated text](@).
 
 Another important [concept](@) is the [MRG entry](@), i.e. a [(machine readable) representation](http://localhost:3000/docs/spec-files/mrg#entries) of the meta data of a [semantic unit](@) that it refers to. Note that this [semantic unit](@) need not reside in the [knowledge](@) of the [community](@) that owns the [scope](@) (in which case it would mainly consists of the header data of the [curated text](@) that documents the [semantic unit](@)), but can also reside in another [knowledge](@) (in which case it would be a copy of an [MRG entry](@) in an [MRG](@) of a [scope](@) that documents that [semantic unit](@)).
 

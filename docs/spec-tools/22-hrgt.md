@@ -1,6 +1,6 @@
 ---
 id: hrgt
-sidebar_label: HRG Generation (HRGT)
+sidebar_label: HRGT - HRG Generation
 date: 20220421
 ---
 

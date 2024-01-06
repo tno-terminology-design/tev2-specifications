@@ -26,9 +26,9 @@ A [terminology](@) can be seen as the collection of [MRG entries](@) that hold a
 
 The contents of an [MRG entry](@) may vary, depending on the type of [semantic unit](@) that it documents. The kinds of data that are common for all [semantic units](@) are documented [here](http://localhost:3000/docs/spec-files/mrg#entries).
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
+The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
-The [terminology construction section](/docs/spec-tools/mrg-terminology-construction) describes how [MRG entries](@) are selected (and manipulated) for the construction of a particular [terminology](@).
+The [terminology construction section](/docs/spec-syntax/terminology-construction) describes how [MRG entries](@) are selected (and manipulated) for the construction of a particular [terminology](@).
 
 ### Purpose
 

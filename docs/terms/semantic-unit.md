@@ -34,7 +34,7 @@ In the context of cognitive science, a semantic unit represents a distinct and w
 
 Within [TEv2](@), [semantic units](@) can be [defined](@) in, and described by [curated texts](@) that belong to a particular [scope](@). They can be clustered to form [terminologies](@), for which [glossaries](@) (both [machine readable](mrg@) and [human readable](hrg@)) can be generated
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts.
+The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
 ## Purpose
 [Semantic units](@) exist because they are somehow relevant for realizing [objectives](@) of the [party](@) that has this [knowledge](@). Since [parties](@) rarely realize their [objectives](@) all by themselves, they will need to find ways to communicate them (their meanings) to other [parties](@) and/or [actors](@) that work for/with them, such that the lot of them have something we might call a 'common understanding'. To realize this 'common understanding', the [owner](@) of (the [knowledge](@) that contains) the [semantic units](@) must actively (consciously) understand and distinguish between each of them, specify names ([terms](@)) that represent them, and create and maintain [curated texts](@), [definitions](@) and perhaps other stuff.

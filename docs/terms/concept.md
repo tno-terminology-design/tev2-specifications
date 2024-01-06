@@ -27,7 +27,7 @@ A **Concept** is a [semantic unit](@) that tries to capture the idea behind a cl
 
 [^2]: For the difference between 'Concept' and 'Term', see https://simple.wikipedia.org/wiki/Concept.
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this concept fits in with related concepts (as a specialization of a [semantic unit](@)).
+The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts (as a specialization of a [semantic unit](@)).
 
 ### Purpose
 Working together is easier when you and your peers share the same ideas. We need a way to test and ensure, that you and your peers _actually_ have the same understanding, for the purpose of making cooperation easier. Doing so is expected to not only reduce the number of terminological discussions, but also improve the efficiency and effectiveness of the remaining discussions.

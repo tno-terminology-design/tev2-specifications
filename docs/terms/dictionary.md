@@ -24,7 +24,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A Dictionary is an alphabetically sorted list of [terms](@) with explanations. Each term may have multiple such explanations, which come from different [scopes/contexts](scope@).
 
-The [terminology pattern](pattern-terminology@) provides an overview of how this [concept](@) fits in with related [concepts](@).
+The [terminology pattern](pattern:terminology@) provides an overview of how this [concept](@) fits in with related [concepts](@).
 
 ### Purpose
 

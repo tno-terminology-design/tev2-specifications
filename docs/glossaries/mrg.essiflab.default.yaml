@@ -1498,7 +1498,7 @@ entries:
       - "guardianship"
     status: "stable"
     grouptags: null
-    glossaryTerm: "Guardianship Pattetrn"
+    glossaryTerm: "Guardianship Pattern"
     glossaryText: "a set of [concepts](@) and other [semantic units](@) that can be used to explain what a generic [guardianship](@) consists of, and how it relates to [guardians](@), [dependents](@), [jurisdictions](@), etc."
     hoverText: "The Guardianships pattern captures the Concepts and relations that explain what a generic Guardianship consists of, and how it relates to Guardians, Dependents, Jurisdictions, etc."
     date: 20210601
@@ -1507,7 +1507,6 @@ entries:
     navurl: "https://essif-lab.github.io/framework/docs/terms/pattern-guardianship"
     headingids:
       - "guardianship"
-      - "purpose"
       - "introduction"
       - "formalized-model"
       - "guardianship-governance"
@@ -2784,8 +2783,8 @@ entries:
       - "property's"
       - "properties"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -2839,8 +2838,8 @@ entries:
       - "relation's"
       - "relation(s)"
     status: "proposed"
-    created: 2023-07-31T00:00:00.000Z
-    updated: 2023-07-31T00:00:00.000Z
+    created: 20230731
+    updated: 20230731
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -3236,10 +3235,10 @@ entries:
       - "semantic-unit's"
       - "semantic-unit(s)"
     status: "proposed"
-    created: 2022-07-27T00:00:00.000Z
-    updated: 2022-07-27T00:00:00.000Z
+    created: 20220727
+    updated: 20220727
     contributors: "RieksJ"
-    attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "essiflab"
     locator: "semantic-unit.md"

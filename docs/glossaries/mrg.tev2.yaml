@@ -3638,7 +3638,7 @@ entries:
       - "term-ref-resolution-{#what-it-does}"
       - "trrt-interpreter-profile-{#interpreter-profile}"
       - "trrt-predefined-interpreters-{#predefined-interpreters}"
-      - "the-`basic`-(also:-`default`)-interpreter"
+      - "the-`default`-interpreter"
       - "the-`alt`-(alternative)-interpreter"
       - "processing-{#processing}"
       - "finding-the-[mrg-entry](@)-associated-with-a-[termref](@)-{#finding-mrg-entry}"

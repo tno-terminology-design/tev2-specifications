@@ -258,8 +258,10 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
     1. Initialize this step by selecting all [MRG entries](@) from the [MRG](@) (the idea is to limit the number of selected entries step by step, until there is no more than one).
     2. Process the [named capturing groups](@), as follows:
         1. If `termtype` is specified, then remove all [entries](mrg-entry@) except those whose `termtype` field equals the specified value of `termtype`;
-        2. If `term` is specified, then remove all [entries](mrg-entry@) except those whose `term` field equals the specified value of `term`;
-        4. If `term` is NOT specified, then remove all [entries](mrg-entry@) except those that have a `formPhrases` field (which is an array of [form phrases](@)) that contains an element that is equal to `showtext`.
+        2. Remove all [entries](mrg-entry@) except those that match according to the following process:
+            1. set `input` = the [named capturing group](@) `term` as input, or, if that is not specified, the [named capturing group](@) `showtext`.
+            2. convert `input` into a string in the same way as in which [markdown headings](tbd@) are converted into [heading-ids](tbd@);
+            3. there is a match with an [MRG entry](@) if the result of that conversion is either an element of the `formPhrases` field of that [MRG entry](@) (which is an array of [form phrases](@)), of if the result matches the `term` field of that [MRG entry](@).
         5. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/spec-files/mrg#terminology) of the [MRG](@).
 3. If the remaining set of [entries](mrg-entry@) is either empty (not found), or contains multiple [entries](mrg-entry@) (ambiguous [TermRef](@)), an appropriate exception must be raised (and logged), and conversion of (only!) this [TermRef](@) is discontinued
 4. If the remaining set of [entries](mrg-entry@) contains precisely one element, its fields will be made available as [moustache variables](@) for further processing by the [converter](@).

@@ -34,7 +34,7 @@ Setting interpreters mainly allows for the use of different [term ref](@) syntax
 \[`show text`\](`term`#`trait`@`scopetag`:`vsntag`)<br/>
 
 **Information**<br/>
-The default/basic [interpreter](@) uses a [regex](@) that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`basic`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
+The default/basic [interpreter](@) uses a [regex](@) that can find [term refs](@) using the [default syntax](specifications#interpretation-of-the-term-ref) as displayed here above. Not specifying an interpreter, or using '`default`' as the value of the interpreter, sets the [regex](@) displayed below as the interpreter.
 
 ~~~regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))

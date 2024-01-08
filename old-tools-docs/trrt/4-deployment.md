@@ -38,7 +38,7 @@ Assuming the term 'mishmash' is part of an [MRG](@), and the default scope and v
 # TRRT configuration file (yaml)
 output: .
 scopedir: .
-interpreter: 'basic' # `alt` or `basic` are also valid
+interpreter: 'basic' # `alt` or `default` are also valid
 # highlight-next-line
 converter: '<term-info definition="{{glossaryText}}" img="img/{{term}}.png" more-info="{{navurl}}">{{showtext}}</term-info>' # `http`, `essif` or `markdown` are also valid
 

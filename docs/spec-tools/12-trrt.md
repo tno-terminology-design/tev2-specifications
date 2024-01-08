@@ -198,9 +198,9 @@ Note that the names of some of these [capturing groups](@) do not correspond 1-1
 
 The following sections specify the predefined [intepreters](@) for the [TRRT](@).
 
-#### The `basic` (also: `default`) Interpreter
+#### The `default` Interpreter
 
-The most general form of the `basic` and `default` [interpreter](@) syntax is:
+The most general form of the `default` [interpreter](@) syntax is:
 
 \[ `show text` \]( `termType`:`term`#`trait`@`scopetag`:`vsntag` )
 
@@ -211,7 +211,7 @@ where:
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
-For completeness, here is the [regex] that defines the `basic` or `default` [interpreter](@) for the [TRRT](@):
+For completeness, here is the [regex] that defines the `default` [interpreter](@) for the [TRRT](@):
 
 ~~~ regex
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))(?<showtext>[^\n\]@]+)\]\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\)

@@ -29,7 +29,7 @@ The columns in the following table are defined as follows:
 | `input`                    | `<globpattern>`            |   n   | [Globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) string that specifies the set of (input) files that are to be processed as an absolute or relative path from where the tool is called. |
 | `-o`<br/>`--output`        | `<dir>`                    |   Y   | Directory where output files are to be written. This directory is specified as an absolute or relative path from where the tool is called. |
 | `-s`<br/>`--scopedir`      | `<path>`                   |   Y   | Path of the [scope directory](@) from which the tool is called. It MUST contain the [SAF](@) for that [scope](@), which we will refer to as the 'current scope' for the [TRRT](@). |
-| `-int`<br/>`--interpreter` | `<type>` or `<regex>`      |   n   | Allows for the switching between existing and custom [interpreter](@) types. By default `alt` and `basic` are available, but a custom [regex](@) pattern may be provided. When this parameter is omitted, the basic [term ref](@) syntax is interpreted. See the [interpreter](customization#interpreter) section for more information. |
+| `-int`<br/>`--interpreter` | `<type>` or `<regex>`      |   n   | Allows for the switching between existing and custom [interpreter](@) types. By default `alt` and `default` are available, but a custom [regex](@) pattern may be provided. When this parameter is omitted, the basic [term ref](@) syntax is interpreted. See the [interpreter](customization#interpreter) section for more information. |
 | `-con`<br/>`--converter`   | `<type>` or `<mustache>`   |   n   | The type of [converter](customization#converter) which creates the [renderable refs](@). Allows for the switching between existing and custom [converter](@) types. By default `html`, `essif` and `markdown` are available, but a custom [Mustache template](https://handlebarsjs.com/guide/) may be provided. When this parameter is omitted, the Markdown [converter](@) is used. See the [converter](customization#converter) section for more information. |
 | `-V`<br/>`--version`       |                            |   n   | Output the version number of the tool. |
 | `-f`<br/>`--force`         |                            |   n   | Allow overwriting of existing files. Meant to prevent accidental overwriting of files that include [term refs](@). |
@@ -49,7 +49,7 @@ uses the example `config.yaml` file shown below. As a general guideline, we reco
 # TRRT configuration file (yaml)
 output: '__tests__/output'
 scopedir: '__tests__/content'
-interpreter: '(?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))(?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)' # `alt` or `basic` are also valid values
+interpreter: '(?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))(?<showtext>[^\n\]@]+)\]\((?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]+))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]+))?\)' # `alt` or `default` are also valid values
 converter: '<a href="{{navurl}}{{#trait}}#{{/trait}}{{trait}}" title="{{glossaryText}}">{{showtext}}</a>' # `http`, `essif` or `markdown` are also valid values
 
 # glob pattern strings for files to be processed

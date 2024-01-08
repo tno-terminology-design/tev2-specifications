@@ -140,7 +140,7 @@ where:
 - `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details.
 - `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details.
 
-For completeness, here is the [regex] that defines the `basic` or `default` [interpreter](@) for the [HRGT](@):
+For completeness, here is the [regex] that defines the `default` [interpreter](@) for the [HRGT](@):
 
 ~~~ regex
 {%\s*hrg="(?<hrg>[^"]*)"\s*(?:converter="(?<converter>[^"]*)"\s*)?(?:sorter="(?<sorter>[^"]*)"\s*)?%}

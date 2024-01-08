@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 [MRG References](@) (or [MRGRefs](@) for short) are textual constructs that refer to a specific [terminology](@) within a particular [scope](@). The purpose of an [MRG Reference](@) is that it can be converted (by the [HRGT](@)) into a text that contains a [human readable glossary](@) of the [terms](@) contained in that [terminology](@).
 
-The syntax for [MRGRefs](@) is not fixed. While there is a default syntax, [curators](@) can define their own syntax, and specify that as a command-line parameter or a parameter in the configuration file for appropriate tools, such as the [HRGT](@). If an [interpreter](@) is not specified, it defaults to `basic`, the associated syntax of which is specified below. 
+The syntax for [MRGRefs](@) is not fixed. While there is a default syntax, [curators](@) can define their own syntax, and specify that as a command-line parameter or a parameter in the configuration file for appropriate tools, such as the [HRGT](@). If an [interpreter](@) is not specified, it defaults to `default`, the associated syntax of which is specified below. 
 
 ## Default MRGRef Syntax {#default-mrgref-syntax}
 

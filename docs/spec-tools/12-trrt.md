@@ -185,7 +185,7 @@ The [interpreter profile](@) of the [TRRT](@) consist of the following [named ca
 | --------------- | :---: | ----------- |
 | `showtext`  | Y | the text in a [TermRef](@) that the author expects to be rendered.  |
 | `type`      | n | the [term type](@) of the [semantic unit](@) that `showtext` should refer to. |
-| `id`        | n | the [term](@) of the [semantic unit](@) that `showtext` should refer to. |
+| `term`      | n | the [term](@) of the [semantic unit](@) that `showtext` should refer to. |
 | `trait`     | n | a text that is expected to correspond with one of the `headingids` in the [MRG entry](@) of the [semantic unit](@) that `showtext` should refer to. |
 | `scopetag`  | n | the [scopetag](@) that [identifies](@) the [scope](@) that [curates](@) the [semantic unit](@) that `showtext` should refer to. |
 | `vsntag`    | n | a [versiontag](@) that [identifies](@) the [terminology](@) that contains the [semantic unit](@) that `showtext` should refer to. |
@@ -202,12 +202,12 @@ The following sections specify the predefined [intepreters](@) for the [TRRT](@)
 
 The most general form of the `basic` and `default` [interpreter](@) syntax is:
 
-\[ `show text` \]( `termType`:`id`#`trait`@`scopetag`:`vsntag` )
+\[ `show text` \]( `termType`:`term`#`trait`@`scopetag`:`vsntag` )
 
 where: 
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
-- `termType` (optional) is a [term type](@). It need not be specified if the `id` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
-- `id` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii.c).
+- `termType` (optional) is a [term type](@). It need not be specified if the `term` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
+- `term` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii.c).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
@@ -254,12 +254,12 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
 #### Finding the [MRG entry](@) associated with a [TermRef](@) {#finding-mrg-entry}
 
 1. Get the [MRG](@) file that is expected to contain the [MRG entry](@), by resolving the [terminology identifier](@) that consists of the [named capturing groups](@) `scopetag`:`vsntag`. Note that if `scopetag` wasn't populated, the [default scope](@) is assumed, and if `vsntag` isn't populated, the default version is used.
-2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termtype` and `id`, as follows:
+2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termtype` and `term`, as follows:
     1. Initialize this step by selecting all [MRG entries](@) from the [MRG](@) (the idea is to limit the number of selected entries step by step, until there is no more than one).
     2. Process the [named capturing groups](@), as follows:
         1. If `termtype` is specified, then remove all [entries](mrg-entry@) except those whose `termtype` field equals the specified value of `termtype`;
-        2. If `id` is specified, then remove all [entries](mrg-entry@) except those whose `id` field equals the specified value of `id`;
-        4. If `id` is NOT specified, then remove all [entries](mrg-entry@) except those that have a `formPhrases` field (which is an array of [form phrases](@)) that contains an element that is equal to `showtext`.
+        2. If `term` is specified, then remove all [entries](mrg-entry@) except those whose `term` field equals the specified value of `term`;
+        4. If `term` is NOT specified, then remove all [entries](mrg-entry@) except those that have a `formPhrases` field (which is an array of [form phrases](@)) that contains an element that is equal to `showtext`.
         5. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/spec-files/mrg#terminology) of the [MRG](@).
 3. If the remaining set of [entries](mrg-entry@) is either empty (not found), or contains multiple [entries](mrg-entry@) (ambiguous [TermRef](@)), an appropriate exception must be raised (and logged), and conversion of (only!) this [TermRef](@) is discontinued
 4. If the remaining set of [entries](mrg-entry@) contains precisely one element, its fields will be made available as [moustache variables](@) for further processing by the [converter](@).

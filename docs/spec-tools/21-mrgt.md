@@ -127,7 +127,10 @@ In this phase, for every [terminology](@) version that is to be created, one [pr
 The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syntax) specifies precisely how [provisional MRGs](@) are created.
 
 After a [provisional MRG entry](@) is created, the following modifications are made:
-- in the `formPhrases` field, the [form phrase macros](/docs/spec-syntax/form-phrase-syntax#form-phrase-macros) are resolved. This means that the `formPhrases` field in an [MRG entry] is the list of all [form phrases](@). 
+- the `formPhrases` field is processed, as follows:
+    1. any [form phrase](@) that contains a [form phrase macro](@) is expanded into a list of [form phrases](@), where for each of the elements in the [form phrase macro](@) character map, a [form phrase](@) is created that is identical with the [form phrase](@) that contains the [form phrase macro](@), and the [macro](form-phrase-macro@) is subsequently replaced with the element in its character map.
+    2. any [form phrase](@) that contains a space character will be expanded into a list of [form phrases](@), where the first element is the original [form phrase](@) and the second element is that same [form phrases](@) where the space character is replaced with the `-` character. This is to ensure that [term refs](@) can always have an `id` field that does not contain spaces.
+    3. the contents of the `formPhrases` field in the [MRG entry](@) is replaced with the list of [form phrases](@) that are the result of this processing.
 
 #### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrg-filenames}
 

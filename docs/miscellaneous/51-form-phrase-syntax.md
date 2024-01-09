@@ -6,17 +6,17 @@ date: 20220808
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-# Form Phrases - Syntax
+# Form Phrases and their Syntax
 
-This document specifies the syntax of [form phrases](@), i.e. texts that are specified in the [header](@) of [curated texts](@), in the field `formPhrases`.[^1]
+This document is deprecated. It remains here for the purpose of reusing texts in guides that need to be authored.
 
-[^1]: Since [MRG entries](@) include the [header](@) of such [curated texts](@), the `formPhrases` field can also be found therein.
+This document specifies the syntax of [form phrases](@).
 
 [Form phrases](@) are [used to automatically convert](/docs/spec-tools/trrt#id) the `show text` parts of [term refs](@) into `[termid](@)`s, for the purpose of accommodating, e.g., plural forms (for nouns) or conjugate forms (for verbs). This facilitates the work for [authors](@), as this no longer requires them to explicitly mention the `term` part in a [term ref](@) when the `showtext` they use matches one of the [form phrases](@).
 
 ## Simple Form Phrases
 
-In the simple form, a single [form phrase](@) is a sequence of characters [`[a-z0-9_-]+`](https://www.debuggex.com/r/w7mm0fzpON23yuZQ). The contents of the `formPhrases` field (in the [header](@) of a [curated text](@)) is a comma-separated list of such [form phrases](@). Note that if a [form phrase](@) contains a special character, it must be surrounded with single or double quotes.
+A single [form phrase](@) is a sequence of characters that matches [regex](@) `[a-z0-9_-]+`, where the first and last characters are not `-`. The contents of the `formPhrases` field (in the [header](@) of a [curated text](@)) is a comma-separated list of such [form phrases](@). Note that if a [form phrase](@) contains a special character, it must be surrounded with single or double quotes.
 
 The `formPhrases`-field is used by the [trrt](@) in its attempts to [convert the `showtext`](/docs/spec-tools/trrt#showtext) part of a [term ref](@) into a string that can serve as the `term` of that [term ref](@).
 
@@ -73,12 +73,32 @@ The following table specifies the [form phrase](@) macros that have currently be
 3. an example that could appear as a [form phrase](@) in a `formPhrases`-field of a [curated text](@),
 4. the set of (simplified) `showtext`s that would match that [form phrase](@):
 
-| macro    |           [regex](@)                       |     example     | texts that the example matches |
+| macro    |           [regex](@)                  |     example     | texts that the example matches |
 | -------- | :-----------------------------------: | :-------------: | :----------------------------- |
-| `{ss}`   | <code>(\|s\|'s\|(s\))</code>          | `actor{ss}`     | matches: "actor", "actors", "actor's", and "actor(s)" |
-| `{yies}` | <code>(y\|y's\|ies)</code>            | `part{yies}`    | matches: "party", "party's", and "parties" |
-| `{ying}` | <code>(y\|ier\|ying\|ies\|ied)</code> | `identif{ying}` | matches: "identify", "identifier", "identifying", "identifies", and "identified" |
+| `{ss}`   | <code>(s?\|'s\|(s\))</code>           | `actor{ss}`     | "actor", "actors", "actor's", and "actor(s)" |
+| `{yies}` | <code>(y\|y's\|ies)</code>            | `part{yies}`    | "party", "party's", and "parties" |
+| `{ying}` | <code>(y\|ying\|ies\|ied)</code>      | `identif{ying}` | "identify", "identifying", "identifies", and "identified" |
+| `{es}`   | <code>(es?\|ed\|ing)</code>           | `manag{es}`     | "manage", "manages", "managed", "managing" |
+| `{able}` | <code>(able\|ability)</code>          | `cap{able}`     | "capable", "capability" |
 
+:::tip Use macro's with care.
+The above macro's should be used with care. Here are some tips:
+
+1. Use `{ss}` macro only for **nouns** whose plural is constructed by adding an `s`.
+2. Use `{yies}` only for **nouns** that end with a `y`.
+3. Use `{yies}` only for **verbs** that end with a `y`.
+4. Use `{es}` only for **regular verbs** that conjugate as specified.
+:::
+
+<!-- The following are suggestions (by chatGPT) for similar macros.
+They are currently not included because we have not found any terms that would benefit from them.
+| `{ing}`  | <code>(s?\|ing\|ed)</code>            | `play{ing}`     | "play", "plays", "playing", "played" |
+| `{ion}`  | <code>(ion\|ions\|ional)</code>       | `organizat{ion}`| "organization", "organizations", "organizational" |
+| `{eror}` | <code>(er\|or\|ers\|ors)</code>       | `advis{eror}`   | "adviser", "advisor", "advisers", "advisors" |
+| `{ment}` | <code>(ment\|ments\|mental)</code>    | `develop{ment}` | "development", "developments", "developmental" |
+| `{ful}`  | <code>(ful\|fully\|fulness)</code>    | `hope{ful}`     | "hopeful", "hopefully", "hopefulness" |
+| `{less}` | <code>(less\|lessly\|lessness)</code> | `care{less}`    | "careless", "carelessly", "carelessness" |
+-->
 
 <details>
    <summary>Example of a form phrase macro and its use</summary>

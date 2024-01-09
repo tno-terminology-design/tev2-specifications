@@ -5,8 +5,8 @@ id: form-phrase
 term: form-phrase
 termType: concept
 isa:
-glossaryTerm: Form Phrase (of a Term)
-glossaryText: "a word or phrase, other than the actual [term](@) that, when used in a [TermRef](@) would typically also refer to this [term](@). Form phrases may include plural forms, possessive extensions, verb-conjugation forms, and other variations."
+glossaryTerm: Form Phrase (for a Term)
+glossaryText: "a word or phrase that occurs in oral or written texts and that refers to a particular [semantic unit](@), yet is not (necessarily) the  [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations."
 formPhrases: [ "formphrase{ss}", "form-phrase{ss}" ]
 # Curation status
 status: proposed
@@ -20,34 +20,65 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Form Phrase
 
-A **Form Phrase** is a word or phrase, other than the actual [term](@) that, when used in a [TermRef](@) would typically also refer to this [term](@). Form phrases may include plural forms, possessive extensions, verb-conjugation forms, and other variations.
+A **Form Phrase** is a word or phrase that occurs in oral or written texts and that refers to a particular [semantic unit](@), yet is not (necessarily) the  [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations.
 
-Form phrases of a [term](@) can be specified in the [header](@) of the [curated text](@) that describes this [term](@) (in the `formPhrases` field). See the [form-phrase specifications](/docs/spec-syntax/form-phrase-syntax).
+## Purpose
 
-## Examples
+[Form phrases](@) act as (standardized, human readable) [identifiers](@) for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the terms used and thereby reducing the potential for misinterpretation or confusion.
 
-1. `"Form Phrases"`, `"form phrase(s)"` are both form phrase related to the term (noun) '[Form Phrase](@).
-2. `"Identify"`, `"identifying"`, `"identifies"`, `"identified"` are all form phrases related to the term (verb) [identify](@)
-3. `"MRG"`, `"machine readable glossary (MRG)"` are both form phrases related to the term [machine readable glossary](@).
+## Specifying Form Phrases
 
-## Notes
+[Form phrases](@) are to be specified in (the `formPhrases` field of) the [header](@) of the [curated text](@) that describes the [semantic unit](@) to which it refers. Here is an example:
 
-- Form phrases allow for flexible expression of concepts, accommodating various linguistic variations that users may employ.
-- These phrases are commonly used to label and categorize concepts within glossaries and dictionaries.
-- It is a good habit to surround a form phrase with single or double quotes (which is needed anyway when it contains special characters).
+~~~ yaml
+formPhrases: [ "actor", "actors", "actor's", "actor(s)", "human actor", "machine actor" ]
+~~~
 
-## Miscellaneous
+This specifies that whenever a [TermRef](@) is being converted by the [TRRT](@), and the `showtext` or the `term` parts of that [TermRef](@) are any of these [formPhrases](@), then the [TermRef](@) refers to the [semantic unit](@) that is documented by that [curated text](@). 
 
-The term "Form Phrase" pertains to words or phrases that serve as labels for specific concepts. These phrases are typically used in lowercase and have spaces or strange characters replaced by a single hyphen (-) to ensure consistency and readability.
+Note that the specification of a [form phrase](@) may include a [form-phrase-macro](@), for which several are [predefined](form-phrase macro#predefineds@). The example below is the equivalent specification as above:
 
-The criterion for identifying "Form Phrase" is whether the word or phrase is used to refer to a concept, and it follows the specified format guidelines. Form phrases may include singular and plural forms, possessive extensions (e.g., 's), verb-conjugation forms, and other linguistic variations.
+~~~ yaml
+formPhrases: [ "actor{ss}", "human actor", "machine actor" ]
+~~~
 
-The hover text provides a concise description of the term when users hover over it. Synonyms for this term include "word-expression" and "concept-term."
+The same varieties can easily be added for the human and machine actors, as follows
 
-The term is classified under the "text-format" concept, which means it belongs to a category related to text formatting methods. Additionally, it is grouped under "phraseology" to indicate its association with linguistic expressions.
+~~~ yaml
+formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
+~~~
 
-The curation status of this term is "proposed," indicating that it is still under review and subject to potential changes.
+## Form Phrases in [MRGs](@)
 
-## Summary
+When creating an [MRG](@), the [MRGT](@) will normalize the [form phrases](@) it encounters in the [headers](@) of [curated texts](@). This means that it will:
 
-A Form Phrase refers to a word or phrase used to represent a concept, with lowercase letters and spaces replaced by a single hyphen. These phrases provide flexibility in expressing concepts and are commonly used in glossaries and dictionaries for labeling and categorizing terms.
+1. convert the specified set of [form phrases](@) to lowercase;
+2. expand any [form phrase macros](@) that are present, which typically adds  [form phrases](@) to the specified set;
+3. trim any leading/trailing whitespace from the resulting set;
+4. create a `formPhrases` field in the [MRG entry](@) that contains the resuling set of [form phrases](@).
+
+:::tip
+An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same element in their `formPhrases` field, because that would mean that the form phrase is ambiguous, as it refers to two different [semantic units](@).
+:::
+
+## Using Form Phrases
+
+Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology]. In other words, they must [identify](@) the [MRG entry](@) that documents this [semantic unit](@).
+
+[Identification](@) of the [MRG entry](@) is straightforward: the form phrase must match 
+
+Form phrases are to be resolved by matching them with the elements of the `formPhrases` fields of [MRG entries](@) of the specified (or default) [terminology](@).
+
+## Guidance for choosing Form Phrases
+
+1. **Character Composition**: A form phrase is composed of a sequence of characters that may include letters, numbers, and spaces. Spaces are permissible if they are a standard part of the term (e.g., "hard drive").
+
+2. **Limited Special Characters**: Generally, a form phrase should not contain special characters like punctuation marks (.,;:!? etc.), except for hyphens, underscores, or other characters if they are an integral part of the term (e.g., "non-refundable", "e-mail").
+
+3. **Case Sensitivity**: While a form phrase may include uppercase or lowercase letters, it is typically treated as case-insensitive during the matching process. This ensures that variations in capitalization do not affect the identification of the term.
+
+4. **Adherence to Language Rules**: A form phrase should conform to the grammatical and morphological rules of the language it's used in, including correct spelling and, where applicable, pluralization or possessive forms.
+
+5. **Uniqueness within Context**: Each form phrase must be unique within its context or domain to avoid ambiguities. It should not overlap with or be a substring of another form phrase within the same set of terms.
+
+6. **Contextual Relevance**: The form phrase should be relevant to its context and accurately represent the term or concept it's associated with, aligning with domain-specific terminology and usage.

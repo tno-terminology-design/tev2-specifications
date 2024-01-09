@@ -207,7 +207,7 @@ The most general form of the `default` [interpreter](@) syntax is:
 where: 
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
 - `termType` (optional) is a [term type](@). It need not be specified if the `term` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
-- `term` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii.c).
+- `term` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
@@ -259,14 +259,15 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
     2. Process the [named capturing groups](@), as follows:
         1. If `termtype` is specified, then remove all [entries](mrg-entry@) except those whose `termtype` field equals the specified value of `termtype`;
         2. Remove all [entries](mrg-entry@) except those that produce a match according to the following process:
-            1. convert the [named capturing group](@) `term`, or, if that is not specified, the [named capturing group](@) `showtext`, into a [heading-id](https://www.markdownguide.org/extended-syntax/#heading-ids)-like text, as follows:
-                1. convert all texts to lowercase;
-                2. replace any sequence of characters that matches [regex](@) `[^\w-\s]` with `-`;
-                3. remove any leading and/or trailing `-` characters.
-            2. there is a match with an [MRG entry](@) if the result of this conversion is either an element of the `formPhrases` field of that [MRG entry](@) (which is an array of [form phrases](@)), or if the result matches the `term` field of that [MRG entry](@).
+            1. normalize the text in the [named capturing group](@) `term`, or, if that is not specified, the [named capturing group](@) `showtext`, as follows:
+                1. convert the text to lowercase;
+                3. remove any leading and/or trailing spaces.
+            2. there is a match with an [MRG entry](@) if the result of this conversion is either a [form phrase](@) that appears in the `formPhrases` field of that [MRG entry](@), or if the result matches the `term` field of that [MRG entry](@).[^1]
         3. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/spec-files/mrg#terminology) of the [MRG](@).
 3. If the remaining set of [entries](mrg-entry@) is either empty (not found), or contains multiple [entries](mrg-entry@) (ambiguous [TermRef](@)), an appropriate exception must be raised (and logged), and conversion of (only!) this [TermRef](@) is discontinued
 4. If the remaining set of [entries](mrg-entry@) contains precisely one element, its fields will be made available as [moustache variables](@) for further processing by the [converter](@).
+
+[^1]: Matching with the `term` field enables one to specify [form phrases](@) that include a space, yet use a `term` that has replaced the space with a `-`.
 
 :::info Editor's note
 [The Porter Stemming Algorithm](https://tartarus.org/martin/PorterStemmer/) is a process for removing the commoner morphological and inflexional endings from words in English. Its main use is as part of a term normalisation process that is usually done when setting up Information Retrieval systems. The mentioned site links to lots of freely useable code that the TRRT might want to consider using.

@@ -60,3 +60,4 @@ versions:
   - "term[concept,relation,property,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
   - "*" # import all tev2 terms.
 # - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)
+  - "-term[@]"

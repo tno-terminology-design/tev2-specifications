@@ -108,10 +108,12 @@ One run of the [MRGT](@) either
 - generates an [MRG](@) for one specific [terminology](@) version within the [current scope](@) (which is the case when the `version` parameter was specified), or it
 - generates multiple [MRGs](@), i.e., one for every version of the [terminology](@) that is [curated](@) within the [current scope](@) (which is the case when the `version` parameter is omitted).
 
-Running the tool comprises the following phases:
+Running the tool comprises the following phases:[^1]
 1. Constructing a [provisional MRG](@);
 2. Post-processing the [entries](provisional-mrg-entry@) in that [provisional MRG](@);
 3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@), and creating/overwriting symbolic links, as appropriate.
+
+[^1]: The [MRGT](@) MUST NOT start by overwriting files that contain an [MRG](@), as they should remain available as a (possible) source for copying [MRG entries](@) from during the construction of one or more [provisional MRGs](@). Writing the actual files should be done after all [provisional MRGs](@) have been constructed.
 
 ### Phase 1: constructing a [provisional MRG](@) {#constructing-provisional-mrg}
 
@@ -120,7 +122,7 @@ Generating an [MRG](@) for a particular version of a [terminology](@) starts by 
 In this phase, for every [terminology](@) version that is to be created, one [provisional MRG](@) is created, that contains a [provisional MRG entry](@) for every [term](@) contained in the particular version of the [terminology](@). This [provisional MRG entry](@) either contains:
 
 - all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
-- all fields in the [MRG entry](@) that comes from another [MRG](@) (typically from another [scope](@)). 
+- all fields in the [MRG entry](@) that comes from another [MRG](@) (typically, but not necessarily, from another [scope](@)). 
 
 The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syntax) specifies precisely how [provisional MRGs](@) are created.
 

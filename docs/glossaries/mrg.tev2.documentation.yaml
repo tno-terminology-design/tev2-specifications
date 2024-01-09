@@ -27,19 +27,6 @@ scopes:
   - scopetag: "essif-lab"
     scopedir: "https://github.com/essif-lab/framework/tree/master/docs"
 entries:
-  - term: "@"
-    termType: "error"
-    hoverText: "Error - the reference cannot be resolved."
-    sidebar_label: "Term ref not found"
-    scopetag: "tev2"
-    locator: "@.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/@"
-    formPhrases: []
-    headingids:
-      - "error---the-reference-cannot-be-resolved"
-      - "\"@\""
-    termid: "error:@"
-    vsntag: "documentation"
   - id: "action"
     displayed_sidebar: "essifLabSideBar"
     termType: "concept"

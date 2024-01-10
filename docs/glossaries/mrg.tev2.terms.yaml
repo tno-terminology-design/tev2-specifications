@@ -571,8 +571,7 @@ entries:
     headingids:
       - "form-phrase"
       - "purpose"
-      - "specifying-form-phrases"
-      - "form-phrases-in-[mrgs](@)"
+      - "specifying-form-phrases-in-curated-texts-{#specifying}"
       - "using-form-phrases"
       - "guidance-for-choosing-form-phrases"
     termid: "concept:form-phrase"
@@ -582,7 +581,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Form Phrase Macro"
-    glossaryText: "a sequence of characters (the macro name) that [identifies](@) a set of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
+    glossaryText: "a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
     formPhrases:
       - "formphrase macro"
       - "formphrase macros"
@@ -604,6 +603,7 @@ entries:
     headingids:
       - "form-phrase-macro"
       - "purpose"
+      - "form-phrase-macro-expansion-(#expansion-process)"
       - "predefined-[form-phrase-macros](@)-{#predefineds}"
       - "custom-[form-phrase-macros](@)"
     termid: "concept:form-phrase-macro"
@@ -1909,6 +1909,65 @@ entries:
     headingids:
       - "regular-expression-(regex)"
     termid: "concept:regex"
+    vsntag: "terms"
+  - id: "regularized-form-phrase"
+    term: "regularized-form-phrase"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Regularized Form Phrase"
+    glossaryText: "a [regularized text](@) that is derived from, and represents a [form phrase](@). They typically appear in the `formPhrases` field of an [MRG entry](@)."
+    formPhrases:
+      - "regularized-formphrase"
+      - "regularized-formphrases"
+      - "regularized-formphrase's"
+      - "regularized-formphrase(s)"
+      - "regularized-form-phrase"
+      - "regularized-form-phrases"
+      - "regularized-form-phrase's"
+      - "regularized-form-phrase(s)"
+    status: "proposed"
+    created: 20230731
+    updated: 20230731
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "regularized-form-phrase.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/regularized-form-phrase"
+    headingids:
+      - "regularized-form-phrase"
+      - "purpose"
+      - "need-for-regularizing-form-phrases"
+      - "regularizing-form-phrases-{#regularization-process}"
+    termid: "concept:regularized-form-phrase"
+    vsntag: "terms"
+  - id: "regularized-text"
+    term: "regularized-text"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Regularized Text"
+    glossaryText: "a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z]_[0-9]-`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z]([a-z]_[0-9]-)*(?<=[^-])$` is a regularized text."
+    formPhrases:
+      - "regularized-text"
+      - "regularized-texts"
+      - "regularized-text's"
+      - "regularized-text(s)"
+    status: "proposed"
+    created: 20230731
+    updated: 20230731
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "regularized-text.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/regularized-text"
+    headingids:
+      - "regularized-text"
+      - "purpose"
+      - "use-of-regularized-texts-within-[tev2](@)"
+      - "regularizing-texts-(#regularization-process)"
+      - "notes"
+    termid: "concept:regularized-text"
     vsntag: "terms"
   - id: "relation"
     term: "relation"

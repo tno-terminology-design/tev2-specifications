@@ -6,7 +6,7 @@ term: form-phrase-macro
 termType: concept
 isa:
 glossaryTerm: Form Phrase Macro
-glossaryText: "a sequence of characters (the macro name) that [identifies](@) a set of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
+glossaryText: "a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
 formPhrases: [ "formphrase macro{ss}", "form-phrase macro{ss}" ]
 # Curation status
 status: proposed
@@ -20,11 +20,31 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Form Phrase Macro
 
-A **Form Phrase Macro** is a sequence of characters (the macro name) that [identifies](@) a set of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc. For example, when the macro `{ss}` is used in a [form phrase](@) specification `"actor{ss}"`, or `act`, this is a shorthand for the set `"actor", "actors", "actor's", "actor(s)"`, or the set `"act", "acts", "act's", "act(s)"` respectively. 
+A **Form Phrase Macro** is a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc.
+
+For example, when the macro `{ss}` is used in a [form phrase](@) specification `"actor{ss}"`, or `act`, this is a shorthand for the set `"actor", "actors", "actor's", "actor(s)"`, or the set `"act", "acts", "act's", "act(s)"` respectively. 
+
+A [form phrase](@) that contains a [form phrase macro](@) can be expanded into a set of [form phrases](@) that no longer contain the [form phrase macro](@). Thus a [form phrase](@) that contains a [form phrase macro](@) can be seen as a 'shorthand notation' for the set of [form phrases](@) that it can be expanded into.
 
 ## Purpose
 
 [Form phrase macros](@) facilitate the specification of [form phrases](@), by enabling efficient ways of representing plural forms, possessive extensions, verb-conjugation forms, etc.
+
+## Form Phrase Macro Expansion (#expansion-process)
+
+The [form phrase macro](@) expansion process takes as inputs:
+
+1. a [form phrase](@) that contains a [form phrase macro](@), and
+2. a sequence (map) of character strings that is associated with the [form phrase macro](@).
+
+For every character string in the [form phrase macro](@) map, the expansion process creates a [form phrase](@) that is identical to the [form phrase](@) that is input, and then it substitutes the [form phrase macro](@) therein with the character string. Thus, The expansion process produces as many [form phrases](@) as there are character strings in the [form phrase macro](@) map.
+
+Here is an example.
+
+1. The input [form phrase](@) is `actor{ss}`.
+2. The [form phrase macro](@) `ss` is associated with the character string map `[ "", "s", "'s", "(s)" ]`.
+
+The result of the expansion process is `[ "actor", "actors", "actor's", and "actor(s)" ]`
 
 ## Predefined [Form phrase macros](@) {#predefineds}
 

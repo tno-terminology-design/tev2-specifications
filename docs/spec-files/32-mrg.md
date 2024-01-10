@@ -30,7 +30,7 @@ Within this [glossarydir](@) we can generate (or import), and hence also find al
   - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/spec-files/saf#scopes) of that [SAF](@).
   - **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `altvsntag`-fields in the [`versions` section](/docs/spec-files/saf#versions) of the [SAF](@).
 
-- **`mrg.<scopetag>.yaml`** is the name of the (symbolic link) file that links to the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@). 
+- **`mrg.<scopetag>.yaml`** is a copy of the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@). 
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [MRG](@) that is relevant for that [scope](@).
 

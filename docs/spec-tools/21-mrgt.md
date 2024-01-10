@@ -111,7 +111,7 @@ One run of the [MRGT](@) either
 Running the tool comprises the following phases:[^1]
 1. Constructing a [provisional MRG](@);
 2. Post-processing the [entries](provisional-mrg-entry@) in that [provisional MRG](@);
-3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@), and creating/overwriting symbolic links, as appropriate.
+3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@).
 
 [^1]: The [MRGT](@) MUST NOT start by overwriting files that contain an [MRG](@), as they should remain available as a (possible) source for copying [MRG entries](@) from during the construction of one or more [provisional MRGs](@). Writing the actual files should be done after all [provisional MRGs](@) have been constructed.
 
@@ -127,10 +127,15 @@ In this phase, for every [terminology](@) version that is to be created, one [pr
 The [Term Selection Instruction syntax](/docs/spec-syntax/mrg-term-selection-syntax) specifies precisely how [provisional MRGs](@) are created.
 
 After a [provisional MRG entry](@) is created, the following modifications are made:
-- the `formPhrases` field is processed, as follows:
-    1. any [form phrase](@) that contains a [form phrase macro](@) is expanded into a list of [form phrases](@), where for each of the elements in the [form phrase macro](@) character map, a [form phrase](@) is created that is identical with the [form phrase](@) that contains the [form phrase macro](@), and the [macro](form-phrase-macro@) is subsequently replaced with the element in its character map.
-    2. any [form phrase](@) that contains a space character will be expanded into a list of [form phrases](@), where the first element is the original [form phrase](@) and the second element is that same [form phrases](@) where the space character is replaced with the `-` character. This is to ensure that [term refs](@) can always have an `id` field that does not contain spaces.
-    3. the contents of the `formPhrases` field in the [MRG entry](@) is replaced with the list of [form phrases](@) that are the result of this processing.
+- the `formPhrases` field is processed, which means that every element in that set (array) is subjected to the following processing steps:
+    1. if the element contains contains a [form phrase macro](@), it is replaced by a set of [form phrases](@) that is constructed by processing that [form phrase macro](@) - see [Form Phrase Macro Expansion](/xxx) for the details and examples. This step effectively enlarges the set (array) of [form phrases](@).
+    2. the resulting [form phrases](@) are converted into a [regularized text](@) - that is, they become [regularized form phrases](@) - see [Text Regularization](/docs/terms/regularized-text#regularization-process) for the details and examples.
+
+The result is a set of [regularized form phrases](@), which is then used to produce the `formPhrases` field in the [MRG entry](@).
+
+:::tip
+An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same element in their `formPhrases` field, because that would mean that the form phrase is ambiguous, as it refers to two different [semantic units](@).
+:::
 
 #### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrg-filenames}
 
@@ -145,13 +150,13 @@ If a file with that name already exists in the [glossarydir](@) of the [current 
 - a [`scopes` section](/docs/spec-files/mrg#scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/spec-files/saf#scopes) in the [SAF](@);
 - an [`entries` section]((/docs/spec-files/mrg#terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
 
-Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@), a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
+Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@), a copy of that file is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
 
-Next, the [MRGT](@) will create a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) for every [versiontag](@) that exists in the `altvsntags`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The symbolic link will point to the file that has just been written and contains the [MRG](@) that has just been generated. The name of this symbolic link is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
+Next, the [MRGT](@) will create a copy of the [MRG](@) file for every [versiontag](@) that exists in the `altvsntags`-field of the element in the [versions section](/docs/spec-files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The copy will contain the same [MRG](@) as the file that has just been written. The name of this copied file is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
 
 ### Phase 2: post processing Synonyms {#post-processing}
 
-This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files and symbolic links have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of synonyms, to use the newly generated [provisional MRG entries](@)
+This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of synonyms, to use the newly generated [provisional MRG entries](@)
 
 When a [provisional MRG entry](@) in (one of) the created [provisional MRGs](@) has a `synonymOf` field that contains a [term identifier](@), this will now refer to either
 
@@ -180,6 +185,7 @@ The last step consists of checking crucial properties that [MRGs](@) are relied 
 
 In this step, the following checks are done (as a minimum):
 - The value of the `termid` field in one [MRG Entry](@) differs from the value of the `termid` field of all other [MRG Entries](@). This ensures that `termid` contains a unique identifier (primary key) within the context of the [MRG](@).
+- When a [regularized form phrase](@) is an element of the `formPhrases` field of an [MRG entry](@), there MUST NOT be another [MRG entry](@) in the same [MRG](@) that has this [regularized form phrase](@) in its `formPhrases` field.
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 

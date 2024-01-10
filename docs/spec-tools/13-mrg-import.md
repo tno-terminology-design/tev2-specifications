@@ -154,6 +154,10 @@ This is due to the fact that `scopetag`s are 'local' names for referring to scop
 - write the contents to `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.{other-vsntag}.yaml`, overwriting a file that has the same name if that were to exist.
 - for every [versiontag](@) in `{other-altvsntags}` (which we call `{other-altvsntag}`), a symbolic link `mrg.{import-scopetag}.{other-altvsntag}.yaml` is created in the `{my-scopedir}/{my-glossarydir}/` directory, that links to the `mrg.{import-scopetag}.{other-vsntag}.yaml` file that was just created in that same directory.
 
+:::info Editor's note
+check the paragraph below to see if it is correct, because MRG files are no longer symbolic links, but copies of the MRGs that such symbolic links used to refer to.
+:::
+
 After all [MRGs](@) are imported a symbolic link `{my-scopedir}/{my-glossarydir}/mrg.{import-scopetag}.yaml` is created (or overwritten if it already exists), which points to the file `mrg.{import-scopetag}.{other-defaultvsn}.yaml`. 
 
 :::note NOTE the change of the `scopetag` part in the filename!

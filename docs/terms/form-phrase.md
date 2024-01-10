@@ -26,7 +26,7 @@ A **Form Phrase** is a word or phrase that occurs in oral or written texts and t
 
 [Form phrases](@) act as (standardized, human readable) [identifiers](@) for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the terms used and thereby reducing the potential for misinterpretation or confusion.
 
-## Specifying Form Phrases
+## Specifying Form Phrases in Curated Texts {#specifying}
 
 [Form phrases](@) are to be specified in (the `formPhrases` field of) the [header](@) of the [curated text](@) that describes the [semantic unit](@) to which it refers. Here is an example:
 
@@ -48,26 +48,11 @@ The same varieties can easily be added for the human and machine actors, as foll
 formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 ~~~
 
-## Form Phrases in [MRGs](@)
-
-When creating an [MRG](@), the [MRGT](@) will normalize the [form phrases](@) it encounters in the [headers](@) of [curated texts](@). This means that it will:
-
-1. convert the specified set of [form phrases](@) to lowercase;
-2. expand any [form phrase macros](@) that are present, which typically adds  [form phrases](@) to the specified set;
-3. trim any leading/trailing whitespace from the resulting set;
-4. create a `formPhrases` field in the [MRG entry](@) that contains the resuling set of [form phrases](@).
-
-:::tip
-An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same element in their `formPhrases` field, because that would mean that the form phrase is ambiguous, as it refers to two different [semantic units](@).
-:::
-
 ## Using Form Phrases
 
-Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology]. In other words, they must [identify](@) the [MRG entry](@) that documents this [semantic unit](@).
+Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must [identify](@) the [MRG entry](@) that documents this [semantic unit](@).
 
-[Identification](@) of the [MRG entry](@) is straightforward: the form phrase must match 
-
-Form phrases are to be resolved by matching them with the elements of the `formPhrases` fields of [MRG entries](@) of the specified (or default) [terminology](@).
+[Identification](@) of the [MRG entry](@) is straightforward. The input of this process is a text that is typically a [form phrase](@) that does not contain a [form phrase macro](@), or a (partially) [regularized form phrase](@). This input is then '[regularized](regularized-form-phrase#regularization-process@)', which produces a [regularized form phrase](@) that can then be matched against the elements of the `formPhrases` fields of the [MRG entries](@) in the [MRG](@) of the default or specified [terminology](@).
 
 ## Guidance for choosing Form Phrases
 

@@ -3,7 +3,7 @@
 term: mrg-ref
 termType: concept
 isa:
-bodyFile: /40-specs/syntax/41-mrg-ref-syntax.md
+bodyFile: /specs/syntax/41-mrg-ref-syntax.md
 glossaryTerm: MRGRef
 glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
 synonymOf:

@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A **converter profile** is the set of [moustache variables](@) that are (made) available to [converters](@) of a particular [TEv2 tool](@), enabling them to produce the texts by which the [TEv2 tool](@) will replace the text constructs that are located by the [interpreter](@). 
 
-The [specifications of the particular TEv2 tool](/docs/category/40-specs/tools) contain a section called "Converter Profile" that specifies this.
+The [specifications of the particular TEv2 tool](/docs/category/specs/tools) contain a section called "Converter Profile" that specifies this.
 
 :::info Editor's note
 We could perhaps add references to appropriate sections of relevant tools, so that readers can see examples of this.

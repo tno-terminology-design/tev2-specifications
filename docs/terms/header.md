@@ -5,7 +5,7 @@ id: header
 term: header
 termType: concept
 isa:
-bodyFile: /40-specs/files/10-curated-text-file.md
+bodyFile: /specs/files/10-curated-text-file.md
 glossaryTerm: "Header (of a Curated Text)"
 glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrence of such a line. Headers live in [curated text files](@)."
 synonymOf:

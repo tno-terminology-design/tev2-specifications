@@ -15,7 +15,7 @@ An **MRG** or **Machine Readable Glossary** is a [glossary](@)[^1] for a particu
 
 [^1]: Actually, the [MRG](@) is more of an inventory than a [glossary](@), because it contains _all_ [semantic units](@) that are [curated](@) within the [scope](@). Apart from [terms](@), it may also include e.g., [mental models](pattern@) and [use cases](@). We choose to maintain the [term](@) "Machine Readable Glossary" ([MRG](@)), because most of us would view it - initially, at least - as a list of [terms](@) and their [definitions](@).
 
-An [MRG](@) is meant to be used by the tools from the [toolbox](/docs/category/40-specs/tools), e.g. for creating a [HRG](@), or to help resolve [TermRefs](@). 
+An [MRG](@) is meant to be used by the tools from the [toolbox](/docs/category/specs/tools), e.g. for creating a [HRG](@), or to help resolve [TermRefs](@). 
 
 A [scope](@) may have multiple [MRGs](@), each of which represents a specific version of its [terminology](@).
 

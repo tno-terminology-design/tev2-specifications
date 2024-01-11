@@ -3,7 +3,7 @@ id: trrt
 term: trrt
 termType: concept
 isa:
-bodyFile: /40-specs/tools/12-trrt.md
+bodyFile: /specs/tools/12-trrt.md
 glossaryTerm: TermRef Rendering Tool
 glossaryAlias: TRRT
 glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."

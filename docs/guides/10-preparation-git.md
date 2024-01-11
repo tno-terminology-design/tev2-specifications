@@ -146,6 +146,7 @@ versions:
   - "*" # import all terms as defined/described in the curated text of this scope.
 ...
 ```
+
 Notes:
 
 - The `altvsntag` field expects you to specify a list of alternative [versiontags](@); not just one.

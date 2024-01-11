@@ -11,7 +11,7 @@ This page intends to provide (lots of pointers to) information that people may n
 
 ## What it is about
 
-At the core of [TEv2](@) is [text conversion](/docs/overview/tev2-text-conversion): every [tool in the toolbox](/docs/category/40-specs/tools) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/overview/tev2-text-conversion#steps) that individual [tools](/docs/category/40-specs/tools) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
+At the core of [TEv2](@) is [text conversion](/docs/overview/tev2-text-conversion): every [tool in the toolbox](/docs/category/specs/tools) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/overview/tev2-text-conversion#steps) that individual [tools](/docs/category/specs/tools) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
 
 There are various things that make the further development of [TEv2](@) challenging:
 
@@ -36,7 +36,7 @@ In order to appreciate and come to grips with these challenges, it will definite
 - Other documented topics include:
   - [file structure spec](/docs/tev2-spec-files)
   - [syntax specifications](/docs/tev2-syntax)
-  - [specifications of individual tools](/docs/category/40-specs/tools) - not all specifications hare already been drafted/checked.
+  - [specifications of individual tools](/docs/category/specs/tools) - not all specifications hare already been drafted/checked.
 :::
 
 ## Tooling status as of ...

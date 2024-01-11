@@ -183,7 +183,7 @@ entries:
     term: "body-file"
     termType: "concept"
     isa: "curated-file"
-    bodyFile: "/40-specs/files/11-body-file.md"
+    bodyFile: "/specs/files/11-body-file.md"
     glossaryTerm: "Body File"
     glossaryText: "a file that is located somewhere within the [scopedir](@), and that contains the [body](@) of a [curated text](@). The [header](@) of that [curated text](@) has a field `bodyFile` that specifies its location within the [scopedir](@)."
     synonymOf: null
@@ -201,7 +201,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "body-file.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/files/body-file"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/body-file"
     headingids:
       - "body-files"
     termid: "concept:body-file"
@@ -572,7 +572,7 @@ entries:
   - term: "curated-text-file"
     termType: "concept"
     isa: "curated-file"
-    bodyFile: "/40-specs/files/10-curated-text-file.md"
+    bodyFile: "/specs/files/10-curated-text-file.md"
     glossaryTerm: "Curated Text File"
     glossaryText: "a file that contains either a (complete) [curated text](@), or the [header](@) of that [curated text](@) and a reference to the [file](body-file@) that contains its [body](@)."
     grouptags: null
@@ -593,7 +593,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "curated-text-file.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/files/curated-text-file"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/curated-text-file"
     headingids:
       - "curated-text-files"
       - "docusaurus-front-matter"
@@ -1132,7 +1132,7 @@ entries:
     term: "header"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/files/10-curated-text-file.md"
+    bodyFile: "/specs/files/10-curated-text-file.md"
     glossaryTerm: "Header (of a Curated Text)"
     glossaryText: "the part of a [curated text](@), which is at the beginning of that text, that starts with a line that (only) contains three subsequent '-'characters, and that ends with a second occurrence of such a line. Headers live in [curated text files](@)."
     synonymOf: null
@@ -1150,7 +1150,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "header.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/files/curated-text-file"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/curated-text-file"
     headingids:
       - "curated-text-files"
       - "docusaurus-front-matter"
@@ -1354,7 +1354,7 @@ entries:
     term: "hrgt"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/tools/22-hrgt.md"
+    bodyFile: "/specs/tools/22-hrgt.md"
     glossaryTerm: "Human Readable Glossary Tool"
     glossaryAlias: "HRGT"
     glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/specs/tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
@@ -1411,7 +1411,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "hrgt.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/tools/hrgt"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools/hrgt"
     headingids:
       - "human-readable-glossary-generator-tool-(hrgt)"
       - "installing-the-tool"
@@ -1434,7 +1434,7 @@ entries:
     term: "ict"
     termType: "acronym"
     isa: null
-    bodyFile: "/40-specs/tools-envisaged/11-ict.md"
+    bodyFile: "/specs/tools-envisaged/11-ict.md"
     glossaryTerm: "Integrity Checker Tool"
     glossaryAlias: "ICT"
     glossaryText: "a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data."
@@ -1453,7 +1453,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "ict.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/tools-envisaged/ict"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools-envisaged/ict"
     headingids:
       - "integrity-checker-tool-(ict)"
       - "integrity-checker-tool-(ict)"
@@ -2028,6 +2028,62 @@ entries:
       - "mrdt---machine-readable-dictionary-tool"
     termid: "concept:mrdt"
     vsntag: "documentation"
+  - id: "mrg"
+    term: "mrg"
+    termType: "concept"
+    isa: "glossary"
+    bodyFile: "/specs/files/32-mrg.md"
+    glossaryTerm: "Machine Readable Glossary (MRG)"
+    glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/specs/files/mrg), to enable automated processing and integration with software systems."
+    hoverText: "MRG: {{noRefs glossaryText}}"
+    synonymOf: null
+    grouptags:
+      - "glossaries"
+      - "data-structures"
+    formPhrases:
+      - "mrg"
+      - "mrgs"
+      - "mrg's"
+      - "mrg(s)"
+      - "machine-readable-glossary"
+      - "machine-readable-glossarys"
+      - "machine-readable-glossary's"
+      - "machine-readable-glossaries"
+      - "machine-readable-glossary-mrg"
+      - "machine-readable-glossary-mrgs"
+      - "machine-readable-glossary-mrg's"
+      - "machine-readable-glossary-mrg(s)"
+      - "machine-readable-glossarys-mrg"
+      - "machine-readable-glossarys-mrgs"
+      - "machine-readable-glossarys-mrg's"
+      - "machine-readable-glossarys-mrg(s)"
+      - "machine-readable-glossary's-mrg"
+      - "machine-readable-glossary's-mrgs"
+      - "machine-readable-glossary's-mrg's"
+      - "machine-readable-glossary's-mrg(s)"
+      - "machine-readable-glossaries-mrg"
+      - "machine-readable-glossaries-mrgs"
+      - "machine-readable-glossaries-mrg's"
+      - "machine-readable-glossaries-mrg(s)"
+    status: "proposed"
+    created: 20230731
+    updated: 20230731
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "mrg.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/mrg"
+    headingids:
+      - "machine-readable-glossary-(mrg)"
+      - "file-naming-conventions-{#file-naming-conventions}"
+      - "mrg-structure"
+      - "mrg-`terminology`-section-{#terminology}"
+      - "mrg-`scopes`-section-{#scopes}"
+      - "mrg-entries-(the-`entries`-section)-{#entries}"
+      - "footnotes"
+    termid: "concept:mrg"
+    vsntag: "documentation"
   - term: "mrg-entry"
     termType: "concept"
     isa: null
@@ -2058,7 +2114,7 @@ entries:
     term: "mrg-import"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/tools/13-mrg-import.md"
+    bodyFile: "/specs/tools/13-mrg-import.md"
     glossaryTerm: "MRG Import (Tool)"
     glossaryText: "is a tool in the [TEv2](@) toolbox that is run within a particular [scope](@) for the purpose of obtaining [MRGs](@) from other [scopes](@), as specified in the [scope's](@) [SAF](@), and putting them in the [scope's](@) [glossarydir](@)."
     synonymOf: null
@@ -2078,7 +2134,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mrg-import.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/tools/mrg-import"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools/mrg-import"
     headingids:
       - "mrg-import-tool"
       - "mrg-files"
@@ -2091,7 +2147,7 @@ entries:
   - term: "mrg-ref"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/syntax/41-mrg-ref-syntax.md"
+    bodyFile: "/specs/syntax/41-mrg-ref-syntax.md"
     glossaryTerm: "MRGRef"
     glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
     synonymOf: null
@@ -2113,7 +2169,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mrg-ref.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/syntax/mrg-ref-syntax"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/syntax/mrg-ref-syntax"
     headingids:
       - "mrg-references---syntax"
       - "default-mrgref-syntax-{#default-mrgref-syntax}"
@@ -2139,7 +2195,7 @@ entries:
     term: "mrgt"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/tools/21-mrgt.md"
+    bodyFile: "/specs/tools/21-mrgt.md"
     glossaryTerm: "Machine Readable Glossary Tool"
     glossaryAlias: "MRGT"
     glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
@@ -2197,7 +2253,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "mrgt.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/tools/mrgt"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools/mrgt"
     headingids:
       - "machine-readable-glossary-generation-tool"
       - "installing-the-tool"
@@ -2785,7 +2841,7 @@ entries:
   - id: "saf"
     term: "saf"
     termType: "concept"
-    bodyFile: "/40-specs/files/12-saf.md"
+    bodyFile: "/specs/files/12-saf.md"
     glossaryTerm: "Scope Administration File (SAF)"
     glossaryText: "a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@). The SAF of a [scope](@) is located in its [scopedir](@)."
     hoverText: "SAF: a YAML file that contains essential data about a particular scope, such as the locations of the scope's curated texts, glossaries, and the specifications of the curated terminologies. The SAF is located in the so-called scopedir."
@@ -2841,7 +2897,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "saf.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/files/saf"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/saf"
     headingids:
       - "scope-administration-file-(saf)"
       - "scope-administration-file-field-descriptions"
@@ -3185,7 +3241,7 @@ entries:
   - term: "term-identifier"
     termType: "concept"
     isa: "identifier"
-    bodyFile: "/40-specs/syntax/21-term-identifier-syntax.md"
+    bodyFile: "/specs/syntax/21-term-identifier-syntax.md"
     glossaryTerm: "Term Identifier"
     glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@). If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
     formPhrases:
@@ -3201,7 +3257,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "term-identifier.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/syntax/term-identifier-syntax"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/syntax/term-identifier-syntax"
     headingids:
       - "term-identifier"
       - "syntax"
@@ -3397,7 +3453,7 @@ entries:
   - term: "terminology-identifier"
     termType: "concept"
     isa: "identifier"
-    bodyFile: "/40-specs/syntax/31-terminology-identifier-syntax.md"
+    bodyFile: "/specs/syntax/31-terminology-identifier-syntax.md"
     glossaryTerm: "Terminology Identifier"
     glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@). If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
     hoverText: "a text (identifier), of the form `<scopetag>:<vsntag>`, that identifies a terminology from within a particular scope. If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
@@ -3416,7 +3472,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "terminology-identifier.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/syntax/terminology-identifier-syntax"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/syntax/terminology-identifier-syntax"
     headingids:
       - "terminology-identifiers"
       - "syntax"
@@ -3623,7 +3679,7 @@ entries:
     term: "trrt"
     termType: "concept"
     isa: null
-    bodyFile: "/40-specs/tools/12-trrt.md"
+    bodyFile: "/specs/tools/12-trrt.md"
     glossaryTerm: "TermRef Rendering Tool"
     glossaryAlias: "TRRT"
     glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
@@ -3652,7 +3708,7 @@ entries:
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
     locator: "trrt.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/40-specs/tools/trrt"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools/trrt"
     headingids:
       - "term-reference-resolution-tool-(trrt)"
       - "installing-the-tool-{#install}"

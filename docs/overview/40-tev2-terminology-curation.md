@@ -27,4 +27,4 @@ This document provides an overview of the knowledge that [curators](@) may need 
 
 2. [Curation](@) of terminological contributions. This requires knowledge about the [file structure](/docs/specs/files/curated-text-file) of [curated file](@).
 
-3. [generation](/docs/category/specs/tools) of [semantic units](@). It is typical for a [terms community](@) to want to have a [glossary](@) of the terms they either have defined themselves, or are defined elsewhere but are to be used within that [community](@). However, other artifacts may be generated as well (a [dictionary](@), white papers, etc.) - this is all up to the [community](@).
+3. Generation of documentation (artifacts). It is typical for a [terms community](@) to want to have a [glossary](@) of the terms they either have defined themselves, or are defined elsewhere but are to be used within that [community](@). However, other artifacts may be generated as well (a [dictionary](@), white papers, etc.) - this is all up to the [community](@).

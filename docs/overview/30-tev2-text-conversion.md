@@ -63,9 +63,9 @@ A text conversion step works on a single source (file)[^1], as follows:
 
 Every [TEv2](@) [text conversion tool](@) has one particular
 
-- [interpreter profile](@), i.e., a specification of the [named capturing groups](@) that an [interpreter](@) should populate if it is to be useable for that tool. The tool-specific [interpreter profile](@) is specified in the [documentation of that tool](/docs/category/specs/tools).
+- [interpreter profile](@), i.e., a specification of the [named capturing groups](@) that an [interpreter](@) should populate if it is to be useable for that tool. The tool-specific [interpreter profile](@) is specified in the [documentation of that tool](toolbox).
 
-- [converter profile](@), i.e., a specification of the [moustache variables](@) that a [converter](@) can use for the construction of the replacement text. The tool-specific [converter profile](@) is specified in the [documentation of that tool](/docs/category/specs/tools).
+- [converter profile](@), i.e., a specification of the [moustache variables](@) that a [converter](@) can use for the construction of the replacement text. The tool-specific [converter profile](@) is specified in the [documentation of that tool](toolbox).
 
 ## Configuration of a Text Conversion Tool
 

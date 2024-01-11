@@ -1031,7 +1031,7 @@ entries:
     bodyFile: "/specs/tools/22-hrgt.md"
     glossaryTerm: "Human Readable Glossary Tool"
     glossaryAlias: "HRGT"
-    glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/specs/tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+    glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](hrgt@). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     synonymOf: null
     grouptags:
       - "tools"
@@ -1646,7 +1646,7 @@ entries:
     bodyFile: "/specs/tools/21-mrgt.md"
     glossaryTerm: "Machine Readable Glossary Tool"
     glossaryAlias: "MRGT"
-    glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+    glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](mrgt@). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     hoverText: "MRGT: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags:
@@ -1805,7 +1805,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Provisional MRG"
-    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/specs/tools/mrgt#post-processing) to result in a proper [MRG](@)."
+    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](mrgt#post-processing@) to result in a proper [MRG](@)."
     synonymOf: null
     grouptags: null
     formPhrases:

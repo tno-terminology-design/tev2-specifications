@@ -24,10 +24,10 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A **converter** is a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output.
 
-The [specifications](/docs/category/toolbox-specs) of the particular [tool](text-conversion-tool@) tell you which [converters](@) are predefined for that [tool](text-conversion-tool@), and what the [converter profile](@) is that a customized [converter](@) may use.
+The [specifications](/docs/category/40-specs/tools) of the particular [tool](text-conversion-tool@) tell you which [converters](@) are predefined for that [tool](text-conversion-tool@), and what the [converter profile](@) is that a customized [converter](@) may use.
 
 :::info Editor's note
 We could perhaps add references to appropriate sections of relevant tools, so that readers can see examples of this.
 :::
 
-The generic workings of converters is documented in the [TEv2 Text Conversion pattern](/docs/10-overview/tev2-text-conversion).
+The generic workings of converters is documented in the [TEv2 Text Conversion pattern](/docs/overview/tev2-text-conversion).

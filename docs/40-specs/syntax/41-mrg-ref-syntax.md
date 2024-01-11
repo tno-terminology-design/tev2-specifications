@@ -36,9 +36,17 @@ Predefined glossary interpreters have the advantage that they are easy to use. H
 
 The predefined interpreters for detecting [MRGRefs](@) are as follows:
 
+```mdx-code-block
+<APITable>
+```
+
 | `<interpreter>` | Description |
 | :-------------- | :---------- |
 | `default`       | `{% hrg="<tid>" converter="<converter>" sorter="<sorter>" %}`, where `converter="<converter>"` and `sorter="<sorter>"` are optional. This is the default [interpreter](@) for [MRGRefs](@). |
+
+```mdx-code-block
+</APITable>
+```
 
 ## Predefined MRGRef Converters {#predefined-mrgref-converters}
 
@@ -48,11 +56,19 @@ However, [curators](@) can specify other formats. To help them do this, the exam
 
 The predefined converters for glossary generation are:
 
+```mdx-code-block
+<APITable>
+```
+
 | `<glossary layout>`      | Description |
 | :---------------------- | :---------- |
 | `markdown-table-row`    | [HRG entries](@) are compiled as a single markdown table row, where the first cell contains the term, and the second its description. |
 | `markdown-section-2`    | [HRG entries](@) are compiled as a markdown section, with the term as section header 2 `## `, and the description as the section body below. |
 | `markdown-section-3`    | [HRG entries](@) are compiled as a markdown section, with the term as section header 3 `### `, and the description as the section body below. |
+
+```mdx-code-block
+</APITable>
+```
 
 ### Converter for Markdown Tables
 

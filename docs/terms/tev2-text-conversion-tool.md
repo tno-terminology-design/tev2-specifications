@@ -26,7 +26,7 @@ A **TEv2 Text Conversion Tool** is a [TEv2 tool](@) whose purpose is to convert 
 
 Examples of such [tools](tev2-text-conversion-tool@) include the [TRRT](@) and the [HRGT](@).
 
-All [text conversion tools](@) follow the same [pattern for converting texts](/docs/10-overview/tev2-text-conversion). This implies that each of them
+All [text conversion tools](@) follow the same [pattern for converting texts](/docs/overview/tev2-text-conversion). This implies that each of them
 
 - has a specific [interpreter profile](@) and a specific [converter profile](@) and
 - can be configured using a predefined or custom [interpreter](@) and [converter](@) that match these profiles respectively.

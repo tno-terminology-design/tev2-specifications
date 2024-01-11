@@ -68,7 +68,7 @@ scope:
 
 There are cases in which it is beneficial to use [terminologies](@) that are [curated](@) outside of the [scope](@). For example, if you would like to use one or more [terms](@) that we use here in this documentation, you can do so by adding a reference to the [scope](@) in which we [curate](@) these terms.
 
-A reference to another [scope](@) is an entry in the [`scopes` section](/docs/40-specs/files/saf#scopes) of the [SAF](@), which consists of:
+A reference to another [scope](@) is an entry in the [`scopes` section](/docs/specs/files/saf#scopes) of the [SAF](@), which consists of:
 
 - a `scopetag` field, that contains a single [scopetag](@) that you choose to represent this [scope](@) with (from within your own [scope](@))
 - a `scopedir` field, that contains the URL to the [scopedir](@) where the [SAF](@) of this other [scope](@) is located.
@@ -89,14 +89,14 @@ scopes:
 
 ### Adding Configurations for [Terminologies](@)
 
-Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](/docs/40-specs/files/mrg#file-naming-conventions@).
+Within a [scope](@), there can be multiple [terminologies](@), each of which is identified within that [scope](@) through [versiontags](@). The specification of the [versiontags](@), as well as the contents of a [terminology](@), is done within the [SAF](@). The actual contents of a [terminology](@) can be found in an associated [MRG](@), that is located in the [glossarydir](@) of the [scope](@), and that adheres to the [MRG file naming conventions](/docs/specs/files/mrg#file-naming-conventions@).
 
-The [versiontags](@) and the contents of a [terminology](@) are specified as an entry in the [`versions` section](/docs/40-specs/files/saf#versions) of the [SAF](@). This section must contain at least:
+The [versiontags](@) and the contents of a [terminology](@) are specified as an entry in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@). This section must contain at least:
 
 - a `vsntag` field, that contains the (main) [versiontag](@) of the [terminology](@).
-- a `termselection` field, that consists of [instructions for composing the contents](/docs/40-specs/syntax/mrg-term-selection-syntax) of the [terminology](@).
+- a `termselection` field, that consists of [instructions for composing the contents](/docs/specs/syntax/mrg-term-selection-syntax) of the [terminology](@).
 
-Every [scope](@) has one default [terminology](@), whose [versiontag](@) must be specified in the `defaultvsn` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@).
+Every [scope](@) has one default [terminology](@), whose [versiontag](@) must be specified in the `defaultvsn` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@).
 
 Here are some example terminology-configurations:
 
@@ -126,7 +126,7 @@ versions:
   - "*" # import all terms as defined/described in the curated text of this scope.
 ...
 ```
-If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/40-specs/syntax/mrg-term-selection-syntax) to the `termselection` field.
+If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/mrg-term-selection-syntax) to the `termselection` field.
 
 </TabItem>
 
@@ -149,8 +149,8 @@ versions:
 Notes:
 
 - The `altvsntag` field expects you to specify a list of alternative [versiontags](@); not just one.
-- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](/docs/40-specs/files/mrg#file-naming-conventions@).
-- If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/40-specs/syntax/mrg-term-selection-syntax) to the `termselection` field.
+- For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](/docs/specs/files/mrg#file-naming-conventions@).
+- If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/mrg-term-selection-syntax) to the `termselection` field.
 
 </TabItem>
 
@@ -161,9 +161,9 @@ The contents of a [terminology](@) does not necessarily consist of all [terms] d
 - adding [terms](@) to a [terminology](@), either from [curated texts](@), or from [MRGs](@) that are imported from other [scopes](@);
 - removing [terms](@) from a [terminology](@), e.g. to compensate for a previous addition of too many terms;
 
-This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](/docs/40-specs/tools/mrgt#running-the-tool).
+This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](/docs/specs/tools/mrgt#running-the-tool).
 
-The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/40-specs/syntax/mrg-term-selection-syntax).
+The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/specs/syntax/mrg-term-selection-syntax).
 
 To give you a flavor of what this entails, here is an example:
 

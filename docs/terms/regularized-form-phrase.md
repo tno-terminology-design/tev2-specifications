@@ -33,7 +33,7 @@ The purpose of having [regularized form phrases](@) is that they
 
 There are two situation in which a [form phrase](@) needs to be converted into a [regularized text](@) (i.e., a [regularized form phrase](@)):
 
-1. When constructing an [MRG entry](@) from a [curated text](@). In this case, the [form phrases](@) thjat are the elements of the `formPhrases` field of the [header](@) of a [curated text](@) must be converted into [regularized form phrases](@) that before putting them into the `formPhrases` field of the corresponding [MRG entry](@). Details are given in [Constructing a Provisional MRG](/docs/40-specs/tools/mrgt#constructing-provisional-mrg).
+1. When constructing an [MRG entry](@) from a [curated text](@). In this case, the [form phrases](@) thjat are the elements of the `formPhrases` field of the [header](@) of a [curated text](@) must be converted into [regularized form phrases](@) that before putting them into the `formPhrases` field of the corresponding [MRG entry](@). Details are given in [Constructing a Provisional MRG](/docs/specs/tools/mrgt#constructing-provisional-mrg).
 2. When resolving a [term ref](@). In this case, the [named capturing group](@) `term` or `showtext` of the [term ref](@) are expected to be [form phrases](@) that need to be converted into [regularized form phrases](@) so that they can be used as search key to find the [MRG entry](@) to which the [term ref](@) refers.
 
 ## Regularizing Form Phrases {#regularization-process}

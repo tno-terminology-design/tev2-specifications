@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [TermRefs](@) as inputs, and that outputs (a copy of) these files in which these [TermRefs](@) are converted into [renderable refs](@).
 
-While [TermRefs](@) have a [default syntax](/docs/40-specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [TRRT](@) should be using.
+While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [TRRT](@) should be using.
 
 [Renderabe refs](@) do not have a default structure, but there are various predefined ([converters](@)) that can be chosen (or specified) for the [TRRT](@) to use.
 
@@ -157,7 +157,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 
 ## Term Ref Resolution {#what-it-does}
 
-All [text conversion tools](@), including the [TRRT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/10-overview/tev2-text-conversion):
+All [text conversion tools](@), including the [TRRT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/overview/tev2-text-conversion):
 
 <p align="center">
 <img
@@ -263,7 +263,7 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
                 1. convert the text to lowercase;
                 3. remove any leading and/or trailing spaces.
             2. there is a match with an [MRG entry](@) if the result of this conversion is either a [form phrase](@) that appears in the `formPhrases` field of that [MRG entry](@), or if the result matches the `term` field of that [MRG entry](@).[^1]
-        3. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/40-specs/files/mrg#terminology) of the [MRG](@).
+        3. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/specs/files/mrg#terminology) of the [MRG](@).
 3. If the remaining set of [entries](mrg-entry@) is either empty (not found), or contains multiple [entries](mrg-entry@) (ambiguous [TermRef](@)), an appropriate exception must be raised (and logged), and conversion of (only!) this [TermRef](@) is discontinued
 4. If the remaining set of [entries](mrg-entry@) contains precisely one element, its fields will be made available as [moustache variables](@) for further processing by the [converter](@).
 

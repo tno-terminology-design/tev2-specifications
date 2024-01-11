@@ -26,4 +26,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 **ICT** stands for **Integrity Checker Tool**. It is a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data.
 
-The [TEv2](@) has an [ICT-specification](/docs/40-specs/tools-envisaged/ict).
+The [TEv2](@) has an [ICT-specification](/docs/specs/tools-envisaged/ict).

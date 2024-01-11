@@ -30,7 +30,7 @@ The precise meaning of a [term](@) thus depends on the [scope](@)/context in whi
 
 [Terms](@) may come in different (grammatical) forms. For example, words/phrases such as 'terms', 'term's', or 'term(s)' are different forms of the word 'term'. Within [TEv2](@), words/phrases that are such different forms are called '[form phrases](@). They can be [specified](#specifying@) in the [curated text](@) that documents the [semantic unit](@) to which they (and the [term](@) they are varieties of) refer.
 
-The [TermRef](@) [syntax specification](/docs/40-specs/syntax/term-ref-syntax) specifies the syntax that [authors](@) should use as they want to use a specific [term](@) in their text.
+The [TermRef](@) [syntax specification](/docs/specs/syntax/term-ref-syntax) specifies the syntax that [authors](@) should use as they want to use a specific [term](@) in their text.
 
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 

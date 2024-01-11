@@ -11,12 +11,12 @@ This page intends to provide (lots of pointers to) information that people may n
 
 ## What it is about
 
-At the core of [TEv2](@) is [text conversion](/docs/10-overview/tev2-text-conversion): every [tool in the toolbox](/docs/category/toolbox-specs) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/10-overview/tev2-text-conversion#steps) that individual [tools](/docs/category/toolbox-specs) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
+At the core of [TEv2](@) is [text conversion](/docs/overview/tev2-text-conversion): every [tool in the toolbox](/docs/category/40-specs/tools) takes one or more input files, does some textual processing, and produces outputs. The basic [conversion pattern](/docs/overview/tev2-text-conversion#steps) that individual [tools](/docs/category/40-specs/tools) are expected to follow ensures that they can be easily extended, e.g., to operate on different input formats, or to produce alternative output formats.
 
 There are various things that make the further development of [TEv2](@) challenging:
 
-1. the interop between individual tools: outputs of one tool must be fit for processing by another tool (which may include existing third party tools, such as static website generators), as described in the [TEv2 Architecture](/docs/10-overview/tev2-architecture).
-2. designing actual tools such that they can be easily extended (also by others) to accept different input formats, and/or produce different output formats, as described in the [text conversion steps pattern](/docs/10-overview/tev2-text-conversion#steps)
+1. the interop between individual tools: outputs of one tool must be fit for processing by another tool (which may include existing third party tools, such as static website generators), as described in the [TEv2 Architecture](/docs/overview/tev2-architecture).
+2. designing actual tools such that they can be easily extended (also by others) to accept different input formats, and/or produce different output formats, as described in the [text conversion steps pattern](/docs/overview/tev2-text-conversion#steps)
 3. designing tools such that they can be easily used in different contexts (e.g. whether or not to dockerize a tool)
 4. collaborating with other people that work on the tools such that the coherence and consistent working of tools that different people develop is guaranteed. We may need to better organize this.
 5. making the tools automatically testable, e.g. by running test suites as part of the CI/CD street we envisage that tools would have.
@@ -36,7 +36,7 @@ In order to appreciate and come to grips with these challenges, it will definite
 - Other documented topics include:
   - [file structure spec](/docs/tev2-spec-files)
   - [syntax specifications](/docs/tev2-syntax)
-  - [specifications of individual tools](/docs/category/toolbox-specs) - not all specifications hare already been drafted/checked.
+  - [specifications of individual tools](/docs/category/40-specs/tools) - not all specifications hare already been drafted/checked.
 :::
 
 ## Tooling status as of ...
@@ -46,22 +46,22 @@ For the date of the tooling status, see the "<i>last updated on</i>" text at the
 ### Under development
 
 
-- [MRGT](/docs/40-specs/tools/mrgt), which is in [this toip repo](https://github.com/trustoverip/ctwg-toolkit-mrg). The tool works, but still has some [bugs/issues](https://github.com/trustoverip/ctwg-toolkit-mrg/issues) that need to be fixed.
-- [TRRT](/docs/40-specs/tools/trrt), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
+- [MRGT](/docs/specs/tools/mrgt), which is in [this toip repo](https://github.com/trustoverip/ctwg-toolkit-mrg). The tool works, but still has some [bugs/issues](https://github.com/trustoverip/ctwg-toolkit-mrg/issues) that need to be fixed.
+- [TRRT](/docs/specs/tools/trrt), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
 
 ### High priority
 
-- ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/40-specs/files/curated-text-file);
-- [HRGT](/docs/40-specs/tools/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
+- ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/specs/files/curated-text-file);
+- [HRGT](/docs/specs/tools/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
 
 ### Medium priority:
 
-- [ICT](/docs/40-specs/tools-envisaged/ict), which allows for integrity checking. The current specifications are outdated and first need to be revised.
+- [ICT](/docs/specs/tools-envisaged/ict), which allows for integrity checking. The current specifications are outdated and first need to be revised.
 
 ### Lower priority:
 
 - extensions for the [TRRT](@), and perhaps other tools, so that they can be used in [ReSpec](https://dev.w3.org/2008/video/mediaann/ReSpec.js/documentation.html) environments, such as often used for W3C standards.
-- [MRDT](/docs/40-specs/tools-envisaged/mrdt) and [HRDT](/docs/40-specs/tools-envisaged/hrdt)
+- [MRDT](/docs/specs/tools-envisaged/mrdt) and [HRDT](/docs/specs/tools-envisaged/hrdt)
 
 
 ## Starting to contribute

@@ -20,17 +20,17 @@ The actual creation of a [terminology](@), and the subsequent generation of the 
 
 ## Specifying the contents of a terminology {#specifying-terminology}
 
-A [curator](@) specifies a [terminology](@) by creating a new entry in the [`versions` section](/docs/40-specs/files/saf#versions) of the [SAF](@) of the [scope](@) in which the [terminology](@) is [curated](@). This entry will contain 
+A [curator](@) specifies a [terminology](@) by creating a new entry in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@) of the [scope](@) in which the [terminology](@) is [curated](@). This entry will contain 
 
 - one or more [versiontags](@) that allow the [terminology](@) to be [identified](@) (within its [scope](@)), 
 - the [term selection instructions](@) that specify the [terms](@) that are to be included (or removed) from the [terminology](@) as it is being constructed], and
-- some meta-data (see the [documentation](/docs/40-specs/files/saf#versions).
+- some meta-data (see the [documentation](/docs/specs/files/saf#versions).
 
 ## Process for creating a terminology
 
 The creation of a [terminology](@) is equivalent with the creation of the set of [MRG entries](@) that document each of the [terms](@) therein. Thus, the process for creating a [terminology](@) can be described as follows:
 1. start with an empty set of [MRG entries](@) - we use the term "[terminology under construction](@)" to refer to this set.
-2. sequentially process the list of [term selection instructions](@) as specified in the appropriate entry of the [`versions` section](/docs/40-specs/files/saf#versions) of the [SAF](@), i.e. instructions which allow for
+2. sequentially process the list of [term selection instructions](@) as specified in the appropriate entry of the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@), i.e. instructions which allow for
   - [adding](#syntax-add) [MRG entries](@) to the [terminology under construction](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.
   - [removing](#syntax-remove) [MRG entries](@) from the [terminology under construction](@);
   - [modifying attributes](#syntax-rename) of a specific [MRG entry](@) in the [terminology under construction](@), e.g. for renaming a term that originated from another [scope](@).
@@ -72,9 +72,9 @@ The following syntaxes are available for adding all terms from a specific source
   | Examples:  | Meaning: |
   | :-------   | :------  |
   | *&nbsp;@tev2:v1 | Add all [terms](@) that are in version `v1` of the [terminology](@) of the [scope](@) identified by `tev2`, i.e., in [MRG](@) file `mrg.tev2.v1.yaml`. |
-  | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.<defaultvsn>.yaml`, where `<defaultvsn>` is the value of the `defaultvsn` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) that is located in the [scopedir](@) associated with the [scopetag](@) `tev2`. |
-  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the current scope. |
-  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.<defaultvsn>.yaml`, where:<br/>- `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the current scope, and<br/>- `<defaultvsn>` is the value of the `defaultvsn` field in that same [SAF](@). |
+  | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.<defaultvsn>.yaml`, where `<defaultvsn>` is the value of the `defaultvsn` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) that is located in the [scopedir](@) associated with the [scopetag](@) `tev2`. |
+  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the current scope. |
+  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the current scope.<br/>i.e., in [MRG](@) file `mrg.<cstag>.<defaultvsn>.yaml`, where:<br/>- `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the current scope, and<br/>- `<defaultvsn>` is the value of the `defaultvsn` field in that same [SAF](@). |
   | *          | Add all [terms](@) that are described by a [curated text](@) in the current scope. |
 
 The difference between `*` and `* @` is that the first takes [curated texts](@) as source, whereas the latter takes an existing [MRG](@) as source, being the [MRG](@) that contains the default version of the [terminology](@) of the current scope. This allows [terminologies](@) to be defined in terms of their predecessors.

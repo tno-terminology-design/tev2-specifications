@@ -6,7 +6,7 @@ term: ingestion
 termType: concept
 isa: 
 glossaryTerm: Ingestion (Process)
-glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/40-specs/files/curated-text-file)."
+glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
 hoverText: "Ingestion Process: {{noRefs glossaryText}}"
 synonymOf: 
 grouptags: 
@@ -23,11 +23,11 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Ingestion (Process)
 
-**Ingestion** (or the **ingestion process**) is the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + associated criteria) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/40-specs/files/curated-text-file).
+**Ingestion** (or the **ingestion process**) is the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + associated criteria) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file).
 
 It is typical that some of the members of the [terms-community](@) are the [curators](@) of the [scope](@) for which the [terminology](@) is being suggested, discussed and maintained.
 
-It is also typical that the members make their contributions in various ways, e.g., using wiki-pages, confluence pages, Google Docs, Word docs, etc. It is important that the members of the [terms-community](@) and the [curators](@) find ways to not only decide on what goes into the [terminology](@), but also how to efficiently convert such contributions into [curated texts](@) that comply with the [specifications](/docs/40-specs/files/curated-text-file). The [TEv2 architecture](/docs/10-overview/tev2-architecture) acknowledges that this may require some specific tools, which is referred to as the 'ingress toolbox'.
+It is also typical that the members make their contributions in various ways, e.g., using wiki-pages, confluence pages, Google Docs, Word docs, etc. It is important that the members of the [terms-community](@) and the [curators](@) find ways to not only decide on what goes into the [terminology](@), but also how to efficiently convert such contributions into [curated texts](@) that comply with the [specifications](/docs/specs/files/curated-text-file). The [TEv2 architecture](/docs/overview/tev2-architecture) acknowledges that this may require some specific tools, which is referred to as the 'ingress toolbox'.
 
 ## Examples
 

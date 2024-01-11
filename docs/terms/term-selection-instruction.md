@@ -22,13 +22,13 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Term Selection Instruction
 
-A **Term Selection Instruction** is an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@). Term selection instructions have a [well defined syntax](/docs/40-specs/syntax/mrg-term-selection-syntax).
+A **Term Selection Instruction** is an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@). Term selection instructions have a [well defined syntax](/docs/specs/syntax/mrg-term-selection-syntax).
 
 Term selection instructions enable [curators](@) to construct a [terminology](@), by
 
-- selecting [terms](@) [that are to be added](/docs/40-specs/syntax/mrg-term-selection-syntax#syntax-add) to the [terminology under construction](@). These [terms](@) can be specified by [curated texts](@) from the [scope](@) itself, or specified within [MRGs](@) that are curated in) other [scopes](@).
-- selecting [terms](@) [that need to be removed](/docs/40-specs/syntax/mrg-term-selection-syntax#syntax-remove) from the [terminology under construction](@).
-- selecting [terms](@) [that need to be renamed (or have attributes modified)](/docs/40-specs/syntax/mrg-term-selection-syntax#syntax-rename) in the [terminology under construction](@).
+- selecting [terms](@) [that are to be added](/docs/specs/syntax/mrg-term-selection-syntax#syntax-add) to the [terminology under construction](@). These [terms](@) can be specified by [curated texts](@) from the [scope](@) itself, or specified within [MRGs](@) that are curated in) other [scopes](@).
+- selecting [terms](@) [that need to be removed](/docs/specs/syntax/mrg-term-selection-syntax#syntax-remove) from the [terminology under construction](@).
+- selecting [terms](@) [that need to be renamed (or have attributes modified)](/docs/specs/syntax/mrg-term-selection-syntax#syntax-rename) in the [terminology under construction](@).
 
 These instructions are essential for determining which terms should be included in an [MRG](@) (and [HRGs](@)) that are maintained within the [scope](@).
 
@@ -36,8 +36,8 @@ Term selection instructions serve as guidelines for curators and stakeholders to
 
 ## Examples
 
-1. There are [examples for adding terms ](/docs/40-specs/syntax/terminology-construction#syntax-add) to a [terminology under construction](@).
-2. There are also [examples for removing terms](/docs/40-specs/syntax/terminology-construction#syntax-remove) from a [terminology under construction](@). 
+1. There are [examples for adding terms ](/docs/specs/syntax/terminology-construction#syntax-add) to a [terminology under construction](@).
+2. There are also [examples for removing terms](/docs/specs/syntax/terminology-construction#syntax-remove) from a [terminology under construction](@). 
 
 ## Notes
 

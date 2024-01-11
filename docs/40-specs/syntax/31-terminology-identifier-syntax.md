@@ -21,11 +21,11 @@ where
 
 - the empty string (null) [identifies](@) the [terminology](@) that is being used by default in the context in which the [terminology identifier](@) is being used. Typically, that would be the default version of the [terminology](@) in the current [scope](@). [^1]
 
-[^1]: When a [terminology](@) [is being constructed](/docs/40-specs/syntax/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
+[^1]: When a [terminology](@) [is being constructed](/docs/specs/syntax/terminology-construction), the empty string [identifies](@) the [terminology that is under construction](terminology-under-construction)(@).
 
 - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
 
-- **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
+- **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
 
 ## Finding the [MRG](@) that corresponds with a [Terminology Identifier](@)
 
@@ -33,7 +33,7 @@ First, we assume that all [MRGs](@) (that have one or more [MRG entries](@)) tha
 
 Next, we have seen that every [terminology identifier](@) can be resolved into a valid [scopetag](@) and [versiontag](@).
 
-Since all [MRGs](@) follow the [MRG naming conventions](/docs/40-specs/files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
+Since all [MRGs](@) follow the [MRG naming conventions](/docs/specs/files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
 
 ## Examples
 

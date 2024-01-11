@@ -65,6 +65,10 @@ The following fields are defined for the `scope` section of a [SAF](@):
 
 </details>
 
+```mdx-code-block
+<APITable>
+```
+
 | Name        | Req'd | Description |
 | :---------- | :---: | :---------- |
 | `scopetag`    | Y | [Scopetag](@) that [curators](@) of this scope have determined for this [terminology](@). The associated [scopedir](@) is specified in the section `scopes`. |
@@ -81,6 +85,10 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `issues`      | n | URL where issues can be reported and handled.|
 | `curators`    | n | Data that can be used to contact individual [curators](@). |
 | ...           | n | [Curators](@) are free to add additional, [scope](@)-specific fields if they like to. |
+
+```mdx-code-block
+</APITable>
+```
 
 [^1]: note that, contrary to the other fields, the name of this field has uppercase characters.
 
@@ -133,11 +141,11 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 
-The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). The [Terminology Construction page](/docs/40-specs/syntax/terminology-construction) documents the kinds of [term selection instructions](@) that are available, and how they work in the [term](@) selection process.
+The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). The [Terminology Construction page](/docs/specs/syntax/terminology-construction) documents the kinds of [term selection instructions](@) that are available, and how they work in the [term](@) selection process.
 
 This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may be of interest to the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
 
-There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@).
+There must be at least one such field in the `versions` section, namely a field that specifies the default [terminology](@) of the scope, i.e., the [terminology](@) that is identified by the [versiontag](@) that is specified in the `defaultvsn` field of [the `scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@).
 
 <details>
   <summary>Example of a `versions` section</summary>
@@ -182,18 +190,25 @@ The following fields are defined for the `versions` section of a [SAF](@):
 
 </details>
 
+```mdx-code-block
+<APITable>
+```
+
 | Name        | Req'd | Description |
 | ----------- | :---: | ----------- |
 | `vsntag`      | Y | [Versiontag](@) that that is used to [identify](@) this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version.<br/>Must satisfy [regex](@) `[a-z0-9_-\.]+`. |
 | `altvsntags`  | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version.<br/>Must satisfy [regex](@) `[a-z0-9_-\.]+`. |
 | `license`     | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of this [SAF](@)). The purpose of this field is to allow different versions of the [scope's](@) [terminology](@) to have different licenses. |
-| `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See [Terminology Construction](/docs/40-specs/syntax/terminology-construction) for details. |
+| `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See [Terminology Construction](/docs/specs/syntax/terminology-construction) for details. |
 | `status`      | n | Text that [identifies](@) the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
 | `from`        | F | Date at which it was decided to establish this version. |
 | `to`          | F | Date at which this version will expire (or has expired). |
 
+```mdx-code-block
+</APITable>
+```
 :::info Editor's note
-The `from` and `to` dates have been included to (in future) enable one to refer to a specific version of the terminology that was valid at a particular date. This feature needs to be worked out, and will impact [terminology construction](/docs/40-specs/syntax/terminology-construction), [TermRef specs](/docs/40-specs/syntax/term-ref-syntax), and various tools.
+The `from` and `to` dates have been included to (in future) enable one to refer to a specific version of the terminology that was valid at a particular date. This feature needs to be worked out, and will impact [terminology construction](/docs/specs/syntax/terminology-construction), [TermRef specs](/docs/specs/syntax/term-ref-syntax), and various tools.
 :::
 
 ## Notes

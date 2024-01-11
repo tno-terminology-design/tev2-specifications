@@ -17,14 +17,14 @@ The syntax for a [term identifier](@) is:
 
 where:
 
-- **`termType`:** (optional) specifies the [kind of semantic unit](term-type@) that is to be [identified](@). Typical values are `concept:`, `relation:`, `pattern:` (or `mental-model:`), or `use-case:`. If not specified, its value defaults to that of the `defaulttype`-field in the [scope section](/docs/40-specs/files/saf#scope-section) of the [SAF](@).
+- **`termType`:** (optional) specifies the [kind of semantic unit](term-type@) that is to be [identified](@). Typical values are `concept:`, `relation:`, `pattern:` (or `mental-model:`), or `use-case:`. If not specified, its value defaults to that of the `defaulttype`-field in the [scope section](/docs/specs/files/saf#scope-section) of the [SAF](@).
 
 - **`term`** is required (must satisfy [regex](@) `[a-z0-9_-]+`). It is a text that is used to [identify](@) a [semantic unit](@) within the designated [terminology](@). It appears in the (required) `term`-field of [curated texts](@) and [MRG entries](@).
 
 - **@`terminology-identifier`** (optional) specifies the [terminology](@) withi which the [semantic unit](@) is to be [identified](@). The `terminology-identifier` (without the `@` part) is the combination of a `scopetag`:`vsntag`, where
 
   - **`scopetag`** is a [scopetag](@) that [identifies](@) the [scope](@) of the [terminology](@). If `scopetag` is omitted, the [scope](@) defaults to the current [scope](@).
-  - **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
+  - **`vsntag`** is a [versiontag](@) that [identifies](@) the  version of the [terminology](@) to be used. If `:vsntag` (including the `:`) is omitted, the default version of the [terminology](@) is assumed, as specified in the `defaultvsn` field in the [`scope`-section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the [scope](@) in which the [terminology](@) is maintained.
 
 ## Semantics - Looking for MRG entries {#term-identifiers-mrg-semantics}
 

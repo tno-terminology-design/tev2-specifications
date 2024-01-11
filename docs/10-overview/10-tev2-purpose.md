@@ -17,6 +17,6 @@ In practice, this means that [TEv2](@) provides tools and mechanisms that:
 2. facilitating [authors](@) to write and publish texts where terms can be referenced to their intended meaning, within, and across [scopes](@);
 3. supporting [authors](@), [readers](@) and other stakeholders to such publications as they seek to create and further develop a [terminology](@) that they can commit to (within a specific [scope](@)), which we expect to also help develop insights in their subject matter of that [scope](@)).
 
-These contributions are what so-called [curators](@) of the [scope](@) seek to deliver. They are the ones that make sure that there is a [location](scopedir@) where people can contribute to the development of the [terminology](@) of a [scope](@), and tools are installed and operational that enable [authors](@) to use them as they publish their documents. [Curators](@) have their own [manual](/docs/30-manuals/overview-curator).
+These contributions are what so-called [curators](@) of the [scope](@) seek to deliver. They are the ones that make sure that there is a [location](scopedir@) where people can contribute to the development of the [terminology](@) of a [scope](@), and tools are installed and operational that enable [authors](@) to use them as they publish their documents. [Curators](@) have their own [manual](/docs/manuals/overview-curator).
 
 This website shows what that might look like (popups on [terms](@) showing their [definition](@)).

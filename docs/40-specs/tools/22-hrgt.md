@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 The **Human Readable Glossary Generator Tool ([HRGT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [MRGRefs](@) as inputs, and that outputs (a copy of) these files in which these [MRGRefs](@) are converted into [hrg-lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc.
 
-While [MRGRefs](@) have a [default syntax](/docs/40-specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
+While [MRGRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
 
 [hrg-lists](@) do not have a default structure, but there are various predefined ([converters](@)) that can be chosen (or specified) for the [HRGT](@) to use.
 
@@ -97,7 +97,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 
 ## HRG Generation {#what-it-does}
 
-All [text conversion tools](@), including the [HRGT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/10-overview/tev2-text-conversion):
+All [text conversion tools](@), including the [HRGT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/overview/tev2-text-conversion):
 
 <p align="center">
 <img
@@ -156,7 +156,7 @@ To do that, the [HRGT](@) uses the [interpreter](@) to locate subsequent [MRGRef
 
 The [MRG](@) file associated with an [MRGRef](@) is found by resolving the [terminology identifier](@) that is specified in the [named capturing group](@) `hrg`, which leads to a valid [scopetag](@) and [versiontag](@). 
 
-Since all [MRGs](@) follow the [MRG naming conventions](/docs/40-specs/files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
+Since all [MRGs](@) follow the [MRG naming conventions](/docs/specs/files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
 
 #### Sorting the [HRG list](@)
 

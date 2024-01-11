@@ -24,6 +24,6 @@ A **Curatedir** is a directory within a [scopedir](@) within which every file co
 
 The [curatedir](@) may contain subdirectories to organize the various kinds of [curated texts](@).
 
-The location of the [curatedir](@) of a [scope](@) is specified in the `curatedir` field of the [scope section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of that [scope](@) (which is located in the root of the [scopedir](@)).
+The location of the [curatedir](@) of a [scope](@) is specified in the `curatedir` field of the [scope section](/docs/specs/files/saf#scope-section) of the [SAF](@) of that [scope](@) (which is located in the root of the [scopedir](@)).
 
 Note that files that are not in the [curatedir](@) may nevertheless be [curated](@), e.g., because they contain [body files](@) to which [headers](@) of a [curated text](@) refer.

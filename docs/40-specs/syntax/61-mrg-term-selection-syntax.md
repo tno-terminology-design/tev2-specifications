@@ -13,11 +13,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Curators](@) must have the ability to determine which [terms](@) are, or are not part of a [terminology](@), as a prerequisite for generating a corresponding [MRG](@). This document specifies the syntax for the instructions that [curators](@) can use to do this, and also how these instructions are being processed, which leads to a [provisional MRG](@) that contains [provisional MRG entries](@) for each of these [terms](@). This processing is [the first step in MRG generation](/docs/40-specs/tools/mrgt#constructing-provisional-mrg)
+[Curators](@) must have the ability to determine which [terms](@) are, or are not part of a [terminology](@), as a prerequisite for generating a corresponding [MRG](@). This document specifies the syntax for the instructions that [curators](@) can use to do this, and also how these instructions are being processed, which leads to a [provisional MRG](@) that contains [provisional MRG entries](@) for each of these [terms](@). This processing is [the first step in MRG generation](/docs/specs/tools/mrgt#constructing-provisional-mrg)
 
 ## Introduction
 
-Specifying a [terminology](@), i.e., creating a [provisional MRG](@) is a process that starts with an empty set of [terms](@), i.e., an empty set of [provisional MRG entries](@) that each document such a [term](@). Then, the [terminology selection instructions](@) that are specified for the particular version of the [terminology](@) (as specified in the [`versions` section](/docs/40-specs/files/saf#versions) of the [SAF](@)), are executed; one after the other.
+Specifying a [terminology](@), i.e., creating a [provisional MRG](@) is a process that starts with an empty set of [terms](@), i.e., an empty set of [provisional MRG entries](@) that each document such a [term](@). Then, the [terminology selection instructions](@) that are specified for the particular version of the [terminology](@) (as specified in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@)), are executed; one after the other.
 
 <details>
   <summary>Example SAF, showing elements that are relevant for term selection (irrelevant fields are omitted)</summary>
@@ -58,12 +58,12 @@ In this text, we will use the [term](@) **[current scope](@)** for the [scope](@
 Selecting and subsequently adding [terms](@) to the [provisional MRG](@) consists of:
 1. [identifying](@) such [terms](@);
 2. [identifying](@) the source from which data is to be taken for constructing the associated [MRG entries](@);
-3. [creating](/docs/40-specs/tools/mrgt#create-mrg-entry) a [provisional MRG entry](@) for every [semantic unit](@) that is [identified](@), using the data that documents this [semantic unit](@) in the designated source, and flagging this [provisional MRG entry](@) for further processing if (and only if) the source is the set of [curated texts](@) of the [current scope](@), and the data contains a `synonymOf`-field that is not empty;
+3. [creating](/docs/specs/tools/mrgt#create-mrg-entry) a [provisional MRG entry](@) for every [semantic unit](@) that is [identified](@), using the data that documents this [semantic unit](@) in the designated source, and flagging this [provisional MRG entry](@) for further processing if (and only if) the source is the set of [curated texts](@) of the [current scope](@), and the data contains a `synonymOf`-field that is not empty;
 4. adding this [provisional MRG entry](@) to the [provisional MRG](@), possibly overwriting an [entry](provisional-mrg-entry@) if one already exists for the [identified](@) [term](@).
 
 By default, this source is the set of [curated texts](@) of the [current scope](@). For every [curated text](@) that documents a selected [term](@), a [provisional MRG entry](@) is created that contains the [header](@) of that [curated text](@), without the (first and last) lines that contain `---` (the front matter delimiters).
 
-However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG entry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/40-specs/files/mrg#entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/40-specs/files/mrg#terminology) of the [MRG](@) from which the data was taken.
+However, any (existing) [MRG](@) can be designated as an alternative source, by adding an `@<tid>` part to the instruction, where `<tid>` is a [terminology identifier](@) that [identifies](@) the [terminology](@) from which the [term](@) is to be added. For every [MRG entry](@) in that [MRG](@), that documents a selected [term](@), a [provisional MRG entry](@) is created that contains all fields of that [MRG entry](@), except for the `vsntag` [field](/docs/specs/files/mrg#entries), which will be assigned the value of the `vsntag` field that is found in the ['terminology' section](/docs/specs/files/mrg#terminology) of the [MRG](@) from which the data was taken.
 
 ### Selecting all terms from a particular source {#syntax-add-all-terms}
 
@@ -79,8 +79,8 @@ The following syntaxes are available for selecting all [terms](@) from a specifi
   | :-------   | :------  |
   | *&nbsp;@tev2:v1 | Add all [terms](@) that are in version `v1` of the [terminology](@) of the [scope](@) identified by `tev2`, i.e., in [MRG](@) file `mrg.tev2.v1.yaml`. |
   | * @tev2    | Add all [terms](@) that are in the default version of the [terminology](@) of the [scope](@) identified by `tev2`,<br/>i.e., in [MRG](@) file `mrg.tev2.yaml`. |
-  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the [current scope](@).<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the [current scope](@). |
-  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the [current scope](@).<br/>i.e., in [MRG](@) file `mrg.<cstag>.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/40-specs/files/saf#scope-section) of the [SAF](@) of the [current scope](@). |
+  | * @:v1.0.3 | Add all [terms](@) that are in version `v1.0.3` of the [terminology](@) of the [current scope](@).<br/>i.e., in [MRG](@) file `mrg.<cstag>.v1.0.3.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the [current scope](@). |
+  | * @        | Add all [terms](@) that are in the default version of the [terminology](@) of the [current scope](@).<br/>i.e., in [MRG](@) file `mrg.<cstag>.yaml`, where `<cstag>` is the value of the `scopetag` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) of the [current scope](@). |
   | *          | Add all [terms](@) that are described by a [curated text](@) in the [current scope](@). |
 
 The difference between `*` and `* @` is that the first takes [curated texts](@) as source, whereas the latter takes an existing [MRG](@) as source, being the [MRG](@) that contains the default version of the [terminology](@) of the [current scope](@). This allows [terminologies](@) to be defined in terms of their predecessors.

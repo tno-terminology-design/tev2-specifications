@@ -96,7 +96,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="mrg-import">
 
-Parameters that are specific to the [MRG Import](/docs/40-specs/tools/mrg-import) tool can be put in the YAML section `mrg-import`.
+Parameters that are specific to the [MRG Import](/docs/specs/tools/mrg-import) tool can be put in the YAML section `mrg-import`.
 
 | MRG Import Parameters   | Req'd | Description |
 | :---------------------- | :---: | :---------- |
@@ -116,7 +116,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="mrgt">
 
-Parameters that are specific to the [mrgt](/docs/40-specs/tools/mrgt) can be put in the YAML section `mrgt`.
+Parameters that are specific to the [mrgt](/docs/specs/tools/mrgt) can be put in the YAML section `mrgt`.
 
 | Key                    | Req'd | Description |
 | :--------------------- | :---: | :---------- |
@@ -137,7 +137,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="hrgt">
 
-Parameters that are specific to the [hrgt](/docs/40-specs/tools/hrgt) can be put in the YAML section `hrgt`
+Parameters that are specific to the [hrgt](/docs/specs/tools/hrgt) can be put in the YAML section `hrgt`
 
 | Parameter                       | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
@@ -154,7 +154,7 @@ Parameters that are specific to the [hrgt](/docs/40-specs/tools/hrgt) can be put
 
 There is only one predefined HRGT [interpreter](@) (called `default`). It need not be specified (as it is default). 
 
-It is described in section [MRG References syntax](/docs/40-specs/syntax/mrg-ref-syntax)
+It is described in section [MRG References syntax](/docs/specs/syntax/mrg-ref-syntax)
 
 ## Predefined HRGT converters
 
@@ -172,26 +172,26 @@ The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replac
 
 There is only one predefined HRGT sorting value (called `default`). It need not be specified (as it is default). 
 
-It is described in section [HRGT sorters](/docs/40-specs/tools/hrgt#predefined-sorters).
+It is described in section [HRGT sorters](/docs/specs/tools/hrgt#predefined-sorters).
 
 </TabItem>
 
 <TabItem value="trrt">
 
-Parameters that are specific to the [TRRT](/docs/40-specs/tools/trrt) can be put in the YAML section `trrt`:
+Parameters that are specific to the [TRRT](/docs/specs/tools/trrt) can be put in the YAML section `trrt`:
 
 | TRRT Parameters                 | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). See [TRRT interpreters](/docs/40-specs/tools/trrt#interpreters) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). See [TRRT interpreters](/docs/40-specs/tools/trrt#interpreters) for details. |
+| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). See [TRRT interpreters](/docs/specs/tools/trrt#interpreters) for details. |
+| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). See [TRRT interpreters](/docs/specs/tools/trrt#interpreters) for details. |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 ## Predefined TRRT interpreters
 
 The predefined TRRT [interpreter](@) types are described elsewhere in the documentation, as follows:
-- `default`: section on [Default syntax](/docs/40-specs/syntax/term-ref-default-syntax)
-- `alt`: section on [Alternative syntax](/docs/40-specs/syntax/term-ref-alt-syntax)
+- `default`: section on [Default syntax](/docs/specs/syntax/term-ref-default-syntax)
+- `alt`: section on [Alternative syntax](/docs/specs/syntax/term-ref-alt-syntax)
 
 ## Predefined TRRT converters
 

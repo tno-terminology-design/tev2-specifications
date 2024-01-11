@@ -12,13 +12,13 @@ This document is deprecated. It remains here for the purpose of reusing texts in
 
 This document specifies the syntax of [form phrases](@).
 
-[Form phrases](@) are [used to automatically convert](/docs/40-specs/tools/trrt#id) the `show text` parts of [term refs](@) into `[termid](@)`s, for the purpose of accommodating, e.g., plural forms (for nouns) or conjugate forms (for verbs). This facilitates the work for [authors](@), as this no longer requires them to explicitly mention the `term` part in a [term ref](@) when the `showtext` they use matches one of the [form phrases](@).
+[Form phrases](@) are [used to automatically convert](/docs/specs/tools/trrt#id) the `show text` parts of [term refs](@) into `[termid](@)`s, for the purpose of accommodating, e.g., plural forms (for nouns) or conjugate forms (for verbs). This facilitates the work for [authors](@), as this no longer requires them to explicitly mention the `term` part in a [term ref](@) when the `showtext` they use matches one of the [form phrases](@).
 
 ## Simple Form Phrases
 
 A single [form phrase](@) is a sequence of characters that matches [regex](@) `[a-z0-9_-]+`, where the first and last characters are not `-`. The contents of the `formPhrases` field (in the [header](@) of a [curated text](@)) is a comma-separated list of such [form phrases](@). Note that if a [form phrase](@) contains a special character, it must be surrounded with single or double quotes.
 
-The `formPhrases`-field is used by the [trrt](@) in its attempts to [convert the `showtext`](/docs/40-specs/tools/trrt#showtext) part of a [term ref](@) into a string that can serve as the `term` of that [term ref](@).
+The `formPhrases`-field is used by the [trrt](@) in its attempts to [convert the `showtext`](/docs/specs/tools/trrt#showtext) part of a [term ref](@) into a string that can serve as the `term` of that [term ref](@).
 
 The [trrt](@) does so by looping over the [terms](@) of the designated [terminology](@), and checking whether or not such a [term](@) is a match, as follows:
 
@@ -111,7 +111,7 @@ formPhrases: [ "identif{yies}" ]
 
 The part `{yies}` is a (predefined) macro, that is associated with the [regex](@) `(y|y's|ies)`.
 
-When the [trrt](@) converts a [term ref](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/40-specs/tools/trrt#showtext) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the [form phrase](@) `actor{ss}`.
+When the [trrt](@) converts a [term ref](@), one of the things it needs to do is to [convert a so-called `show-text` into a `term`](/docs/specs/tools/trrt#showtext) that exists in some [curated text](@). If the `show-text` does not match the `term` of any of the [curated texts](@), the [trrt](@) will try to match it against every form phrase in every [curated text](@), including the [form phrase](@) `actor{ss}`.
 
 You can think of how this work as follows[^3]. When the [trrt](@) encounters a `showtext`, it will loop over [curated texts](@) (or [MRG entries](@)) to find a match. If it can't find one (in case `showtext` is not the value of the `term` field), it will the take the list of [form phrases](@) specified in the `formPhrases` field, and replace every of its [form phrase](@) that contains a macro, with all possible [form phrases] that do not contain a macro. For example, if the contents of the `formPhrases` field would be `identifier{ss}, identif(ying)`, the replacement result would be the list `identifier`, `identifiers`, `identifier's`, `identifier(s)`, `identify`, `identifier`, `identifying`, `identifies` and `identified`. So there would be a match if the `showtext` would equal any of these [term refs](@).
 

@@ -34,7 +34,7 @@ The [text conversion tools](@) in the [TEv2 toolbox](@), such as the [TRRT](@) a
 
 Each such tool can be called to perform a [text conversion step](#steps), i.e. a process in which a specified set of (input, or source) files are converted into another set of (output, or target) files. While each [text conversion tool](@) has its particular way of working, they are all designed to follow a specific sequence of steps. This enables users to configure (customize) how the tool works whenever it is called. 
 
-Thus, the [TRRT](@), whose task is to convert [term refs](@) into [renderable refs](@), can be configured to use your own, [customized term ref syntax](/docs/40-specs/syntax/term-ref-syntax#customize). It can also be configured to produce your own particular flavor of [renderable refs](@), by specifying custom [converters](@).
+Thus, the [TRRT](@), whose task is to convert [term refs](@) into [renderable refs](@), can be configured to use your own, [customized term ref syntax](/docs/specs/syntax/term-ref-syntax#customize). It can also be configured to produce your own particular flavor of [renderable refs](@), by specifying custom [converters](@).
 
 ## Text Conversion Steps {#steps}
 
@@ -63,9 +63,9 @@ A text conversion step works on a single source (file)[^1], as follows:
 
 Every [TEv2](@) [text conversion tool](@) has one particular
 
-- [interpreter profile](@), i.e., a specification of the [named capturing groups](@) that an [interpreter](@) should populate if it is to be useable for that tool. The tool-specific [interpreter profile](@) is specified in the [documentation of that tool](/docs/category/toolbox-specs).
+- [interpreter profile](@), i.e., a specification of the [named capturing groups](@) that an [interpreter](@) should populate if it is to be useable for that tool. The tool-specific [interpreter profile](@) is specified in the [documentation of that tool](/docs/category/40-specs/tools).
 
-- [converter profile](@), i.e., a specification of the [moustache variables](@) that a [converter](@) can use for the construction of the replacement text. The tool-specific [converter profile](@) is specified in the [documentation of that tool](/docs/category/toolbox-specs).
+- [converter profile](@), i.e., a specification of the [moustache variables](@) that a [converter](@) can use for the construction of the replacement text. The tool-specific [converter profile](@) is specified in the [documentation of that tool](/docs/category/40-specs/tools).
 
 ## Configuration of a Text Conversion Tool
 
@@ -78,7 +78,7 @@ Every time a [TEv2](@) [text conversion tool](@) is executed, it will use a part
 A [tool](tev2-tool@) can be instructed to use a particular [interpreter](@) and/or [converter](@) by:
 
 - not specifying it, in which case the defaults are used that are specified for that [tool](tev2-tool@);
-- specifying it in a [configuration file](/docs/40-specs/files/configuration-file) that is used when calling the [tool](tev2-tool@);
-- specifying as a command-line argument that is used when calling the [tool](tev2-tool@) (this overrides any specifications in the [configuration file](/docs/40-specs/files/configuration-file) if that were also used).
+- specifying it in a [configuration file](/docs/specs/files/configuration-file) that is used when calling the [tool](tev2-tool@);
+- specifying as a command-line argument that is used when calling the [tool](tev2-tool@) (this overrides any specifications in the [configuration file](/docs/specs/files/configuration-file) if that were also used).
 
 Particular [text conversion tools](@) may have the option of specifying the [converter](@) to be used as part of the text pattern that is located by the [interpreter](@) of the tool. An example of this is the [HRGT](@).

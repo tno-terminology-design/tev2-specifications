@@ -24,4 +24,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 **MRDT** stands for **Machine Readable Dictionary Tool**. It refers to a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@).
 
-The [TEv2](@) specifications (will) have a [MRDT specification](/docs/40-specs/tools-envisaged/mrdt)
+The [TEv2](@) specifications (will) have a [MRDT specification](/docs/specs/tools-envisaged/mrdt)

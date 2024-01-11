@@ -30,7 +30,7 @@ Every [semantic unit](@) that is described in a [curated text](@) may be classif
 
 Whenever the `termType`-field is left empty, or is omitted, and the [curated text](@) is used for generating an [MRG entry](@), this [MRG entry](@) will include a `termType` field that has the default value for that scope. 
 
-The default value is specified in the `defaulttype`-field in the [scope section](/docs/40-specs/files/saf#scope-section) of the [SAF](@). 
+The default value is specified in the `defaulttype`-field in the [scope section](/docs/specs/files/saf#scope-section) of the [SAF](@). 
 
 ## Recommended Term Types
 

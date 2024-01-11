@@ -1357,7 +1357,7 @@ entries:
     bodyFile: "/40-specs/tools/22-hrgt.md"
     glossaryTerm: "Human Readable Glossary Tool"
     glossaryAlias: "HRGT"
-    glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/40-specs/tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+    glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/specs/tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     synonymOf: null
     grouptags:
       - "tools"
@@ -1630,7 +1630,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Ingestion (Process)"
-    glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/40-specs/files/curated-text-file)."
+    glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
     hoverText: "Ingestion Process: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags: null
@@ -2093,7 +2093,7 @@ entries:
     isa: null
     bodyFile: "/40-specs/syntax/41-mrg-ref-syntax.md"
     glossaryTerm: "MRGRef"
-    glossaryText: "a text that is [marked up (in a specific way)](/docs/40-specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
+    glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -2142,7 +2142,7 @@ entries:
     bodyFile: "/40-specs/tools/21-mrgt.md"
     glossaryTerm: "Machine Readable Glossary Tool"
     glossaryAlias: "MRGT"
-    glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/40-specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+    glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     hoverText: "MRGT: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags:
@@ -2245,7 +2245,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "the (name of the field in the [`scope`-section](/docs/40-specs/files/saf#scope-section) of a [SAF](@) that contains the) path to the directory where [curated texts](@) are rendered. The (value of this field) is for the rendered versions of [curated texts](@) what [curatedir](@) is for the [curated texts](@) themselves."
+    glossaryText: "the (name of the field in the [`scope`-section](/docs/specs/files/saf#scope-section) of a [SAF](@) that contains the) path to the directory where [curated texts](@) are rendered. The (value of this field) is for the rendered versions of [curated texts](@) what [curatedir](@) is for the [curated texts](@) themselves."
     hoverText: "the path of the directory, relative to the base URL of a static website, that contains the rendered versions of curated texts."
     synonymOf: null
     grouptags: null
@@ -2504,7 +2504,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Provisional MRG"
-    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/40-specs/tools/mrgt#post-processing) to result in a proper [MRG](@)."
+    glossaryText: "a set of [provisional MRG entries](@), to which such [entries](provisional-mrg-entry@) can be added, removed or modified, as specified by [term selection instructions](@), and that are ultimately [further processed](/docs/specs/tools/mrgt#post-processing) to result in a proper [MRG](@)."
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -3213,7 +3213,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "TermRef"
-    glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/40-specs/syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
+    glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
     synonymOf: null
     grouptags: null
     formPhrases:

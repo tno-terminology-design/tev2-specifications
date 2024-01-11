@@ -18,7 +18,7 @@ The options specified on the command line have precedence over the options speci
 
 <details>
   <summary>Example configuration file</summary>
-The following file has been used in the context of developing this documentation, and put in the root directory of the Github repository. In that root, there is a `docs` directory that contains the [curated texts](@).
+The following file has been used in the context of developing this documentation. Some options like file paths are relative to the directory from which the tools are called, which in this case is the `docs` directory.
 
 ``` yaml
 # TNO Terminology Design tools configuration file (yaml)
@@ -34,14 +34,14 @@ mrgt:
 
 ## Human Readable Glossary Tool
 hrgt:
-  interpreter: default          # Type of interpreter, i.e., a [regex](@), or a predefined type (`default`)
+  interpreter: default          # Type of interpreter, i.e., a regex, or a predefined type (`default`)
   converter: markdown-section-3 # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-table-row, `markdown-section-2`, `markdown-section-3`)
   input:
     - "*gloss*.md"
 
 ## Term Reference Resolution Tool
 trrt:
-  interpreter: default           # Type of interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`)")
+  interpreter: default           # Type of interpreter, i.e., a regex, or a predefined type (`default`, `alt`)")
   converter: html-hovertext-link # Type of converter, i.e., a mustache/handlebars template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`)")
   input: # glob pattern strings for files to be processed by the TRRT
     - "**/*.md"
@@ -80,7 +80,6 @@ Parameters that can be used by most, if not all tools can be put both in tool-sp
 | Generic Parameters      | Req'd | Description |
 | :---------------------- | :---: | :---------- |
 | `scopedir: <path>`      | Y | Path of the scope directory where the SAF is located. |
-| `version: <bool>`       | n | Specify whether or not the version number of the tool must be output. |
 | `onNotExist: <action>`  | n | The action in case something that is necessary for further processing didn't exist. |
 
 The `<action>` parameter can take the following values.
@@ -116,7 +115,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="mrgt">
 
-Parameters that are specific to the [mrgt](mrgt@) can be put in the YAML section `mrgt`.
+Parameters that are specific to the [MRGT](mrgt@) can be put in the YAML section `mrgt`.
 
 | Key                    | Req'd | Description |
 | :--------------------- | :---: | :---------- |
@@ -137,18 +136,28 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="hrgt">
 
-Parameters that are specific to the [hrgt](@) can be put in the YAML section `hrgt`
+Parameters that are specific to the [hrgt](hrgt@) can be put in the YAML section `hrgt`:
 
 | Parameter                       | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
+| `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the HRGT. |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a predefined type (`default`). |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
 | `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`). See [HRGT interpreters](hrgt#interpreters@) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](hrgt#converters@) for details. |
-| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](hrgt#predefined-sorters@) for details. |
+| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](/docs/`spec-`tools/hrgt#converters) for details.|
+| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](/docs/`spec-`tools/hrgt#predefined-sorters) for details.|
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
+
+The `<action>` parameter can take the following values.
+
+| `<action>` | Description |
+| :--------- | :---------- |
+| `'throw'`  | An error is thrown (an exception is raised), and processing will stop. |
+| `'warn'`   | A message is displayed (and logged) and processing continues. |
+| `'log'`    | A message is written to a log(file) and processing continues. |
+| `'ignore'` | Processing continues as if nothing happened. |
 
 ## Predefined HRGT interpreters
 
@@ -158,11 +167,11 @@ It is described in section [MRG References syntax](mrg-ref#predefined-mrgref-int
 
 ## Predefined HRGT converters
 
-Each of the predefined HRGT converters produces an alphabetically sorted list of some of the contents of the [MRG entries](@) that are in the [terminology](@) ([MRG](@)) as detected by the HRGT interpreter.The below table lists the predefined converters, and specifies what each such [MRG entry](@) is converted into.
+Each of the predefined HRGT converters produces a list of some of the contents of the [MRG entries](@) that are in the [terminology](@) ([MRG](@)) as detected by the HRGT interpreter. The below table lists the predefined converters, and specifies what each such [MRG entry](@) is converted into.
 
 The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replaced with the contents of their corresponding fields from the [MRG entry](@). The `{{glossaryTerm}}` is typically converted into a link to the rendered version of the [curated text](@) of the [semantic unit](@) to which the [TermRef](@) refers.
 
-| converter | Convert every [MRG entry](@) into: |
+| Converter | Convert every [MRG entry](@) into |
 | :-------- | :------ |
 | `markdown-table-row` | A markdown table row of two cells, the first containing `{{glossaryTerm}}` and the second `{{glossaryText}}`. Of course, this will only work if the [MRGref](@) is preceded by a markdown table header. |
 | `markdown-section-2` | A level 2 markdown section, using `{{glossaryTerm}}` as the header, and `{{glossaryText}}` as the (textual) contents of that section. |
@@ -183,21 +192,24 @@ Parameters that are specific to the [TRRT](trrt@) can be put in the YAML section
 | TRRT Parameters                 | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). See [TRRT interpreters](trrt#interpreters@) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). See [TRRT interpreters](trrt#interpreters@) for details. |
+| `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the TRRT. |
+| `interpreter: <regex> or <predeftype>`  | n | Type of [TermRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). |
+| `converter[n]: <template> or <predeftype>`* | n | Type of [TermRef](@) converter, i.e., a [mustache/handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
+
+*Multiple converters may be specified by appending a number to the key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[0]`
 
 ## Predefined TRRT interpreters
 
-The predefined TRRT [interpreter](@) types are described elsewhere in the documentation, as follows:
-- `default`: section on [Default syntax](/docs/specs/syntax/term-ref-default-syntax)
-- `alt`: section on [Alternative syntax](/docs/specs/syntax/term-ref-alt-syntax)
+The predefined TRRT [interpreter](@) types match the behavior of the syntaxes described on the [TermRef syntax](/docs/specs/syntax/term-ref-syntax) page, which are:
+- `default`
+- `alt`
 
 ## Predefined TRRT converters
 
 Each of the predefined TRRT converters produces some kind of link to the rendered version of the [curated text](@) of the [semantic unit](@) to which the [TermRef](@) refers, as follows:
 
-| converter | Convert a TermRef into a link of the form: |
+| Converter | Convert a TermRef into a link of the form |
 | :-------- | :------ |
 | `markdown-link`          | `[{{showtext}}](<url>)` |
 | `html-link`              | `<a href="<url>">{{showtext}}</a>` |

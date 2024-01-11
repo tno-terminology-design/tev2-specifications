@@ -5,7 +5,7 @@ id: hrgt
 term: hrgt
 termType: concept
 isa:
-bodyFile: /spec-tools/22-hrgt.md
+bodyFile: /40-specs/tools/22-hrgt.md
 glossaryTerm: Human Readable Glossary Tool
 glossaryAlias: HRGT
 glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](/docs/40-specs/tools/hrgt). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."

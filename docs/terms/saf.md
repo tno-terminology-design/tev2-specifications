@@ -4,7 +4,7 @@ id: saf
 # TEv2 Curated Text Header
 term: saf
 termType: concept
-bodyFile: /spec-files/12-saf.md
+bodyFile: /40-specs/files/12-saf.md
 glossaryTerm: Scope Administration File (SAF)
 glossaryText: "a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@). The SAF of a [scope](@) is located in its [scopedir](@)."
 hoverText: "SAF: a YAML file that contains essential data about a particular scope, such as the locations of the scope's curated texts, glossaries, and the specifications of the curated terminologies. The SAF is located in the so-called scopedir."

@@ -8,7 +8,7 @@ isa:
 bodyFile: /spec-tools/21-mrgt.md
 glossaryTerm: Machine Readable Glossary Tool
 glossaryAlias: MRGT
-glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/spec-tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
+glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/40-specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
 hoverText: "MRGT: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: [ "tools", "glossary-tools" ]
@@ -25,4 +25,4 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # MRGT - Machine Readable Glossary Tool
 
-**MRGT** stands for **Machine Readable Glossary Tool**. It is a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/spec-tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).
+**MRGT** stands for **Machine Readable Glossary Tool**. It is a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](/docs/40-specs/tools/mrgt). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@).

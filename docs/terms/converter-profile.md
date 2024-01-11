@@ -28,4 +28,4 @@ The [specifications of the particular TEv2 tool](/docs/category/toolbox-specs) c
 We could perhaps add references to appropriate sections of relevant tools, so that readers can see examples of this.
 :::
 
-The generic workings of [converter profiles](@) is documented in the [TEv2 Text Conversion pattern](/docs/overview/tev2-text-conversion).
+The generic workings of [converter profiles](@) is documented in the [TEv2 Text Conversion pattern](/docs/10-overview/tev2-text-conversion).

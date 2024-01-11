@@ -5,7 +5,7 @@ termType: concept
 isa:
 bodyFile: /spec-syntax/41-mrg-ref-syntax.md
 glossaryTerm: MRGRef
-glossaryText: "a text that is [marked up (in a specific way)](/docs/spec-syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
+glossaryText: "a text that is [marked up (in a specific way)](/docs/40-specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
 synonymOf:
 grouptags:
 formPhrases: [ "mrg-ref{ss}", "mrgref{ss}" ]

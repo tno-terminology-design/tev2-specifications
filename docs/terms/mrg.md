@@ -8,7 +8,6 @@ isa: glossary
 bodyFile: "/specs/files/32-mrg.md"
 glossaryTerm: Machine Readable Glossary (MRG)
 glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/specs/files/mrg), to enable automated processing and integration with software systems."
-hoverText: "MRG: {{noRefs glossaryText}}"
 synonymOf:
 grouptags: [ "glossaries", "data-structures" ]
 formPhrases: [ "mrg{ss}", "machine-readable-glossar{yies}", "machine-readable-glossar{yies}-mrg{ss}" ]

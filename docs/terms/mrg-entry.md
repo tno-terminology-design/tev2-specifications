@@ -7,7 +7,7 @@ glossaryTerm: MRG Entry
 glossaryText: "A machine-readable (and interpretable) artifact that contains (pointers to) data and meta-data about a particular  [semantic unit](@), such as the associated [term(s)](@), its [definition](@), etc., to make it easy for IT-tools to create, e.g. documentation, [glossaries](@), [dictionaries](@), whitepapers, etc. that uses such [terms](@) ([definitions](@), etc.)."
 synonymOf:
 grouptags:
-formPhrases: [ "mrg-entr{yies}" ]
+formPhrases: [ "mrg-entr{yies}", "mrgentr{yies}" ]
 # Curation status
 status: proposed
 created: 20220811

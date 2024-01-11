@@ -1,5 +1,5 @@
 ---
-id: overview-curator
+id: curator-overview
 sidebar_label: Curators
 date: 20220513
 ---

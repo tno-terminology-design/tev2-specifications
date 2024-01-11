@@ -640,7 +640,6 @@ entries:
     isa: null
     glossaryTerm: "Curator (of a Scope)"
     glossaryText: "a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@)."
-    hoverText: "Curator: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags:
       - "terminology"
@@ -1631,7 +1630,6 @@ entries:
     isa: null
     glossaryTerm: "Ingestion (Process)"
     glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
-    hoverText: "Ingestion Process: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags: null
     formPhrases:
@@ -2035,7 +2033,6 @@ entries:
     bodyFile: "/specs/files/32-mrg.md"
     glossaryTerm: "Machine Readable Glossary (MRG)"
     glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/specs/files/mrg), to enable automated processing and integration with software systems."
-    hoverText: "MRG: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags:
       - "glossaries"
@@ -2096,6 +2093,10 @@ entries:
       - "mrg-entrys"
       - "mrg-entry's"
       - "mrg-entries"
+      - "mrgentry"
+      - "mrgentrys"
+      - "mrgentry's"
+      - "mrgentries"
     status: "proposed"
     created: 20220811
     updated: 20220811
@@ -2199,7 +2200,6 @@ entries:
     glossaryTerm: "Machine Readable Glossary Tool"
     glossaryAlias: "MRGT"
     glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](mrgt@). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
-    hoverText: "MRGT: {{noRefs glossaryText}}"
     synonymOf: null
     grouptags:
       - "tools"

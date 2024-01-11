@@ -24,11 +24,11 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 An **HRG Entry** is a specific kind of (human-readable) rendering of the combination of a [term](@) and a means that helps readers to understand the meaning of that [term](@) when it is used in a sentence.
 
-The way in which a [term](@) is rendered depends on how the [HRGT](@) is called. Specifically, a [term](@) that is defined as a `synonymOf` another [term](@) may be rendered in a way that differs from the way in which [terms](@) are rendered that are not a `synonymOf` some other [term](@). Details are provided in the [HRGT specs](/docs/specs/tools/hrgt).
+The way in which a [term](@) is rendered depends on how the [HRGT](@) is called. Specifically, a [term](@) that is defined as a `synonymOf` another [term](@) may be rendered in a way that differs from the way in which [terms](@) are rendered that are not a `synonymOf` some other [term](@). Details are provided in the [HRGT specs](hrgt@).
 
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
-The [HRGT specs](/docs/specs/tools/hrgt) document how [HRG entries](@) are selected (and manipulated) for the construction of a particular [HRG](@). They also document how [terms](@) are rendered that are, and those that are not [synonyms](@) of some other [term](@) (there may be differences between them).
+The [HRGT specs](hrgt@) document how [HRG entries](@) are selected (and manipulated) for the construction of a particular [HRG](@). They also document how [terms](@) are rendered that are, and those that are not [synonyms](@) of some other [term](@) (there may be differences between them).
 
 ### Purpose
 

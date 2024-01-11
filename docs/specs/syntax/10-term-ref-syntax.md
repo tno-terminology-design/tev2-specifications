@@ -13,7 +13,7 @@ As an [author](@) or [curator](@), you want to be able to mark words or phrases 
 
 [TermRefs](@) can be converted (by the [TRRT](@)) into so-called [renderable refs](@), which are texts that are being rendered in a way that helps readers better understand the words/phrases that you marked up. For example, when the document you authored is used in a website, the [TermRef](@) could be rendered en an emphasized way, and have a popup balloon that has its definition when a reader hovers its mouse over it.
 
-The [TRRT specifications](/docs/specs/tools/trrt#term-ref-resolution) specify
+The [TRRT specifications](trrt#term-ref-resolution@) specify
 - how [TermRefs](@) are converted;
 - how you can customize the [TermRef](@) syntax to your needs;
 - how you can customize the [renderable refs](@) to look like what you want.
@@ -38,7 +38,7 @@ The most general form of the default syntax is:
 where: 
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
 - `termType` (optional) is a [term type](@). When not specified, it is given the default type for [semantic units](@) in the [current scope](@), which usually would be `concept`.
-- `term` (optional) is a [term](@). If not specified, its value is constructed based on the value of `showtext`, as specified in the [TRRT](/docs/specs/tools/trrt#id).
+- `term` (optional) is a [term](@). If not specified, its value is constructed based on the value of `showtext`, as specified in the [TRRT](trrt#id@).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). If specified, it must be the [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic. If not specified it refers to the whole of (the documentation of) the [semantic unit](@).
 - `terminology-identifier` is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 

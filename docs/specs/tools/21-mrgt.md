@@ -141,7 +141,7 @@ An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same elem
 
 When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopetag>.<vsntag>.yaml` is constructed, where:
 
-- `<scopetag>` is the [scopetag](@) that is used within the [current scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@).
+- `<scopetag>` is the [scopetag](@) that is used within the [current scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [`scope` section](docs/specs/files/saf#terminology) of the [SAF](@).
 - `<vsntag>` is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated.
 
 If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
@@ -150,7 +150,7 @@ If a file with that name already exists in the [glossarydir](@) of the [current 
 - a [`scopes` section](/docs/specs/files/mrg#scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/specs/files/saf#scopes) in the [SAF](@);
 - an [`entries` section]((/docs/specs/files/mrg#terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
 
-Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/spec-files/saf#terminology) of the [SAF](@), a copy of that file is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
+Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/specs/files/saf#terminology) of the [SAF](@), a copy of that file is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
 
 Next, the [MRGT](@) will create a copy of the [MRG](@) file for every [versiontag](@) that exists in the `altvsntags`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The copy will contain the same [MRG](@) as the file that has just been written. The name of this copied file is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
 

@@ -162,7 +162,7 @@ The contents of a [terminology](@) does not necessarily consist of all [terms] d
 - adding [terms](@) to a [terminology](@), either from [curated texts](@), or from [MRGs](@) that are imported from other [scopes](@);
 - removing [terms](@) from a [terminology](@), e.g. to compensate for a previous addition of too many terms;
 
-This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](/docs/specs/tools/mrgt#running-the-tool).
+This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](mrgt#running-the-tool@).
 
 The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/specs/syntax/mrg-term-selection-syntax).
 

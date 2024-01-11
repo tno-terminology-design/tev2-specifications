@@ -26,7 +26,7 @@ A [TermRef](@) consists of two parts. The first part is the word or phrase that 
 
 [Authors](@) need to know the [TermRef syntax](/docs/specs/syntax/term-ref-syntax) that they are expected to use.
 
-[Curators](@), which are expected to control the ways in which authored texts are further processed (into rendered texts), will need to know the options provided by the [TRRT tool](/docs/specs/tools/trrt) in order to ensure that the [TermRefs](@) that are used in in authored text are rendered in the way(s) that are envisaged.
+[Curators](@), which are expected to control the ways in which authored texts are further processed (into rendered texts), will need to know the options provided by the [TRRT tool](trrt@) in order to ensure that the [TermRefs](@) that are used in in authored text are rendered in the way(s) that are envisaged.
 
 ## Purpose
 

@@ -27,10 +27,10 @@ Within this [glossarydir](@) we can generate (or import), and hence also find al
 
 - **`mrg.<scopetag>.<vsntag>.yaml`** is the name of a file that contains an actual [MRG](@), or it is a file that links (references) such a file, where:
 
-  - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/spec-files/saf#scopes) of that [SAF](@).
+  - **`<scopetag>`** is the [scopetag](@) that [identifies](@) the [scope](@) in which the [MRG](@) is curated, as specified in the [SAF](@) of the [scope](@) we are in. Thus, its value must either be that of the `scopetag`-field in the [`scope`-section](docs/specs/files/saf#scope-section) of the [SAF](@), or it must be one of the values in the `scopetags`-field in the [scopes (plural) section](docs/specs/files/saf#scopes) of that [SAF](@).
   - **`<vsntag>`** is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be either one of the `vsntag`-fields, or appear in one of the `altvsntag`-fields in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@).
 
-- **`mrg.<scopetag>.yaml`** is a copy of the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [`scope`-section](docs/spec-files/saf#scope-section) of the [SAF](@). 
+- **`mrg.<scopetag>.yaml`** is a copy of the file `mrg.<scopetag>.<vsntag>.yaml`, where `<vsntag>` is the value of `defaultvsn`-field in the [`scope`-section](docs/specs/files/saf#scope-section) of the [SAF](@). 
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [MRG](@) that is relevant for that [scope](@).
 
@@ -179,7 +179,7 @@ The following table documents the fields that are used within the context of [TE
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
 | `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
 | `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`. |
-| `formPhrases`     | n | List of [texts](form-phrase@) that are [used to convert](/docs/specs/tools/trrt#id) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/specs/syntax/form-phrase-syntax).[^3] |
+| `formPhrases`     | n | List of [texts](form-phrase@) that are [used to convert](trrt#id@) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/specs/syntax/form-phrase-syntax).[^3] |
 
 ```mdx-code-block
 </APITable>

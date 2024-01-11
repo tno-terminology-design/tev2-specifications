@@ -38,7 +38,7 @@ As the tool hasn't been made, and no practical experience has been gained, many 
 :::
 
 :::info Editor's Note
-There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/spec-files/saf) and [MRG spec](/docs/specs/files/mrg) define the [regex](@) for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its `hoverText`.
+There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/specs/files/saf) and [MRG spec](/docs/specs/files/mrg) define the [regex](@) for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its `hoverText`.
 :::
 
 
@@ -130,7 +130,7 @@ The columns in the following table are defined as follows:
 | :--      | :----      | :---: | :--: | :---------- |
 | `config` | `<path>`   | n | * | Path (including the filename) of the tool's (YAML) configuration file. This file contains the default key-value pairs to be used. Allowed keys (and the associated values) are documented in this table. Command-line arguments override key-value pairs specified in the configuration file. This parameter SHOULD NOT appear in the configuration file itself. |
 | `scopedir` | `<path>` | Y | * | Path to the [scopedir](@) within which the tool is to operate, i.e.: _this scopedir_. |
-| `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs](docs/spec-files/saf), [terminology construction](/docs/specs/syntax/terminology-construction), [MRG specs](/docs/specs/files/mrg), [Curated Texts](/docs/specs/files/curated-text-file), [TermRefs](/docs/specs/syntax/term-ref-syntax)). |
+| `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs](docs/specs/files/saf), [terminology construction](/docs/specs/syntax/terminology-construction), [MRG specs](/docs/specs/files/mrg), [Curated Texts](/docs/specs/files/curated-text-file), [TermRefs](/docs/specs/syntax/term-ref-syntax)). |
 | `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.altvsntags`.  |
 | `term` | `<term>` | n | -txt | [term](@) that [identifies](@) a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
 | `grouptags` | `<grouptags>` | n | -txt | List of [grouptags](@). Every [curated file](@), whose (front-matter) field `grouptags` has an element that also appears as an element in the `<grouptags>` list, will be integrity-checked. |

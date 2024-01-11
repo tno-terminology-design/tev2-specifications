@@ -46,13 +46,13 @@ For the date of the tooling status, see the "<i>last updated on</i>" text at the
 ### Under development
 
 
-- [MRGT](/docs/specs/tools/mrgt), which is in [this toip repo](https://github.com/trustoverip/ctwg-toolkit-mrg). The tool works, but still has some [bugs/issues](https://github.com/trustoverip/ctwg-toolkit-mrg/issues) that need to be fixed.
-- [TRRT](/docs/specs/tools/trrt), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
+- [MRGT](mrgt@), which is in [this toip repo](https://github.com/trustoverip/ctwg-toolkit-mrg). The tool works, but still has some [bugs/issues](https://github.com/trustoverip/ctwg-toolkit-mrg/issues) that need to be fixed.
+- [TRRT](trrt@), which is currently actively developed by TNO in [this repo](https://github.com/tno-terminology-design/trrt).
 
 ### High priority
 
 - ingress tools that convert wiki-files (and perhaps some other formats) into [curated texts](/docs/specs/files/curated-text-file);
-- [HRGT](/docs/specs/tools/hrgt), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
+- [HRGT](hrgt@), so that we can actually generate human-readable glossaries. For this tool, specifications need to be further drafted (and agreed on).
 
 ### Medium priority:
 

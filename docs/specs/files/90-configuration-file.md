@@ -96,7 +96,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="mrg-import">
 
-Parameters that are specific to the [MRG Import](/docs/specs/tools/mrg-import) tool can be put in the YAML section `mrg-import`.
+Parameters that are specific to the [MRG Import tool](@) can be put in the YAML section `mrg-import`.
 
 | MRG Import Parameters   | Req'd | Description |
 | :---------------------- | :---: | :---------- |
@@ -116,7 +116,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="mrgt">
 
-Parameters that are specific to the [mrgt](/docs/specs/tools/mrgt) can be put in the YAML section `mrgt`.
+Parameters that are specific to the [mrgt](mrgt@) can be put in the YAML section `mrgt`.
 
 | Key                    | Req'd | Description |
 | :--------------------- | :---: | :---------- |
@@ -137,7 +137,7 @@ The `<action>` parameter can take the following values.
 
 <TabItem value="hrgt">
 
-Parameters that are specific to the [hrgt](/docs/specs/tools/hrgt) can be put in the YAML section `hrgt`
+Parameters that are specific to the [hrgt](@) can be put in the YAML section `hrgt`
 
 | Parameter                       | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
@@ -145,16 +145,16 @@ Parameters that are specific to the [hrgt](/docs/specs/tools/hrgt) can be put in
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a predefined type (`default`). |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
 | `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`). See [HRGT interpreters](/docs/`spec-`tools/hrgt#interpreters) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](/docs/`spec-`tools/hrgt#converters) for details.|
-| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](/docs/`spec-`tools/hrgt#predefined-sorters) for details.|
+| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`). See [HRGT interpreters](hrgt#interpreters@) for details. |
+| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](hrgt#converters@) for details. |
+| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](hrgt#predefined-sorters@) for details. |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 ## Predefined HRGT interpreters
 
 There is only one predefined HRGT [interpreter](@) (called `default`). It need not be specified (as it is default). 
 
-It is described in section [MRG References syntax](/docs/specs/syntax/mrg-ref-syntax)
+It is described in section [MRG References syntax](mrg-ref#predefined-mrgref-interpreters@)
 
 ## Predefined HRGT converters
 
@@ -172,19 +172,19 @@ The moustache-variables `{{glossaryTerm}}` and `{{glossaryText}}` will be replac
 
 There is only one predefined HRGT sorting value (called `default`). It need not be specified (as it is default). 
 
-It is described in section [HRGT sorters](/docs/specs/tools/hrgt#predefined-sorters).
+It is described in section [HRGT sorters](hrgt#predefined-sorters@).
 
 </TabItem>
 
 <TabItem value="trrt">
 
-Parameters that are specific to the [TRRT](/docs/specs/tools/trrt) can be put in the YAML section `trrt`:
+Parameters that are specific to the [TRRT](trrt@) can be put in the YAML section `trrt`:
 
 | TRRT Parameters                 | Req'd | Description |
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). See [TRRT interpreters](/docs/specs/tools/trrt#interpreters) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). See [TRRT interpreters](/docs/specs/tools/trrt#interpreters) for details. |
+| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). See [TRRT interpreters](trrt#interpreters@) for details. |
+| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). See [TRRT interpreters](trrt#interpreters@) for details. |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 ## Predefined TRRT interpreters

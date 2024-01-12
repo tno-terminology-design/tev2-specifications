@@ -15,7 +15,7 @@ hrgt:
   converter: markdown-section-3  # `markdown-table-row, `markdown-section-2`, `markdown-section-3` or moustache/handlebars template
   input:                         # glob pattern for files to be processed
     - "tev2-glossary.md"
-#   - "tev2-glossaries-demo.md"
+    - "tev2-glossaries-demo.md"
 
 ## Term Reference Resolution Tool
 trrt:

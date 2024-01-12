@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [TermRefs](@) as inputs, and that outputs (a copy of) these files in which these [TermRefs](@) are converted into [renderable refs](@).
 
-While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [TRRT](@) should be using.
+While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax#default), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [TRRT](@) should be using.
 
 [Renderabe refs](@) do not have a default structure, but there are various predefined ([converters](@)) that can be chosen (or specified) for the [TRRT](@) to use.
 
@@ -120,7 +120,7 @@ npm install -g @tno-terminology-design/trrt
 </Tabs>
 </details>
 
-## Calling the Tool {#call}
+## Calling the Tool {#calling-the-tool}
 
 The behavior of the [TRRT](@) can be configured per call e.g. by a configuration file and/or command-line parameters. The command-line syntax is as follows:
 
@@ -144,6 +144,10 @@ The columns in the following table are defined as follows:
 If a configuration file used, the long version of the parameter must be used (without the preceding `--`).
 </details>
 
+```mdx-code-block
+<APITable>
+```
+
 | Parameter                                | Req'd | Description |
 | :--------------------------------------- | :---: | :---------- |
 | `-V`, `--version`                          | n | output the version number of the tool. |
@@ -154,6 +158,10 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-con`, `--converter <type> or <hexpr>`    | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
+
+```mdx-code-block
+</APITable>
+```
 
 ## Term Ref Resolution {#what-it-does}
 
@@ -198,7 +206,7 @@ Note that the names of some of these [capturing groups](@) do not correspond 1-1
 
 The following sections specify the predefined [intepreters](@) for the [TRRT](@).
 
-#### The `default` Interpreter
+#### The `default` Interpreter {#default-syntax}
 
 The most general form of the `default` [interpreter](@) syntax is:
 
@@ -217,7 +225,7 @@ For completeness, here is the [regex] that defines the `default` [interpreter](@
 (?:(?<=[^`\\])|^)\[(?=[^@\]]+\]\([#a-z0-9_-]*@[:a-z0-9_-]*\))(?<showtext>[^\n\]@]+)\]\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<id>[a-z0-9_-]*)?(?:#(?<trait>[a-z0-9_-]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\)
 ~~~
 
-#### The `alt` (alternative) Interpreter
+#### The `alt` (alternative) Interpreter {#alt-syntax}
 
 It is convenient for [authors](@) to be able to use the '@`scopetag`' part of a (`default`) [TermRef](@) immediately behind the `show text` within the square brackets (`[` and `]`), and leave out the parentheses and the text in between if all the other items are omitted.
 

@@ -67,7 +67,7 @@ When you have worked some time with [form phrases](@), you will have noticed som
 
 A [form phrase](@) macro is a syntax that allows you to specify such a pattern as a single [form phrase](@). For example, the constructions mentioned in the previous paragraph can be specified by adding `{ss}` to the noun, as in `actor{ss}`, `term{ss}`, and `form-phrase{ss}`. The text `{ss}` is a form phrase macro; it is a shorthand syntax that, when used in a [form phrase](@), specifies a list of [form phrases](@) that are derived from its non-macro part.
 
-Details can be found in the [specifications of form phrases](form-phrase-macros#predefineds)
+Details can be found in the [specifications of form phrases](form-phrase-macros#predefineds@)
 
 The following table specifies the [form phrase](@) macros that have currently being defined. The table shows 
 1. the macro text,

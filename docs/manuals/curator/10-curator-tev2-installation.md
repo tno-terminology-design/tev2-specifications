@@ -24,8 +24,8 @@ TEv2 is a tool for [curating](@) [terminology](@)-related data from the perspect
 
 - setting up, or appointing an (online) directory that will serve as a [scope directory](@);
 - creating a [Scope Administration File (SAF)](docs/specs/files/saf), and providing the configuration of the [scope](@) and its [terminology](@);
-- installing the [tev2-toolbox](toolbox);
-- integrating the [tools](toolbox) with other tools, such as a CI/CD pipeline on github or gitlab, static site generators such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. See also: [Using the Tools](toolbox).
+- installing the [tev2-toolbox](toolbox@);
+- integrating the [tools](toolbox@) with other tools, such as a CI/CD pipeline on github or gitlab, static site generators such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. See also: [Using the Tools](toolbox@).
 
 ### Structure of Scope Directories
 

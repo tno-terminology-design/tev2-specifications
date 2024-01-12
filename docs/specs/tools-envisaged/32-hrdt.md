@@ -18,7 +18,7 @@ export const mark = ({children}) => (
   src={useBaseUrl('images/wip/wip-under-construction.png')}
 /><br/><br/>
 
-The **Human Readable Dictionary generation Tool ([HRDT](@))** generates a Human Readable [Dictionary](@) ([HRD](@)), that renders the [terms](@) from a [machine readable dictionary (MRD)](mrd@) into one of several formats, e.g. HTML, or PDF. This rendering may be subject to further processing by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](toolbox)).
+The **Human Readable Dictionary generation Tool ([HRDT](@))** generates a Human Readable [Dictionary](@) ([HRD](@)), that renders the [terms](@) from a [machine readable dictionary (MRD)](mrd@) into one of several formats, e.g. HTML, or PDF. This rendering may be subject to further processing by third-party rendering tools, such as [github pages](https://pages.github.com/) or [Docusaurus](https://docusaurus.io/docs/docs-introduction), etc. (see also: [Using the Tools](toolbox@)).
 
 [HRDs](@) can be created for different purposes, e.g. to
 

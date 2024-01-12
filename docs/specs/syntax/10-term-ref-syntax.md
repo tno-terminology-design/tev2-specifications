@@ -29,6 +29,8 @@ The following tabs-table tells you which syntaxes are predefined:
 
 <TabItem value="default">
 
+## Default TermRef Syntax {#default}
+
 By default a [TermRef](@) can be thought of as a special kind of [Markdown link](https://www.markdownguide.org/basic-syntax/#links). It link-part does not contain a URL or fragment, but contains text that refers to (a specific trait of) a specific [concept](@) or other [semantic unit](@), as defined in a particular [terminology](@).
 
 The most general form of the default syntax is:
@@ -42,7 +44,7 @@ where:
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). If specified, it must be the [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic. If not specified it refers to the whole of (the documentation of) the [semantic unit](@).
 - `terminology-identifier` is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
-## Examples
+### Examples
 
 :::info Editor's note
 vanaf hier tekst reviseren.
@@ -60,14 +62,15 @@ The par
 
 Here is an example of a [TermRef](@): `[definitions](definition@)`. When this text is rendered into a human readable form, it will show the text `definitions` (plural) enhanced, and it will link to the text that describes (or defines) the term `definition` (singular). If you would want to use this term as it is defined in the [scope](@) called `essif-lab`, you could do that by writing `[definitions](definition@essif-lab)` (provided that `essif-lab` is a defined [scopetag](@) within the [scope](@) that you operate in).
 
-
-## Motivation for the chosen syntax
+### Motivation for the chosen syntax
 
 We want to enable [authors](@) to use [TermRefs](@) pervasively, which means it must be easy to use, and mistakes should be (relatively) hard to make, yet easy to detect, identify, and correct. [Markdown links](https://www.markdownguide.org/basic-syntax/#links) are of the form \[`show text`\](`ref-text`), where `show text` is the text that is rendered and emphasized so that a [reader](@) knows it can be clicked, and `ref-text` is a (relative or absolute) URL, or a [heading ID](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids), that identifies the resource (e.g. web page, or place therein) that is being referenced. So, we need a syntax for [TermRefs](@) that is<br/>- sufficiently similar to a [Markdown link](https://www.markdownguide.org/basic-syntax/#links),<br/>- 'humanly interpretable' when it isn't processed by the [TRRT](@),<br/>- easy to use for [authors](@), and<br/>- sufficiently distinct from a Markdown link so that the [TRRT](@) will not process Markdown links yet will process the [TermRefs](@).
 
 </TabItem>
 
 <TabItem value="alternative">
+
+## Alternative TermRef Syntax {#alt}
 
 It is convenient for [authors](@) to be able to use the '@`scopetag`' part of a [TermRef](@) immediately behind the `show text` within the square brackets (`[` and `]`), and leave out the parentheses and the text in between if all the other items are omitted.
 
@@ -93,7 +96,7 @@ In the last row of the above table, `term` and `#trait` are optional. Thus, `[de
 
 </Tabs>
 
-## Customizing Term Ref Syntax (#customize)
+## Customizing TermRef Syntax (#customize)
 
 :::info Editor's note
 this section needs to be written.

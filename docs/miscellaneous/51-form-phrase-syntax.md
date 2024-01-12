@@ -67,19 +67,22 @@ When you have worked some time with [form phrases](@), you will have noticed som
 
 A [form phrase](@) macro is a syntax that allows you to specify such a pattern as a single [form phrase](@). For example, the constructions mentioned in the previous paragraph can be specified by adding `{ss}` to the noun, as in `actor{ss}`, `term{ss}`, and `form-phrase{ss}`. The text `{ss}` is a form phrase macro; it is a shorthand syntax that, when used in a [form phrase](@), specifies a list of [form phrases](@) that are derived from its non-macro part.
 
+Details can be found in the [specifications of form phrases](form-phrase-macros#predefineds)
+
 The following table specifies the [form phrase](@) macros that have currently being defined. The table shows 
 1. the macro text,
 2. the [regex](@) that is used for checking whether a (simplified) `showtext` matches the [form phrase](@),
 3. an example that could appear as a [form phrase](@) in a `formPhrases`-field of a [curated text](@),
 4. the set of (simplified) `showtext`s that would match that [form phrase](@):
 
-| macro    |           [regex](@)                  |     example     | texts that the example matches |
-| -------- | :-----------------------------------: | :-------------: | :----------------------------- |
-| `{ss}`   | <code>(s?\|'s\|(s\))</code>           | `actor{ss}`     | "actor", "actors", "actor's", and "actor(s)" |
-| `{yies}` | <code>(y\|y's\|ies)</code>            | `part{yies}`    | "party", "party's", and "parties" |
-| `{ying}` | <code>(y\|ying\|ies\|ied)</code>      | `identif{ying}` | "identify", "identifying", "identifies", and "identified" |
-| `{es}`   | <code>(es?\|ed\|ing)</code>           | `manag{es}`     | "manage", "manages", "managed", "managing" |
-| `{able}` | <code>(able\|ability)</code>          | `cap{able}`     | "capable", "capability" |
+| macro    | character string map      | example         | is exapanded into |
+| -------- | :-----------------------: | :-------------: | :---------------- |
+| `{ss}`   | "", "s", "'s", "(s)"      | `actor{ss}`     | "actor", "actors", "actor's", and "actor(s)" |
+| `{ess}`  | "", "es", "'s", "(es)"    | `regex{es}`     | "regex", "regexes", "regex's", "regex(es)" |
+| `{yies}` | "y", "y's", "ies"         | `part{yies}`    | "party", "party's", and "parties" |
+| `{ying}` | "y", "ying", "ies", "ied" | `identif{ying}` | "identify", "identifying", "identifies", and "identified" |
+| `{es}`   | "e", "es", "ed", "ing"    | `manag{es}`     | "manage", "manages", "managed", "managing" |
+| `{able}` | "able", "ability"         | `cap{able}`     | "capable", "capability" |
 
 :::tip Use macro's with care.
 The above macro's should be used with care. Here are some tips:

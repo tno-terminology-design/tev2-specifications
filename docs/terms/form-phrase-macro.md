@@ -54,9 +54,10 @@ The following table specifies the [form phrase](@) macros that can be used by de
 3. an example that could appear as a [form phrase](@) in a `formPhrases`-field of a [curated text](@),
 4. the set of (simplified) `showtext`s that would match that [form phrase](@):
 
-| macro    | character string map      | specified [form phrase](@) | resulting [form phrases](@) |
-| -------- | :------------------------ | :-------------: | :----------------------------- |
+| macro    | character string map      | example         | is exapanded into |
+| -------- | :-----------------------: | :-------------: | :---------------- |
 | `{ss}`   | "", "s", "'s", "(s)"      | `actor{ss}`     | "actor", "actors", "actor's", and "actor(s)" |
+| `{ess}`  | "", "es", "'s", "(es)"    | `regex{es}`     | "regex", "regexes", "regex's", "regex(es)" |
 | `{yies}` | "y", "y's", "ies"         | `part{yies}`    | "party", "party's", and "parties" |
 | `{ying}` | "y", "ying", "ies", "ied" | `identif{ying}` | "identify", "identifying", "identifies", and "identified" |
 | `{es}`   | "e", "es", "ed", "ing"    | `manag{es}`     | "manage", "manages", "managed", "managing" |

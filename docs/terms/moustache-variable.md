@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: moustache-variable
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: moustache-variable
 termType: concept

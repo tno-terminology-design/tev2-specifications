@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: ingestion
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: ingestion
 termType: concept

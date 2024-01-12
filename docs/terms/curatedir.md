@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: curatedir
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: curatedir
 termType: concept

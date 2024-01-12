@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: terminology
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: terminology
 termType: pattern

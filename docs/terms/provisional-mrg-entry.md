@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: provisional-mrg-entry
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: provisional-mrg-entry
 termType: concept

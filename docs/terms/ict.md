@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: ict
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: ict
 termType: acronym

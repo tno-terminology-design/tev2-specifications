@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: property
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: property
 termType: concept

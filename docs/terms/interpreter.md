@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: interpreter
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: interpreter
 termType: concept

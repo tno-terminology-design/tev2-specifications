@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: regularized-form-phrase
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: regularized-form-phrase
 termType: concept

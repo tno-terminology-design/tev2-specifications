@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: scope
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: scope
 termType: concept

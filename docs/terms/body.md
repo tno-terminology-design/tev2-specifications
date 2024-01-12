@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: body
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: body
 termType: concept

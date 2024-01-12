@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: form-phrase-macro
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: form-phrase-macro
 termType: concept

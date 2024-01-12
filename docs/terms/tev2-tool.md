@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: tev2-tool
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: tev2-tool
 termType: concept

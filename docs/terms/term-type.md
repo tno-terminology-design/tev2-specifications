@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: term-type
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: term-type
 termType: concept

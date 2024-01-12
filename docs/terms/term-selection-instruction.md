@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: term-selection-instruction
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: term-selection-instruction
 termType: concept

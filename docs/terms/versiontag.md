@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: versiontag
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: versiontag
 termType: concept

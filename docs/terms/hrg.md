@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: hrg
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: hrg
 termType: concept

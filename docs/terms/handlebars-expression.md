@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: handlebars-expression
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: handlebars-expression
 termType: concept

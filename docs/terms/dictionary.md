@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: dictionary
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: dictionary
 termType: concept

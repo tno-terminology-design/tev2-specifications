@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: hrd
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: hrd
 termType: concept

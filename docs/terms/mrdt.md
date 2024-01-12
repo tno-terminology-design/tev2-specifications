@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: mrdt
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: mrdt
 termType: concept

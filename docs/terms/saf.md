@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: saf
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: saf
 termType: concept

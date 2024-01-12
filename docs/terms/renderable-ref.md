@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: renderable-ref
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: renderable-ref
 termType: concept

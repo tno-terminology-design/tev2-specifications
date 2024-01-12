@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: terminology-process
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: terminology-process
 termType: concept

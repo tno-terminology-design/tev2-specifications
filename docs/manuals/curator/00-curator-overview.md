@@ -38,7 +38,7 @@ Thus, whenever a [terms-community](@) decided that some contribution is to be in
 
 This document provides an overview of the knowledge that [curators](@) may need to perform this task, which can be broken up in the following parts:
 
-1. [Setup/installation](/docs/manuals/curator/curator-tev2-installation) of a [scope directory](@) that is suitable for working with TEv2, and the creation of a [SAF](docs/specs/files/saf).
+1. [Setup/installation](/docs/manuals/curator/tev2-installation) of a [scope directory](@) that is suitable for working with TEv2, and the creation of a [SAF](docs/specs/files/saf).
 
 2. [Curation](@) of terminological contributions. This requires knowledge about the [file structure](/docs/specs/files/curated-text-file) of [curated file](@).
 

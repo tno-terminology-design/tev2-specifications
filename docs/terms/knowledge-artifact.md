@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: knowledge artifact
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: knowledge artifact
 termType: concept

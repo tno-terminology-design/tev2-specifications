@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: sorter
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: sorter
 termType: concept

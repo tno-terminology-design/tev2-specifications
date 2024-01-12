@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: formatted-text
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: formatted-text
 termType: concept

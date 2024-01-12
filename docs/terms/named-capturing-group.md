@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: named-capturing-group
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: named-capturing-group
 termType: concept

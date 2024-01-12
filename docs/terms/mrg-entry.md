@@ -1,4 +1,6 @@
----
+# Docusaurus header
+id: mrg-entry
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: mrg-entry
 termType: concept

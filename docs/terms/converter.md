@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: converter
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: converter
 termType: concept

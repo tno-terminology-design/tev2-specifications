@@ -1,6 +1,7 @@
 ---
 # Docusaurus header
 id: conceptualization
+displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: conceptualization
 termType: concept

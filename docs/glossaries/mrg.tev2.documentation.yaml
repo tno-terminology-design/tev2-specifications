@@ -1633,8 +1633,6 @@ entries:
     synonymOf: null
     grouptags: null
     formPhrases:
-      - "ingestion-process"
-      - "ingestion-processes"
       - "ingest"
       - "ingests"
       - "ingested"
@@ -1646,8 +1644,8 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
-    locator: "ingestion-process.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion-process"
+    locator: "ingestion.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/ingestion"
     headingids:
       - "ingestion-(process)"
       - "examples"

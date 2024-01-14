@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: dictionary
 displayed_sidebar: tev2SideBar

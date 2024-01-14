@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: mental-model
 displayed_sidebar: tev2SideBar

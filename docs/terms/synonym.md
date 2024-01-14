@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: synonym
 displayed_sidebar: tev2SideBar

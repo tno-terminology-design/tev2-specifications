@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: scopetag
 displayed_sidebar: tev2SideBar

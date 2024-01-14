@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: glossary
 displayed_sidebar: tev2SideBar

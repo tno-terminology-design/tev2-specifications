@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: term-type
 displayed_sidebar: tev2SideBar

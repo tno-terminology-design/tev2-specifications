@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: ingestion-profile
 displayed_sidebar: tev2SideBar

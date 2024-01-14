@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: knowledge artifact
 displayed_sidebar: tev2SideBar

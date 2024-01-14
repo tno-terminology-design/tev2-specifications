@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: terms-community
 displayed_sidebar: tev2SideBar

@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: curated-text
 displayed_sidebar: tev2SideBar

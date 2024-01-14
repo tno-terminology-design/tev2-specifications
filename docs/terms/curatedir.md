@@ -1,3 +1,4 @@
+---
 # Docusaurus header
 id: curatedir
 displayed_sidebar: tev2SideBar

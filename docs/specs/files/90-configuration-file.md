@@ -58,7 +58,7 @@ If a parameter is specified on the command line, it must be preceded by the `--`
 
 The columns in the following table are defined as follows:
 1. **`Parameter`** specifies the parameter and further specifications.
-2. **`Req'd`** specifies whether (`Y`) or not (`n`) the parameter is required to be present when the tool is being called for actual processing (so not in case a `help` or `version` parameter is specified). If `Y`, the parameter MUST either be present in the configuration file, or as a command-line parameter.
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the parameter is required to be present when the tool is being called for actual processing (so not in case a `help` or `version` parameter is specified). If `Y`, the parameter MUST either be present in the configuration file, or as a command line parameter.
 3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
 </details>
@@ -145,9 +145,6 @@ Parameters that are specific to the [hrgt](hrgt@) can be put in the YAML section
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a predefined type (`default`). |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
 | `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`). See [HRGT interpreters](hrgt#interpreters@) for details. |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). [HRGT converters](/docs/`spec-`tools/hrgt#converters) for details.|
-| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type ( `default`). See [HRGT sorters](/docs/`spec-`tools/hrgt#predefined-sorters) for details.|
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 The `<action>` parameter can take the following values.
@@ -194,16 +191,16 @@ Parameters that are specific to the [TRRT](trrt@) can be put in the YAML section
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
 | `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the TRRT. |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [TermRef](@) interpreter, i.e., a [regex](@), or a predefined type (`default`, `alt`). |
-| `converter[n]: <template> or <predeftype>`* | n | Type of [TermRef](@) converter, i.e., a [mustache/handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). |
+| `converter[n]: <template> or <predeftype>`[^1] | n | Type of [TermRef](@) converter, i.e., a [mustache/handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a predefined type (`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
-*Multiple converters may be specified by appending a number to the key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[0]`
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[0]`
 
 ## Predefined TRRT interpreters
 
 The predefined TRRT [interpreter](@) types match the behavior of the syntaxes described on the [TermRef syntax](/docs/specs/syntax/term-ref-syntax) page, which are:
-- `default`
-- `alt`
+- [`default`](/docs/specs/tools/trrt#default-syntax)
+- [`alt`](/docs/specs/tools/trrt#alt-syntax)
 
 ## Predefined TRRT converters
 

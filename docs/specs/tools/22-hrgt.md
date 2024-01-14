@@ -14,7 +14,7 @@ The **Human Readable Glossary Generator Tool ([HRGT](@))** is a [TEv2 text conve
 
 While [MRGRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
 
-[hrg-lists](@) do not have a default structure, but there are various predefined ([converters](@)) that can be chosen (or specified) for the [HRGT](@) to use.
+[Hrg-lists](@) do not have a default structure, but there are various [predefined converters](#predefined-interpreters) that can be chosen (or specified) for the [HRGT](@) to use.
 
 ## Installing the Tool
 
@@ -61,7 +61,7 @@ npm install -g @tno-terminology-design/hrgt
 
 ## Calling the Tool
 
-The behavior of the [TRRT](@) can be configured per call e.g. by a configuration file and/or command-line parameters. The command-line syntax is as follows:
+The behavior of the [TRRT](@) can be configured per call e.g. by a [configuration file](/docs/specs/files/configuration-file) and/or command line parameters. The command line syntax is as follows:
 
 ~~~
 hrgt [ <paramlist> ] [ <globpattern> ]
@@ -70,23 +70,23 @@ hrgt [ <paramlist> ] [ <globpattern> ]
 where:
 
 - `<paramlist>` is an (optional) list of parameters, as specified in the table below.
-- [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a configuration file is used, its contents may specify an additional set of input files to be processed.
+- [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a [configuration file](/docs/specs/files/configuration-file) is used, its contents may specify an additional set of input files to be processed.
 
 <details>
   <summary>Legend</summary>
 
 The columns in the following table are defined as follows:
 1. **`Parameter`** specifies the parameter and further specifications
-2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the configuration file, or as a command-line parameter.
+2. **`Req'd`** specifies whether (`Y`) or not (`n`) the field is required to be present when the tool is being called. If required, it MUST either be present in the [configuration file](/docs/specs/files/configuration-file), or as a command line parameter.
 3. **`Description`** specifies the meaning of the `Value` field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
 
-If a configuration file used, the long version of the parameter must be used (without the preceding `--`).
+If a [configuration file](/docs/specs/files/configuration-file) used, the long version of the parameter must be used (without the preceding `--`).
 </details>
 
 | Parameter                                | Req'd | Description |
 | :--------------------------------------- | :---: | :---------- |
 | `-V`, `--version`                          | n | output the version number of the tool. |
-| `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) [configuration file](/docs/specs/files/configuration-file). |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
@@ -106,7 +106,7 @@ All [text conversion tools](@), including the [HRGT](@), convert (input) text fi
 /><i>Figure 1: The (generic) parts of a Text Conversion</i>
 </p>
 
-The following subsections specify the particulars for the [HRGT](@) [interpreter profile](@), its predefined [interpreters](@), the construction of its [converter profile](@) and its predefined [converters](@).
+The following subsections specify the particulars of the [HRGT](@): the [interpreter profile](@), its predefined [interpreters](@), the intermediate processing, the construction of its [converter profile](@), its predefined [converters](@), and the predefined sorters.
 
 ### HRGT Interpreter Profile {#interpreter-profile}
 
@@ -123,9 +123,9 @@ The [interpreter profile](@) of the [HRGT](@) consist of the following [named ca
 
 | [Group](named-capturing-group@) | Req'd | Description |
 | --------------- | :---: | ----------- |
-| `hrg`           | n | a [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated. |
-| `converter`     | n | specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
-| `sorter`        | n | specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details. |
+| `hrg`           | n | A [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated. |
+| `converter`     | n | Specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
+| `sorter`        | n | Specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details. |
 
 ### HRGT Predefined Interpreters {#predefined-interpreters}
 
@@ -140,7 +140,7 @@ where:
 - `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details.
 - `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details.
 
-For completeness, here is the [regex] that defines the `default` [interpreter](@) for the [HRGT](@):
+For completeness, here is the [regex] that defines the `default` [interpreter](@) for the [HRGT](@).
 
 ~~~ regex
 {%\s*hrg="(?<hrg>[^"]*)"\s*(?:converter="(?<converter>[^"]*)"\s*)?(?:sorter="(?<sorter>[^"]*)"\s*)?%}
@@ -164,10 +164,10 @@ The [HRG list](@) contains elements that are assocated with one [MRG entry](@), 
 
 ### HRGT Converter Profile {#converter-profile}
 
-The [converter profile](@) of the [HRGT](@) consists of a set of [moustache variables](@) that are populated from the following sources:
+The [converter profile](@) of the [HRGT](@) consists of a set of [moustache variables](@) that are populated from the following sources.
 
-- the fields in the [MRG entry](@) for which an [HRG entry](@) is to be inserted in the [HRG list](@)
-- the fields in the [`terminology`-section](#mrg-terminology) of the [MRG](@) for which a [HRG](@) is being created.
+- The fields in the [MRG entry](@) for which an [HRG entry](@) is to be inserted in the [HRG list](@)
+- The fields in the [`terminology`-section](#mrg-terminology) of the [MRG](@) for which a [HRG](@) is being created.
 
 Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. Such fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [HRGT](@). 
 
@@ -184,36 +184,35 @@ The following tabs specify the predefined [converters](@) for the [TRRT](@).
 
 <TabItem value="markdown-table-row">
 
-The **`markdown-table-row`** [converter](@) is defined by the following [handlebars expression](@):
+The **`markdown-table-row`** [converter](@) is defined by the following [handlebars expression](@).
 
-~~~ markdown
- | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} |\n
+~~~ ts
+| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} |\n
 ~~~
 
 </TabItem>
 
 <TabItem value="markdown-section-2">
 
-The **`markdown-section-2`** [converter](@) is defined by the following [handlebars expression](@):
+The **`markdown-section-2`** [converter](@) is defined by the following [handlebars expression](@).
 
 ~~~ ts
-  ## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
+## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
 ~~~
 
 </TabItem>
 
 <TabItem value="markdown-section-3">
 
-The **`markdown-section-3`** [converter](@) is defined by the following [handlebars expression](@):
+The **`markdown-section-3`** [converter](@) is defined by the following [handlebars expression](@).
 
 ~~~ ts
-  ### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
+### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
 ~~~
 
-This [converter](@) uses the following functions:
-- `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version in case the resource is located on the same site.
+This [converter](@) uses the following functions.
+- `localize`: converts the URL of its argument (i.e., `navurl`) with a (shorter) version by removing the protocol and host parts in case the resource is located on the same site.
 - `capFirst`: capitalizes the first character of every word found in its argument.
-- `noRefs`: replaces every [term ref](@) (default syntax) that it finds in the text of its argument (i.e., in the `glossaryText`) with `{{capFirst showtext}}`.
 
 </TabItem>
 
@@ -234,7 +233,7 @@ The predefined sorting options are as follows:
 
 [^1]: Note that the value of the `termid` field of an [MRG entry](@) is unique within the [MRG](@) that holds the [MRG entry](@) - it serves as a 'primary key'. That's why sorting first on the `term` field and then on the `termType` field makes the sort unique. Also note that this sorting differs from sorting on the `termid` field itself, as this would result in an [HRG](@) in which the [entries](hrg-entry@) are grouped according to their `termType` - thus [concepts](@), [patterns](@), and other kinds of [semantic units](@) are then grouped.
 
-Alternatively, you can specify a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template. Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sort "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
+Alternatively, you can specify a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template. Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sorter "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
 
 ## Example
 
@@ -248,26 +247,26 @@ The table would then be specified as follows:
 ~~~ markdown
 | Term | Description |
 | :--- | :---------- |
-{% hrg="myterms:test" interpreter="default" converter="markdowntable" %}
+{% hrg="myterms:test" converter="markdown-table-row" %}
 ~~~
 
 When this markdown file is processed by the [HRGT](@), a new file is created where the above text has been converted into the following:
 
+~~~ markdown
 | Term | Description |
 | :--- | :---------- |
 | Glossary | an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context. |
 | Curator (of a Scope) | a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@). |
 | Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
+~~~
 
-Further examples are provided in on the [Glossary Generation Demo page](/docs/tev2-glossaries-demo)
+Further examples are provided on the [Glossary Generation Demo page](/docs/tev2-glossaries-demo)
 
-## Processing, Errors and Warnings
+## Errors and Warnings
 
-The [HRGT](@) starts by reading its command-line and configuration file. If the command-line has a key that is also found in the configuration file, the command-line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalid conditions include non-existing directories or files, lack of write-permissions where needed, etc.
+The [HRGT](@) starts by reading its command line and optional [configuration file](/docs/specs/files/configuration-file). If the command line has a key that is also found in the [configuration file](/docs/specs/files/configuration-file), the command line key-value pair takes precedence. The resulting set of key-value pairs is tested for proper syntax and validity. Every improper syntax and every invalidity found will be logged. Improper syntax may be e.g. an invalid [globpattern](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax). Invalid conditions include non-existing directories or files, lack of write-permissions where needed, etc.
 
-Then, the [HRGT](@) reads the specified input files (in arbitrary order), and for each of them, produces an output file that is the same as the input file except for the fact that all [TermRefs](@) have been replaced with regular [markdown links](https://www.markdownguide.org/basic-syntax/#links), and (optionally) with additional texts that are to be used by third-party rendering tools for enhanced rendering of such links. An example of this would be text that can be used to enhance a link with a popup that contains the definition, or a description of the [term](@) that is being referenced.
-
-The [HRGT](@) logs every error- and/or warning condition that it comes across while processing its configuration file, command-line parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
+The [HRGT](@) logs every error- and/or warning condition that it comes across while processing its [configuration file](/docs/specs/files/configuration-file), command line parameters, and input files, in a way that helps tool-operators and document [authors](@) to identify and fix such conditions.
 
 ## Deploying the Tool
 

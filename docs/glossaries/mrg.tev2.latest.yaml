@@ -124,6 +124,7 @@ entries:
     termid: "concept:assertion"
     vsntag: "default"
   - id: "author"
+    displayed_sidebar: "tev2SideBar"
     term: "author"
     termType: "concept"
     isa: null
@@ -151,6 +152,7 @@ entries:
     termid: "concept:author"
     vsntag: "documentation"
   - id: "body"
+    displayed_sidebar: "tev2SideBar"
     term: "body"
     termType: "concept"
     isa: null
@@ -180,6 +182,7 @@ entries:
     termid: "concept:body"
     vsntag: "documentation"
   - id: "body-file"
+    displayed_sidebar: "tev2SideBar"
     term: "body-file"
     termType: "concept"
     isa: "curated-file"
@@ -256,7 +259,9 @@ entries:
       - "criteria"
     termid: "concept:compliance-objective"
     vsntag: "default"
-  - term: "concept"
+  - id: "concept"
+    displayed_sidebar: "tev2SideBar"
+    term: "concept"
     termType: "concept"
     isa: "semantic-unit"
     glossaryTerm: null
@@ -286,6 +291,7 @@ entries:
     termid: "concept:concept"
     vsntag: "documentation"
   - id: "conceptualization"
+    displayed_sidebar: "tev2SideBar"
     term: "conceptualization"
     termType: "concept"
     isa: null
@@ -367,6 +373,7 @@ entries:
     termid: "concept:control-objective"
     vsntag: "default"
   - id: "converter"
+    displayed_sidebar: "tev2SideBar"
     term: "converter"
     termType: "concept"
     isa: null
@@ -393,6 +400,7 @@ entries:
     termid: "concept:converter"
     vsntag: "documentation"
   - id: "converter-profile"
+    displayed_sidebar: "tev2SideBar"
     term: "converter-profile"
     termType: "concept"
     glossaryTerm: "Converter Profile"
@@ -420,7 +428,9 @@ entries:
       - "converter-profile"
     termid: "concept:converter-profile"
     vsntag: "documentation"
-  - term: "corpus"
+  - id: "corpus"
+    displayed_sidebar: "tev2SideBar"
+    term: "corpus"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -486,6 +496,7 @@ entries:
     termid: "concept:credential"
     vsntag: "default"
   - id: "curate"
+    displayed_sidebar: "tev2SideBar"
     term: "curate"
     termType: "concept"
     isa: null
@@ -514,7 +525,9 @@ entries:
       - "notes"
     termid: "concept:curate"
     vsntag: "documentation"
-  - term: "curated-file"
+  - id: "curated-file"
+    displayed_sidebar: "tev2SideBar"
+    term: "curated-file"
     termType: "concept"
     isa: null
     glossaryTerm: "Curated File"
@@ -538,7 +551,9 @@ entries:
       - "curated-files"
     termid: "concept:curated-file"
     vsntag: "documentation"
-  - term: "curated-text"
+  - id: "curated-text"
+    displayed_sidebar: "tev2SideBar"
+    term: "curated-text"
     termType: "concept"
     isa: null
     glossaryTerm: "Curated Text"
@@ -569,7 +584,9 @@ entries:
       - "notes"
     termid: "concept:curated-text"
     vsntag: "documentation"
-  - term: "curated-text-file"
+  - id: "curated-text-file"
+    displayed_sidebar: "tev2SideBar"
+    term: "curated-text-file"
     termType: "concept"
     isa: "curated-file"
     bodyFile: "/specs/files/10-curated-text-file.md"
@@ -605,7 +622,9 @@ entries:
       - "predefined-tev2-header-fields-{#header-fields}"
     termid: "concept:curated-text-file"
     vsntag: "documentation"
-  - term: "curatedir"
+  - id: "curatedir"
+    displayed_sidebar: "tev2SideBar"
+    term: "curatedir"
     termType: "concept"
     isa: null
     glossaryTerm: "Curatedir"
@@ -635,6 +654,7 @@ entries:
     termid: "concept:curatedir"
     vsntag: "documentation"
   - id: "curator"
+    displayed_sidebar: "tev2SideBar"
     term: "curator"
     termType: "concept"
     isa: null
@@ -667,7 +687,9 @@ entries:
       - "notes"
     termid: "concept:curator"
     vsntag: "documentation"
-  - term: "current-scope"
+  - id: "current-scope"
+    displayed_sidebar: "tev2SideBar"
+    term: "current-scope"
     termType: "concept"
     isa: null
     glossaryTerm: "Current Scope"
@@ -692,6 +714,7 @@ entries:
     termid: "concept:current-scope"
     vsntag: "documentation"
   - id: "define"
+    displayed_sidebar: "tev2SideBar"
     term: "define"
     termType: "concept"
     isa: null
@@ -719,7 +742,9 @@ entries:
       - "notes"
     termid: "concept:define"
     vsntag: "documentation"
-  - term: "definition"
+  - id: "definition"
+    displayed_sidebar: "tev2SideBar"
+    term: "definition"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -753,7 +778,9 @@ entries:
       - "notes"
     termid: "concept:definition"
     vsntag: "documentation"
-  - term: "dictionary"
+  - id: "dictionary"
+    displayed_sidebar: "tev2SideBar"
+    term: "dictionary"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -832,6 +859,7 @@ entries:
     termid: "concept:expectation"
     vsntag: "default"
   - id: "form-phrase"
+    displayed_sidebar: "tev2SideBar"
     term: "form-phrase"
     termType: "concept"
     isa: null
@@ -864,6 +892,7 @@ entries:
     termid: "concept:form-phrase"
     vsntag: "documentation"
   - id: "form-phrase-macro"
+    displayed_sidebar: "tev2SideBar"
     term: "form-phrase-macro"
     termType: "concept"
     isa: null
@@ -896,6 +925,7 @@ entries:
     termid: "concept:form-phrase-macro"
     vsntag: "documentation"
   - id: "formatted-text"
+    displayed_sidebar: "tev2SideBar"
     term: "formatted-text"
     termType: "concept"
     isa: "text-format"
@@ -924,7 +954,9 @@ entries:
       - "miscellaneous"
     termid: "concept:formatted-text"
     vsntag: "documentation"
-  - term: "glossary"
+  - id: "glossary"
+    displayed_sidebar: "tev2SideBar"
+    term: "glossary"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -953,7 +985,9 @@ entries:
       - "examples"
     termid: "concept:glossary"
     vsntag: "documentation"
-  - term: "glossarydir"
+  - id: "glossarydir"
+    displayed_sidebar: "tev2SideBar"
+    term: "glossarydir"
     termType: "concept"
     isa: "scopedir"
     glossaryTerm: "Glossarydir"
@@ -984,6 +1018,7 @@ entries:
     termid: "concept:glossarydir"
     vsntag: "documentation"
   - id: "glossaryterm"
+    displayed_sidebar: "tev2SideBar"
     term: "glossaryterm"
     termType: "concept"
     isa: null
@@ -1006,6 +1041,7 @@ entries:
     termid: "concept:glossaryterm"
     vsntag: "documentation"
   - id: "glossarytext"
+    displayed_sidebar: "tev2SideBar"
     term: "glossarytext"
     termType: "concept"
     isa: null
@@ -1065,7 +1101,9 @@ entries:
       - "purpose"
     termid: "concept:governance"
     vsntag: "default"
-  - term: "grouptag"
+  - id: "grouptag"
+    displayed_sidebar: "tev2SideBar"
+    term: "grouptag"
     termType: "concept"
     isa: "tag"
     glossaryTerm: null
@@ -1098,6 +1136,7 @@ entries:
     termid: "concept:grouptag"
     vsntag: "documentation"
   - id: "handlebars-expression"
+    displayed_sidebar: "tev2SideBar"
     term: "handlebars-expression"
     termType: "concept"
     isa: null
@@ -1128,6 +1167,7 @@ entries:
     termid: "concept:handlebars-expression"
     vsntag: "documentation"
   - id: "header"
+    displayed_sidebar: "tev2SideBar"
     term: "header"
     termType: "concept"
     isa: null
@@ -1162,6 +1202,7 @@ entries:
     termid: "concept:header"
     vsntag: "documentation"
   - id: "hrd"
+    displayed_sidebar: "tev2SideBar"
     term: "hrd"
     termType: "concept"
     isa: "dictionary"
@@ -1211,6 +1252,7 @@ entries:
     termid: "concept:hrd"
     vsntag: "documentation"
   - id: "hrdt"
+    displayed_sidebar: "tev2SideBar"
     term: "hrdt"
     termType: "concept"
     isa: null
@@ -1247,6 +1289,7 @@ entries:
     termid: "concept:hrdt"
     vsntag: "documentation"
   - id: "hrg"
+    displayed_sidebar: "tev2SideBar"
     term: "hrg"
     termType: "concept"
     isa: "glossary"
@@ -1295,6 +1338,7 @@ entries:
     termid: "concept:hrg"
     vsntag: "documentation"
   - id: "hrg-entry"
+    displayed_sidebar: "tev2SideBar"
     term: "hrg-entry"
     termType: "concept"
     isa: "glossary-entry"
@@ -1324,6 +1368,7 @@ entries:
     termid: "concept:hrg-entry"
     vsntag: "documentation"
   - id: "hrg-list"
+    displayed_sidebar: "tev2SideBar"
     term: "hrg-list"
     termType: "concept"
     isa: null
@@ -1350,6 +1395,7 @@ entries:
     termid: "concept:hrg-list"
     vsntag: "documentation"
   - id: "hrgt"
+    displayed_sidebar: "tev2SideBar"
     term: "hrgt"
     termType: "concept"
     isa: null
@@ -1423,13 +1469,16 @@ entries:
       - "sorting-the-[hrg-list](@)"
       - "hrgt-converter-profile-{#converter-profile}"
       - "hrgt-predefined-converters-{#predefined-converters}"
+      - "[{{#if-glossaryterm}}{{glossaryterm}}{{else}}{{capfirst-term}}{{/if}}]({{localize-navurl}})\\n\\n{{#if-glossarytext}}{{glossarytext}}{{else}}no-`glossarytext`-was-specified-for-this-entry.{{/if}}\\n\\n"
+      - "[{{#if-glossaryterm}}{{glossaryterm}}{{else}}{{capfirst-term}}{{/if}}]({{localize-navurl}})\\n\\n{{#if-glossarytext}}{{glossarytext}}{{else}}no-`glossarytext`-was-specified-for-this-entry.{{/if}}\\n\\n"
       - "hrgt-predefined-sorters-{#predefined-sorters}"
       - "example"
-      - "processing,-errors-and-warnings"
+      - "errors-and-warnings"
       - "deploying-the-tool"
     termid: "concept:hrgt"
     vsntag: "documentation"
   - id: "ict"
+    displayed_sidebar: "tev2SideBar"
     term: "ict"
     termType: "acronym"
     isa: null
@@ -1477,6 +1526,7 @@ entries:
     term: "identification"
     formPhrases:
       - "identification"
+      - "identification-pattern"
     status: "reviewable"
     grouptags: null
     glossaryTerm: "Identification Pattern"
@@ -1497,7 +1547,9 @@ entries:
       - "formalized-model---data-realm"
     termid: "pattern:identification"
     vsntag: "default"
-  - term: "identifier"
+  - id: "identifier"
+    displayed_sidebar: "tev2SideBar"
+    term: "identifier"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -1532,7 +1584,8 @@ entries:
     displayed_sidebar: "essifLabSideBar"
     termType: "pattern"
     term: "identifier"
-    formPhrases: []
+    formPhrases:
+      - "identifier-pattern"
     status: "reviewable"
     grouptags: null
     glossaryTerm: "Identifier Pattern"
@@ -1550,7 +1603,9 @@ entries:
       - "references"
     termid: "pattern:identifier"
     vsntag: "default"
-  - term: "identify"
+  - id: "identify"
+    displayed_sidebar: "tev2SideBar"
+    term: "identify"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -1605,7 +1660,8 @@ entries:
     displayed_sidebar: "essifLabSideBar"
     termType: "pattern"
     term: "identity"
-    formPhrases: []
+    formPhrases:
+      - "identity-pattern"
     status: "reviewable"
     grouptags: null
     glossaryTerm: "Identity Pattern"
@@ -1625,6 +1681,7 @@ entries:
     termid: "pattern:identity"
     vsntag: "default"
   - id: "ingestion"
+    displayed_sidebar: "tev2SideBar"
     term: "ingestion"
     termType: "concept"
     isa: null
@@ -1652,7 +1709,9 @@ entries:
       - "notes"
     termid: "concept:ingestion"
     vsntag: "documentation"
-  - term: "ingestion-profile"
+  - id: "ingestion-profile"
+    displayed_sidebar: "tev2SideBar"
+    term: "ingestion-profile"
     termType: "concept"
     isa: null
     glossaryTerm: "Ingestion Profile"
@@ -1681,6 +1740,7 @@ entries:
     termid: "concept:ingestion-profile"
     vsntag: "documentation"
   - id: "interpreter"
+    displayed_sidebar: "tev2SideBar"
     term: "interpreter"
     termType: "concept"
     isa: null
@@ -1705,7 +1765,9 @@ entries:
       - "interpreter"
     termid: "concept:interpreter"
     vsntag: "documentation"
-  - term: "interpreter-profile"
+  - id: "interpreter-profile"
+    displayed_sidebar: "tev2SideBar"
+    term: "interpreter-profile"
     termType: "concept"
     isa: null
     glossaryTerm: "Interpreter Profile"
@@ -1761,6 +1823,7 @@ entries:
     term: "jurisdiction"
     formPhrases:
       - "jurisdiction"
+      - "jurisdiction-pattern"
     status: "stable"
     grouptags: null
     glossaryTerm: "Jurisdiction Pattern"
@@ -1803,7 +1866,9 @@ entries:
       - "notes"
     termid: "concept:knowledge"
     vsntag: "default"
-  - term: "knowledge artifact"
+  - id: "knowledge artifact"
+    displayed_sidebar: "tev2SideBar"
+    term: "knowledge artifact"
     termType: "concept"
     isa: null
     glossaryTerm: "Knowledge Artifact"
@@ -1886,7 +1951,9 @@ entries:
       - "purpose"
     termid: "concept:management"
     vsntag: "default"
-  - term: "mental-model"
+  - id: "mental-model"
+    displayed_sidebar: "tev2SideBar"
+    term: "mental-model"
     termType: "concept"
     isa: "semantic-unit"
     glossaryTerm: "Mental Model"
@@ -1926,6 +1993,7 @@ entries:
     termid: "concept:mental-model"
     vsntag: "documentation"
   - id: "moustache-variable"
+    displayed_sidebar: "tev2SideBar"
     term: "moustache-variable"
     termType: "concept"
     isa: null
@@ -1953,6 +2021,7 @@ entries:
     termid: "concept:moustache-variable"
     vsntag: "documentation"
   - id: "mrd"
+    displayed_sidebar: "tev2SideBar"
     term: "mrd"
     termType: "concept"
     isa: "dictionary"
@@ -1989,6 +2058,7 @@ entries:
     termid: "concept:mrd"
     vsntag: "documentation"
   - id: "mrdt"
+    displayed_sidebar: "tev2SideBar"
     term: "mrdt"
     termType: "concept"
     isa: null
@@ -2025,6 +2095,7 @@ entries:
     termid: "concept:mrdt"
     vsntag: "documentation"
   - id: "mrg"
+    displayed_sidebar: "tev2SideBar"
     term: "mrg"
     termType: "concept"
     isa: "glossary"
@@ -2079,7 +2150,9 @@ entries:
       - "footnotes"
     termid: "concept:mrg"
     vsntag: "documentation"
-  - term: "mrg-entry"
+  - id: "mrg-entry"
+    displayed_sidebar: "tev2SideBar"
+    term: "mrg-entry"
     termType: "concept"
     isa: null
     glossaryTerm: "MRG Entry"
@@ -2110,6 +2183,7 @@ entries:
     termid: "concept:mrg-entry"
     vsntag: "documentation"
   - id: "mrg-import"
+    displayed_sidebar: "tev2SideBar"
     term: "mrg-import"
     termType: "concept"
     isa: null
@@ -2143,7 +2217,9 @@ entries:
       - "deploying-the-tool"
     termid: "concept:mrg-import"
     vsntag: "documentation"
-  - term: "mrg-ref"
+  - id: "mrg-ref"
+    displayed_sidebar: "tev2SideBar"
+    term: "mrg-ref"
     termType: "concept"
     isa: null
     bodyFile: "/specs/syntax/41-mrg-ref-syntax.md"
@@ -2191,6 +2267,7 @@ entries:
     termid: "concept:mrg-ref"
     vsntag: "documentation"
   - id: "mrgt"
+    displayed_sidebar: "tev2SideBar"
     term: "mrgt"
     termType: "concept"
     isa: null
@@ -2267,6 +2344,7 @@ entries:
     termid: "concept:mrgt"
     vsntag: "documentation"
   - id: "named-capturing-group"
+    displayed_sidebar: "tev2SideBar"
     term: "named-capturing-group"
     termType: "concept"
     isa: null
@@ -2295,7 +2373,9 @@ entries:
       - "named-capturing-group"
     termid: "concept:named-capturing-group"
     vsntag: "documentation"
-  - term: "navpath"
+  - id: "navpath"
+    displayed_sidebar: "tev2SideBar"
+    term: "navpath"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -2525,6 +2605,7 @@ entries:
     termid: "concept:party"
     vsntag: "default"
   - id: "property"
+    displayed_sidebar: "tev2SideBar"
     term: "property"
     termType: "concept"
     isa: null
@@ -2554,6 +2635,7 @@ entries:
     termid: "concept:property"
     vsntag: "documentation"
   - id: "provisional-mrg"
+    displayed_sidebar: "tev2SideBar"
     term: "provisional-mrg"
     termType: "concept"
     isa: null
@@ -2580,6 +2662,7 @@ entries:
     termid: "concept:provisional-mrg"
     vsntag: "documentation"
   - id: "provisional-mrg-entry"
+    displayed_sidebar: "tev2SideBar"
     term: "provisional-mrg-entry"
     termType: "concept"
     isa: null
@@ -2606,6 +2689,7 @@ entries:
     termid: "concept:provisional-mrg-entry"
     vsntag: "documentation"
   - id: "reader"
+    displayed_sidebar: "tev2SideBar"
     term: "reader"
     termType: "concept"
     isa: null
@@ -2632,6 +2716,7 @@ entries:
     termid: "concept:reader"
     vsntag: "documentation"
   - id: "regex"
+    displayed_sidebar: "tev2SideBar"
     term: "regex"
     termType: "concept"
     isa: null
@@ -2664,6 +2749,7 @@ entries:
     termid: "concept:regex"
     vsntag: "documentation"
   - id: "regularized-form-phrase"
+    displayed_sidebar: "tev2SideBar"
     term: "regularized-form-phrase"
     termType: "concept"
     isa: null
@@ -2695,6 +2781,7 @@ entries:
     termid: "concept:regularized-form-phrase"
     vsntag: "documentation"
   - id: "regularized-text"
+    displayed_sidebar: "tev2SideBar"
     term: "regularized-text"
     termType: "concept"
     isa: null
@@ -2723,6 +2810,7 @@ entries:
     termid: "concept:regularized-text"
     vsntag: "documentation"
   - id: "relation"
+    displayed_sidebar: "tev2SideBar"
     term: "relation"
     termType: "concept"
     isa: null
@@ -2751,7 +2839,9 @@ entries:
       - "notes"
     termid: "concept:relation"
     vsntag: "documentation"
-  - term: "renderable-ref"
+  - id: "renderable-ref"
+    displayed_sidebar: "tev2SideBar"
+    term: "renderable-ref"
     termType: "concept"
     isa: null
     glossaryTerm: "Renderable Ref"
@@ -2837,6 +2927,7 @@ entries:
     termid: "concept:risk-objective"
     vsntag: "default"
   - id: "saf"
+    displayed_sidebar: "tev2SideBar"
     term: "saf"
     termType: "concept"
     bodyFile: "/specs/files/12-saf.md"
@@ -2918,7 +3009,9 @@ entries:
       - "notes"
     termid: "concept:saf"
     vsntag: "documentation"
-  - term: "scope"
+  - id: "scope"
+    displayed_sidebar: "tev2SideBar"
+    term: "scope"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -2949,7 +3042,9 @@ entries:
       - "purpose"
     termid: "concept:scope"
     vsntag: "documentation"
-  - term: "scoped-term"
+  - id: "scoped-term"
+    displayed_sidebar: "tev2SideBar"
+    term: "scoped-term"
     termType: "concept"
     isa: "term"
     glossaryTerm: "Scoped Term"
@@ -2974,7 +3069,9 @@ entries:
       - "summary"
     termid: "concept:scoped-term"
     vsntag: "documentation"
-  - term: "scopedir"
+  - id: "scopedir"
+    displayed_sidebar: "tev2SideBar"
+    term: "scopedir"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -3006,7 +3103,9 @@ entries:
       - "criteria"
     termid: "concept:scopedir"
     vsntag: "documentation"
-  - term: "scopetag"
+  - id: "scopetag"
+    displayed_sidebar: "tev2SideBar"
+    term: "scopetag"
     termType: "concept"
     isa: "tag"
     glossaryTerm: null
@@ -3039,7 +3138,9 @@ entries:
       - "notes"
     termid: "concept:scopetag"
     vsntag: "documentation"
-  - term: "semantic-unit"
+  - id: "semantic-unit"
+    displayed_sidebar: "tev2SideBar"
+    term: "semantic-unit"
     termType: "concept"
     isa: null
     glossaryTerm: "Semantic Unit"
@@ -3068,7 +3169,9 @@ entries:
       - "criteria"
     termid: "concept:semantic-unit"
     vsntag: "documentation"
-  - term: "semantics"
+  - id: "semantics"
+    displayed_sidebar: "tev2SideBar"
+    term: "semantics"
     termType: "concept"
     isa: null
     glossaryTerm: null
@@ -3094,6 +3197,7 @@ entries:
     termid: "concept:semantics"
     vsntag: "documentation"
   - id: "sorter"
+    displayed_sidebar: "tev2SideBar"
     term: "sorter"
     termType: "concept"
     isa: null
@@ -3140,7 +3244,9 @@ entries:
       - "short-description"
     termid: "concept:ssi"
     vsntag: "default"
-  - term: "synonym"
+  - id: "synonym"
+    displayed_sidebar: "tev2SideBar"
+    term: "synonym"
     termType: "concept"
     isa: "term"
     glossaryTerm: "Synonym (of a [term](@))"
@@ -3169,7 +3275,9 @@ entries:
       - "purpose"
     termid: "concept:synonym"
     vsntag: "documentation"
-  - term: "tag"
+  - id: "tag"
+    displayed_sidebar: "tev2SideBar"
+    term: "tag"
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
@@ -3198,7 +3306,9 @@ entries:
       - "notes"
     termid: "concept:tag"
     vsntag: "documentation"
-  - term: "term"
+  - id: "term"
+    displayed_sidebar: "tev2SideBar"
+    term: "term"
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
@@ -3263,7 +3373,9 @@ entries:
       - "examples"
     termid: "concept:term-identifier"
     vsntag: "documentation"
-  - term: "term-ref"
+  - id: "term-ref"
+    displayed_sidebar: "tev2SideBar"
+    term: "term-ref"
     termType: "concept"
     isa: null
     glossaryTerm: "TermRef"
@@ -3299,6 +3411,7 @@ entries:
     termid: "concept:term-ref"
     vsntag: "documentation"
   - id: "term-selection-instruction"
+    displayed_sidebar: "tev2SideBar"
     term: "term-selection-instruction"
     termType: "concept"
     isa: null
@@ -3332,7 +3445,9 @@ entries:
       - "notes"
     termid: "concept:term-selection-instruction"
     vsntag: "documentation"
-  - term: "term-type"
+  - id: "term-type"
+    displayed_sidebar: "tev2SideBar"
+    term: "term-type"
     termType: "concept"
     isa: "identifier"
     glossaryTerm: "Term Type"
@@ -3363,7 +3478,9 @@ entries:
       - "recommended-term-types"
     termid: "concept:term-type"
     vsntag: "documentation"
-  - term: "termid"
+  - id: "termid"
+    displayed_sidebar: "tev2SideBar"
+    term: "termid"
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
@@ -3392,7 +3509,9 @@ entries:
       - "term-id"
     termid: "concept:termid"
     vsntag: "documentation"
-  - term: "terminology"
+  - id: "terminology"
+    displayed_sidebar: "tev2SideBar"
+    term: "terminology"
     termType: "concept"
     grouptags: null
     synonymOf: null
@@ -3418,7 +3537,9 @@ entries:
       - "purpose"
     termid: "concept:terminology"
     vsntag: "documentation"
-  - term: "terminology"
+  - id: "terminology"
+    displayed_sidebar: "tev2SideBar"
+    term: "terminology"
     termType: "pattern"
     isa: null
     glossaryTerm: "Terminology Pattern"
@@ -3479,6 +3600,7 @@ entries:
     termid: "concept:terminology-identifier"
     vsntag: "documentation"
   - id: "terminology-process"
+    displayed_sidebar: "tev2SideBar"
     term: "terminology-process"
     termType: "concept"
     isa: null
@@ -3506,7 +3628,9 @@ entries:
       - "notes"
     termid: "concept:terminology-process"
     vsntag: "documentation"
-  - term: "terms-community"
+  - id: "terms-community"
+    displayed_sidebar: "tev2SideBar"
+    term: "terms-community"
     termType: "concept"
     isa: "community"
     glossaryTerm: "Terms Community"
@@ -3536,7 +3660,9 @@ entries:
       - "notes"
     termid: "concept:terms-community"
     vsntag: "documentation"
-  - term: "tev2"
+  - id: "tev2"
+    displayed_sidebar: "tev2SideBar"
+    term: "tev2"
     termType: "concept"
     isa: null
     glossaryTerm: "TEv2"
@@ -3557,6 +3683,7 @@ entries:
     termid: "concept:tev2"
     vsntag: "documentation"
   - id: "tev2-text-conversion-tool"
+    displayed_sidebar: "tev2SideBar"
     term: "tev2-text-conversion-tool"
     termType: "concept"
     isa: "tev2-tool"
@@ -3591,6 +3718,7 @@ entries:
     termid: "concept:tev2-text-conversion-tool"
     vsntag: "documentation"
   - id: "tev2-tool"
+    displayed_sidebar: "tev2SideBar"
     term: "tev2-tool"
     termType: "concept"
     isa: null
@@ -3624,6 +3752,7 @@ entries:
     termid: "concept:tev2-tool"
     vsntag: "documentation"
   - id: "tev2-toolbox"
+    displayed_sidebar: "tev2SideBar"
     term: "tev2-toolbox"
     termType: "concept"
     isa: null
@@ -3727,7 +3856,7 @@ entries:
       - "the-`html-link`-converter"
       - "the-`html-hovertext-link`-converter"
       - "the-`html-glossarytext-link`-converter"
-      - "processing,-errors-and-warnings"
+      - "errors-and-warnings"
       - "deploying-the-tool"
     termid: "concept:trrt"
     vsntag: "documentation"
@@ -3778,7 +3907,9 @@ entries:
       - "short-description"
     termid: "concept:verify"
     vsntag: "default"
-  - term: "versiontag"
+  - id: "versiontag"
+    displayed_sidebar: "tev2SideBar"
+    term: "versiontag"
     termType: "concept"
     isa: "tag"
     glossaryTerm: null
@@ -3815,7 +3946,9 @@ entries:
       - "notes"
     termid: "concept:versiontag"
     vsntag: "documentation"
-  - term: "vocabulary"
+  - id: "vocabulary"
+    displayed_sidebar: "tev2SideBar"
+    term: "vocabulary"
     termType: "concept"
     isa: null
     glossaryTerm: null

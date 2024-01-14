@@ -29,6 +29,13 @@ entries:
     term: "guardianship"
     formPhrases:
       - "guardianship"
+      - "guardianships"
+      - "guardianship's"
+      - "guardianship(s)"
+      - "guardianship-pattern"
+      - "guardianships-pattern"
+      - "guardianship's-pattern"
+      - "guardianship(s)-pattern"
     status: "stable"
     grouptags: null
     glossaryTerm: "Guardianship Pattern"
@@ -53,6 +60,7 @@ entries:
     term: "jurisdiction"
     formPhrases:
       - "jurisdiction"
+      - "jurisdiction-pattern"
     status: "stable"
     grouptags: null
     glossaryTerm: "Jurisdiction Pattern"
@@ -75,6 +83,7 @@ entries:
     term: "party-actor-action"
     formPhrases:
       - "party-actor-action"
+      - "party-actor-action-pattern"
     status: "stable"
     grouptags: null
     glossaryTerm: "Party, Actor and Actions Pattern"

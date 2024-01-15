@@ -35,6 +35,7 @@ The converter profile object can be envisaged as a YAML object, that has a numbe
 | Section | Description |
 | ------- | ----------- |
 | `ir`    | (interpreter regex): the [regex](@) that was used to interpret the text for which the [converter](@) is called. This is used for <mark>**@Ca5e**: pls tell readers why this is needed</mark>. |
+| `ncg`   | (named capturing groups): the set of [named capturing groups](@) for which the [interpreter](@) has, or could have, provided values. |
 | `me`    | (MRG entry): all fields from the [MRG entry](@) that was selected. | 
 | `mrg`   | all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken |
 | `err`   | (error): various fields, as specified below, that can be used to construct output that helps users identify an error, and fix it. |

@@ -5,6 +5,7 @@ date: 20230103
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import APITable from '@site/src/components/APITable';
 
 # Scope Administration File (SAF)
 

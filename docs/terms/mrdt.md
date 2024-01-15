@@ -6,7 +6,8 @@ displayed_sidebar: tev2SideBar
 term: mrdt
 termType: concept
 isa:
-glossaryTerm: Machine Readable Dictionary Tool (MRDT)
+glossaryTerm: Machine Readable Dictionary Tool
+glossaryAlias: MRDT
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
 synonymOf: 
 grouptags: [ "tools", "dictionary-tools" ]

@@ -7,6 +7,7 @@ date: 20220421
 # Term Reference Resolution Tool (TRRT)
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import APITable from '@site/src/components/APITable';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -273,7 +274,7 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
                 1. convert the text to lowercase;
                 3. remove any leading and/or trailing spaces.
             2. there is a match with an [MRG entry](@) if the result of this conversion is either a [form phrase](@) that appears in the `formPhrases` field of that [MRG entry](@), or if the result matches the `term` field of that [MRG entry](@).[^2]
-        3. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](/docs/specs/files/mrg#terminology) of the [MRG](@).
+        3. If the remaining set of [entries](mrg-entry@) includes more than one element, then keep only the [entries](mrg-entry@) whose `termType` field contains the value specified by the `defaulttype` field as specified in the [terminology section](mrg#terminology@) of the [MRG](@).
 3. If the remaining set of [entries](mrg-entry@) is either empty (not found), or contains multiple [entries](mrg-entry@) (ambiguous [TermRef](@)), an appropriate exception must be raised (and logged), and conversion of (only!) this [TermRef](@) is discontinued.
 4. If the remaining set of [entries](mrg-entry@) contains precisely one element, its fields will be made available as [moustache variables](@) for further processing by the [converter](@).
 

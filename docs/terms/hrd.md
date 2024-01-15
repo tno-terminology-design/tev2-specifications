@@ -6,7 +6,8 @@ displayed_sidebar: tev2SideBar
 term: hrd
 termType: concept
 isa: dictionary
-glossaryTerm: Human Readable Dictionary (HRD)
+glossaryTerm: Human Readable Dictionary
+glossaryAlias: HRD
 glossaryText: "a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically."
 synonymOf:
 grouptags: [ "dictionary", "reference-materials" ]

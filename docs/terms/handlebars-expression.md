@@ -39,7 +39,3 @@ Here's a brief overview:
 4. **Purpose**: Handlebars provides a powerful yet minimalistic logic-less templating syntax. "Logic-less" means it enforces a separation of the template (view) from the underlying logic or data model.
 
 Handlebars expressions are particularly useful in web applications for generating HTML content dynamically while maintaining a clear separation between the presentation and business logic layers.
-
-## Notes
-
-helper functions may provide errors 

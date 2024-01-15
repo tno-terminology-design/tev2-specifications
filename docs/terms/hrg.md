@@ -6,7 +6,8 @@ displayed_sidebar: tev2SideBar
 term: hrg
 termType: concept
 isa: glossary
-glossaryTerm: Human Readable Glossary (HRG)
+glossaryTerm: Human Readable Glossary
+glossaryAlias: HRG
 glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
 synonymOf:
 grouptags: [ "glossaries", "data-structures" ]

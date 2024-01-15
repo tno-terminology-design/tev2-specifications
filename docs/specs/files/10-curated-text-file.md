@@ -4,6 +4,7 @@ date: 20231009
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import APITable from '@site/src/components/APITable';
 
 # Curated Text Files
 
@@ -19,7 +20,7 @@ Every [curated text](@) consists of two parts:
 ```yaml
 ---
 # Docusaurus front matter
-id: ctext-file
+id: ctext
 sidebar_label: Curated Texts
 # TEv2 Curated Text Header
 term: curated-text
@@ -36,7 +37,9 @@ contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
+
 # Curated Text
+
 A curated text starts with three dashes `---`.
 This indicates the start of its (YAML) header.
 Typically, the header consists of a sequence of key-value pairs.

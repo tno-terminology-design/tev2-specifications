@@ -5,6 +5,7 @@ date: 20220303
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import APITable from '@site/src/components/APITable';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -170,7 +171,7 @@ The following table documents the fields that are used within the context of [TE
 | `vsntag`          | Y | [Versiontag](@) that [identifies](@) the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` [identifies](@) the [terminology](@) from which this [MRG entry](@) has originated. |
 | `locator`         | Y | path, relative to `scopedir`/`curatedir`/, where the [curated text](@) lives from which the contents of the [MRG entry](@) was constructed. The value of `scopedir` can be obtained from the `scopes` section of the [MRG](@), and that of `curatedir` can be obtained from the [SAF](@) that lives in this `scopedir`. |
 | `navurl`          | Y | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) (that lives in the `scopedir` as specified in the `scopes` section of the [MRG](@)), where the rendered version of the [curated text](@) is located. Its value will be empty if it cannot be constructed, e.g., because the `[navpath](@)` field in the [SAF](@) is empty or otherwise incorrect. |
-| `headingids`      | Y | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that exist in the file that contains the [body](@) of the [curated text](@), and can serve as `trait` in a [TermRef](@). |
+| `headingids`      | Y | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that exist in the file that contains the [body](@) of the [curated text](@), and can serve as `trait` in a [TermRef](@). Details are provided in the [MRGT specifications](mrgt#headingids-construction@) |
 | `termid`          | Y | [Text](termid@) that unambiguously [identifies](@) the [semantic unit](@) within this [scope](@) that is documented by this [MRG entry](@). There MUST NOT be another [MRG entry](@) within the [MRG](@) that has a `termid` field with the same value. |
 | `term`            | Y | [Text](term-identifier@) that [identifies](@) a [semantic unit](@) within this [scope](@), and hence also the [curated text](@) that describes it, which includes its [definition](@). Its value is typically the value of the `glossaryTerm` field, where all characters are made lower-case, any text between parentheses is discarded, and any (sequences of) spaces (or other special characters) are replaced with a `-`character. |
 | `termType`        | n | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`. |

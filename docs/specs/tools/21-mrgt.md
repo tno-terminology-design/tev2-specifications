@@ -168,22 +168,75 @@ Effectively, this means that whenever a [term](@) is defined as a `synonym of` s
 
 ### Phase 3: post processing other fields
 
-Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the field name (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified:
-
-:::infor Editor's note
-Elaboration needed on:
-1. construction of `locator`, given the value of `saf.bodyfileID`
-2. construction of `headingids`.
-:::
+Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the field name (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified. The [MRGT](@) run is concluded after all these modifications have been written to their appropriate [MRG](@) files.
 
 | Field          | Value(s) that are assigned to the fields |
 | -------------- | :---------- |
-| `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the `scope` section of the [SAF](@). |
-| `locator`      | path, relative to `scopedir`/`curatedir`/, of the [curated text](@). |
-| `navurl`       | path, relative to the URL as specified in the `website` field in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@), where the rendered version of the [curated text](@) is located. |
+| `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
+| `locator`      | path, relative to `scopedir`/`curatedir`/, of the file that contains the ([header](@) of) the [curated text](@). |
+| `navurl`       | (localized) path to which browsers navigate in order to see the rendered version of the [curated text](@).  |
 | `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be either in the [curated text file](@) or in a separate [body file](@). |
 
-The [MRGT](@) run is concluded after all these modifications have been written to their appropriate [MRG](@) files.
+The following sections elaborate on the construction of (the contents) of some of these fields.
+
+#### Constructing the `navurl` field {#navurl-construction}
+
+The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, where `website`, `navpath` and `curatedir` are given by the contents of the respective fields in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@). 
+
+The `id` part is one of the following:
+
+1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) contains the field `bodyFileID`, then its contents specifies the name of the field that is expected to exist in the [header](@) of the [curated text](@), and its value will become the `id` part. Thus, static site generators such as Docusaurus, which uses the `id` field to specify this value, can be accommodated.
+2. if the [SAF](@) does not specify the `bodyFileID` field, then `id` will become the name of the file that contains the rendered version of the [body-file](@) as specified in the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@), or, if that field is empty or non-exitent, the name of the [curated text file](@) itself.
+
+#### Constructing the `headingid` fields (#headingids-construction)
+
+The `headingids` field is constructed by finding all [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) in the [body-file](@) (or the [curated text file](@) if there is no separate [body file](@), and making a list out of them.
+
+<details>
+  <summary>Example of Markdown Headers and their `headingid` fields</summary>
+
+<Tabs
+  defaultValue="default"
+  values={[
+    {label: 'Default Markdown Headers',  value: 'default'},
+    {label: 'Custom Heading IDs',        value: 'custom'},
+  ]}>
+
+<TabItem value="default">
+
+[Markdown headings](https://www.markdownguide.org/basic-syntax/#headings) are only recognized when they are preceeded with number signs (#) at the beginning of a line. The alternative syntax, that uses sequences of `=` or `-` characters on the next line, is ignored.
+
+Here is an example of a markdown header:
+
+```markdown
+
+## This is a Markdown Header
+
+```
+
+This header will result in the text `this-is-a-markdown-header` being added as an element in the `headingids` field.
+
+</TabItem>
+
+<TabItem value="custom">
+
+A markdown heading may also contain a (custom) [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) that allows you to link directly to headings and modify them with CSS.
+
+Here is an example of a markdown header with a custom heading-id:
+
+```markdown
+
+# This is a Markdown Header {#custom-id}
+
+```
+
+This header will result in the text `custom-id` being added as an element in the `headingids` field.
+
+</TabItem>
+
+</Tabs>
+
+</details>
 
 ### Phase 4: checking the result
 

@@ -5,6 +5,8 @@ date: 20231029
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import APITable from '@site/src/components/APITable';
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

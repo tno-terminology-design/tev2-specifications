@@ -404,7 +404,7 @@ entries:
     term: "converter-profile"
     termType: "concept"
     glossaryTerm: "Converter Profile"
-    glossaryText: "the set of [moustache variables](@) that are (made) available to [converters](@) of a particular [TEv2 tool](@), enabling them to produce the texts by which the [TEv2 tool](@) will replace the text constructs that are located by the [interpreter](@)."
+    glossaryText: "a data object, of a type that is specific for a [text conversion tool](@), that [converters](@) use to create texts by which the [tool](text-conversion-tool@) will replace the text constructs that are located by its [interpreter](@)."
     grouptags: null
     formPhrases:
       - "converter-profile"
@@ -1165,7 +1165,6 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-expression"
     headingids:
       - "handlebars-expression"
-      - "notes"
     termid: "concept:handlebars-expression"
     vsntag: "documentation"
   - id: "header"
@@ -1208,7 +1207,8 @@ entries:
     term: "hrd"
     termType: "concept"
     isa: "dictionary"
-    glossaryTerm: "Human Readable Dictionary (HRD)"
+    glossaryTerm: "Human Readable Dictionary"
+    glossaryAlias: "HRD"
     glossaryText: "a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically."
     synonymOf: null
     grouptags:
@@ -1258,7 +1258,8 @@ entries:
     term: "hrdt"
     termType: "concept"
     isa: null
-    glossaryTerm: "Human Readable Dictionary Tool (HRDT)"
+    glossaryTerm: "Human Readable Dictionary Tool"
+    glossaryAlias: "HRDT"
     glossaryText: "a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@)."
     synonymOf: null
     grouptags:
@@ -1295,7 +1296,8 @@ entries:
     term: "hrg"
     termType: "concept"
     isa: "glossary"
-    glossaryTerm: "Human Readable Glossary (HRG)"
+    glossaryTerm: "Human Readable Glossary"
+    glossaryAlias: "HRG"
     glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
     synonymOf: null
     grouptags:
@@ -2027,7 +2029,8 @@ entries:
     term: "mrd"
     termType: "concept"
     isa: "dictionary"
-    glossaryTerm: "Machine Readable Dictionary (MRD)"
+    glossaryTerm: "Machine Readable Dictionary"
+    glossaryAlias: "MRD"
     glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@)."
     synonymOf: null
     grouptags: null
@@ -2064,7 +2067,8 @@ entries:
     term: "mrdt"
     termType: "concept"
     isa: null
-    glossaryTerm: "Machine Readable Dictionary Tool (MRDT)"
+    glossaryTerm: "Machine Readable Dictionary Tool"
+    glossaryAlias: "MRDT"
     glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
     synonymOf: null
     grouptags:
@@ -2102,7 +2106,8 @@ entries:
     termType: "concept"
     isa: "glossary"
     bodyFile: "/specs/files/32-mrg.md"
-    glossaryTerm: "Machine Readable Glossary (MRG)"
+    glossaryTerm: "Machine Readable Glossary"
+    glossaryAlias: "MRG"
     glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/specs/files/mrg), to enable automated processing and integration with software systems."
     synonymOf: null
     grouptags:
@@ -2340,6 +2345,10 @@ entries:
       - "storing-a-[provisional-mrg](@)-in-the-[glossarydir](@)-{#mrg-filenames}"
       - "phase-2:-post-processing-synonyms-{#post-processing}"
       - "phase-3:-post-processing-other-fields"
+      - "constructing-the-`navurl`-field-{#navurl-construction}"
+      - "constructing-the-`headingid`-fields-(#headingids-construction)"
+      - "this-is-a-markdown-header"
+      - "this-is-a-markdown-header-{#custom-id}"
       - "phase-4:-checking-the-result"
       - "exceptions,-warnings,-and-logging-{#exceptions}"
       - "notes"
@@ -2722,7 +2731,8 @@ entries:
     term: "regex"
     termType: "concept"
     isa: null
-    glossaryTerm: "Regular Expression (Regex)"
+    glossaryTerm: "Regular Expression"
+    glossaryAlias: "Regex"
     glossaryText: "a sequence of characters that specifies a text pattern that can be searched for within other, larger texts, for the purpose of, e.g., replacing the text pattern with some other text. Within [TEv2](@), we use a [JavaScript flavor (ECMAScript 2022)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)."
     synonymOf: null
     grouptags: null
@@ -2933,7 +2943,8 @@ entries:
     term: "saf"
     termType: "concept"
     bodyFile: "/specs/files/12-saf.md"
-    glossaryTerm: "Scope Administration File (SAF)"
+    glossaryTerm: "Scope Administration File"
+    glossaryAlias: "SAF"
     glossaryText: "a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@). The SAF of a [scope](@) is located in its [scopedir](@)."
     hoverText: "SAF: a YAML file that contains essential data about a particular scope, such as the locations of the scope's curated texts, glossaries, and the specifications of the curated terminologies. The SAF is located in the so-called scopedir."
     synonymOf: null

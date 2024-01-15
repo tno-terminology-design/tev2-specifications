@@ -16,3 +16,4 @@ start_server.bat
 *.lnk
 .vscode/settings.json
 docs/mk-tools.bat
+mk-tools.bat

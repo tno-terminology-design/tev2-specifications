@@ -170,6 +170,12 @@ Effectively, this means that whenever a [term](@) is defined as a `synonym of` s
 
 Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the field name (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified:
 
+:::infor Editor's note
+Elaboration needed on:
+1. construction of `locator`, given the value of `saf.bodyfileID`
+2. construction of `headingids`.
+:::
+
 | Field          | Value(s) that are assigned to the fields |
 | -------------- | :---------- |
 | `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the `scope` section of the [SAF](@). |

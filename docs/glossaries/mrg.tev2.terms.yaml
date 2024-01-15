@@ -224,6 +224,7 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
     headingids:
       - "converter-profile"
+      - "converter-profile-object-{#object}"
     termid: "concept:converter-profile"
     vsntag: "terms"
   - id: "corpus"
@@ -838,6 +839,7 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-expression"
     headingids:
       - "handlebars-expression"
+      - "notes"
     termid: "concept:handlebars-expression"
     vsntag: "terms"
   - id: "header"

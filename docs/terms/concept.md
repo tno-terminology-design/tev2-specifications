@@ -33,14 +33,19 @@ A **Concept** is a [semantic unit](@) that tries to capture the idea behind a cl
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts (as a specialization of a [semantic unit](@)).
 
 ### Purpose
-Working together is easier when you and your peers share the same ideas. We need a way to test and ensure, that you and your peers _actually_ have the same understanding, for the purpose of making cooperation easier. Doing so is expected to not only reduce the number of terminological discussions, but also improve the efficiency and effectiveness of the remaining discussions.
+Working together becomes easier sharing the same ideas among peers. We need a way to test that you and your peers _actually_ or _proveably_ have the same understanding, preferably with mutual confirmation. We ensure same understanding for easier, more efficient and more effective cooperation. Expectedly, it'll also reduce the number of terminological discussions.
 
 ### Criteria
-A (description/specification of a) Concept MUST be [intensionally defined](https://en.wikipedia.org/wiki/Extensional_and_intensional_definitions), i.e. associated with a criterion that can be used to determine whether or not someone or something qualifies as (an instance of) that Concept, and that has the property that it has been shown that the vast majority of contributors and other users apply it in the same manner in different situations (i.e. they arrive at the same conclusion as to whether or not someone or something qualifies under that criterion in any given situation).
+A (description/specification of a) Concept MUST be [intensionally defined](https://en.wikipedia.org/wiki/Extensional_and_intensional_definitions), i.e. associated with a criterion that can be used to determine whether or not someone or something qualifies as (an instance of) that Concept. A criterion like this also has the property that the vast majority of contributors and other users apply it in the same manner in different situations (i.e. they arrive at the same conclusion as to whether or not someone or something qualifies under that criterion in any given situation).  
+Although these criterions are always tailor-made for different situations, they share the feature of having a great distinctive character a being a universally applicable water-shed marker between concepts.
 
 ### Notes
-There is an important [distinction between concepts and the (multitude of) terms](https://simple.wikipedia.org/wiki/Concept) (names, labels) that we need to be able to talk and reason (argue) about them. Please consider that
+There is an important [distinction between concepts and the (multitude of) terms](https://simple.wikipedia.org/wiki/Concept) (names, labels) that we need to grasp before being able to talk and reason (argue) about them. Please consider that
 
 * different terms are used in different contexts for the same concept
 * in different contexts, a single term may refer to different concepts
-* to resolve terminological disputes, which usually are about the 'correct' meaning of a term, try to establish the criteria that the different participants use for the concept behind the term. That helps participants understand each others (different) positions, and provides a better basis for resolving the conflict.
+* terminological disputes can be resolved by isolating criteria
+
+#### How to resolve a dispute
+Usually, terminological disputes are about the 'correct' meaning of a term. However, in most cases it's not about being right or wrong. Participants in a dispute only look at the world differently from their position.  
+To bring out the differences, try to establish the criteria that the different participants use for the concept behind the term. That might help participants understand each other's (distinctive) positions and provides a better basis for resolving the dispute.

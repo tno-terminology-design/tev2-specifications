@@ -138,6 +138,7 @@ entries:
       - "purpose"
       - "criteria"
       - "notes"
+      - "how-to-resolve-a-dispute"
     termid: "concept:concept"
     vsntag: "terms"
   - id: "conceptualization"

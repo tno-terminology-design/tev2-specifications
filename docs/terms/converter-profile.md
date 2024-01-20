@@ -59,10 +59,10 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 
 | Field           | Req'd | Description |
 | --------------- | :---: | :---------- |
-| `filename`      | Y | Name of the file where the specific reference was found. |
-| `line`          | Y | Linenumber in the file where the reference was found. |
-| `pos`           | Y | Position on the line of the start of the reference that was found. |
-| `cause`         | n | A description of the cause of a possible error. |
+| `file`          |   Y   | Name of the file where the specific reference was found. |
+| `line`          |   Y   | Linenumber in the file where the reference was found. |
+| `pos`           |   Y   | Position on the line of the start of the reference that was found. |
+| `cause`         |   n   | A description of the cause of a possible error. |
 
 ```mdx-code-block
 </APITable>

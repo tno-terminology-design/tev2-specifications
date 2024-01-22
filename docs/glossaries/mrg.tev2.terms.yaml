@@ -2064,7 +2064,7 @@ entries:
       - "regularized-text"
       - "purpose"
       - "use-of-regularized-texts-within-[tev2](@)"
-      - "regularizing-texts-(#regularization-process)"
+      - "regularizing-texts-{#regularization-process}"
       - "notes"
     termid: "concept:regularized-text"
     vsntag: "terms"

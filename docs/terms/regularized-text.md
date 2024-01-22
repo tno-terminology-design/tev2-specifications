@@ -40,7 +40,7 @@ Within [TEv2](@), [regularized texts](@) are used:
 - to represent [form phrases](@) in [MRG entries](@) (note that the `formPhrases` field of [curated texts](@) do not typically contain [regularized texts](@))
 - etc.
 
-## Regularizing Texts (#regularization-process)
+## Regularizing Texts {#regularization-process}
 
 The process that [TEv2 tools](@) use if they need to convert a normal, human readable text into a [regularized texts](@), consists of the following steps:
 

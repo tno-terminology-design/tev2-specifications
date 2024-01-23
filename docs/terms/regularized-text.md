@@ -7,7 +7,7 @@ term: regularized-text
 termType: concept
 isa:
 glossaryTerm: Regularized Text
-glossaryText: "a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z]_[0-9]-`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z]([a-z]_[0-9]-)*(?<=[^-])$` is a regularized text."
+glossaryText: "a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z_0-9-]`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z][a-z_0-9-]*(?<=[^-])$` is a regularized text."
 formPhrases: [ "regularized-text{ss}" ]
 # Curation status
 status: proposed
@@ -21,7 +21,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Regularized Text
 
-A **Regularized Text** is a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z]_[0-9]-`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z]([a-z]_[0-9]-)*(?<=[^-])$` is a regularized text.
+A **Regularized Text** is a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z_0-9-]`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z][a-z_0-9-]*(?<=[^-])$` is a regularized text.
 
 ## Purpose
 
@@ -46,8 +46,8 @@ The process that [TEv2 tools](@) use if they need to convert a normal, human rea
 
 1. convert the text to lowercase;
 2. remove all characters at the beginning of the text that do not match regex `[a-z]`.
-3. replace all sequences of characters that may not appear in a [regularized text](@) with the `-`-character;
-4. replace all sequences of `-`characters with a single `-` character, such that in the resulting text there are no two consecutive `-` characters;
+3. replace all characters that may not appear in a [regularized text](@) with the `-` character;
+4. replace all sequences of `-` characters with a single `-` character, such that in the resulting text there are no two consecutive `-` characters;
 5. remove any leading and/or trailing `-` characters.
 
 Here's a table that shows how a variety of input texts would be converted into [regularized texts](@):
@@ -60,7 +60,7 @@ Here's a table that shows how a variety of input texts would be converted into [
 | 4 | `(example):`        | `example`        |
 | 5 | `EX(ample)`         | `ex-ample`       |
 | 6 | `1#-_23ex3mple`     | `ex3mple`        |
-| 7 | `ex--am@#ple123`    | `ex-am-ple`      |
+| 7 | `ex--am@#ple123`    | `ex-am-ple123`   |
 | 8 | `**e!x@a#m$p%l^e**` | `e-x-a-m-p-l-e`  |
 
 -----

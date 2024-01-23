@@ -59,7 +59,7 @@ scope:
 ...
   website: https://johndoe.github.io/example/docs # base URL for rendered site.
   navpath: /terms # Path to the directory where Curated Texts are rendered.
-  bodyFileID: id # Name of the front-matter field that provides a unique identifier for the file.
+  navid: id # Name of the front-matter field that provides a unique identifier for the file.
 ...
 ```
 </details>
@@ -206,7 +206,7 @@ scope:
   defaultvsn: documentation # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.tev2.latest.yaml
   website: https://tno-terminology-design.github.io/tev2-specifications/docs # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Terminology.
   navpath: /terms # Path to the directory where Curated Texts are rendered. What `curatedir` is for Curated Texts is, `navpath` is for the rendered versions of Curated Texts.
-  bodyFileID: id # Name of the field in the front matter of a [body file](@) used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the [body file](@) will be used. | 
+  navid: id # Name of the field in the front matter of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used.
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
   issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled
@@ -217,7 +217,7 @@ scope:
       at: tno.nl
 #
 # The second section contains a mapping between scopetags that are used within the scope, and the associated scopedirs.
-# This enables tools to find the [SAF](@) of these [scopes](@), and from there all other directories, files etc.
+# This enables tools to find the SAF of these scopes, and from there all other directories, files etc.
 # that live within them, e.g. to use/import their data.
 #
 scopes:  #

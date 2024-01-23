@@ -181,16 +181,16 @@ The following sections elaborate on the construction of (the contents) of some o
 
 #### Constructing the `navurl` field {#navurl-construction}
 
-The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, where `website`, `navpath` and `curatedir` are given by the contents of the respective fields in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@). 
+The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, where `website`, `navpath` and `curatedir` are given by the contents of the respective fields in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@). In cases where the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`.
 
 The `id` part is one of the following:
 
-1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) contains the field `bodyFileID`, then its contents specifies the name of the field that is expected to exist in the [header](@) of the [curated text](@), and its value will become the `id` part. Thus, static site generators such as Docusaurus, which uses the `id` field to specify this value, can be accommodated.
-2. if the [SAF](@) does not specify the `bodyFileID` field, then `id` will become the name of the file that contains the rendered version of the [body-file](@) as specified in the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@), or, if that field is empty or non-exitent, the name of the [curated text file](@) itself.
+1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) contains the field `navid`, then its contents specify the name of the field in the [header](@) of the [curated text](@) or [body file](@) that will be used to create the `id` part. Thus, static site generators such as Docusaurus, which use the `id` field to specify this value, can be accommodated.
+2. if the [SAF](@) does not specify the `navid` field, or the `navid` field in a [curated text](@) or [body file](@) is not set, then `id` will be based on the name of the [curated text file](@) or the name of the [body file](@).
 
 #### Constructing the `headingid` fields (#headingids-construction)
 
-The `headingids` field is constructed by finding all [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) in the [body-file](@) (or the [curated text file](@) if there is no separate [body file](@), and making a list out of them.
+The `headingids` field is constructed by finding all [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) in the [body-file](@) (or the [curated text file](@) if there is no separate [body file](@)), and making a list out of them.
 
 <details>
   <summary>Example of Markdown Headers and their `headingid` fields</summary>
@@ -204,7 +204,7 @@ The `headingids` field is constructed by finding all [markdown headings](https:/
 
 <TabItem value="default">
 
-[Markdown headings](https://www.markdownguide.org/basic-syntax/#headings) are only recognized when they are preceeded with number signs (#) at the beginning of a line. The alternative syntax, that uses sequences of `=` or `-` characters on the next line, is ignored.
+[Markdown headings](https://www.markdownguide.org/basic-syntax/#headings) are only recognized when they are preceded with number signs (#) at the beginning of a line.
 
 Here is an example of a markdown header:
 

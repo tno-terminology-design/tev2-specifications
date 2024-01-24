@@ -36,7 +36,7 @@ After (raw) texts have been authored, they will be rendered into some other form
 2. The URLs and/or paths in the [SAF](@) are incorrect.
     - Check the [SAF](@), and ensure all URLs and paths that need to be configured have their correct values.
 3. The static website generator that you use meddles with `id`s, or filenames.
-    - Docusaurus, for example, uses markdown files (with extensions `.md`, or `.mdx`), and allows them to contain front matter in which an `id`-field can be specified that it uses for routing. In order for Docusaurus to route the links that the [TRRT](@) produces, the `id` field of [curated texts](@) MUST be identitical to the filename without its extension. You should make sure this is the case.
+    - Docusaurus, for example, uses markdown files (with extensions `.md`, or `.mdx`), and allows them to contain [front matter](@) in which an `id`-field can be specified that it uses for routing. In order for Docusaurus to route the links that the [TRRT](@) produces, the `id` field of [curated texts](@) MUST be identitical to the filename without its extension. You should make sure this is the case.
 
 </details>
 

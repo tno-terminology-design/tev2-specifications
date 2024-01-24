@@ -139,7 +139,7 @@ An [MRG entry](@) has a few fields that are always present, because the [MRGT](@
 
 [^2]: One purpose of having the `scopetag` field is for determining which [MRG entries](@) in a [provisional MRG](@) require further processing. See [processing synonyms] for an example.
 
-An [MRG entry](@) has additional fields that come from the front matter of the [curated text](@) that the [MRG entry](@) represents. Some fields are
+An [MRG entry](@) has additional fields that come from the [front matter](@) of the [curated text](@) that the [MRG entry](@) represents. Some fields are
 
 - mandatory for all [curated texts](@), and hence will always appear in an [MRG entry](@); these appear in the table below.
 - optional for [curated texts](@) - typically, e.g. to accommodate for differences in the types [semantic units](@) that [curated texts](@) document; these also appear in the table below.

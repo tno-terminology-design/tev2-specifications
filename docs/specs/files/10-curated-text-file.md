@@ -10,7 +10,7 @@ import APITable from '@site/src/components/APITable';
 
 Every [curated text](@) consists of two parts:
 
-1. the [header](@) (also called the 'front matter' of the [curated text](@)). It a set of ([YAML](https://yaml.org/spec/1.2.2/)) key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it.
+1. the [header](@) (also called the '[front matter](@)' of the [curated text](@)). It a set of ([YAML](https://yaml.org/spec/1.2.2/)) key-value pairs that contain meta data about the [curated text](@) and/or data that could also have been part of the [body](@), but is so small that it doesn't warrant to have a dedicated section for it.
 2. the [body](@), that contains all other documentation. It has no fixed structure. When the [curated text](@) is to processed using a static site generator such as [Docusaurus v2](https://docusaurus.io/docs), or [github pages](https://pages.github.com/), it would typically contain ([markdown](https://www.markdownguide.org/basic-syntax/)).
 
 <details>
@@ -19,7 +19,7 @@ Every [curated text](@) consists of two parts:
 
 ```yaml
 ---
-# Docusaurus front matter
+# Docusaurus [front matter](@)
 id: ctext
 sidebar_label: Curated Texts
 # TEv2 Curated Text Header
@@ -108,5 +108,5 @@ Different [TEv2 tools](@) use header fields in [headers](@) for various purposes
 ```
 
 :::info Editor's note
-Do we need to provide more guidance, e.g., regarding the front matter fields that may be used by the [TRRT](@) for converting [TermRefs](@), e.g. with popovers (for which it is known that the `hoverText` field is used)?
+Do we need to provide more guidance, e.g., regarding the [front matter](@) fields that may be used by the [TRRT](@) for converting [TermRefs](@), e.g. with popovers (for which it is known that the `hoverText` field is used)?
 :::

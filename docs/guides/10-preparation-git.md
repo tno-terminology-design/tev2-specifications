@@ -47,9 +47,9 @@ scope:
 
 [TEv2](@) allows [TermRefs](@) to link to the rendered versions of the [(curated) texts](curated-text@) that describe, define or otherwise document what such [TermRefs](@) refer to.
 
-Some static file generators allow for _front matter_, i.e., blocks of data on top of markdown files that are used to set custom variables for better content generation. One typical use is a variable (called something like `id`, `slug`, `permalink` or so) that is used in the URL to rendered pages.
+Some static file generators allow for _[front matter](@)_, i.e., blocks of data on top of markdown files that are used to set custom variables for better content generation. One typical use is a variable (called something like `id`, `slug`, `permalink` or so) that is used in the URL to rendered pages.
 
-In our example, John uses the static site generator "Docusaurus", and organizes it to generate a site that is accessible at `https://johndoe.github.io/example/docs`. Note that this has nothing to do with [TEv2](@). Docusaurus uses a front matter variable named `id`, which means that a file that sets this variable to `introduction` will be rendered at URL `https://johndoe.github.io/example/docs/path-to-file/introduction` (where `path-to-file` is the path to the file that contains `id: introduction` in its front matter).
+In our example, John uses the static site generator "Docusaurus", and organizes it to generate a site that is accessible at `https://johndoe.github.io/example/docs`. Note that this has nothing to do with [TEv2](@). Docusaurus uses a [front matter](@) variable named `id`, which means that a file that sets this variable to `introduction` will be rendered at URL `https://johndoe.github.io/example/docs/path-to-file/introduction` (where `path-to-file` is the path to the file that contains `id: introduction` in its [front matter](@)).
 
 <details>
     <summary>Here is the SAF that John created to accommodate for this:</summary>
@@ -206,7 +206,7 @@ scope:
   defaultvsn: documentation # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.tev2.latest.yaml
   website: https://tno-terminology-design.github.io/tev2-specifications/docs # base URL for creating links to rendered versions of Curated Texts. It should also serve as the home page of the Terminology.
   navpath: /terms # Path to the directory where Curated Texts are rendered. What `curatedir` is for Curated Texts is, `navpath` is for the rendered versions of Curated Texts.
-  navid: id # Name of the field in the front matter of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used.
+  navid: id # Name of the field in the [front matter](@) of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used.
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
   issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled

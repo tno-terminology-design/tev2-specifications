@@ -106,7 +106,7 @@ They are currently not included because we have not found any terms that would b
 <details>
    <summary>Example of a form phrase macro and its use</summary>
 
-Suppose we have a [curated text](@) for the term `actor`, and in its front matter, we specify:
+Suppose we have a [curated text](@) for the term `actor`, and in its [front matter](@), we specify:
 
 ~~~ yaml
 formPhrases: [ "identif{yies}" ]

@@ -268,4 +268,4 @@ The [MRGT](@) comes with documentation that enables developers to ascertain its 
 
 ## Notes
 
-[^previous]: The algorithm ensures that an [MRG entry](@) for a [term](@) that is a [synonym](@) of another [term](@) identical to the [MRG entry](@) for that other [term](@), but if the [curated text](@) that specifies the [synonym](@) has additional front matter (e.g. a slightly modified `glossaryText` field), that front matter is retained in the [MRG entry](@). It is up to the [author](@) of the [curated text](@) to make sure this does not pose any problems, and up to the [ICT](@) to do appropriate checks.
+[^previous]: The algorithm ensures that an [MRG entry](@) for a [term](@) that is a [synonym](@) of another [term](@) identical to the [MRG entry](@) for that other [term](@), but if the [curated text](@) that specifies the [synonym](@) has additional [front matter](@) (e.g. a slightly modified `glossaryText` field), that [front matter](@) is retained in the [MRG entry](@). It is up to the [author](@) of the [curated text](@) to make sure this does not pose any problems, and up to the [ICT](@) to do appropriate checks.

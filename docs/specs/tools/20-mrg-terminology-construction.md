@@ -92,7 +92,16 @@ The following syntaxes are available for adding a selection of terms from a spec
   - `<tid>` is a [terminology identifier](@) that [identifies](@) an [MRG](@) (that must have been made available in the [glossarydir](@) of the current scope).
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) that resides in that [MRG](@), such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) from that [MRG](@) is to be selected for inclusion in the [terminology under construction](@).
- 
+
+:::info Editor's note
+[Issue #15](https://github.com/tno-terminology-design/tev2-tools/issues/15) requests for adding the following:
+
+- The list **[ `<value>`, `<value2>`, ... ]** can be replaced with `*` (or is it **[`*`]**?), which would then mean that all curated texts or MRG entries are selected whose `<key>` field exists and is not empty.
+- Any `<value>` may be preceded by the `!`-character or the `NOT` (or `not`) keyword, which would then  mean that all curated texts or MRG entries are selected whose `<key>` field does NOT contain the specified `<value>`. This could be used, e.g., to select terms whoses `status` fiels does not contain the value `deprecated`.
+
+This documentation should reflect what was done as the issue gets closed.
+:::
+
 These instructions will add every term from the designated source, whose specification contains a field named `<key>`, and (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
 <details>

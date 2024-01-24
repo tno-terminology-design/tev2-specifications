@@ -67,7 +67,7 @@ Every [TEv2](@) [text conversion tool](@) has one particular
 
 - [converter profile](@), i.e., a specification of the [moustache variables](@) that a [converter](@) can use for the construction of the replacement text. The tool-specific [converter profile](@) is specified in the [documentation of that tool](toolbox@).
 
-## Configuration of a Text Conversion Tool
+## Configuration of a Text Conversion Tool {#configuration}
 
 Every time a [TEv2](@) [text conversion tool](@) is executed, it will use a particular
 
@@ -78,7 +78,15 @@ Every time a [TEv2](@) [text conversion tool](@) is executed, it will use a part
 A [tool](tev2-tool@) can be instructed to use a particular [interpreter](@) and/or [converter](@) by:
 
 - not specifying it, in which case the defaults are used that are specified for that [tool](tev2-tool@);
-- specifying it in a [configuration file](/docs/specs/files/configuration-file) that is used when calling the [tool](tev2-tool@);
-- specifying as a command-line argument that is used when calling the [tool](tev2-tool@) (this overrides any specifications in the [configuration file](/docs/specs/files/configuration-file) if that were also used).
+- specifying it in a [configuration file](/docs/specs/files/configuration-file) that is used when calling the [tool](tev2-tool@). This overrides any defaults that the [tool](tev2-tool@) may have;
+- specifying as a command-line argument that is used when calling the [tool](tev2-tool@). This overrides any specifications in the [configuration file](/docs/specs/files/configuration-file) if that were also used.
 
 Particular [text conversion tools](@) may have the option of specifying the [converter](@) to be used as part of the text pattern that is located by the [interpreter](@) of the tool. An example of this is the [HRGT](@).
+
+:::info Editor's note
+Specifying [converters](@) as part of the text pattern that is located by the [interpreter](@) of the tool is expected to result in 'messy texts'; it's the cost authors pay for using such flexibility (insofar that is (going to be) implemented). The 'price' should then be that when that is specified, it should take precedence over anything else.
+
+Perhaps we need some text that documents that once a tool has decided what the sourcer of a particular (array of) arguments is, it should stick to that. In other words, if the commandline specifies a single converter and the config file specifies multiple ones, then the source is the commandline, and con[2] that is specified in the config file does not get used.
+
+Also the con[error] is NOT one of the elements of the con array for this matter, but is/should be an argument/parameter in its own right, so that - using the example of the previous paragraph - if the commandline doesn't specify a con[error] while the config file does, then the con[error] as specified in the config file is used where necessary.
+:::

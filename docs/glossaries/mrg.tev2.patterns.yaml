@@ -6,7 +6,7 @@ terminology:
   defaultvsn: "documentation"
   website: "https://tno-terminology-design.github.io/tev2-specifications/docs"
   navpath: "/terms"
-  bodyFileID: "id"
+  navid: "id"
   license: "LICENSE.md"
   statuses:
     - "proposed"

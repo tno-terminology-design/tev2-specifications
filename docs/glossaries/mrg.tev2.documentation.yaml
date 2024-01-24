@@ -621,7 +621,7 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/10-curated-text-file"
     headingids:
       - "curated-text-files"
-      - "docusaurus-front-matter"
+      - "docusaurus-[front-matter](@)"
       - "tev2-curated-text-header"
       - "tev2-curation-status"
       - "origins/acknowledgements"
@@ -962,6 +962,29 @@ entries:
       - "miscellaneous"
     termid: "concept:formatted-text"
     vsntag: "documentation"
+  - id: "front-matter"
+    displayed_sidebar: "tev2SideBar"
+    term: "front-matter"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Front Matter"
+    glossaryText: "a section at the top of a file that contains YAML (or similarly formatted) metadata, such as title, description, tags, and more. It is used in static site generators, as well as by [TEv2](@). The front-matter must be the first thing in the file and must be enclosed in triple-dashed lines for YAML."
+    status: "proposed"
+    created: 20240121
+    updated: 20240121
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "front-matter.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/front-matter"
+    formPhrases: []
+    headingids:
+      - "front-matter"
+      - "tev2-use-of-front-matter"
+      - "front-matter-use-in-static-site-generators"
+    termid: "concept:front-matter"
+    vsntag: "documentation"
   - id: "glossary"
     displayed_sidebar: "tev2SideBar"
     term: "glossary"
@@ -1200,7 +1223,7 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/10-curated-text-file"
     headingids:
       - "curated-text-files"
-      - "docusaurus-front-matter"
+      - "docusaurus-[front-matter](@)"
       - "tev2-curated-text-header"
       - "tev2-curation-status"
       - "origins/acknowledgements"

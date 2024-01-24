@@ -33,12 +33,10 @@ entries:
     formPhrases:
       - "action"
       - "actions"
-      - "action's"
-      - "action(s)"
+      - "action-s"
       - "acting"
       - "activity"
-      - "activitys"
-      - "activity's"
+      - "activity-s"
       - "activities"
     status: "draft"
     grouptags: null
@@ -64,12 +62,10 @@ entries:
     formPhrases:
       - "actor"
       - "actors"
-      - "actor's"
-      - "actor(s)"
+      - "actor-s"
       - "digital-actor"
       - "digital-actors"
-      - "digital-actor's"
-      - "digital-actor(s)"
+      - "digital-actor-s"
     status: "draft"
     grouptags: null
     hoverText: "Actor: Entity that can act (do things/execute Actions), e.g. people, machines, but not Organizations."
@@ -95,16 +91,13 @@ entries:
     formPhrases:
       - "assertion"
       - "assertions"
-      - "assertion's"
-      - "assertion(s)"
+      - "assertion-s"
       - "claim"
       - "claims"
-      - "claim's"
-      - "claim(s)"
+      - "claim-s"
       - "statement"
       - "statements"
-      - "statement's"
-      - "statement(s)"
+      - "statement-s"
     status: "draft"
     grouptags: null
     hoverText: "Assertion: a declaration/statement, made by a specific Party, that something is the case."
@@ -211,8 +204,7 @@ entries:
     term: "community"
     formPhrases:
       - "community"
-      - "communitys"
-      - "community's"
+      - "community-s"
       - "communities"
     status: "draft"
     grouptags: null
@@ -237,8 +229,7 @@ entries:
     formPhrases:
       - "compliance-objective"
       - "compliance-objectives"
-      - "compliance-objective's"
-      - "compliance-objective(s)"
+      - "compliance-objective-s"
     status: "draft"
     grouptags: null
     hoverText: "Compliance objective (of a Party): an Objective, owned by that Party, that aims to reach and maintain a state of affairs in which a specific set of Entities that this Party controls are in accordance with a specific set of requirements (e.g., laws, regulations, standards, etc.)."
@@ -322,8 +313,7 @@ entries:
     formPhrases:
       - "control"
       - "controls"
-      - "control's"
-      - "control(s)"
+      - "control-s"
     status: "draft"
     grouptags: null
     hoverText: "Control (of a Party): the combination of resources (e.g. people, tools, budgets, time) and processes that are tasked to realize a specific Control Objective of that Party."
@@ -348,8 +338,7 @@ entries:
     formPhrases:
       - "control-objective"
       - "control-objectives"
-      - "control-objective's"
-      - "control-objective(s)"
+      - "control-objective-s"
     status: "draft"
     grouptags: null
     hoverText: "Control objective (of a Party): an Objective, owned by that Party, that aims to contribute to the realization of another (set of) Objective(s) of that Party, by producing results that this Party needs to realize these other Objective(s)."
@@ -464,16 +453,13 @@ entries:
     formPhrases:
       - "credential"
       - "credentials"
-      - "credential's"
-      - "credential(s)"
+      - "credential-s"
       - "verifiable-credential"
       - "verifiable-credentials"
-      - "verifiable-credential's"
-      - "verifiable-credential(s)"
+      - "verifiable-credential-s"
       - "attribute-based-credential"
       - "attribute-based-credentials"
-      - "attribute-based-credential's"
-      - "attribute-based-credential(s)"
+      - "attribute-based-credential-s"
     status: "draft"
     grouptags: null
     hoverText: "Credential: data, representing a set of Assertions (claims, statements), authored and signed by, or on behalf of, a specific Party."
@@ -801,8 +787,7 @@ entries:
     term: "entity"
     formPhrases:
       - "entity"
-      - "entitys"
-      - "entity's"
+      - "entity-s"
       - "entities"
     status: "draft"
     grouptags: null
@@ -828,8 +813,7 @@ entries:
     formPhrases:
       - "expectation"
       - "expectations"
-      - "expectation's"
-      - "expectation(s)"
+      - "expectation-s"
     status: "draft"
     grouptags: null
     hoverText: "Expectation (of a Party): an Objective that is Owned by that Party for having a specific (set of) result(s) produced, where the actual production thereof is (going to be) outsourced to another Party."
@@ -1072,17 +1056,14 @@ entries:
       - "governed-by"
       - "governing"
       - "governing-party"
-      - "governing-partys"
-      - "governing-party's"
+      - "governing-party-s"
       - "governing-parties"
       - "governor"
       - "governors"
-      - "governor's"
-      - "governor(s)"
+      - "governor-s"
       - "government"
       - "governments"
-      - "government's"
-      - "government(s)"
+      - "government-s"
     status: "draft"
     grouptags: null
     hoverText: "Governance: the act or process of governing or overseeing the realization of (the results associated with) a set of Objectives by the Owner of these Objectives, in order to ensure they will be fit for the purposes that this Owner intends to use them for."
@@ -1592,8 +1573,7 @@ entries:
     term: "identity"
     formPhrases:
       - "identity"
-      - "identitys"
-      - "identity's"
+      - "identity-s"
       - "identities"
     status: "draft"
     grouptags: null
@@ -1752,8 +1732,7 @@ entries:
     formPhrases:
       - "jurisdiction"
       - "jurisdictions"
-      - "jurisdiction's"
-      - "jurisdiction(s)"
+      - "jurisdiction-s"
     status: "draft"
     grouptags: null
     hoverText: "Jurisdiction: the composition of a Legal System (legislation, enforcement thereof, and conflict resolution), a Party that governs that Legal System, a scope within which that Legal System is operational, and one or more Objectives for the purpose of which the Legal System is operated."
@@ -1801,8 +1780,7 @@ entries:
     formPhrases:
       - "knowledge"
       - "knowledges"
-      - "knowledge's"
-      - "knowledge(s)"
+      - "knowledge-s"
     status: "draft"
     grouptags: null
     hoverText: "Knowledge: The (intangible) sum of what is known by a specific Party, as well as the familiarity, awareness or understanding of someone or something by that Party."
@@ -1852,8 +1830,7 @@ entries:
     term: "legal-entity"
     formPhrases:
       - "legal-entity"
-      - "legal-entitys"
-      - "legal-entity's"
+      - "legal-entity-s"
       - "legal-entities"
     status: "draft"
     grouptags: null
@@ -1886,8 +1863,7 @@ entries:
       - "managed-by"
       - "managing"
       - "managing-party"
-      - "managing-partys"
-      - "managing-party's"
+      - "managing-party-s"
       - "managing-parties"
     status: "draft"
     grouptags: null
@@ -2325,8 +2301,7 @@ entries:
     formPhrases:
       - "objective"
       - "objectives"
-      - "objective's"
-      - "objective(s)"
+      - "objective-s"
     status: "draft"
     grouptags: null
     hoverText: "Objective: Something toward which a Party (its Owner) directs effort (an aim, goal, or end of action)."
@@ -2353,8 +2328,7 @@ entries:
     formPhrases:
       - "obligation"
       - "obligations"
-      - "obligation's"
-      - "obligation(s)"
+      - "obligation-s"
     status: "draft"
     grouptags: null
     hoverText: "Obligation (of a Party): an Objective that is Owned by that Party for producing a specific (set of) result(s) that are to be used (consumed) by that Party and/or other Parties."
@@ -2401,8 +2375,7 @@ entries:
     formPhrases:
       - "organization"
       - "organizations"
-      - "organization's"
-      - "organization(s)"
+      - "organization-s"
     status: "draft"
     grouptags: null
     hoverText: "Organization: a Party that is capable of setting Objectives and making sure these are realized by Actors that it has Onboarded and/or by (vetted) Parties that are committed to contribute to these Objectives."
@@ -2448,12 +2421,10 @@ entries:
     formPhrases:
       - "owner"
       - "owners"
-      - "owner's"
-      - "owner(s)"
+      - "owner-s"
       - "own"
       - "owns"
-      - "own's"
-      - "own(s)"
+      - "own-s"
     status: "draft"
     grouptags: null
     hoverText: "Owner (of an Entity): the role that a Party performs when it is exercising its legal, rightful or natural title to control that Entity."
@@ -2477,8 +2448,7 @@ entries:
     term: "partial-identity"
     formPhrases:
       - "partial-identity"
-      - "partial-identitys"
-      - "partial-identity's"
+      - "partial-identity-s"
       - "partial-identities"
     status: "draft"
     grouptags: null
@@ -2500,8 +2470,7 @@ entries:
     term: "party"
     formPhrases:
       - "party"
-      - "partys"
-      - "party's"
+      - "party-s"
       - "parties"
     status: "draft"
     grouptags: null
@@ -2788,8 +2757,7 @@ entries:
     formPhrases:
       - "risk"
       - "risks"
-      - "risk's"
-      - "risk(s)"
+      - "risk-s"
     status: "draft"
     grouptags: null
     hoverText: "Risk (of a Party's Objective): the effects that uncertainty (i.e. a lack of information, understanding or knowledge of events, their consequences or likelihoods) can have on the intended realization of that Party's Objective."
@@ -2813,8 +2781,7 @@ entries:
     formPhrases:
       - "risk-objective"
       - "risk-objectives"
-      - "risk-objective's"
-      - "risk-objective(s)"
+      - "risk-objective-s"
     status: "draft"
     grouptags: null
     hoverText: "Risk objective (of a Party): an Objective, owned by that Party, that aims to reach and maintain a state of affairs in which the Risks associated with a specific set of its Objectives become, and/or remain, acceptable."
@@ -3645,8 +3612,7 @@ entries:
     formPhrases:
       - "transaction"
       - "transactions"
-      - "transaction's"
-      - "transaction(s)"
+      - "transaction-s"
     status: "draft"
     grouptags: null
     hoverText: "Transaction: the exchange of goods, services, funds, or data between some Parties (called Participants of the Transaction)."

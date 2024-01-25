@@ -1180,7 +1180,7 @@ entries:
     termType: "concept"
     isa: "dictionary"
     glossaryTerm: "Human Readable Dictionary"
-    glossaryAlias: "HRD"
+    glossaryAbbr: "HRD"
     glossaryText: "a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically."
     synonymOf: null
     grouptags:
@@ -1222,7 +1222,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Human Readable Dictionary Tool"
-    glossaryAlias: "HRDT"
+    glossaryAbbr: "HRDT"
     glossaryText: "a software tool designed to create, manage, and process [Human Readable Dictionaries (HRDs)](hrd@)."
     synonymOf: null
     grouptags:
@@ -1257,7 +1257,7 @@ entries:
     termType: "concept"
     isa: "glossary"
     glossaryTerm: "Human Readable Glossary"
-    glossaryAlias: "HRG"
+    glossaryAbbr: "HRG"
     glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
     synonymOf: null
     grouptags:
@@ -1354,7 +1354,7 @@ entries:
     isa: null
     bodyFile: "/specs/tools/22-hrgt.md"
     glossaryTerm: "Human Readable Glossary Tool"
-    glossaryAlias: "HRGT"
+    glossaryAbbr: "HRGT"
     glossaryText: "a software tool designed to create, manage, and process [Human Readable Glossaries (HRGs)](@), as [specified by TEv2](hrgt@). HRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     synonymOf: null
     grouptags:
@@ -1419,7 +1419,7 @@ entries:
     isa: null
     bodyFile: "/specs/tools-envisaged/11-ict.md"
     glossaryTerm: "Integrity Checker Tool"
-    glossaryAlias: "ICT"
+    glossaryAbbr: "ICT"
     glossaryText: "a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data."
     synonymOf: null
     grouptags:
@@ -1951,7 +1951,7 @@ entries:
     termType: "concept"
     isa: "dictionary"
     glossaryTerm: "Machine Readable Dictionary"
-    glossaryAlias: "MRD"
+    glossaryAbbr: "MRD"
     glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@)."
     synonymOf: null
     grouptags: null
@@ -1986,7 +1986,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Machine Readable Dictionary Tool"
-    glossaryAlias: "MRDT"
+    glossaryAbbr: "MRDT"
     glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
     synonymOf: null
     grouptags:
@@ -2022,7 +2022,7 @@ entries:
     isa: "glossary"
     bodyFile: "/specs/files/32-mrg.md"
     glossaryTerm: "Machine Readable Glossary"
-    glossaryAlias: "MRG"
+    glossaryAbbr: "MRG"
     glossaryText: "a [glossary](@) for a particular (version of a) [terminology](@) that is formatted in YAML, according to the [TEv2 MRG specifications](/docs/specs/files/mrg), to enable automated processing and integration with software systems."
     synonymOf: null
     grouptags:
@@ -2181,7 +2181,7 @@ entries:
     isa: null
     bodyFile: "/specs/tools/21-mrgt.md"
     glossaryTerm: "Machine Readable Glossary Tool"
-    glossaryAlias: "MRGT"
+    glossaryAbbr: "MRGT"
     glossaryText: "a software tool designed to create, manage, and process [Machine Readable Glossaries (MRGs)](@), as [specified by TEv2](mrgt@). MRGTs offer features for selecting [terms](@) that are [curated](@) within the [scope](@) it is run in, or from other [scopes](@)."
     synonymOf: null
     grouptags:
@@ -2603,7 +2603,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Regular Expression"
-    glossaryAlias: "Regex"
+    glossaryAbbr: "Regex"
     glossaryText: "a sequence of characters that specifies a text pattern that can be searched for within other, larger texts, for the purpose of, e.g., replacing the text pattern with some other text. Within [TEv2](@), we use a [JavaScript flavor (ECMAScript 2022)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)."
     synonymOf: null
     grouptags: null
@@ -2804,7 +2804,7 @@ entries:
     termType: "concept"
     bodyFile: "/specs/files/12-saf.md"
     glossaryTerm: "Scope Administration File"
-    glossaryAlias: "SAF"
+    glossaryAbbr: "SAF"
     glossaryText: "a YAML file that contains essential data about a particular [scope](@) (e.g., specifying where its [curated texts](@), [glossaries](@) etc. live), the relationships this [scope](@) has with other [scopes](@), and the specifications of the different [terminologies](@) that are [curated](@) within that [scope](@). The SAF of a [scope](@) is located in its [scopedir](@)."
     hoverText: "SAF: a YAML file that contains essential data about a particular scope, such as the locations of the scope's curated texts, glossaries, and the specifications of the curated terminologies. The SAF is located in the so-called scopedir."
     synonymOf: null
@@ -3634,7 +3634,7 @@ entries:
     isa: null
     bodyFile: "/specs/tools/12-trrt.md"
     glossaryTerm: "TermRef Rendering Tool"
-    glossaryAlias: "TRRT"
+    glossaryAbbr: "TRRT"
     glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
     synonymOf: null
     grouptags:

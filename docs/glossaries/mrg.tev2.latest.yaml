@@ -3793,3 +3793,16 @@ entries:
       - "examples"
     termid: "concept:vocabulary"
     vsntag: "documentation"
+  - term: "writer"
+    synonymOf: "author"
+    glossaryTerm: "Writer (term is only for testing purposes)"
+    formPhrases:
+      - "writer"
+      - "writers"
+      - "writer-s"
+    scopetag: "tev2"
+    locator: "writer.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/writer"
+    headingids: []
+    termid: "concept:writer"
+    vsntag: "documentation"

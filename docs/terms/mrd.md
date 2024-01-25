@@ -7,7 +7,7 @@ term: mrd
 termType: concept
 isa: dictionary
 glossaryTerm: Machine Readable Dictionary
-glossaryAlias: MRD
+glossaryAbbr: MRD
 glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@)."
 synonymOf:
 grouptags:

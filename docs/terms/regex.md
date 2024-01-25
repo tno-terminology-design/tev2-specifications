@@ -7,7 +7,7 @@ term: regex
 termType: concept
 isa:
 glossaryTerm: Regular Expression
-glossaryAlias: Regex
+glossaryAbbr: Regex
 glossaryText: "a sequence of characters that specifies a text pattern that can be searched for within other, larger texts, for the purpose of, e.g., replacing the text pattern with some other text. Within [TEv2](@), we use a [JavaScript flavor (ECMAScript 2022)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)."
 synonymOf:
 grouptags:

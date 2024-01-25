@@ -5,7 +5,7 @@ termType: concept
 isa:
 bodyFile: /specs/tools/12-trrt.md
 glossaryTerm: TermRef Rendering Tool
-glossaryAlias: TRRT
+glossaryAbbr: TRRT
 glossaryText: "a [TEv2 tool](@) that is designed to facilitate the visualization and rendering of [TermRefs](@)."
 synonymOf:
 grouptags: [ "tev2-tool", "tev2-toolbox" ]

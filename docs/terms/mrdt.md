@@ -7,7 +7,7 @@ term: mrdt
 termType: concept
 isa:
 glossaryTerm: Machine Readable Dictionary Tool
-glossaryAlias: MRDT
+glossaryAbbr: MRDT
 glossaryText: "a software tool designed to create, manage, and process [Machine Readable Dictionaries (MRDs)](mrd@)."
 synonymOf: 
 grouptags: [ "tools", "dictionary-tools" ]

@@ -8,3 +8,7 @@ date: 20231202
 # TEv2 Glossary
 
 {% hrg="" %}
+
+# List of Abbreviations
+
+{% hrg="" converter="markdown-abbr-table-row" %}

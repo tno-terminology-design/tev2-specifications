@@ -2,13 +2,16 @@
 # TEv2 Curated Text Header
 term: writer
 synonymOf: author
-glossaryTerm: "Writer (term is only for testing purposes)"
 formPhrases: [ "writer{ss}" ]
 ---
 
 This text should not show anywhere, as it is a Synonym.
 
-However [termrefs](@) should be resolved.
-If they are not, that should produce an error.
+However [termrefs](@) that use `writer` should be resolved. If they are not, that should produce an error.
+
 Let's see what [writer](@) does, 
 Or, the [writer's](@) block...
+
+The term must have all properties of [author](@), except for the `formPhrases`.
+
+Therefore, this term should also [appear in the glossary](/docs/tev2-glossary#writer-term-is-only-for-testing-purposes), where the `glossaryText` should be that of `author`.

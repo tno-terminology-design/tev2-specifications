@@ -6,7 +6,6 @@ displayed_sidebar: tev2SideBar
 term: terminology
 termType: concept
 grouptags:
-synonymOf:
 formPhrases: [ "terminolog{yies}" ]
 # Curation status
 status: proposed

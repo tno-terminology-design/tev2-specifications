@@ -102,5 +102,4 @@ The [TRRT](@) CLI outputs information about its execution to the console accordi
    docs/terms/term-identifier.md:8
   TERM HELP    Term ref '[owner](@)' > 'owner@tev2:terms', could not be matched with an MRG entry:
    docs/terms/scope.md:7:7
-   docs/terms/knowledge-artifact.md:29
   ```

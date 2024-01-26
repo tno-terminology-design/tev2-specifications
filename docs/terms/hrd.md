@@ -9,7 +9,6 @@ isa: dictionary
 glossaryTerm: Human Readable Dictionary
 glossaryAbbr: HRD
 glossaryText: "a [dictionary](@) that presents terms and their meanings in a format that is easily understandable and accessible to humans, typically organized alphabetically."
-synonymOf:
 grouptags: [ "dictionary", "reference-materials" ]
 formPhrases: [ "hrd{ss}", "human-readable-dictionar{yies}", "human-readable-dictionar{yies}-hrd{ss}" ]
 # Curation status

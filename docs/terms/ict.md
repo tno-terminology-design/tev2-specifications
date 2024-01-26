@@ -10,7 +10,6 @@ bodyFile: /specs/tools-envisaged/11-ict.md
 glossaryTerm: Integrity Checker Tool
 glossaryAbbr: ICT
 glossaryText: "a software tool designed to check the integrity and conformity of various files used in the curation and management of [glossaries](@), [dictionaries](@), [curated texts](@), and other data within a terminology project. The ICT verifies that the files adhere to the [TEv2 file specifications](/docs-spec-files), ensuring the consistency and accuracy of the terminology data."
-synonymOf:
 grouptags: [ "tools", "quality-assurance" ]
 formPhrases: [ "ict", "integrity-checker" ]
 # Curation status

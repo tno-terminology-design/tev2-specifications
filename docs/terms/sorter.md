@@ -8,7 +8,6 @@ termType: concept
 isa:
 glossaryTerm: Sorter
 glossaryText: "a specification, in the form of a predefined value or a [handlebars expression](@), of the value that is to be used for sorting a list, e.g., for sorting [HRG entries](@) within a [HRG list](@)."
-synonymOf:
 grouptags: 
 formPhrases: [ "sorter{ss}" ]
 # Curation status

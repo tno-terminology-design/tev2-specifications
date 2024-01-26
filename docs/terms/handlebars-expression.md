@@ -8,7 +8,6 @@ termType: concept
 isa:
 glossaryTerm: Handlebars Expression
 glossaryText: "a specific syntax used in the popular templating engine 'Handlebars', which enables one to specify texts (e.g., HTML templates) in which dynamic data (as provided, e.g., by [moustache variables](@)) is placed. See [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) for further details."
-synonymOf:
 grouptags:
 formPhrases: [ "handlebar-expression{ss}", "handlebars-expression{ss}" ]
 # Curation status

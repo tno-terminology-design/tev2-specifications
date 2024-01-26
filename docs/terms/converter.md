@@ -8,7 +8,6 @@ termType: concept
 isa:
 glossaryTerm: Converter
 glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
-synonymOf:
 grouptags: 
 formPhrases: [ "converter{ss}" ]
 # Curation status

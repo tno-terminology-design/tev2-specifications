@@ -9,7 +9,6 @@ isa:
 bodyFile: /specs/syntax/41-mrg-ref-syntax.md
 glossaryTerm: MRGRef
 glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
-synonymOf:
 grouptags:
 formPhrases: [ "mrg-ref{ss}", "mrgref{ss}" ]
 # Curation status

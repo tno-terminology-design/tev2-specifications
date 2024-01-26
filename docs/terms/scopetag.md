@@ -8,7 +8,6 @@ termType: concept
 isa: tag
 glossaryTerm:
 glossaryText: "a [tag](@) that is used to [identify](@) [scopes](@) from within a specific [scope](@)"
-synonymOf:
 grouptags:
 formPhrases: [ "scopetag{ss}", "scope-tag{ss}" ]
 # Curation status

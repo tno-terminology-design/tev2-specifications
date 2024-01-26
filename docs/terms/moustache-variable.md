@@ -8,7 +8,6 @@ termType: concept
 isa:
 glossaryTerm: Moustache Variable
 glossaryText: "a placeholder in the form of a 'moustache' tag, e.g.: `{{variable_name}}`, that are used by [converters](@) to produce a text by which a text construct that is located by an [interpreter](@) will be replaced. See also https://mustache.github.io/mustache.5.html"
-synonymOf:
 grouptags:
 formPhrases: [ "moustache-variable{ss}" ]
 # Curation status

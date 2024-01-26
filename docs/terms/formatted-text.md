@@ -8,7 +8,6 @@ termType: concept
 isa: text-format
 glossaryTerm: Formatted Text
 glossaryText: "a text that has been processed and arranged to have a specific layout, style, and presentation, making it visually appealing and easy to read."
-synonymOf:
 grouptags:
 formPhrases: [ "formatted-text{ss}" ]
 # Curation status

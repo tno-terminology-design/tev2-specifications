@@ -8,7 +8,6 @@ termType: concept
 isa:
 glossaryTerm: Curator (of a Scope)
 glossaryText: "a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@)."
-synonymOf:
 grouptags: [ "terminology"  ]
 formPhrases: [ "curator{ss}", "terminology-curator{ss}" ]
 # Curation status

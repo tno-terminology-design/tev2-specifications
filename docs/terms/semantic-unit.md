@@ -9,7 +9,6 @@ isa:
 glossaryTerm: Semantic Unit
 glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)). Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
 hoverText: "a basic building block of meaning or representation that exists within the 'mind' of a party, e.g., a concept, relation, or property. Parties use terms (words/phrases) to refer to these intangible building blocks."
-synonymOf:
 grouptags:
 formPhrases: [ "semantic-unit{ss}" ]
 # Curation status

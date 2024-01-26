@@ -3722,7 +3722,6 @@ entries:
     vsntag: "documentation"
   - term: "writer"
     synonymOf: "author"
-    glossaryTerm: "Writer (term is only for testing purposes)"
     formPhrases:
       - "writer"
       - "writers"

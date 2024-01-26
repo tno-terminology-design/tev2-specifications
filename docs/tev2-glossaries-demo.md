@@ -28,7 +28,7 @@ This page is evidence that an [HRG](@) can be generated for every [MRG](@) that 
 :::info
 This is the [glossary](@) for the default [terminology](@) within this (TEv2) [scope](@), in the format as defined in file `terminology-config.yaml`, which holds the default configurations for the [TEv2 tools](@) within the this [scope](@).
 
-The [MRGRef](@) that is used is `{% hrg="tev2" %}`
+The [MRGRef](@) that is used is `{%` `hrg="tev2"` `%}`
 :::
 
 {% hrg="tev2" %}
@@ -40,7 +40,7 @@ The [MRGRef](@) that is used is `{% hrg="tev2" %}`
 :::info
 This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [scope](@). It is formatted as a `markdowntable`.
 
-The [MRGRef](@) that is used is `{% hrg=":terms" converter="markdown-table-row" %}`
+The [MRGRef](@) that is used is `{%` `hrg=":terms" converter="markdown-table-row"` `%}`
 :::
 
 | Term | Definition |
@@ -54,7 +54,7 @@ The [MRGRef](@) that is used is `{% hrg=":terms" converter="markdown-table-row" 
 :::info
 This [glossary](@) contains the [terms](@) that are curated within this (TEv2) [scope](@). It has a custom format, and is sorted according to the date of last change, as it appears in the [MRGEntry](@).
 
-The [MRGRef](@) that is used is `{% hrg=":terms" converter="| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} | {{updated}} |\n" sorter="{{updated}}" %}`
+The [MRGRef](@) that is used is `{%` `hrg=":terms" converter="| [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} | {{updated}} |\n" sorter="{{updated}}"` `%}`
 :::
 
 | Term | Definition | Updated |
@@ -68,8 +68,8 @@ The [MRGRef](@) that is used is `{% hrg=":terms" converter="| [{{#if glossaryTer
 :::info
 This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are known within this (TEv2) scope. It is formatted in a custom format (specified by a handlebars expression template).
 
-The [MRGref](@) that is used is `{% hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
-{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n" %}`
+The [MRGref](@) that is used is `{%` `hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
+{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n"` `%}`
 :::
 
 {% hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
@@ -84,7 +84,7 @@ This is the [glossary](@) for the `latest` version of the [terminology](@) withi
 
 NOTE that the [HRG entries](@) are sorted by the value of their `glossaryText`.
 
-The [MRGref](@) that is used is `{% hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}" %}`
+The [MRGref](@) that is used is `{%` `hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}"` `%}`
 :::
 
 {% hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}" %}

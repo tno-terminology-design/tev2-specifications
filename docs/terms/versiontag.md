@@ -9,7 +9,7 @@ isa: tag
 glossaryTerm:
 glossaryText: "a [tag](@) that is used to [identify](@) a specific version of a [terminology](@) from within a specific [scope](@)."
 grouptags:
-formPhrases: [ "versiontag{ss}", "version-tag{ss}", "vsntag{ss}" ]
+formPhrases: [ "versiontag{ss}", "version tag{ss}", "vsntag{ss}" ]
 # Curation status
 status: proposed
 created: 20220606

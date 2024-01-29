@@ -1655,6 +1655,8 @@ entries:
       - "calling-the-tool"
       - "running-the-tool"
       - "constructing-provisional-mrg"
+      - "creatinga-provisional-mrg"
+      - "processing-formphrases"
       - "mrg-filenames"
       - "post-processing"
       - "phase-3:-post-processing-other-fields"
@@ -1780,12 +1782,15 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Provisional MRG Entry"
-    glossaryText: "an [MRG entry](@) that is 'under construction'; it contains 'raw' data that documents (the [semantic unit](@) referred to by) a [term](@), that is obtained either from (the [header](@) of) a [curated text](@), or from an [MRG entry](@) of some existing [MRG](@)."
+    glossaryText: "an [MRG entry](@) that is part of a [provisional MRG](@) (under construction); it contains 'raw' data that documents (the [semantic unit](@) referred to by) a [term](@), that is obtained either from (the [header](@) of) a [curated text](@), or from an [MRG entry](@) of some existing [MRG](@)."
     grouptags: null
     formPhrases:
       - "provisional-mrg-entry"
       - "provisional-mrg-entry-s"
       - "provisional-mrg-entries"
+      - "provisional-mrgentry"
+      - "provisional-mrgentry-s"
+      - "provisional-mrgentries"
     status: "proposed"
     created: 20231010
     updated: 20231010
@@ -1896,6 +1901,10 @@ entries:
       - "regularized-text"
       - "regularized-texts"
       - "regularized-text-s"
+      - "regularize"
+      - "regularizes"
+      - "regularized"
+      - "regularizing"
     status: "proposed"
     created: 20230731
     updated: 20230731
@@ -2356,8 +2365,8 @@ entries:
     headingids:
       - "term-identifier"
       - "syntax"
-      - "term-identifiers-mrg-semantics"
       - "examples"
+      - "semantics"
     termid: "concept:term-identifier"
     vsntag: "terms"
   - id: "term-ref"

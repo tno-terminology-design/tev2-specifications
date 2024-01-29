@@ -1,6 +1,6 @@
 ---
 id: mrg-ref-syntax
-sidebar_label: MRG References
+sidebar_label: MRG References (MRGRefs)
 date: 20231029
 ---
 

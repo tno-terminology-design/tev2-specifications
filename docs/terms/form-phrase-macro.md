@@ -57,20 +57,21 @@ The following table specifies the [form phrase](@) macros that can be used by de
 
 | macro    | character string map      | example         | is exapanded into |
 | -------- | :-----------------------: | :-------------: | :---------------- |
+| `{es}`   | "e", "es", "ed", "ing"    | `manag{es}`     | "manage", "manages", "managed", "managing" |
+| `{ess}`  | "", "es", "'s", "(es)"    | `regex{ess}`    | "regex", "regexes", "regex's", "regex(es)" |
 | `{ss}`   | "", "s", "'s", "(s)"      | `actor{ss}`     | "actor", "actors", "actor's", and "actor(s)" |
-| `{ess}`  | "", "es", "'s", "(es)"    | `regex{es}`     | "regex", "regexes", "regex's", "regex(es)" |
 | `{yies}` | "y", "y's", "ies"         | `part{yies}`    | "party", "party's", and "parties" |
 | `{ying}` | "y", "ying", "ies", "ied" | `identif{ying}` | "identify", "identifying", "identifies", and "identified" |
-| `{es}`   | "e", "es", "ed", "ing"    | `manag{es}`     | "manage", "manages", "managed", "managing" |
 | `{able}` | "able", "ability"         | `cap{able}`     | "capable", "capability" |
 
 :::tip Use macro's with care.
 The above macro's should be used with care. Here are some tips:
 
-1. Use `{ss}` macro only for **nouns** whose plural is constructed by adding an `s`.
-2. Use `{yies}` only for **nouns** that end with a `y`.
-3. Use `{yies}` only for **verbs** that end with a `y`.
-4. Use `{es}` only for **regular verbs** that conjugate as specified.
+1. Use `{es}` only for **regular verbs** that conjugate as specified.
+2. Use `{ess}` only for **nouns** whose plural is constructed by adding `es`.
+3. Use `{ss}` macro only for **nouns** whose plural is constructed by adding an `s`.
+4. Use `{yies}` only for **nouns** that end with a `y`.
+5. Use `{yies}` only for **verbs** that end with a `y`.
 :::
 
 <!-- The following are suggestions (by chatGPT) for similar macros.

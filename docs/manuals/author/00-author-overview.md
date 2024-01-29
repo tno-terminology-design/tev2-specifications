@@ -1,6 +1,6 @@
 ---
-id: overview-author
-sidebar_label: Authors
+id: author-overview
+sidebar_label: Author Overview
 date: 20220513
 ---
 

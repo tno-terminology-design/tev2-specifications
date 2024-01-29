@@ -239,7 +239,7 @@ Alternatively, you can specify a mustache/[handlebars](https://handlebarsjs.com/
 
 Suppose that within the current [scope](@):
 - `myterms:test` is the [terminology identifier](@) for the [terminology](@) that contains [definitions](@) for the terms [Glossary](@), [Curator](@) and [Definition](@);
-- the associated [MRG](@) for that [terminology](@) has been imported, making that [terminology](@) available within the current scope;
+- the associated [MRG](@) for that [terminology](@) has been imported, making that [terminology](@) available within the [current scope](@);
 - we have a regular markdown file, within which we want to embed a [markdown table](https://www.markdownguide.org/extended-syntax/#tables) which lists all [definitions](@) from that [terminology](@).
 
 The table would then be specified as follows:

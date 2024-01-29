@@ -122,14 +122,30 @@ Generating an [MRG](@) for a particular version of a [terminology](@) starts by 
 In this phase, for every [terminology](@) version that is to be created, one [provisional MRG](@) is created, that contains a [provisional MRG entry](@) for every [term](@) contained in the particular version of the [terminology](@). This [provisional MRG entry](@) either contains:
 
 - all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
-- all fields in the [MRG entry](@) that comes from another [MRG](@) (typically, but not necessarily, from another [scope](@)). 
+- all fields in the [MRG entry](@) that comes from another [MRG](@) (typically, but not necessarily, from another [scope](@)).
 
-The [Term Selection Instruction syntax](/docs/specs/syntax/mrg-term-selection-syntax) specifies precisely how [provisional MRGs](@) are created.
+#### Creatinga provisional MRG
 
-After a [provisional MRG entry](@) is created, the following modifications are made:
-- the `formPhrases` field is processed, which means that every element in that set (array) is subjected to the following processing steps:
-    1. if the element contains contains a [form phrase macro](@), it is replaced by a set of [form phrases](@) that is constructed by processing that [form phrase macro](@) - see [Form Phrase Macro Expansion](/xxx) for the details and examples. This step effectively enlarges the set (array) of [form phrases](@).
-    2. the resulting [form phrases](@) are converted into a [regularized text](@) - that is, they become [regularized form phrases](@) - see [Text Regularization](/docs/terms/regularized-text#regularization-process) for the details and examples.
+Creating a provisional MRG starts with an empty set of [MRG entries](@) - we use the term "[provisional MRG](@)" to refer to this set.
+
+Then, the list of [term selection instructions](@) as specified in the appropriate entry of the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@) is processed. This is done by subsequently processing each instruction, in the order as specified. 
+
+[Instructions](term selection instructions@) exist for:
+
+  - [adding](/docs/specs/syntax/term-selection#add-terms) [MRG entries](@) to the [provisional MRG](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.[^1]
+
+  - [removing](/docs/specs/syntax/term-selection#remove-terms) [MRG entries](@) from the [provisional MRG](@);
+
+  - [modifying attributes](/docs/specs/syntax/term-selection#rename-terms) of a specific [MRG entry](@) in the [provisional MRG](@), e.g. for renaming a term that originated from another [scope](@).
+
+[^1]: Two (or more) [MRG entries](@) cannot have the same value in their `termid` fields. Therefore, if an [MRG entry](@) is added whose value in its `termid` field already exists with an [MRG entry](@) that is already in the [provisional MRG](@), then this latter [entry](mrg-entry@) will be discarded, after which the new [entry](mrg-entry@) is added.
+
+#### Processing FormPhrases
+
+After all [instructions](term selection instructions@) have been processed, the [provisional MRG entry](@) is complete. However, the `formPhrases` field of every [MRG entry](@) needs to be processed, which means that every element in that set (array) is subjected to the following processing steps:
+
+1. if the element contains contains a [form phrase macro](@), it is replaced by a set of [form phrases](@) that is constructed by processing that [form phrase macro](@) - see [Form Phrase Macro Expansion](form-phrase-macro#expansion-process@) for the details and examples. This step effectively enlarges the set (array) of [form phrases](@).
+2. the resulting [form phrases](@) are then [regularized](regularized-text#regularization-process@) to become [regularized form phrases](@).
 
 The result is a set of [regularized form phrases](@), which is then used to produce the `formPhrases` field in the [MRG entry](@).
 

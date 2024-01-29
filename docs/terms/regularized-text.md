@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Regularized Text
 glossaryText: "a character string that starts with a lowercase character (`[a-z]`), and has subsequent characters that match [regex](@) `[a-z_0-9-]`, and doesn't end with a `-` character. In other words, every text that matches the [regex](@) `^[a-z][a-z_0-9-]*(?<=[^-])$` is a regularized text."
-formPhrases: [ "regularized-text{ss}" ]
+formPhrases: [ "regularized-text{ss}", "regulariz{es}" ]
 # Curation status
 status: proposed
 created: 20230731

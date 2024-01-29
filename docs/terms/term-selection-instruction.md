@@ -22,22 +22,16 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Term Selection Instruction
 
-A **Term Selection Instruction** is an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@). Term selection instructions have a [well defined syntax](/docs/specs/syntax/mrg-term-selection-syntax).
+A **Term Selection Instruction** is an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@).
 
-Term selection instructions enable [curators](@) to construct a [terminology](@), by
+[Curators](@) must have the ability to [construct terminologies](/docs/manuals/curator/terminology-construction). They do so by specifying the contents of a [terminology](@) as a sequence of [term selection instructions](@), which they maintain in the [SAF](@). [Term selection instructions](@) have a [well defined syntax](/docs/specs/syntax/term-selection-syntax).
 
-- selecting [terms](@) [that are to be added](/docs/specs/syntax/mrg-term-selection-syntax#syntax-add) to the [terminology under construction](@). These [terms](@) can be specified by [curated texts](@) from the [scope](@) itself, or specified within [MRGs](@) that are curated in) other [scopes](@).
-- selecting [terms](@) [that need to be removed](/docs/specs/syntax/mrg-term-selection-syntax#syntax-remove) from the [terminology under construction](@).
-- selecting [terms](@) [that need to be renamed (or have attributes modified)](/docs/specs/syntax/mrg-term-selection-syntax#syntax-rename) in the [terminology under construction](@).
-
-These instructions are essential for determining which terms should be included in an [MRG](@) (and [HRGs](@)) that are maintained within the [scope](@).
-
-Term selection instructions serve as guidelines for curators and stakeholders to identify and select relevant terms based on predefined rules or filters.
+The [MRGT](@) interprets the [term selection instructions](@) in the sequence in which they are specified, and doing this changes the [provisional MRG](@) that it is creating; [provisional MRG Entries](@) may be [created (added)](/docs/specs/syntax/term-selection-syntax#add-terms) or [removed](/docs/specs/syntax/term-selection-syntax#add-terms). There are also instructions for [modifying](/docs/specs/syntax/term-selection-syntax#add-terms) [provisional MRG Entries](@).
 
 ## Examples
 
-1. There are [examples for adding terms ](/docs/specs/syntax/terminology-construction#syntax-add) to a [terminology under construction](@).
-2. There are also [examples for removing terms](/docs/specs/syntax/terminology-construction#syntax-remove) from a [terminology under construction](@). 
+1. There are [examples for adding terms ](/docs/specs/syntax/term-selection-syntax#add-terms) to a [provisional MRG](@).
+2. There are also [examples for removing terms](/docs/specs/syntax/term-selection-syntax#remove-terms) from a [provisional MRG](@). 
 
 ## Notes
 

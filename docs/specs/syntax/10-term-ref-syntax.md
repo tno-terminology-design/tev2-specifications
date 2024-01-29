@@ -1,5 +1,6 @@
 ---
 id: term-ref-syntax
+sidebar_label: Term References (TermRefs)
 date: 20220303
 ---
 
@@ -7,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# TermRef Syntax
+# TermRefs - Syntax
 
 As an [author](@) or [curator](@), you want to be able to mark words or phrases and have them refer to (the documentation of) a particular [concept](@) or other [semantic unit](@). Such marked-up words or phrases are called [TermRefs](@).
 

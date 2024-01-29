@@ -34,7 +34,7 @@ A [terminology](@) can be documented by (at most) one [machine-readable glossary
 
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
-The [terminology construction section](/docs/specs/syntax/terminology-construction) describes how to construct a [terminology](@) by selecting (groups of) [terms](scoped-term@), and manipulating such selections.
+The [terminology construction manual](/docs/manuals/curator/terminology-construction) describes how to construct a [terminology](@) by selecting (groups of) [terms](scoped-term@), and manipulating such selections.
 
 ### Purpose
 In order for [parties](@) to properly reason and/or communicate ideas ([concepts](@) and other [semantic units](@)) about some topic - in particular when it is a specialist topic - they have to establish a set of [terms](@), the meaning of which should be [defined](@) (or otherwise documented) in such a way that the likelihood of misunderstandings between them is minimized. This set of terms is called a `**terminology**`

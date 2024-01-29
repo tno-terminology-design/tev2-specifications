@@ -7,9 +7,9 @@ term: provisional-mrg-entry
 termType: concept
 isa:
 glossaryTerm: Provisional MRG Entry
-glossaryText: "an [MRG entry](@) that is 'under construction'; it contains 'raw' data that documents (the [semantic unit](@) referred to by) a [term](@), that is obtained either from (the [header](@) of) a [curated text](@), or from an [MRG entry](@) of some existing [MRG](@)."
+glossaryText: "an [MRG entry](@) that is part of a [provisional MRG](@) (under construction); it contains 'raw' data that documents (the [semantic unit](@) referred to by) a [term](@), that is obtained either from (the [header](@) of) a [curated text](@), or from an [MRG entry](@) of some existing [MRG](@)."
 grouptags:
-formPhrases: [ "provisional-mrg-entr{yies}" ]
+formPhrases: [ "provisional-mrg-entr{yies}", "provisional-mrgentr{yies}" ]
 # Curation status
 status: proposed
 created: 20231010

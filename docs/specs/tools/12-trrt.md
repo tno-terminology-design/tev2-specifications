@@ -15,7 +15,7 @@ The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@)
 
 While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax#default), alternative syntaxes can be used by choosing another (predefined) syntax, or creating your own syntax (i.e. an [interpreter](@) that conforms to the [TRRT interpreter profile](trrt#interpreter-profile@) and configuring it for use by the [TRRT](@).
 
-[Renderabe refs](@) do not have a default structure, but there are various [predefined converters](#predefined-converters) that can be chosen, and subsequently specified for use by the [TRRT](@).
+[Renderable refs](@) do not have a default structure, but there are various [predefined converters](#predefined-converters) that can be chosen, and subsequently specified for use by the [TRRT](@).
 
 <details>
   <summary>Examples of TermRef conversions</summary>
@@ -207,7 +207,7 @@ Note that the names of some of these [capturing groups](@) do not correspond 1-1
 
 ### TRRT Predefined Interpreters {#predefined-interpreters}
 
-The following sections specify the predefined [intepreters](@) for the [TRRT](@).
+The following sections specify the predefined [interpreters](@) for the [TRRT](@).
 
 #### The `default` Interpreter {#default-syntax}
 
@@ -264,7 +264,7 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
 
 #### Finding the [MRG entry](@) associated with a [TermRef](@) {#finding-mrg-entry}
 
-1. Get the [MRG](@) file that is expected to contain the [MRG entry](@), by resolving the [terminology identifier](@) that consists of the [named capturing groups](@) `scopetag`:`vsntag`. Note that if `scopetag` wasn't populated, the [default scope](@) is assumed, and if `vsntag` isn't populated, the default version is used.
+1. Get the [MRG](@) file that is expected to contain the [MRG entry](@), by resolving the [terminology identifier](@) that consists of the [named capturing groups](@) `scopetag`:`vsntag`. Note that if `scopetag` wasn't populated, the [current scope](@) is assumed, and if `vsntag` isn't populated, the default version is used.
 2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termtype` and `term`, as follows.
     1. Initialize this step by selecting all [MRG entries](@) from the [MRG](@) (the idea is to limit the number of selected entries step by step, until there is no more than one).
     2. Process the [named capturing groups](@), as follows.

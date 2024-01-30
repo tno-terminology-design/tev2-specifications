@@ -82,7 +82,7 @@ This process is run by the [MRGT](@) - see
 In this text, we will use the terms:
 
 - **[current scope](@)** for the [scope](@) within which the [terminology](@) is being created and
-- **current version** for the [version](@) of the [terminology](@) that is being created.
+- **current version** for the version of the [terminology](@) that is being created.
 
 In the syntax specification for [term selection instructions](@), we use the following symbols:
 
@@ -96,7 +96,7 @@ In the syntax specification for [term selection instructions](@), we use the fol
 ## Adding Terms {#add-terms}
 
 Adding terms is done using instructions that 
-1. identify a (set of) [term(s)](@) that is to be added to the [terminology-under-construction](@).
+1. identify a (set of) [term(s)](@) that is to be added to the [provisional MRG](@).
 2. specify the source from which an [MRG entries](@) will be created for each of these [terms](@).
 
 By default, the source is the the set of [curated texts](@) of the [current scope](@).
@@ -171,7 +171,7 @@ The following syntaxes are available for removing a selection of terms from the 
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [provisional MRG](@), , such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) is to be removed from the [provisional MRG](@).
 
-This syntax removes every [MRG entry](@) from the [terminology-under-construction](@) that has a field named `<key>`, and where (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
+This syntax removes every [MRG entry](@) from the [provisional MRG](@) that has a field named `<key>`, and where (one of) the value(s) of that field matches with at least one of the values in `[ <value1>, <value2>, ... ]`.
 
 <details>
   <summary>Examples:</summary>

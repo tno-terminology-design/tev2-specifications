@@ -9,7 +9,7 @@ isa:
 glossaryTerm:
 glossaryText: "the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@)."
 grouptags:
-formPhrases: [ "corpus", "corpora", "corpus-of-terminology", "corpus-of-a-terminology" ]
+formPhrases: [ "corpus", "corpora", "corpus-of-terminology", "corpus-of-a-terminology", "terminology corpus" ]
 # Curation status
 status: proposed
 created: 20220606

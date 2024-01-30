@@ -9,9 +9,9 @@ isa:
 glossaryTerm: Ingestion (Process)
 glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
 grouptags: 
-formPhrases: [ "ingestion-process{es}", ingest, ingests, ingested, ingestion ]
-# Curation status
-status: proposed
+formPhrases: [ "ingestion-process{es}", "ingest", "ingests", "ingested", "ingestion" ]
+# Curation status"
+status": proposed
 created: 20230731
 updated: 20230731
 # Origins/Acknowledgements

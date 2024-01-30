@@ -30,7 +30,7 @@ A **Term** is a word or phrase (i.e.: text) that is used to represent ([identify
 
 The precise meaning of a [term](@) thus depends on the [scope](@)/context in which it is used. We use the phrase [scoped term](@) to refer to a term that is part of one particular [scope](@)/context, and refers to a single [concept](@) (or other [semantic unit](@)), and hence is unambiguous.
 
-[Terms](@) may come in different (grammatical) forms. For example, words/phrases such as 'terms', 'term's', or 'term(s)' are different forms of the word 'term'. Within [TEv2](@), words/phrases that are such different forms are called '[form phrases](@). They can be [specified](#specifying@) in the [curated text](@) that documents the [semantic unit](@) to which they (and the [term](@) they are varieties of) refer.
+[Terms](@) may come in different (grammatical) forms. For example, words/phrases such as 'terms', 'term's', or 'term(s)' are different forms of the word 'term'. Within [TEv2](@), words/phrases that are such different forms are called '[form phrases](@). They can be specified in the [curated text](@) that documents the [semantic unit](@) to which they (and the [term](@) they are varieties of) refer.
 
 The [TermRef](@) [syntax specification](/docs/specs/syntax/term-ref-syntax) specifies the syntax that [authors](@) should use as they want to use a specific [term](@) in their text.
 

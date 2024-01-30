@@ -423,6 +423,7 @@ entries:
       - "corpora"
       - "corpus-of-terminology"
       - "corpus-of-a-terminology"
+      - "terminology-corpus"
     status: "proposed"
     created: 20220606
     updated: 20220606
@@ -1601,7 +1602,7 @@ entries:
       - "ingests"
       - "ingested"
       - "ingestion"
-    status: "proposed"
+    status": "proposed"
     created: 20230731
     updated: 20230731
     contributors: "RieksJ"
@@ -3499,8 +3500,6 @@ entries:
       - "tev2-tools"
       - "tev2-tool-s"
       - "tool"
-      - "tools"
-      - "tool-s"
     status: "proposed"
     created: 20230731
     updated: 20230731
@@ -3619,6 +3618,34 @@ entries:
       - "errors-and-warnings"
       - "deploying-the-tool"
     termid: "concept:trrt"
+    vsntag: "documentation"
+  - id: "use-case"
+    displayed_sidebar: "tev2SideBar"
+    term: "use-case"
+    termType: "use-case"
+    isa: "semantic-unit"
+    glossaryTerm: "Use-Case"
+    glossaryText: "a [semantic unit](@) that captures a specific situation or example used to illustrate how a [mental model](@) (or other [semantic units](@)) can be used."
+    grouptags: null
+    formPhrases:
+      - "use-case"
+      - "use-cases"
+      - "use-case-s"
+      - "usecase"
+      - "usecases"
+      - "usecase-s"
+    status: "proposed"
+    created: 20240130
+    updated: 20240130
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "use-case.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/use-case"
+    headingids:
+      - "use-case"
+    termid: "use-case:use-case"
     vsntag: "documentation"
   - id: "validate"
     displayed_sidebar: "essifLabSideBar"

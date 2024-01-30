@@ -1919,7 +1919,7 @@ entries:
     isa: "dictionary"
     glossaryTerm: "Machine Readable Dictionary"
     glossaryAbbr: "MRD"
-    glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@)."
+    glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their meanings."
     grouptags: null
     formPhrases:
       - "machine-readable-dictionary"
@@ -2105,6 +2105,9 @@ entries:
       - "mrgref"
       - "mrgrefs"
       - "mrgref-s"
+      - "mrg-reference"
+      - "mrg-references"
+      - "mrg-reference-s"
     status: "proposed"
     created: 20231127
     updated: 20231127

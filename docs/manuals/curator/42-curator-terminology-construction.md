@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 [Curators](@) need the ability to construct one or more (versions of) [terminologies](@) for any [scope](@) they [curate](@). Creating a [terminology](@) consists of
 
-1. selecting the [concepts](@) and other [semantic units](@) that are to be referenceable by [terms](@) of the [terminology](@). This is done by [editing the [SAF](@)](#specifying-terminology);
+1. selecting the [concepts](@) and other [semantic units](@) that are to be referenceable by [terms](@) of the [terminology](@). This is done by [editing](#specifying-terminology) the [SAF](@);
 2. generating an [MRG](@), i.e., a list of [MRG entries](@), each of which documents a selected [concepts](@)/[semantic units](@), which includes the [term](@) that is used to refer to them. This is done by invoking the [MRGT](@).
 
 ## Specifying the contents of a terminology {#specifying-terminology}

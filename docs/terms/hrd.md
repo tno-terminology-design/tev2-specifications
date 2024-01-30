@@ -27,5 +27,5 @@ A **Human Readable Dictionary** or **HRD** is a [dictionary](@) that presents [t
 
 ## Examples
 
-1. A printed HRD containing commonly used [terms](@) and their [explanations](definition@) is a valuable reference tool for people that want to learn the [terminologies](@) and the different [meanings](@) some of their [terms](@) have.
+1. A printed HRD containing commonly used [terms](@) and their [explanations](definition@) is a valuable reference tool for people that want to learn the [terminologies](@) and the different meanings some of their [terms](@) have.
 2. Online HRDs often include hyperlinks, cross-references, and examples to provide comprehensive explanations of terms.

@@ -8,7 +8,7 @@ termType: concept
 isa: dictionary
 glossaryTerm: Machine Readable Dictionary
 glossaryAbbr: MRD
-glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@)."
+glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their meanings."
 grouptags:
 formPhrases: [ "machine-readable-dictionar{yies}", "mrd{ss}", "machine-readable-dictionary-mrd{ss}" ]
 # Curation status
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Machine Readable Dictionary
 
-A **Machine Readable Dictionary** is a type of dictionary that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their [meanings](@).
+A **Machine Readable Dictionary** is a type of dictionary that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their meanings.
 
 ## Examples
 

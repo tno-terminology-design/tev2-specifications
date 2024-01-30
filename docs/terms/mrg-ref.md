@@ -10,7 +10,7 @@ bodyFile: /specs/syntax/41-mrg-ref-syntax.md
 glossaryTerm: MRGRef
 glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-ref-syntax) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
 grouptags:
-formPhrases: [ "mrg-ref{ss}", "mrgref{ss}" ]
+formPhrases: [ "mrg-ref{ss}", "mrgref{ss}", "mrg reference{ss}" ]
 # Curation status
 status: proposed
 created: 20231127

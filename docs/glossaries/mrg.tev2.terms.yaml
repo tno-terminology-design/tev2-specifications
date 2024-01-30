@@ -1551,11 +1551,10 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/tools/mrg-import"
     headingids:
       - "mrg-import-tool"
-      - "mrg-files"
       - "installing-the-tool"
       - "calling-the-tool"
-      - "processing,-errors-and-warnings"
-      - "deploying-the-tool"
+      - "running-the-tool"
+      - "exceptions"
     termid: "concept:mrg-import"
     vsntag: "terms"
   - id: "mrg-ref"

@@ -84,7 +84,7 @@ This is the [glossary](@) for the `latest` version of the [terminology](@) withi
 
 NOTE that the [HRG entries](@) are sorted by the value of their `glossaryText`.
 
-The [MRGref](@) that is used is `{%` `hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}"` `%}`
+The [MRGref](@) that is used is `{%` `hrg="essif-lab:latest" converter="### [{{#if glossaryTerm}}{{noRef glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{noRef glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n" sorter="{{noRef glossaryText}}"` `%}`
 :::
 
 {% hrg="essif-lab:latest" converter="markdown-section-3" sorter="{{glossaryText}}" %}

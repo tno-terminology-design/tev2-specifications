@@ -41,7 +41,7 @@ etc.
 
 The (technical) structure and syntax for files that contain [curated texts](@) is specified [here](/docs/specs/files/curated-text-file).
 
-The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manuals/[author](@)) and [curators](/docs/manuals/curator/curator-overview) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
+The manuals for [contributors](/docs/manuals/contributor/contributor-overview), [authors](/docs/manuals/author/author-overview) and [curators](/docs/manuals/curator/curator-overview) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
 
 :::info Editor's Note
 Text needs to be revised from here onward. Here are some ideas to mention:

@@ -105,7 +105,7 @@ The current version of the tool simply reads all [MRG](@) files from all [scopes
 
 It does so by reading the [`scopes` section](/docs/specs/files/saf#scopes) of its [SAF](@) (of the [current scope](@)). This section contains entries, each of which specifies a `scopetag` field and a `URL` field. We will use `<my-stag>` and `<url>` to refer to the values of these fields respectively.
 
-For each such entry, the tool obtains the [SAF](@) of that [scope](@), which is located at `<url>`, and from there, it determines the path of the (remote) [glossarydir](@), as well as the [scopetag](@) `<stag>` that it uses to refer to itself, and is used as part of the [filenames](/docs/specs/files/mrg#file-naming-conventions@) that contain [MRGs](@) that are generated within that [scope](@).
+For each such entry, the tool obtains the [SAF](@) of that [scope](@), which is located at `<url>`, and from there, it determines the path of the (remote) [glossarydir](@), as well as the [scopetag](@) `<stag>` that it uses to refer to itself, and is used as part of the [filenames](/docs/specs/files/mrg#file-naming-conventions) that contain [MRGs](@) that are generated within that [scope](@).
 
 Then, it copies all files from the remote [glossarydir](@) that are named `mrg.<stag>*.yaml` to the [glossarydir](@) of the [current scope](@), and replaces the `<stag>` part with `<my-stag>` (as the [scope](@) that calls itself `<stag>` is called `<my-stag>` in the [current scope](@)).
 

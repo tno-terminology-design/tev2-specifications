@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: mrg-ref
 termType: concept
 isa:
-bodyFile: /specs/syntax/41-mrg-ref-syntax.md
+bodyFile: /specs/syntax/41-mrg-refs.md
 glossaryTerm: MRGRef
 glossaryText: "a text that is [marked up (in a specific way)](/docs/specs/syntax/mrg-refs) so that it refers to a particular [terminology](@), as well as to a specific way for creating an associated [HRG](@)."
 grouptags:

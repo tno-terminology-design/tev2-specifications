@@ -180,7 +180,7 @@ The following table documents the fields that are used within the context of [TE
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
 | `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
 | `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`. |
-| `formPhrases`     | n | List of [texts](form-phrase@) that are [used to convert](trrt#id@) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see ['Syntax Specs - Form Phrases](/docs/specs/syntax/form-phrase-syntax).[^3] |
+| `formPhrases`     | n | List of [texts](form-phrase@) that are [used to convert](trrt#id@) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see [Form Phrases](@).[^3] |
 
 ```mdx-code-block
 </APITable>

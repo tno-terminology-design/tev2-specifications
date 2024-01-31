@@ -74,7 +74,7 @@ The creation (or maintenance) of a [terminology](@) is equivalent with the creat
 
 [^1]: Two (or more) [MRG entries](@) cannot have the same value in their `termid` fields. Therefore, if an [MRG entry](@) is added whose value in its `termid` field already exists with an [MRG entry](@) that is already in the [provisional MRG](@), then this latter [entry](mrg-entry@) will be discarded, after which the new [entry](mrg-entry@) is added.
 
-This process is run by the [MRGT](@) - see 
+This process is run by the [MRGT](@) - see <mark>to be done</mark>
 
 <details>
   <summary>Prerequisites</summary>

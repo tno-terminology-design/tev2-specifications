@@ -2514,7 +2514,7 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
-    locator: "patterns/pattern-terminology.md"
+    locator: "patterns\\pattern-terminology.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/patterns/terminology"
     headingids:
       - "create-and-maintain-terminologies"

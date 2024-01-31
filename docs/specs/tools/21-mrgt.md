@@ -162,7 +162,7 @@ When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopet
 
 If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
 
-- a [`terminology` section](/docs/specs/files/mrg#terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/tev2-specifications/docs/specs/files/saf#terminology) in the [SAF](@);
+- a [`terminology` section](/docs/specs/files/mrg#terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/docs/specs/files/saf#terminology) in the [SAF](@);
 - a [`scopes` section](/docs/specs/files/mrg#scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/specs/files/saf#scopes) in the [SAF](@);
 - an [`entries` section]((/docs/specs/files/mrg#terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
 

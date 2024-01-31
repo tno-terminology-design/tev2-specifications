@@ -26,7 +26,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 An **[ingestion profile](@)** is the specification of a method by which files that are in a particular place and format (e.g., wiki files) are turned into a [curated text](@).
 
-The manuals for [contributors](/docs/manuals/contributor), [authors](/docs/manuals/author) and [curators](/docs/manuals/curator/curator-overview) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
+The manuals for [contributors](/docs/manuals/contributor/contributor-overview), [authors](/docs/manuals/author/author-overview) and [curators](/docs/manuals/curator/curator-overview) will provide guidance for people that act in these respective roles as they work with [curated texts](@).
 
 :::info Editor's Note
 Text needs to be revised. Here are some ideas to mention:

@@ -94,7 +94,7 @@ Within a [scope](@), there can be multiple [terminologies](@), each of which is 
 The [versiontags](@) and the contents of a [terminology](@) are specified as an entry in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@). This section must contain at least:
 
 - a `vsntag` field, that contains the (main) [versiontag](@) of the [terminology](@).
-- a `termselection` field, that consists of [instructions for composing the contents](/docs/specs/syntax/term-selection-syntax) of the [terminology](@).
+- a `termselection` field, that consists of [instructions for composing the contents](/docs/specs/syntax/term-selection) of the [terminology](@).
 
 Every [scope](@) has one default [terminology](@), whose [versiontag](@) must be specified in the `defaultvsn` field in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@).
 
@@ -126,7 +126,7 @@ versions:
   - "*" # import all terms as defined/described in the curated text of this scope.
 ...
 ```
-If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/term-selection-syntax) to the `termselection` field.
+If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/term-selection) to the `termselection` field.
 
 </TabItem>
 
@@ -151,7 +151,7 @@ Notes:
 
 - The `altvsntag` field expects you to specify a list of alternative [versiontags](@); not just one.
 - For every alternative [versiontag], an [mrg](@) is created in the [glossarydir](@) with the [appropriate name](/docs/specs/files/mrg#file-naming-conventions).
-- If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/term-selection-syntax) to the `termselection` field.
+- If you do not want the default [MRG](@) to contain an [entry](mrg-entry@) for every [curated text](@), you can [add instructions for this](/docs/specs/syntax/term-selection) to the `termselection` field.
 
 </TabItem>
 
@@ -164,7 +164,7 @@ The contents of a [terminology](@) does not necessarily consist of all [terms] d
 
 This process of constructing a [terminology](@) is described as part of the [MRGT](@) tool, in the section [Running the Tool](mrgt#running-the-tool@).
 
-The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/specs/syntax/term-selection-syntax).
+The syntax for adding and removing entries in a [terminology](@) can be found [here](/docs/specs/syntax/term-selection).
 
 To give you a flavor of what this entails, here is an example:
 

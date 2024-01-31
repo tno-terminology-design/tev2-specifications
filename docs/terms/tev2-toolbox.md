@@ -7,7 +7,7 @@ term: tev2-toolbox
 termType: concept
 isa:
 glossaryTerm: TEv2 Toolbox
-glossaryText: "the collection of tools designed to support and facilitate the process of terminology management following the [TEv2 specifications](/docs/overview). These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets."
+glossaryText: "the collection of tools designed to support and facilitate the process of terminology management following the [TEv2 specifications](/docs/specs). These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets."
 grouptags:
 formPhrases: [ "tev2-toolbox", "toolbox", "tools" ]
 # Curation status
@@ -39,7 +39,7 @@ The tools within the TEv2 Toolbox serve multiple functions, including:
 3. [MRDT](@): Assists in creating [MRDs](@) from various [MRGs](@) (and possibly [curated texts](@)).
 4. [HRDT](@): Supports the creation of [HRDs](@) with detailed explanations and context.
 5. [MRGT](@): Enables the generation of [MRDs](@) from [curated texts](@) (and existing [MRGs](@) from other [scopes](@)).
-6. [ICT](@): Ensures the conformity of various files to their [TEv2 specifications](/docs-spec-files), maintaining data integrity.
+6. [ICT](@): Ensures the conformity of various files to their [TEv2 specifications](/docs/specs/files), maintaining data integrity.
 
 The TEv2 Toolbox empowers [curators](@) to streamline the terminology management process, ensuring the creation of accurate, accessible, and well-structured terminological assets that align with the [objectives](@) of the community or project involved.
 

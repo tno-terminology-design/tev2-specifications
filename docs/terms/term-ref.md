@@ -7,7 +7,7 @@ term: term-ref
 termType: concept
 isa:
 glossaryTerm: TermRef
-glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
+glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-refs) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
 grouptags:
 formPhrases: [ "term-ref{ss}", "termref{ss}", "term-reference{ss}" ]
 # Curation status
@@ -22,11 +22,11 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Term Ref
 
-A **Term Ref** is a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-ref-syntax) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@).
+A **Term Ref** is a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-refs) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@).
 
 A [TermRef](@) consists of two parts. The first part is the word or phrase that is marked up (the so-called `show text`). The second part is the actual reference that specifies the [concept](@) (or other [semantic unit](@)) to which the [TermRef](@) refers. This second part is called a [term identifier](@).
 
-[Authors](@) need to know the [TermRef syntax](/docs/specs/syntax/term-ref-syntax) that they are expected to use.
+[Authors](@) need to know the [TermRef syntax](/docs/specs/syntax/term-refs) that they are expected to use.
 
 [Curators](@), which are expected to control the ways in which authored texts are further processed (into rendered texts), will need to know the options provided by the [TRRT tool](trrt@) in order to ensure that the [TermRefs](@) that are used in in authored text are rendered in the way(s) that are envisaged.
 

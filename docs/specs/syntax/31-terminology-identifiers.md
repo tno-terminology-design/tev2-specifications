@@ -1,5 +1,5 @@
 ---
-id: terminology-identifier-syntax
+id: terminology-identifiers
 sidebar_label: Terminology Identifiers
 date: 20230929
 ---

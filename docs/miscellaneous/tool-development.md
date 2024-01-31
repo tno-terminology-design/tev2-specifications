@@ -34,9 +34,9 @@ In order to appreciate and come to grips with these challenges, it will definite
 
 - The [TEv2 Overview](/docs/category/introduction-overview) (and its sub-documents) will provide you with with such backgrounds.
 - Other documented topics include:
-  - [file structure spec](/docs/tev2-spec-files)
-  - [syntax specifications](/docs/tev2-syntax)
-  - [specifications of individual tools](toolbox@) - not all specifications hare already been drafted/checked.
+  - [file structure spec](/docs/specs/files)
+  - [syntax specifications](/docs/specs/syntax)
+  - [specifications of individual tools](/docs/specs/tools) - not all specifications hare already been drafted/checked.
 :::
 
 ## Tooling status as of ...

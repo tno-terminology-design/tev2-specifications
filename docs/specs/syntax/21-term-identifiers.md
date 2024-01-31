@@ -1,5 +1,5 @@
 ---
-id: term-identifier-syntax
+id: term-identifiers
 sidebar_label: Term Identifiers
 date: 20230915
 ---

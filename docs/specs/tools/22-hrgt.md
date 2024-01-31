@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 The **Human Readable Glossary Generator Tool ([HRGT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [MRGRefs](@) as inputs, and that outputs (a copy of) these files in which these [MRGRefs](@) are converted into [hrg-lists](@), i.e. lists of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc.
 
-While [MRGRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
+While [MRGRefs](@) have a [default syntax](/docs/specs/syntax/term-refs), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
 
 [Hrg-lists](@) do not have a default structure, but there are various [predefined converters](#predefined-interpreters) that can be chosen (or specified) for the [HRGT](@) to use.
 

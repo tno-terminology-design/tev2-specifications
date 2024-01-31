@@ -35,7 +35,7 @@ Within this [glossarydir](@) we can generate (or import), and hence also find al
 
 This naming convention enables tools (as well as [curators](@) and others) that operate within a particular [scope](@), to quickly find a particular [MRG](@) that is relevant for that [scope](@).
 
-## MRG structure
+## MRG structure {#structure}
 
 A Machine Readable Glossary (MRG) is a YAML (or JSON) file that has three main parts, which we refer to as 'sections':
 
@@ -186,6 +186,6 @@ The following table documents the fields that are used within the context of [TE
 </APITable>
 ```
 
-[^3]: The `formPhrases` field in an [MRG Entry](@) is void of so-called [form phrase macros](/docs/specs/syntax/form-phrase-syntax#form-phrase-macros); it is simply a (possibly extensive) list of [form phrases](@).
+[^3]: The `formPhrases` field in an [MRG Entry](@) is void of so-called [form phrase macros](@); it is simply a (possibly extensive) list of [form phrases](@).
 
 # Footnotes

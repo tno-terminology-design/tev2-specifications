@@ -34,7 +34,7 @@ The [text conversion tools](@) in the [TEv2 toolbox](@), such as the [TRRT](@) a
 
 Each such tool can be called to perform a [text conversion step](#steps), i.e. a process in which a specified set of (input, or source) files are converted into another set of (output, or target) files. While each [text conversion tool](@) has its particular way of working, they are all designed to follow a specific sequence of steps. This enables users to configure (customize) how the tool works whenever it is called. 
 
-Thus, the [TRRT](@), whose task is to convert [term refs](@) into [renderable refs](@), can be configured to use your own, [customized term ref syntax](/docs/specs/syntax/term-ref-syntax#customize). It can also be configured to produce your own particular flavor of [renderable refs](@), by specifying custom [converters](@).
+Thus, the [TRRT](@), whose task is to convert [term refs](@) into [renderable refs](@), can be configured to use your own, [customized term ref syntax](/docs/specs/syntax/term-refs#customize). It can also be configured to produce your own particular flavor of [renderable refs](@), by specifying custom [converters](@).
 
 ## Text Conversion Steps {#steps}
 

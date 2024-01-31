@@ -19,7 +19,7 @@ One way in which [curators](@) may decide that people can contribute, is by enab
 
 From the [TEv2](@) perspective, people contribute by creating and changing the markdown pages that describe the various [semantic units](@), such as  [concepts](@) , [use-cases](@), [mental models](@), etc.
 
-A [user](@) can use [TermRefs](@) to mark the [terms](@) that it wants to be linked to a specific meaning ([semantic unit](@)).
+A user can use [TermRefs](@) to mark the [terms](@) that it wants to be linked to a specific meaning ([semantic unit](@)).
 
 ## Curators tasks
 

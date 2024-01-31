@@ -49,13 +49,13 @@ The same varieties can easily be added for the human and machine actors, as foll
 formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 ~~~
 
-## Using Form Phrases
+## Using Form Phrases {#using}
 
 Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must [identify](@) the [MRG entry](@) that documents this [semantic unit](@).
 
 [Identification](@) of the [MRG entry](@) is straightforward. The input of this process is a text that is typically a [form phrase](@) that does not contain a [form phrase macro](@), or a (partially) [regularized form phrase](@). This input is then '[regularized](regularized-form-phrase#regularization-process@)', which produces a [regularized form phrase](@) that can then be matched against the elements of the `formPhrases` fields of the [MRG entries](@) in the [MRG](@) of the default or specified [terminology](@).
 
-## Guidance for choosing Form Phrases
+## Guidance for choosing Form Phrases {#guidance}
 
 1. **Character Composition**: A form phrase is composed of a sequence of characters that may include letters, numbers, and spaces. Spaces are permissible if they are a standard part of the term (e.g., "hard drive").
 

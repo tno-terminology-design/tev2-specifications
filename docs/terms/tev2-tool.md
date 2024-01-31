@@ -41,7 +41,7 @@ Through the TEv2 Toolbox Tools, curators and contributors can efficiently manage
 ## Examples
 
 1. Curators utilize the [HRGT](@) to create well-structured, human-readable [glossaries](@), improving accessibility for stakeholders.
-2. The [ICT](@) is employed to check the integrity of various files, ensuring adherence to [TEv2 specifications](/docs-spec-files).
+2. The [ICT](@) is employed to check the integrity of various files, ensuring adherence to [TEv2 specifications](/docs/specs/files).
 
 ## Notes
 

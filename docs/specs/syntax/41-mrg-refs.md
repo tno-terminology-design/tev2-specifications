@@ -1,5 +1,5 @@
 ---
-id: mrg-ref-syntax
+id: mrg-refs
 sidebar_label: MRG References (MRGRefs)
 date: 20231029
 ---
@@ -239,7 +239,7 @@ When the predefined glossary converters are not appropriate, [curators](@) can d
 
 The handlebar expressions can use all fields of the [converter profile](@) as variables. For example, `{{glossaryText}}`, or `{{entry.glossaryText}}`, is the variable that contains the text specified in the `glossaryText` field of the specific [MRG entry](@), and `{{err.file}}` contains the name of the file where the [MRGRef](@) was found.
 
-Converters can use the [helper functions](@converter-profile#helper-functions) and [block helpers](https://handlebarsjs.com/guide/block-helpers.html#basic-blocks) to create a diverse range of glossary entries. The example below illustrates this functionality. Note that the newlines and spaces are strictly handled by the [converter](@), in the example they are primarily for readability.
+Converters can use the [helper functions](converter-profile#helper-functions@) and [block helpers](https://handlebarsjs.com/guide/block-helpers.html#basic-blocks) to create a diverse range of glossary entries. The example below illustrates this functionality. Note that the newlines and spaces are strictly handled by the [converter](@), in the example they are primarily for readability.
 
 ```ts
 <a href="{{localize entry.navurl}}">{{capFirst entry.term}}</a>

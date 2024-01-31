@@ -43,7 +43,7 @@ Also, this [management](@) may cause reference documents to be created and maint
 2. the terminology-related part. This is where [concepts](@), [definitions](@), [terms](@), [glossaries](@) etc. live. This part is what one needs to create tools/support for managing and maintaining a [terminology](@). Here, we have [concepts](@) with their [definitions](@) and [terms](@) as a means to refer to either. A [concept](@), its [definition](@) live in the same [scope](@), and within that [scope](@) there must be a [term](@) to refer to that [concept](@) and its [definition](@). Within a specific [scope](@), every [term](@) is associated with precisely one such [concept](@) and [definition](@). However, within a [scope](@), a [concept](@)/[definition](@) pair may be referred to by multiple [terms](@), which are then synonyms or aliases of each other.
 
 ### Formalized model
-Here is a visual representation of this pattern, using the following **[notations and conventions](/docs/notations-and-conventions#pattern-diagram-notations)**:
+Here is a visual representation of this pattern, using the following **[notations and conventions](/docs/miscellaneous/notations-and-conventions#pattern-diagram-notations)**:
 
 <img
   alt="Conceptual model of the 'pattern-terminology' pattern"

@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [TermRefs](@) as inputs, and that outputs (a copy of) these files in which these [TermRefs](@) are converted into [renderable refs](@).
 
-While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-ref-syntax#default), alternative syntaxes can be used by choosing another (predefined) syntax, or creating your own syntax (i.e. an [interpreter](@) that conforms to the [TRRT interpreter profile](trrt#interpreter-profile@) and configuring it for use by the [TRRT](@).
+While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-refs#default), alternative syntaxes can be used by choosing another (predefined) syntax, or creating your own syntax (i.e. an [interpreter](@) that conforms to the [TRRT interpreter profile](trrt#interpreter-profile@) and configuring it for use by the [TRRT](@).
 
 [Renderable refs](@) do not have a default structure, but there are various [predefined converters](#predefined-converters) that can be chosen, and subsequently specified for use by the [TRRT](@).
 

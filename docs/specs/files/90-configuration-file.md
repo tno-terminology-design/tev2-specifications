@@ -198,7 +198,7 @@ Parameters that are specific to the [TRRT](trrt@) can be put in the YAML section
 
 ## Predefined TRRT interpreters
 
-The predefined TRRT [interpreter](@) types match the behavior of the syntaxes described on the [TermRef syntax](/docs/specs/syntax/term-ref-syntax) page, which are:
+The predefined TRRT [interpreter](@) types match the behavior of the syntaxes described on the [TermRef syntax](/docs/specs/syntax/term-refs) page, which are:
 - [`default`](/docs/specs/tools/trrt#default-syntax)
 - [`alt`](/docs/specs/tools/trrt#alt-syntax)
 

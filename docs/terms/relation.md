@@ -34,7 +34,7 @@ Properly defining relations enables people to establish a shared understanding o
 
 1. In a conceptual model that answers questions about onboarding, keeping, and offboarding people (as employees) in organizations, we have the [concept](@) `Person`, the [concept](@) `Organization`, and a relation `is employee of`, which connects the `Person` concept with the `Organization` concept, where this relation and can be defined, e.g., as "{Person} has successfully completed the onboarding process of the {Organization}, and has not been offboarded".
 2. A "Part-Of" relation in a hierarchical taxonomy establishes the subordination of concepts, such as "Car" being a part of the "Vehicle" concept.
-3. Other examples are given on the page [notations and conventions](/docs/notations-and-conventions#pattern-diagram-notations).
+3. Other examples are given on the page [notations and conventions](/docs/miscellaneous/notations-and-conventions#pattern-diagram-notations).
 
 ## Notes
 

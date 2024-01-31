@@ -1,5 +1,5 @@
 ---
-id: term-ref-syntax
+id: term-refs
 sidebar_label: Term References (TermRefs)
 date: 20220303
 ---

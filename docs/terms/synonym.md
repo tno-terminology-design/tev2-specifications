@@ -8,7 +8,7 @@ termType: concept
 isa: term
 glossaryTerm: Synonym (of a [term](@))
 glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "synonym{ss}" ]
 # Curation status
 status: proposed

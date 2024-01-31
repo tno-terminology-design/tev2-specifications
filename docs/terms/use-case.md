@@ -8,7 +8,7 @@ termType: use-case
 isa: semantic-unit
 glossaryTerm: "Use-Case"
 glossaryText: "a [semantic unit](@) that captures a specific situation or example used to illustrate how a [mental model](@) (or other [semantic units](@)) can be used."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "use-case{ss}", "usecase{ss}" ]
 # Curation status
 status: proposed

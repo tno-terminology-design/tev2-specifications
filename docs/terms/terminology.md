@@ -5,7 +5,7 @@ displayed_sidebar: tev2SideBar
 # TEv2 Curated Text Header
 term: terminology
 termType: concept
-grouptags:
+grouptags: [ ]
 formPhrases: [ "terminolog{yies}" ]
 # Curation status
 status: proposed

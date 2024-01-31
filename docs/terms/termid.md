@@ -8,7 +8,7 @@ termType: concept
 isa: identifier
 glossaryTerm:
 glossaryText: "a text of the form `<termType>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "termid{ss}", "term-id{ss}" ]
 # Curation status
 status: proposed

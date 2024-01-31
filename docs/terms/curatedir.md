@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Curatedir
 glossaryText: "a directory within a [scopedir](@) within which every file contains a [curated text](@) for that [scope](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "curatedir{ss}", "curate-director{yies}" ]
 # Curation status
 status: proposed

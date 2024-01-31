@@ -8,7 +8,7 @@ termType: concept
 isa: tag
 glossaryTerm:
 glossaryText: "a [tag](@) that is used to group [terms](@) within a specific [scope](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "grouptag{ss}", "group-tag{ss}" ]
 # Curation status
 status: proposed

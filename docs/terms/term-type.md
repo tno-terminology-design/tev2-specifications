@@ -8,7 +8,7 @@ termType: concept
 isa: identifier
 glossaryTerm: Term Type
 glossaryText: "a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "term-type{ss}", "termtype{ss}" ]
 # Curation status
 status: proposed

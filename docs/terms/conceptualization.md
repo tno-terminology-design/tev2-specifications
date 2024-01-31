@@ -8,8 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Conceptualization
 glossaryText: "a mental representation or abstract idea formed by a [party](@) to categorize, organize, and make sense of information, experiences, objects, or abstract notions; it allows the [party](@) to recognize similarities and differences between [entities](@) or events."
-hoverText: "Conceptualization: a mental representation or abstract idea formed by a party to categorize, organize, and make sense of information, experiences, objects, or abstract notions; it allows the party to recognize similarities and differences between entities or events."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "conceptualization{ss}" ]
 # Curation status
 status: proposed

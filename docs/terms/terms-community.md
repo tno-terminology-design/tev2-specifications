@@ -8,7 +8,7 @@ termType: concept
 isa: community
 glossaryTerm: Terms Community
 glossaryText: "a [community](@) that maintains a [terminology](@) for the purpose of avoiding misunderstandings between its members as they collaborate."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "terms-communit{yies}" ]
 # Curation status
 status: proposed

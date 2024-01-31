@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Reader
 glossaryText: "a person that reads a text that is authored by another person (its [author](@)), and that tries to understand the meaning of this text in the way its [author](@) intended."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "reader{ss}" ]
 # Curation status
 status: proposed

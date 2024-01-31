@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Curated Text
 glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
-grouptags:
+grouptags: [ ]
 formPhrases: [ "curated-text{ss}", "ctext{ss}" ]
 # Curation status
 status: proposed

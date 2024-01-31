@@ -122,20 +122,20 @@ Here is how it works. First, the [provisional MRG Entry](@) is searched that has
 <details>
 <summary>Renaming examples</summary>
 
-- **`rename party [ status:accepted, hoverText:"A natural person or a legal person" ]`**:
+- **`rename party [ status:accepted, glossaryText:"A natural person or a legal person" ]`**:
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
   - changes (or creates) its `status` field to so that it contains `accepted`, and 
-  - changes (or creates) its `hoverText` field to so that it contains `"A natural person or a legal person"`.
+  - changes (or creates) its `glossaryText` field to so that it contains `"A natural person or a legal person"`.
 
-- **`rename party [ term:partij, formPhrases:"partij{en}", hoverText:"Een natuurlijk persoon of een rechtspersoon" ]`**
+- **`rename party [ term:partij, formPhrases:"partij{en}", glossaryText:"Een natuurlijk persoon of een rechtspersoon" ]`**
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
   - changes (or creates) its `term` field to so that it contains `partij`;
   - changes (or creates) its `status` field to so that it contains `approved`.
-  - changes (or creates) its `hoverText` field to so that it contains `"A natural or legal person"`
+  - changes (or creates) its `glossaryText` field to so that it contains `"A natural or legal person"`
   
-- **`rename party [ hoverText: ]`**
+- **`rename party [ glossaryText: ]`**
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
-  - removes the contents from the `hoverText` field if such a field exists.<br/>
+  - removes the contents from the `glossaryText` field if such a field exists.<br/>
 
 </details>
 

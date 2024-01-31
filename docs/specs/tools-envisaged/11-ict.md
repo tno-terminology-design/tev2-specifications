@@ -38,7 +38,7 @@ As the tool hasn't been made, and no practical experience has been gained, many 
 :::
 
 :::info Editor's Note
-There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/specs/files/saf) and [MRG spec](/docs/specs/files/mrg) define the [regex](@) for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its `hoverText`.
+There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/specs/files/saf) and [MRG spec](/docs/specs/files/mrg) define the [regex](@) for various kinds of tags all over the place. It would be nice to have a way by which syntax can be specified in one location that is 'naturally predictable' so that both readers and maintainers of the documentation can easily find it. One way might be to include the syntax in a 'popover', i.e. that we define stuff with particular syntax as a [concept](@) and have the syntax be included in its 'popover text'.
 :::
 
 

@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm:
 glossaryText: "an [act](action@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "identify", "identifying", "identifies", "identified", "identifiable", "identification" ]
 # Curation status
 status: proposed

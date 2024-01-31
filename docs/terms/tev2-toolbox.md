@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: TEv2 Toolbox
 glossaryText: "the collection of tools designed to support and facilitate the process of terminology management following the [TEv2 specifications](/docs/specs). These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "tev2-toolbox", "toolbox", "tools" ]
 # Curation status
 status: proposed

@@ -9,7 +9,7 @@ isa:
 glossaryTerm: Knowledge Artifact
 glossaryText: "See: [semantic unit](@). (term is deprecated)"
 synonymOf: semantic-unit
-grouptags:
+grouptags: [ ]
 formPhrases: [ "knowledge-artifact{ss}" ]
 # Curation status
 status: deprecated

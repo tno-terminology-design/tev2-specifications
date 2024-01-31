@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm:
 glossaryText: "an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "glossar{yies}" ]
 # Curation status
 status: proposed

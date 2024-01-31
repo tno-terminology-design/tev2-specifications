@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: TermRef
 glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-refs) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "term-ref{ss}", "termref{ss}", "term-reference{ss}" ]
 # Curation status
 status: proposed

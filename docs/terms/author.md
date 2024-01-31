@@ -8,8 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Author
 glossaryText: "a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
-hoverText: "Author: a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "author{ss}" ]
 # Curation status
 status: proposed

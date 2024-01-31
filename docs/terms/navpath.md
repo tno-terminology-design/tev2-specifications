@@ -8,8 +8,7 @@ termType: concept
 isa:
 glossaryTerm: 
 glossaryText: "the (name of the field in the [`scope`-section](/docs/specs/files/saf#scope-section) of a [SAF](@) that contains the) path to the directory where [curated texts](@) are rendered. The (value of this field) is for the rendered versions of [curated texts](@) what [curatedir](@) is for the [curated texts](@) themselves."
-hoverText: "the path of the directory, relative to the base URL of a static website, that contains the rendered versions of curated texts."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "navpath{ss}" ]
 # Curation status
 status: proposed

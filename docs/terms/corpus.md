@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm:
 glossaryText: "the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "corpus", "corpora", "corpus-of-terminology", "corpus-of-a-terminology", "terminology corpus" ]
 # Curation status
 status: proposed

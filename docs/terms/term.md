@@ -8,7 +8,7 @@ termType: concept
 isa: identifier
 glossaryTerm:
 glossaryText: "a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@) (in some [scope](@))."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "term{ss}", "word{ss}", "phrase{ss}" ]
 # Curation status
 status: proposed

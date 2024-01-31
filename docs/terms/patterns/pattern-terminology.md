@@ -8,7 +8,7 @@ termType: pattern
 isa:
 glossaryTerm: "Terminology Pattern"
 glossaryText: "a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "terminology-pattern{ss}" ]
 # Curation status
 status: proposed

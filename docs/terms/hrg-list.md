@@ -8,7 +8,7 @@ termType: concept
 isa: 
 glossaryTerm: HRG List
 glossaryText: "a list of alphabetically sorted [HRG entries](@) that can be further processed by tools such as the [TRRT](@), as well as rendering tools such as GitHub pages, Docusaurus, etc."
-grouptags: 
+grouptags: [ ]
 formPhrases: [ "hrg-list{ss}" ]
 # Curation status
 status: proposed

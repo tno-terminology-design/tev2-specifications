@@ -7,7 +7,7 @@ term: converter-profile
 termType: concept
 glossaryTerm: Converter Profile
 glossaryText: "a data object, of a type that is specific for a [text conversion tool](@), that [converters](@) use to create texts by which the [tool](text-conversion-tool@) will replace the text constructs that are located by its [interpreter](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "converter-profile{ss}", "profile{ss}" ]
 # Curation status
 status: proposed

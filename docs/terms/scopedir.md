@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm:
 glossaryText: "a directory in a computer file system that contains all files that are either being [curated](@) within a particular [scope](@), or generated to serve some purpose within that [scope](@)."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "scopedir{ss}", "scope-director{yies}" ]
 # Curation status
 status: proposed

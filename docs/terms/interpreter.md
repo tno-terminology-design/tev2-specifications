@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Interpreter
 glossaryText: "a [regex](@) that is used to locate a particular text construct (such as a [TermRef](@) or [MRGRef](@)) in a text, and that populates [named capturing groups](@) as specified in the [interpreter profile](@) of the particular [text conversion tool](@) for which it is designed."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "interpreter{ss}" ]
 # Curation status
 status: proposed

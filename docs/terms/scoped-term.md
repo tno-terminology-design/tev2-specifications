@@ -8,7 +8,7 @@ termType: concept
 isa: term
 glossaryTerm: Scoped Term
 glossaryText: "a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@))."
-grouptags:
+grouptags: [ ]
 formPhrases: [ "scoped-term{ss}" ]
 # Curation status
 status: proposed

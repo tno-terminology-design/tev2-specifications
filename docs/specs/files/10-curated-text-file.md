@@ -108,5 +108,5 @@ Different [TEv2 tools](@) use header fields in [headers](@) for various purposes
 ```
 
 :::info Editor's note
-Do we need to provide more guidance, e.g., regarding the [front matter](@) fields that may be used by the [TRRT](@) for converting [TermRefs](@), e.g. with popovers (for which it is known that the `hoverText` field is used)?
+Do we need to provide more guidance, e.g., regarding the [front matter](@) fields that may be used by the [TRRT](@) for converting [TermRefs](@), e.g. with popovers?
 :::

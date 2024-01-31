@@ -8,7 +8,7 @@ termType: concept
 isa:
 glossaryTerm: Interpreter Profile
 glossaryText: the set of [named capturing groups](@) that are an [interpreter](@) is expected to populate when it is used in the context of a specific [TEv2 tool](@) (such as the [TRRT](@) or [HRGT](@)).
-grouptags:
+grouptags: [ ]
 formPhrases: [ "interpreter-profile{ss}" ]
 # Curation status
 status: proposed

@@ -14,7 +14,7 @@ The **Human Readable Glossary Generator Tool ([HRGT](@))** is a [TEv2 text conve
 
 While [MRGRefs](@) have a [default syntax](/docs/specs/syntax/term-refs), alternative syntaxes can be used by choosing (or specifying) the [interpreter](@) that the [HRGT](@) should be using.
 
-[Hrg-lists](@) do not have a default structure, but there are various [predefined converters](#predefined-interpreters) that can be chosen (or specified) for the [HRGT](@) to use.
+[Hrg-lists](@) do not have a default structure, but there are various [predefined converters](#predefined-converters) (and [sorters](#predefined-sorters)) that can be chosen (or specified) for the [HRGT](@) to use.
 
 ## Installing the Tool
 

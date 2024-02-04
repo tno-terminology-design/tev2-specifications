@@ -96,7 +96,7 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
-[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`.
 
 ## HRG Generation {#what-it-does}
 

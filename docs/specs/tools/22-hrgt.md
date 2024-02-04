@@ -98,10 +98,6 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 
 [^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`.
 
-:::info
-Some parameters may only be configurable through the use of a [configuration file](/docs/specs/files/configuration-file). In this case `macros`, for use in [form phrases](@), is an example. See the [configuration file](/docs/specs/files/configuration-file) page for details.
-:::
-
 ## HRG Generation {#what-it-does}
 
 All [text conversion tools](@), including the [HRGT](@), convert (input) text files into results (output text files) by locating particular text patterns, doing some processing, and constructing texts that are used to replace the located text patterns with. This is illustrated in the figure below, and further explained in the page [TEv2 Text Conversion](/docs/overview/tev2-text-conversion):

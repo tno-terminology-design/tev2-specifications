@@ -101,6 +101,10 @@ The `<action>` parameter can take the following values:
 | `'log'`    | a message is written to a log(file) and processing continues. |
 | `'ignore'` | processing continues as if nothing happened. |
 
+:::info
+Some parameters may only be configurable through the use of a [configuration file](/docs/specs/files/configuration-file). In this case `macros`, for use in [form phrases](@), is an example. See the [configuration file](/docs/specs/files/configuration-file) page for details.
+:::
+
 ## Running the Tool
 
 One run of the [MRGT](@) either

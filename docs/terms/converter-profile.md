@@ -70,7 +70,8 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 </APITable>
 ```
 
-## Helper functions
+## Helper functions {#helpers}
+
 Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.html#helpers) have been specified in addition to the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html) of [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars), which can be used within [handlebars expressions](@) to modify the [converter](@) output. The input given to a helper function is always the evaluated value of the expression that follows the call, possibly with extra options.
 
 ```ts title="Mustache expression format"
@@ -81,12 +82,48 @@ Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.ht
 ```
 
 
-### `capFirst`
-This simple helper with identifier `capFirst` replaces every word's first character with the capitalized equivalent. Words are obtained by splitting the input on space characters.<br/>
+### `capFirst` {#capFirst}
+
+This simple helper with identifier `capFirst`, replaces every word's first character with the capitalized equivalent. Words are obtained by splitting the input on space characters.<br/>
 *It takes the input, splits the input at spaces, and capitalizes the first character of every split item, after which the output is returned.*
 
-### `noRefs`
-This helper with identifier `noRefs` attempts to use the configured `type` to convert all references to the `showtext` property of the interpreted reference. It also capitalizes the `showtext` replacement using the `capFirst` helper.<br/>
+```ts title="capFirst example"
+// Input (entry.term): "converter profile"
+
+{{capFirst entry.term}}
+// Output: "Converter Profile"
+```
+
+### `ifValue` {#ifValue}
+
+This helper with identifier `ifValue`, allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/>
+ *It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.*
+
+```ts title="ifValue example"
+// Input (entry.termType): "concept"
+
+{{#ifValue entry.termType equals="concept"}}Artifact is a concept{{/ifValue}}
+// Output: "Artifact is a concept"
+
+{{#ifValue entry.termType equals="image"}}Artifact is an image{{/ifValue}}
+// Output: ""
+```
+
+### `localize` {#localize}
+
+This helper with identifier `localize`, attempts to parse the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the hostnames (also known as `host` values, e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the hostnames do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.
+
+```ts title="localize example"
+// Case: the hostname of the URL matches the MRG website's hostname
+// Input (entry.navurl): "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author"
+
+{{localize entry.navurl}}
+// Output: "/tev2-specifications/docs/terms/author"
+```
+
+### `noRefs` {#noRefs}
+
+This helper with identifier `noRefs`, attempts to use the configured `type` to convert all references to the `showtext` property of the interpreted reference. It also capitalizes the `showtext` replacement using the `capFirst` helper.<br/>
 *It takes the input, finds matches using the configured syntax-`type` and uses the capitalized interpreted `showtext` property as a replacement, after which the output is returned.*
 
 Three standard values are available to be used as the value for the `type` option. Multiple values may be provided, in which case the values are interpreted in order from left to right. If no value is provided, '`interpreter`' is used as the default `type`. If a `type` is provided that does not match any of the standard `type` values, the value is assumed to be a custom [regex](@).
@@ -109,29 +146,31 @@ Available `type` values:
 ```
 
 ```ts title="NoRefs example"
+// Case: interpreter is left default within the executing tool's configuration
+// Input (entry.glossaryText): "[Markdown](link), <a href="link">HTML</a>, [showtext](term@tev2)"
+
 {{noRefs entry.glossaryText}}
+// Output: "[Markdown](link), <a href="link">HTML</a>, Showtext"
+
 {{noRefs entry.glossaryText type="markdown"}}
+// Output: "Markdown, <a href="link">HTML</a>, Showtext"
+
 {{noRefs entry.glossaryText type="markdown, html, interpreter"}}
+// Output: "Markdown, HTML, Showtext"
+
 {{noRefs entry.glossaryText type="/\[(?<showtext>[^\]]+)\]\((?:[^)]+)\)/, html"}}
+// Output: "Markdown, HTML, Showtext"
 ```
 
-### `ifValue`
-This helper with identifier `ifValue` allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/>
- *It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.*
+### `regularize` {#regularize}
 
-```ts title="ifValue example"
-{{#ifValue entry.termType equals="concept"}}Artifact is a concept{{/ifValue}}
-{{#ifValue entry.termType equals="image"}}Artifact is an image{{/ifValue}}
-```
+This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).
+<br/>
+*It takes the input and performs the steps described by the [regularization process](regularized-text#regularization-process@), after which the output is returned.*
 
-### `localize`
-This helper with identifier `localize` attempts to parse the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the `host` values (e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the `host` values do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.
+```ts title="Regularize example"
+// Input (entry.term): "EX(ample)"
 
-```ts title="localize example"
-{{localize entry.navurl}}
-// using the localize helper, converts
-"https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author"
-// into
-"/tev2-specifications/docs/terms/author"
-// when the `host` value of the URL matches the MRG website's `host` value
+{{regularize entry.term}}
+// Output: "ex-ample"
 ```

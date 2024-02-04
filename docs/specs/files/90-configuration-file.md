@@ -136,7 +136,7 @@ The `<action>` parameter can take the following values.
 | `'log'`    | A message is written to a log(file) and processing continues. |
 | `'ignore'` | Processing continues as if nothing happened. |
 
-The `<macromap>` parameter is a map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). The map is a list of key-value pairs, where the key is the macro (e.g., `{ss}`, or `{yies}`), and the value is a list of the subsequent replacements (e.g., `["", "s", "'s", "(s)"]`, or `["y", "y's", "ies"]`). See [configuration file example](#configuration-files-for-tev2-tools) and [form phrases](@) for more information.
+The `<macromap>` parameter is a map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). The map is a list of key-value pairs, where the key is the macro (e.g., `{ss}`, or `{yies}`), and the value is a list of the subsequent replacements (e.g., `["", "s", "'s", "(s)"]`, or `["y", "y's", "ies"]`). If a (possibly empty) formphrase macro list is specified, it will override the predefined macros. See [configuration file](#configuration-files-for-tev2-tools) for an example, and [form phrases](@) for more information.
 
 </TabItem>
 

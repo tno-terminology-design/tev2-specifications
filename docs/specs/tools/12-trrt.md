@@ -157,10 +157,11 @@ If a [configuration file](/docs/specs/files/configuration-file) is used, the lon
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Converters](#trrt-interpreters) for details. |
 | `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
+| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | Display help for command. |
 
-[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[0]`
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[1]`
 
 ```mdx-code-block
 </APITable>

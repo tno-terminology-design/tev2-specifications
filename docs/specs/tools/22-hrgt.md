@@ -90,10 +90,13 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
-| `-con`, `--converter <type> or <hexpr>`    | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
+| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRGT Converters](#hrgt-converters) for details.  |
+| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to a [HRG list](@) entry in case of an error. This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRGT Converters](#hrgt-converters) for details.  |
 | `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
+
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`
 
 ## HRG Generation {#what-it-does}
 

@@ -127,6 +127,10 @@ The [interpreter profile](@) of the [HRGT](@) consist of the following [named ca
 | `converter`     | n | Specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
 | `sorter`        | n | Specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details. |
 
+:::info
+Note that the values of these specified [capturing groups](@) will be [regularized](regularize@) before they are used for [processing](#processing).
+:::
+
 ### HRGT Predefined Interpreters {#predefined-interpreters}
 
 The [HRGT](@) has only one predefined [interpreter](@), which is called `default`, the syntax of which is:

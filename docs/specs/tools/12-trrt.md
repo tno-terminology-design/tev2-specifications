@@ -202,7 +202,7 @@ The [interpreter profile](@) of the [TRRT](@) consist of the following [named ca
 | `vsntag`    | n | A [versiontag](@) that [identifies](@) the [terminology](@) that contains the [semantic unit](@) that is referred to. |
 
 :::info
-Note that the names of some of these [capturing groups](@) do not correspond 1-1 with the names of [moustache variables](@) in the [converter profile](@) of the [TRRT](@). 
+Note that the values of these specified [capturing groups](@) will be [regularized](regularize@) before they are used for [processing](#processing).
 :::
 
 ### TRRT Predefined Interpreters {#predefined-interpreters}
@@ -288,12 +288,9 @@ Perhaps the [TRRT](@) may use this tool as a means for generating the `term` fie
 
 ### TRRT Converter Profile {#converter-profile}
 
-The [converter profile](@) of the [TRRT](@) consists of a set of [moustache variables](@) that are populated from the following sources.
+The [converter profile](@) of the [TRRT](@) is an object of which its values can be referenced by a converter template. This object is populated from the sources as specified by the [converter profile](@) 
 
-- The [named capturing groups](@) as specified by the [interpreter profile](@) of the [TRRT](@). Since only the [named capturing groups](@) `showtext` and `trait` are useful for a [converter](@), they are made available as [moustache variables](@) `{{showtext}}` and `{{trait}}` respectively.
-- The fields in the [MRG entry](@) of the [semantic unit](@) that the [term ref](@) refers to. Each of the fields in that [MRG entry](@) is available as a [moustache variable](@). 
-
-Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
+Note that [converter profile](@) object may have values that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the population sources belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
 
 ### TRRT Predefined Converters {#predefined-converters}
 

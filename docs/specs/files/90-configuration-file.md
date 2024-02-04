@@ -31,6 +31,9 @@ output: . # (root) directory for output files to be written to
 ## Machine Readable Glossary Tool
 mrgt:
   vsntag: # versiontag for which the MRG needs to be (re)generated. Leave empty to process all versions
+  macros: # macros to be used for formPhrases
+    "{ss}": ["", "s", "'s", "(s)"]
+    "{yies}": ["y", "y's", "ies"]
 
 ## Human Readable Glossary Tool
 hrgt:
@@ -122,6 +125,7 @@ Parameters that are specific to the [MRGT](mrgt@) can be put in the YAML section
 | `onNotExist: <action>` | n | The action in case an MRG file unexpectedly does not exist. |
 | `vsntag: <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
 | `prune: <bool>`        | n | If `<bool>` is `true`, remove all [MRG](@) files in the local scope from the [glossarydir](@) where the vsntag (or altvsntag) is not administered in the [SAF](@) |
+| `macros: <macromap>`   | n | A map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). |
 
 The `<action>` parameter can take the following values.
 
@@ -131,6 +135,8 @@ The `<action>` parameter can take the following values.
 | `'warn'`   | A message is displayed (and logged) and processing continues. |
 | `'log'`    | A message is written to a log(file) and processing continues. |
 | `'ignore'` | Processing continues as if nothing happened. |
+
+The `<macromap>` parameter is a map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). The map is a list of key-value pairs, where the key is the macro (e.g., `{ss}`, or `{yies}`), and the value is a list of the subsequent replacements (e.g., `["", "s", "'s", "(s)"]`, or `["y", "y's", "ies"]`). See [configuration file example](#configuration-files-for-tev2-tools) and [form phrases](@) for more information.
 
 </TabItem>
 

@@ -87,7 +87,7 @@ Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.ht
 This simple helper with identifier `capFirst`, replaces every word's first character with the capitalized equivalent. Words are obtained by splitting the input on space characters.<br/>
 *It takes the input, splits the input at spaces, and capitalizes the first character of every split item, after which the output is returned.*
 
-```ts title="capFirst example"
+```ts title="'capFirst' example"
 // Input (entry.term): "converter profile"
 
 {{capFirst entry.term}}
@@ -99,7 +99,7 @@ This simple helper with identifier `capFirst`, replaces every word's first chara
 This helper with identifier `ifValue`, allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/>
  *It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.*
 
-```ts title="ifValue example"
+```ts title="'ifValue' example"
 // Input (entry.termType): "concept"
 
 {{#ifValue entry.termType equals="concept"}}Artifact is a concept{{/ifValue}}
@@ -113,7 +113,7 @@ This helper with identifier `ifValue`, allows for equality checking by comparing
 
 This helper with identifier `localize`, attempts to parse the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the hostnames (also known as `host` values, e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the hostnames do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.
 
-```ts title="localize example"
+```ts title="'localize' example"
 // Case: the hostname of the URL matches the MRG website's hostname
 // Input (entry.navurl): "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author"
 
@@ -145,7 +145,7 @@ Available `type` values:
 </APITable>
 ```
 
-```ts title="NoRefs example"
+```ts title="'NoRefs' example"
 // Case: interpreter is left default within the executing tool's configuration
 // Input (entry.glossaryText): "[Markdown](link), <a href="link">HTML</a>, [showtext](term@tev2)"
 
@@ -164,11 +164,10 @@ Available `type` values:
 
 ### `regularize` {#regularize}
 
-This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).
-<br/>
+This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).<br/>
 *It takes the input and performs the steps described by the [regularization process](regularized-text#regularization-process@), after which the output is returned.*
 
-```ts title="Regularize example"
+```ts title="'Regularize' example"
 // Input (entry.term): "EX(ample)"
 
 {{regularize entry.term}}

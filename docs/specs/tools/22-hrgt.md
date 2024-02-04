@@ -168,12 +168,9 @@ The [HRG list](@) contains elements that are assocated with one [MRG entry](@), 
 
 ### HRGT Converter Profile {#converter-profile}
 
-The [converter profile](@) of the [HRGT](@) consists of a set of [moustache variables](@) that are populated from the following sources.
+The [converter profile](@) of the [HRGT](@) is an object of which its values can be referenced by a converter template. This object is populated from the sources as specified by the [converter profile](@) 
 
-- The fields in the [MRG entry](@) for which an [HRG entry](@) is to be inserted in the [HRG list](@)
-- The fields in the [`terminology`-section](#mrg-terminology) of the [MRG](@) for which a [HRG](@) is being created.
-
-Note that [MRG entries](@) may have fields that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the such [MRG entries](@) belong. Such fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [HRGT](@). 
+Note that [converter profile](@) object may have values that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the population sources belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [HRGT](@).
 
 ### HRGT Predefined Converters {#predefined-converters}
 

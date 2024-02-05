@@ -176,7 +176,7 @@ Next, the [MRGT](@) will create a copy of the [MRG](@) file for every [versionta
 
 ### Phase 2: post processing Synonyms {#post-processing}
 
-This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of synonyms, to use the newly generated [provisional MRG entries](@)
+This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of [synonyms](#synonym-processing@), to use the newly generated [provisional MRG entries](@)
 
 When a [provisional MRG entry](@) in (one of) the created [provisional MRGs](@) has a `synonymOf` field that contains a [term identifier](@), this will now refer to either
 

@@ -162,14 +162,3 @@ Available `type` values:
 // Output: "Markdown, HTML, Showtext"
 ```
 
-### `regularize` {#regularize}
-
-This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).<br/>
-*It takes the input and performs the steps described by the [regularization process](regularized-text#regularization-process@), after which the output is returned.*
-
-```ts title="'Regularize' example"
-// Input (entry.term): "EX(ample)"
-
-{{regularize entry.term}}
-// Output: "ex-ample"
-```

@@ -1,6 +1,7 @@
 ---
 # TEv2 Curated Text Header
 term: writer
+glossaryTerm: Writer
 synonymOf: author
 formPhrases: [ "writer{ss}" ]
 ---
@@ -14,4 +15,4 @@ Or, the [writer's](@) block...
 
 The term must have all properties of [author](@), except for the `formPhrases`.
 
-Therefore, this term should also [appear in the glossary](/docs/tev2-glossary#writer-term-is-only-for-testing-purposes), where the `glossaryText` should be that of `author`.
+Therefore, this term should also [appear in the glossary](/docs/tev2-glossary#writer), where the `glossaryText` should be that of `author`.

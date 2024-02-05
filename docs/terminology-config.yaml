@@ -8,6 +8,9 @@ output: .        # (root) directory for output files to be written to
 ## Machine Readable Glossary Tool
 mrgt:
   vsntag:        # versiontag of MRG to generate. Default: all MRGs
+  macros: # macros to be used for formPhrases
+    "{ss}": ["", "s", "'s", "(s)"]
+    "{yies}": ["y", "y's", "ies"]
 
 ## Human Readable Glossary Tool
 hrgt:

@@ -11,4 +11,5 @@ date: 20231202
 
 # List of Abbreviations
 
+| Abbreviation | Refers to |
 {% hrg="" converter="markdown-abbr-table-row" %}

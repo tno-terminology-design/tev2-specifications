@@ -84,8 +84,7 @@ Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.ht
 
 ### `capFirst` {#capFirst}
 
-This simple helper with identifier `capFirst`, replaces every word's first character with the capitalized equivalent. Words are obtained by splitting the input on space characters.<br/>
-*It takes the input, splits the input at spaces, and capitalizes the first character of every split item, after which the output is returned.*
+This simple helper with identifier `capFirst`, replaces every word's first character with the capitalized equivalent. Words are obtained by splitting the input on space characters.<br/><i>It takes the input, splits the input at spaces, and capitalizes the first character of every split item, after which the output is returned.</i>
 
 ```ts title="'capFirst' example"
 // Input (entry.term): "converter profile"
@@ -96,8 +95,7 @@ This simple helper with identifier `capFirst`, replaces every word's first chara
 
 ### `ifValue` {#ifValue}
 
-This helper with identifier `ifValue`, allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/>
- *It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.*
+This helper with identifier `ifValue`, allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/><i>It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.</i>
 
 ```ts title="'ifValue' example"
 // Input (entry.termType): "concept"
@@ -123,8 +121,7 @@ This helper with identifier `localize`, attempts to parse the value it was given
 
 ### `noRefs` {#noRefs}
 
-This helper with identifier `noRefs`, attempts to use the configured `type` to convert all references to the `showtext` property of the interpreted reference. It also capitalizes the `showtext` replacement using the `capFirst` helper.<br/>
-*It takes the input, finds matches using the configured syntax-`type` and uses the capitalized interpreted `showtext` property as a replacement, after which the output is returned.*
+This helper with identifier `noRefs`, attempts to use the configured `type` to convert all references to the `showtext` property of the interpreted reference. It also capitalizes the `showtext` replacement using the `capFirst` helper.<br/><i>It takes the input, finds matches using the configured syntax-`type` and uses the capitalized interpreted `showtext` property as a replacement, after which the output is returned.</i>
 
 Three standard values are available to be used as the value for the `type` option. Multiple values may be provided, in which case the values are interpreted in order from left to right. If no value is provided, '`interpreter`' is used as the default `type`. If a `type` is provided that does not match any of the standard `type` values, the value is assumed to be a custom [regex](@).
 
@@ -164,8 +161,7 @@ Available `type` values:
 
 ### `regularize` {#regularize}
 
-This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).<br/>
-*It takes the input and performs the steps described by the [regularization process](regularized-text#regularization-process@), after which the output is returned.*
+This helper with identifier `regularize`, attempts to convert the input into a [regularized text](@) according to the [regularization process](regularized-text#regularization-process@).<br/><i>It takes the input and performs the steps described by the [regularization process](regularized-text#regularization-process@), after which the output is returned.</i>
 
 ```ts title="'Regularize' example"
 // Input (entry.term): "EX(ample)"

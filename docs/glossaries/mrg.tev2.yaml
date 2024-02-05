@@ -3756,7 +3756,7 @@ entries:
     term: "writer"
     termType: "concept"
     isa: null
-    glossaryTerm: "Author"
+    glossaryTerm: "Writer"
     glossaryText: "a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
     grouptags: []
     formPhrases:

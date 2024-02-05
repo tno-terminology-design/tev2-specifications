@@ -406,7 +406,6 @@ entries:
       - "ifvalue"
       - "localize"
       - "norefs"
-      - "regularize"
     termid: "concept:converter-profile"
     vsntag: "documentation"
   - id: "corpus"

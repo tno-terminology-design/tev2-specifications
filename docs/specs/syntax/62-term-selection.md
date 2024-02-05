@@ -22,26 +22,24 @@ A [term selection instruction](@) is a specification for the [MRGT](@) to modify
 | Instruction | Description |
 | ----------- | ----------- |
 | `<tid>`     | a [terminology identifier](@) that [identifies](@) the [terminology](@) that the [MRGT](@) will use as its source. |
-| `<t1>`, `<t2>` | a [term](@) (or a [formphrase](@) related to a [term](@)) |
+| `<f1>`, `<f2>` | a [formphrase](@) (for a particular [term](@)). |
 | `<key>`     | the name of a field in the [header](@) of a [curated text](@), or in an [MRG entry](@) of the [MRG](@), whichever the [MRGT](@) uses as its source. |
-| `<v1>`, `<v2>` | a text value  |
+| `<v1>`, `<v2>` | a text value. |
 
 </details>
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `*`         | Create an [MRG entry](@) from every [curated text](@) in the [current scope](@), and add it to the [provisional MRG](@). |
-| `[ <t1>, <t2>, ... ]` | Create an [MRG entry](@) from *every* [curated text](@) that matches  any of the `<t<i>>`.[^1] |
-| `<key> [ <v1>, <v2>, ... ]` | Create an [MRG entry](@) from every [curated text](@) that has a [header](@) with a field named `<key>`, and whose value matches any of the specified values `<v<i>>`.[^2] |
+| `"*"`       | Create an [MRG entry](@) from every [curated text](@) in the [current scope](@), and add it to the [provisional MRG](@). |
+| `"[ <f1>, <f2>, ... ]"`       | Create an [MRG entry](@) from *every* [curated text](@) that [matches](form-phrase#matching@) any of the [form phrases](@) `<f<i>>`. |
+| `"<key> [ <v1>, <v2>, ... ]"` | Create an [MRG entry](@) from every [curated text](@) that has a [header](@) with a field named `<key>`, and whose value matches any of the specified values `<v<i>>`.[^1] |
 
-[^1]: 'matching' means that [<mark>TBD: specify the matching algorithm, including its regularization, and detecting an optional `termType` part</mark>]
-
-[^2]: 'matching' means that [<mark>TBD: specify the matching algorithm, in particular when the field itself is an arry, such as `grouptags`, `headingids`, etc.</mark>]
+[^1]: 'matching' means that [<mark>TBD: specify the matching algorithm, in particular when the field itself is an arry, such as `grouptags`, `headingids`, etc.</mark>]
 
 :::tip Adding terms from other scopes
 By adding `@<tid>` to any of the above instructions, you specify that the [MRG entries](@) that are to be selected must originate from the [terminology](@) that the [terminology identifier](@) `<tid>` [identifies](@).
 
-The instruction `[ party, actor ]@essif-lab` will copy all [MRG entries](@) from the (default version) of the [MRG] as it exists in the [scope](@) `essif-lab`. Of course, `essif-lab` must be defined as a [scopetag](@) in one of the entries of the [scopes section](/docs/specs/files/saf#scopes) of the [SAF](@).
+The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) from the (default version) of the [MRG] as it exists in the [scope](@) `essif-lab`. Of course, `essif-lab` must be defined as a [scopetag](@) in one of the entries of the [scopes section](/docs/specs/files/saf#scopes) of the [SAF](@).
 :::
 
 <details>
@@ -49,11 +47,13 @@ The instruction `[ party, actor ]@essif-lab` will copy all [MRG entries](@) from
 
   | Syntax: | Meaning: |
   | :-----  | :------  |
-  | term [actor]               | select every [term](@) in the [current scope](@), that is described by a [curated text](@) of which the [header](@) has a `term` field with the value `actor`. |
-  | status[proposed,approved]  | select every [term](@) in the [current scope](@), that is described by a [curated text](@) of which the [header](@) has a `status` field with the value `proposed` or `approved`. |
-  | somefield []               | select every [term](@) in the [current scope](@), that is described by a [curated text](@) of which the [header](@) has a `somefield` field that has no value specified. |
-  | term [actor,party]@tev2:v1 | select every [term](@) in the [terminology](@) [identified](@) by `@tev2:v1`, that is described by an [MRG entry](@) (in the corresponding [MRG](@)) that has a `term` field with the value `actor` or `party`. |
-  | grouptags[x,y,z]@essif-lab | select every [term](@) in the default [terminology](@) of [scope](@) `essif-lab`, that is described by an [MRG entry](@) (in the corresponding [MRG](@)) that has a `grouptags` field whose value is `x`, `y`, or `z`. |
+  | "[actor,party]"              | select every [curated text](@) in the [current scope](@), that [matches](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
+  | "term [actor]"               | select every [curated text](@) in the [current scope](@), of which the `term` field in its [header](@) has the value `actor`. |
+  | "status[proposed,approved]"  | select every [curated text](@) in the [current scope](@), of which the `status` field in its [header](@) has the value `proposed` or `approved`. |
+  | "somefield []"               | select every [curated text](@) in the [current scope](@), of which the `somefield` field in its [header](@) has no value specified. |
+  | "[actor,party]@tev2:v1"      | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, that [matches](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
+  | "term [actor,party]@tev2:v1" | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, of which the `term` field has the value `actor` or `party`. |
+  | "grouptags[x,y,z]@essif-lab" | select every [MRG entry](@) in the default [terminology](@) of [scope](@) `essif-lab`, of which the `grouptags` field contains one or more of the values `x`, `y`, or `z`. |
   
 </details>
 
@@ -66,26 +66,27 @@ The syntax for removing terms is similar to one that is used for adding terms, b
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `<t1>`, `<t2>` | a [term](@) (or a [formphrase](@) related to a [term](@)) |
+| `<f1>`, `<f2>` | a [formphrase](@) (for a particular [term](@)). |
 | `<key>`     | the name of a field in the [header](@) of a [curated text](@), or in an [MRG entry](@) of the [MRG](@), whichever the [MRGT](@) uses as its source. |
-| `<v1>`, `<v2>` | a text value  |
+| `<v1>`, `<v2>` | a text value. |
 
 </details>
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `-[ <t1>, <t2>, ... ]` | Remove every [MRG entry](@) from the [provisional MRG](@) that matches any of the `<t<i>>`.[^1] |
-| `-<key> [ <v1>, <v2>, ... ]` | Remove every [MRG entry](@) from the [provisional MRG](@) that has a field named `<key>`, and whose value matches any of the specified values `<v<i>>`.[^2] |
+| `"-[ <f1>, <f2>, ... ]"`       |  Remove every [MRG entry](@) from the [provisional MRG](@) that [matches](form-phrase#matching@) any of the `<f<i>>`. |
+| `"-<key> [ <v1>, <v2>, ... ]"` |  Remove every [MRG entry](@) from the [provisional MRG](@) that has a field named `<key>`, and whose value matches any of the specified values `<v<i>>`.[^1] |
 
 <details>
   <summary>Examples for removing terms:</summary>
 
   | Syntax: | Meaning: |
   | :-----  | :------  |
-  | -term [actor]              | remove all entries that have a `term` field whose value is `actor`. |
-  | -status[proposed,approved] | remove all entries that have a `status` field whose value is `proposed` or `approved`. |
-  | -grouptags[x,y,z]          | remove all entries that have a `grouptags` field of which one of the listed [grouptags](@) is `x`, `y`, or `z`. |
-  | -somefield []              | remove all entries that have a `somefield` field that has no value specified. |
+  | "-[actor,party]"             | remove all [MRG entries](@) that [match](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
+  | "-term [actor]"              | remove all entries that have a `term` field whose value is `actor`. |
+  | "-status[proposed,approved]" | remove all entries that have a `status` field whose value is `proposed` or `approved`. |
+  | "-grouptags[x,y,z]"          | remove all entries that have a `grouptags` field of which one of the listed [grouptags](@) is `x`, `y`, or `z`. |
+  | "-somefield [] "             | remove all entries that have a `somefield` field that has no value specified. |
 
 </details>
 
@@ -108,7 +109,7 @@ The following syntaxes are available for renaming fields in a [provisional MRG e
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `rename <ttrm> [ <k1>:<v1>, <k2>:<v2>, ... ]` | In the [MRG entry](@) that is [identified](@) by `<ttrm>` in the [provisional MRG](@), the values of the fields `k<i>` are replaced by their corresponding values `v<i>` (also if `v<i>` is the empty string) |
+| `"rename <ttrm> [ <k1>:<v1>, <k2>:<v2>, ... ]"` | In the [MRG entry](@) that is [identified](@) by `<ttrm>` in the [provisional MRG](@), the values of the fields `k<i>` are replaced by their corresponding values `v<i>` (also if `v<i>` is the empty string) |
 
 Here is how it works. First, the [provisional MRG Entry](@) is searched that has a `term` field whose value is `<term>`. If found, all `<key>`:`<value>` pairs are processed in the sequence they are specified. Processing a `<key>`:`<value>` pair consists of looking for a field named `<key>` in the selected [MRG entry](@). We now have the following situations:
 
@@ -122,18 +123,18 @@ Here is how it works. First, the [provisional MRG Entry](@) is searched that has
 <details>
 <summary>Renaming examples</summary>
 
-- **`rename party [ status:accepted, glossaryText:"A natural person or a legal person" ]`**:
+- **`"rename party [ status:accepted, glossaryText:'A natural person or a legal person' ]"`**:
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
   - changes (or creates) its `status` field to so that it contains `accepted`, and 
   - changes (or creates) its `glossaryText` field to so that it contains `"A natural person or a legal person"`.
 
-- **`rename party [ term:partij, formPhrases:"partij{en}", glossaryText:"Een natuurlijk persoon of een rechtspersoon" ]`**
+- **"`rename party [ term:partij, formPhrases:'partij{en}', glossaryText:'Een natuurlijk persoon of een rechtspersoon' ]"`**
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
   - changes (or creates) its `term` field to so that it contains `partij`;
   - changes (or creates) its `status` field to so that it contains `approved`.
   - changes (or creates) its `glossaryText` field to so that it contains `"A natural or legal person"`
   
-- **`rename party [ glossaryText: ]`**
+- **`"rename party [ glossaryText: ]"`**
   - searches for the [provisional MRG entry](@) whose `term` field has value `party`, and (when found)
   - removes the contents from the `glossaryText` field if such a field exists.<br/>
 

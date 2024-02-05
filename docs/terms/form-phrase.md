@@ -49,11 +49,25 @@ The same varieties can easily be added for the human and machine actors, as foll
 formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 ~~~
 
-## Using Form Phrases {#using}
+## Using/Matching Form Phrases {#matching}
 
-Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must [identify](@) the [MRG entry](@) that documents this [semantic unit](@).
+Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must [identify](@) the [MRG entry](@) and/or the [curated text](@) that documents this [semantic unit](@).
 
-[Identification](@) of the [MRG entry](@) is straightforward. The input of this process is a text that is typically a [form phrase](@) that does not contain a [form phrase macro](@), or a (partially) [regularized form phrase](@). This input is then '[regularized](regularized-form-phrase#regularization-process@)', which produces a [regularized form phrase](@) that can then be matched against the elements of the `formPhrases` fields of the [MRG entries](@) in the [MRG](@) of the default or specified [terminology](@).
+Here is how a [from phrase](@) is matched against:
+
+1. [MRG entries](@), given the [MRG](@):
+    1. [Regularize](regularized-form-phrase#regularization-process@) the [from phrase](@);
+    2. Find all [MRG entries](@) that have the result an an entry in its `formPhrases`-field;
+    3. If there is a single such an [MRG entry](@), that is the one that matches the [form phrase](@).
+
+2. [Curated texts](@):
+    1. [Regularize](regularized-form-phrase#regularization-process@) the [from phrase](@);
+    2. Find all [curated texts](@) (in the [curatedir](@) of the [current scope](@)) that have a `formPhrases`-field whose entries, after having been [regularized](regularized-form-phrase#regularization-process@), are identical to the result of step 1;
+    3. If there is a single such [curated text](@), that is the one that matches the [form phrase](@).
+
+It is possible that there is no matching [MRG entries](@) and/or [curated texts](@).
+
+If there are more than one matching [MRG entries](@) and/or [curated texts](@), that is an error condition - that should not happen. Such conditions are typically flagged, e.g., as an error by the [MRGT](@), and they need to be resolved.
 
 ## Guidance for choosing Form Phrases {#guidance}
 

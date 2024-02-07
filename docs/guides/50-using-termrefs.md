@@ -19,12 +19,10 @@ This page currently only uses basic TermRef syntax. Do we also want to show alt(
 If so, there are two options: (1) do so in a separate page, or (2) use (synchronized) Tabs. 
 :::
 
-A [TermRef](@) is a construct that [authors](@) can use to help their readers to
-better understand particular [words or phrases](terms@) they use in their texts.
+A [TermRef](@) is a construct that [authors](@) can use to help their readers to better understand particular [words or phrases](terms@) they use in their texts.
 
-:::tip Here are three examples of a [TermRef](@):
-A **`[TermRef](@)`** is a construct that **`[authors](@)`** can use to help their readers to
-better understand particular **`[words or phrases](terms@)`** they use in their texts.
+:::tip The text below has three examples of a [TermRef](@):
+A **`[TermRef](@)`** is a construct that **`[authors](@)`** can use to help their readers to better understand particular **`[words or phrases](terms@)`** they use in their texts.
 :::
 
 When texts that an [author](@) writes are processed, e.g., to become part of a static website such as the one you are now accessing as you read this, the [TermRefs](@) therein are converted into something that helps readers: in this case, a [TermRef](@) is highlighted; also, if the reader hovers over the [TermRef](@), it shows a popup with some short information about that concept; and finally, it is also turned into a hyperlink that readers can click on to navigate to a page that contains more information about the [concept](@) that the [TermRef](@) references.
@@ -32,7 +30,7 @@ When texts that an [author](@) writes are processed, e.g., to become part of a s
 This page shows you:
 
 1. How you can create basic [TermRefs](@);
-2. How [TermRefs](@) are Converted (into [RenderableRefs](@))
+2. How [TermRefs](@) are converted (into so-called [RenderableRefs](@))
 3. How you can customize the [TermRef](@) syntax;
 4. How you can determine what the [TermRef](@) will look like after it is converted.
 
@@ -59,19 +57,39 @@ If this doesn't work (which may happen), but you are sure the [term](@) is defin
 
 where
 
-- `<showtext>` is the the [showtext](@) part of the [TermRef](@), and
+- `<showtext>` is the (required) [showtext](@) part of the [TermRef](@), and
 - `<term>` is the term to which you want `<showtext>` to refer.
 
 For example, `[organizations or individuals](party@)` will render as [organizations or individuals](party@) (if you hover over it, or click the link, you will see that it will link to the documentation of [party](@)).
 
 Of course, all this relies on that the `<term>` has been properly defined.
 
+### Explicitly mentioning the [term type](@)
+
+Sometimes, a single [term](@) is used to refer to [semantic units](@) of different types. For example, the term 'terminology' can refer to a [concept](@), but it could also refer to a [mental model](pattern@) that shows how a set of related [concepts](@), [relations](@) etc. work together in a coherent fashion. 
+
+You need to be able to refer to both, and the [TermRefs](@) you use should be unambiguous. You can do that by specifying the [term type](@) in the [TermRef](@), as follows
+
+- [terminology](concept:terminology@) (i.e.: `[terminology](concept:terminology@)`) refers to the [concept](@) named `terminology`.
+- [terminology](pattern:terminology@) (i.e.: `[terminology](pattern:terminology@)`) refers to the [pattern](@) named `terminology`.
+
+The texts that are used to identify a term type are not standardized. It is up to the [curators](@) of a [scope](@) to determine what they can be, and to ensure that they are correctly specified in the [headers](@) of the [curated texts](@) that describe the corresponding [semantic units](@).
+
 ### Refering to a [term](@) that is defined in another [scope](@)
 
+You can also refer to a [term](@) that wasn't defined in the [scope](@) within which you are creating your [TermRef](@). For example, if would want to refer to the [term](@) `party` as it is defined in the [scope](@) (that is identified by the [scopetag](@)) `essif-lab`, you simply add that [scopetag](@) behind the `@` character, as in [party](@essif-lab) (`[party](@essif-lab)`).
 
+You may also refer to a [term](@) that is defined in a particular version of a [terminology](@), as illustrated by the general syntax
 
+``` markdown
+[<showtext>](@<scopetag>:<vsntag>)
+```
 
+where
 
+- `<showtext>` is the (required) [showtext](@) part of the [TermRef](@).
+- `<scopetag>` is the (optional) [scopetag](@) that specifies the [scope](@) from which the [terminology](@) is to be used; if `<scopetag>` isn't specified, the [current scope](@) is assumed.
+- `<vsntag>` is the (optional) [versiontag](@) that specifies the version of the [terminology](@) that is to be used. If `<vsntag>` isn't specified, then the default version of the [terminology](@) is used, the [vsntag](@) of which is defined in the [SAF](@).
 
 ## How [TermRefs](@) are Converted (into [RenderableRefs](@))
 

@@ -174,7 +174,7 @@ The following tabs show how this helper works on the following input:
 -----
 
 ``` txt
-  [Markdown](link), <a href="link">HTML</a>, [showtext](term@tev2)
+  [Markdown](link), <a href="link">HTML</a>, `[showtext](someterm@somescope)`
 ```
 
 <Tabs

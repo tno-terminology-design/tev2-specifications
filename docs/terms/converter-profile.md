@@ -152,7 +152,7 @@ Multiple custom [helper functions](https://handlebarsjs.com/guide/expressions.ht
 
 The function of the helper `capFirst` is to capitalize every first character from every word in a string.
 
-```ts title="'capFirst' examples"
+```ts title="Examples for 'capFirst'"
 {{capFirst entry.glossaryTerm}}   # e.g. "converter profile" becomes "Converter Profile"
 {{capFirst entry.glossaryText}}   # e.g. "This is a description; for SOME TERM" becomes "This Is A Description; For SOME TERM"
 ```
@@ -166,7 +166,7 @@ reconstructs the input string fomr the split items, and returns the result.*
 
 The function of the helper `noRefs` is to replace all [TermRefs](@) from a string, with its (capitalized) [showtext](@). Capitalization is done by the helper `capFirst`.
 
-```ts title="`noRefs` examples"
+```ts title="Examples for 'noRefs'"
 {{noRefs entry.glossaryText}}
 {{noRefs entry.glossaryText type="markdown"}}
 {{noRefs entry.glossaryText type="markdown, html, interpreter"}}
@@ -201,15 +201,10 @@ Available `type` values:
 
 The function of the helper `ifValue` is to conditionally render text, based on equality of values. This complements the existing [`#if`-`/if` syntax](https://handlebarsjs.com/guide/builtin-helpers.html#if), that conditionally renders text based on existence of values.
 
-<details>
-  <summary>Example of `ifValue`</summary>
-
 ```ts title="ifValue example"
 {{#ifValue entry.termType equals="concept"}}Artifact is a concept{{/ifValue}}
 {{#ifValue entry.termType equals="image"}}Artifact is an image{{/ifValue}}
 ```
-
-</details>
 
 The helper `ifValue` allows for equality checking by comparing the first value with the value specified as the `equals` argument. Pay attention to the use of a `#` character in front of the opening helper tag (`#ifValue`) and a `/` character at the closing (`/ifValue`) tag in the example.<br/>
  *It compares the input given as the value trailing the opening helper identifier (`ifValue`) and the value of the `equals` option, and returns the value inbetween the opening and closing helper tag if the values are equal.*
@@ -219,10 +214,7 @@ The helper `ifValue` allows for equality checking by comparing the first value w
 The function of the helper `localize` is to convert absolute URLs to relative paths within a specific website context if that is possible,
 enhancing internal navigation efficiency and consistency (particularly in static website generator contexts).
 
-<details>
-  <summary>Example of `localize`</summary>
-
-```ts title="localize example"
+```ts title="Examples for 'localize'"
 {{localize entry.navurl}}
 // using the localize helper, converts
 "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
@@ -230,7 +222,5 @@ enhancing internal navigation efficiency and consistency (particularly in static
 "/tev2-specifications/docs/terms/converter-profile"
 // when the `host` value of the URL matches the MRG website's `host` value
 ```
-
-</details>
 
 The helper `localize` parses the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the `host` values (e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the `host` values do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.

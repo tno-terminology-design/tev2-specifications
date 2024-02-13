@@ -39,35 +39,52 @@ The converter profile object can be envisaged as a YAML object, that has a numbe
 Here is an example of what a converter profile object might look like for the [TermRef](@) `[converter profile object](converter-profile#object@)`
 
 ~~~ yaml
-int
-  type: "???"
-  ???
-ref
+int:
+  type: "default"
+  regex: /(?:(?<=[^`\\])|^)\[(?=[^@\n\]]+\]\([^@)]*@[:a-z0-9_-]*\))(?<showtext>[^@\n\]]+)\]\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<term>[^@\n:#)]*?)?(?:#(?<trait>[^@\n:#)]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\)/g
+ref:
   showtext: "converter profile object"
-  termType: ""
-  termid: "converter-profile"
+  type: ""
+  term: "converter-profile"
   trait: "object"
   scopetag: ""
   vsntag: ""
-entry
-  # Docusaurus header
-  id: converter-profile
-  displayed_sidebar: tev2SideBar
-  # TEv2 Curated Text Header
-  term: converter-profile
-  termType: concept
-  glossaryTerm: Converter Profile
+entry:
+  id: "converter-profile"
+  displayed_sidebar: "tev2SideBar"
+  term: "converter-profile"
+  termType: "concept"
+  glossaryTerm: "Converter Profile"
   glossaryText: "a data object, of a type that is specific for a [text conversion tool](@), that [converters](@) use to create texts by which the [tool](text-conversion-tool@) will replace the text constructs that are located by its [interpreter](@)."
-  grouptags:
-  formPhrases: [ "converter-profile{ss}", "profile{ss}" ]
-  # Curation status
-  status: proposed
+  grouptags: []
+  formPhrases:
+    - "converter-profile"
+    - "converter-profiles"
+    - "converter-profile-s"
+    - "profile"
+    - "profiles"
+    - "profile-s"
+  status: "proposed"
   created: 20231218
   updated: 20240108
-  # Origins/Acknowledgements
-  contributors: RieksJ
+  contributors: "RieksJ"
   attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
   originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+  scopetag: "termdsn"
+  locator: "converter-profile.md"
+  navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
+  headingids:
+    - "converter-profile"
+    - "object"
+    - "`err`-fields"
+    - "helpers"
+    - "capfirst"
+    - "ifvalue"
+    - "localize"
+    - "norefs"
+    - "regularize"
+  termid: "concept:converter-profile"
+  vsntag: "documentation"
 mrg:
   scopetag: "tev2"
   scopedir: "https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs"
@@ -92,8 +109,9 @@ mrg:
   vsntag: "documentation"
   altvsntags:
     - "latest"
-err
-  file: | Y | Name of the file where the specific reference was found. |
+err:
+  file: "12-trrt.md"
+  dir: "/specs/tools"
   line: 73
   pos: 9
   cause: ""
@@ -103,7 +121,7 @@ err
 
 | Section | Description |
 | ------- | ----------- |
-| `int`   | (interpreter): includes information about the interpreter type `int.type`, and the regex used to locate the reference `int.regex`. The `noRefs` helper accesses the `int.regex` to be used as the default type. |
+| `int`   | (interpreter): includes the interpreter type `int.type` (either the name of a predefined interpreter, or "custom"), and the regex used to locate the reference `int.regex`. The `noRefs` helper, for instance, accesses the `int.regex` to be used as the default type. |
 | `ref`   | (reference): the set of properties derived from the [named capturing groups](@) by the [interpreter](@). |
 | `entry` | (MRG entry): all fields from the specific [MRG entry](@) that was selected. | 
 | `mrg`   | (MRG): all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken. |
@@ -130,7 +148,8 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 
 | Field           | Req'd | Description |
 | --------------- | :---: | :---------- |
-| `file`          |   Y   | Name of the file where the specific reference was found. |
+| `file`          |   Y   | Name of the file, including the extension, where the specific reference was found. |
+| `dir`           |   Y   | Relative directory path from the location the tool was called to the directory where the `file` was found. |
 | `line`          |   Y   | Linenumber in the file where the reference was found. |
 | `pos`           |   Y   | Position on the line of the start of the reference that was found. |
 | `cause`         |   n   | A description of the cause of a possible error. |

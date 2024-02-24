@@ -9,7 +9,7 @@ isa:
 glossaryTerm: "TEv2 Tool"
 glossaryText: "any software application or utility designed to support and streamline various tasks related to terminology management following the TEv2 specifications."
 grouptags: [ ]
-formPhrases: [ "tev2-tool{ss}", "tool" ] # 'tools' is a formPhrase in `tev2-toolbox`
+formPhrases: [ "tev2-tool{ss}", "tool" ] # NOTE: 'tools' is a formPhrase in `tev2-toolbox`
 # Curation status
 status: proposed
 created: 20230731

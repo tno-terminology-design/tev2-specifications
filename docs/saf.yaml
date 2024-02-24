@@ -41,7 +41,7 @@ versions:
 - vsntag: terms # this version contains all terms that are curated within this scope
   termselection:
   - "*" # import all tev2 terms.
-  - "-term[@]" # exclude the `@` (which is only used for debugging purposes)
+  - "-excludeFromMRG[yes]" # exclude all curated texts whose `excludeFromMRG` field contains `yes`
 - vsntag: patterns # this version contains all patterns we need within this scope
   termselection:
   - termType[pattern]
@@ -60,4 +60,4 @@ versions:
   - "term[concept,relation,property,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
   - "*" # import all tev2 terms.
 # - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)
-  - "-term[@]"
+  - "-excludeFromMRG[yes]" # exclude all curated texts whose `excludeFromMRG` field contains `yes`

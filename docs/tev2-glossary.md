@@ -1,6 +1,6 @@
 ---
 id: tev2-glossary
-sidebar_label: "Glossary, Abbreviations"
+sidebar_label: "Glossary"
 toc_min_heading_level: 6
 toc_max_heading_level: 6
 date: 20231202
@@ -14,9 +14,9 @@ import TabItem from '@theme/TabItem';
 <Tabs
   defaultValue="glossary"
   values={[
-    {label: 'TEv2 glossary',             value: 'glossary'},
-    {label: 'List of Abbreviations',     value: 'abbreviations'},
-    {label: 'Glossary with Abbreviations value: 'glossary-and-abbrs'},
+    {label: 'TEv2 glossary',               value: 'glossary'},
+    {label: 'List of Abbreviations',       value: 'abbreviations'},
+    {label: 'Glossary with Abbreviations', value: 'glossary-and-abbrs'},
   ]}>
 
 <TabItem value="glossary">

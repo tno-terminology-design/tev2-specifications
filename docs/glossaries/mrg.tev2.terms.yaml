@@ -22,6 +22,22 @@ terminology:
   vsntag: "terms"
 scopes: []
 entries:
+  - id: "@"
+    displayed_sidebar: "tev2SideBar"
+    term: "at-character"
+    termType: "error"
+    glossaryTerm: "@ (unresolvable reference)"
+    glossaryText: "Error - the reference cannot be resolved."
+    sidebar_label: "Term ref not found"
+    scopetag: "tev2"
+    locator: "@.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/@"
+    formPhrases: []
+    headingids:
+      - "error---the-reference-cannot-be-resolved"
+      - "\"@\""
+    termid: "error:at-character"
+    vsntag: "terms"
   - id: "author"
     displayed_sidebar: "tev2SideBar"
     term: "author"

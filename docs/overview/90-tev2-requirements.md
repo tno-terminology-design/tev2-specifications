@@ -1,7 +1,6 @@
 ---
 id: tev2-requirements
 sidebar_label: Initial Requirements
-contributors: "Hidde-Jan Jongsma", "Rieks Joosten"
 date: 20220303
 ---
 

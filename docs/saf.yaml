@@ -49,15 +49,15 @@ versions:
 - vsntag: documentation # terms that are needed for this specification
   altvsntags: [ latest ] # alternative verstiontags
   termselection:
-  - "term[action]@essif-lab"
+  - "[action]@essif-lab"
   - "rename action [id:act, term:act, formPhrases:'act{ss}']"
-  - "term[party,actor,onboarding,action,organization,community,entity,legal-entity]@essif-lab"
-  - "term[ssi,assertion,claim,credential,issue,verify,validate,transaction]@essif-lab"
-  - "term[manage,management,governance,risk,owner,owned]@essif-lab" 
-  - "term[jurisdiction,objective,control,expectation,obligation]@essif-lab"
-  - "term[control-objective,risk-objective,compliance-objective]@essif-lab" 
-  - "term[identity,partial-identity,identifier,identify,identification]@essif-lab"
-  - "term[concept,relation,property,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
+  - "[party,actor,onboarding,action,organization,community,entity,legal-entity]@essif-lab"
+  - "[ssi,assertion,claim,credential,issue,verify,validate,transaction]@essif-lab"
+  - "[manage,management,governance,risk,owner,owned]@essif-lab" 
+  - "[jurisdiction,objective,control,expectation,obligation]@essif-lab"
+  - "[control-objective,risk-objective,compliance-objective]@essif-lab" 
+  - "[identity,partial-identity,identifier,identify,identification]@essif-lab"
+  - "[concept,relation,property,semantic-unit,terminology,vocabulary,knowledge]@essif-lab"
   - "*" # import all tev2 terms.
 # - "termType[concept,acronym,abbreviation]" # import all of our own stuff (except patterns)
   - "-excludeFromMRG[yes]" # exclude all curated texts whose `excludeFromMRG` field contains `yes`

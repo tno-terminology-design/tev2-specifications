@@ -12,7 +12,26 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-A [term selection instruction](@) is a specification for the [MRGT](@) to modify the [provisional MRG](@) that it is working with should be modified.
+A [term selection instruction](@) is a specification for the [MRGT](@) to modify the [provisional MRG](@) that it is working with should be modified. This documents specifies the syntax for the various instructions.
+
+<details>
+  <summary>Example of a `termselection` field in a SAF</summary>
+
+[Term selection instructions](@) go in the `termselection` fields of in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@). This `termselection` field is an array of YAML texts. Here is an example:
+
+~~~ yaml
+  termselection:
+  - "[party,actor,action,onboarding,organization]@essif-lab"
+  - "rename action [id:act, term:act, formPhrases:'act{ss}']"
+  - "term[action]@essif-lab"
+~~~
+
+:::warning Every instruction must be surrounded by quotes
+This is to ensure YAML interpreters can actually read it.<br/>
+Take care to properly nest quotes (as in the 'rename' instruction of the example).
+:::
+
+</details>
 
 # Selecting Terms to be Added to the Provisional MRG {#adding-terms}
 
@@ -54,7 +73,7 @@ The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) fr
   | "[actor,party]@tev2:v1"      | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, that [matches](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
   | "term [actor,party]@tev2:v1" | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, of which the `term` field has the value `actor` or `party`. |
   | "grouptags[x,y,z]@essif-lab" | select every [MRG entry](@) in the default [terminology](@) of [scope](@) `essif-lab`, of which the `grouptags` field contains one or more of the values `x`, `y`, or `z`. |
-  
+
 </details>
 
 ## Selecting Terms to be Removed from the Provisional MRG {#remove-terms}
@@ -86,7 +105,7 @@ The syntax for removing terms is similar to one that is used for adding terms, b
   | "-term [actor]"              | remove all entries that have a `term` field whose value is `actor`. |
   | "-status[proposed,approved]" | remove all entries that have a `status` field whose value is `proposed` or `approved`. |
   | "-grouptags[x,y,z]"          | remove all entries that have a `grouptags` field of which one of the listed [grouptags](@) is `x`, `y`, or `z`. |
-  | "-somefield [] "             | remove all entries that have a `somefield` field that has no value specified. |
+  | "-somefield []"              | remove all entries that have a `somefield` field that has no value specified. |
 
 </details>
 

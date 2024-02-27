@@ -83,9 +83,6 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `navid`       | n | Name of the field in the [front matter](@) of a [body file](@) used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the [body file](@) will be used. | 
 | `macros`      | n | [Form phrase macro map](@) that is to be used (overrides the default [macro map](#example@)) |
 | `license`     | n | File in the root of the [scopedir](@) that contains the (default) licensing data. |
-| `statuses`    | n | Ordered list of [tags](@) that are defined in this [scope](@) for specifying stages in the life-cycle of [semantic units](@). The first element in the list represents the first stage, and the last element the last stage in the life-cycle. |
-| `issues`      | n | URL where issues can be reported and handled.|
-| `curators`    | n | Data that can be used to contact individual [curators](@). |
 | ...           | n | [Curators](@) are free to add additional, [scope](@)-specific fields if they like to. |
 
 ```mdx-code-block

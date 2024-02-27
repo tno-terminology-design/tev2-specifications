@@ -124,8 +124,13 @@ Parameters that are specific to the [MRGT](mrgt@) can be put in the YAML section
 | :--------------------- | :---: | :---------- |
 | `onNotExist: <action>` | n | The action in case an MRG file unexpectedly does not exist. |
 | `vsntag: <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
+| `macros: <macromap>`   | n | A map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). See below for details. |
+
+<!--
+The following table-line documents the `prune` feature, but as this isn't yet supported.
+See https://github.com/tno-terminology-design/tev2-tools/issues/6
 | `prune: <bool>`        | n | If `<bool>` is `true`, remove all [MRG](@) files in the local scope from the [glossarydir](@) where the vsntag (or altvsntag) is not administered in the [SAF](@) |
-| `macros: <macromap>`   | n | A map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). |
+-->
 
 The `<action>` parameter can take the following values.
 
@@ -136,7 +141,22 @@ The `<action>` parameter can take the following values.
 | `'log'`    | A message is written to a log(file) and processing continues. |
 | `'ignore'` | Processing continues as if nothing happened. |
 
-The `<macromap>` parameter is a map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). The map is a list of key-value pairs, where the key is the macro (e.g., `{ss}`, or `{yies}`), and the value is a list of the subsequent replacements (e.g., `["", "s", "'s", "(s)"]`, or `["y", "y's", "ies"]`). If a (possibly empty) formphrase macro list is specified, it will override the predefined macros. See [configuration file](#configuration-files-for-tev2-tools) for an example, and [form phrases](@) for more information.
+### Macromaps
+
+The `<macromap>` parameter is a map of macros to be used to evaluate the `formPhrases` field of a [curated text](@). It is a list of key-value pairs, where the key is the macro (e.g., `{ss}`, or `{yies}`), and the value is a list of the subsequent replacements (e.g., `["", "s", "'s", "(s)"]`, or `["y", "y's", "ies"]`). If a (possibly empty) formphrase macro list is specified, it will override the predefined macros. See [configuration file](#configuration-files-for-tev2-tools) for an example, and [form phrases](@) for more information.
+
+Here is an example of the `mrgt` section of the config file that contains a macromap.
+
+~~~ yaml
+## Machine Readable Glossary Tool
+mrgt:
+  vsntag:        # versiontag of MRG to generate. Default: all MRGs
+  macros: # macros to be used for formPhrases
+    "{ss}": ["", "s", "'s", "(s)"]
+    "{yies}": ["y", "y's", "ies"]
+~~~
+
+
 
 </TabItem>
 

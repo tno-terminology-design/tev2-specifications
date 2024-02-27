@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A **Form Phrase Macro** is a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc.
 
-For example, when the macro `{ss}` is used in a [form phrase](@) specification `"actor{ss}"`, or `act`, this is a shorthand for the set `"actor", "actors", "actor's", "actor(s)"`, or the set `"act", "acts", "act's", "act(s)"` respectively. 
+For example, when the macro `{ss}` is used in a [form phrase](@) specification `"actor{ss}"`, or `act`, this is a shorthand for the set `"actor", "actors", "actor's", "actor(s)"`, or the set `"act", "acts", "act's", "act(s)"` respectively.
 
 A [form phrase](@) that contains a [form phrase macro](@) can be expanded into a set of [form phrases](@) that no longer contain the [form phrase macro](@). Thus a [form phrase](@) that contains a [form phrase macro](@) can be seen as a 'shorthand notation' for the set of [form phrases](@) that it can be expanded into.
 
@@ -86,6 +86,6 @@ They are currently not included because we have not found any terms that would b
 
 ## Custom [Form Phrase Macros](@)
 
-:::info Editor's note
-There is currently an issue that calls for the ability to use custom form phrases, that could be specified somewhere in the SAF or as an MRGT option. The contents of this section can be written when that issue has come to a resolution.
-:::
+The set of [form phrase macros](@) that is available in a [scope](@) is configurable. This allows [form phrase macros](@) to be configured, amongst others, to suit languages that have different grammatical rules, such as Dutch or French.
+
+Please refer to the description of [form phrase macro maps](@) for details.

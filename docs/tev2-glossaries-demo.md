@@ -21,6 +21,7 @@ This page is evidence that an [HRG](@) can be generated for every [MRG](@) that 
     {label: 'Recent changes glossary',   value: 'recent-changes'},
     {label: 'Mental Model glossary',     value: 'patterns'},
     {label: 'Latest eSSIF-Lab glossary', value: 'latest'},
+    {label: 'Glossary and Abbrs (inline)', value: 'glossary-and-abbrs'},
   ]}>
 
 <TabItem value="default">
@@ -88,6 +89,20 @@ The [MRGref](@) that is used is `{%` `hrg="essif-lab:latest" converter="### [{{#
 :::
 
 {% hrg="essif-lab:latest" converter="### [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{noRefs glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n" sorter="{{glossaryText}}" %}
+
+</TabItem>
+
+<TabItem value="glossary-and-abbrs">
+
+:::info
+This is the [glossary](@) for the default [terminology](@) within this (TEv2) [scope](@), in the same format as defined in file `terminology-config.yaml`, but now with the specification of the [converters](@) placed inline.
+
+The [MRGRef](@) that is used is `{%` `hrg="" con[1]="markdown-table-row" con[2]="markdown-abbr-table-row"` `%}`
+:::
+
+| Abbreviation | Refers to |
+| ------------ | --------- |
+{% hrg="" con[1]="markdown-table-row" con[2]="markdown-abbr-table-row" %}
 
 </TabItem>
 

@@ -16,7 +16,6 @@ import TabItem from '@theme/TabItem';
   values={[
     {label: 'TEv2 glossary',               value: 'glossary'},
     {label: 'List of Abbreviations',       value: 'abbreviations'},
-    {label: 'Glossary with Abbreviations', value: 'glossary-and-abbrs'},
   ]}>
 
 <TabItem value="glossary">
@@ -34,16 +33,6 @@ import TabItem from '@theme/TabItem';
 | Abbreviation | Refers to |
 | ------------ | --------- |
 {% hrg="" converter="{{#if glossaryAbbr}}| [{{glossaryAbbr}}]({{localize navurl}}) | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" %}
-
-</TabItem>
-
-<TabItem value="glossary-and-abbrs">
-
-# TEv2 Glossary
-
-| Abbreviation | Refers to |
-| ------------ | --------- |
-{% hrg="" con[1]="markdown-table-row" con[2]="markdown-abbr-table-row" %}
 
 </TabItem>
 

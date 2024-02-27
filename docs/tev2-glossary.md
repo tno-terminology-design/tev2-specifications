@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 | Abbreviation | Refers to |
 | ------------ | --------- |
-{% hrg="" converter="markdown-abbr-table-row" %}
+{% hrg="" converter="{{#if glossaryAbbr}}| [{{glossaryAbbr}}]({{localize navurl}}) | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" %}
 
 </TabItem>
 

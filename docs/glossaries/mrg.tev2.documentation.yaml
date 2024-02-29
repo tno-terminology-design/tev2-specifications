@@ -356,6 +356,9 @@ entries:
     isa: null
     glossaryTerm: "Converter"
     glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
+    glossaryNotes:
+      - "A [TRRT](@) converter constructs a text that replaces a [TermRef](@). That text, when rendered in a static website, would typically link to the page that documents the term. Also, it may provide a popup that shows its definition."
+      - "A [HRGT](@) converter constructs a text that replaces an [MRGRef](@). That text typically renders as a [human readable glossary](@)."
     grouptags: []
     formPhrases:
       - "converter"
@@ -3641,6 +3644,7 @@ entries:
       - "alt-syntax"
       - "processing"
       - "finding-mrg-entry"
+      - "trrt-converters"
       - "converter-profile"
       - "predefined-converters"
       - "the-`markdown-link`-converter"

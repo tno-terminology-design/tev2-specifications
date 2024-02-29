@@ -31,11 +31,12 @@ A **Form Phrase Macro Map** is a list of [form phrase macros](@). Such lists are
 
 ## Purpose
 
-A [form phrase macro map](@) enables [curators](@) to define a set of [form phrase macros](@) that is particularly suited for creating [form phrases](@) in the language that is used within the [scope](@) that they [curate](@) they use. 
+A [form phrase macro map](@) enables [curators](@) to define a set of [form phrase macros](@) that is particularly suited for creating [form phrases](@) for the language that is used within the [scope](@) they [curate](@).
 
 ## Specifying and Using Form Phrase Macro Maps {#usage}
 
 [Form phrase macro maps](@) can be specified in
+
 - the `scope` section of the [SAF](@) of such [scopes](@), or
 - a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@) and/or [TRRT](@).
 
@@ -43,10 +44,10 @@ Whenever a [TEv2 tool](@) (e.g., the [MRGT](@)) needs a [form phrase macro map](
 
 1. An initial [macro map](@) consists of the default one, which is specified in the [example section](#example) below.
 2. If the (the scope section of) the [SAF](@) contains a [form phrase macro map](@), this replaces the initial [macro map](@). So, all [form phrase macros](@) that are used within the scope must then appear in the [macro map](@) of that [SAF](@).
-3. If the [configuration file](/docs/specs/files/configuration-file) that is used to call the [TEv2 tool](@) contains a [form phrase macro map](@), the contents of this [macro map](@) overwrites the [macro map](@) that is being constructed. This means that when a [macro map](@) in the [configuration file](/docs/specs/files/configuration-file) contains a [macro](form-phrase-macro@)
+3. If the [configuration file](/docs/specs/files/configuration-file) that is used to call the [TEv2 tool](@) contains a [form phrase macro map](@), the contents of this [macro map](@) overwrites the [macro map](@) that is being constructed. This means that when a [macro map](@) in the [configuration file](/docs/specs/files/configuration-file) contains a [macro](form-phrase-macro@):
     - that doesn't yet exist, it will be added to the [macro map](@);
     - that already exists, it will overwrite the [macro](form-phrase-macro@) that existed;
-    - whose value is `""` (empty), this means that the [macro](form-phrase-macro@) is rendered ineffective (it doesn't do anything)
+    - whose value is `""` (empty), this means that the [macro](form-phrase-macro@) is rendered ineffective (it doesn't do anything).
 
 ## Example
 

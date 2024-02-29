@@ -155,12 +155,12 @@ The same, but now generating the glossary in a table format. We use the [MRGRef]
 ~~~ markdown
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text 2 | - Item 1<br> - Item 2<br> - Item 3 |
+| Regular text 2 | - Item 1<br/> - Item 2<br/> - Item 3 |
 ~~~
 
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text 2 | - Item 1<br> - Item 2<br> - Item 3 |
+| Regular text 2 | - Item 1<br/> - Item 2<br/> - Item 3 |
 
 </TabItem>
 

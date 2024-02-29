@@ -165,6 +165,8 @@ The [MRG](@) file associated with an [MRGRef](@) is found by resolving the [term
 
 Since all [MRGs](@) follow the [MRG naming conventions](/docs/specs/files/mrg#file-naming-conventions), it follows that the [MRG](@) that corresponds with a [terminology identifier](@) is in the file `mrg.<scopetag>.<versiontag>.yaml` in the [glossarydir](@) of the [current scope](@).
 
+If that file does not exist, the [converter](@) that was specified in the argument `con[error]` (or `converter[error]`) is executed, and will replace the [MRGRef](@). This ensures that readers can be provided with an adequate error message, or whatever else the [curators](@) find useful to replace the [MRGRef](@) with.
+
 #### Sorting the [HRG list](@)
 
 The [HRG list](@) contains elements that are assocated with one [MRG entry](@), one [HRG entry](@), and one value that is used for sorting. This value is the result from evaluating (the [handlebars expression](@) specified by) the [sorter](@), using [moustache variables](@) that come from the [converter profile](@) of the [HRGT](@). See [HRG Sorters](#predefined-sorters) for details.

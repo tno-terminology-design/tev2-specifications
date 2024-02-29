@@ -123,13 +123,19 @@ The [MRGRef](@) that is used is `{%` `hrg="" converter="{{#if glossaryNotes}}## 
 
 ## Glossary (Markdown style)
 
-{% hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}" %}
+{% hrg="" converter="{{#if glossaryNotes}}### {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n#### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}" %}
 
 ## Glossary (Table style)
 
+:::info
+The same, but now generating the glossary in a table format. We use the [MRGRef](@):
+
+`{%` `hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}"` `%}`
+:::
+
 | Term | Description |
 | ---- | ----------- |
-{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**<br/>{{#each glossaryNotes}}<br/>- {{this}}{{/each}}{{/if}}{{/if}} |" %}
+| <div style="vertical-align: top;">{{noRefs glossaryTerm}}</div> | {{glossaryText}}{{#if glossaryNotes}}<br/><br/><strong>Notes</strong><ul>{{#each glossaryNotes}}<li>{{this}}</li>{{/each}}</ul>{{/if}} |
 
 </TabItem>
 

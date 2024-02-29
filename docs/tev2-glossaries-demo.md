@@ -16,12 +16,13 @@ This page is evidence that an [HRG](@) can be generated for every [MRG](@) that 
 <Tabs
   defaultValue="default"
   values={[
-    {label: 'TEv2 glossary',             value: 'default'},
-    {label: 'Curated Terms glossary',    value: 'terms'},
-    {label: 'Recent changes glossary',   value: 'recent-changes'},
-    {label: 'Mental Model glossary',     value: 'patterns'},
-    {label: 'Latest eSSIF-Lab glossary', value: 'latest'},
+    {label: 'TEv2 glossary',               value: 'default'},
+    {label: 'Curated Terms glossary',      value: 'terms'},
+    {label: 'Recent changes glossary',     value: 'recent-changes'},
+    {label: 'Mental Model glossary',       value: 'patterns'},
+    {label: 'Latest eSSIF-Lab glossary',   value: 'latest'},
     {label: 'Glossary and Abbrs (inline)', value: 'glossary-and-abbrs'},
+    {label: 'Glossary with Notes',         value: 'glossary-with-notes'},
   ]}>
 
 <TabItem value="default">
@@ -103,6 +104,26 @@ The [MRGRef](@) that is used is `{%` `hrg="" con[1]="markdown-table-row" con[2]=
 | Abbreviation | Refers to |
 | ------------ | --------- |
 {% hrg="" con[1]="markdown-table-row" con[2]="markdown-abbr-table-row" %}
+
+</TabItem>
+
+<TabItem value="glossary-with-notes">
+
+:::info
+This is the [glossary](@) that shows that you can add notes to a glossary entry.\
+For this purpose, we use a custom converter that
+
+1. only creates an entry for MRG entries that have an existing, non-empty `glossaryNotes` field
+2. shows the notes.
+
+We have simplified the handlebars expression so that it becomes easier for readers to focus on what we have been trying to do here.
+
+The [MRGRef](@) that is used is `{%` `hrg="" converter="tbd"` `%}`
+:::
+
+| Abbreviation | Refers to |
+| ------------ | --------- |
+{% hrg="" converter="{{#if glossaryNotes}}### {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n{{glossaryNotes}}\n\n{{/if}}" %}
 
 </TabItem>
 

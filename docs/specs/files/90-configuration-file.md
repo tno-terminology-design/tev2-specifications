@@ -168,8 +168,14 @@ Parameters that are specific to the [hrgt](hrgt@) can be put in the YAML section
 | `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the HRGT. |
 | `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a [predefined type](mrg-ref#predefined-mrgref-interpreters@) (`default`). |
 | `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a [predefined type](hrgt#predefined-converters@) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
-| `sorter: <template> or <predeftype>`      | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a [predefined type](hrgt#predefined-sorters@) ( `default`). |
+| `converter[<n>]: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a [predefined type](hrgt#predefined-converters@) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
+| `converter[error]: <template> or <predeftype>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found.  |
+| `sorter: <template> or <predeftype>` | n | Value to use for sorting, i.e., a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template, or a [predefined type](hrgt#predefined-sorters@) ( `default`). |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
+
+Multiple [converters](@) can be specified, as `converter[1]`, `converter[2]`, etc.
+All [converters](@) that are specified will be executed for every [MRG entry](@)
+in the [MRG](@) for which the [HRG](@) is created.
 
 The `<action>` parameter can take the following values.
 

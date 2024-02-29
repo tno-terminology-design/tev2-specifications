@@ -91,7 +91,7 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
 | `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRGT Converters](#hrgt-converters) for details.  |
-| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to a [HRG list](@) entry in case of an error. This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRGT Converters](#hrgt-converters) for details.  |
+| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
 | `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
@@ -147,6 +147,12 @@ where:
 - `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details.
 - `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details.
 
+:::warning
+If you specify a converter as part of this syntax, that's the only one that will be used.<br/>
+There is currently no provision for having multiple converters in this syntax<br/>
+If you want multiple converters, you MUST use the commandline or a configuration file.
+:::
+
 For completeness, here is the [regex] that defines the `default` [interpreter](@) for the [HRGT](@).
 
 ~~~ regex
@@ -158,6 +164,8 @@ For completeness, here is the [regex] that defines the `default` [interpreter](@
 The purpose of the [HRGT](@) is to allow source texts to contain [MRGRefs](@) that are to be converted into [hrg-lists](@). 
 
 To do that, the [HRGT](@) uses the [interpreter](@) to locate subsequent [MRGRefs](@) in its input files, and for each of them, processes the [named capturing groups](@) that the [interpreter](@) populates. From this, it will attempt to find the [MRG](@) for which a corresponding [HRG](@) is to be generated. When found, it will walk through the [MRG entries](@) in that [MRG](@), and for each of them, populate [moustache variables](@) as specified in the [HRGT](@) [converter profile](@), and use the specified [converter](@) to produce the [HRG entries](@) that will be populating the [hrg-list](@). These [HRG entries](@) will be sorted according to the [sorter](@) that is specified.
+
+Note that when the [HRGT](@) is provided with multiple [converters](@) (which is currently only available through the command-line or a [configuration file](/docs/specs/files/configuration-file))
 
 #### Finding the [MRG](@) associated with an [MRGRef](@) 
 

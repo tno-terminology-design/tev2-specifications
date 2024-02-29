@@ -83,7 +83,7 @@ The same [glossary](@) can be constructed from any other [MRG](@) that contains 
 `{%` `hrg=":patterns" converter="{{#ifValue termType equals="pattern"}}## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n{{/ifValue}}"` `%}`
 :::
 
-{% hrg=":patterns" converter="{{#ifValue termType equals="pattern"}}## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n{{/ifValue}}" %}
+{% hrg=":patterns" converter="{{#ifValue termType equals='pattern'}}## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n{{/ifValue}}" %}
 
 </TabItem>
 

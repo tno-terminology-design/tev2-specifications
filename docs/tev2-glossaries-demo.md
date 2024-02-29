@@ -121,9 +121,7 @@ We have simplified the handlebars expression so that it becomes easier for reade
 The [MRGRef](@) that is used is `{%` `hrg="" converter="tbd"` `%}`
 :::
 
-| Abbreviation | Refers to |
-| ------------ | --------- |
-{% hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n- {{glossaryNotes}}\n\n{{/if}}" %}
+{% hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}" %}
 
 </TabItem>
 

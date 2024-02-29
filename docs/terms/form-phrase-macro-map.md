@@ -10,8 +10,8 @@ glossaryAbbr: Macro Map
 glossaryTerm: Form Phrase Macro Map
 glossaryText: "a list of [form phrase macros](@); these maps are used by tools such as the [MRGT](@) and the [TRRT](@)."
 glossaryNotes:
-- "[Form-phrase macro maps](@) can be specified in the `scope` section of a [SAF](@)" 
-- "[Form-phrase macro maps](@) can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@) and/or [TRRT](@)." 
+- "Form-phrase macro maps can be specified in the `scope` section of a [SAF](@)" 
+- "Form-phrase macro maps can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@) and/or [TRRT](@)." 
 formPhrases: [ "formphrase macro map{ss}", "formphrase macromap{ss}", "form-phrase macro map{ss}", "form-phrase macromap{ss}", "macro map{ss}", "macromap{ss}" ]
 # Curation status
 status: proposed

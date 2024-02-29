@@ -123,7 +123,7 @@ The [MRGRef](@) that is used is `{%` `hrg="" converter="tbd"` `%}`
 
 | Abbreviation | Refers to |
 | ------------ | --------- |
-{% hrg="" converter="{{#if glossaryNotes}}### {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n{{glossaryNotes}}\n\n{{/if}}" %}
+{% hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{glossaryNotes}}\n\n{{/if}}" %}
 
 </TabItem>
 

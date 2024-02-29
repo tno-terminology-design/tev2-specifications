@@ -1027,7 +1027,6 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/glossarydir"
     headingids:
       - "glossarydir"
-      - "summary"
     termid: "concept:glossarydir"
     vsntag: "documentation"
   - id: "glossaryterm"

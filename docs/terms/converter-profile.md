@@ -289,8 +289,17 @@ The helper `regularize` converts the input string into a [regularized text](@), 
 
 ### `localize` {#localize}
 
-The funciton of the helper `localize` is to convert an absolute URL to a relative path within a particular website context, enhancing internal navigation efficiency and consistency.
+The function of the helper `localize` is to convert an absolute URL to a relative path within a particular website context, enhancing internal navigation efficiency and consistency.
 
 The website context is specified by the `website` value of the [MRG](@) in the converter profile.
 
 The helper `localize` parses the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the `host` values (e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the `host` values do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.
+
+### `ifValue` {#ifvalue}
+
+The function of the helper `ifValue` is to test whether a text equals a specific value. This enables us to conditionally have particular texts (or leave such texts out).
+
+```ts title="Examples for 'ifValue'"
+{{#ifValue status equals="deprecated"}}**Warning**: this term is deprecated!{{/ifValue}}
+```
+This sequence outputs the text "**Warning**: this term is deprecated!" when the [MRG entry](@) had a `status` field whose value was `deprecated`.

@@ -77,6 +77,14 @@ The [MRGref](@) that is used is `{%` `hrg=":patterns" converter="## [{{#if gloss
 {% hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
 {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n" %}
 
+:::info
+The same [glossary](@) can be constructed from any other [MRG](@) that contains [entries](mrg-entries@) for each of these [mental models](@), simply by generating empty strings for [MRG entries](@) that do not have `termtype: pattern`. To do this, we use the following [MRGref](@):
+
+`{%` `hrg=":patterns" converter="{{#ifValue termType equals="pattern"}}## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n{{/ifValue}}"` `%}`
+:::
+
+{% hrg=":patterns" converter="{{#ifValue termType equals="pattern"}}## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n{{/ifValue}}" %}
+
 </TabItem>
 
 <TabItem value="latest">

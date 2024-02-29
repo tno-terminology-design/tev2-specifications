@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 # TEv2 Glossary
 
-{% hrg="tev2" converter="## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}} %}
+{% hrg="tev2" converter="## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}" %}
 
 </TabItem>
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 | Abbreviation | Refers to |
 | ------------ | --------- |
-{% hrg="tev2" converter="{{#if glossaryAbbr}}| [{{glossaryAbbr}}]({{localize navurl}}) | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" sorter="{{glossaryAbbr}}" %}
+{% hrg="tev2" converter="{{#if glossaryAbbr}}| {{glossaryAbbr}} | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" sorter="{{glossaryAbbr}}" %}
 
 </TabItem>
 

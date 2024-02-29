@@ -218,6 +218,7 @@ entries:
       - "`norefs`"
       - "regularize"
       - "localize"
+      - "ifvalue"
     termid: "concept:converter-profile"
     vsntag: "terms"
   - id: "corpus"

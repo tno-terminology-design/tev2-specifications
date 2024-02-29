@@ -135,8 +135,7 @@ The same, but now generating the glossary in a table format. We use the [MRGRef]
 
 | Term | Description |
 | :--- | :---------- |
-{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**\n\n<ul>{{#each glossaryNotes}}\n<li>{{this}}</li>{{/each}}\n</ul>{{/if}} |\n{{/if}}" %}
-
+{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**<br/><br/><ul>{{#each glossaryNotes}}<li>{{this}}</li>{{/each}}<br/></ul>{{/if}} |\n{{/if}}" %}
 
 ## Table style test 1
 

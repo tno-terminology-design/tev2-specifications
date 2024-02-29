@@ -128,7 +128,7 @@ In this phase, for every [terminology](@) version that is to be created, one [pr
 - all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
 - all fields in the [MRG entry](@) that comes from another [MRG](@) (typically, but not necessarily, from another [scope](@)).
 
-#### Creatinga provisional MRG
+#### Creating a provisional MRG
 
 Creating a provisional MRG starts with an empty set of [MRG entries](@) - we use the term "[provisional MRG](@)" to refer to this set.
 
@@ -146,12 +146,16 @@ Then, the list of [term selection instructions](@) as specified in the appropria
 
 #### Processing FormPhrases
 
-After all [instructions](term selection instructions@) have been processed, the [provisional MRG entry](@) is complete. However, the `formPhrases` field of every [MRG entry](@) needs to be processed, which means that every element in that set (array) is subjected to the following processing steps:
+[Form phrases](@) that are specified in a [curated text](@) may include uppercase characters, special characters, spaces etc., all of which make their use by tools cumbersome. In order to make it easier for [TEv2 tools](@) to use them, they need to be converted into [regularized form phrases](@).
 
-1. if the element contains contains a [form phrase macro](@), it is replaced by a set of [form phrases](@) that is constructed by processing that [form phrase macro](@) - see [Form Phrase Macro Expansion](form-phrase-macro#expansion-process@) for the details and examples. This step effectively enlarges the set (array) of [form phrases](@).
-2. the resulting [form phrases](@) are then [regularized](regularized-text#regularization-process@) to become [regularized form phrases](@).
+Converting the set of [form phrases](@) (as specified in the `formPhrases` field from a [curated text](@)) into [regularized form phrases](@) (for storage in an [MRG entry](@)) is done as follows: 
 
-The result is a set of [regularized form phrases](@), which is then used to produce the `formPhrases` field in the [MRG entry](@).
+1. every [form phrase](@) (in the set of [form phrases](@)) that contains a [form phrase macro](@), is replaced with one or more [form phrases](@) that are the result of processing that [macro](form-phrase-macro@) - see [Form Phrase Macro Expansion](form-phrase-macro#expansion-process@) for the details and examples.
+2. as a single [form phrase](@) may contain multiple [macros](form-phrase-macro@), step 1 must be repeated until all [macros](form-phrase-macro@) are processed and the set of [form phrases](@) no longer contains any [macro](form-phrase-macro@).
+3. all [form phrases](@) in the resulting set are now [regularized](regularized-text#regularization-process@), i.e., turned into [regularized form phrases](@).
+4. a [regularized form phrases](@) is added, the value of which is the same as the value of the `term` field of the [curated text](@). Thus, [tools](tev2-tool@) that work with [form phrases](regularized form phrase@) from [MRG entries](@) can find all forms, including that of the [term](@) itself, as an element in the `formPhrases` field of the [MRG entry](@).
+5. finally, the resulting set of [regularized form phrases](@) is pruned, such that every [regularized form phrase](@) appears only once in the end result.
+6. this end-result is then written into the `formPhrases` field of the [MRG entry](@).
 
 :::tip
 An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same element in their `formPhrases` field, because that would mean that the form phrase is ambiguous, as it refers to two different [semantic units](@).

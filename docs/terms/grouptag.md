@@ -33,4 +33,4 @@ The [terminology pattern](pattern:terminology@) provides an overview of how this
 A **Grouptag** (of/within a [scope](@)) is a [tag](@) that is used within that [scope](@) to group [terms](@). It satisfies the [regex](@) `[a-z0-9_-]+`.
 
 ### Examples
-Examples of grouptags are `meta-terms`, `governance-terms`, `paa-pattern-terms`, `essiflab`, or `ctwg`
+Examples of grouptags are `meta-terms`, `governance-terms`, `paa-pattern-terms`, `essif-lab`, or `ctwg`

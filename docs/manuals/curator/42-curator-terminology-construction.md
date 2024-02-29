@@ -39,7 +39,7 @@ scope:
 ...
 scopes:
 
-- scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+- scopetag: essif-lab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
 - scopetag: tev2 # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
   scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs # URL of the scope-directory
@@ -51,7 +51,7 @@ versions:
   - vsntag: v1.0.3 # a versiontag that identifies this version from all other versions in the SAF
     altvsntags: [ latest ] 
     termselection:
-      - "*@essiflab" # import all terms from the MRG linked to by `mrg.essiflab.yaml`
+      - "*@essif-lab" # import all terms from the MRG linked to by `mrg.essif-lab.yaml`
       - "-grouptags[terminology]" # then, remove all terms tagged with the grouptag `terminology`
       - "*" # then, include all terms defined by a curated text in the current scope
 ~~~

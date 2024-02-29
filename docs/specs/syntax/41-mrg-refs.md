@@ -29,7 +29,7 @@ where
 - `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
 - `converter="<converter>"` specifies the [converter](@) that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
 - `<converter>` is a text that specifies either: 
-    - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essiflab`;
+    - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essif-lab`;
     - a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
 - `sorter="<sorter>"` specifies the [sorter](@) that is to be used for sorting the glossary entries. If it isn't specified as part of the [MRGRef](@), it is derived from the command-line parameter, or the a value in the configuration file that the [HRGT](@) uses. If neither is specified, it defaults to `default`.
 - `<sorter>` is a text that specifies either: 
@@ -173,7 +173,7 @@ sidebar_label: Glossary
 
 # Glossary
 
-{% hrg="essiflab" converter="markdown-section-3" %}
+{% hrg="essif-lab" converter="markdown-section-3" %}
 
 ---
 Here endeth the glossary.
@@ -206,7 +206,7 @@ Note that this is a simple Handlebars expression, that is not very robust agains
 
 ---
 
-Under the assumption that the [terminology identifier](@) `essiflab` refers to a [terminology](@) (and associated [MRG](@)) that holds [definitions](@) for the [terms](@) `Glossary`, `Curator` and `Definition`, the result could e.g., look something like this:
+Under the assumption that the [terminology identifier](@) `essif-lab` refers to a [terminology](@) (and associated [MRG](@)) that holds [definitions](@) for the [terms](@) `Glossary`, `Curator` and `Definition`, the result could e.g., look something like this:
 
 ~~~ markdown
 ---

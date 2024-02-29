@@ -155,13 +155,13 @@ If a [configuration file](/docs/specs/files/configuration-file) is used, the lon
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) [configuration file](/docs/specs/files/configuration-file). |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Converters](#trrt-interpreters) for details. |
+| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Interpreters](#trrt-interpreters) for details. |
 | `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
 | `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | Display help for command. |
 
-[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[1]`.
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template1>` `converter[2]: <template2>`, where `<template<n>>` is a predefined converter or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). You MUST specify `converter[1] <template1>` (or `converter <template1>`, which is equivalent). You MAY specify one or more `converter[<n>]`s, where `<n>` is any number. The [TRRT](@) keeps track of the number of times a [TermRef](@) was used for some [termid](@). When the [TRRT](@) converts a [TermRef](@) for a particular [termid](@) for the `<n>`th time, it will use the converter as specified in parameter `converter[<n>]`, or, if that does not exist, it will use the converter that it used for the `<n-1>`th conversion.
 
 ```mdx-code-block
 </APITable>
@@ -286,6 +286,16 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
 
 Perhaps the [TRRT](@) may use this tool as a means for generating the `term` field from the `showtext` if necessary. However, we would need to first experiment with that to see whether or not, c.q. to what extent this conversion does what it is expected to do.
 :::
+
+#### Using Multiple Converters {#trrt-converters}
+
+The [TRRT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones. When specifying multiple [converters](@) they should be numbered, e.g., as in `converter[1]`, `[converter[2]`, etc. The [section on calling parameters](#calling-the-tool) tells you how such [converters](@) are to be specified.
+
+The [TRRT](@) keeps track of the number of times a [TermRef](@) is referring to particular [semantic units](@) (i.e., when it resolves to a particular [termid](@)). So for every [TermRef](@) it converts within a file that it is processing, there is a number `<n>` (that the [TRRT](@) keeps track of) that says that this is the `<n>`th time that the [semantic unit](@) is being referred to. 
+
+So for `<n>`=1, the [TRRT](@) uses `converter[1]`. When `<n>`=`<m>` (`<m>`>`<n>`), then the [TRRT](@) uses `converter[<m>]` if that were specified. If it wasn't specified it uses the [converter](@) that it used for `<n>`=`<m>`-1.
+
+So, if you want to use an elaborate conversion for the first occurrence of a [term](@) in your document, and a simpler conversion for any of the following ones, you should specify `converter[1]` as the [converter](@) that does the elaborate things, and `converter[2]` as one that does the simpler conversions.
 
 ### TRRT Converter Profile {#converter-profile}
 

@@ -135,7 +135,7 @@ The same, but now generating the glossary in a table format. We use the [MRGRef]
 
 | Term | Description |
 | :--- | :---------- |
-{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**\n\n<ul>{{#each glossaryNotes}}\n<li>{{this}}</li>{{/each}}\n</ul>{{/if}} |\n{{/if}}
+{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**\n\n<ul>{{#each glossaryNotes}}\n<li>{{this}}</li>{{/each}}\n</ul>{{/if}} |\n{{/if}}" %}
 
 
 ## Table style test 1
@@ -143,24 +143,24 @@ The same, but now generating the glossary in a table format. We use the [MRGRef]
 ~~~ markdown
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text   | <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul> |
+| Regular text 1 | <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul> |
 ~~~
 
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text   | <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul> |
+| Regular text 1 | <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul> |
 
 ## Table style test 2
 
 ~~~ markdown
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text   | - Item 1<br> - Item 2<br> - Item 3 |
+| Regular text 2 | - Item 1<br> - Item 2<br> - Item 3 |
 ~~~
 
 | Header 1       | Header 2       |
 | -------------- | -------------- |
-| Regular text   | - Item 1<br> - Item 2<br> - Item 3 |
+| Regular text 2 | - Item 1<br> - Item 2<br> - Item 3 |
 
 </TabItem>
 

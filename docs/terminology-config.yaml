@@ -15,8 +15,8 @@ mrgt:
 ## Human Readable Glossary Tool
 hrgt:
   interpreter: default           # `default` (default), or regex
-  converter[1]: markdown-section-3  # `markdown-table-row, `markdown-section-2`, `markdown-section-3` or moustache/handlebars template
-  converter[2]: markdown-abbr-section-3  # add HRG-entries for abbreviations (i.e. that have a non-empty `glossaryAbbr` field)
+  converter[1]: "## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}"
+  converter[2]: markdown-abbr-section-2  # add HRG-entries for abbreviations (i.e. that have a non-empty `glossaryAbbr` field)
   input:                         # glob pattern for files to be processed
     - "tev2-glossary.md"
     - "tev2-glossaries-demo.md"

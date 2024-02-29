@@ -110,7 +110,7 @@ The [MRGRef](@) that is used is `{%` `hrg="" con[1]="markdown-table-row" con[2]=
 <TabItem value="glossary-with-notes">
 
 :::info
-This is the [glossary](@) that shows that you can add notes to a glossary entry.\
+This is the [glossary](@) that shows that you can add notes to a glossary entry.
 For this purpose, we use a custom converter that
 
 1. only creates an entry for MRG entries that have an existing, non-empty `glossaryNotes` field
@@ -118,10 +118,18 @@ For this purpose, we use a custom converter that
 
 We have simplified the handlebars expression so that it becomes easier for readers to focus on what we have been trying to do here.
 
-The [MRGRef](@) that is used is `{%` `hrg="" converter="tbd"` `%}`
+The [MRGRef](@) that is used is `{%` `hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}"` `%}`
 :::
 
+## Glossary (Markdown style)
+
 {% hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}" %}
+
+## Glossary (Table style)
+
+| Term | Description |
+| ---- | ----------- |
+{% hrg="" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**<br/>{{#each glossaryNotes}}<br/>- {{this}}{{/each}}{{/if}}{{/if}} |" %}
 
 </TabItem>
 

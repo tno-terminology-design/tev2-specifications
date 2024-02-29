@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Glossary, Abbreviations
+# Glossary and Abbreviations List
 
 <Tabs
   defaultValue="glossary"
@@ -22,8 +22,7 @@ import TabItem from '@theme/TabItem';
 
 # TEv2 Glossary
 
-{% hrg="tev2" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**\n\n<ul>{{#each glossaryNotes}}\n<li>{{this}}</li>{{/each}}\n</ul>{{/if}} |\n{{/if}}" %}
-" %}
+{% hrg="tev2" converter="## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}} %}
 
 </TabItem>
 
@@ -33,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 | Abbreviation | Refers to |
 | ------------ | --------- |
-{% hrg="" converter="{{#if glossaryAbbr}}| [{{glossaryAbbr}}]({{localize navurl}}) | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" %}
+{% hrg="tev2" converter="{{#if glossaryAbbr}}| [{{glossaryAbbr}}]({{localize navurl}}) | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@) |\n{{/if}}" sorter="{{glossaryAbbr}}" %}
 
 </TabItem>
 

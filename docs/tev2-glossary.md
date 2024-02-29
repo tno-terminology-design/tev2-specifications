@@ -22,7 +22,8 @@ import TabItem from '@theme/TabItem';
 
 # TEv2 Glossary
 
-{% hrg="tev2" %}
+{% hrg="tev2" converter="{{#if glossaryNotes}}| {{noRefs glossaryTerm}} | {{glossaryText}}{{#if glossaryNotes}}<br/><br/>**Notes**\n\n<ul>{{#each glossaryNotes}}\n<li>{{this}}</li>{{/each}}\n</ul>{{/if}} |\n{{/if}}" %}
+" %}
 
 </TabItem>
 

@@ -166,11 +166,11 @@ Parameters that are specific to the [hrgt](hrgt@) can be put in the YAML section
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
 | `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the HRGT. |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a [predefined type](/docs/specs/syntax/mrg-refs#predefined-mrgref-interpreters@) (`default`). |
-| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-converters@) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
-| `converter[<n>]: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-converters@) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
+| `interpreter: <regex> or <predeftype>`  | n | Type of [MRGRef](@) interpreter, i.e., a [(PCRE) regex](https://www.debuggex.com/cheatsheet/regex/pcre), or a [predefined type](/docs/specs/syntax/mrg-refs#predefined-mrgref-interpreters) (`default`). |
+| `converter: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-converters) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
+| `converter[<n>]: <template> or <predeftype>` | n | Type of [MRGRef](@) converter, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-converters) ( `markdown-table-row`, `markdown-section-2`, `markdown-section-3`). |
 | `converter[error]: <template> or <predeftype>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found.  |
-| `sorter: <template> or <predeftype>` | n | Value to use for sorting, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-sorters@) ( `default`). |
+| `sorter: <template> or <predeftype>` | n | Value to use for sorting, i.e., a [handlebars template](@), or a [predefined type](/docs/specs/tools/hrgt#predefined-sorters) ( `default`). |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 Multiple [converters](@) can be specified, as `converter[1]`, `converter[2]`, etc.
@@ -196,8 +196,9 @@ Parameters that are specific to the [TRRT](trrt@) can be put in the YAML section
 | :------------------------------ | :---: | :---------- |
 | `output: <dir>`                   | Y | (Root) directory for output files to be written. |
 | `input: <glob-pattern>`           | Y | Glob pattern string for files to be processed by the TRRT. |
-| `interpreter: <regex> or <predeftype>`  | n | Type of [TermRef](@) interpreter, i.e., a [regex](@), or a [predefined type](/docs/specs/tools/trrt#predefined-interpreters@). |
-| `converter[n]: <template> or <predeftype>`[^1] | n | Type of [TermRef](@) converter, i.e., a [handlebars template](@) template, or a [predefined type](/docs/specs/tools/trrt#predefined-converters@))(`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). |
+| `interpreter: <regex> or <predeftype>`  | n | Type of [TermRef](@) interpreter, i.e., a [regex](@), or a [predefined type](/docs/specs/tools/trrt#predefined-interpreters). |
+| `converter[n]: <template> or <predeftype>`[^1] | n | Type of [TermRef](@) converter, i.e., a [handlebars template](@) template, or a [predefined type](/docs/specs/tools/trrt#predefined-converters))(`markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`). |
+| `converter[error]: <template> or <predeftype>` | n | Specifies the [converter](@) to be used to replace the [TermRef](@) with in case the associated [MRG entry](@) could not be found.  |
 | `force: <bool>`                   | n | If `<bool>` is `true`, allow files in the output directory to be overwritten. If `<bool>` is `false` or unspecified, output files will not overwrite existing files. |
 
 [^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` is the [termid](@) occurrence count from which to start using a specific converter during resolution of a file. Using `converter`, without a number, is equal to using `converter[0]`

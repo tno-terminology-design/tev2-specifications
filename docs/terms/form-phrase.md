@@ -37,7 +37,7 @@ formPhrases: [ "actor", "actors", "actor's", "actor(s)", "human actor", "machine
 
 This specifies that whenever a [TermRef](@) is being converted by the [TRRT](@), and the `showtext` or the `term` parts of that [TermRef](@) are any of these [formPhrases](@), then the [TermRef](@) refers to the [semantic unit](@) that is documented by that [curated text](@). 
 
-Note that the specification of a [form phrase](@) may include a [form-phrase-macro](@), for which several are [predefined](form-phrase macro#predefineds@). The example below is the equivalent specification as above:
+Note that the specification of a [form phrase](@) may include a [form-phrase-macro](@), for which several are [predefined](/docs/terms/form-phrase-macro#predefineds@). The example below is the equivalent specification as above:
 
 ~~~ yaml
 formPhrases: [ "actor{ss}", "human actor", "machine actor" ]

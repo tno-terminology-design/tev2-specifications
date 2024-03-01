@@ -14,6 +14,8 @@ import TabItem from '@theme/TabItem';
 
 In order to facilitate the writing and use of [converters](@), a number of [handlebars helper functions](@) are available in the context of [TEv2](@), that extend the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html) of [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars). 
 
+Helper functions would typically use variables as defined in the [converter profile object](converter-profile#object@) for the [TEv2 tool](@) that they are used in.
+
 Helper functions can be used within [handlebars expressions](@). Their input is the evaluated value of the expression that follows the call, possibly with extra options.
 
 ```ts title="helper function syntax format"

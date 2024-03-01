@@ -25,7 +25,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 ### Summary
 A **Definition** is the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). The quality of a definition is the extent in which [parties](@) can use it to actually demonstrate that they have the same understanding.
 
-The problem that definitions (as we see them) contribute to solving is misunderstandings that may arise as every [party](@) has its own [knowledge](@) and autonomously determines the [semantics](@) it uses to express itself in texts/speech/pictures, and interpret that of other parties. The fact that the semantics of parties is subjective makes it realistic to assume that the meaning that a party intends to convey as it expresses itself is not the same as how another party interprets that expression - a 'misunderstanding'.
+The problem that definitions (as we see them) contribute to solving is misunderstandings that may arise as every [party](@) has its own [knowledge](@essif-lab) and autonomously determines the [semantics](@) it uses to express itself in texts/speech/pictures, and interpret that of other parties. The fact that the semantics of parties is subjective makes it realistic to assume that the meaning that a party intends to convey as it expresses itself is not the same as how another party interprets that expression - a 'misunderstanding'.
 
 All parties have learned, with varying degrees of sophistication, to identify misunderstandings, and ways to recover from that.
 
@@ -33,7 +33,7 @@ A common mechanism for reducing the likelihood of misunderstandings to occur, is
 
 Therefore, we insist that such texts
 
-- are associated with a [scope](@) within which they are considered to be valid/useful (for the [objectives](@) that [parties](@) pursue in that [scope](@));
+- are associated with a [scope](@) within which they are considered to be valid/useful (for the [objectives](@essif-lab) that [parties](@) pursue in that [scope](@));
 - are phrased as a [criterion](https://www.lexico.com/definition/criterion) that every such [party](@) can evaluate so as to determine whether or not something qualifies to be referred to by that term.
 The quality of such texts is the extent in which parties reach the same conclusion as they evaluate the criterion in an arbitrary use-case that is relevant for the scope.
 
@@ -48,7 +48,7 @@ Working together is easier when you and your peers share the same ideas. We need
 ### Criteria
 A **definition** is a text that comprises at a minimum:
 
-- a [scope](@) that is [curated](@) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@);
+- a [scope](@) that is [curated](@) by a [party](@), and that is related to (the pursuit of) a non-empty set of [objectives](@essif-lab);
 - a [criterion](https://www.lexico.com/definition/criterion) that specifies the necessary and sufficient conditions for determining what does and what does not constitute some [concept](@) (idea, class of [entities](@));
 - a [name or phrase](term@) that is used within the [scope](@) to refer to (unidentified, or arbitrary, or specific) [entities](@) that satisfy the criterion.
 

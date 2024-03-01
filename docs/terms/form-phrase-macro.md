@@ -7,7 +7,7 @@ term: form-phrase-macro
 termType: concept
 isa:
 glossaryTerm: "Form Phrase Macro"
-glossaryText: "a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
+glossaryText: "a sequence of characters (the macro name) that identifies a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
 formPhrases: [ "formphrase macro{ss}", "form-phrase macro{ss}" ]
 # Curation status
 status: proposed
@@ -21,7 +21,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Form Phrase Macro
 
-A **Form Phrase Macro** is a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc.
+A **Form Phrase Macro** is a sequence of characters (the macro name) that identifies a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc.
 
 For example, when the macro `{ss}` is used in a [form phrase](@) specification `"actor{ss}"`, or `act`, this is a shorthand for the set `"actor", "actors", "actor's", "actor(s)"`, or the set `"act", "acts", "act's", "act(s)"` respectively.
 

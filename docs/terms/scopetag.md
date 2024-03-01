@@ -7,7 +7,7 @@ term: scopetag
 termType: concept
 isa: tag
 glossaryTerm:
-glossaryText: "a [tag](@) that is used to [identify](@) [scopes](@) from within a specific [scope](@)"
+glossaryText: "a [tag](@) that is used to identify [scopes](@) from within a specific [scope](@)"
 grouptags: [ ]
 formPhrases: [ "scopetag{ss}", "scope-tag{ss}" ]
 # Curation status
@@ -23,14 +23,14 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Scopetag
 
 ### Summary
-A **Scopetag** is a [tag](@) that is used to [identify](@) [scopes](@), e.g. in [TermRefs](@).
+A **Scopetag** is a [tag](@) that is used to identify [scopes](@), e.g. in [TermRefs](@).
 
-Scopetags [identify](@) a [scope](@) (from within a given [scope](@)), and hence can be used (within that given [scope](@)) to disambiguate [terms](@).
+Scopetags identify a [scope](@) (from within a given [scope](@)), and hence can be used (within that given [scope](@)) to disambiguate [terms](@).
 
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
 ### Criteria
-A **Scopetag** (of/within a [scope](@)) is a [tag](@) that is used within that [scope](@) to [identify](@) itself or other [scopes](@). It satisfies the [regex](@) `[a-z0-9_-]+`.
+A **Scopetag** (of/within a [scope](@)) is a [tag](@) that is used within that [scope](@) to identify itself or other [scopes](@). It satisfies the [regex](@) `[a-z0-9_-]+`.
 
 ### Examples
 Examples of scopetags are `essif-lab`, `toip`, or `ctwg`.

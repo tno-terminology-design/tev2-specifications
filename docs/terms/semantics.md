@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Semantics
 
 ### Summary
-We use the term **semantics** to refer to the mapping between (tangible) [terms](@) and (intangible) [concepts](@) (their meaning, the ideas behind it). Semantics are scoped, i.e. every [scope](@) has its own semantic mapping. This implies that every [party](@) has - and maintains - its own (subjective) semantics, which is its subjective mapping of a set of terms onto the concepts/ideas in its [knowledge](@). The (erroneous) assumption that [parties](@) would (automagically) share a semantics is the cause of many misunderstandings, and hence should be identified and deleted as soon as possible.
+We use the term **semantics** to refer to the mapping between (tangible) [terms](@) and (intangible) [concepts](@) (their meaning, the ideas behind it). Semantics are scoped, i.e. every [scope](@) has its own semantic mapping. This implies that every [party](@) has - and maintains - its own (subjective) semantics, which is its subjective mapping of a set of terms onto the concepts/ideas in its [knowledge](@essif-lab). The (erroneous) assumption that [parties](@) would (automagically) share a semantics is the cause of many misunderstandings, and hence should be identified and deleted as soon as possible.
 
 In the [terminology pattern](pattern:terminology@), the [relation](@) `refers to` from [scoped term](@) to [concept](@) represents the semantics of [scoped terms](@).
 

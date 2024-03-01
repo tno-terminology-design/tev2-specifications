@@ -43,7 +43,7 @@ where:
 - `termType` (optional) is a [term type](@). When not specified, it is given the default type for [semantic units](@) in the [current scope](@), which usually would be `concept`.
 - `term` (optional) is a [term](@). If not specified, its value is constructed based on the value of `showtext`, as specified in the [TRRT](trrt#id@).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). If specified, it must be the [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic. If not specified it refers to the whole of (the documentation of) the [semantic unit](@).
-- `terminology-identifier` is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
+- `terminology-identifier` is a [terminology identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).
 
 ### Examples
 
@@ -59,7 +59,7 @@ This [TermRef](@) refers to the [semantic unit](@) that is identified by the [te
 The par
 
 
- that [identifies](@) the [terminology](@) in which `termid` [identifies](@) a [semantic unit](@).
+ that identifies the [terminology](@) in which `termid` identifies a [semantic unit](@).
 
 Here is an example of a [TermRef](@): `[definitions](definition@)`. When this text is rendered into a human readable form, it will show the text `definitions` (plural) enhanced, and it will link to the text that describes (or defines) the term `definition` (singular). If you would want to use this term as it is defined in the [scope](@) called `essif-lab`, you could do that by writing `[definitions](definition@essif-lab)` (provided that `essif-lab` is a defined [scopetag](@) within the [scope](@) that you operate in).
 

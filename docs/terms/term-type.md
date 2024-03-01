@@ -7,7 +7,7 @@ term: term-type
 termType: concept
 isa: identifier
 glossaryTerm: Term Type
-glossaryText: "a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
+glossaryText: "a [text](identifier@) that identifies a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
 grouptags: [ ]
 formPhrases: [ "term-type{ss}", "termtype{ss}" ]
 # Curation status
@@ -22,7 +22,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Term Type
 
-A **Term Type** is an [identifier](@) that is used to [identify](@) a particular *kind* of [semantic unit](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`).
+A **Term Type** is an identifier that is used to identify a particular *kind* of [semantic unit](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`).
 
 The ability to specify a [term type](@) as part of a [term](@) mimics the common practice of disambiguating semantically overloaded [terms](@). With in the context of [TEv2](@), this is currently not used.
 

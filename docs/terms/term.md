@@ -7,7 +7,7 @@ term: term
 termType: concept
 isa: identifier
 glossaryTerm:
-glossaryText: "a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@) (in some [scope](@))."
+glossaryText: "a word or phrase (i.e.: text) that is used to represent (identify) a specific [semantic unit](@) (in some [scope](@))."
 grouptags: [ ]
 formPhrases: [ "term{ss}", "word{ss}", "phrase{ss}" ]
 # Curation status
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Term
 
 ### Summary
-A **Term** is a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@), e.g. a [concept](@), [relation](@) or [mental model](@), in a particular [scope](@):
+A **Term** is a word or phrase (i.e.: text) that is used to represent (identify) a specific [semantic unit](@), e.g. a [concept](@), [relation](@) or [mental model](@), in a particular [scope](@):
 
 - a single [term](@) may (and typically does) have different meanings ([semantics](@)) in different [scopes](@)/contexts. For example, in the context of a beauty-salon, the term 'nail' has a different meaning than in the context of constructing buildings.
 - different [terms](@) (in the same, or different [scopes](@)/contexts) may have the same meaning (i.e. represent the same [concept](@) ([synonymity](https://en.wikipedia.org/wiki/Synonym), [alias](https://www.merriam-webster.com/dictionary/alias)).
@@ -42,7 +42,7 @@ Understanding words or phrases uttered by others requires that we are able to 't
 
 ### Criteria
 
-A term is a word or phrase (i.e.: text) that is used in at least one [scope](@)/context, in each of which it represents (and [identifies](@))) one specific [semantic unit](@) that is part of the [knowledge](@) of the [community](@) that [owns](@) that [scope](@).
+A term is a word or phrase (i.e.: text) that is used in at least one [scope](@)/context, in each of which it represents (and identifies)) one specific [semantic unit](@) that is part of the [knowledge](@essif-lab) of the [community](@) that [owns](@essif-lab) that [scope](@).
 
 ### Notes
 

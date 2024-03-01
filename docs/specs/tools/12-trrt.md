@@ -199,8 +199,8 @@ The [interpreter profile](@) of the [TRRT](@) consist of the following [named ca
 | `type`      | n | The [term type](@) of the [semantic unit](@) that is referred to. |
 | `term`      | n | The [term](@) of the [semantic unit](@) that is referred to. |
 | `trait`     | n | A text that is expected to correspond with one of the `headingids` in the [MRG entry](@) of the [semantic unit](@) that is referred to. |
-| `scopetag`  | n | The [scopetag](@) that [identifies](@) the [scope](@) that [curates](@) the [semantic unit](@) that is referred to. |
-| `vsntag`    | n | A [versiontag](@) that [identifies](@) the [terminology](@) that contains the [semantic unit](@) that is referred to. |
+| `scopetag`  | n | The [scopetag](@) that identifies the [scope](@) that [curates](@) the [semantic unit](@) that is referred to. |
+| `vsntag`    | n | A [versiontag](@) that identifies the [terminology](@) that contains the [semantic unit](@) that is referred to. |
 
 :::info
 Note that the values of these specified [capturing groups](@) will be [regularized](regularize@) before they are used for [processing](#processing).
@@ -218,7 +218,7 @@ The most general form of the `default` [interpreter](@) syntax is:
 
 where: 
 - `show text` (required) is the text that will be highlighted/emphasized to indicate it is linked. It must not contain the characters `@` or `]` (this is needed to distinguish [TermRefs](@) from regular [markdown links](https://www.markdownguide.org/basic-syntax/#links)).
-- `termType` (optional) is a [term type](@). It need not be specified if the `term` field is (already) a unique [identifier](@) for the [semantic unit](@) that is being refered to.
+- `termType` (optional) is a [term type](@). It need not be specified if the `term` field is (already) a unique identifier for the [semantic unit](@) that is being refered to.
 - `term` (optional) is a [term](@). It need not be specified if the [term](@) can be derived from the `showtext`, as specified in the section on [Finding an MRG Entry](#finding-mrg-entry) (bullet 2.ii).
 - `trait` (optional) refers to a particular characteristic of the [semantic unit](@). It need not be specified if the reference is not to a particular characteristic. If it is specified, it must be a [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) of the section in the [body](@) of a [curated text](@) that describes the characteristic.
 - `scopetag`:`vsntag` (optional) is a [terminology-identifier](@). If not specified, its value is taken to be the default [terminology](@) of the [current scope](@).

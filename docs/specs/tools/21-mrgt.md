@@ -166,7 +166,7 @@ An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same elem
 When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopetag>.<vsntag>.yaml` is constructed, where:
 
 - `<scopetag>` is the [scopetag](@) that is used within the [current scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [`scope` section](docs/specs/files/saf#terminology) of the [SAF](@).
-- `<vsntag>` is the [versiontag](@) that [identifies](@) the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated.
+- `<vsntag>` is the [versiontag](@) that identifies the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated.
 
 If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
 

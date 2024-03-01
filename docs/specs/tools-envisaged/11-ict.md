@@ -132,7 +132,7 @@ The columns in the following table are defined as follows:
 | `scopedir` | `<path>` | Y | * | Path to the [scopedir](@) within which the tool is to operate, i.e.: _this scopedir_. |
 | `syntax` | | n | * | This argument has no value. If present, the syntax of all (YAML) fields in the file is checked against their specifications (see e.g. [SAF specs](docs/specs/files/saf), [Curated Texts](/docs/specs/files/curated-text-file), [TermRefs](/docs/specs/syntax/term-refs)), etc., etc. |
 | `vsntag` | `<vsntag>` | | `-mrg` | [versiontag](@) that is used to select the version of the [MRG](@) to be checked. The [MRG](@) that is selected will either have `<vsntag>` as the contents of the field `terminology.vsntag`, or as an element in the list of `terminology.altvsntags`.  |
-| `term` | `<term>` | n | -txt | [term](@) that [identifies](@) a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
+| `term` | `<term>` | n | -txt | [term](@) that identifies a particular [curated file](@). The [curated file](@), whose (front-matter) field `term` matches this parameter, will be integrity-checked. |
 | `grouptags` | `<grouptags>` | n | -txt | List of [grouptags](@). Every [curated file](@), whose (front-matter) field `grouptags` has an element that also appears as an element in the `<grouptags>` list, will be integrity-checked. |
 
 ## Integrity Checks

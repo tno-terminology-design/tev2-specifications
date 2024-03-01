@@ -7,7 +7,7 @@ term: corpus
 termType: concept
 isa:
 glossaryTerm:
-glossaryText: "the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@)."
+glossaryText: "the documentation that describes the [knowledge](@essif-lab) around a set of [terms](@) and [concepts](@)."
 grouptags: [ ]
 formPhrases: [ "corpus", "corpora", "corpus-of-terminology", "corpus-of-a-terminology", "terminology corpus" ]
 # Curation status
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Corpus
 
 ## Short Description
-The **Corpus** or **Corpus of Terminology** is the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@). It is typically governed by conventions that are specified by a group of [terms communities](@), such as [TOIP's Concepts and Terminology Working Group](https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700).
+The **Corpus** or **Corpus of Terminology** is the documentation that describes the [knowledge](@essif-lab) around a set of [terms](@) and [concepts](@). It is typically governed by conventions that are specified by a group of [terms communities](@), such as [TOIP's Concepts and Terminology Working Group](https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700).
 
 The [terminology pattern](pattern:terminology@) relates this concept with other terminological [concepts](@).
 

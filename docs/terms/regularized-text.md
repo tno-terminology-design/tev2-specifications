@@ -37,7 +37,7 @@ A **Regularized Text** is a character string that starts with a lowercase charac
 ## Use of Regularized Texts within [TEv2](@)
 
 Within [TEv2](@), [regularized texts](@) are used:
-- to construct more complex [identifiers](@) such as [term refs](@), [term ids](@), [terminology identifiers](@), URLs, etc.
+- to construct more complex identifiers such as [term refs](@), [term ids](@), [terminology identifiers](@), URLs, etc.
 - as a class of texts, with members such as `termType`, `term`, `grouptags`, and `scopetag`.
 - to represent [form phrases](@) in [MRG entries](@) (note that the `formPhrases` field of [curated texts](@) do not typically contain [regularized texts](@))
 - etc.

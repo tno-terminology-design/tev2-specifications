@@ -36,4 +36,4 @@ The [MRGT](@) interprets the [term selection instructions](@) in the sequence in
 ## Notes
 
 - Term selection instructions are essential for ensuring that the terminological assets in a scope are relevant, accurate, and comprehensive.
-- Curators use term selection instructions to tailor the terminology to the specific needs and [objectives](@) of the community or project.
+- Curators use term selection instructions to tailor the terminology to the specific needs and [objectives](@essif-lab) of the community or project.

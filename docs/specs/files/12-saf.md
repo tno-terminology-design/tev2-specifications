@@ -64,7 +64,7 @@ The following fields are defined for the `scope` section of a [SAF](@):
 | `scopedir`    | Y | URL of the location of the [scopedir](@) associated with the [scopetags](@) listed in the `scopetags` field. |
 | `curatedir`   | Y | Path to the directory where all [curated files](@) are located. This directory may contain subdirectories to allow [curators](@) to organize the files in any way they see fit. Full URL is `<scopedir>`/`<curatedir>`. `curatedir` may also be an empty string. |
 | `glossarydir` | Y | Path to the directory where all [glossary](@)-related files are located. Full URL is `<scopedir>`/`<glossarydir>`. This directory SHOULD contain one [MRG](@) for every element in the version-section in the [SAF](@). It MAY contain other files, e.g. [HRGs](@) or [HRG](@) templates, files that contain instructions, headers, footers or other things that are necessary for generating specific [glossaries](@). |
-| `defaultvsn`  | Y | [versiontag](@) that [identifies](@) the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
+| `defaultvsn`  | Y | [versiontag](@) that identifies the default [terminology](@) for this [scope](@). The associated [MRG](@) is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml |
 | `defaulttype` | n | Text that is used to identify the default kind of [semantic unit](@) for a [curated text](@). It is the default value for the `termType`-field in [curated texts](@). Default value for `defaulttype` is `concept`. |
 | `website`     | n | Base URL for creating links to rendered versions of [Curated Texts](@). It should also serve as the home page of the [terminology](@). If not specified, it is assumed to be the empty string. |
 | `navpath`     | n | Path to the directory where [Curated Texts](@) are rendered, relative to the value of `website`. What `curatedir` is for [Curated Texts](@), is `navpath` for the rendered versions of [Curated Texts](@). If not specified, it is assumed to be the empty string. |
@@ -121,7 +121,7 @@ It may be simpler to change the `scopetags`-field, which is currently a list of 
 
 ### SAF Versions - Enabling changes and updates in a scope's Terminology {#versions}
 
-The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is [identified](@) (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). See the [Terminology Construction page](/docs/manuals/curator/terminology-construction) and the [term selection syntax page](/docs/specs/syntax/term-selection) for details.
+The third section (called `versions`) in the [SAF](@) specifies the [terminologies](@) that are actively maintained by the [curators](@) of the [scope](@). Each such [terminology](@) is identified (within that [scope](@)) by a (main) [versiontag](@) and optionally also alternative [versiontags](@). The contents of a [terminology](@) is specified by so-called [term selection instructions](@). See the [Terminology Construction page](/docs/manuals/curator/terminology-construction) and the [term selection syntax page](/docs/specs/syntax/term-selection) for details.
 
 This `versions` section contains a list of fields that each specify one [terminology](@) and some meta-data, e.g., regarding the state/validity of the [terminology](@) over time. This may be of interest to the [curators](@) of other [scopes](@) as they need to decide whether or not to import [terms](@) from such a [terminology](@).
 
@@ -171,11 +171,11 @@ The following fields are defined for the `versions` section of a [SAF](@):
 
 | Name          | Req'd | Description |
 | ------------- | :---: | ----------- |
-| `vsntag`        | Y | [Versiontag](@) that that is used to [identify](@) this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version. |
+| `vsntag`        | Y | [Versiontag](@) that that is used to identify this version within the set of all other versions that are maintained within this [scope](@). in this [SAF](@). It MUST NOT be changed during the lifetime of this version. |
 | `altvsntags`    | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version. |
 | `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See the [Terminology Construction page](/docs/manuals/curator/terminology-construction) and the [term selection syntax page](/docs/specs/syntax/term-selection) for details. |
 | `license`       | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of this [SAF](@)). The purpose of this field is to allow different versions of the [scope's](@) [terminology](@) to have different licenses. |
-| `status`        | n | Text that [identifies](@) the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
+| `status`        | n | Text that identifies the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
 | `from`          | F | Date at which it was decided to establish this version. |
 | `to`            | F | Date at which this version will expire (or has expired). |
 

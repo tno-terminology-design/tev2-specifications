@@ -13,7 +13,7 @@ export const mark = ({children}) => (
     {children}
   </span> );
 
-In order for a [community](@) (e.g. a workgroup, taskforce, project/product team, department, etc.) to realize its [objectives](@), it is beneficial that its members have a common set of the ideas, [concepts](@) and other [semantic units](@) that are relevant for realizing these [objectives](@). The ability to realize such a common understanding, and to demonstrate that this is actually the case, is a critical capability for success.
+In order for a [community](@) (e.g. a workgroup, taskforce, project/product team, department, etc.) to realize its [objectives](@essif-lab), it is beneficial that its members have a common set of the ideas, [concepts](@) and other [semantic units](@) that are relevant for realizing these [objectives](@essif-lab). The ability to realize such a common understanding, and to demonstrate that this is actually the case, is a critical capability for success.
 
 The Terminology Engine (v2) is a set of specifications and tools that (technically) facilitate such capabilities, by recognizing that each [community](@) wants (and needs):
 

@@ -243,7 +243,7 @@ versions:
   - "term[action]@essif-lab"
   - "rename action [id:act, term:act, formPhrases:'act{ss}']"
   - "term[party,actor,onboarding,action,organization,community,entity,legal-entity]@essif-lab"
-  - "term[ssi,assertion,claim,credential,issue,verify,validate,transaction]@essif-lab"
+  - "term[ssi,assertion,claim,credential,issue,verify,validate]@essif-lab"
   - "term[manage,management,governance,risk,owner,owned]@essif-lab" 
   - "term[jurisdiction,objective,control,expectation,obligation]@essif-lab"
   - "term[control-objective,risk-objective,compliance-objective]@essif-lab" 

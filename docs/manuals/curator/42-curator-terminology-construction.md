@@ -22,7 +22,7 @@ The specification of a [terminology](@) exists as an entry in the [`versions` se
 
 A new [terminology](@) specification must at least have
 
-- a [versiontag](@) that allows the [terminology](@) to be [identified](@) (within its [scope](@)), 
+- a [versiontag](@) that allows the [terminology](@) to be identified (within its [scope](@)), 
 - a list of [term selection instructions](@) that specify the [terms](@) that are to be included (or removed) from the [terminology](@) as it is being constructed, and
 - some meta-data (see the [documentation](/docs/specs/files/saf#versions).
 
@@ -89,7 +89,7 @@ In the syntax specification for [term selection instructions](@), we use the fol
 | Symbol | Description |
 | :----- | :---------- |
 | `<key>` | a text that corresponds with a field name in an [MRG entry](@) of a designated [MRG](@), or the [header](@) (front-matter) of a [curated text](@). Examples: `term`, `grouptags`, `status`. |
-| `<value>` | a text that is used to [identify](@) an [MRG entry](@) or a [curated text](@). |
+| `<value>` | a text that is used to identify an [MRG entry](@) or a [curated text](@). |
 
 </details>
 
@@ -108,7 +108,7 @@ However, any (existing) [MRG](@) can be used as an alternative source, by adding
 The following syntaxes are available for adding all terms from a specific source to the [provisional MRG](@):
 
 - **`*`**<br/>Add all [terms](@) that are described by a [curated texts](@) in the [current scope](@).<br/>&nbsp;
-- **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as [identified](@) by the [terminology-identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the [current scope](@).
+- **`* @<tid>`**<br/>Add all [terms](@) that have an [MRG entry](@) in the [MRG](@) as identified by the [terminology identifier](@) `<tid>`. This [MRG](@) must have been made available in the [glossarydir](@) of the [current scope](@).
 
 <details>
   <summary>Examples:</summary>
@@ -133,7 +133,7 @@ The following syntaxes are available for adding a selection of terms from a spec
   - `<key>` is a text that corresponds with a field name in a [header](@) (front-matter) of a [curated text](@), such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not a [curated text](@) is to be selected for inclusion in the [provisional MRG](@).<br/>&nbsp;
 - **`<key>` [ `<value>`, `<value2>`, ... ] `@<tid>`**, where:
-  - `<tid>` is a [terminology identifier](@) that [identifies](@) an [MRG](@) (that must have been made available in the [glossarydir](@) of the [current scope](@)).
+  - `<tid>` is a [terminology identifier](@) that identifies an [MRG](@) (that must have been made available in the [glossarydir](@) of the [current scope](@)).
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) that resides in that [MRG](@), such as `term`, `grouptags`, `status`, etc.
   - `<value>`, `<value2>`, ... are texts that are used to determine whether or not an [MRG entry](@) from that [MRG](@) is to be selected for inclusion in the [provisional MRG](@).
 
@@ -196,7 +196,7 @@ In analogy with [namespaces](https://en.wikipedia.org/wiki/Namespace), we accomm
 The following syntaxes are available for renaming fields in an [MRG entry](@) that is part of the [provisional MRG](@):
 
 - **`rename` `<ttrm>` [ `<key>`:`<value>`, `<key2>:<value2>`, ... ]**, where:
-  - `<ttrm>` is the value of the `term` field in the [MRG entry](@) of the [provisional MRG](@) that is selected for the renaming process, which may optionally be preceded with `<termType>:` (where `<termType>` would then be the value of the `termType` field in that [MRG entry](@)). Note that this value is an [identifier](@) for that [MRG entry](@).
+  - `<ttrm>` is the value of the `term` field in the [MRG entry](@) of the [provisional MRG](@) that is selected for the renaming process, which may optionally be preceded with `<termType>:` (where `<termType>` would then be the value of the `termType` field in that [MRG entry](@)). Note that this value is an identifier for that [MRG entry](@).
   - `<key>` is a text that corresponds with a field name in an [MRG entry](@) in the [provisional MRG](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc.
   - `<value>` is a text that will replace the existing text of the field identified by `<key>`. If the text contains multiple words, it is advised to surround it with quotes.
 

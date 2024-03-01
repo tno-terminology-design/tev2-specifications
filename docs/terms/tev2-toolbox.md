@@ -43,7 +43,7 @@ The tools within the TEv2 Toolbox serve multiple functions, including:
 5. [MRGT](@): Enables the generation of [MRDs](@) from [curated texts](@) (and existing [MRGs](@) from other [scopes](@)).
 6. [ICT](@): Ensures the conformity of various files to their [TEv2 specifications](/docs/specs/files), maintaining data integrity.
 
-The TEv2 Toolbox empowers [curators](@) to streamline the terminology management process, ensuring the creation of accurate, accessible, and well-structured terminological assets that align with the [objectives](@) of the community or project involved.
+The TEv2 Toolbox empowers [curators](@) to streamline the terminology management process, ensuring the creation of accurate, accessible, and well-structured terminological assets that align with the [objectives](@essif-lab) of the community or project involved.
 
 ## Examples
 

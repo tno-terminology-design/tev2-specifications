@@ -25,7 +25,7 @@ A **Form Phrase** is a word or phrase that occurs in oral or written texts and t
 
 ## Purpose
 
-[Form phrases](@) act as (standardized, human readable) [identifiers](@) for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the terms used and thereby reducing the potential for misinterpretation or confusion.
+[Form phrases](@) act as (standardized, human readable) identifiers for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the terms used and thereby reducing the potential for misinterpretation or confusion.
 
 ## Specifying Form Phrases in Curated Texts {#specifying}
 
@@ -51,7 +51,7 @@ formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 
 ## Using/Matching Form Phrases {#matching}
 
-Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must [identify](@) the [MRG entry](@) and/or the [curated text](@) that documents this [semantic unit](@).
+Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must identify the [MRG entry](@) and/or the [curated text](@) that documents this [semantic unit](@).
 
 Here is how a [from phrase](@) is matched against:
 

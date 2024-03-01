@@ -7,7 +7,7 @@ term: semantic-unit
 termType: concept
 isa:
 glossaryTerm: Semantic Unit
-glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@))."
+glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@essif-lab))."
 glossaryNotes:
 - "Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
 grouptags: [ ]
@@ -25,7 +25,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Semantic Unit
 
 ## Summary
-A **Semantic Unit** is a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)).
+A **Semantic Unit** is a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@essif-lab)).
 
 Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc.
 
@@ -40,7 +40,7 @@ Within [TEv2](@), [semantic units](@) can be [defined](@) in, and described by [
 The [terminology pattern](pattern:terminology@) provides an overview of how this concept fits in with related concepts.
 
 ## Purpose
-[Semantic units](@) exist because they are somehow relevant for realizing [objectives](@) of the [party](@) that has this [knowledge](@). Since [parties](@) rarely realize their [objectives](@) all by themselves, they will need to find ways to communicate them (their meanings) to other [parties](@) and/or [actors](@) that work for/with them, such that the lot of them have something we might call a 'common understanding'. To realize this 'common understanding', the [owner](@) of (the [knowledge](@) that contains) the [semantic units](@) must actively (consciously) understand and distinguish between each of them, specify names ([terms](@)) that represent them, and create and maintain [curated texts](@), [definitions](@) and perhaps other stuff.
+[Semantic units](@) exist because they are somehow relevant for realizing [objectives](@essif-lab) of the [party](@) that has this [knowledge](@essif-lab). Since [parties](@) rarely realize their [objectives](@essif-lab) all by themselves, they will need to find ways to communicate them (their meanings) to other [parties](@) and/or [actors](@) that work for/with them, such that the lot of them have something we might call a 'common understanding'. To realize this 'common understanding', the [owner](@essif-lab) of (the [knowledge](@essif-lab) that contains) the [semantic units](@) must actively (consciously) understand and distinguish between each of them, specify names ([terms](@)) that represent them, and create and maintain [curated texts](@), [definitions](@) and perhaps other stuff.
 
 ## Criteria
-A **Semantic unit** is something that can be thought of as a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)). Typically, [parties](@) have (at least) one [term](@) that they use to refer to that [semantic unit](@).
+A **Semantic unit** is something that can be thought of as a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@essif-lab)). Typically, [parties](@) have (at least) one [term](@) that they use to refer to that [semantic unit](@).

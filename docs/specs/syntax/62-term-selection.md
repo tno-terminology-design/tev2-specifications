@@ -40,7 +40,7 @@ Take care to properly nest quotes (as in the 'rename' instruction of the example
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `<tid>`     | a [terminology identifier](@) that [identifies](@) the [terminology](@) that the [MRGT](@) will use as its source. |
+| `<tid>`     | a [terminology identifier](@) that identifies the [terminology](@) that the [MRGT](@) will use as its source. |
 | `<f1>`, `<f2>` | a [formphrase](@) (for a particular [term](@)). |
 | `<key>`     | the name of a field in the [header](@) of a [curated text](@), or in an [MRG entry](@) of the [MRG](@), whichever the [MRGT](@) uses as its source. |
 | `<v1>`, `<v2>` | a text value. |
@@ -56,7 +56,7 @@ Take care to properly nest quotes (as in the 'rename' instruction of the example
 [^1]: 'matching' means that [<mark>TBD: specify the matching algorithm, in particular when the field itself is an arry, such as `grouptags`, `headingids`, etc.</mark>]
 
 :::tip Adding terms from other scopes
-By adding `@<tid>` to any of the above instructions, you specify that the [MRG entries](@) that are to be selected must originate from the [terminology](@) that the [terminology identifier](@) `<tid>` [identifies](@).
+By adding `@<tid>` to any of the above instructions, you specify that the [MRG entries](@) that are to be selected must originate from the [terminology](@) that the [terminology identifier](@) `<tid>` identifies.
 
 The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) from the (default version) of the [MRG] as it exists in the [scope](@) `essif-lab`. Of course, `essif-lab` must be defined as a [scopetag](@) in one of the entries of the [scopes section](/docs/specs/files/saf#scopes) of the [SAF](@).
 :::
@@ -70,8 +70,8 @@ The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) fr
   | "term [actor]"               | select every [curated text](@) in the [current scope](@), of which the `term` field in its [header](@) has the value `actor`. |
   | "status[proposed,approved]"  | select every [curated text](@) in the [current scope](@), of which the `status` field in its [header](@) has the value `proposed` or `approved`. |
   | "somefield []"               | select every [curated text](@) in the [current scope](@), of which the `somefield` field in its [header](@) has no value specified. |
-  | "[actor,party]@tev2:v1"      | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, that [matches](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
-  | "term [actor,party]@tev2:v1" | select every [MRG entry](@) in the [terminology](@) [identified](@) by `@tev2:v1`, of which the `term` field has the value `actor` or `party`. |
+  | "[actor,party]@tev2:v1"      | select every [MRG entry](@) in the [terminology](@) identified by `@tev2:v1`, that [matches](form-phrase#matching@) any of the [form phrases](@) `actor` or `party`. |
+  | "term [actor,party]@tev2:v1" | select every [MRG entry](@) in the [terminology](@) identified by `@tev2:v1`, of which the `term` field has the value `actor` or `party`. |
   | "grouptags[x,y,z]@essif-lab" | select every [MRG entry](@) in the default [terminology](@) of [scope](@) `essif-lab`, of which the `grouptags` field contains one or more of the values `x`, `y`, or `z`. |
 
 </details>
@@ -120,7 +120,7 @@ The following syntaxes are available for renaming fields in a [provisional MRG e
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `<ttrm>` | is the value of the `term` field in the [MRG entry](@) of the [provisional MRG](@) that is selected for the renaming process, which may optionally be preceded with `<termType>:` (where `<termType>` would then be the value of the `termType` field in that [MRG entry](@)). Note that this value is an [identifier](@) for that [MRG entry](@). |
+| `<ttrm>` | is the value of the `term` field in the [MRG entry](@) of the [provisional MRG](@) that is selected for the renaming process, which may optionally be preceded with `<termType>:` (where `<termType>` would then be the value of the `termType` field in that [MRG entry](@)). Note that this value is an identifier for that [MRG entry](@). |
 | `<k<i>>` | a text that corresponds with a field name in an [MRG entry](@) in the [provisional MRG](@), such as `formPhrases`, `glossaryText`, `grouptags`, `status`, etc. |
 | `<v<i>>` | a text that will replace the existing text of the field identified by `<k<i>>`. If the text contains multiple words, it should be surrounded with quotes. |
 
@@ -128,7 +128,7 @@ The following syntaxes are available for renaming fields in a [provisional MRG e
 
 | Instruction | Description |
 | ----------- | ----------- |
-| `"rename <ttrm> [ <k1>:<v1>, <k2>:<v2>, ... ]"` | In the [MRG entry](@) that is [identified](@) by `<ttrm>` in the [provisional MRG](@), the values of the fields `k<i>` are replaced by their corresponding values `v<i>` (also if `v<i>` is the empty string) |
+| `"rename <ttrm> [ <k1>:<v1>, <k2>:<v2>, ... ]"` | In the [MRG entry](@) that is identified by `<ttrm>` in the [provisional MRG](@), the values of the fields `k<i>` are replaced by their corresponding values `v<i>` (also if `v<i>` is the empty string) |
 
 Here is how it works. First, the [provisional MRG Entry](@) is searched that has a `term` field whose value is `<term>`. If found, all `<key>`:`<value>` pairs are processed in the sequence they are specified. Processing a `<key>`:`<value>` pair consists of looking for a field named `<key>` in the selected [MRG entry](@). We now have the following situations:
 

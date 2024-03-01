@@ -25,7 +25,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 ### Summary
 A **Tag** is an alphanumeric string that satisfies the [regex](@) `[a-z0-9_-]+`, and that is used to identify [scopes](@) (so called 'scopetags'), group [terms](@) (so called 'grouptags'), or identify a specific version of a [terminology](@) (so called 'versiontags') from within a specific [scope](@).
 
-Scopetags [identify](@) a [scope](@) (from within a given [scope](@)), and hence can be used (within that given [scope](@)) to disambiguate [terms](@). For example, `essif-lab:term` is an [identifier](@) for the [concept](@) that within the [scope](@) [identified](@) by the scopetag `essif-lab` is referred to by the [term](@) 'term'.
+Scopetags identify a [scope](@) (from within a given [scope](@)), and hence can be used (within that given [scope](@)) to disambiguate [terms](@). For example, `essif-lab:term` is an identifier for the [concept](@) that within the [scope](@) identified by the scopetag `essif-lab` is referred to by the [term](@) 'term'.
 
 Grouptags may be used within a [scope](@) to tag various sorts or [semantic units](@) such as [terms](@), [concepts](@), [patterns](@) and the like. One can then say that this grouptag represents the group of [semantic units](@) that are associated with that tag. This may be used for different purposes. One example is to tag every term that is part of a [pattern](@) with a pattern-specific tag.
 

@@ -46,7 +46,7 @@ A limited set of [concepts](@) (preferably not exceeding 7+/-2)[^1], [relations]
 ### Notes
 
 The first purpose of a mental model is to help us think and reason about a certain topic or issue.
-One signal that indicates the need of such a model is when we're running circles in our thoughts, and we have this feeling of not understanding, of the topic being (too) complex. Often, we are thinking in terms of concepts that are not fit for the [objectives](@) we pursue.
+One signal that indicates the need of such a model is when we're running circles in our thoughts, and we have this feeling of not understanding, of the topic being (too) complex. Often, we are thinking in terms of concepts that are not fit for the [objectives](@essif-lab) we pursue.
 
 ### On Using (existing) Mental models
 

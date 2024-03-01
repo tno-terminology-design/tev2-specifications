@@ -87,13 +87,13 @@ Different [TEv2 tools](@) use header fields in [headers](@) for various purposes
 
 | Name            | Req'd | Description |
 | --------------- | :---: | ----------- |
-| `termType`        | n | [Text](term-type@) that [identifies](@) the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`. If not specified, its value defaults to the `defaulttype`-field in the [scope section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
+| `termType`        | n | [Text](term-type@) that identifies the kind of [semantic unit](@) that this [curated text](@) describes. Typical values would be `concept`, `relation`, `pattern` (or `mental-model`), or `usecase`. If not specified, its value defaults to the `defaulttype`-field in the [scope section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
 | `term`            | Y | text that is used to refer to the [semantic unit](@) that is documented by this [curated text](@). |
-| `isa`             | n | [Term identifier](@) that [identifies](@) the [semantic unit](@) of which this is a specialization. |
+| `isa`             | n | [Term identifier](@) that identifies the [semantic unit](@) of which this is a specialization. |
 | `bodyFile`        | n | Path, relative to the [scopedir](@), that contains the [body](@) of this [curated text](@). If not specified, the [body](@) in this file serves as the [body](@) of the [curated text](@). |
 | `glossaryTerm`    | n | Text that is used for the [term](@) in a human readable [glossary](@). For example, for a [term](@) called `member`, you may want to specify a glossaryTerm `member (of a [community](@))`. |
 | `glossaryText`    | n | Text that is used as the (raw) contents for the entry of this [term](@) in a human readable [glossary](@). This text MUST be expected to contain [TermRefs](@). |
-| `synonymOf`       | n | [Term identifier](@) that [identifies](@) the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
+| `synonymOf`       | n | [Term identifier](@) that identifies the defined [term](@) of the [semantic unit](@) for which this is a [synonym](@). |
 | `grouptags`       | n | List of [grouptags](@), each of which signifies that the [(scoped) term](@) that this [curated text](@) documents, is part of the group of [terms](@) that it represents.<br/>Example: `[tev2, management]`. |
 | `formPhrases`     | n | List of [texts](form-phrase@) that are [used to convert](trrt#id@) the `show text` parts of [TermRefs](@) into `term`s, for the purpose of accommodating plural forms (for nouns) or conjugate forms (for verbs). For details, see [specifying form phrases](form-phrase#specifying@). |
 | `status`          | n | Text that identifies the status of the term. ([Communities](@) of) [scopes](@) may specify values for this field. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |

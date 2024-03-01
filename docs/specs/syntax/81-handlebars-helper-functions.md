@@ -1,6 +1,6 @@
 ---
 id: handlebars-helper-functions
-sidebar_label: Handlebars Helper Functions
+sidebar_label: Handlebars Helpers
 date: 20240301
 ---
 

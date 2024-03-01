@@ -5,7 +5,7 @@ date: 20230915
 ---
 # Term Identifier
 
-A **Term Identifier** is a [text](identifier@) that is used for identifying a [semantic unit](@) within a designated [terminology](@). This means that it can be used for selecting an [MRG entry](@) that exists in the [MRG](@) associated with that [terminology](@). It does NOT mean that any such text will actually identify such an [MRG entry](@). [Term identifiers](@) can be ambiguous (refer to multiple [MRG entries](@)). It is also possible that a [term identifier](@) does not identify any such [MRG entry](@). 
+A **Term Identifier** is a [text](identifier@essif-lab) that is used for identifying a [semantic unit](@) within a designated [terminology](@). This means that it can be used for selecting an [MRG entry](@) that exists in the [MRG](@) associated with that [terminology](@). It does NOT mean that any such text will actually identify such an [MRG entry](@). [Term identifiers](@) can be ambiguous (refer to multiple [MRG entries](@)). It is also possible that a [term identifier](@) does not identify any such [MRG entry](@). 
 
 Similarly, [term identifiers](@) can be used for identifying the [curated text](@) that describes the [semantic unit](@) within a designated [terminology](@). Here, too, [term identifiers](@) exist that are ambiguous, or do not refer to any [curated text](@).
 

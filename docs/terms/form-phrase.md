@@ -37,7 +37,7 @@ formPhrases: [ "actor", "actors", "actor's", "actor(s)", "human actor", "machine
 
 This specifies that whenever a [TermRef](@) is being converted by the [TRRT](@), and the `showtext` or the `term` parts of that [TermRef](@) are any of these [formPhrases](@), then the [TermRef](@) refers to the [semantic unit](@) that is documented by that [curated text](@). 
 
-Note that the specification of a [form phrase](@) may include a [form-phrase-macro](@), for which several are [predefined](/docs/terms/form-phrase-macro#predefineds@). The example below is the equivalent specification as above:
+Note that the specification of a [form phrase](@) may include a [form-phrase-macro](@), for which several are [predefined](/docs/terms/form-phrase-macro#predefineds). The example below is the equivalent specification as above:
 
 ~~~ yaml
 formPhrases: [ "actor{ss}", "human actor", "machine actor" ]
@@ -53,15 +53,15 @@ formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 
 Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must identify the [MRG entry](@) and/or the [curated text](@) that documents this [semantic unit](@).
 
-Here is how a [from phrase](@) is matched against:
+Here is how a [form phrase](@) is matched against:
 
 1. [MRG entries](@), given the [MRG](@):
-    1. [Regularize](regularized-form-phrase#regularization-process@) the [from phrase](@);
+    1. [Regularize](regularized-form-phrase#regularization-process@) the [form phrase](@);
     2. Find all [MRG entries](@) that have the result an an entry in its `formPhrases`-field;
     3. If there is a single such an [MRG entry](@), that is the one that matches the [form phrase](@).
 
 2. [Curated texts](@):
-    1. [Regularize](regularized-form-phrase#regularization-process@) the [from phrase](@);
+    1. [Regularize](regularized-form-phrase#regularization-process@) the [form phrase](@);
     2. Find all [curated texts](@) (in the [curatedir](@) of the [current scope](@)) that have a `formPhrases`-field whose entries, after having been [regularized](regularized-form-phrase#regularization-process@), are identical to the result of step 1;
     3. If there is a single such [curated text](@), that is the one that matches the [form phrase](@).
 

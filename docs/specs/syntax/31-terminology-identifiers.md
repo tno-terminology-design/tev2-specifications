@@ -6,7 +6,7 @@ date: 20230929
 
 # Terminology Identifiers
 
-A **Terminology Identifier** a [text](identifier@) that identifies a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@).
+A **Terminology Identifier** a [text](identifier@essif-lab) that identifies a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@).
 
 ## Syntax
 

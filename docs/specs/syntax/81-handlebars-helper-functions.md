@@ -12,11 +12,11 @@ import TabItem from '@theme/TabItem';
 
 # Helper functions {#helpers}
 
-In order to facilitate the writing and use of [converters](@), a number of [handlebars helper functions](@) are available in the context of [TEv2](@), that extend the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html) of [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars). 
+In order to facilitate the writing and use of [converters](@), a number of [handlebars helper functions](https://handlebarsjs.com/guide/expressions.html) are available in the context of [TEv2](@), that extend the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html) of [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars). 
 
 Helper functions would typically use variables as defined in the [converter profile object](converter-profile#object@) for the [TEv2 tool](@) that they are used in.
 
-Helper functions can be used within [handlebars expressions](@). Their input is the evaluated value of the expression that follows the call, possibly with extra options.
+Helper functions can be used within [handlebars expressions](https://handlebarsjs.com/guide/expressions.html). Their input is the evaluated value of the expression that follows the call, possibly with extra options.
 
 ```ts title="helper function syntax format"
 // highlight-next-line
@@ -56,7 +56,7 @@ reconstructs the input string fomr the split items, and returns the result.*
 
 ## `noRefs`{#norefs}
 
-The function of the helper `noRefs` is to replace all [TermRefs](@) from a string, with its (capitalized) [showtext](@). Capitalization is done by the helper `capFirst`.
+The function of the helper `noRefs` is to replace all [TermRefs](@) from a string, with its (capitalized) `showtext`. Capitalization is done by the helper `capFirst`.
 
 The following tabs show how this helper works on the following input:
 

@@ -6,8 +6,8 @@ displayed_sidebar: tev2SideBar
 term: current-scope
 termType: concept
 isa:
-glossaryTerm: Current Scope
-glossaryText: the [scope](@) that is the context within which a [curator](@) is acting, or a tool is being called.
+glossaryTerm: "Current Scope"
+glossaryText: "the [scope](@) that is the context within which a [curator](@) is acting, or a tool is being called."
 grouptags: [ ]
 formPhrases: [ "current-scope{ss}" ]
 # Curation status

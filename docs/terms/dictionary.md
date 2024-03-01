@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: dictionary
 termType: concept
 isa:
-glossaryTerm:
+glossaryTerm: "Dictionary"
 glossaryText: "an alphabetically sorted list of [terms](@) with various meanings that they may have in different contexts."
 grouptags: [ ]
 formPhrases: [ "dictionar{yies}" ]

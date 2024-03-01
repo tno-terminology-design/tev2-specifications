@@ -7,7 +7,9 @@ term: semantic-unit
 termType: concept
 isa:
 glossaryTerm: Semantic Unit
-glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@)). Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
+glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@))."
+glossaryNotes:
+- "Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
 grouptags: [ ]
 formPhrases: [ "semantic-unit{ss}" ]
 # Curation status

@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: curatedir
 termType: concept
 isa:
-glossaryTerm: Curatedir
+glossaryTerm: "Curatedir"
 glossaryText: "a directory within a [scopedir](@) within which every file contains a [curated text](@) for that [scope](@)."
 grouptags: [ ]
 formPhrases: [ "curatedir{ss}", "curate-director{yies}" ]

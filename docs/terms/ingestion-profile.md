@@ -6,8 +6,8 @@ displayed_sidebar: tev2SideBar
 term: ingestion-profile
 termType: concept
 isa:
-glossaryTerm: Ingestion Profile
-glossaryText: the specification of a method by which files that are in a particular place and format (e.g., wiki files) are turned into a [curated text](@).
+glossaryTerm: "Ingestion Profile"
+glossaryText: "the specification of a method by which files that are in a particular place and format (e.g., wiki files) are turned into a [curated text](@)."
 grouptags: [ ]
 formPhrases: [ "ingestion-profile{ss}" ]
 # Curation status

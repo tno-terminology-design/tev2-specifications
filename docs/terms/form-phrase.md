@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: form-phrase
 termType: concept
 isa:
-glossaryTerm: Form Phrase (for a Term)
+glossaryTerm: "Form Phrase (for a Term)"
 glossaryText: "a word or phrase that occurs in oral or written texts and that refers to a particular [semantic unit](@), yet is not (necessarily) the  [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations."
 formPhrases: [ "formphrase{ss}", "form-phrase{ss}" ]
 # Curation status

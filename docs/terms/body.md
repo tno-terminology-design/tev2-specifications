@@ -7,7 +7,9 @@ term: body
 termType: concept
 isa:
 glossaryTerm: Body (of a Curated Text)
-glossaryText: "the part of a [curated text](@) that contains arbitrarily structured documentation about the [semantic unit](@) that the [curated text](@) documents. Bodies live either in [curated text files](@) (behind the [header](@)), or in separate so-called [body files](@)."
+glossaryText: "the part of a [curated text](@) that contains arbitrarily structured documentation about the [semantic unit](@) that the [curated text](@) documents."
+glossaryNotes:
+- "Bodies live either in [curated text files](@) (behind the [header](@)), or in separate so-called [body files](@)."
 grouptags: [ ]
 formPhrases: [ "bod{yies}" ]
 # Curation status

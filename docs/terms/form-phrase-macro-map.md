@@ -6,8 +6,8 @@ displayed_sidebar: tev2SideBar
 term: form-phrase-macro-map
 termType: concept
 isa:
-glossaryAbbr: Macro Map
-glossaryTerm: Form Phrase Macro Map
+glossaryAbbr: "Macro Map"
+glossaryTerm: "Form Phrase Macro Map"
 glossaryText: "a list of [form phrase macros](@); these maps are used by tools such as the [MRGT](@) and the [TRRT](@)."
 glossaryNotes:
 - "Form-phrase macro maps can be specified in the `scope` section of a [SAF](@)" 

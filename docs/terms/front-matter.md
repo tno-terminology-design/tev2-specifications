@@ -7,7 +7,10 @@ term: front-matter
 termType: concept
 isa:
 glossaryTerm: "Front Matter"
-glossaryText: "a section at the top of a file that contains YAML (or similarly formatted) metadata, such as title, description, tags, and more. It is used in static site generators, as well as by [TEv2](@). The front-matter must be the first thing in the file and must be enclosed in triple-dashed lines for YAML."
+glossaryText: "a section at the top of a file that contains YAML (or similarly formatted) metadata, such as title, description, tags, and more."
+glossaryNotes:
+- "Front matter is also commonly used by various static site generators (not just by [TEv2](@))."
+- "The front-matter must be the first thing in the file and must be enclosed in triple-dashed lines for YAML."
 # Curation status
 status: proposed
 created: 20240121

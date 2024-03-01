@@ -4,7 +4,9 @@ termType: concept
 isa: identifier
 bodyFile: /specs/syntax/21-term-identifiers.md
 glossaryTerm: Term Identifier
-glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@). If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
+glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@)."
+glossaryNotes:
+- "If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
 formPhrases: [ "term-identifier{ss}" ]
 # Curation status
 status: proposed

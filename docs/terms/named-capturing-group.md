@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: named-capturing-group
 termType: concept
 isa:
-glossaryTerm: Named Capturing Group
+glossaryTerm: "Named Capturing Group"
 glossaryText: "a sub-pattern within a [regex](@) (called a '[capturing group](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)') that has been given a name, allowing one to refer to that sub-pattern."
 grouptags: [ ]
 formPhrases: [ "named-capturing-group{ss}", "capturing-group{ss}" ]

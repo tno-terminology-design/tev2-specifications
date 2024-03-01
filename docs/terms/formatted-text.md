@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: formatted-text
 termType: concept
 isa: text-format
-glossaryTerm: Formatted Text
+glossaryTerm: "Formatted Text"
 glossaryText: "a text that has been processed and arranged to have a specific layout, style, and presentation, making it visually appealing and easy to read."
 grouptags: [ ]
 formPhrases: [ "formatted-text{ss}" ]

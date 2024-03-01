@@ -6,8 +6,10 @@ displayed_sidebar: tev2SideBar
 term: glossarytext
 termType: concept
 isa: 
-glossaryTerm: Glossary Text
+glossaryTerm: "Glossary Text"
 glossaryText: "a human readable text that will be used as the [definition](@) for a particular [term](@), as presented in a [HRG](@)."
+glossaryNotes:
+- "the `glossaryText` field in a [curated text](@) can be used to specify the [glossary text](@) for a [definition](@)."
 formPhrases: [ "glossarytext{ss}", "glossary-text{ss}" ]
 ---
 

@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: glossarydir
 termType: concept
 isa: scopedir
-glossaryTerm: Glossarydir
+glossaryTerm: "Glossarydir"
 glossaryText: "a directory within a [scopedir](@) within which the different versions of its ([machine readable](mrg@) and [human readable](hrg@)) [glossaries](@) are created and maintained."
 grouptags: [ ]
 formPhrases: [ "glossarydir{ss}", "glossary-director{yies}"  ]

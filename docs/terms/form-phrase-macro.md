@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: form-phrase-macro
 termType: concept
 isa:
-glossaryTerm: Form Phrase Macro
+glossaryTerm: "Form Phrase Macro"
 glossaryText: "a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
 formPhrases: [ "formphrase macro{ss}", "form-phrase macro{ss}" ]
 # Curation status

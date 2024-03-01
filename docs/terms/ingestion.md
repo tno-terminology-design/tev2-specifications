@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: ingestion
 termType: concept
 isa: 
-glossaryTerm: Ingestion (Process)
+glossaryTerm: "Ingestion (Process)"
 glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
 grouptags: [ ]
 formPhrases: [ "ingestion-process", "ingestion-processes","ingest", "ingests", "ingested", "ingestion" ]

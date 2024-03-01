@@ -22,6 +22,21 @@ Helper functions can be used within [handlebars expressions](@). Their input is 
 {{capFirst entry.term}}
 {{noRefs entry.glossaryText type="markdown"}}
 ```
+<details>
+  <summary>List of built-in helpers</summary>
+
+Here is a summary of the handlebar helpers that can always be used; you can click on the helper to navigate to a more detailed description of how they work (with examples):
+
+| Helper | Functional summary |
+| :----- | :----------------- |
+| [`#if`](https://handlebarsjs.com/guide/builtin-helpers.html#if)         | conditionally render a text block. |
+| [`#unless`](https://handlebarsjs.com/guide/builtin-helpers.html#unless) | this is the inverse of `#if`. |
+| [`#each`](https://handlebarsjs.com/guide/builtin-helpers.html#each)     | Iterates over a list of elements. Inside the block, you can use `this` to reference the element being iterated over. |
+| [`#with`](https://handlebarsjs.com/guide/builtin-helpers.html#with)     | Enables you to change the evaluation context of template-parts. |
+| [`#lookup`](https://handlebarsjs.com/guide/builtin-helpers.html#lookup) | Allows for dynamic parameter resolution using Handlebars variables. |
+| [`#log`](https://handlebarsjs.com/guide/builtin-helpers.html#log)       | allows for logging of context state while executing a template. |
+
+</details>
 
 ## `capFirst` {#capfirst}
 

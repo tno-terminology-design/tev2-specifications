@@ -355,7 +355,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Converter"
-    glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
+    glossaryText: "a specification, in the form of a [handlebars template](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
     glossaryNotes:
       - "A [TRRT](@) converter constructs a text that replaces a [TermRef](@). That text, when rendered in a static website, would typically link to the page that documents the term. Also, it may provide a popup that shows its definition."
       - "A [HRGT](@) converter constructs a text that replaces an [MRGRef](@). That text typically renders as a [human readable glossary](@)."
@@ -382,7 +382,10 @@ entries:
     term: "converter-profile"
     termType: "concept"
     glossaryTerm: "Converter Profile"
-    glossaryText: "a data object, of a type that is specific for a [text conversion tool](@), that [converters](@) use to create texts by which the [tool](text-conversion-tool@) will replace the text constructs that are located by its [interpreter](@)."
+    glossaryText: "the specification of a class of data objects, instances of which are used by specific [text conversion tools](@) to generate text fragments from."
+    glossaryNotes:
+      - "Converter profiles exist, e.g., for the [TRRT](@) and the [HRGT](@)."
+      - "Converter profiles are used by [converters](@), which are (predefined or custom) [handlebars templates](@) that produce the generated text fragments."
     grouptags: []
     formPhrases:
       - "converter-profile"
@@ -393,7 +396,7 @@ entries:
       - "profile-s"
     status: "proposed"
     created: 20231218
-    updated: 20240108
+    updated: 20240301
     contributors: "RieksJ"
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -404,12 +407,6 @@ entries:
       - "converter-profile"
       - "object"
       - "`err`-fields"
-      - "helpers"
-      - "`capfirst`"
-      - "`norefs`"
-      - "regularize"
-      - "localize"
-      - "ifvalue"
     termid: "concept:converter-profile"
     vsntag: "documentation"
   - id: "corpus"
@@ -1138,21 +1135,63 @@ entries:
       - "examples"
     termid: "concept:grouptag"
     vsntag: "documentation"
-  - id: "handlebars-expression"
+  - id: "handlebars-helper-function"
     displayed_sidebar: "tev2SideBar"
-    term: "handlebars-expression"
+    term: "handlebars-helper-function"
     termType: "concept"
-    isa: null
-    glossaryTerm: "Handlebars Expression"
-    glossaryText: "a specific syntax used in the popular templating engine 'Handlebars', which enables one to specify texts (e.g., HTML templates) in which dynamic data (as provided, e.g., by [moustache variables](@)) is placed. See [handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) for further details."
+    bodyFile: "/specs/syntax/51-handlebars-helper-functions.md"
+    glossaryTerm: "Handlebars Helper Functions"
+    glossaryText: "tbd"
     grouptags: []
     formPhrases:
-      - "handlebar-expression"
-      - "handlebar-expressions"
-      - "handlebar-expression-s"
-      - "handlebars-expression"
-      - "handlebars-expressions"
-      - "handlebars-expression-s"
+      - "handlebars-helper-function"
+      - "handlebars-helper-functions"
+      - "handlebars-helper-function-s"
+      - "tev2-handlebars-helper-function"
+      - "tev2-handlebars-helper-functions"
+      - "tev2-handlebars-helper-function-s"
+      - "helper-function"
+      - "helper-functions"
+      - "helper-function-s"
+      - "tev2-helper-function"
+      - "tev2-helper-functions"
+      - "tev2-helper-function-s"
+    scopetag: "tev2"
+    locator: "handlebars-helper-functions.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/syntax/handlebars-helper-functions"
+    headingids:
+      - "helpers"
+      - "capfirst"
+      - "norefs"
+      - "regularize"
+      - "localize"
+      - "ifvalue"
+    termid: "concept:handlebars-helper-function"
+    vsntag: "documentation"
+  - id: "handlebars-template"
+    displayed_sidebar: "tev2SideBar"
+    term: "handlebars-template"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Handlebars Template"
+    glossaryText: "a blueprint/template that uses the [Handlebars language](https://handlebarsjs.com/guide/#what-is-handlebars) to define where and how variable information can be inserted into a predetermined text structure."
+    glossaryNotes:
+      - "Handlebars templates allow for the creation of customizable texts that automatically update with specific data."
+      - "Handlebars templates are characterized by their use of Handlebars expressions within the templates."
+    grouptags: []
+    formPhrases:
+      - "handlebar-template"
+      - "handlebar-templates"
+      - "handlebar-template-s"
+      - "handlebars-template"
+      - "handlebars-templates"
+      - "handlebars-template-s"
+      - "handlebar-s-template"
+      - "handlebar-s-templates"
+      - "handlebar-s-template-s"
+      - "handlebar"
+      - "handlebars"
+      - "handlebar-s"
     status: "proposed"
     created: 20230731
     updated: 20230731
@@ -1160,11 +1199,15 @@ entries:
     attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
     originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
-    locator: "handlebars-expression.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-expression"
+    locator: "handlebars-template.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-template"
     headingids:
-      - "handlebars-expression"
-    termid: "concept:handlebars-expression"
+      - "handlebars-templates"
+      - "purpose"
+      - "examples"
+      - "handlebars-template-for-generating-a-markdown-link-for-a-termref"
+      - "handlebars-template-for-generating-a-hrg-entry"
+    termid: "concept:handlebars-template"
     vsntag: "documentation"
   - id: "header"
     displayed_sidebar: "tev2SideBar"
@@ -3046,7 +3089,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Sorter"
-    glossaryText: "a specification, in the form of a predefined value or a [handlebars expression](@), of the value that is to be used for sorting a list, e.g., for sorting [HRG entries](@) within a [HRG list](@)."
+    glossaryText: "a specification, in the form of a predefined value or a [handlebars template](@), of the value that is to be used for sorting a list, e.g., for sorting [HRG entries](@) within a [HRG list](@)."
     grouptags: []
     formPhrases:
       - "sorter"

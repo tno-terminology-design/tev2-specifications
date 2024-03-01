@@ -1,6 +1,7 @@
 ---
 id: author-overview
 sidebar_label: Author Overview
+description: 'Authors create and maintain documents, in which they use consolidated terminology.'
 date: 20220513
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: tev2-requirements
 sidebar_label: Initial Requirements
+description: Some early-time requirements for doing TermRefs.
 date: 20220303
 ---
 

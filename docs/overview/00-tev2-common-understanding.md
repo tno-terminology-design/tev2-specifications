@@ -1,6 +1,7 @@
 ---
 id: tev2-common-understanding
 sidebar_label: Understanding One Another
+description: The needs of a community that wants to create and maintain a shared understanding.
 date: 20220513
 ---
 

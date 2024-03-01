@@ -1,6 +1,7 @@
 ---
 id: tev2-architecture
 sidebar_label: Architecture
+description: Overview of the tools and files used within TEv2.
 date: 20220303
 ---
 

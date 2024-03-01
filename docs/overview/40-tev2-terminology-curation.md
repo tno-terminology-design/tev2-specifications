@@ -1,6 +1,7 @@
 ---
 id: tev2-terminology-curation
 sidebar_label: Terminology Curation
+description: Curation is more than just pick some terms.
 date: 20220303
 ---
 

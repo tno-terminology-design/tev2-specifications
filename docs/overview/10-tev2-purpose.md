@@ -1,6 +1,7 @@
 ---
 id: tev2-purpose
 sidebar_label: Purpose
+description: Explains the purpose of TEv2.
 date: 20220303
 ---
 

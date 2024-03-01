@@ -1,6 +1,7 @@
 ---
 id: tev2-text-conversion
 sidebar_label: "Text Conversions"
+description: Explains how the main process of TEv2 (converting texts) works.
 date: 20220303
 ---
 

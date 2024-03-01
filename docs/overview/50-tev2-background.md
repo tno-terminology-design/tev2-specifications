@@ -1,6 +1,7 @@
 ---
 id: tev2-background
 sidebar_label: Backgrounds
+description: What the Tower of Babel (and similar stories) tell us.
 date: 20220303
 ---
 

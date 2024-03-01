@@ -25,5 +25,6 @@ hrgt:
 trrt:
   interpreter: default           # `default`, `alt`, or regex
   converter: html-hovertext-link # `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`, mustache/handlebars template
+  converter[error]: "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
   input:                         # glob pattern for files to be processed
     - "**/*.md"

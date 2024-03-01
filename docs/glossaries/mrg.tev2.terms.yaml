@@ -228,7 +228,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "the documentation that describes the [knowledge](@) around a set of [terms](@) and [concepts](@)."
+    glossaryText: "the documentation that describes the [knowledge](@essif-lab) around a set of [terms](@) and [concepts](@)."
     grouptags: []
     formPhrases:
       - "corpus"
@@ -258,7 +258,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Curate"
-    glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@)."
+    glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@essif-lab)."
     grouptags:
       - "terminology"
       - "cm-party-actor-action"
@@ -405,7 +405,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Curator (of a Scope)"
-    glossaryText: "a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@)."
+    glossaryText: "a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@essif-lab)."
     grouptags:
       - "terminology"
     formPhrases:
@@ -582,7 +582,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Form Phrase Macro"
-    glossaryText: "a sequence of characters (the macro name) that [identifies](@) a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
+    glossaryText: "a sequence of characters (the macro name) that identifies a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
     formPhrases:
       - "formphrase-macro"
       - "formphrase-macros"
@@ -1192,66 +1192,6 @@ entries:
       - "discussion-notes"
     termid: "acronym:ict"
     vsntag: "terms"
-  - id: "identifier"
-    displayed_sidebar: "tev2SideBar"
-    term: "identifier"
-    termType: "concept"
-    isa: null
-    glossaryTerm: null
-    glossaryText: "a character string that is being used for the identification of some [entity](@) (yet may refer to 0, 1, or more [entities](@), depending on the context within which it is being used)."
-    grouptags: []
-    formPhrases:
-      - "identifier"
-      - "identifiers"
-      - "identifier-s"
-    status: "proposed"
-    created: 20210601
-    updated: 20210601
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "identifier.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/identifier"
-    headingids:
-      - "identifier"
-      - "short-description"
-      - "purpose"
-      - "criterion"
-      - "examples"
-      - "notes"
-      - "discussion---scope-of-identification"
-    termid: "concept:identifier"
-    vsntag: "terms"
-  - id: "identify"
-    displayed_sidebar: "tev2SideBar"
-    term: "identify"
-    termType: "concept"
-    isa: null
-    glossaryTerm: null
-    glossaryText: "an [act](action@), by or on behalf of a [party](@), that results in the selection of either&#10;- a single [partial identity](@) that the party [owns](@), given some (observed or received) data, or&#10;- a single [entity](@) from a given set of entities that is the [subject](@) of a specified [partial identity](@) that the party [owns](@)."
-    grouptags: []
-    formPhrases:
-      - "identify"
-      - "identifying"
-      - "identifies"
-      - "identified"
-      - "identifiable"
-      - "identification"
-    status: "proposed"
-    created: 20210601
-    updated: 20210601
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "identify.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/identify"
-    headingids:
-      - "identify"
-      - "short-description"
-    termid: "concept:identify"
-    vsntag: "terms"
   - id: "ingestion"
     displayed_sidebar: "tev2SideBar"
     term: "ingestion"
@@ -1360,37 +1300,6 @@ entries:
       - "interpreter-profile"
     termid: "concept:interpreter-profile"
     vsntag: "terms"
-  - id: "knowledge artifact"
-    displayed_sidebar: "tev2SideBar"
-    term: "knowledge-artifact"
-    termType: "concept"
-    isa: null
-    glossaryTerm: "Knowledge Artifact"
-    glossaryText: "See: [semantic unit](@). (term is deprecated)"
-    glossaryNotes:
-      - "Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
-    grouptags: []
-    formPhrases:
-      - "knowledge-artifact"
-      - "knowledge-artifacts"
-      - "knowledge-artifact-s"
-    status: "deprecated"
-    created: 20220727
-    updated: 20230926
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "semantic-unit.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/semantic-unit"
-    headingids:
-      - "semantic-unit"
-      - "summary"
-      - "purpose"
-      - "criteria"
-    termid: "concept:knowledge-artifact"
-    vsntag: "terms"
-    synonymOf: "semantic-unit"
   - id: "mental-model"
     displayed_sidebar: "tev2SideBar"
     term: "mental-model"
@@ -2135,7 +2044,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@) of the [scope](@)) needs to express, communicate and validate its [knowledge](@) as relevant to achieving a specific subset of its [objectives](@)."
+    glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab)."
     grouptags: []
     formPhrases:
       - "scope"
@@ -2165,7 +2074,7 @@ entries:
     termType: "concept"
     isa: "term"
     glossaryTerm: "Scoped Term"
-    glossaryText: "a [term](@) that represents (and [identifies](@)) a specific [semantic unit](@) of a particular [community](@) (or [party](@))."
+    glossaryText: "a [term](@) that represents (and identifies) a specific [semantic unit](@) of a particular [community](@) (or [party](@))."
     grouptags: []
     formPhrases:
       - "scoped-term"
@@ -2222,7 +2131,7 @@ entries:
     termType: "concept"
     isa: "tag"
     glossaryTerm: null
-    glossaryText: "a [tag](@) that is used to [identify](@) [scopes](@) from within a specific [scope](@)"
+    glossaryText: "a [tag](@) that is used to identify [scopes](@) from within a specific [scope](@)"
     grouptags: []
     formPhrases:
       - "scopetag"
@@ -2254,7 +2163,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Semantic Unit"
-    glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@))."
+    glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@essif-lab))."
     glossaryNotes:
       - "Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
     grouptags: []
@@ -2393,7 +2302,7 @@ entries:
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
-    glossaryText: "a word or phrase (i.e.: text) that is used to represent ([identify](@)) a specific [semantic unit](@) (in some [scope](@))."
+    glossaryText: "a word or phrase (i.e.: text) that is used to represent (identify) a specific [semantic unit](@) (in some [scope](@))."
     grouptags: []
     formPhrases:
       - "term"
@@ -2428,7 +2337,7 @@ entries:
     isa: "identifier"
     bodyFile: "/specs/syntax/21-term-identifiers.md"
     glossaryTerm: "Term Identifier"
-    glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for [identifying](@) a [semantic unit](@) within a designated [terminology](@)."
+    glossaryText: "a [text](identifier@), of the form `<termid>@<terminology-identifier>`, that is used for identifying a [semantic unit](@) within a designated [terminology](@)."
     glossaryNotes:
       - "If `@<terminology-identifier>` is omitted, the current (or default) [terminology](@) is assumed."
     formPhrases:
@@ -2522,7 +2431,7 @@ entries:
     termType: "concept"
     isa: "identifier"
     glossaryTerm: "Term Type"
-    glossaryText: "a [text](identifier@) that [identifies](@) a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
+    glossaryText: "a [text](identifier@) that identifies a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
     grouptags: []
     formPhrases:
       - "term-type"
@@ -2552,7 +2461,7 @@ entries:
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
-    glossaryText: "a text of the form `<termType>:<term>` that serves as an unambiguous [identifier](@) for a specific [semantic unit](@) in some given [scope](@)."
+    glossaryText: "a text of the form `<termType>:<term>` that serves as an unambiguous identifier for a specific [semantic unit](@) in some given [scope](@)."
     grouptags: []
     formPhrases:
       - "termid"
@@ -2580,7 +2489,7 @@ entries:
     termType: "pattern"
     isa: null
     glossaryTerm: "Terminology Pattern"
-    glossaryText: "a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@), and the artifacts we use to document that [knowledge](@), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc."
+    glossaryText: "a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@essif-lab), and the artifacts we use to document that [knowledge](@essif-lab), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc."
     grouptags: []
     formPhrases:
       - "terminology-pattern"
@@ -2635,7 +2544,7 @@ entries:
     isa: "identifier"
     bodyFile: "/specs/syntax/31-terminology-identifiers.md"
     glossaryTerm: "Terminology Identifier"
-    glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that [identifies](@) a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@)."
+    glossaryText: "a [text](identifier@), of the form `<scopetag>:<vsntag>`, that identifies a [terminology](@) from within a particular [scope](@), and can also be used to find the [MRG](@) file (in the [glossarydir](@) of that same [scope](@)) that contains [entries](mrg-entry@) for every [term](@) contained in that [terminology](@)."
     glossaryNotes:
       - "If `<scopetag>` and/or `:<vsntag>` is omitted, their values are taken be the current (or default) ones."
     grouptags: []
@@ -2916,7 +2825,7 @@ entries:
     termType: "concept"
     isa: "tag"
     glossaryTerm: null
-    glossaryText: "a [tag](@) that is used to [identify](@) a specific version of a [terminology](@) from within a specific [scope](@)."
+    glossaryText: "a [tag](@) that is used to identify a specific version of a [terminology](@) from within a specific [scope](@)."
     grouptags: []
     formPhrases:
       - "versiontag"

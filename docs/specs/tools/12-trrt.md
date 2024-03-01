@@ -156,12 +156,12 @@ If a [configuration file](/docs/specs/files/configuration-file) is used, the lon
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Interpreters](#trrt-interpreters) for details. |
-| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
-| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [TRRT Converters](#trrt-converters) for details.  |
+| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
+| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | Display help for command. |
 
-[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template1>` `converter[2]: <template2>`, where `<template<n>>` is a predefined converter or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). You MUST specify `converter[1] <template1>` (or `converter <template1>`, which is equivalent). You MAY specify one or more `converter[<n>]`s, where `<n>` is any number. The [TRRT](@) keeps track of the number of times a [TermRef](@) was used for some [termid](@). When the [TRRT](@) converts a [TermRef](@) for a particular [termid](@) for the `<n>`th time, it will use the converter as specified in parameter `converter[<n>]`, or, if that does not exist, it will use the converter that it used for the `<n-1>`th conversion.
+[^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template1>` `converter[2]: <template2>`, where `<template<n>>` is a predefined converter or a [handlebars template](@). You MUST specify `converter[1] <template1>` (or `converter <template1>`, which is equivalent). You MAY specify one or more `converter[<n>]`s, where `<n>` is any number. The [TRRT](@) keeps track of the number of times a [TermRef](@) was used for some [termid](@). When the [TRRT](@) converts a [TermRef](@) for a particular [termid](@) for the `<n>`th time, it will use the converter as specified in parameter `converter[<n>]`, or, if that does not exist, it will use the converter that it used for the `<n-1>`th conversion.
 
 ```mdx-code-block
 </APITable>
@@ -319,7 +319,7 @@ The following tabs specify the predefined [converters](@) for the [TRRT](@).
 
 #### The `markdown-link` Converter
 
-The `markdown-link` [converter](@) is defined by the following [handlebars expression](@).
+The `markdown-link` [converter](@) is defined by the following [handlebars template](@).
 
 ~~~ ts
 [{{showtext}}]({{navurl}}{{#if trait}}#{{trait}}{{/if}})
@@ -331,7 +331,7 @@ The `markdown-link` [converter](@) is defined by the following [handlebars expre
 
 #### The `html-link` Converter
 
-The `html-link` [converter](@) is defined by the following [handlebars expression](@).
+The `html-link` [converter](@) is defined by the following [handlebars template](@).
 
 ~~~ ts
 <a href="{{navurl}}{{#if trait}}#{{trait}}{{/if}}">{{showtext}}</a>
@@ -343,7 +343,7 @@ The `html-link` [converter](@) is defined by the following [handlebars expressio
 
 #### The `html-hovertext-link` Converter
 
-The `html-hovertext-link` [converter](@) is defined by the following [handlebars expression](@) (newlines and whitespaces have been added for better readability, and should be ignored).
+The `html-hovertext-link` [converter](@) is defined by the following [handlebars template](@) (newlines and whitespaces have been added for better readability, and should be ignored).
 
 ~~~ ts
 <a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}" 
@@ -371,7 +371,7 @@ This [converter](@) uses the following functions.
 
 #### The `html-glossarytext-link` Converter
 
-The `html-glossarytext-link` [converter](@) is defined by the following [handlebars expression](@) (newlines and whitespaces have been added for better readability, and should be ignored):
+The `html-glossarytext-link` [converter](@) is defined by the following [handlebars template](@) (newlines and whitespaces have been added for better readability, and should be ignored):
 
 ~~~ ts
 <a href="{{localize navurl}}{{#if trait}}#{{trait}}{{/if}}"

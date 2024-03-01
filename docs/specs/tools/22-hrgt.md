@@ -90,9 +90,9 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
 | `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
-| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRGT Converters](#hrgt-converters) for details.  |
+| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars template](@). See [HRGT Converters](#hrgt-converters) for details.  |
 | `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
-| `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). |
+| `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars template](@). |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
@@ -127,8 +127,8 @@ The [interpreter profile](@) of the [HRGT](@) consist of the following [named ca
 | [Group](named-capturing-group@) | Req'd | Description |
 | --------------- | :---: | ----------- |
 | `hrg`           | n | A [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated. |
-| `converter`     | n | Specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details. |
-| `sorter`        | n | Specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details. |
+| `converter`     | n | Specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars template](@). See [HRG Converters](#hrgt-converters) for details. |
+| `sorter`        | n | Specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars template](@). See [HRG Sorters](#predefined-sorters) for details. |
 
 :::info
 Note that the values of these specified [capturing groups](@) will be [regularized](regularize@) before they are used for [processing](#processing).
@@ -144,8 +144,8 @@ The [HRGT](@) has only one predefined [interpreter](@), which is called `default
 
 where: 
 - `hrg` (optional) is a [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated.
-- `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Converters](#hrgt-converters) for details.
-- `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars). See [HRG Sorters](#predefined-sorters) for details.
+- `converter` (optional) specifies the [converter](@) to be used to produce the [HRG list](@). This can either be a predefined [converter](@), or a [handlebars template](@). See [HRG Converters](#hrgt-converters) for details.
+- `sorter` (optional) specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars template](@). See [HRG Sorters](#predefined-sorters) for details.
 
 :::warning
 If you specify a converter as part of this syntax, that's the only one that will be used.<br/>
@@ -177,7 +177,7 @@ If that file does not exist, the [converter](@) that was specified in the argume
 
 #### Sorting the [HRG list](@)
 
-The [HRG list](@) contains elements that are assocated with one [MRG entry](@), one [HRG entry](@), and one value that is used for sorting. This value is the result from evaluating (the [handlebars expression](@) specified by) the [sorter](@), using [moustache variables](@) that come from the [converter profile](@) of the [HRGT](@). See [HRG Sorters](#predefined-sorters) for details.
+The [HRG list](@) contains elements that are assocated with one [MRG entry](@), one [HRG entry](@), and one value that is used for sorting. This value is the result from evaluating (the [handlebars template](@) specified by) the [sorter](@), using [moustache variables](@) that come from the [converter profile](@) of the [HRGT](@). See [HRG Sorters](#predefined-sorters) for details.
 
 ### HRGT Converter Profile {#converter-profile}
 
@@ -198,7 +198,7 @@ The following tabs specify the predefined [converters](@) for the [TRRT](@).
 
 <TabItem value="markdown-table-row">
 
-The **`markdown-table-row`** [converter](@) is defined by the following [handlebars expression](@).
+The **`markdown-table-row`** [converter](@) is defined by the following [handlebars template](@).
 
 ~~~ ts
 | [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}}) | {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}} |\n
@@ -208,7 +208,7 @@ The **`markdown-table-row`** [converter](@) is defined by the following [handleb
 
 <TabItem value="markdown-section-2">
 
-The **`markdown-section-2`** [converter](@) is defined by the following [handlebars expression](@).
+The **`markdown-section-2`** [converter](@) is defined by the following [handlebars template](@).
 
 ~~~ ts
 ## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
@@ -218,7 +218,7 @@ The **`markdown-section-2`** [converter](@) is defined by the following [handleb
 
 <TabItem value="markdown-section-3">
 
-The **`markdown-section-3`** [converter](@) is defined by the following [handlebars expression](@).
+The **`markdown-section-3`** [converter](@) is defined by the following [handlebars template](@).
 
 ~~~ ts
 ### [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n
@@ -247,7 +247,7 @@ The predefined sorting options are as follows:
 
 [^1]: Note that the value of the `termid` field of an [MRG entry](@) is unique within the [MRG](@) that holds the [MRG entry](@) - it serves as a 'primary key'. That's why sorting first on the `term` field and then on the `termType` field makes the sort unique. Also note that this sorting differs from sorting on the `termid` field itself, as this would result in an [HRG](@) in which the [entries](hrg-entry@) are grouped according to their `termType` - thus [concepts](@), [patterns](@), and other kinds of [semantic units](@) are then grouped.
 
-Alternatively, you can specify a mustache/[handlebars](https://handlebarsjs.com/guide/#what-is-handlebars) template. Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sorter "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
+Alternatively, you can specify a [handlebars template](@). Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sorter "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
 
 ## Example
 

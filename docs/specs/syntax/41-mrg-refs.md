@@ -30,11 +30,11 @@ where
 - `converter="<converter>"` specifies the [converter](@) that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
 - `<converter>` is a text that specifies either: 
     - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essif-lab`;
-    - a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
+    - a [handlebars template](@).
 - `sorter="<sorter>"` specifies the [sorter](@) that is to be used for sorting the glossary entries. If it isn't specified as part of the [MRGRef](@), it is derived from the command-line parameter, or the a value in the configuration file that the [HRGT](@) uses. If neither is specified, it defaults to `default`.
 - `<sorter>` is a text that specifies either: 
     - a predefined way in which glossary entries are being sorted (see [further down](#predefined-mrgref-sorters)), such as `default` or `glossaryterm`;
-    - a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
+    - a [handlebars template](@).
 
 ## Predefined MRGRef Interpreters {#predefined-mrgref-interpreters}
 
@@ -56,7 +56,7 @@ The predefined interpreters for detecting [MRGRefs](@) are as follows:
 
 ## Predefined MRGRef Sorters {#predefined-mrgref-sorters}
 
-Sorters are similar to [converters](@), in that they can either specify a predefined way of sorting glossary entries, or a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars) that specifies how to sort them.
+Sorters are similar to [converters](@), in that they can either specify a predefined way of sorting glossary entries, or a [handlebars template](@) that specifies how to sort them.
 
 The predefined sorters for glossary generation are:
 
@@ -121,7 +121,7 @@ Specifying the [MRGref](@) using the predefined glossary layout called `markdown
 
 <TabItem value="simple"><br/>
 
-Specifying the [MRGref](@) using a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows.
+Specifying the [MRGref](@) using a [handlebars template](@), as follows.
 
 ~~~ markdown
 | Term | Description |
@@ -130,7 +130,7 @@ Specifying the [MRGref](@) using a [Handlebars expression](https://handlebarsjs.
 ---
 ~~~
 
-Note that this is a simple handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [Handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
+Note that this is a simple [handlebars template](@), that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars).
 </TabItem>
 
 </Tabs>
@@ -182,7 +182,7 @@ Here endeth the glossary.
 
 <TabItem value="simple"><br/>
 
-Specifying the [MRGref](@) using a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars), as follows:
+Specifying the [MRGref](@) using a [handlebars template](@), as follows:
 
 ~~~ markdown
 ---
@@ -199,7 +199,7 @@ sidebar_label: Glossary
 Here endeth the glossary.
 ~~~
 
-Note that this is a simple Handlebars expression, that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [Handlebars expressions](https://handlebarsjs.com/guide/#what-is-handlebars).
+Note that this is a simple [handlebars template](@), that is not very robust against missing variables. See, e.g., the section on [custom glossary converters](#custom-glossary-converters) on how to make them more robust, or even better: the documentation on [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars).
 </TabItem>
 
 </Tabs>
@@ -235,11 +235,11 @@ Here endeth the glossary.
 
 ## Custom Glossary Converters {#custom-glossary-converters}
 
-When the predefined glossary converters are not appropriate, [curators](@) can define their own converter, by specifying them as a [Handlebars expression](https://handlebarsjs.com/guide/#what-is-handlebars).
+When the predefined glossary converters are not appropriate, [curators](@) can define their own converter, by specifying them as a [handlebars template](@).
 
-The handlebar expressions can use all fields of the [converter profile](@) as variables. For example, `{{glossaryText}}`, or `{{entry.glossaryText}}`, is the variable that contains the text specified in the `glossaryText` field of the specific [MRG entry](@), and `{{err.file}}` contains the name of the file where the [MRGRef](@) was found.
+The [handlebars template](@)s can use all fields of the [converter profile](@) as variables. For example, `{{glossaryText}}`, or `{{entry.glossaryText}}`, is the variable that contains the text specified in the `glossaryText` field of the specific [MRG entry](@), and `{{err.file}}` contains the name of the file where the [MRGRef](@) was found.
 
-Converters can use the [helper functions](converter-profile#helper-functions@) and [block helpers](https://handlebarsjs.com/guide/block-helpers.html#basic-blocks) to create a diverse range of glossary entries. The example below illustrates this functionality. Note that the newlines and spaces are strictly handled by the [converter](@), in the example they are primarily for readability.
+Converters can use the [TEv2 helper functions](@) and [block helpers](https://handlebarsjs.com/guide/block-helpers.html#basic-blocks) to create a diverse range of glossary entries. The example below illustrates this functionality. Note that the newlines and spaces are strictly handled by the [converter](@), in the example they are primarily for readability.
 
 ```ts
 <a href="{{localize entry.navurl}}">{{capFirst entry.term}}</a>

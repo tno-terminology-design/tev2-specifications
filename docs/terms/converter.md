@@ -7,7 +7,7 @@ term: converter
 termType: concept
 isa:
 glossaryTerm: Converter
-glossaryText: "a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
+glossaryText: "a specification, in the form of a [handlebars template](@), for constructing a text that a particular [text conversion tool](@) uses to create its output."
 glossaryNotes:
 - A [TRRT](@) converter constructs a text that replaces a [TermRef](@). That text, when rendered in a static website, would typically link to the page that documents the term. Also, it may provide a popup that shows its definition.
 - A [HRGT](@) converter constructs a text that replaces an [MRGRef](@). That text typically renders as a [human readable glossary](@).
@@ -25,7 +25,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Converter
 
-A **converter** is a specification, in the form of a [handlebars expression](@), for constructing a text that a particular [text conversion tool](@) uses to create its output.
+A **converter** is a specification, in the form of a [handlebars template](@), for constructing a text that a particular [text conversion tool](@) uses to create its output.
 
 The [specifications](toolbox@) of the particular [tool](text-conversion-tool@) tell you which [converters](@) are predefined for that [tool](text-conversion-tool@), and what the [converter profile](@) is that a customized [converter](@) may use.
 

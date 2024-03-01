@@ -68,7 +68,7 @@ The [MRGRef](@) that is used is `{%` `hrg=":terms" converter="| [{{#if glossaryT
 <TabItem value="patterns">
 
 :::info
-This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are known within this (TEv2) scope. It is formatted in a custom format (specified by a handlebars expression template).
+This [glossary](@) lists the [mental models](@) (or [patterns](@)) that are known within this (TEv2) scope. It is formatted in a custom format (specified by a handlebars template).
 
 The [MRGref](@) that is used is `{%` `hrg=":patterns" converter="## [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n
 {{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n"` `%}`
@@ -124,7 +124,7 @@ For this purpose, we use a custom converter that
 1. only creates an entry for MRG entries that have an existing, non-empty `glossaryNotes` field
 2. shows the notes.
 
-We have simplified the handlebars expression so that it becomes easier for readers to focus on what we have been trying to do here.
+We have simplified the handlebars template so that it becomes easier for readers to focus on what we have been trying to do here.
 
 The [MRGRef](@) that is used is `{%` `hrg="" converter="{{#if glossaryNotes}}## {{noRefs glossaryTerm}}\n\n{{glossaryText}}\n\n### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}"` `%}`
 :::

@@ -36,7 +36,6 @@ Here is a summary of the handlebar helpers that can always be used; you can clic
 | [`#each`](https://handlebarsjs.com/guide/builtin-helpers.html#each)     | Iterates over a list of elements. Inside the block, you can use `this` to reference the element being iterated over. |
 | [`#with`](https://handlebarsjs.com/guide/builtin-helpers.html#with)     | Enables you to change the evaluation context of template-parts. |
 | [`#lookup`](https://handlebarsjs.com/guide/builtin-helpers.html#lookup) | Allows for dynamic parameter resolution using Handlebars variables. |
-| [`#log`](https://handlebarsjs.com/guide/builtin-helpers.html#log)       | allows for logging of context state while executing a template. |
 
 </details>
 
@@ -45,14 +44,29 @@ Here is a summary of the handlebar helpers that can always be used; you can clic
 The function of the helper `capFirst` is to capitalize every first character from every word in a string.
 
 ```ts title="Examples for 'capFirst'"
-{{capFirst entry.glossaryTerm}}   # e.g. "converter profile" becomes "Converter Profile"
-{{capFirst entry.glossaryText}}   # e.g. "This is a description; for SOME TERM" becomes "This Is A Description; For SOME TERM"
+{{capFirst entry.glossaryTerm}}   // e.g. "converter profile" becomes "Converter Profile"
+{{capFirst entry.glossaryText}}   // e.g. "This is a description; for SOME TERM" becomes "This Is A Description; For SOME TERM"
 ```
 
 The helper `capFirst` replaces the first character of every word of its argument with the capitalized equivalent. 
 Words are obtained by splitting the input on space characters.<br/>
 *It takes a string as input, splits the string at spaces, capitalizes the first character of every split item,
 reconstructs the input string fomr the split items, and returns the result.*
+
+## `log` {#log}
+
+This function overwrites the built-in [`log`](https://handlebarsjs.com/guide/builtin-helpers.html#log) helper from Handlebars and behaves similarly. Compared to the default: it makes use of [tslog](https://www.npmjs.com/package/tslog), and adds an option to silence the output related to a [converter](@) call. Any number of arguments may be passed to this helper and all will be forwarded to the logger. 
+
+The log level may be set using the `level` option. Supported values are provided by [tslog](https://www.npmjs.com/package/tslog) [here](https://www.npmjs.com/package/tslog#default-log-level), with the addition of `silent`. When omitted, `warn` is the default value.
+
+```ts title="Examples for 'log'"
+{{log 'termid' termid 'error' err.cause}}
+{{log 'info' 'This is an informational message'}}
+
+// Examples below will prevent errors caused by the conversion call from being logged
+{{log 'silent' 'This message will not be logged'}}
+{{regularize entry.term}}{{log 'silent'}}
+```
 
 ## `noRefs`{#norefs}
 

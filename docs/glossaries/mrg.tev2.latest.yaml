@@ -982,6 +982,7 @@ entries:
     headingids:
       - "helpers"
       - "capfirst"
+      - "log"
       - "norefs"
       - "regularize"
       - "localize"

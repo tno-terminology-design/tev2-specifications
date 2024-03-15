@@ -7,7 +7,7 @@ term: scope
 termType: concept
 isa:
 glossaryTerm:
-glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab)."
+glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (or [party](@), which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab)."
 grouptags: [ ]
 formPhrases: [ "scope{ss}", "scope-context{ss}" ]
 # Curation status
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Scope
 
 ### Summary
-A **scope** is the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab).
+A **scope** is the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (or [party](@), which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab).
 
 Other documentation includes [curated texts](@), and artifacts that are generated from that, such as [glossaries](@), [dictionaries](@) and the like. It also includes [tags](@) that can be used e.g. to refer to other [scopes](@) ([scopetags](@)), identify different versions for artifacts ([versiontags](@)), or create particular groups of [terms](@) ([grouptags](@)).
 

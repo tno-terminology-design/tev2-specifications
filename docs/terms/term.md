@@ -7,7 +7,11 @@ term: term
 termType: concept
 isa: identifier
 glossaryTerm:
-glossaryText: "a word or phrase (i.e.: text) that is used to represent (identify) a specific [semantic unit](@) (in some [scope](@))."
+glossaryText: "a word or phrase (i.e.: text) that is used to represent [concepts](semantic-unit@)."
+glossaryNotes:
+- "a term is ambiguous if it represents more than one [concept](semantic-unit@)."
+- "a term that is used in a particular [scope](@) (which we call a [scoped term](@)) should not be ambiguous."
+- "a term that is unambiguous can be made part of a [definition](@) by associating it with a criterion that people can use to determine what is, and what is not, an instance (or: example) of that term."
 grouptags: [ ]
 formPhrases: [ "term{ss}", "word{ss}", "phrase{ss}" ]
 # Curation status

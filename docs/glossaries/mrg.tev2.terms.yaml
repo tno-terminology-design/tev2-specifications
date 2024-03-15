@@ -516,6 +516,39 @@ entries:
       - "notes"
     termid: "concept:definition"
     vsntag: "terms"
+  - id: "definition"
+    displayed_sidebar: "tev2SideBar"
+    term: "definition"
+    termType: "pattern"
+    glossaryTerm: "Definition Pattern"
+    glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the criteria to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
+    grouptags: []
+    formPhrases:
+      - "definition-pattern"
+      - "definition-patterns"
+      - "definition-pattern-s"
+      - "definitions-pattern"
+      - "definitions-patterns"
+      - "definitions-pattern-s"
+      - "definition-s-pattern"
+      - "definition-s-patterns"
+      - "definition-s-pattern-s"
+    status: "proposed"
+    created: 20240316
+    updated: 20240316
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "patterns/pattern-definition.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/patterns/definition"
+    headingids:
+      - "definition-pattern"
+      - "purpose"
+      - "introduction"
+      - "formalized-model"
+    termid: "pattern:definition"
+    vsntag: "terms"
   - id: "dictionary"
     displayed_sidebar: "tev2SideBar"
     term: "dictionary"
@@ -2080,7 +2113,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab)."
+    glossaryText: "the extent of the [terms](@), [definitions](@) and other documentation that a [community](@) (or [party](@), which we call the [owner](@essif-lab) of the [scope](@)) needs to express, communicate and validate its [knowledge](@essif-lab) as relevant to achieving a specific subset of its [objectives](@essif-lab)."
     grouptags: []
     formPhrases:
       - "scope"
@@ -2338,7 +2371,11 @@ entries:
     termType: "concept"
     isa: "identifier"
     glossaryTerm: null
-    glossaryText: "a word or phrase (i.e.: text) that is used to represent (identify) a specific [semantic unit](@) (in some [scope](@))."
+    glossaryText: "a word or phrase (i.e.: text) that is used to represent [concepts](semantic-unit@)."
+    glossaryNotes:
+      - "a term is ambiguous if it represents more than one [concept](semantic-unit@)."
+      - "a term that is used in a particular [scope](@) (which we call a [scoped term](@)) should not be ambiguous."
+      - "a term that is unambiguous can be made part of a [definition](@) by associating it with a criterion that people can use to determine what is, and what is not, an instance (or: example) of that term."
     grouptags: []
     formPhrases:
       - "term"

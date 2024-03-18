@@ -281,11 +281,10 @@ entries:
     term: "converter-profile"
     termType: "concept"
     glossaryTerm: "Converter Profile"
-    glossaryText: "the specification of a class of data objects, instances of which are used by specific [text conversion tools](@) to generate text fragments from."
+    glossaryText: "the specification of a class of [data objects](handlebars-object@), instances of which are used by specific [text conversion tools](@) to generate text fragments from."
     glossaryNotes:
       - "Converter profiles exist, e.g., for the [TRRT](@) and the [HRGT](@)."
       - "Converter profiles are used by [converters](@), which are (predefined or custom) [handlebars templates](@) that produce the generated text fragments."
-    grouptags: []
     formPhrases:
       - "converter-profile"
       - "converter-profiles"
@@ -304,7 +303,7 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
     headingids:
       - "converter-profile"
-      - "object"
+      - "object-spec"
       - "`err`-fields"
     termid: "concept:converter-profile"
     vsntag: "documentation"
@@ -1022,6 +1021,42 @@ entries:
       - "ifvalue"
     termid: "concept:handlebars-helper-function"
     vsntag: "documentation"
+  - id: "handlebars-object"
+    displayed_sidebar: "tev2SideBar"
+    term: "handlebars-object"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Handlebars Object"
+    glossaryText: "a data object, that serves as the source of (context dependent) data from which a text is produced according to the specifications of a [Handlebars template](@)."
+    glossaryNotes:
+      - "The [converter profile](@) of a [text conversion tool](@) specifies the structure (type) of the data objects that it will pass to its [converters](@)"
+    formPhrases:
+      - "handlebar-object"
+      - "handlebar-objects"
+      - "handlebar-object-s"
+      - "handlebars-object"
+      - "handlebars-objects"
+      - "handlebars-object-s"
+      - "handlebar-s-object"
+      - "handlebar-s-objects"
+      - "handlebar-s-object-s"
+      - "converter-profile-object"
+      - "converter-profile-objects"
+      - "converter-profile-object-s"
+    status: "proposed"
+    created: 20240318
+    updated: 20240318
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "handlebars-object.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/handlebars-object"
+    headingids:
+      - "handlebars-objects"
+      - "example:"
+    termid: "concept:handlebars-object"
+    vsntag: "documentation"
   - id: "handlebars-template"
     displayed_sidebar: "tev2SideBar"
     term: "handlebars-template"
@@ -1030,8 +1065,9 @@ entries:
     glossaryTerm: "Handlebars Template"
     glossaryText: "a blueprint/template that uses the [Handlebars language](https://handlebarsjs.com/guide/#what-is-handlebars) to define where and how variable information can be inserted into a predetermined text structure."
     glossaryNotes:
-      - "Handlebars templates allow for the creation of customizable texts that automatically update with specific data."
-      - "Handlebars templates are characterized by their use of Handlebars expressions within the templates."
+      - "TEv2 [converters](@) are Handlebars templates."
+      - "Handlebars templates ([converters](@)) allow for the creation of customizable texts that automatically update with specific data."
+      - "Handlebars templates ([converters](@)) are characterized by their use of Handlebars expressions within the templates."
     grouptags: []
     formPhrases:
       - "handlebar-template"
@@ -1321,6 +1357,9 @@ entries:
       - "predefined-interpreters"
       - "processing"
       - "finding-the-[mrg](@)-associated-with-an-[mrgref](@)"
+      - "hrgt-converters"
+      - "using-multiple-converters"
+      - "error-converter"
       - "sorting-the-[hrg-list](@)"
       - "converter-profile"
       - "predefined-converters"
@@ -3043,6 +3082,8 @@ entries:
       - "processing"
       - "finding-mrg-entry"
       - "trrt-converters"
+      - "using-multiple-converters"
+      - "error-converter"
       - "converter-profile"
       - "predefined-converters"
       - "the-`markdown-link`-converter"

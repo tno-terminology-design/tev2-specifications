@@ -287,9 +287,13 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
 Perhaps the [TRRT](@) may use this tool as a means for generating the `term` field from the `showtext` if necessary. However, we would need to first experiment with that to see whether or not, c.q. to what extent this conversion does what it is expected to do.
 :::
 
-#### Using Multiple Converters {#trrt-converters}
+#### Using Converters {#trrt-converters}
 
-The [TRRT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones. When specifying multiple [converters](@) they should be numbered, e.g., as in `converter[1]`, `[converter[2]`, etc. The [section on calling parameters](#calling-the-tool) tells you how such [converters](@) are to be specified.
+The [TRRT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones. Optionally, a [converter](@) can be specified (using the `-con[error]` option) that will be used when a [TermRef](@) could not be resolved to an [MRG entry](@).
+
+##### Using Multiple Converters
+
+When specifying multiple [converters](@) they should be numbered, e.g., as in `converter[1]`, `[converter[2]`, etc. The [section on calling parameters](#calling-the-tool) tells you how such [converters](@) are to be specified.
 
 The [TRRT](@) keeps track of the number of times a [TermRef](@) is referring to particular [semantic units](@) (i.e., when it resolves to a particular [termid](@)). So for every [TermRef](@) it converts within a file that it is processing, there is a number `<n>` (that the [TRRT](@) keeps track of) that says that this is the `<n>`th time that the [semantic unit](@) is being referred to. 
 
@@ -297,11 +301,37 @@ So for `<n>`=1, the [TRRT](@) uses `converter[1]`. When `<n>`=`<m>` (`<m>`>`<n>`
 
 So, if you want to use an elaborate conversion for the first occurrence of a [term](@) in your document, and a simpler conversion for any of the following ones, you should specify `converter[1]` as the [converter](@) that does the elaborate things, and `converter[2]` as one that does the simpler conversions.
 
+##### Error Converter {#error-converter}
+
+Whenever a [TermRef](@) is identified, yet cannot be resolved to an [MRG entry](@), this results in an error message being logged. Also, the [TermRef](@) itself isn't changed.
+
+However, in such cases, users of the [TRRT](@) may want to do particular conversions with the [TermRef](@). For example, the [TermRef](@) might need to be highlighted, or it may need to be turned into regular text (without any particular markup).
+
+Here is an examples for a [converters](@) that can be used to remove the reference itself, and create (an additional) log line:
+
+```markdown
+"{{ref.showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+```
+
+Whenever a [TermRef](@) cannot be resolved this [converter](@) will replace the [TermRef](@) with the `showtext` text, and output a line in the tool's log saying:
+
+```txt
+TRRT error converter: <path>/<file>@<line><pos> [<showtext>]
+```
+
+thereby providing all information users will need to see wehre undefined references are being used.
+
 ### TRRT Converter Profile {#converter-profile}
 
-The [converter profile](@) of the [TRRT](@) is an object of which its values can be referenced by a converter template. This object is populated from the sources as specified by the [converter profile](@) 
+The [converter profile](@) of the [TRRT](@) specifies the structure of the [data objects](handlebars-object@) that its [converters](@) can use, i.e., in which its [converters](@) find the actual (context dependent) data that they need to produce a [renderable ref](@).
 
-Note that [converter profile](@) object may have values that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the population sources belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [TRRT](@). 
+The [TRRT](@) [converter profile](@) contains the [specifications for the data object](converter-profile#object-spec@) that the [converters](@) used by the [TRRT](@) can use. This says that such [converters](@) know:
+
+1. the [interpreter](@) that is used (i.e., its name as well as the [regex](@)).
+2. the values of each of the [named capturing groups](@), as defined by the [TRRT](@) [interpreter profile](#interpreter-profile), and populated by that [interpreter](@).
+3. all fields in the [MRG entry](@) of the [term](@) that was referenced - that is: if it was found.
+4. all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken.
+5. various fields that can be used to construct logging/error messages, such as the filename, linenumber etc. of the [TermRef](@).
 
 ### TRRT Predefined Converters {#predefined-converters}
 

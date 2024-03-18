@@ -163,9 +163,13 @@ For completeness, here is the [regex] that defines the `default` [interpreter](@
 
 The purpose of the [HRGT](@) is to allow source texts to contain [MRGRefs](@) that are to be converted into [hrg-lists](@). 
 
-To do that, the [HRGT](@) uses the [interpreter](@) to locate subsequent [MRGRefs](@) in its input files, and for each of them, processes the [named capturing groups](@) that the [interpreter](@) populates. From this, it will attempt to find the [MRG](@) for which a corresponding [HRG](@) is to be generated. When found, it will walk through the [MRG entries](@) in that [MRG](@), and for each of them, populate [moustache variables](@) as specified in the [HRGT](@) [converter profile](@), and use the specified [converter](@) to produce the [HRG entries](@) that will be populating the [hrg-list](@). These [HRG entries](@) will be sorted according to the [sorter](@) that is specified.
+To do that, the [HRGT](@) uses the specified [interpreter](@) to locate subsequent [MRGRefs](@) in its input files, and replaces it with a [HRG](@) that is constructed as follows:
 
-Note that when the [HRGT](@) is provided with multiple [converters](@) (which is currently only available through the command-line or a [configuration file](/docs/specs/files/configuration-file))
+- For each [MRGRef](@), the associated [MRG](@) is located, and an empty [hrg list](@) is created.
+- Then, for every [MRG entry](@) in the [MRG](@):
+  - a corresponding [converter profile object](@) is created
+  - this [converter profile object](@) is fed to all [converter](@) that the [HRGT](@) was configured to use.  If the result of a [converter](@) does not produce an empty string, that result is added as a [HRG entry](@) to the [hrg list](@).
+- Finally, the [HRG entries](@) in the [hrg list] are sorted according to the [sorter](@) that is specified.
 
 #### Finding the [MRG](@) associated with an [MRGRef](@) 
 
@@ -175,15 +179,55 @@ Since all [MRGs](@) follow the [MRG naming conventions](/docs/specs/files/mrg#fi
 
 If that file does not exist, the [converter](@) that was specified in the argument `con[error]` (or `converter[error]`) is executed, and will replace the [MRGRef](@). This ensures that readers can be provided with an adequate error message, or whatever else the [curators](@) find useful to replace the [MRGRef](@) with.
 
+#### Using Converters {#hrgt-converters}
+
+The [HRGT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones. Optionally, a [converter](@) can be specified (using the `-con[error]` option) that will be used when a [MRGRef](@) could not be resolved to an (existing) [MRG](@) (file).
+
+##### Using Multiple Converters
+
+:::info
+Note that currently, configuring the [HRGT](@) to use multiple [converters](@) can onlybe done through the command-line or a [configuration file](/docs/specs/files/configuration-file).
+:::
+
+When specifying multiple [converters](@) they should be numbered, e.g., as in `converter[1]`, `[converter[2]`, etc. The [section on calling parameters](#calling-the-tool) tells you how such [converters](@) are to be specified. The ordering/numbering of such [converters](@) is irrelevant for the [HRGT](@), as in the end, the [HRG entries](@) that they provide as their results, are being sorted.
+
+Having multiple [converters](@) allows one to create multiple [HRG entries](@) for a single [MRG entry](@). This can be usefule, e.g., if the [MRG entry](@) specifies aliases, or abbreviations. In such cases, one [converter](@) can create an [HRG entry](@) for the [MRG entry](@) itself, and another one can create an [HRG entry](@) for the alias or abbreviation, and refer to the actual entry.
+
+<details>
+  <summary>Example: a converter that adds abbreviations</summary>
+
+The following [converter](@) adds an [HRG entry](@) for an abbreviation. The [HRG entry](@) assumes that the [HRG](@) will be formatted as a markdown table.
+
+~~~markdown title="Creating an HRG entry for an abbreviation"
+"{{#if glossaryAbbr}}| {{glossaryAbbr}} | [{{glossaryTerm}}]({{termid}}@) |\n{{/if}}"
+~~~
+</details>
+
+##### Error Converter {#error-converter}
+
+Whenever a [MRGRef](@) is identified, yet cannot be resolved to an [MRG](@) (file), this results in an error message being logged. Also, the [MRGRef](@) itself isn't changed.
+
+Here is an examples for a [converter](@) that adds a line to the log that the tool produces:
+
+```markdown
+"{{log 'HRGT error converter:' err.dir '/' err.file '@' err.line ':' err.pos ' - Cannot find a corresponding MRG' level='warn'}}"
+```
+
 #### Sorting the [HRG list](@)
 
 The [HRG list](@) contains elements that are assocated with one [MRG entry](@), one [HRG entry](@), and one value that is used for sorting. This value is the result from evaluating (the [handlebars template](@) specified by) the [sorter](@), using [moustache variables](@) that come from the [converter profile](@) of the [HRGT](@). See [HRG Sorters](#predefined-sorters) for details.
 
 ### HRGT Converter Profile {#converter-profile}
 
-The [converter profile](@) of the [HRGT](@) is an object of which its values can be referenced by a converter template. This object is populated from the sources as specified by the [converter profile](@) 
+The [converter profile](@) of the [HRGT](@) specifies the structure of the [data objects](handlebars-object@) that its [converters](@) can use, i.e., in which its [converters](@) find the actual (context dependent) data that they need to produce a [HRG entry](@).
 
-Note that [converter profile](@) object may have values that are not required by the [TEv2](@) specifications, but by the [curator(s)](@) of the [terminology](@) to which the population sources belong. For example, the [curator(s)](@) of the [TEv2](@) [terminologies](@) have specified that [MRG entries](@) could have the fields `glossaryTerm` and `glossaryText`. These fields are then also available as [moustache variables](@) as part of the [converter profile](@) for the [HRGT](@).
+The [HRGT](@) [converter profile](@) contains the [specifications for the data object](converter-profile#object-spec@) that the [converters](@) used by the [HRGT](@) can use. This says that such [converters](@) know:
+
+1. the [interpreter](@) that is used (i.e., its name as well as the [regex](@)) that finds the [MRGRef](@).
+2. the values of each of the [named capturing groups](@), as defined by the [HRGT](@) [interpreter profile](#interpreter-profile), and populated by that [interpreter](@).
+3. all fields in the [MRG entry](@) for which the [converter](@) is being called.
+4. all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which that [MRG entry](@) was taken.
+5. various fields that can be used to construct logging/error messages, such as the filename, linenumber etc. of the [MRGRef](@).
 
 ### HRGT Predefined Converters {#predefined-converters}
 

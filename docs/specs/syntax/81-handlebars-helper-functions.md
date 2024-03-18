@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 In order to facilitate the writing and use of [converters](@), a number of [handlebars helper functions](https://handlebarsjs.com/guide/expressions.html) are available in the context of [TEv2](@), that extend the [built-in helper functions](https://handlebarsjs.com/guide/builtin-helpers.html) of [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars). 
 
-Helper functions would typically use variables as defined in the [converter profile object](converter-profile#object@) for the [TEv2 tool](@) that they are used in.
+Helper functions would typically use variables as specified in the [converter profile](converter-profile#object-spec@) for the [TEv2 tool](@) that they are used in.
 
 Helper functions can be used within [handlebars expressions](https://handlebarsjs.com/guide/expressions.html). Their input is the evaluated value of the expression that follows the call, possibly with extra options.
 
@@ -35,7 +35,7 @@ Here is a summary of the handlebar helpers that can always be used; you can clic
 | [`#unless`](https://handlebarsjs.com/guide/builtin-helpers.html#unless) | this is the inverse of `#if`. |
 | [`#each`](https://handlebarsjs.com/guide/builtin-helpers.html#each)     | Iterates over a list of elements. Inside the block, you can use `this` to reference the element being iterated over. |
 | [`#with`](https://handlebarsjs.com/guide/builtin-helpers.html#with)     | Enables you to change the evaluation context of template-parts. |
-| [`#lookup`](https://handlebarsjs.com/guide/builtin-helpers.html#lookup) | Allows for dynamic parameter resolution using Handlebars variables. |
+| [`lookup`](https://handlebarsjs.com/guide/builtin-helpers.html#lookup) | Allows for dynamic parameter resolution using Handlebars variables. |
 
 </details>
 
@@ -55,17 +55,24 @@ reconstructs the input string fomr the split items, and returns the result.*
 
 ## `log` {#log}
 
-This function overwrites the built-in [`log`](https://handlebarsjs.com/guide/builtin-helpers.html#log) helper from Handlebars and behaves similarly. Compared to the default: it makes use of [tslog](https://www.npmjs.com/package/tslog), and adds an option to silence the output related to a [converter](@) call. Any number of arguments may be passed to this helper and all will be forwarded to the logger. 
+The function of the helper `log` is to output a text string to the log of a tool that uses a [converter](@) from which it is called. This allows users to enhance debugging output.
 
-The log level may be set using the `level` option. Supported values are provided by [tslog](https://www.npmjs.com/package/tslog) [here](https://www.npmjs.com/package/tslog#default-log-level), with the addition of `silent`. When omitted, `warn` is the default value.
+This helper extends the [functionality of the `log` helper that is built into Handlebars itself]https://handlebarsjs.com/guide/builtin-helpers.html#log). The helper is based on [tslog](https://tslog.js.org), which has [lots of other features](https://tslog.js.org/#/?id=all-features).
+
+Particular to our `log` helper is the feature that allows users to suppress log messages. This is useful, for example, when using a [converter](@) in the [HRGT](@) that determines whether or not to allow an [MRG entry](@) to appear in the [HRG](@) that is being created. In such cases, the log would be littered with log messages that no output is being generated, which can now be suppressed.
+
+This feature is implemented through the log level `silent`. [Other log level values are provided by tslog](https://tslog.js.org/#/?id=default-log-level). When a log level isn't specified, it defaults to `warn`.
 
 ```ts title="Examples for 'log'"
-{{log 'termid' termid 'error' err.cause}}
-{{log 'info' 'This is an informational message'}}
+// The following logs a warning of the form '<path>/<file>@<line>:pos', which specifies where an error occurred.
+{{log '<errmsg>:' err.dir '/' err.file '@' err.line ':' err.pos level='warn'}}"
+
+// The following logs the text 'This is an informational message'
+{{log level='info' 'This is an informational message'}}
 
 // Examples below will prevent errors caused by the conversion call from being logged
-{{log 'silent' 'This message will not be logged'}}
-{{regularize entry.term}}{{log 'silent'}}
+{{log level='silent' 'This message will not be logged'}}
+{{regularize entry.term}}{{log level='silent'}}
 ```
 
 ## `noRefs`{#norefs}

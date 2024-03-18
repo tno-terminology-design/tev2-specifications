@@ -9,8 +9,9 @@ isa:
 glossaryTerm: "Handlebars Template"
 glossaryText: "a blueprint/template that uses the [Handlebars language](https://handlebarsjs.com/guide/#what-is-handlebars) to define where and how variable information can be inserted into a predetermined text structure."
 glossaryNotes:
-- "Handlebars templates allow for the creation of customizable texts that automatically update with specific data."
-- "Handlebars templates are characterized by their use of Handlebars expressions within the templates."
+- "TEv2 [converters](@) are Handlebars templates."
+- "Handlebars templates ([converters](@)) allow for the creation of customizable texts that automatically update with specific data."
+- "Handlebars templates ([converters](@)) are characterized by their use of Handlebars expressions within the templates."
 grouptags: [ ]
 formPhrases: [ "handlebar{ss} template{ss}", "handlebar{ss}" ]
 # Curation status

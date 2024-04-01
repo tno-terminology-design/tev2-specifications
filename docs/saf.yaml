@@ -1,9 +1,8 @@
 #
 # This is a Scope Administration File that can be used in conjunction with Terminology Engine v2: https://tno-terminology-design.github.io/tev2-specifications/docs/category/introduction-overview.
 #
-# The first section defines meta-data concerning the scope itself, both for technical use and human use.
-# It shows where directories and files live that ar part of the scope, and also
-# ways in which people can contribute, raise issues, see what's going on, discuss, etc.
+# The first section defines meta-data concerning the scope itself. It shows, 
+# amongst other things, where directories and files live that ar part of the scope.
 #
 scope:
   scopetag: tev2 # identifier that curators have determined for this terminology
@@ -16,12 +15,46 @@ scope:
   navid: id # Name of the field in the front matter of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used. | 
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
-  issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled
-  curators: # contacting individual curators
-  - name: RieksJ
-    email: # we split up the email address to reduce the likelihood of the address being harvested for spamming
-      id: rieks.joosten
-      at: tno.nl
+# The subsection of `scope` here below is not yet functional.
+  mappings:
+    formphrases:
+      # If one or more macros are specified here below, only they will be used by the MRGT.
+      # And in that case, all macros defined in the tools will be disregarded.
+      macros:
+        "{ss}":   ["","s","'s","(s)"]      # "act{ss}" --> "act", "acts", "act's", "act(s)"
+        "{ess}":  ["","es","'s","(es)"]    # "regex{es}" --> "regex", "regexes", "regex's", "regex(es"
+        "{yies}": ["y","y's","ies"]        # "part{yies}" --> "party", "party's", "parties"
+        "{ying}": ["y","ying","ies","ied"] # "identif{ying}" --> "identify", "identifying", "identifies", "identified"
+        "{es}":   ["e","es","ed","ing"]    # "mangag{es}" --> "manage", "manages", "managed", "managing"
+        "{able}": ["able","ability"]       # "cap{able}" --> "capable", "capability"
+    trrt:
+    # all interpreters/converters specified below are added to the set that the TRRT already has
+    # if an interpreter/converter is predefined, the specification below will override the predefined one.
+      interpreters: # note that backslashes in regexes need to be properly escaped. Also use single/double quotes with care.
+        default: '(?:(?<=[^`\\\\])|^)\\[(?=[^@\\n\\]]+\\]\\([^@)]*@[:a-z0-9_-]*\\))(?<showtext>[^@\\n\\]]+)\\]\\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<term>[^@\\n:#)]*?)?(?:#(?<trait>[^@\\n:#)]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\\)'
+        alt: '(?:(?<=[^`\\\\])|^)\\[(?=[^@\\n\\]]+?@[:a-z0-9_-]*\\](?:\\([#:a-z0-9_-]+\\))?)(?<showtext>[^@\\n\\]]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*?))?\\](?:\\((?:(?:(?<type>[a-z0-9_-]+):)?)(?<term>[^@\\n:#)]*?)(?:#(?<trait>[^@\\n:#)]+?))?\\))?'
+      converters: # note that you do not inadvertently mix single and double quotes.
+        "html-with-notes":
+          '## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}'
+        "html-abbrs":
+          '{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\n\nSee: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\n\n{{else}}{{log level="silent"}}{{/if}}'
+        "remove-termref-and-log-error":
+          "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+        # the converters here below are the same as defined in tev2-tools.
+        "markdown-link":
+          '[{{ref.showtext}}]({{entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}})'
+        "html-link": 
+          '<a href="{{entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}">{{ref.showtext}}</a>'
+        "html-hovertext-link":
+          '<a href="{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}" title="{{#if entry.hoverText}}{{entry.hoverText}}{{else}}{{#if entry.glossaryTerm}}{{entry.glossaryTerm}}{{else}}{{capFirst entry.term}}{{/if}}: {{noRefs entry.glossaryText type="markdown"}}{{/if}}">{{ref.showtext}}</a>'
+        "html-glossarytext-link":
+          '<a href="{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}" title="{{capFirst entry.term}}: {{noRefs entry.glossaryText type="markdown"}}">{{ref.showtext}}</a>'
+    hrgt:
+    # all interpreters/converters/sorters specified below are added to the set that the TRRT already has
+    # if an interpreter/converter/sorter is predefined, the specification below will override the predefined one.
+      interpreters: # note that backslashes in regexes need to be properly escaped.
+      converters:
+      sorters:
 #
 # The second section contains a mapping between scopetags that are used within the scope, and the associated scopedirs.
 # This enables tools to find the SAF of these scopes, and from there all other directories, files etc.

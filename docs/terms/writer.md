@@ -3,7 +3,7 @@
 term: writer
 glossaryTerm: Writer
 synonymOf: author
-formPhrases: [ "writer{ss}" ]
+formPhrases: [ "riter{ss}" ]
 ---
 
 This text should not show anywhere, as it is a Synonym.

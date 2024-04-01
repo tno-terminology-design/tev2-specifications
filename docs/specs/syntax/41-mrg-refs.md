@@ -27,6 +27,11 @@ The default syntax for [MRGRefs](@) is as follows:
 where
 
 - `<tid>` is a [terminology identifier](@), that identifies a [terminology](@) (and implies an associated [MRG](@)) within the [current scope](@). If empty, or unspecified, it defaults to the default [terminology](@) of the [current scope](@).
+
+:::warning ([issue #25](https://github.com/tno-terminology-design/tev2-tools/issues/25))
+When the `<tid>` points to a [scope](@) that is not the [current scope](@), the [TermRefs](@) that appear in the generated glossary must be resolved using the [MRG](@) that contains the identified [terminology](@). Currently, the tools do not support a mechanism for doing this. 
+:::
+
 - `converter="<converter>"` specifies the [converter](@) that is to be used for generating glossary entries. If it isn't specified as part of the [MRGRef](@), it must be specified as a command-line parameter, or as a value in the configuration file that the [HRGT](@) uses. 
 - `<converter>` is a text that specifies either: 
     - a predefined way in which glossary entries are being formatted (see [further down](#predefined-mrgref-converters)), such as `markdowntable` or `essif-lab`;

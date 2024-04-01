@@ -134,6 +134,10 @@ The [interpreter profile](@) of the [HRGT](@) consist of the following [named ca
 Note that the values of these specified [capturing groups](@) will be [regularized](regularize@) before they are used for [processing](#processing).
 :::
 
+:::warning ([issue #25](https://github.com/tno-terminology-design/tev2-tools/issues/25))
+When the `hrg` identifies a [terminology](@) that is not part of the [current scope](@), the [TermRefs](@) that appear in the generated glossary must be resolved using the [MRG](@) that contains the identified [terminology](@). Currently, the tools do not support a mechanism for doing this. 
+:::
+
 ### HRGT Predefined Interpreters {#predefined-interpreters}
 
 The [HRGT](@) has only one predefined [interpreter](@), which is called `default`, the syntax of which is:

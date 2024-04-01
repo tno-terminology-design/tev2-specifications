@@ -144,7 +144,7 @@ Then, the list of [term selection instructions](@) as specified in the appropria
 
 [^1]: Two (or more) [MRG entries](@) cannot have the same value in their `termid` fields. Therefore, if an [MRG entry](@) is added whose value in its `termid` field already exists with an [MRG entry](@) that is already in the [provisional MRG](@), then this latter [entry](mrg-entry@) will be discarded, after which the new [entry](mrg-entry@) is added.
 
-#### Processing FormPhrases
+#### Processing FormPhrases {#processing-form-phrases}
 
 [Form phrases](@) that are specified in a [curated text](@) may include uppercase characters, special characters, spaces etc., all of which make their use by tools cumbersome. In order to make it easier for [TEv2 tools](@) to use them, they need to be converted into [regularized form phrases](@).
 

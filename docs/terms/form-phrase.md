@@ -6,8 +6,12 @@ displayed_sidebar: tev2SideBar
 term: form-phrase
 termType: concept
 isa:
-glossaryTerm: "Form Phrase (for a Term)"
-glossaryText: "a word or phrase that occurs in oral or written texts and that refers to a particular [semantic unit](@), yet is not (necessarily) the  [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations."
+glossaryTerm: "Form Phrase (for a Semantic Unit)"
+glossaryText: "a word or phrase that refers to a particular [semantic unit](@), yet is not (necessarily) the [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations."
+glossaryNotes:
+- "The set of [form phrases](@) that [TEv2 tools](@) can recognize, is specified in the [curated text](@) that documents that [unit](semantic-unit@). Such specifications may contain [form-phrase macros](@)."
+- "For looking up the [semantic unit](@) (documentation, as specified in its corresponding [MRG entry](@)), [TEv2 tools](@) can match words or phrases they encounter with the [regularized texts](@) that are listed in the `formPhrases` field of [MRG entries](@). Such [regularized texts](@) do not contain [form-phrase macros](@)."
+- "The [MRGT](@) ensures that the texts in the `formPhrases` field of a [curated text](@) are [properly converted](mrgt#processing-form-phrases@), and listed in the `formPhrases` field of the corresponding [MRG entry](@).
 formPhrases: [ "formphrase{ss}", "form-phrase{ss}" ]
 # Curation status
 status: proposed
@@ -23,9 +27,16 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 A **Form Phrase** is a word or phrase that occurs in oral or written texts and that refers to a particular [semantic unit](@), yet is not (necessarily) the  [term](@) that is used in the [definition](@) of that [semantic unit](@). Form phrases can be, e.g., plural forms, possessive extensions, verb-conjugation forms, abbreviations, and other variations.
 
+<details>
+    <summary>Examples</summary>
+
+[TermRefs](@) such as `[party](@)`, `[parties](@)` or `[party(s)](@)` should all refer to the same [semantic unit](@). This is achieved by specifiying "party", "parties", and "party(s)" as [form phrases](@) for that [semantic unit](@) in the [curated text](@) that documents that [unit](@).
+
+</details>
+
 ## Purpose
 
-[Form phrases](@) act as (standardized, human readable) identifiers for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the terms used and thereby reducing the potential for misinterpretation or confusion.
+[Form phrases](@) serve as (standardized, human readable) identifiers for [semantic units](@), enabling consistent and unambiguous references across various texts such as manuals, specifications, and guidelines. This is particularly useful (if not vital) in fields where precise terminology is key, ensuring that all stakeholders have a common understanding of the [terms](@) used and thereby reducing the potential for misinterpretation or confusion.
 
 ## Specifying Form Phrases in Curated Texts {#specifying}
 
@@ -49,27 +60,21 @@ The same varieties can easily be added for the human and machine actors, as foll
 formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 ~~~
 
-## Using/Matching Form Phrases {#matching}
+## Matching Form Phrases {#matching}
 
-Form phrases are used to refer to a particular [semantic unit](@) as known in a particular [terminology](@). In other words, they must identify the [MRG entry](@) and/or the [curated text](@) that documents this [semantic unit](@).
+Using (or: matching) [form phrases](@) is the process in which for a given word or phrase, it is determined whether or not it refers to a particular [semantic unit](@). This is done, e.g., by the [TRRT](@) as it [tries to find](trrt#finding-mrg-entry@) an [MRG entry](@) that corresponds with the [`showtext`](trrt#interpreter-profile@) field of a [TermRef](@).
 
-Here is how a [form phrase](@) is matched against:
+This matching process uses the contents of the `formPhrases` field of [MRG entries](@), which are [derived from](mrgt#processing-form-phrases) the contents of the `formPhrases` field of [curated texts](@), and proceeds as follows:
 
-1. [MRG entries](@), given the [MRG](@):
-    1. [Regularize](regularized-form-phrase#regularization-process@) the [form phrase](@);
-    2. Find all [MRG entries](@) that have the result an an entry in its `formPhrases`-field;
-    3. If there is a single such an [MRG entry](@), that is the one that matches the [form phrase](@).
+1. [Regularize](regularized-form-phrase#regularization-process@) the given word or phrase;
+2. Find all [MRG entries](@) that have the result an an entry in its `formPhrases`-field;
+3. If there is a single such an [MRG entry](@), then the text is a [form phrase](@) for the [semantic unit](@) described by that [MRG entry](@).
 
-2. [Curated texts](@):
-    1. [Regularize](regularized-form-phrase#regularization-process@) the [form phrase](@);
-    2. Find all [curated texts](@) (in the [curatedir](@) of the [current scope](@)) that have a `formPhrases`-field whose entries, after having been [regularized](regularized-form-phrase#regularization-process@), are identical to the result of step 1;
-    3. If there is a single such [curated text](@), that is the one that matches the [form phrase](@).
+It is possible that there is no matching [MRG entries](@).
 
-It is possible that there is no matching [MRG entries](@) and/or [curated texts](@).
+If multiple [MRG entries](@) match, that is an error condition - that should not happen. Such conditions are typically flagged, e.g., as an error by the [MRGT](@), and they need to be resolved.
 
-If there are more than one matching [MRG entries](@) and/or [curated texts](@), that is an error condition - that should not happen. Such conditions are typically flagged, e.g., as an error by the [MRGT](@), and they need to be resolved.
-
-## Guidance for choosing Form Phrases {#guidance}
+## Guidance for Specifying Form Phrases in Curated Texts {#guidance}
 
 1. **Character Composition**: A form phrase is composed of a sequence of characters that may include letters, numbers, and spaces. Spaces are permissible if they are a standard part of the term (e.g., "hard drive").
 

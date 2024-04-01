@@ -8,10 +8,10 @@ termType: concept
 isa:
 glossaryAbbr: "Macro Map"
 glossaryTerm: "Form Phrase Macro Map"
-glossaryText: "a list of [form phrase macros](@); these maps are used by tools such as the [MRGT](@) and the [TRRT](@)."
+glossaryText: "a list of [form phrase macros](@) that the [MRGT](@) will use to expand [form phrases](@) as specified for [curated texts](@) into [form phrases](@) as specified for [MRGs](@)."
 glossaryNotes:
 - "Form-phrase macro maps can be specified in the `scope` section of a [SAF](@)" 
-- "Form-phrase macro maps can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@) and/or [TRRT](@)." 
+- "Form-phrase macro maps can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@)." 
 formPhrases: [ "formphrase macro map{ss}", "formphrase macromap{ss}", "form-phrase macro map{ss}", "form-phrase macromap{ss}", "macro map{ss}", "macromap{ss}" ]
 # Curation status
 status: proposed
@@ -25,9 +25,9 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 # Form Phrase Macro Maps
 
-A **Form Phrase Macro Map** is a list of [form phrase macros](@). Such lists are used by tools such as the [MRGT](@) and the [TRRT](@).
+A **Form Phrase Macro Map** is a list of [form phrase macros](@) that the [MRGT](@) will use to expand [form phrases](@) as specified for [curated texts](@) into [form phrases](@) as specified for [MRGs](@).
 
-[Form phrase macros](@) are typically useful in a limited set of languages. One might even say that for a given language, a specific set of useful [Form phrase macros](@) would exist.
+[Form phrase macros](@) are typically useful for [scopes](@) in which [terms](@) are used that exist in particular languages, such as English, French, Dutch, etc. For every such language, particular sets of [form phrase macros](@) would be useful, which can be specified as [form-phrase macro maps](@).
 
 ## Purpose
 
@@ -38,7 +38,7 @@ A [form phrase macro map](@) enables [curators](@) to define a set of [form phra
 [Form phrase macro maps](@) can be specified in
 
 - the `scope` section of the [SAF](@) of such [scopes](@), or
-- a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@) and/or [TRRT](@).
+- a [configuration file](/docs/specs/files/configuration-file) that is used when calling the [MRGT](@).
 
 Whenever a [TEv2 tool](@) (e.g., the [MRGT](@)) needs a [form phrase macro map](@), this [macro map](@) is constructed as follows:
 
@@ -55,10 +55,10 @@ Here is an example of a [macro map](@) that specifies a set of [form phrase macr
 
 ~~~ yaml
 macros:
-- "{ss}":   ["", "s", "'s", "(s)"],      // "act{ss}" --> "act", "acts", "act's", "act(s)"
-- "{ess}":  ["", "es", "'s", "(es)"],    // "regex{es}" --> "regex", "regexes", "regex's", "regex(es"
-- "{yies}": ["y", "y's", "ies"],         // "part{yies}" --> "party", "party's", "parties"
-- "{ying}": ["y", "ying", "ies", "ied"], // "identif{ying}" --> "identify", "identifying", "identifies", "identified"
-- "{es}":   ["e", "es", "ed", "ing"],    // "mangag{es}" --> "manage", "manages", "managed", "managing"
-- "{able}": ["able", "ability"]          // "cap{able}" --> "capable", "capability"
+  "{ss}":   ["", "s", "'s", "(s)"],      # "act{ss}" --> "act", "acts", "act's", "act(s)"
+  "{ess}":  ["", "es", "'s", "(es)"],    # "regex{es}" --> "regex", "regexes", "regex's", "regex(es"
+  "{yies}": ["y", "y's", "ies"],         # "part{yies}" --> "party", "party's", "parties"
+  "{ying}": ["y", "ying", "ies", "ied"], # "identif{ying}" --> "identify", "identifying", "identifies", "identified"
+  "{es}":   ["e", "es", "ed", "ing"],    # "mangag{es}" --> "manage", "manages", "managed", "managing"
+  "{able}": ["able", "ability"]          # "cap{able}" --> "capable", "capability"
 ~~~

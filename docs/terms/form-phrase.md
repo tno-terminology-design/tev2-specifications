@@ -11,7 +11,7 @@ glossaryText: "a word or phrase that refers to a particular [semantic unit](@), 
 glossaryNotes:
 - "The set of [form phrases](@) that [TEv2 tools](@) can recognize, is specified in the [curated text](@) that documents that [unit](semantic-unit@). Such specifications may contain [form-phrase macros](@)."
 - "For looking up the [semantic unit](@) (documentation, as specified in its corresponding [MRG entry](@)), [TEv2 tools](@) can match words or phrases they encounter with the [regularized texts](@) that are listed in the `formPhrases` field of [MRG entries](@). Such [regularized texts](@) do not contain [form-phrase macros](@)."
-- "The [MRGT](@) ensures that the texts in the `formPhrases` field of a [curated text](@) are [properly converted](mrgt#processing-form-phrases@), and listed in the `formPhrases` field of the corresponding [MRG entry](@).
+- "The [MRGT](@) ensures that the texts in the `formPhrases` field of a [curated text](@) are [properly converted](mrgt#processing-form-phrases@), and listed in the `formPhrases` field of the corresponding [MRG entry](@)."
 formPhrases: [ "formphrase{ss}", "form-phrase{ss}" ]
 # Curation status
 status: proposed

@@ -113,7 +113,7 @@ The following subsections specify the particulars of the [HRGT](@): the [interpr
 
 ### HRGT Interpreter Profile {#interpreter-profile}
 
-The [interpreter profile](@) of the [HRGT](@) consist of the following [named capturing groups](@):
+The [interpreter profile](@) of the [HRGT](@) consists of the following [named capturing groups](@) that are to be populated by the [predefined interpreters](#predefined-interpreters), as well as by any custom [interpreter](@).
 
 <details>
   <summary>Legend</summary>
@@ -162,6 +162,18 @@ For completeness, here is the [regex] that defines the `default` [interpreter](@
 ~~~ regex
 {%\s*hrg="(?<hrg>[^"]*)"\s*(?:converter="(?<converter>[^"]*)"\s*)?(?:sorter="(?<sorter>[^"]*)"\s*)?%}
 ~~~
+
+### Interpreter Customization {#interpreter-customization}
+
+It may happen that an [interpreter](@) is needed that is not predefined. Fortunately, [interpreters](@) can be added by specifying a [regex](@) that populates the [named capturing groups](@) as specified by the [interpreter profile](hrgt#interpreter-profile@).
+
+This [regex](@) can be specified:
+- as a [command-line argument](hrgt#-int@)
+- in (the `hrgt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
+
+:::info Editor's note
+In future, it may become possible to specify [interpreters](@) and [converters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@) or [converter](@) of one's choice.
+:::
 
 ### Processing {#processing}
 
@@ -282,6 +294,20 @@ This [converter](@) uses the following functions.
 
 -----
 
+### Converter Customization {#converter-customization}
+
+It may happen that [HRG entries](@) must be formatted in a way that hasn't been foreseen, requiring a  [converter](@) that wasn't predefined. Fortunately, [converters](@) can be added by specifying a [handlebars template](@) that constructs the appropriate [HRG Entries](@) from the values that are available in the [converter profile](#converter-profile) of the [HRGT](@). Examples of what such [converters](@) might look like are given in the section about [predefined converters](#predefined-converters)
+
+A [converter](@) can be specified:
+- as a [command-line argument](hrgt#-con@)
+- in (the `hrgt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
+
+:::info Editor's note
+In future, it may become possible to specify [interpreters](@), [converters](@) and [sorters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@), [converter](@), or [sorter](@) of one's choice.
+:::
+
+curl -H "Accept: application/vnd.github+json" https://api.github.com/repos/:tno-terminology-design/:tev2-tools/issues/events
+
 ### HRGT Predefined Sorters {#predefined-sorters}
 
 A [HRG](@) is a sorted list of [HRG entries](@), where sorting can be done in various ways. By default (i.e. when the `sort` option isn't specified), this is done as specified by the (predefined) `default` sorting option. 
@@ -296,6 +322,18 @@ The predefined sorting options are as follows:
 [^1]: Note that the value of the `termid` field of an [MRG entry](@) is unique within the [MRG](@) that holds the [MRG entry](@) - it serves as a 'primary key'. That's why sorting first on the `term` field and then on the `termType` field makes the sort unique. Also note that this sorting differs from sorting on the `termid` field itself, as this would result in an [HRG](@) in which the [entries](hrg-entry@) are grouped according to their `termType` - thus [concepts](@), [patterns](@), and other kinds of [semantic units](@) are then grouped.
 
 Alternatively, you can specify a [handlebars template](@). Every field in the [MRG entry](@) that is being converted can be used as a variable. So, specifying `--sorter "{{glossaryText}}"` would sort the [HRG](@) according to the contents of the `glossaryText` field in the [MRG entries](@).
+
+### Sorter Customization {#sorter-customization}
+
+It may happen that a [sorter](@) is needed that is not predefined. Fortunately, [sorters](@) can be added by specifying a [handlebars template](@) that constructs a text that will be used as the value (key) on which sorting takes place.
+
+A [sorter](@) can be specified:
+- as a [command-line argument](hrgt#-con@)
+- in (the `hrgt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
+
+:::info Editor's note
+In future, it may become possible to specify [interpreters](@), [converters](@) and [sorters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@), [converter](@), or [sorter](@) of one's choice.
+:::
 
 ## Example
 

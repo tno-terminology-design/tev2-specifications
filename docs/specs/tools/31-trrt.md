@@ -11,11 +11,11 @@ import APITable from '@site/src/components/APITable';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@) that takes files that contain so-called [TermRefs](@) as inputs, and that outputs (a copy of) these files in which these [TermRefs](@) are converted into [renderable refs](@).
+The **Term Ref Resolution Tool ([TRRT](@))** is a [TEv2 text conversion tool](@). It takes files that contain so-called [TermRefs](@) as inputs, and  outputs (a copy of) these files in which these [TermRefs](@) are converted into [renderable refs](@).
 
-While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-refs#default), alternative syntaxes can be used by choosing another (predefined) syntax, or creating your own syntax (i.e. an [interpreter](@) that conforms to the [TRRT interpreter profile](trrt#interpreter-profile@) and configuring it for use by the [TRRT](@).
+While [TermRefs](@) have a [default syntax](/docs/specs/syntax/term-refs#default), alternative (predefined) syntaxes are available for use. Alternative [syntaxes](interpreters@) can be defined that conform to the [TRRT interpreter profile](trrt#interpreter-profile@). They can be used by configuring them as the [interpreter](@) of choice for the [TRRT](@) (as a command-line parameter, or in the [configuration file](/docs/specs/files/configuration-file) that the [TRRT](@) uses).
 
-[Renderable refs](@) do not have a default structure, but there are various [predefined converters](#predefined-converters) that can be chosen, and subsequently specified for use by the [TRRT](@).
+[Renderable refs](@) do not have a default structure. They are constructed by so-called [converters](@), of which a number are [predefined](#predefined-converters). The [converter](@) of choice must be configured for use, by specifying it as a command-line parameter or in the [configuration file](/docs/specs/files/configuration-file) that the [TRRT](@) uses.
 
 <details>
   <summary>Examples of TermRef conversions</summary>
@@ -182,7 +182,7 @@ The following subsections specify the particulars of the [TRRT](@): the [interpr
 
 ### TRRT Interpreter Profile {#interpreter-profile}
 
-The [interpreter profile](@) of the [TRRT](@) consist of the following [named capturing groups](@) that are used by the [predefined interpreters](#predefined-interpreters).
+The [interpreter profile](@) of the [TRRT](@) consists of the following [named capturing groups](@) that are to be populated by the [predefined interpreters](#predefined-interpreters), as well as by any custom [interpreter](@).
 
 <details>
   <summary>Legend</summary>
@@ -208,7 +208,7 @@ Note that the values of these specified [capturing groups](@) will be [regulariz
 
 ### TRRT Predefined Interpreters {#predefined-interpreters}
 
-The following sections specify the predefined [interpreters](@) for the [TRRT](@).
+The following sections specify the [interpreters](@) that are predefined for the [TRRT](@).
 
 #### The `default` Interpreter {#default-syntax}
 
@@ -256,6 +256,18 @@ For completeness, below is the [regex](@) that defines the `alt` [interpreter](@
 ~~~ regex
 (?:(?<=[^`\\])|^)\[(?=[^@\n\]]+?@[:a-z0-9_-]*\](?:\([#:a-z0-9_-]+\))?)(?<showtext>[^@\n\]]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*?))?\](?:\((?:(?:(?<type>[a-z0-9_-]+):)?)(?<term>[^@\n:#)]*?)(?:#(?<trait>[^@\n:#)]+?))?\))?
 ~~~
+
+### Interpreter Customization {#interpreter-customization}
+
+It may happen that an [interpreter](@) is needed that is not predefined. Fortunately, [interpreters](@) can be added by specifying a [regex](@) that populates the [named capturing groups](@) as specified by the [interpreter profile](trrt#interpreter-profile@).
+
+This [regex](@) can be specified:
+- as a [command-line argument](trrt#-int@)
+- in (the `trrt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [TRRT](@) is specified to use.
+
+:::info Editor's note
+In future, it may become possible to specify [interpreters](@) and [converters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@) or [converter](@) of one's choice.
+:::
 
 ### Processing {#processing}
 
@@ -420,6 +432,18 @@ This [converter](@) uses the following functions.
 </Tabs>
 
 -----
+
+### Converter Customization {#converter-customization}
+
+It may happen that a [converter](@) is needed that is not predefined. Fortunately, [converters](@) can be added by specifying a [handlebars template](@) that constructs the [renderable refs](@) that are to replace the [TermRefs](@), based on the [converter profile](#converter-profile) of the [TRRT](@). Examples are given in the section about [predefined converters](#predefined-converters)
+
+A [converter](@) can be specified:
+- as a [command-line argument](hrgt#-con@)
+- in (the `hrgt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
+
+:::info Editor's note
+In future, it may become possible to specify [interpreters](@), [converters](@) and [sorters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@), [converter](@), or [sorter](@) of one's choice.
+:::
 
 ## Errors and Warnings
 

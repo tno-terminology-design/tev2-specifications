@@ -100,7 +100,7 @@ mrg:
   altvsntags:
     - "latest"
 err:
-  file: "12-trrt.md"
+  file: "31-trrt.md"
   dir: "/specs/tools"
   line: 73
   pos: 9

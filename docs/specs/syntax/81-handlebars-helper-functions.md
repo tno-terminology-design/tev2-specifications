@@ -57,7 +57,7 @@ reconstructs the input string fomr the split items, and returns the result.*
 
 The function of the helper `log` is to output a text string to the log of a tool that uses a [converter](@) from which it is called. This allows users to enhance debugging output.
 
-This helper extends the [functionality of the `log` helper that is built into Handlebars itself]https://handlebarsjs.com/guide/builtin-helpers.html#log). The helper is based on [tslog](https://tslog.js.org), which has [lots of other features](https://tslog.js.org/#/?id=all-features).
+This helper extends the [functionality of the `log` helper that is built into [Handlebars itself]https://handlebarsjs.com/guide/builtin-helpers.html#log). The helper is based on [tslog](https://tslog.js.org), which has [lots of other features](https://tslog.js.org/#/?id=all-features).
 
 Particular to our `log` helper is the feature that allows users to suppress log messages. This is useful, for example, when using a [converter](@) in the [HRGT](@) that determines whether or not to allow an [MRG entry](@) to appear in the [HRG](@) that is being created. In such cases, the log would be littered with log messages that no output is being generated, which can now be suppressed.
 

@@ -12,12 +12,52 @@ terminology:
     - "proposed"
     - "approved"
     - "deprecated"
-  issues: "https://github.com/tno-terminology-design/tev2-specifications/issues"
-  curators:
-    - name: "RieksJ"
-      email:
-        id: "rieks.joosten"
-        at: "tno.nl"
+  mappings:
+    formphrases:
+      macros:
+        "{ss}":
+          - ""
+          - "s"
+          - "'s"
+          - "(s)"
+        "{ess}":
+          - ""
+          - "es"
+          - "'s"
+          - "(es)"
+        "{yies}":
+          - "y"
+          - "y's"
+          - "ies"
+        "{ying}":
+          - "y"
+          - "ying"
+          - "ies"
+          - "ied"
+        "{es}":
+          - "e"
+          - "es"
+          - "ed"
+          - "ing"
+        "{able}":
+          - "able"
+          - "ability"
+    trrt:
+      interpreters:
+        default: "(?:(?<=[^`\\\\\\\\])|^)\\\\[(?=[^@\\\\n\\\\]]+\\\\]\\\\([^@)]*@[:a-z0-9_-]*\\\\))(?<showtext>[^@\\\\n\\\\]]+)\\\\]\\\\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<term>[^@\\\\n:#)]*?)?(?:#(?<trait>[^@\\\\n:#)]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\\\\)"
+        alt: "(?:(?<=[^`\\\\\\\\])|^)\\\\[(?=[^@\\\\n\\\\]]+?@[:a-z0-9_-]*\\\\](?:\\\\([#:a-z0-9_-]+\\\\))?)(?<showtext>[^@\\\\n\\\\]]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*?))?\\\\](?:\\\\((?:(?:(?<type>[a-z0-9_-]+):)?)(?<term>[^@\\\\n:#)]*?)(?:#(?<trait>[^@\\\\n:#)]+?))?\\\\))?"
+      converters:
+        html-with-notes: "## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\\n\\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\\n\\n{{#if glossaryNotes}}### Notes\\n\\n{{#each glossaryNotes}}- {{this}}\\n{{/each}}\\n{{/if}}"
+        html-abbrs: "{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\\n\\nSee: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\\n\\n{{else}}{{log level=\"silent\"}}{{/if}}"
+        remove-termref-and-log-error: "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+        markdown-link: "[{{ref.showtext}}]({{entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}})"
+        html-link: "<a href=\"{{entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}\">{{ref.showtext}}</a>"
+        html-hovertext-link: "<a href=\"{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}\" title=\"{{#if entry.hoverText}}{{entry.hoverText}}{{else}}{{#if entry.glossaryTerm}}{{entry.glossaryTerm}}{{else}}{{capFirst entry.term}}{{/if}}: {{noRefs entry.glossaryText type=\"markdown\"}}{{/if}}\">{{ref.showtext}}</a>"
+        html-glossarytext-link: "<a href=\"{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}\" title=\"{{capFirst entry.term}}: {{noRefs entry.glossaryText type=\"markdown\"}}\">{{ref.showtext}}</a>"
+    hrgt:
+      interpreters: null
+      converters: null
+      sorters: null
   defaulttype: "concept"
   vsntag: "documentation"
   altvsntags:

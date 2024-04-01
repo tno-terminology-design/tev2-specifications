@@ -3192,16 +3192,16 @@ entries:
     vsntag: "documentation"
   - id: "author"
     displayed_sidebar: "tev2SideBar"
-    term: "writer"
+    term: "xriter"
     termType: "concept"
     isa: null
     glossaryTerm: "Writer"
     glossaryText: "a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
     grouptags: []
     formPhrases:
-      - "riter"
-      - "riters"
-      - "riter-s"
+      - "writer"
+      - "writers"
+      - "writer-s"
     status: "proposed"
     created: 20230723
     updated: 20230723
@@ -3213,6 +3213,6 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author"
     headingids:
       - "author"
-    termid: "concept:writer"
+    termid: "concept:xriter"
     vsntag: "documentation"
     synonymOf: "author"

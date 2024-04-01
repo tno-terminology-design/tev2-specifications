@@ -1,9 +1,9 @@
 ---
 # TEv2 Curated Text Header
-term: writer
+term: xriter
 glossaryTerm: Writer
 synonymOf: author
-formPhrases: [ "riter{ss}" ]
+formPhrases: [ "writer{ss}" ]
 ---
 
 This text should not show anywhere, as it is a Synonym.

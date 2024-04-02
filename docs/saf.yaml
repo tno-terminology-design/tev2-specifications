@@ -15,12 +15,12 @@ scope:
   navid: id # Name of the field in the front matter of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used. | 
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
   statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
-# The subsection of `scope` here below is not yet functional.
+# The subsection `mappings` is not yet functional - see tev2-tools/issue#.
   mappings:
-    formphrases:
-      # If one or more macros are specified here below, only they will be used by the MRGT.
-      # And in that case, all macros defined in the tools will be disregarded.
-      macros:
+    mrgt:
+    # If one or more formphrase macros are specified here below, only they will be used by the MRGT.
+    # And in that case, all formphrase macros defined in the TEv2 code will be disregarded.
+      formphrase-macros:
         "{ss}":   ["","s","'s","(s)"]      # "act{ss}" --> "act", "acts", "act's", "act(s)"
         "{ess}":  ["","es","'s","(es)"]    # "regex{es}" --> "regex", "regexes", "regex's", "regex(es"
         "{yies}": ["y","y's","ies"]        # "part{yies}" --> "party", "party's", "parties"
@@ -34,10 +34,6 @@ scope:
         default: '(?:(?<=[^`\\\\])|^)\\[(?=[^@\\n\\]]+\\]\\([^@)]*@[:a-z0-9_-]*\\))(?<showtext>[^@\\n\\]]+)\\]\\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<term>[^@\\n:#)]*?)?(?:#(?<trait>[^@\\n:#)]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\\)'
         alt: '(?:(?<=[^`\\\\])|^)\\[(?=[^@\\n\\]]+?@[:a-z0-9_-]*\\](?:\\([#:a-z0-9_-]+\\))?)(?<showtext>[^@\\n\\]]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*?))?\\](?:\\((?:(?:(?<type>[a-z0-9_-]+):)?)(?<term>[^@\\n:#)]*?)(?:#(?<trait>[^@\\n:#)]+?))?\\))?'
       converters: # note that you do not inadvertently mix single and double quotes.
-        "html-with-notes":
-          '## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}'
-        "html-abbrs":
-          '{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\n\nSee: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\n\n{{else}}{{log level="silent"}}{{/if}}'
         "remove-termref-and-log-error":
           "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
         # the converters here below are the same as defined in tev2-tools.
@@ -53,7 +49,11 @@ scope:
     # all interpreters/converters/sorters specified below are added to the set that the TRRT already has
     # if an interpreter/converter/sorter is predefined, the specification below will override the predefined one.
       interpreters: # note that backslashes in regexes need to be properly escaped.
-      converters:
+      converters: # note that you do not inadvertently mix single and double quotes.
+        "html-with-notes":
+          '## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}no `glossaryText` was specified for this entry.{{/if}}\n\n{{#if glossaryNotes}}### Notes\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}'
+        "html-abbrs":
+          '{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\n\nSee: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\n\n{{else}}{{log level="silent"}}{{/if}}'
       sorters:
 #
 # The second section contains a mapping between scopetags that are used within the scope, and the associated scopedirs.

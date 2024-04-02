@@ -10,6 +10,7 @@ glossaryTerm: Semantic Unit
 glossaryText: "a basic building block of meaning or representation that exists within the 'mind' of a [party](@) (i.e., in its [knowledge](@essif-lab))."
 glossaryNotes:
 - "Examples include ideas, or [concepts](@), [properties](@) of [concepts](@), [relations](@) between [concepts](@), constraints over such [concepts](@) and [relations](@), etc."
+- "the term '[semantic unit](@)' is often conflated with the term '[concept](@)'."
 grouptags: [ ]
 formPhrases: [ "semantic-unit{ss}" ]
 # Curation status

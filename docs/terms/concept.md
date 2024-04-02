@@ -8,6 +8,8 @@ termType: concept
 isa: semantic-unit
 glossaryTerm:
 glossaryText: "a [semantic unit](@) that captures the ideas/thoughts behind a classification of [entities](@) (what makes [entities](@) in that class 'the same')."
+glossaryNotes:
+- "the term '[concept](@)' is often conflated with the term '[semantic unit](@)'."
 grouptags: [ ]
 formPhrases: [ "concept{ss}" ]
 # Curation status

@@ -66,6 +66,28 @@ scopes:
   - scopetag: "essif-lab"
     scopedir: "https://github.com/essif-lab/framework/tree/master/docs"
 entries:
+  - id: "act"
+    displayed_sidebar: "essifLabSideBar"
+    termType: "concept"
+    term: "act"
+    formPhrases: "act{ss}"
+    status: "draft"
+    grouptags: null
+    hoverText: "Action: something that is actually done (a 'unit of work' that is executed) by a single Actor (on behalf of a given Party), as a single operation, in a specific context."
+    glossaryTerm: "Action"
+    glossaryText: "something that is actually done (a 'unit of work' that is executed) by a single [actor](@) (on behalf of a given [party](@)), as a single operation, in a specific context."
+    date: 20220324
+    scopetag: "essiflab"
+    locator: "action.md"
+    navurl: "https://essif-lab.github.io/framework/docs/terms/action"
+    headingids:
+      - "action"
+      - "short-description"
+      - "purpose"
+      - "criterion"
+      - "notes"
+    termid: "concept:act"
+    vsntag: "default"
   - id: "action"
     displayed_sidebar: "essifLabSideBar"
     termType: "concept"
@@ -84,7 +106,7 @@ entries:
     glossaryTerm: "Action"
     glossaryText: "something that is actually done (a 'unit of work' that is executed) by a single [actor](@) (on behalf of a given [party](@)), as a single operation, in a specific context."
     date: 20220324
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "action.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/action"
     headingids:
@@ -112,7 +134,7 @@ entries:
     glossaryTerm: "Actor"
     glossaryText: "entity that can act (do things/execute [action](@)), e.g. people, machines, but not [organization](@)."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "actor.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/actor"
     headingids:
@@ -221,7 +243,7 @@ entries:
     glossaryTerm: "Community"
     glossaryText: "a [party](@), consisting of at least two different [parties](@) (the members of the [community](@)) that seek to collaborate with each other so that each of them can achieve its individual [objective](@) more efficiently and/or effectively."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "community.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/community"
     headingids:
@@ -390,6 +412,7 @@ entries:
       - "terminology"
       - "cm-party-actor-action"
     formPhrases:
+      - "curate"
       - "curates"
       - "curated"
       - "curating"
@@ -592,6 +615,7 @@ entries:
     grouptags:
       - "terminology"
     formPhrases:
+      - "define"
       - "defines"
       - "defined"
       - "defining"
@@ -651,6 +675,7 @@ entries:
     glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the criteria to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
     grouptags: []
     formPhrases:
+      - "definition"
       - "definition-pattern"
       - "definition-patterns"
       - "definition-pattern-s"
@@ -719,7 +744,7 @@ entries:
     glossaryTerm: "Entity"
     glossaryText: "someone or something that is known to exist."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "entity.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/entity"
     headingids:
@@ -742,10 +767,10 @@ entries:
       - "For looking up the [semantic unit](@) (documentation, as specified in its corresponding [MRG entry](@)), [TEv2 tools](@) can match words or phrases they encounter with the [regularized texts](@) that are listed in the `formPhrases` field of [MRG entries](@). Such [regularized texts](@) do not contain [form-phrase macros](@)."
       - "The [MRGT](@) ensures that the texts in the `formPhrases` field of a [curated text](@) are [properly converted](mrgt#processing-form-phrases@), and listed in the `formPhrases` field of the corresponding [MRG entry](@)."
     formPhrases:
+      - "form-phrase"
       - "formphrase"
       - "formphrases"
       - "formphrase-s"
-      - "form-phrase"
       - "form-phrases"
       - "form-phrase-s"
     status: "proposed"
@@ -773,10 +798,10 @@ entries:
     glossaryTerm: "Form Phrase Macro"
     glossaryText: "a sequence of characters (the macro name) that identifies a sequence (map) of character strings that specify typical variations of a [form phrase](@), such as plural forms, possessie extensions, verb-conjugation forms, etc."
     formPhrases:
+      - "form-phrase-macro"
       - "formphrase-macro"
       - "formphrase-macros"
       - "formphrase-macro-s"
-      - "form-phrase-macro"
       - "form-phrase-macros"
       - "form-phrase-macro-s"
     status: "proposed"
@@ -808,13 +833,13 @@ entries:
       - "Form-phrase macro maps can be specified in the `scope` section of a [SAF](@)"
       - "Form-phrase macro maps can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@)."
     formPhrases:
+      - "form-phrase-macro-map"
       - "formphrase-macro-map"
       - "formphrase-macro-maps"
       - "formphrase-macro-map-s"
       - "formphrase-macromap"
       - "formphrase-macromaps"
       - "formphrase-macromap-s"
-      - "form-phrase-macro-map"
       - "form-phrase-macro-maps"
       - "form-phrase-macro-map-s"
       - "form-phrase-macromap"
@@ -889,7 +914,8 @@ entries:
     scopetag: "tev2"
     locator: "front-matter.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/front-matter"
-    formPhrases: []
+    formPhrases:
+      - "front-matter"
     headingids:
       - "front-matter"
       - "tev2-use-of-front-matter"
@@ -1077,10 +1103,10 @@ entries:
     glossaryNotes:
       - "The [converter profile](@) of a [text conversion tool](@) specifies the structure (type) of the data objects that it will pass to its [converters](@)"
     formPhrases:
+      - "handlebars-object"
       - "handlebar-object"
       - "handlebar-objects"
       - "handlebar-object-s"
-      - "handlebars-object"
       - "handlebars-objects"
       - "handlebars-object-s"
       - "handlebar-s-object"
@@ -1116,10 +1142,10 @@ entries:
       - "Handlebars templates ([converters](@)) are characterized by their use of Handlebars expressions within the templates."
     grouptags: []
     formPhrases:
+      - "handlebars-template"
       - "handlebar-template"
       - "handlebar-templates"
       - "handlebar-template-s"
-      - "handlebars-template"
       - "handlebars-templates"
       - "handlebars-template-s"
       - "handlebar-s-template"
@@ -1233,13 +1259,13 @@ entries:
       - "tools"
       - "dictionary-tools"
     formPhrases:
+      - "hrdt"
       - "human-readable-dictionary-tool"
       - "human-readable-dictionary-tools"
       - "human-readable-dictionary-tool-s"
       - "hrd-tool"
       - "hrd-tools"
       - "hrd-tool-s"
-      - "hrdt"
       - "hrdts"
       - "hrdt-s"
     status: "proposed"
@@ -1469,12 +1495,12 @@ entries:
     glossaryText: "the process that is run by a [terms-community](@), in which their members suggest, draft, and discuss [definitions](@) ([terms](@) + [criteria](@)) that are relevant for a particular [scope](@), and converting such contributions into [curated texts](@) that accurately document the [concepts](@) and other [semantic units](@) and that adhere to the [TEv2-specifications](/docs/specs/files/curated-text-file)."
     grouptags: []
     formPhrases:
+      - "ingestion"
       - "ingestion-process"
       - "ingestion-processes"
       - "ingest"
       - "ingests"
       - "ingested"
-      - "ingestion"
     status": "proposed"
     created: 20230731
     updated: 20230731
@@ -1582,7 +1608,7 @@ entries:
     glossaryTerm: "Legal Entity"
     glossaryText: "an [entity](@) that is known by, recognized to exist, and registered in that [jurisdiction](@)."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "legal-entity.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/legal-entity"
     headingids:
@@ -1667,10 +1693,10 @@ entries:
     glossaryText: "a type of [dictionary](@) that is formatted in a way that can be easily processed and interpreted by computers or software programs. It uses the YAML format to represent the [terms](@) and their meanings."
     grouptags: []
     formPhrases:
+      - "mrd"
       - "machine-readable-dictionary"
       - "machine-readable-dictionary-s"
       - "machine-readable-dictionaries"
-      - "mrd"
       - "mrds"
       - "mrd-s"
       - "machine-readable-dictionary-mrd"
@@ -1703,13 +1729,13 @@ entries:
       - "tools"
       - "dictionary-tools"
     formPhrases:
+      - "mrdt"
       - "machine-readable-dictionary-tool"
       - "machine-readable-dictionary-tools"
       - "machine-readable-dictionary-tool-s"
       - "mrd-tool"
       - "mrd-tools"
       - "mrd-tool-s"
-      - "mrdt"
       - "mrdts"
       - "mrdt-s"
     status: "proposed"
@@ -2019,7 +2045,7 @@ entries:
     glossaryTerm: "Organization"
     glossaryText: "a [party](@) that is capable of setting [objective](@) and making sure these are realized by [actor](@) that it has [onboarded](onboarding@) and/or by (vetted) [parties](@) that are committed to contribute to these [objective](@)."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "organization.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/organization"
     headingids:
@@ -2045,7 +2071,7 @@ entries:
     glossaryTerm: "Party"
     glossaryText: "an [entity](@) that sets its [objective](@), maintains its [knowledge](@), and uses that [knowledge](@) to pursue its [objective](@) in an autonomous (sovereign) manner. Humans and [organization](@) are the typical examples."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "party.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/party"
     headingids:
@@ -2204,10 +2230,10 @@ entries:
     glossaryTerm: "Regularized Form Phrase"
     glossaryText: "a [regularized text](@) that is derived from, and represents a [form phrase](@). They typically appear in the `formPhrases` field of an [MRG entry](@)."
     formPhrases:
+      - "regularized-form-phrase"
       - "regularized-formphrase"
       - "regularized-formphrases"
       - "regularized-formphrase-s"
-      - "regularized-form-phrase"
       - "regularized-form-phrases"
       - "regularized-form-phrase-s"
     status: "proposed"
@@ -2843,6 +2869,7 @@ entries:
     glossaryText: "a [mental model](@) that describes the relations between a [community](@), its (intangible) [knowledge](@essif-lab), and the artifacts we use to document that [knowledge](@essif-lab), such as [terms](@), [definitions](@), [mental models](@), [glossaries](@), etc."
     grouptags: []
     formPhrases:
+      - "terminology"
       - "terminology-pattern"
       - "terminology-patterns"
       - "terminology-pattern-s"
@@ -2928,6 +2955,7 @@ entries:
     glossaryText: "a method for recognizing misunderstandings as such, and creating or maintaining [definitions](@) that resolve them."
     grouptags: []
     formPhrases:
+      - "terminology-process"
       - "terminology-processes"
     status: "proposed"
     created: 20230723
@@ -2993,7 +3021,8 @@ entries:
     scopetag: "tev2"
     locator: "tev2.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/tev2"
-    formPhrases: []
+    formPhrases:
+      - "tev2"
     headingids:
       - "tev2-(terminology-engine,-version-2)"
       - "summary"
@@ -3253,6 +3282,7 @@ entries:
     glossaryText: "a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
     grouptags: []
     formPhrases:
+      - "xriter"
       - "writer"
       - "writers"
       - "writer-s"

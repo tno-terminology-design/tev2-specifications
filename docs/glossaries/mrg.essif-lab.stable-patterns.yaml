@@ -40,7 +40,7 @@ entries:
     glossaryText: "a set of [concepts](@) and other [semantic units](@) that can be used to explain what a generic [guardianship](@) consists of, and how it relates to [guardians](@), [dependents](@), [jurisdictions](@), etc."
     hoverText: "The Guardianships pattern captures the Concepts and relations that explain what a generic Guardianship consists of, and how it relates to Guardians, Dependents, Jurisdictions, etc."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "pattern-guardianship.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/pattern-guardianship"
     headingids:
@@ -65,7 +65,7 @@ entries:
     glossaryText: "a set of [concepts](@) and other [semantic units](@) that can be used to explain what a generic [jurisdiction](@) consists of, and relates it to [parties](@) and [legal entities](@)."
     hoverText: "The Jurisdictions pattern captures the Concepts and relations that explain what a generic Jurisdiction consists of, and relates it to Parties and Legal Entities."
     date: 20210601
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "pattern-jurisdiction.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/pattern-jurisdiction"
     headingids:
@@ -88,7 +88,7 @@ entries:
     glossaryText: "a set of [concepts](@) and other [semantic units](@) that can be used to explain how things get done. It answers questions such as: 'Who/what does things?', 'How are their actions being guided/controlled?', 'Who controls whom/what?', 'Who/what may be held accountable?'."
     hoverText: "The Parties, Actors and Actions pattern captures the foundational concepts and relations that we need for thinking about how things get done. It answers questions such as: 'Who/what does things?', 'How are their actions being guided/controlled?', 'Who controls whom/what?', 'Who/what may be held accountable?'."
     date: 20210602
-    scopetag: "essif-lab"
+    scopetag: "essiflab"
     locator: "pattern-party-actor-action.md"
     navurl: "https://essif-lab.github.io/framework/docs/terms/pattern-party-actor-action"
     headingids:

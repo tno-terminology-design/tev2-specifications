@@ -30,6 +30,6 @@ trrt:
   converter: html-hovertext-link # `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`, mustache/handlebars template
   # The below is to be replaced with the converters as defined in the SAF:
   # converter[error]: remove-termref-and-log-error
-  converter[error]: "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+  converter[error]: "{{ref.showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
   input:                         # glob pattern for files to be processed
     - "**/*.md"

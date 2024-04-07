@@ -51,7 +51,7 @@ trrt:
       alt: '(?:(?<=[^`\\\\])|^)\\[(?=[^@\\n\\]]+?@[:a-z0-9_-]*\\](?:\\([#:a-z0-9_-]+\\))?)(?<showtext>[^@\\n\\]]+?)@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*?))?\\](?:\\((?:(?:(?<type>[a-z0-9_-]+):)?)(?<term>[^@\\n:#)]*?)(?:#(?<trait>[^@\\n:#)]+?))?\\))?'
     converters: # note that you do not inadvertently mix single and double quotes.
       "remove-termref-and-log-error":
-        "{{showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+        "{{ref.showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
   # predefined interpreters are `default`, `alt` (and the ones defined in the SAF)
   interpreter: default
   # predefined converters are `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link` (and the ones defined in the SAF)

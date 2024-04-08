@@ -10,7 +10,7 @@ glossaryTerm: Criterion
 glossaryText: "a text that people can evaluate to base a judgment or decision on."
 glossaryNotes:
 - "Every [definition](@) consists of (at least) one [term](@) (that refers to some [semantic unit](@)) and a [criterion](@) that people can use to determine whether or not something is an instance (or example) of that [semantic unit](@)."
-- "we use 'criterion' and 'criteria' as synonyms
+- "we use 'criterion' and 'criteria' as synonyms."
 grouptags: [ ]
 formPhrases: [ ]
 # Curation status

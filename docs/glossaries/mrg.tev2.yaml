@@ -426,18 +426,19 @@ entries:
       - "acknowledgements"
     termid: "concept:corpus"
     vsntag: "documentation"
-  - id: "criteria"
+  - id: "criterion"
     displayed_sidebar: "tev2SideBar"
-    term: "criteria"
+    term: "criterion"
     termType: "concept"
     isa: null
-    glossaryTerm: "Criteria"
-    glossaryText: "a text that people can evaluate to base a judgment or decision on."
+    glossaryTerm: "Criterion"
+    glossaryText: "(aka: criteria) a text that people can evaluate to base a judgment or decision on."
     glossaryNotes:
       - "Every [definition](@) consists of (at least) one [term](@) (that refers to some [semantic unit](@)) and a [criterion](@) that people can use to determine whether or not something is an instance (or example) of that [semantic unit](@)."
-      - "we use 'criterion' and 'criteria' as synonyms."
+      - "Conforming ourselves to [currently common practices](https://www.merriam-webster.com/dictionary/criteria), we use the term 'criteria' both as the plural form, and as a [synonym](@) for [criterion](@)."
     grouptags: []
     formPhrases:
+      - "criterion"
       - "criteria"
     status: "proposed"
     created: 20240408
@@ -449,34 +450,7 @@ entries:
     locator: "criterion.md"
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/criterion"
     headingids:
-      - "criterion"
-    termid: "concept:criteria"
-    vsntag: "documentation"
-    synonymOf: "criterion"
-  - id: "criterion"
-    displayed_sidebar: "tev2SideBar"
-    term: "criterion"
-    termType: "concept"
-    isa: null
-    glossaryTerm: "Criterion"
-    glossaryText: "a text that people can evaluate to base a judgment or decision on."
-    glossaryNotes:
-      - "Every [definition](@) consists of (at least) one [term](@) (that refers to some [semantic unit](@)) and a [criterion](@) that people can use to determine whether or not something is an instance (or example) of that [semantic unit](@)."
-      - "we use 'criterion' and 'criteria' as synonyms."
-    grouptags: []
-    formPhrases:
-      - "criterion"
-    status: "proposed"
-    created: 20240408
-    updated: 20240408
-    contributors: "RieksJ"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
-    scopetag: "tev2"
-    locator: "criterion.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/criterion"
-    headingids:
-      - "criterion"
+      - "criterion-(a.k.a.-criteria)"
     termid: "concept:criterion"
     vsntag: "documentation"
   - id: "curate"
@@ -689,7 +663,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: "Define"
-    glossaryText: "to provide a criterion and a [term](@), where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof."
+    glossaryText: "to provide a [criterion](@) and a [term](@), where the [criterion](@) can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof."
     grouptags:
       - "terminology"
     formPhrases:
@@ -718,7 +692,7 @@ entries:
     termType: "concept"
     isa: null
     glossaryTerm: null
-    glossaryText: "the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@)."
+    glossaryText: "the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a [criterion](@) that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@)."
     grouptags: []
     formPhrases:
       - "definition"
@@ -750,7 +724,7 @@ entries:
     term: "definition"
     termType: "pattern"
     glossaryTerm: "Definition Pattern"
-    glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the criteria to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
+    glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the [criteria](@) to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
     grouptags: []
     formPhrases:
       - "definition"
@@ -2757,7 +2731,7 @@ entries:
     glossaryNotes:
       - "a term is ambiguous if it represents more than one [concept](semantic-unit@)."
       - "a term that is used in a particular [scope](@) (which we call a [scoped term](@)) should not be ambiguous."
-      - "a term that is unambiguous can be made part of a [definition](@) by associating it with a criterion that people can use to determine what is, and what is not, an instance (or: example) of that term."
+      - "a term that is unambiguous can be made part of a [definition](@) by associating it with a [criterion](@) that people can use to determine what is, and what is not, an instance (or: example) of that term."
     grouptags: []
     formPhrases:
       - "term"

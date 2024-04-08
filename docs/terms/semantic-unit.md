@@ -34,7 +34,7 @@ In the context of cognitive science, a semantic unit represents a distinct and w
 
 [Parties](@) use [terms](@) to refer to such building blocks, and as such they are relevant to know about in the context of [terminology](@) [curation](@). Also, [terms](@) can be grouped into [terminologies](@).
 
-[Parties](@) may create a [definition](@) for a [semantic unit](@) by associating the criterion with the [term](@) that it uses to determine what is, and what is not, an instance (or example) of the [semantic unit](@).
+[Parties](@) may create a [definition](@) for a [semantic unit](@) by associating the [criterion](@) with the [term](@) that it uses to determine what is, and what is not, an instance (or example) of the [semantic unit](@).
 
 Within [TEv2](@), [semantic units](@) can be [defined](@) in, and described by [curated texts](@) that belong to a particular [scope](@). They can be clustered to form [terminologies](@), for which [glossaries](@) (both [machine readable](mrg@) and [human readable](hrg@)) can be generated
 

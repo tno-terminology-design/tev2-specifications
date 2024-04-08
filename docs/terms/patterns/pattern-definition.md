@@ -6,7 +6,7 @@ displayed_sidebar: tev2SideBar
 term: definition
 termType: pattern
 glossaryTerm: "Definition Pattern"
-glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the criteria to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
+glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the [criteria](@) to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
 grouptags: [ ]
 formPhrases: [ "definition{ss}-pattern{ss}" ]
 # Curation status
@@ -23,7 +23,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-This [mental model](@) describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the criteria to use for determining whether or not something is an instance (example) of that [semantic unit](@).
+This [mental model](@) describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the [criteria](@) to use for determining whether or not something is an instance (example) of that [semantic unit](@).
 
 ## Purpose
 
@@ -43,13 +43,13 @@ The problem here is that there typically is no guarantee that people use such re
 
 Fortunately, all of us have learned 'the meaning' of a large number of words and phrases, that is: what they mean in the social, cultural, national context in which we have grown up. They are the basic words of our [mother tongue](https://en.wikipedia.org/wiki/First_language). The context in which we grew up ensured that the people therein understand these basic words in the same way, that is: for all practical purposes.
 
-This is the basis on top of which we can introduce new terms, and describe [concepts](semantic-units@) that are new, or that are particular specializations of other [concepts](semantic-units@). Such descriptions should enable others that are to understand these [concepts](semantic-units@). Ideally, they are criteria that enable others to determine what is, and what is not, an instance (or: example) of the [concept](semantic-unit@). 
+This is the basis on top of which we can introduce new terms, and describe [concepts](semantic-units@) that are new, or that are particular specializations of other [concepts](semantic-units@). Such descriptions should enable others that are to understand these [concepts](semantic-units@). Ideally, they are [criteria](@) that enable others to determine what is, and what is not, an instance (or: example) of the [concept](semantic-unit@). 
 
-Such criteria can be tested for validity:
+Such [criteria](@) can be tested for validity:
 
-1. Devise an arbitrary use-cases in which people can  apply the criteria to something.
-2. Have all participants determine whether or not this something complies with the criteria.
-3. If there are participants that have a different judgment, they have a different understanding. To fix this may require adjustment of the criteria
+1. Devise an arbitrary use-cases in which people can  apply the [criteria](@) to something.
+2. Have all participants determine whether or not this something complies with the [criteria](@).
+3. If there are participants that have a different judgment, they have a different understanding. To fix this may require adjustment of the [criteria](@)
 4. The more use-cases are devised in which people have the same judgments, the greater the likelihood that they have the same understanding of the [concept](semantic-unit@) that is being described.
 
 ## Formalized model
@@ -64,8 +64,8 @@ The figure shows [semantic units](@), using a cloud-like symbol to illustrate th
 
 Within the context of its [scope](@), every [semantic unit](@):
 
-- can have at most one determinant, i.e., a criterion (a description) that can be used to determine whether or not something is an instance (or: example) of that [semantic-unit](@).
+- can have at most one determinant, i.e., a [criterion](@) (a description) that can be used to determine whether or not something is an instance (or: example) of that [semantic-unit](@).
 - can be represented by any number of [words or phrases (terms)](term@), which are synonyms (or aliases) of each other.
-- can have at most one [definition](@), which is the composition of all [terms](scoped-term@) that are used to refer to the [semantic unit](@), and the (single) criterion that is its determinant.
+- can have at most one [definition](@), which is the composition of all [terms](scoped-term@) that are used to refer to the [semantic unit](@), and the (single) [criterion](@) that is its determinant.
 
 Thus, a [definition](@) only exists for a [semantic unit](@) in a [scope](@) if the determinant exists, and there is at least one [term](@) that is used within that [scope](@) to refer to it.

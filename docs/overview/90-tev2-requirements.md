@@ -22,7 +22,7 @@ We leave it here so that we can look back and see what has come of all this (or 
 We want a good tool for terminology for a number of reasons, such as
 
 1. sharing a single, good terminology within a group of people, is that it enables them to use its terms in a single meaning that is understood by all members of the group. It helps coming to grips with, e.g., conflation of terms which is an all too common cause of misunderstandings, inefficiencies, etc.
-2. terms that are defined using criteria that enable readers to determine whether or not something is an instance (example) of the concept to which the term refers, enables such concepts to be referenced in documents - even if within the context of that document, another term would be used to refer to that concept.
+2. terms that are defined using [criteria](@) that enable readers to determine whether or not something is an instance (example) of the concept to which the term refers, enables such concepts to be referenced in documents - even if within the context of that document, another term would be used to refer to that concept.
 3. …
 
 We need a technical solution that

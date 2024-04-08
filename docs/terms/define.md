@@ -7,7 +7,7 @@ term: define
 termType: concept
 isa:
 glossaryTerm: Define
-glossaryText: "to provide a criterion and a [term](@), where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof."
+glossaryText: "to provide a [criterion](@) and a [term](@), where the [criterion](@) can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@)), and the [term](@) is used to refer to that [concept](@), or an arbitrary instance thereof."
 grouptags: [ "terminology" ]
 formPhrases: [ "defines", "defined", "defining" ]
 # Curation status
@@ -23,10 +23,10 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 # Define
 
 To **define** is to provide a clear and precise explanation of a concept or term, including its essential characteristics, to establish a shared understanding among a community working together on a particular set of [objectives](@essif-lab). This is done by:
-1. providing a criterion, where the criterion can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@))
+1. providing a [criterion](@), where the [criterion](@) can be used by people to determine whether or not something is an instance/example of a [concept](@) (or other [semantic unit](@))
 2. providing a [term](@), that is proposed for the purpose of referring to that [concept](@) itself, or an arbitrary instance thereof.
 
- Defining concepts accurately, i.e., providing a criterion that precisely makes the proper distinction  is crucial for effective communication and collaboration within the community.
+ Defining concepts accurately, i.e., providing a [criterion](@) that precisely makes the proper distinction  is crucial for effective communication and collaboration within the community.
 
 ### Examples
 

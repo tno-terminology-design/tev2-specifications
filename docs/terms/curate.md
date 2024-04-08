@@ -26,6 +26,6 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 ### Notes
 
-Curation plays a vital role in establishing and maintaining terminologies within a community's scope. Through careful curation, communities can ensure that their terminology remains consistent and facilitates effective communication among members. The process of curating a terminology involves defining concepts and their associated criteria, promoting shared understanding, and providing clear guidelines for using the terms consistently.
+Curation plays a vital role in establishing and maintaining terminologies within a community's scope. Through careful curation, communities can ensure that their terminology remains consistent and facilitates effective communication among members. The process of curating a terminology involves defining concepts and their associated [criteria](@), promoting shared understanding, and providing clear guidelines for using the terms consistently.
 
 See also: [curator](@).

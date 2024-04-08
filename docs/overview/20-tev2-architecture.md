@@ -39,7 +39,7 @@ Raw texts are generally simple texts, e.g., in a wiki-format or markdown. The id
 Raw texts serve roughly either of the following purposes:
 
 1. they are the source for a document that has content that is relevant to the [scope](@). For example, if the purpose of the [scope](@) is to create and maintain a software application, such documents might contain the requirements, specifications, installation procedures, manuals etc. for that software application. Raw texts that fall in this category are typically processed by third party rendering tools to produce something that is readable by the intended audience. Such texts may contain so-called [TermRefs](@), which makes for better reading by the audience.
-2. they specify the [concept](@) (better: [semantic unit](@)) behind a paricular [term](@). For example the term [definition](@) can be explained in a file that specifies the criterion for distinguishing between what is, and what is not, a [definition](@) within the context of the  [scope](@); it can also describe what the problems are with them, ways to create them and use them, etc. Raw texts that fall in this category are geared towards becoming so-called [curated texts](@).
+2. they specify the [concept](@) (better: [semantic unit](@)) behind a paricular [term](@). For example the term [definition](@) can be explained in a file that specifies the [criterion](@) for distinguishing between what is, and what is not, a [definition](@) within the context of the  [scope](@); it can also describe what the problems are with them, ways to create them and use them, etc. Raw texts that fall in this category are geared towards becoming so-called [curated texts](@).
 
 ### TRRT
 

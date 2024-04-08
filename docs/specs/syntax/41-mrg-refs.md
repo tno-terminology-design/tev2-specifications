@@ -149,7 +149,7 @@ Under the assumption that the [terminology identifier](@) `tev2` refers to a [te
 | :--- | :---------- |
 | Glossary | an alphabetically sorted list of [terms](@) with the (single) meaning it has in (at least) one context. |
 | Curator (of a Scope) | a person responsible for curating, managing, and maintaining the [terminologies](@), to ensure shared understanding among a [community](@) working together on a particular set of [objectives](@essif-lab). |
-| Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
+| Definition | the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a [criterion](@) that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@). |
 ---
 ~~~
 
@@ -232,7 +232,7 @@ a person responsible for curating, managing, and maintaining the [terminologies]
 
 ### [Definition](/docs/terms/definition)
 
-the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a criterion that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@).
+the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a [criterion](@) that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@).
 
 ---
 Here endeth the glossary.

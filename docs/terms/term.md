@@ -11,7 +11,7 @@ glossaryText: "a word or phrase (i.e.: text) that is used to represent [concepts
 glossaryNotes:
 - "a term is ambiguous if it represents more than one [concept](semantic-unit@)."
 - "a term that is used in a particular [scope](@) (which we call a [scoped term](@)) should not be ambiguous."
-- "a term that is unambiguous can be made part of a [definition](@) by associating it with a criterion that people can use to determine what is, and what is not, an instance (or: example) of that term."
+- "a term that is unambiguous can be made part of a [definition](@) by associating it with a [criterion](@) that people can use to determine what is, and what is not, an instance (or: example) of that term."
 grouptags: [ ]
 formPhrases: [ "term{ss}", "word{ss}", "phrase{ss}" ]
 # Curation status
@@ -54,7 +54,7 @@ There is an important [distinction](https://simple.wikipedia.org/wiki/Concept) b
 
 * different [terms](@) are used in different contexts for representing a single [concept](@);
 * in different contexts, a single [term](@) may represent different [concepts](@);
-* [to resolve terminological disputes](http://resolver.tudelft.nl/uuid:964a90da-da81-4d38-9f45-84f3f5fa96b3), which usually are about the 'correct' meaning of a [term](@), try to establish the criteria that the different participants use for the concept behind the term. That helps participants understand each others (different) positions, and provides a better basis for resolving the conflict.
+* [to resolve terminological disputes](http://resolver.tudelft.nl/uuid:964a90da-da81-4d38-9f45-84f3f5fa96b3), which usually are about the 'correct' meaning of a [term](@), try to establish the [criteria](@) that the different participants use for the concept behind the term. That helps participants understand each others (different) positions, and provides a better basis for resolving the conflict.
 
 ---
 ### Footnotes

@@ -38,7 +38,7 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 
 The term "Formatted Text" encompasses documents or text that have undergone processing to present them with a specific layout and style. This process includes applying formatting elements such as headings, bold and italic text, bullet points, tables, images, and more.
 
-The criterion for identifying "Formatted Text" is whether the document or text has been processed and organized to improve its visual appeal and readability. Formatted texts are typically used in various contexts, including web pages, books, reports, and presentations.
+The [criterion](@) for identifying "Formatted Text" is whether the document or text has been processed and organized to improve its visual appeal and readability. Formatted texts are typically used in various contexts, including web pages, books, reports, and presentations.
 
 The hover text provides a concise description of the term when users hover over it. Synonyms for this term include "styled-text" and "visually-appealing-text."
 

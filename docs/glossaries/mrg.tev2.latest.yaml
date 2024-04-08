@@ -312,6 +312,31 @@ entries:
       - "background"
     termid: "concept:conceptualization"
     vsntag: "documentation"
+  - id: "contributor"
+    displayed_sidebar: "tev2SideBar"
+    term: "contributor"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Contributor"
+    glossaryText: "a person that contributes to the creation and maintenance of a [terminology](@) all [terms](@) of which have a [definition](@) that links these [terms](@) with a [criterion](@) that is used within the [scope](@) of that [terminology](@) for determining whether or not something is an instance (example) of the [semantic unit](@) to which the [term](@) refers."
+    grouptags: []
+    formPhrases:
+      - "contributor"
+      - "contributors"
+      - "contributor-s"
+    status: "proposed"
+    created: 20240408
+    updated: 20240408
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "contributor.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/contributor"
+    headingids:
+      - "contributor"
+    termid: "concept:contributor"
+    vsntag: "documentation"
   - id: "converter"
     displayed_sidebar: "tev2SideBar"
     term: "converter"
@@ -400,6 +425,59 @@ entries:
       - "purpose"
       - "acknowledgements"
     termid: "concept:corpus"
+    vsntag: "documentation"
+  - id: "criteria"
+    displayed_sidebar: "tev2SideBar"
+    term: "criteria"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Criterion"
+    glossaryText: "a text that people can evaluate to base a judgment or decision on."
+    glossaryNotes:
+      - "Every [definition](@) consists of (at least) one [term](@) (that refers to some [semantic unit](@)) and a [criterion](@) that people can use to determine whether or not something is an instance (or example) of that [semantic unit](@)."
+      - "we use 'criterion' and 'criteria' as synonyms."
+    grouptags: []
+    formPhrases:
+      - "criteria"
+    status: "proposed"
+    created: 20240408
+    updated: 20240408
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "criterion.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/criterion"
+    headingids:
+      - "criterion"
+    termid: "concept:criteria"
+    vsntag: "documentation"
+    synonymOf: "criterion"
+  - id: "criterion"
+    displayed_sidebar: "tev2SideBar"
+    term: "criterion"
+    termType: "concept"
+    isa: null
+    glossaryTerm: "Criterion"
+    glossaryText: "a text that people can evaluate to base a judgment or decision on."
+    glossaryNotes:
+      - "Every [definition](@) consists of (at least) one [term](@) (that refers to some [semantic unit](@)) and a [criterion](@) that people can use to determine whether or not something is an instance (or example) of that [semantic unit](@)."
+      - "we use 'criterion' and 'criteria' as synonyms."
+    grouptags: []
+    formPhrases:
+      - "criterion"
+    status: "proposed"
+    created: 20240408
+    updated: 20240408
+    contributors: "RieksJ"
+    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
+    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
+    scopetag: "tev2"
+    locator: "criterion.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/criterion"
+    headingids:
+      - "criterion"
+    termid: "concept:criterion"
     vsntag: "documentation"
   - id: "curate"
     displayed_sidebar: "tev2SideBar"

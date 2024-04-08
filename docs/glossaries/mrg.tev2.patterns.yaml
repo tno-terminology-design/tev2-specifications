@@ -179,7 +179,7 @@ entries:
       - "introduction"
       - "formalized-model"
     termid: "pattern:definition"
-    vsntag: "patterns"
+    vsntag: "documentation"
   - id: "pattern-duties-and-rights"
     displayed_sidebar: "essifLabSideBar"
     termType: "pattern"
@@ -290,6 +290,7 @@ entries:
     termType: "pattern"
     term: "identifier"
     formPhrases:
+      - "identifier"
       - "identifier-pattern"
     status: "reviewable"
     grouptags: null
@@ -313,6 +314,7 @@ entries:
     termType: "pattern"
     term: "identity"
     formPhrases:
+      - "identity"
       - "identity-pattern"
     status: "reviewable"
     grouptags: null
@@ -453,6 +455,7 @@ entries:
     termType: "pattern"
     term: "semantics"
     formPhrases:
+      - "semantics"
       - "semantics-pattern"
     status: "idea"
     grouptags: null
@@ -475,6 +478,7 @@ entries:
     termType: "pattern"
     term: "terminology"
     formPhrases:
+      - "terminology"
       - "terminology-pattern"
     status: "reviewable"
     grouptags: null
@@ -500,6 +504,7 @@ entries:
     termType: "pattern"
     term: "trust"
     formPhrases:
+      - "trust"
       - "trust-pattern"
     status: "idea"
     grouptags: null

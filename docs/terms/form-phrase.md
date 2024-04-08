@@ -30,7 +30,7 @@ A **Form Phrase** is a word or phrase that occurs in oral or written texts and t
 <details>
     <summary>Examples</summary>
 
-[TermRefs](@) such as `[party](@)`, `[parties](@)` or `[party(s)](@)` should all refer to the same [semantic unit](@). This is achieved by specifiying "party", "parties", and "party(s)" as [form phrases](@) for that [semantic unit](@) in the [curated text](@) that documents that [unit](@).
+[TermRefs](@) such as `[party](@)`, `[parties](@)` or `[party(s)](@)` should all refer to the same [semantic unit](@). This is achieved by specifiying "party", "parties", and "party(s)" as [form phrases](@) for that [semantic unit](@) in the [curated text](@) that documents that [unit](semantic unit@).
 
 </details>
 

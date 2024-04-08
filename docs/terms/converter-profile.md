@@ -117,7 +117,7 @@ err:
 | `mrg`   | (MRG): all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken. |
 | `err`   | (error): various fields, as specified below, that can be used to construct output that helps users identify an error, and fix it. |
 
-::: Tip
+:::tip
 Fields from the `entry` section may also be used in [converters](@) without specifying `entry` as a prefix (e.g., `entry.term` becomes `term`). Properties of `entry` with identical names to sections of the [converter profile object](@), are overwritten by the defined sections.
 :::
 

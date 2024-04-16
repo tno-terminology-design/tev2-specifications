@@ -439,7 +439,7 @@ It may happen that a [converter](@) is needed that is not predefined. Fortunatel
 
 A [converter](@) can be specified:
 - as a [command-line argument](hrgt#-con@)
-- in (the `hrgt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
+- in (the `trrt`-section of) the [configuration file](/docs/specs/files/configuration-file) that the [HRGT](@) is specified to use.
 
 :::info Editor's note
 In future, it may become possible to specify [interpreters](@), [converters](@) and [sorters](@) in the [SAF](@), in whcih case they will have a name that will then be required for identifying an [interpreter](@), [converter](@), or [sorter](@) of one's choice.

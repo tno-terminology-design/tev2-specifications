@@ -4,16 +4,12 @@ build
 
 .docusaurus
 .cache-loader
+.vscode/settings.json
 
 .DS_Store
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+**/*.log*
+**/*.ffs*
+**/*.bat
+**/*.lnk
 
-start_server.bat
-*.ffs_batch
-*.ffs_gui
-*.lnk
-.vscode/settings.json
-docs/mk-tools.bat
-mk-tools.bat
+essif-lab-configs-commit-64bd899

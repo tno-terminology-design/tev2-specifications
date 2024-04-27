@@ -705,6 +705,7 @@ entries:
       - "form-phrase"
       - "purpose"
       - "specifying"
+      - "conversion"
       - "matching"
       - "guidance"
     termid: "concept:form-phrase"
@@ -2521,6 +2522,7 @@ entries:
       - "a term is ambiguous if it represents more than one [concept](semantic-unit@)."
       - "a term that is used in a particular [scope](@) (which we call a [scoped term](@)) should not be ambiguous."
       - "a term that is unambiguous can be made part of a [definition](@) by associating it with a [criterion](@) that people can use to determine what is, and what is not, an instance (or: example) of that term."
+      - "the contents of `term` fields in [headers](@) or [MRG entries](@) are expected to be [regularized texts](@)."
     grouptags: []
     formPhrases:
       - "term"
@@ -2649,7 +2651,7 @@ entries:
     termType: "concept"
     isa: "identifier"
     glossaryTerm: "Term Type"
-    glossaryText: "a [text](identifier@) that identifies a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
+    glossaryText: "a [(regularized) text](regularized-text@) that identifies a particular *kind* of [semantic unit](@) within a particular [scope](@). Examples include `concept`, `relation`, `pattern` (or `mental-model`)."
     grouptags: []
     formPhrases:
       - "term-type"

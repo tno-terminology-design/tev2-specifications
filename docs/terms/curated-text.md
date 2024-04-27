@@ -29,7 +29,7 @@ A [curated text](@) consists of two parts:
 - a [header](@), which is a set of key-value pairs that are designed to facilitate automated processing;
 - a [body](@), that contains texts that are designed for human interpretation.
 
-[Curated texts](@) live in [curated files](@), that may have been generated, e.g. from [ingress tools](docs/overview/tev2-architecture#ingress-tools), or may have been constructed manually (using a text editor).
+[Curated texts](@) live in [curated files](@), that may have been generated, e.g. from [ingress tools](/docs/overview/tev2-architecture#ingress-tools), or may have been constructed manually, e.g., by using a text editor.
 
 [Curated texts](@) are used for a variety of purposes, as they (may) contain texts that:
 

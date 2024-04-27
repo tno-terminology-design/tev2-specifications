@@ -180,6 +180,12 @@ Next, the [MRGT](@) will create a copy of the [MRG](@) file for every [versionta
 
 ### Phase 2: post processing Synonyms {#post-processing}
 
+:::info Editor's note
+We may want to deprecate the use of Synonyms as they have been specified now,
+because it is a complex thing, and most often, its uses can also be realized
+in a different way (particularly since we can now generate HRGs using multiple converters)
+:::
+
 This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of [synonyms](#synonym-processing@), to use the newly generated [provisional MRG entries](@)
 
 When a [provisional MRG entry](@) in (one of) the created [provisional MRGs](@) has a `synonymOf` field that contains a [term identifier](@), this will now refer to either
@@ -192,25 +198,45 @@ Effectively, this means that whenever a [term](@) is defined as a `synonym of` s
 
 ### Phase 3: post processing other fields
 
-Now, all [provisional MRG entries](@) in all [provisional MRGs] are processed so as to become useable from the context within which they have been selected. This means that every field in such a [provisional MRG entry](@) is discarded if the field name (when converted into lowercase), matches any of the field names in the table below, after which the fields in the below table are added with the contents as specified. The [MRGT](@) run is concluded after all these modifications have been written to their appropriate [MRG](@) files.
+Now, all [provisional MRG entries](@) in all [provisional MRGs](@) are processed 
+so as to become useable from the context within which they have been selected.
+All fields that are required for regular [MRG entries](@) will be processed,
+as specified in the following table
 
 | Field          | Value(s) that are assigned to the fields |
 | -------------- | :---------- |
-| `scopetag`     | overwrite the `scopetag` field with the `scopetag` field as found in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
-| `locator`      | path, relative to `scopedir`/`curatedir`/, of the file that contains the ([header](@) of) the [curated text](@). |
-| `navurl`       | (localized) path to which browsers navigate in order to see the rendered version of the [curated text](@).  |
-| `headingids`   | a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be either in the [curated text file](@) or in a separate [body file](@). |
+| `scopetag`     | ensure the contents of this field has the value of the `scopetag` field as found in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
+| `vsntag`       | ensure the contents of this field contains the [versiontag](@) that identifies the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` identifies the [terminology](@) from which this [MRG entry](@) has originated. |
+| `locator`      | ensure that the contents of this field is the path, relative to `scopedir`/`curatedir`/, of the file that contains the ([header](@) of) the [curated text](@). |
+| `navurl`       | ensure that the contents of this field is the (localized) path to which browsers navigate in order to see the rendered version of the [curated text](@). |
+| `termType`     | ensure that the contents of this field exists, and that it is [regularized](@); if it does not, it must be created and its value shall be the same as the value of the `defaulttype` field in the [scope section](/docs/specs/files/saf#scope-section) in the [SAF](@), or, if that doesn't exist, its value should be `concept`. |
+| `term`         | ensure that the contents of this field exists, and that it is [regularized](@). An exception must be raised if this field does not exist. |
+| `termid`       | ensure that the value of this field is "`<termType>`:`<term>`", where `<termType>` and `<term>` are the values of the corresponding fields in this [MRG entry](@). There MUST NOT be another [MRG entry](@) within the [MRG](@) that has a `termid` field with the same value. |
+| `formPhrases`  | ensure that this field contains an array of [regularized form phrases](form-phrase#conversion@), and that one of its elements has the same value as the `term` field. |
+| `headingids`   | ensure that the contents of this field is a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be either in the [curated text file](@) or in a separate [body file](@). This is explained in more detail in a subsection below. |
 
 The following sections elaborate on the construction of (the contents) of some of these fields.
 
 #### Constructing the `navurl` field {#navurl-construction}
 
-The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, where `website`, `navpath` and `curatedir` are given by the contents of the respective fields in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@). In cases where the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`.
+The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, 
+where 
 
-The `id` part is one of the following:
+- `website`, `navpath` and `curatedir` are given by the contents of the respective fields
+  in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@).<br/> 
+  However, if the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`, so `navurl` will then be `website`/`bodyFile`
 
-1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) contains the field `navid`, then its contents specify the name of the field in the [header](@) of the [curated text](@) or [body file](@) that will be used to create the `id` part. Thus, static site generators such as Docusaurus, which use the `id` field to specify this value, can be accommodated.
-2. if the [SAF](@) does not specify the `navid` field, or the `navid` field in a [curated text](@) or [body file](@) is not set, then `id` will be based on the name of the [curated text file](@) or the name of the [body file](@).
+- The `id` part is one of the following:
+
+  1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) 
+     contains the field `navid`, then its contents specify the name of the field in the [header](@)
+     of the [curated text](@) or [body file](@) that will be used to create the `id` part.
+     Thus, static site generators such as Docusaurus, which use the `id` field to specify this value,
+     can be accommodated.
+  2. if the [SAF](@) does not specify the `navid` field,
+     or the `navid` field in a [curated text](@) or [body file](@) is not set,
+     then `id` will be based on the name of the [curated text file](@)
+     or the name of the [body file](@).
 
 #### Constructing the `headingid` fields (#headingids-construction)
 

@@ -60,17 +60,24 @@ The same varieties can easily be added for the human and machine actors, as foll
 formPhrases: [ "actor{ss}", "human actor{ss}", "machine actor{ss}" ]
 ~~~
 
+## Form Phrases in MRGs {#conversion}
+
+The [MRGT](@) creates [MRG entries](@) from the [headers](@) of [curated texts](@). When such a [header](@) contains [form phrases](@) that use [macros](form-phrase-macro@), these [form phrases](@) are
+
+1. converted into a set of [form phrases](@) that no longer contain such [macros](form-phrase-macro@); this process is called [Form Phrase Macro Expansion](form-phrase-macro#expansion-process@), and then
+2. each of the [form phrases](@) in that set is [regularized](regularized-form-phrase#regularization-process@), the result of which is that tools can easily use them for [matching](#matching).
+
 ## Matching Form Phrases {#matching}
 
 Using (or: matching) [form phrases](@) is the process in which for a given word or phrase, it is determined whether or not it refers to a particular [semantic unit](@). This is done, e.g., by the [TRRT](@) as it [tries to find](trrt#finding-mrg-entry@) an [MRG entry](@) that corresponds with the [`showtext`](trrt#interpreter-profile@) field of a [TermRef](@).
 
-This matching process uses the contents of the `formPhrases` field of [MRG entries](@), which are [derived from](mrgt#processing-form-phrases) the contents of the `formPhrases` field of [curated texts](@), and proceeds as follows:
+This matching process expects the [MRG entries](@) in a designated [MRG](@) to contain a `formPhrases` field that is an array of [regularized form phrases](@) (that do not contain [form phrase macros](@) (any more)).The matching process proceeds as follows:
 
 1. [Regularize](regularized-form-phrase#regularization-process@) the given word or phrase;
 2. Find all [MRG entries](@) that have the result an an entry in its `formPhrases`-field;
 3. If there is a single such an [MRG entry](@), then the text is a [form phrase](@) for the [semantic unit](@) described by that [MRG entry](@).
 
-It is possible that there is no matching [MRG entries](@).
+It is possible that there is no matching [MRG entry](@).
 
 If multiple [MRG entries](@) match, that is an error condition - that should not happen. Such conditions are typically flagged, e.g., as an error by the [MRGT](@), and they need to be resolved.
 
@@ -87,3 +94,5 @@ If multiple [MRG entries](@) match, that is an error condition - that should not
 5. **Uniqueness within Context**: Each form phrase must be unique within its context or domain to avoid ambiguities. It should not overlap with or be a substring of another form phrase within the same set of terms.
 
 6. **Contextual Relevance**: The form phrase should be relevant to its context and accurately represent the term or concept it's associated with, aligning with domain-specific terminology and usage.
+
+##

@@ -8,9 +8,9 @@ termType: concept
 glossaryTerm: Converter Profile
 glossaryText: "the specification of a class of [data objects](handlebars-object@), instances of which are used by specific [text conversion tools](@) to generate text fragments from."
 glossaryNotes:
-- Converter profiles exist, e.g., for the [TRRT](@) and the [HRGT](@).
-- Converter profiles are used by [converters](@), which are (predefined or custom) [handlebars templates](@) that produce the generated text fragments.
-formPhrases: [ "converter-profile{ss}", "profile{ss}" ]
+- "Converter profiles exist, e.g., for the [TRRT](@) and the [HRGT](@)."
+- "Converter profiles are used by [converters](@), which are (predefined or custom) [handlebars templates](@) that produce the generated text fragments."
+formPhrases: [ "converter-profile-object{ss}", "converter-profile{ss}", "profile{ss}" ]
 # Curation status
 status: proposed
 created: 20231218
@@ -40,12 +40,10 @@ The [converter profile object](@) can be envisaged as a YAML object, that has a 
 
 <details>
   <summary>Example</summary>
-Here is an example of what a [converter profile object](@) might look like for the [TermRef](@) `[converter profile object](@)`
+Here is an example of what a [converter profile object](@) might look like when
+- the [TRRT](@) is run from within the [scope](@) with [scopetag](@) `mve`,
+- the [TermRef](@) `[converter profile object](#object-spec@tev2)` has been found, and needs to be converted.
 
-:::info Editor's note
-The last update of this part of the specifications was that a new section `saf` was added.
-This still needs to be accommodated in the below example.
-:::
 
 ~~~ yaml
 int:
@@ -54,9 +52,9 @@ int:
 ref:
   showtext: "converter profile object"
   type: ""
-  term: "converter-profile"
+  term: ""
   trait: "object"
-  scopetag: ""
+  scopetag: "tev2"
   vsntag: ""
 entry:
   id: "converter-profile"
@@ -70,6 +68,9 @@ entry:
     - "converter-profile"
     - "converter-profiles"
     - "converter-profile-s"
+    - "converter-profile-object"
+    - "converter-profile-objects"
+    - "converter-profile-object-s"
   status: "proposed"
   scopetag: "termdsn"
   locator: "converter-profile.md"
@@ -77,13 +78,13 @@ entry:
   headingids:
     - "converter-profile"
     - "object-spec"
+    - "`int`-fields"
+    - "`ref`-fields"
+    - "`entry`-fields"
+    - "`mrg`-fields"
+    - "`saf`-fields"
     - "`err`-fields"
-    - "helpers"
-    - "capfirst"
-    - "ifvalue"
-    - "localize"
-    - "norefs"
-    - "regularize"
+    - "notes"
   termid: "concept:converter-profile"
   vsntag: "documentation"
 mrg:
@@ -104,6 +105,23 @@ mrg:
   vsntag: "documentation"
   altvsntags:
     - "latest"
+saf:
+  scope:
+    scopetag: mve
+    scopedir: https://github.com/tno-terminology-design/tev2-mve/tree/master/docs
+    curatedir: terms
+    glossarydir: mrgs
+    defaultvsn: mve-terms
+    website: https://tno-terminology-design.github.io/tev2-mve
+    navpath: /terms
+    navid: term
+  scopes:
+  - scopetag: tev2
+    scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs
+  versions:
+  - vsntag: mve-terms 
+    termselection:
+    - "*"
 err:
   file: "31-trrt.md"
   dir: "/specs/tools"
@@ -129,6 +147,200 @@ err:
 Fields from the `entry` section may also be used in [converters](@) without specifying `entry` as a prefix (e.g., `entry.term` becomes `term`). Properties of `entry` with identical names to sections of the [converter profile object](@), are overwritten by the defined sections.
 :::
 
+### `int` fields
+
+The `int` section of a converter profile specifies the particulars of the [interpreter](@) that was used, which led to the selection of the [MRG entry](@) (as specified in the `entry` field).[^1]
+
+[^1]: Knowing the specifics of the [interpreter])(@) can be relevant, e.g., for helper functions such as [`noRefs`](helper-function#norefs@), which uses them to find the [TermRefs](@) that it needs to convert to normal texts.
+
+<details>
+  <summary>Legend</summary>
+
+1. **`Field`** contains the field name;
+2. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the field is always populated, or optional.
+3. **`Description`** specifies the meaning of the field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+
+</details>
+
+| Field    | Req'd | Description |
+| -------- | :---: | :---------- |
+| `type`   |   n   | Name of the [interpreter](@). |
+| `regex`  |   n   | [regex](@) that constitutes the [interpreter](@). |
+
+<details>
+  <summary>Example of `int` field</summary>
+
+~~~ yaml
+int:
+  type: "default"
+  regex: /(?:(?<=[^`\\])|^)\[(?=[^@\n\]]+\]\([^@)]*@[:a-z0-9_-]*\))(?<showtext>[^@\n\]]+)\]\((?:(?:(?<type>[a-z0-9_-]*):)?)(?:(?<term>[^@\n:#)]*?)?(?:#(?<trait>[^@\n:#)]*))?)?@(?<scopetag>[a-z0-9_-]*)(?::(?<vsntag>[a-z0-9_-]*))?\)/g
+~~~
+
+</details>
+
+### `ref` fields
+
+The `ref` section of a converter profile specifies the values of the [named capturing groups](@) produced by the [interpreter](@). Thus, the actual fields in this section depend on the [interpreter profile](@) of the tool that is used, as listed in the below tables:
+
+<details>
+  <summary>Legend</summary>
+
+1. **`Field`** contains the field name;
+2. **`Req'd`** specifies whether (`Y`) or not (`n`, or `F`) the field is always populated, or optional.
+3. **`Description`** specifies the meaning of the field, and other things you may need to know, e.g. why it is needed, a required syntax, etc.
+
+</details>
+
+<Tabs
+  defaultValue="trrt"
+  values={[
+    {label: 'TRRT `ref`-fields', value: 'trrt'},
+    {label: 'HRGT `ref`-fields', value: 'hrgt'},
+  ]}>
+
+<TabItem value="trrt">
+
+The fields of this section are defined in the [TRRT interpreter profile](trrt#interpreter-profile), as follows:
+
+| Field    | Req'd | Description |
+| -------- | :---: | :---------- |
+| `showtext` | Y | The text in a [TermRef](@) that the author expects to be rendered.  |
+| `type`     | n | The [term type](@) of the [semantic unit](@) that is referred to. |
+| `term`     | n | The [term](@) of the [semantic unit](@) that is referred to. |
+| `trait`    | n | A text that is expected to correspond with one of the `headingids` in the [MRG entry](@) of the [semantic unit](@) that is referred to. |
+| `scopetag` | n | The [scopetag](@) that identifies the [scope](@) that [curates](@) the [semantic unit](@) that is referred to. |
+| `vsntag`   | n | A [versiontag](@) that identifies the [terminology](@) that contains the [semantic unit](@) that is referred to. |
+
+<details>
+  <summary>Example of `ref` field when used by the TRRT</summary>
+
+~~~ yaml
+ref:
+  showtext: "converter profile object"
+  type: ""
+  term: "converter-profile"
+  trait: "object"
+  scopetag: ""
+  vsntag: ""
+~~~
+
+</details>
+
+</TabItem>
+
+<TabItem value="hrgt">
+
+The fields of this section are defined in the [HRGT interpreter profile](hrgt#interpreter-profile), as follows:
+
+| Field     | Req'd | Description |
+| --------- | :---: | :---------- |
+| `hrg`       | n | A [terminology-identifier](@) that specifies the [MRG](@) for which a [HRG](@) is to be generated. |
+| `converter` | n | Specifies the [converter](@) to be used to produce [HRG entries](@). This can either be a predefined [converter](@), or a [handlebars template](@). See [HRG Converters](#hrgt-converters) for details. |
+| `sorter`    | n | Specifies the [sorter](@) to be used for sorting the [HRG list](@). This can either be a predefined [sorter](@), or a [handlebars template](@). See [HRG Sorters](#predefined-sorters) for details. |
+
+:::note Editor's note
+If the contents of the above table differs from 
+the specifications of the HRGT interpreter profile 
+as described in the HRGT specifications, 
+then the latter takes precedence.
+:::
+
+<details>
+  <summary>Example of `ref` field when used by the HRGT</summary>
+
+~~~ yaml
+ref:
+  hrg: ""
+  converter: "html-with-notes"
+  sorter: "default"
+~~~
+
+</details>
+
+</TabItem>
+
+</Tabs>
+
+
+### `entry` fields
+
+The `entry` section of a converter profile specifies the particulars of the [MRG entry](@) that was selected. If no [MRG entry](@) was selected, this section is empty, or does not exist.
+
+There is a set of fields that every [MRG entry](@) must have. They are documented [here](/docs/specs/files/mrg#entries).
+
+The other fields that may occur are those that existed in the [header](@) of the [curated text](@) that the [MRG entry](@) represents. In particular, any front-matter that exists for purposes of other tools, such as your static website generator, are also available in this section.
+
+This feature helps you create and use custom [converters](@): whenever you need a [converter](@) to use data that is not available by default, you can simply add the data to the [headers](@) of the relevant [curated texts](@), generate the approprate [MRG](@) from them, and the data will appear as the field you designated for that data.
+
+<details>
+  <summary>Example of `entry` field</summary>
+
+~~~ yaml
+entry:
+  id: "converter-profile"
+  displayed_sidebar: "tev2SideBar"
+  term: "converter-profile"
+  termType: "concept"
+  glossaryTerm: "Converter Profile"
+  glossaryText: "a data object, of a type that is specific for a [text conversion tool](@), that [converters](@) use to create texts by which the [tool](text-conversion-tool@) will replace the text constructs that are located by its [interpreter](@)."
+  formPhrases:
+    - "converter-profile"
+    - "converter-profiles"
+    - "converter-profile-s"
+  scopetag: "termdsn"
+  locator: "converter-profile.md"
+  navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/converter-profile"
+  headingids:
+    - "converter-profile"
+    - "object-spec"
+    - "`err`-fields"
+    - "helpers"
+    - "capfirst"
+    - "ifvalue"
+    - "localize"
+    - "norefs"
+    - "regularize"
+  termid: "concept:converter-profile"
+  vsntag: "documentation"
+~~~
+
+</details>
+
+### `mrg` fields
+
+The `mrg` section of a converter profile contains the [terminology section](/docs/specs/files/mrg#terminology) of the [MRG](@) to which the selected [MRG entry](@) belongs. If the [MRG](@) could not be found, this section may be empty, or nonexistent.
+
+<details>
+  <summary>Example of `entry` field</summary>
+
+~~~ yaml
+mrg:
+  scopetag: "tev2"
+  scopedir: "https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs"
+  curatedir: "terms"
+  glossarydir: "glossaries"
+  defaultvsn: "documentation"
+  website: "https://tno-terminology-design.github.io/tev2-specifications/docs"
+  navpath: "/terms"
+  navid: "id"
+  license: "LICENSE.md"
+  statuses:
+    - "proposed"
+    - "approved"
+    - "deprecated"
+  defaulttype: "concept"
+  vsntag: "documentation"
+  altvsntags:
+    - "latest"
+~~~
+
+</details>
+
+### `saf` fields
+
+The `saf` section of a converter profile specifies the entire [SAF](@), as specified [here](/docs/specs/files/saf) of [current scope](@). Examples are given there as well.
+
+
 ### `err` fields
 
 When a file is being processed by a [text conversion tool](@), it can happen that an input structure is found that cannot be associated with an [MRG entry](@). The `err` section in a [converter profile object](@) contains fields that can help construct outputs that help users to identify, and fix, such errors, as follows.
@@ -142,10 +354,6 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 
 </details>
 
-```mdx-code-block
-<APITable>
-```
-
 | Field           | Req'd | Description |
 | --------------- | :---: | :---------- |
 | `file`          |   Y   | Name of the file, including the extension, where the specific reference was found. |
@@ -154,7 +362,18 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 | `pos`           |   Y   | Position on the line of the start of the reference that was found. |
 | `cause`         |   n   | A description of the cause of a possible error. |
 
-```mdx-code-block
-</APITable>
-```
+<details>
+  <summary>Example of `err` field</summary>
+
+~~~ yaml
+err:
+  file: "31-trrt.md"
+  dir: "/specs/tools"
+  line: 73
+  pos: 9
+  cause: ""
+~~~
+
+</details>
+
 ### Notes

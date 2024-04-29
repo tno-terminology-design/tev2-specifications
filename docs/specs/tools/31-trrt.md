@@ -278,10 +278,10 @@ To do that, the [TRRT](@) uses the [interpreter](@) to locate subsequent [TermRe
 #### Finding the [MRG entry](@) associated with a [TermRef](@) {#finding-mrg-entry}
 
 1. Get the [MRG](@) file that is expected to contain the [MRG entry](@), by resolving the [terminology identifier](@) that consists of the [named capturing groups](@) `scopetag`:`vsntag`. Note that if `scopetag` wasn't populated, the [current scope](@) is assumed, and if `vsntag` isn't populated, the default version is used.
-2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termtype` and `term`, as follows.
+2. Locate the [MRG entry](@) in this [MRG](@), using the values of the [named capturing groups](@) `termType` and `term`, as follows.
     1. Initialize this step by selecting all [MRG entries](@) from the [MRG](@) (the idea is to limit the number of selected entries step by step, until there is no more than one).
     2. Process the [named capturing groups](@), as follows.
-        1. If `termtype` is specified, then remove all [entries](mrg-entry@) except those whose `termtype` field equals the specified value of `termtype`.
+        1. If `termType` is specified, then remove all [entries](mrg-entry@) except those whose `termType` field equals the specified value of `termType`.
         2. Remove all [entries](mrg-entry@) except those that produce a match according to the following process:
             1. normalize the text in the [named capturing group](@) `term`, or, if that is not specified, the [named capturing group](@) `showtext`, as follows:
                 1. convert the text to lowercase;

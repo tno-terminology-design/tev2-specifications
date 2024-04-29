@@ -1,6 +1,6 @@
 ---
 id: tev2-requirements
-sidebar_label: Initial Requirements
+sidebar_label: Thoughts on Tool Development
 description: Some early-time requirements for doing TermRefs.
 date: 20220303
 ---

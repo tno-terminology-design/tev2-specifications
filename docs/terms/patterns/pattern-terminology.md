@@ -20,7 +20,7 @@ attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
 
-# Create and Maintain Terminologies
+# The TEv2 Mental Model for Terminologies
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
 

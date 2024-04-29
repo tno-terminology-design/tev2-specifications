@@ -10,12 +10,7 @@ glossaryTerm: Mental Model
 glossaryText: "a [semantic unit](@) that relates a set of [concepts](@) (ideas), [relations](@) between them, and constraints about a certain topic, into a coherent and consistent whole (sometimes called 'viewpoint', or 'way of thinking')."
 grouptags: [ ]
 formPhrases: [ "mental-model{ss}", "pattern{ss}", "conceptual-model{ss}" ]
-# Curation status
-status: proposed
-created: 20220606
-updated: 20220607
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

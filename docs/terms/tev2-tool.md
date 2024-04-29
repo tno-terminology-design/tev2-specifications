@@ -10,12 +10,7 @@ glossaryTerm: "TEv2 Tool"
 glossaryText: "any software application or utility designed to support and streamline various tasks related to terminology management following the TEv2 specifications."
 grouptags: [ ]
 formPhrases: [ "tev2-tool{ss}", "tool" ] # NOTE: 'tools' is a formPhrase in `tev2-toolbox`
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

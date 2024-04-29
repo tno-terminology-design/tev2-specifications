@@ -9,12 +9,7 @@ glossaryTerm:
 glossaryText: "a set of [terms](scoped-term@) that are used within a single [scope](@) to refer to [concepts](@) and other [semantic units](@) of a single [party](@) (e.g. a [community](@)), enabling [parties](@) to reason and communicate ideas they have about one or more specific topics."
 grouptags: [ ]
 formPhrases: [ "terminolog{yies}" ]
-# Curation status
-status: proposed
-created: 20220606
-updated: 20220811
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

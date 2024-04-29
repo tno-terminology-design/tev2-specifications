@@ -11,12 +11,7 @@ glossaryText: "a character string that starts with a lowercase character (`[a-z]
 glossaryNotes:
 - "In other words, every text that matches the [regex](@) `^[a-z][a-z_0-9-]*(?<=[^-])$` is a regularized text."
 formPhrases: [ "regularized-text{ss}", "regulariz{es}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

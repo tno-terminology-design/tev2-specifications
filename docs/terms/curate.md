@@ -10,12 +10,7 @@ glossaryTerm: Curate
 glossaryText: "to select, organize, and present [terms](@), [definitions](@), and other, related content in a thoughtful and purposeful manner to establish shared understanding among a [community](@) working together on a particular set of [objectives](@essif-lab)."
 grouptags: [ "terminology", "cm-party-actor-action" ]
 formPhrases: [ "curates", "curated", "curating", "curation" ]
-# Curation status
-status: proposed
-created: 20230723
-updated: 20230723
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

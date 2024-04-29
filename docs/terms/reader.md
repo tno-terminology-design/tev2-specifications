@@ -10,12 +10,7 @@ glossaryTerm: Reader
 glossaryText: "a person that reads a text that is authored by another person (its [author](@)), and that tries to understand the meaning of this text in the way its [author](@) intended."
 grouptags: [ ]
 formPhrases: [ "reader{ss}" ]
-# Curation status
-status: proposed
-created: 20230723
-updated: 20230723
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

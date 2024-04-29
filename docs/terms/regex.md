@@ -13,12 +13,7 @@ glossaryNotes:
 - "Within [TEv2](@), we use a [JavaScript flavor (ECMAScript 2022)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)."
 grouptags: [ ]
 formPhrases: [ "regex", "regexes", "regexp{ss}", "regular-expression{ss}" ]
-# Curation status
-status: proposed
-created: 20231219
-updated: 20240108
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

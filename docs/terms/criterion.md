@@ -13,12 +13,7 @@ glossaryNotes:
 - "Conforming ourselves to [currently common practices](https://www.merriam-webster.com/dictionary/criteria), we use the term 'criteria' both as the plural form, and as a [synonym](@) for [criterion](@)."
 grouptags: [ ]
 formPhrases: [ criteria ]
-# Curation status
-status: proposed
-created: 20240408
-updated: 20240408
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

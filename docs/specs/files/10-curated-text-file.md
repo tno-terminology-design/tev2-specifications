@@ -28,12 +28,7 @@ termType: concept
 glossaryTerm: Curated Text
 glossaryText: a text that documents a [concept](@) or other [semantic unit](@) of a particular [party](@), and specifies, e.g., the [term(s)](@) by which the [party](@) refers thereto, its [definition](@), and any other relevant information.
 formPhrases: [ "curated-text{ss}" ]
-# TEv2 Curation status
-status: proposed
-created: 20220602
-updated: 20230814
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

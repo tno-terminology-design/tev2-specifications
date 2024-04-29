@@ -10,12 +10,7 @@ glossaryTerm:
 glossaryText: "the combination of a [term](@) and a descriptive text, where the [term](@) refers to a [concept](@) or other [semantic unit](@), and the descriptive text enables a set of [parties](@) to have the same understanding about that [concept](@). Ideally, the descriptive text is a [criterion](@) that such [parties](@) can use to determine what is, and what is not, an instance (or example) of that [concept](@)."
 grouptags: [ ]
 formPhrases: [ "definition{ss}", "good-definition{ss}" ]
-# Curation status
-status: proposed
-created: 20220606
-updated: 20220606
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

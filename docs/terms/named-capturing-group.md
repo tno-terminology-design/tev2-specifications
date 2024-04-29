@@ -10,12 +10,7 @@ glossaryTerm: "Named Capturing Group"
 glossaryText: "a sub-pattern within a [regex](@) (called a '[capturing group](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)') that has been given a name, allowing one to refer to that sub-pattern."
 grouptags: [ ]
 formPhrases: [ "named-capturing-group{ss}", "capturing-group{ss}" ]
-# Curation status
-status: proposed
-created: 20231220
-updated: 20231220
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

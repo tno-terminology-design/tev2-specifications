@@ -208,13 +208,6 @@ scope:
   navpath: /terms # Path to the directory where Curated Texts are rendered. What `curatedir` is for Curated Texts is, `navpath` is for the rendered versions of Curated Texts.
   navid: id # Name of the field in the [front matter](@) of a body file used by your static site generator in a URL, to uniquely identify that file (e.g., "id", "slug", "permalink"). If not specified, the filename of the body file will be used.
   license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
-  statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for semantic units in this scope
-  issues: https://github.com/tno-terminology-design/tev2-specifications/issues # URL where issues can be raised and handled
-  curators: # contacting individual curators
-  - name: RieksJ
-    email: # we split up the email address to reduce the likelihood of the address being harvested for spamming
-      id: rieks.joosten
-      at: tno.nl
 #
 # The second section contains a mapping between scopetags that are used within the scope, and the associated scopedirs.
 # This enables tools to find the SAF of these scopes, and from there all other directories, files etc.

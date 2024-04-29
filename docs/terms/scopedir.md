@@ -10,12 +10,7 @@ glossaryTerm:
 glossaryText: "a directory in a computer file system that contains all files that are either being [curated](@) within a particular [scope](@), or generated to serve some purpose within that [scope](@)."
 grouptags: [ ]
 formPhrases: [ "scopedir{ss}", "scope-director{yies}" ]
-# Curation status
-status: proposed
-created: 20220729
-updated: 20220729
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

@@ -11,12 +11,7 @@ glossaryText: "a section at the top of a file that contains YAML (or similarly f
 glossaryNotes:
 - "Front matter is also commonly used by various static site generators (not just by [TEv2](@))."
 - "The front-matter must be the first thing in the file and must be enclosed in triple-dashed lines for YAML."
-# Curation status
-status: proposed
-created: 20240121
-updated: 20240121
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

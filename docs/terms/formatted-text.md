@@ -10,12 +10,7 @@ glossaryTerm: "Formatted Text"
 glossaryText: "a text that has been processed and arranged to have a specific layout, style, and presentation, making it visually appealing and easy to read."
 grouptags: [ ]
 formPhrases: [ "formatted-text{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---
@@ -43,5 +38,3 @@ The [criterion](@) for identifying "Formatted Text" is whether the document or t
 The hover text provides a concise description of the term when users hover over it. Synonyms for this term include "styled-text" and "visually-appealing-text."
 
 The term is classified under the "text-format" concept, which means it belongs to a category related to different text formatting methods. Additionally, it is grouped under "document-format" to indicate its association with processed documents.
-
-The curation status of this term is "proposed," indicating that it is still under review and subject to potential changes.

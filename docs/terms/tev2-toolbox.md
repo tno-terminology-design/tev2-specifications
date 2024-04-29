@@ -12,12 +12,7 @@ glossaryNotes:
 - "These tools assist [curators](@) in various tasks related to the curation, creation, and maintenance of terminological assets."
 grouptags: [ ]
 formPhrases: [ "tev2-toolbox", "toolbox", "tools" ] # NOTE: 'tool' is a formPhrase in `tev2-tool`
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

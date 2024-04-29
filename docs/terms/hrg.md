@@ -11,12 +11,7 @@ glossaryAbbr: HRG
 glossaryText: "a [glossary](@) that is designed to be easily understandable and accessible to humans. HRGs present terms and their meanings in a format that prioritizes human comprehension and may include additional contextual information to aid understanding."
 grouptags: [ "glossaries", "data-structures" ]
 formPhrases: [ "hrg{ss}", "human-readable-glossar{yies}", "human-readable-glossar{yies}-hrg{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

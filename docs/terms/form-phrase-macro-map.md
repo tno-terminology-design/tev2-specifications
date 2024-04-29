@@ -13,12 +13,7 @@ glossaryNotes:
 - "Form-phrase macro maps can be specified in the `scope` section of a [SAF](@)" 
 - "Form-phrase macro maps can be specified in (the `mrgt` section) of a [configuration file](/docs/specs/files/configuration-file) that is used when  calling the [MRGT](@)." 
 formPhrases: [ "formphrase macro map{ss}", "formphrase macromap{ss}", "form-phrase macro map{ss}", "form-phrase macromap{ss}", "macro map{ss}", "macromap{ss}" ]
-# Curation status
-status: proposed
-created: 20240228
-updated: 20240228
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

@@ -144,9 +144,6 @@ versions:
       - "[party,community](@essif-lab:0.9.4)" # import the terms `party` and `community` from the mrg of `essif-lab:0.9.4`.
       - "tags[management]@essif-lab" # import all terms from the mrg of `essif-lab:latest` that have grouptag `management`.
       - "*" # import all terms defined in the scope `tev2`
-    status: proposed
-    from: 20220312
-    to:
   - vsntag: terms # a versiontag that identifies this version from all other versions in the SAF
     termselection:
       - "*" # import all terms that are curated in the current scope.
@@ -175,9 +172,6 @@ The following fields are defined for the `versions` section of a [SAF](@):
 | `altvsntags`    | n | List of alternative [versiontags](@) that may be used to refer to this version of the [scope's](@) [terminology](@). A typical use of this field would be to tag a version as the 'latest' version. |
 | `termselection` | Y | List of [term selection instructions](@) that are used to generate (this version of) the [scope's](@) [terminology](@). See the [Terminology Construction page](/docs/manuals/curator/terminology-construction) and the [term selection syntax page](/docs/specs/syntax/term-selection) for details. |
 | `license`       | n | File that contains the (default) licensing conditions. Full URL is `scopedir`/`license`. If not specified, its value defaults to the value of the `license` field in the `scope` section (of this [SAF](@)). The purpose of this field is to allow different versions of the [scope's](@) [terminology](@) to have different licenses. |
-| `status`        | n | Text that identifies the status of the [term](@). ([Communities](@) of) [scopes](@) may specify values for this field. If not specified, the status SHOULD be assumed to be 'concept', 'draft', 'proposed', or similar. An example is the [status tags used by ToIP](https://github.com/trustoverip/concepts-and-terminology-wg/blob/master/docs/status-tags.md). |
-| `from`          | F | Date at which it was decided to establish this version. |
-| `to`            | F | Date at which this version will expire (or has expired). |
 
 ```mdx-code-block
 </APITable>

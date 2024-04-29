@@ -10,12 +10,7 @@ glossaryTerm: Conceptualization
 glossaryText: "a mental representation or abstract idea formed by a [party](@) to categorize, organize, and make sense of information, experiences, objects, or abstract notions; it allows the [party](@) to recognize similarities and differences between [entities](@) or events."
 grouptags: [ ]
 formPhrases: [ "conceptualization{ss}" ]
-# Curation status
-status: proposed
-created: 20230723
-updated: 20230723
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

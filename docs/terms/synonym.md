@@ -10,12 +10,7 @@ glossaryTerm: Synonym (of a [term](@))
 glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@)."
 grouptags: [ ]
 formPhrases: [ "synonym{ss}" ]
-# Curation status
-status: proposed
-created: 20221127
-updated: 20221127
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

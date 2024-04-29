@@ -9,12 +9,7 @@ glossaryTerm: "Definition Pattern"
 glossaryText: "a [mental model](@) that describes the relations between a [concept](@) (or any other [semantic unit](@)), the [term(s)](@) that are used to refer to it, and the [criteria](@) to use for determining whether or not something is an instance (example) of that [semantic unit](@)."
 grouptags: [ ]
 formPhrases: [ "definition{ss}-pattern{ss}" ]
-# Curation status
-status: proposed
-created: 20240316
-updated: 20240316
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

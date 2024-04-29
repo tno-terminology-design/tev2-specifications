@@ -10,12 +10,7 @@ glossaryTerm: Moustache Variable
 glossaryText: "a placeholder in the form of a 'moustache' tag, e.g.: `{{variable_name}}`, that are used by [converters](@) to produce a text by which a text construct that is located by an [interpreter](@) will be replaced. See also https://mustache.github.io/mustache.5.html"
 grouptags: [ ]
 formPhrases: [ "moustache-variable{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20240108
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

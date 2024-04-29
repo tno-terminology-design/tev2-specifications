@@ -10,12 +10,7 @@ glossaryTerm: Term Selection Instruction
 glossaryText: "an instruction that is used to select one or more [terms](scoped-term@) for the purpose of processing their documentation, e.g., to create an [MRG](@)."
 grouptags: [ "glossary-entries", "terminology-management" ]
 formPhrases: [ "term-selection-instruction{ss}", "selection-instruction{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

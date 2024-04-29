@@ -9,12 +9,7 @@ isa:
 glossaryTerm: Regularized Form Phrase
 glossaryText: "a [regularized text](@) that is derived from, and represents a [form phrase](@). They typically appear in the `formPhrases` field of an [MRG entry](@)."
 formPhrases: [ "regularized-formphrase{ss}", "regularized-form-phrase{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

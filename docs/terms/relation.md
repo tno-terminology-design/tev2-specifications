@@ -12,12 +12,7 @@ glossaryNotes:
 - "These connections define the way these [concepts](@) are interrelated, providing insights into how they interact and influence each other."
 grouptags: [ "conceptual-modeling"  ]
 formPhrases: [ "relation{ss}" ]
-# Curation status
-status: proposed
-created: 20230731
-updated: 20230731
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

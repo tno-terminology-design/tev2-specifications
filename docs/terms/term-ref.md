@@ -10,12 +10,7 @@ glossaryTerm: TermRef
 glossaryText: "a word or phrase that is [marked up (in a specific way)](/docs/specs/syntax/term-refs) so that it refers to a particular [concept](@) (or other [semantic unit](@)), enabling it to be rendered in a variety of ways for the purpose of helping [readers](@) to (better) understand the intention of its [author](@)."
 grouptags: [ ]
 formPhrases: [ "term-ref{ss}", "termref{ss}", "term-reference{ss}" ]
-# Curation status
-status: proposed
-created: 20220606
-updated: 20220804
 # Origins/Acknowledgements
-contributors: RieksJ
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
 ---

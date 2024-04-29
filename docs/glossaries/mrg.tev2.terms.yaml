@@ -286,6 +286,7 @@ entries:
       - "converter-profile"
       - "object-spec"
       - "`err`-fields"
+      - "notes"
     termid: "concept:converter-profile"
     vsntag: "terms"
   - id: "corpus"

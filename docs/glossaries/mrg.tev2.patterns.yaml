@@ -8,10 +8,6 @@ terminology:
   navpath: "/terms"
   navid: "id"
   license: "LICENSE.md"
-  statuses:
-    - "proposed"
-    - "approved"
-    - "deprecated"
   mappings:
     mrgt:
       formphrase-macros:

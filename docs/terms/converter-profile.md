@@ -42,6 +42,11 @@ The [converter profile object](@) can be envisaged as a YAML object, that has a 
   <summary>Example</summary>
 Here is an example of what a [converter profile object](@) might look like for the [TermRef](@) `[converter profile object](@)`
 
+:::info Editor's note
+The last update of this part of the specifications was that a new section `saf` was added.
+This still needs to be accommodated in the below example.
+:::
+
 ~~~ yaml
 int:
   type: "default"
@@ -114,8 +119,11 @@ err:
 | `int`   | (interpreter): includes the interpreter type `int.type` (either the name of a predefined interpreter, or "custom"), and the regex used to locate the reference `int.regex`. The `noRefs` helper, for instance, accesses the `int.regex` to be used as the default type. |
 | `ref`   | (reference): the set of properties derived from the [named capturing groups](@) by the [interpreter](@). |
 | `entry` | (MRG entry): all fields from the specific [MRG entry](@) that was selected. | 
-| `mrg`   | (MRG): all fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken. |
+| `mrg`   | (MRG): all fields from the [terminology section](mrg#terminology@) of the [MRG](@) from which the [MRG entry](@) was taken.[^1] |
+| `saf`   | (SAF): all fields from the [SAF](@) of the [current scope](@).[^1] |
 | `err`   | (error): various fields, as specified below, that can be used to construct output that helps users identify an error, and fix it. |
+
+[^1]: While most often this is not the case, the contents of the [SAF](@) of the [current scope](@) can differ from the fields from the [terminology section](mrg#terminology@) of the [mrg](@) from which the [MRG entry](@) was taken. That happens when an [MRG entry](@) is taken from an [MRG](@) that was imported (i.e.: not generated from within the [current scope](@)). For such cases [converters](@) - specifically: [helper functions](@) used therein, such as `localize` - may need to refer to information from either the [current scope](@), or the [scope](@) in which the [MRG](@) that contains the [MRG entry](@) was generated.
 
 :::tip
 Fields from the `entry` section may also be used in [converters](@) without specifying `entry` as a prefix (e.g., `entry.term` becomes `term`). Properties of `entry` with identical names to sections of the [converter profile object](@), are overwritten by the defined sections.
@@ -149,3 +157,4 @@ When a file is being processed by a [text conversion tool](@), it can happen tha
 ```mdx-code-block
 </APITable>
 ```
+### Notes

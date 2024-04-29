@@ -79,6 +79,13 @@ This feature is implemented through the log level `silent`. [Other log level val
 
 The function of the helper `noRefs` is to replace all [TermRefs](@) from a string, with its (capitalized) `showtext`. Capitalization is done by the helper `capFirst`.
 
+:::warning
+The usefulness of the `noRefs` helper has its limits.
+For example, in a context that allows two or more (customized) [syntaxes](/docs/specs/syntax/term-refs) for [TermRefs](@), the `noRefs` helper can miss one or more of these (custom) syntaxes, producing a result that will not be rendered as expected by the static site generator.
+One way to deal with such situations is to identify where it may occur, and try to provide input to the `noRefs` helper that does not contain (such) [TermRefs](@).
+In the concrete situation of popups, for which typically `glossaryText` fields are used that might produce such erroneous renderings, a workaround would be to add a `popupText` field (or so) whose value is manually constructed from the `glossaryText`, and is void of (such) [TermRefs](@).
+:::
+
 The following tabs show how this helper works on the following input:
 
 -----

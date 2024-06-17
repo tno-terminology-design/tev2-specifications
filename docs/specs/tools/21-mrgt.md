@@ -224,7 +224,7 @@ where
 
 - `website`, `navpath` and `curatedir` are given by the contents of the respective fields
   in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@).<br/> 
-  However, if the [`bodyFile` field](/docs/specs/files/curated-text-file#header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`, so `navurl` will then be `website`/`bodyFile`
+  However, if the [`bodyFile` field](/docs/specs/files/curated-text-file#predefined-header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`, so `navurl` will then be `website`/`bodyFile`
 
 - The `id` part is one of the following:
 

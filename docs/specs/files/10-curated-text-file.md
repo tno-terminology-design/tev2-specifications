@@ -63,7 +63,7 @@ A [curated text](@) starts with three dashes `---`, which indicates the start of
 
 [Headers](@) of [curated texts](@) are used by [TEv2](@) tools, but may also contain entries that are used by other tools, such as static site generators. The example above shows some entries that are used by (the static site generator) Docusaurus. In order to avoid confusion about which entries serve what purposes, it is advised to put them in different sections and separate these with comments, as shown in the example.
 
-## Predefined TEv2 Header Fields {#header-fields}
+## Predefined TEv2 Header Fields {#predefined-header-fields}
 
 Different [TEv2 tools](@) use header fields in [headers](@) for various purposes. Below is a list of fields that are known to be used by tools that either exist or are under construction. This list is by no means complete, because as tools may be extended, and new tools can be added, it is possible that other fields may have be in use in particular [scopes](@).
 

@@ -211,6 +211,8 @@ entries:
     navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/specs/files/body-file"
     headingids:
       - "body-files"
+      - "storage-location"
+      - "header-reference"
     termid: "concept:body-file"
     vsntag: "documentation"
   - id: "community"

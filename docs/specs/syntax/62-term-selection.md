@@ -14,6 +14,8 @@ import TabItem from '@theme/TabItem';
 
 A [term selection instruction](@) is a specification for the [MRGT](@) to modify the [provisional MRG](@) that it is working with should be modified. This documents specifies the syntax for the various instructions.
 
+[Term selection instructions](@) are used in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@), where the various [MRG](@) (versions) for the [scope](@) are defined.
+
 <details>
   <summary>Example of a `termselection` field in a SAF</summary>
 
@@ -33,7 +35,7 @@ Take care to properly nest quotes (as in the 'rename' instruction of the example
 
 </details>
 
-# Selecting Terms to be Added to the Provisional MRG {#adding-terms}
+# Selecting Terms to be Added to the Provisional MRG {#add-terms}
 
 <details>
   <summary>Legend of abbreviations used</summary>

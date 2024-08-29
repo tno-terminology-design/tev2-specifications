@@ -2785,26 +2785,18 @@ entries:
       - "examples"
     termid: "concept:vocabulary"
     vsntag: "terms"
-  - id: "author"
-    displayed_sidebar: "tev2SideBar"
-    term: "xriter"
-    termType: "concept"
-    isa: null
+  - term: "xriter"
     glossaryTerm: "Writer"
-    glossaryText: "a person that creates a text that is meant to be read and understood by others - usually, a particular audience."
-    grouptags: []
+    synonymOf: "author"
     formPhrases:
       - "xriter"
       - "writer"
       - "writers"
       - "writer-s"
-    attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
-    originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
     scopetag: "tev2"
-    locator: "author.md"
-    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/author"
-    headingids:
-      - "author"
+    locator: "writer.md"
+    navurl: "https://tno-terminology-design.github.io/tev2-specifications/docs/terms/writer"
+    headingids: []
+    termType: "concept"
     termid: "concept:xriter"
     vsntag: "terms"
-    synonymOf: "author"

@@ -155,9 +155,9 @@ If a [configuration file](/docs/specs/files/configuration-file) is used, the lon
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) [configuration file](/docs/specs/files/configuration-file). |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Interpreters](#trrt-interpreters) for details. |
-| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
-| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
+| `--int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [TermRefs](@). This can either be a predefined interpreter, or a [regex](@). See [TRRT Interpreters](#trrt-interpreters) for details. |
+| `--con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@). This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
+| `--con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to produce the converted [TermRef](@) in case of an error. This can either be a predefined converter, or a [handlebars template](@). See [TRRT Converters](#trrt-converters) for details.  |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | Display help for command. |
 

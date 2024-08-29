@@ -89,10 +89,10 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) [configuration file](/docs/specs/files/configuration-file). |
 | `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
-| `-int`, `--interpreter <type> or <regex>`  | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
-| `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars template](@). See [HRGT Converters](#hrgt-converters) for details.  |
-| `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
-| `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars template](@). |
+| `--int`, `--interpreter <type> or <regex>` | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
+| `--con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars template](@). See [HRGT Converters](#hrgt-converters) for details.  |
+| `--con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
+| `--sort`, `--sorter <type> or <hexpr>`     | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars template](@). |
 | `-e`, `--onNotExist <action>`              | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
@@ -187,7 +187,7 @@ In future, it may become possible to specify [interpreters](@) and [converters](
 
 ### Processing {#processing}
 
-The purpose of the [HRGT](@) is to allow source texts to contain [MRGRefs](@) that are to be converted into [hrg-lists](@). 
+The purpose of the [HRGT](@) is to allow source texts to contain [MRGRefs](@) that are to be converted into [hrg-lists](@).
 
 To do that, the [HRGT](@) uses the specified [interpreter](@) to locate subsequent [MRGRefs](@) in its input files, and replaces it with a [HRG](@) that is constructed as follows:
 
@@ -207,7 +207,18 @@ If that file does not exist, the [converter](@) that was specified in the argume
 
 #### Using Converters {#hrgt-converters}
 
-The [HRGT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones. Optionally, a [converter](@) can be specified (using the `-con[error]` option) that will be used when a [MRGRef](@) could not be resolved to an (existing) [MRG](@) (file).
+The [HRGT](@) requires its users to specify at least one [converter](@), yet allows it to specify multiple ones.
+
+[Converters](@) can be specified 
+- on the command-line, using the `--con` or `--converter` option (see [Calling the Tool](hrgt#calling-the-tool@))
+- in the [configuration file](/docs/specs/files/configuration-file) that is specified with the `-c` option on the command line.h
+- as part of the [MRGRef syntax](mrg-ref#default-mrgref-syntax@). 
+
+If no [converters](@) can be found, a default will be provided
+
+You can also specify an [error converter](hrgt#error-converter@), which is a regular [converter](@) that will be used to produce output when a [MRGRef](@) could not be resolved to an (existing) [MRG](@) (file). 
+
+You can specify an [error converter](hrgt#error-converter) using the `-con[error]` option. If you do, that means you get additional output (as specified by the [converter](@)) when an error occurs.
 
 ##### Using Multiple Converters
 

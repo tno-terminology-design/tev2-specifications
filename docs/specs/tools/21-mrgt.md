@@ -87,7 +87,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 | :-------------------------- | :---: | :---------- |
 | `-c`, `--config <path>`       | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-h`, `--help`                | n | display help for command. |
-| `-o`, `--onNotExist <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
+| `-e`, `--onNotExist <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
 | `-s`, `--scopedir <path>`     | n | Path of the scope directory from which the tool is called. |
 | `-v`, `--vsntag <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
 | `-V`, `--version`             | n | output the version number of the tool. |

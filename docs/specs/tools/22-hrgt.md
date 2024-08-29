@@ -70,7 +70,7 @@ hrgt [ <paramlist> ] [ <globpattern> ]
 where:
 
 - `<paramlist>` is an (optional) list of parameters, as specified in the table below.
-- [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) (optional) specifies a set of (input) files that are to be processed. If a [configuration file](/docs/specs/files/configuration-file) is used, its contents may specify an additional set of input files to be processed.
+- [`globpattern`](https://en.wikipedia.org/wiki/Glob_(programming)#Syntax) specifies a set of (input) files that are to be processed. The set of input files must be specified either on the command-line or in a [configuration file](/docs/specs/files/configuration-file) that is specified with the `-c` option.
 
 <details>
   <summary>Legend</summary>
@@ -93,10 +93,20 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | `-con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars template](@). See [HRGT Converters](#hrgt-converters) for details.  |
 | `-con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
 | `-sort`, `--sort <type> or <hexpr>`        | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars template](@). |
+| `-e`, `--onNotExist <action>`              | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
 | `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `-h`, `--help`                             | n | display help for command. |
 
 [^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`.
+
+The `<action>` parameter can take the following values:
+
+| `<action>` | Description |
+| :--------- | :---------- |
+| `'throw'`  | an error is thrown (an exception is raised), and processing will stop. |
+| `'warn'`   | a message is displayed (and logged) and processing continues. |
+| `'log'`    | a message is written to a log(file) and processing continues. |
+| `'ignore'` | processing continues as if nothing happened. |
 
 ## HRG Generation {#what-it-does}
 

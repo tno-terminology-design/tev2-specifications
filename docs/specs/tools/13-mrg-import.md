@@ -86,7 +86,7 @@ If a configuration file used, the long version of the parameter must be used (wi
 | :--------------------------- | :---: | :---------- |
 | `-c`, `--config <path>`        | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-s`, `--scopedir <path>`      | Y | Path of the scope directory from which the tool is called. |
-| `-o`, `--onNotExist <action>`  | n | The action in case an MRG file unexpectedly does not exist. |
+| `-e`, `--onNotExist <action>`  | n | The action in case an MRG file unexpectedly does not exist. |
 | `-V`, `--version`              | n | output the version number of the tool. |
 | `-h`, `--help`                 | n | display help for command. |
 

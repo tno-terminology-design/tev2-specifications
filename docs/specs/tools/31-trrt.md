@@ -163,6 +163,11 @@ If a [configuration file](/docs/specs/files/configuration-file) is used, the lon
 
 [^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template1>` `converter[2]: <template2>`, where `<template<n>>` is a predefined converter or a [handlebars template](@). You MUST specify `converter[1] <template1>` (or `converter <template1>`, which is equivalent). You MAY specify one or more `converter[<n>]`s, where `<n>` is any number. The [TRRT](@) keeps track of the number of times a [TermRef](@) was used for some [termid](@). When the [TRRT](@) converts a [TermRef](@) for a particular [termid](@) for the `<n>`th time, it will use the converter as specified in parameter `converter[<n>]`, or, if that does not exist, it will use the converter that it used for the `<n-1>`th conversion.
 
+:::info Editor's Note
+The `-d` (`--debug`) option needs to be added when implemented.
+Note that this option should work the same for all tools, which currently is certainly not the case.
+:::
+
 ```mdx-code-block
 </APITable>
 ```

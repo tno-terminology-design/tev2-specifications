@@ -181,6 +181,7 @@ The function of the helper `regularize` is convert human readable text into a [r
 {{regularize entry.term}}
 // Output: "ex-ample"
 ```
+
 The helper `regularize` converts the input string into a [regularized text](@), according to the [regularization process](regularized-text#regularization-process@).
 
 ## `localize` {#localize}
@@ -221,11 +222,200 @@ The helper `localize` parses the value it was given as a URL and compares it to 
 
 ## `ifValue` {#ifvalue}
 
-The function of the helper `ifValue` is to test whether a text equals a specific value. This enables us to conditionally have particular texts (or leave such texts out).
+The `ifValue` helper allows you to conditionally display text based on various comparisons. This can be useful for showing or hiding content depending on specific values, statuses, or other conditions.
 
-```ts title="Examples for 'ifValue'"
-// Input (entry.status): "deprecated"
-{{#ifValue entry.status equals="deprecated"}}**Warning**: this term is deprecated!{{/ifValue}}
-// output: **Warning**: this term is deprecated!
+<Tabs
+  defaultValue="equals"
+  values={[
+    {label: 'equals', value: 'equals'},
+    {label: 'notEqual', value: 'notEqual'},
+    {label: 'greaterThan', value: 'greaterThan'},
+    {label: 'greaterThanOrEqual', value: 'greaterThanOrEqual'},
+    {label: 'lessThan', value: 'lessThan'},
+    {label: 'lessThanOrEqual', value: 'lessThanOrEqual'},
+    {label: 'isNull', value: 'isNull'},
+    {label: 'isTruthy', value: 'isTruthy'},
+    {label: 'isFalsy', value: 'isFalsy'},
+  ]}>
+
+<TabItem value="equals">
+
+### `equals`
+
+The `equals` option checks if a value is strictly equal to a specified value. This is useful when you want to display content only if a field matches exactly with the expected value.
+
+#### Example: Display a Warning for Deprecated Terms
+
+If the status of a term is "deprecated," show a warning message.
+
+```ts title="Example Usage of 'equals'"
+{{#ifValue entry.status equals="deprecated"}}
+**Warning**: this term is deprecated!
+{{/ifValue}}
 ```
-This sequence outputs the text "**Warning**: this term is deprecated!" when the [MRG entry](@) had a `status` field whose value was `deprecated`.
+
+- **What This Does**: If `entry.status` is "deprecated", the warning text is displayed.
+
+</TabItem>
+
+<TabItem value="notEqual">
+
+### `notEqual`
+
+The `notEqual` option checks if a value is not equal to the specified value. This is useful for excluding content based on certain conditions.
+
+#### Example: Exclude Active Terms
+
+If a term's status is not "active," display a note.
+
+```ts title="Example Usage of 'notEqual'"
+{{#ifValue entry.status notEqual="active"}}
+Note: This term is not currently active.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.status` is anything other than "active", the note is displayed.
+
+</TabItem>
+
+<TabItem value="greaterThan">
+
+### `greaterThan`
+
+The `greaterThan` option checks if a numeric value is greater than a specified number. This is useful for comparisons like age, quantity, etc.
+
+#### Example: Age Check for Adults
+
+Show a message if the age is greater than 18.
+
+```ts title="Example Usage of 'greaterThan'"
+{{#ifValue entry.age greaterThan=18}}
+You are an adult.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.age` is greater than 18, the message "You are an adult." is displayed.
+
+</TabItem>
+
+<TabItem value="greaterThanOrEqual">
+
+### `greaterThanOrEqual`
+
+The `greaterThanOrEqual` option checks if a numeric value is greater than or equal to a specified number.
+
+#### Example: Age Check for Voting Eligibility
+
+Show a message if the age is 18 or older.
+
+```ts title="Example Usage of 'greaterThanOrEqual'"
+{{#ifValue entry.age greaterThanOrEqual=18}}
+You are eligible to vote.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.age` is 18 or more, the message "You are eligible to vote." is displayed.
+
+</TabItem>
+
+<TabItem value="lessThan">
+
+### `lessThan`
+
+The `lessThan` option checks if a numeric value is less than a specified number.
+
+#### Example: Age Check for Minors
+
+Show a message if the age is less than 18.
+
+```ts title="Example Usage of 'lessThan'"
+{{#ifValue entry.age lessThan=18}}
+You are a minor.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.age` is less than 18, the message "You are a minor." is displayed.
+
+</TabItem>
+
+<TabItem value="lessThanOrEqual">
+
+### `lessThanOrEqual`
+
+The `lessThanOrEqual` option checks if a numeric value is less than or equal to a specified number.
+
+#### Example: Age Check for Underage
+
+Show a message if the age is 18 or less.
+
+```ts title="Example Usage of 'lessThanOrEqual'"
+{{#ifValue entry.age lessThanOrEqual=18}}
+You are underage.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.age` is 18 or less, the message "You are underage." is displayed.
+
+</TabItem>
+
+<TabItem value="isNull">
+
+### `isNull`
+
+The `isNull` option checks if a value is `null` or `undefined`.
+
+#### Example: Check if a Value is Null
+
+Show a message if a term's description is missing.
+
+```ts title="Example Usage of 'isNull'"
+{{#ifValue entry.description isNull=true}}
+No description available.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.description` is `null` or `undefined`, the message "No description available." is displayed.
+
+</TabItem>
+
+<TabItem value="isTruthy">
+
+### `isTruthy`
+
+The `isTruthy` option checks if a value is "truthy" (non-zero, non-null, non-empty string, etc.).
+
+#### Example: Check if a Feature is Enabled
+
+Show a message if a feature is enabled.
+
+```ts title="Example Usage of 'isTruthy'"
+{{#ifValue entry.isEnabled isTruthy=true}}
+The feature is enabled.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.isEnabled` is "truthy", the message "The feature is enabled." is displayed.
+
+</TabItem>
+
+<TabItem value="isFalsy">
+
+### `isFalsy`
+
+The `isFalsy` option checks if a value is "falsy" (`0`, `null`, `undefined`, `""`, `false`, etc.).
+
+#### Example: Check if a Feature is Disabled
+
+Show a message if a feature is disabled.
+
+```ts title="Example Usage of 'isFalsy'"
+{{#ifValue entry.isEnabled isFalsy=true}}
+The feature is disabled.
+{{/ifValue}}
+```
+
+- **What This Does**: If `entry.isEnabled` is "falsy", the message "The feature is disabled." is displayed.
+
+</TabItem>
+
+</Tabs>

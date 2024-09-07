@@ -26,7 +26,7 @@ A [form phrase](@) that contains a [form phrase macro](@) can be expanded into a
 
 [Form phrase macros](@) facilitate the specification of [form phrases](@), by enabling efficient ways of representing plural forms, possessive extensions, verb-conjugation forms, etc.
 
-## Form Phrase Macro Expansion (#expansion-process)
+## Form Phrase Macro Expansion {#expansion-process}
 
 The [form phrase macro](@) expansion process takes as inputs:
 

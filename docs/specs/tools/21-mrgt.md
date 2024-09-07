@@ -85,14 +85,34 @@ If a configuration file used, the long version of the parameter must be used (wi
 
 | Key                         | Req'd | Description |
 | :-------------------------- | :---: | :---------- |
-| `-c`, `--config <path>`       | n | Path (including the filename) of the tool's (YAML) configuration file. |
 | `-h`, `--help`                | n | display help for command. |
-| `-e`, `--onNotExist <action>` | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
-| `-s`, `--scopedir <path>`     | n | Path of the scope directory from which the tool is called. |
-| `-v`, `--vsntag <vsntag>`     | n | Versiontag for which the MRG needs to be (re)generated. |
-| `-V`, `--version`             | n | output the version number of the tool. |
+| `-c`, `--config <path>`       | n | Path (including the filename) of the tool's (YAML) configuration file. |
+| `-s`, `--scopedir <path>`     | Y | Path of the scope directory where the SAF is located. |
+| `-v`, `--vsntag <vsntag>`     | n | Version tag for which the MRG needs to be (re)generated. If omitted, MRGs for all versions will be generated. |
+| `-V`, `--version`             | n | Output the version number of the tool. |
+| `-o`, `--outputdir <path>`    | n | Directory where the generated MRG files will be stored. Defaults to the `glossarydir` of the `scopedir` if not provided. |
+| `--altvsntag <vsntag>`        | n | Create additional MRGs with alternative version tag (overrides settings in the SAF). |
+| `-e`, `--onNotExist <action>` | n | The action to take if a specified MRG file does not exist. Possible values are `throw`, `warn`, `log`, and `ignore`. |
+| `-d`, `--debug`               | n | Enable debug mode to provide more detailed output and logging for troubleshooting purposes. |
 
-The `<action>` parameter can take the following values:
+<details>
+  <summary>Debug Levels</summary>
+
+:::warning The `-d` (`--debug`) option may not yet work as specified.
+:::
+
+| Debug Level | Description                                                                                           |
+| :---------- | :----------------------------------------------------------------------------------------------------- |
+| **info**    | General informational output about the tool's operation, such as high-level actions. *(Default)*        |
+| warn        | Shows warning messages indicating potential issues or non-critical problems.                           |
+| debug       | Provides detailed output, including internal variables, stack traces, and low-level function calls.     |
+| error       | Displays error messages for critical problems that prevent the tool from running correctly.             |
+| trace       | The most verbose output, including trace-level logs for in-depth debugging and step-by-step details.    |
+
+</details>
+
+<details>
+  <summary>`-e`, `--onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
@@ -100,6 +120,8 @@ The `<action>` parameter can take the following values:
 | `'warn'`   | a message is displayed (and logged) and processing continues. |
 | `'log'`    | a message is written to a log(file) and processing continues. |
 | `'ignore'` | processing continues as if nothing happened. |
+
+</details>
 
 :::info
 Some parameters may only be configurable through the use of a [configuration file](/docs/specs/files/configuration-file). In this case `macros`, for use in [form phrases](@), is an example. See the [configuration file](/docs/specs/files/configuration-file) page for details.
@@ -117,184 +139,116 @@ Running the tool comprises the following phases:[^1]
 2. Post-processing the [entries](provisional-mrg-entry@) in that [provisional MRG](@);
 3. Creating/overwriting [MRG](@) file(s) in the [glossarydir](@) of the [current scope](@).
 
-[^1]: The [MRGT](@) MUST NOT start by overwriting files that contain an [MRG](@), as they should remain available as a (possible) source for copying [MRG entries](@) from during the construction of one or more [provisional MRGs](@). Writing the actual files should be done after all [provisional MRGs](@) have been constructed.
+[^1]: The [MRGT](@) does NOT overwrite files that contain an [MRG](@), until all content has been constructed. Thus, the 'old' [MRGs](@) remain available as a (possible) source for copying [MRG entries](@) from during the construction of one or more [provisional MRGs](@).
 
-### Phase 1: constructing a [provisional MRG](@) {#constructing-provisional-mrg}
+### Phase 1: Constructing a [provisional MRG](@) {#constructing-provisional-mrg}
 
-Generating an [MRG](@) for a particular version of a [terminology](@) starts by reading the [SAF](@) of the [scope](@) within which that [terminology](@) is curated, which exists in the [scopedir](@) that was provided as one of the calling parameters. If a `vsntag` argument is provided, it will search the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) to find the corresponding entry. This corresponding entry will have the value of the `vsntag` parameter either in its `vsntag` field, or it is one of the elements in the `altvsntags` field. If the [SAF](@) does not have a corresponding entry, the action specified in the `onNotExist` parameter will determine whether or not (and how) to proceed.
+During Phase 1, the [MRGT](@) tool constructs a **[provisional MRG](@)** for each specified version of a [terminology](@). This step involves reading the [Scope Analysis File (SAF)](SAF@) and gathering all relevant [entries](mrg-entry@) to form an initial, provisional [MRG](@). The goal is to prepare an intermediate representation of the [MRG](@) that will be refined and finalized in subsequent phases.
 
-In this phase, for every [terminology](@) version that is to be created, one [provisional MRG](@) is created, that contains a [provisional MRG entry](@) for every [term](@) contained in the particular version of the [terminology](@). This [provisional MRG entry](@) either contains:
+#### Step-by-Step Process
 
-- all fields in the [header](@) of the [curated text](@) that documents its [term](@), or 
-- all fields in the [MRG entry](@) that comes from another [MRG](@) (typically, but not necessarily, from another [scope](@)).
+1. **Reading the [SAF](@):**
+   - The tool begins by reading the [SAF](@) file from the specified `--scopedir` directory. The [SAF](@) contains metadata and configuration details about the [scope](@), [terminology](@) versions, and their corresponding tags (`vsntag` and `altvsntags`).
+   - If a `--vsntag` parameter is provided, the tool looks for the corresponding version in the [`versions` section](/docs/specs/files/saf#versions@) of the [SAF](@) and extracts relevant information, such as the `vsntag`, `altvsntags`, and the list of [term selection instructions](@).
 
-#### Creating a provisional MRG
+2. **Processing the `vsntag` Argument:**
+   - If the `vsntag` argument is provided on the command line, the tool searches for the entry in the [SAF](@)'s [`versions` section](/docs/specs/files/saf#versions@) with a matching `vsntag` or one of the elements in its `altvsntags` field.
+   - If the `vsntag` is not found, the action specified by the `--onNotExist` parameter (`throw`, `warn`, `log`, or `ignore`) determines how the tool handles this situation.
 
-Creating a provisional MRG starts with an empty set of [MRG entries](@) - we use the term "[provisional MRG](@)" to refer to this set.
+3. **Determining the [MRG Entries](@) Using [Term Selection Instructions](@):**
+   - The tool processes a list of **[term selection instructions](@)** found in the [SAF](@)'s [`versions` section](/docs/specs/files/saf#versions@) for the corresponding `vsntag` (or `altvsntag`, as may be the case).
+   -  These instructions specify which [entries](mrg-entry@) are added to, removed from, or modified in the [provisional MRG](@).
+   - [Term selection instructions](/docs/specs/syntax/term-selection) include:
+     - **[Adding Entries](/docs/specs/syntax/term-selection#add-terms)**: specify the source from which a new [provisional MRG entry](@) is to be created (see next bullet). This can either be a particular [curated texts](@) or a particular [MRG entry](@) from an [MRGs](@) that already exists.
+     - **[Removing Entries](/docs/specs/syntax/term-selection#remove-terms)**: specify which [MRG entries](@) that exist in the [provisional MRG](@) are to be removed therefrom.
+     - **[Modifying Attributes](/docs/specs/syntax/term-selection#rename-terms)** specify the specific [MRG entries](@) that exist in the [provisional MRG](@) are to have fields modified, and specify which fields (and how they) are to be modified. This allows, e.g., for renaming terms or adjusting other metadata fields.
 
-Then, the list of [term selection instructions](@) as specified in the appropriate entry of the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@) is processed. This is done by subsequently processing each instruction, in the order as specified. 
+4. **Creating a [Provisional MRG](@) for Each Version:**.
+   - For every version of the [terminology](@) that is to be generated (based on the presence or absence of `vsntag`), the tool creates a [provisional MRG](@). This [provisional MRG](@) is essentially a collection of **[provisional MRG entries](@)**.
+   - Creating a **[provisional MRG entry](@)** is done as a result of a [term selection instruction](@) that specifies its source. This can be :
+     - A [curated text](@) (that documents a [term](@)). The [provisional MRG entry](@) will then consist of all fields from the [header](@) of the [curated text](@).
+     - An [MRG entry](@) from an existing [MRG](@) (often, but not necessarily, from a different [scope](@)). The [provisional MRG entry](@) will then consist of all fields from that [MRG entry](@).
+   - **NOTE**: Two (or more) [MRG entries](@) cannot have the same value in their `termid` fields. Therefore, if an [MRG entry](@) is added whose `termid` value  exists in an [MRG entry](@) that is already in the [provisional MRG](@), then this latter [entry](mrg-entry@) will be discarded, after which the new [entry](mrg-entry@) is added.
 
-[Instructions](term selection instructions@) exist for:
-
-  - [adding](/docs/specs/syntax/term-selection#add-terms) [MRG entries](@) to the [provisional MRG](@); these can either be [entries](mrg-entry@) that have been created from [curated texts](@), or [entries](mrg-entry@) whose contents are obtained from an [MRG](@) other than the one that is being created.[^1]
-
-  - [removing](/docs/specs/syntax/term-selection#remove-terms) [MRG entries](@) from the [provisional MRG](@);
-
-  - [modifying attributes](/docs/specs/syntax/term-selection#rename-terms) of a specific [MRG entry](@) in the [provisional MRG](@), e.g. for renaming a term that originated from another [scope](@).
-
-[^1]: Two (or more) [MRG entries](@) cannot have the same value in their `termid` fields. Therefore, if an [MRG entry](@) is added whose value in its `termid` field already exists with an [MRG entry](@) that is already in the [provisional MRG](@), then this latter [entry](mrg-entry@) will be discarded, after which the new [entry](mrg-entry@) is added.
-
-#### Processing FormPhrases {#processing-form-phrases}
-
-[Form phrases](@) that are specified in a [curated text](@) may include uppercase characters, special characters, spaces etc., all of which make their use by tools cumbersome. In order to make it easier for [TEv2 tools](@) to use them, they need to be converted into [regularized form phrases](@).
-
-Converting the set of [form phrases](@) (as specified in the `formPhrases` field from a [curated text](@)) into [regularized form phrases](@) (for storage in an [MRG entry](@)) is done as follows: 
-
-1. every [form phrase](@) (in the set of [form phrases](@)) that contains a [form phrase macro](@), is replaced with one or more [form phrases](@) that are the result of processing that [macro](form-phrase-macro@) - see [Form Phrase Macro Expansion](form-phrase-macro#expansion-process@) for the details and examples.
-2. as a single [form phrase](@) may contain multiple [macros](form-phrase-macro@), step 1 must be repeated until all [macros](form-phrase-macro@) are processed and the set of [form phrases](@) no longer contains any [macro](form-phrase-macro@).
-3. all [form phrases](@) in the resulting set are now [regularized](regularized-text#regularization-process@), i.e., turned into [regularized form phrases](@).
-4. a [regularized form phrases](@) is added, the value of which is the same as the value of the `term` field of the [curated text](@). Thus, [tools](tev2-tool@) that work with [form phrases](regularized form phrase@) from [MRG entries](@) can find all forms, including that of the [term](@) itself, as an element in the `formPhrases` field of the [MRG entry](@).
-5. finally, the resulting set of [regularized form phrases](@) is pruned, such that every [regularized form phrase](@) appears only once in the end result.
-6. this end-result is then written into the `formPhrases` field of the [MRG entry](@).
+5. **Normalizing [MRG Entries](@):**
+   After adding entries to the [provisional MRG](@), each entry is normalized, which means that various fields are modified, to ensure consistency and standardization when they are further processed. Normalization consists of:
+   - **[regularization](@) of fields** that are meant to be processed by tools. They include `term`, `termType`, `formPhrases`.
+   - **Expansion of [Form Phrase Macros](@)**, which consists of replacing such [macros](form-phrase-macro@) with their expanded equivalents, resulting in multiple possible alternatives. The tool [recursively processes](form-phrase-macro##expansion-process@) the [form phrases](@) until every of their [macros](form-phrase-macro@) is expanded. This results in a list of **[regularized form phrases](@)** that replaces the original list of [formPhrases](@).
 
 :::tip
 An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same element in their `formPhrases` field, because that would mean that the form phrase is ambiguous, as it refers to two different [semantic units](@).
 :::
 
-#### Storing a [provisional MRG](@) in the [glossarydir](@) {#mrg-filenames}
+6. **Resulting [Provisional MRG](@):**
+   - The output of Phase 1 is a **[provisional MRG](@)** for each version specified. These [provisional MRGs](@) serve as intermediate representations that will be refined, validated, and finalized in subsequent phases.
 
-When the creation of a [provisional MRG](@) is complete, a filename `mrg.<scopetag>.<vsntag>.yaml` is constructed, where:
+### Phase 2: Post-Processing [Synonyms](#post-processing-synonyms)
 
-- `<scopetag>` is the [scopetag](@) that is used within the [current scope](@) to refer to itself. Its value can be found in the `scopetag`-field in the [`scope` section](docs/specs/files/saf#terminology) of the [SAF](@).
-- `<vsntag>` is the [versiontag](@) that identifies the version of the [terminology](@) for which the [MRG](@) contains [entries](mrg-entry@). Its value must be equal to that found in the `vsntag`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated.
+In Phase 2, the [MRGT](@) tool processes [synonyms](@) in the [provisional MRG](@) to ensure that terms defined as synonyms of other terms are correctly handled and represented. This phase **can only begin** after all [provisional MRGs](@) have been fully constructed and stored in the [glossarydir](@) of the [current scope](@) during Phase 1, because only then all (provisional) MRG entries will be available that `synonymOf` fields refer to.
 
-If a file with that name already exists in the [glossarydir](@) of the [current scope](@), it will be deleted. Then, a new file with that name will be created, which will contain:
+#### Step-by-Step Process
 
-- a [`terminology` section](/docs/specs/files/mrg#terminology), the contents of which is obtained by copying relevant fields from the [`terminology` section](/docs/specs/files/saf#terminology) in the [SAF](@);
-- a [`scopes` section](/docs/specs/files/mrg#scopes), the contents of which is obtained by copying relevant fields from the [`scopes` section](/tev2-specifications/docs/specs/files/saf#scopes) in the [SAF](@);
-- an [`entries` section]((/docs/specs/files/mrg#terminology)), the contents of which consists of the [provisional MRG entries](@) of the [provisional MRG](@).
+1. **Identifying [Synonyms](@):**
+   - The tool searches through all [provisional MRG entries](@) in each [provisional MRG](@) and identifies those that have a `synonymOf` field containing a [term identifier](@).
+   - The `synonymOf` field indicates that the [term](@) in this [MRG entry](@) is a synonym of another [term](@), and its entry should be derived from that [term's](@) entry.
 
-Then, if the `<vsntag>` part of the filename equals the value of the `defaultvsn` field in the [`scope` section](docs/specs/files/saf#terminology) of the [SAF](@), a copy of that file is created in the [glossarydir](@) whose filename is `mrg.<scopetag>.yaml`, which is the name by which the default [MRG](@) of the [current scope](@) is referred to.
+2. **Locating the Original [MRG Entry](@):**
+   - For each [provisional MRG entry](@) with a `synonymOf` field, the tool locates the original [MRG entry](@) that it refers to. This entry could be:
+     - An [MRG entry](@) in one of the existing [MRGs](@).
+     - A [provisional MRG entry](@) in the current [provisional MRG](@) that was just created.
 
-Next, the [MRGT](@) will create a copy of the [MRG](@) file for every [versiontag](@) that exists in the `altvsntags`-field of the element in the [versions section](/docs/specs/files/saf#versions) of the [SAF](@) from which the [MRG](@) was generated. The copy will contain the same [MRG](@) as the file that has just been written. The name of this copied file is `mrg.<scopetag>.<altvsntag>.yaml`, which is the same name as the [MRG](@) file, except that the `<vsntag>` part of that filename is replaced with the value of the [versiontag](@) found in the `altvsntags`-field.
+3. **Copying and Merging Fields:**
+   - Once the original [MRG entry](@) is located, its data is copied into the [provisional MRG entry](@) that has the `synonymOf` field, but
+   - Any fields already present in the [provisional MRG entry](@) that contained the `synonymOf` reference will overwrite the corresponding fields copied from the original [MRG entry](@).
+   - This ensures that the resulting [MRG entry](@) for the synonym has all the fields of the original [term](@) it is synonymous with, except for the fields explicitly defined in its own entry.
 
-### Phase 2: post processing Synonyms {#post-processing}
+4. **Ensuring Consistency and Avoiding Ambiguity:**
+   - The tool checks to ensure that no two (or more) [MRG entries](@) in the same [MRG](@) have the same [regularized form phrase](@) in their `formPhrases` field. If two [entries](mrg-entry@) end up having the same form phrase, an exception is raised to avoid ambiguity in referencing [semantic units](@).
 
-:::info Editor's note
-We may want to deprecate the use of Synonyms as they have been specified now,
-because it is a complex thing, and most often, its uses can also be realized
-in a different way (particularly since we can now generate HRGs using multiple converters)
-:::
+5. **Resulting [Provisional MRG](@) after Synonym Processing:**
+   - After processing synonyms, the [provisional MRG](@) contains updated entries where all synonyms are correctly linked to their originals. This is crucial for maintaining a consistent and unambiguous [terminology](@) within the [scope](@).
+   - These refined [provisional MRGs](@) are ready for further processing in the next phases, where other fields and checks will be finalized.
 
-This phase starts only after all [provisional MRGs](@) are created that the [MRGT](@) was instructed to build in this run, and the corresponding files have been added to the [glossarydir](@) of the [current scope](@). This allows post processing, e.g. of [synonyms](#synonym-processing@), to use the newly generated [provisional MRG entries](@)
+### Phase 3: Storing a [provisional MRGs](@) in the [glossarydir](@) {#mrg-filenames}
 
-When a [provisional MRG entry](@) in (one of) the created [provisional MRGs](@) has a `synonymOf` field that contains a [term identifier](@), this will now refer to either
+In Phase 3, the [MRGT](@) tool finalizes the [provisional MRG](@) by ensuring that all necessary fields for each [MRG entry](@) are correctly populated, standardized, and consistent. This phase comes after all [synonyms](@) have been processed in **Phase 2** and ensures that the [provisional MRG entries](@) are fully prepared for storage as the final [MRG](@) files.
 
-- an [MRG entry](@) in one of the [MRGs](@) that either already existed, or
-- a [provisional MRG entry](@) in a [provisional MRG] that has just been created.
-This (possibly [provisional](provisional-mrg-entry@)) [MRG entry](@) is then copied, after which all fields in the [provisional MRG entry](@) that contained the [term identifier](@) are added thereto, overwriting any already existing fields, or adding fields that did not yet exist. Then, the resulting data is used to replace the [provisional MRG entry](@) that contained the [term identifier](@).
+#### Step-by-Step Process
 
-Effectively, this means that whenever a [term](@) is defined as a `synonym of` some other [term](@), the corresponding [MRG entry](@) will have all fields of this other [term](@), except for those that were specified in the [header](@) of the [term](@) that is defined as a synonym of that other [term](@).
+1. **Populating and Validating Fields:**
+   - Each [provisional MRG entry](@) must have specific fields populated and validated to conform to the required structure. The tool ensures that these fields are either filled with correct values or generated if missing:
+     - **`scopetag`**: This field is filled with the value from the `scopetag` field in the [`scope` section](/docs/specs/files/saf#scope-section@) of the [SAF](@). It uniquely identifies the [scope](@) within which the [terminology](@) is curated.
+     - **`vsntag`**: This field is set to the [versiontag](@) that identifies the version of the [terminology](@) for which the [MRG entry](@) is generated. If the entry is derived from a [curated text](@), its value is taken from the `vsntag` field in the [`terminology` section](#mrg-terminology@) of the [MRG](@).
+     - **`termType`**: The `termType` field must exist and be [regularized](@). If it does not exist, it is created with a value equal to the `defaulttype` field in the [`scope` section](/docs/specs/files/saf#scope-section@) of the [SAF](@), or `concept` if `defaulttype` is absent.
+     - **`term`**: This field is [regularized](@) and must exist. If not, an exception is raised as this is a critical field.
+     - **`termid`**: The value of this field is set as "`<termType>`:`<term>`", combining the regularized values of `termType` and `term`. Each [MRG entry](@) must have a unique `termid` within the [MRG](@) to avoid conflicts.
+   
+2. **Setting Up Navigation and Locators:**
+   - The `locator` and `navurl` fields are populated to ensure correct referencing and navigation within the documentation system:
+     - **`locator`**: This field contains the path (relative to `scopedir`/`curatedir`) of the file that contains the [header](@) of the [curated text](@). It ensures traceability back to the original curated document.
+     - **`navurl`**: The `navurl` is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, where these elements are defined in the [`scope` section](/docs/specs/files/saf#terminology@) of the [SAF](@). If the [`bodyFile` field](/docs/specs/files/curated-text-file#predefined-header-fields) in the [header](@) of the [curated text file](@) is set, `navurl` becomes `website`/`bodyFile`. The `id` part is determined based on the presence of a `navid` field:
+       - If `navid` is specified in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@), it specifies which field from the [curated text](@) or [body file](@) is used for `id`.
+       - If `navid` is not specified, `id` defaults to the name of the [curated text file](@) or [body file](@).
 
-### Phase 3: post processing other fields
+3. **Generating `formPhrases` and `headingids`:**
+   - The tool completes the setup of all [MRG entries](@) by processing fields that support additional navigation and search capabilities:
+     - **`formPhrases`**: This field is populated with an array of [regularized form phrases](form-phrase#conversion@). One of the elements must be the same as the `term` field, ensuring that tools can find all relevant forms.
+     - **`headingids`**: This field is constructed by extracting all [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) found in the [body-file](@) or [curated text file](@), and normalizing them into a list. Custom heading IDs, if present, are also included as-is. This supports both default headers and custom-defined ones, ensuring accurate navigation.
 
-Now, all [provisional MRG entries](@) in all [provisional MRGs](@) are processed 
-so as to become useable from the context within which they have been selected.
-All fields that are required for regular [MRG entries](@) will be processed,
-as specified in the following table
+4. **Final Consistency Check:**
+   - Before concluding this phase, the [MRGT](@) performs a final consistency check to ensure the integrity of the [MRG entries](@):
+     - All `termid` values must be unique within the [MRG](@).
+     - No two [MRG entries](@) should have the same [regularized form phrase](@) in their `formPhrases` field to avoid ambiguity.
 
-| Field          | Value(s) that are assigned to the fields |
-| -------------- | :---------- |
-| `scopetag`     | ensure the contents of this field has the value of the `scopetag` field as found in the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@). |
-| `vsntag`       | ensure the contents of this field contains the [versiontag](@) that identifies the version of the [terminology](@) from which the contents of the [MRG entry](@) is obtained. If the contents of the [MRG entry](@) was constructed from a [curated text](@), its value equals the value of the `vsntag` field in the [`terminology`-section](#mrg-terminology) of the [MRG](@) that this [MRG entry](@) is a part of. As a result, `scopetag`:`versiontag` identifies the [terminology](@) from which this [MRG entry](@) has originated. |
-| `locator`      | ensure that the contents of this field is the path, relative to `scopedir`/`curatedir`/, of the file that contains the ([header](@) of) the [curated text](@). |
-| `navurl`       | ensure that the contents of this field is the (localized) path to which browsers navigate in order to see the rendered version of the [curated text](@). |
-| `termType`     | ensure that the contents of this field exists, and that it is [regularized](@); if it does not, it must be created and its value shall be the same as the value of the `defaulttype` field in the [scope section](/docs/specs/files/saf#scope-section) in the [SAF](@), or, if that doesn't exist, its value should be `concept`. |
-| `term`         | ensure that the contents of this field exists, and that it is [regularized](@). An exception must be raised if this field does not exist. |
-| `termid`       | ensure that the value of this field is "`<termType>`:`<term>`", where `<termType>` and `<term>` are the values of the corresponding fields in this [MRG entry](@). There MUST NOT be another [MRG entry](@) within the [MRG](@) that has a `termid` field with the same value. |
-| `formPhrases`  | ensure that this field contains an array of [regularized form phrases](form-phrase#conversion@), and that one of its elements has the same value as the `term` field. |
-| `headingids`   | ensure that the contents of this field is a list of the [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) and/or [heading ids](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids) that are found in the [body](@) of the [curated text](@). Note that this [body](@) can be either in the [curated text file](@) or in a separate [body file](@). This is explained in more detail in a subsection below. |
+5. **Resulting [MRG](@) Ready for Storage:**
+   - After Phase 3 is complete, each [provisional MRG](@) has all required fields accurately populated and validated. The entries are consistent, standardized, and ready to be stored as final [MRG](@) files in the [glossarydir](@) of the [current scope](@).
 
-The following sections elaborate on the construction of (the contents) of some of these fields.
+#### Key Points to Remember:
+- Phase 3 ensures that all fields necessary for [MRG entries](@) are correctly set up, validated, and standardized.
+- The `termid`, `locator`, `navurl`, `formPhrases`, `headingids`, and other fields are crucial for the correct functionality of the generated [MRG](@) files.
+- A final consistency check ensures the uniqueness of identifiers and prevents any ambiguities in the glossary.
 
-#### Constructing the `navurl` field {#navurl-construction}
-
-The `navurl` field is constructed by concatenating `website`/`navpath`/`curatedir`/`id`, 
-where 
-
-- `website`, `navpath` and `curatedir` are given by the contents of the respective fields
-  in the [`scope` section](/docs/specs/files/saf#terminology) of the [SAF](@).<br/> 
-  However, if the [`bodyFile` field](/docs/specs/files/curated-text-file#predefined-header-fields) in the [header](@) of the [curated text file](@) is set, the path to the [body file](@) is used instead of the `navpath` and `curatedir`, so `navurl` will then be `website`/`bodyFile`
-
-- The `id` part is one of the following:
-
-  1. if the [`scope` section](/docs/specs/files/saf#scope-section) of the [SAF](@) 
-     contains the field `navid`, then its contents specify the name of the field in the [header](@)
-     of the [curated text](@) or [body file](@) that will be used to create the `id` part.
-     Thus, static site generators such as Docusaurus, which use the `id` field to specify this value,
-     can be accommodated.
-  2. if the [SAF](@) does not specify the `navid` field,
-     or the `navid` field in a [curated text](@) or [body file](@) is not set,
-     then `id` will be based on the name of the [curated text file](@)
-     or the name of the [body file](@).
-
-#### Constructing the `headingid` fields (#headingids-construction)
-
-The `headingids` field is constructed by finding all [markdown headings](https://www.markdownguide.org/basic-syntax/#headings) in the [body-file](@) (or the [curated text file](@) if there is no separate [body file](@)), and making a list out of them.
-
-<details>
-  <summary>Example of Markdown Headers and their `headingid` fields</summary>
-
-<Tabs
-  defaultValue="default"
-  values={[
-    {label: 'Default Markdown Headers',  value: 'default'},
-    {label: 'Custom Heading IDs',        value: 'custom'},
-  ]}>
-
-<TabItem value="default">
-
-[Markdown headings](https://www.markdownguide.org/basic-syntax/#headings) are only recognized when they are preceded with number signs (#) at the beginning of a line.
-
-Here is an example of a markdown header:
-
-```markdown
-
-## This is a Markdown Header
-
-```
-
-This header will result in the text `this-is-a-markdown-header` being added as an element in the `headingids` field.
-
-</TabItem>
-
-<TabItem value="custom">
-
-A markdown heading may also contain a (custom) [heading id](https://www.markdownguide.org/extended-syntax/#heading-ids) that allows you to link directly to headings and modify them with CSS.
-
-Here is an example of a markdown header with a custom heading-id:
-
-```markdown
-
-# This is a Markdown Header {#custom-id}
-
-```
-
-This header will result in the text `custom-id` being added as an element in the `headingids` field.
-
-</TabItem>
-
-</Tabs>
-
-</details>
-
-### Phase 4: checking the result
-
-The last step consists of checking crucial properties that [MRGs](@) are relied on to have, and raising appropriate exceptions in case something is wrong. This helps [curators](@) that check the log outputs to become aware of things they may need to fix before these [MRGs](@) are further used (or published).
-
-In this step, the following checks are done (as a minimum):
-- The value of the `termid` field in one [MRG Entry](@) differs from the value of the `termid` field of all other [MRG Entries](@). This ensures that `termid` contains a unique identifier (primary key) within the context of the [MRG](@).
-- When a [regularized form phrase](@) is an element of the `formPhrases` field of an [MRG entry](@), there MUST NOT be another [MRG entry](@) in the same [MRG](@) that has this [regularized form phrase](@) in its `formPhrases` field.
+By the end of Phase 3, the [MRG](@) is complete and ready for storage or use by other tools in the [toolbox](toolbox@).
 
 ## Exceptions, Warnings, and Logging {#exceptions}
 
@@ -302,20 +256,44 @@ In this step, the following checks are done (as a minimum):
 This section needs to be reviewed/revised so as to enable a consistent way of error checking and logging, similar to what is done in the TRRT
 :::
 
-The general principle is that the [MRGT](@) helps its users to do their jobs. This means that errors that terminate the processing are limited to the max, that warnings (perhaps at different 'levels' of detail/severity) are given output whenever possible (yet may be limited by command-line options), and that texts are tailored for the envisaged users of the tool.
+The [MRGT](@) tool is designed to assist its users—primarily curators and developers—by providing informative feedback that aids in both identifying and resolving issues encountered during the generation of [MRGs](@). The tool follows a principle of minimizing errors that halt processing, instead favoring warnings and informative messages whenever possible. These messages can be adjusted based on verbosity levels set by command-line options.
 
-The [MRGT](@) logs conditions that prevent it from properly:
+### Error Handling Strategy
 
-- obtaining the [scopedir](@) from a [scopetag](@);
-- parsing a [curated text](@) (e.g. because it is not in the expected format);
-- resolving [terms](@), [scope tags](@), [group tags](@), or [version tags](@);
-- writing the output (e.g. because it has no write-permission for the designated location);
-- etc.;
+The [MRGT](@) employs a robust error-handling strategy that focuses on:
 
-Also, the [MRGT](@) provides suggestions that help tool-operators ([curators](@)) to not only identify, but also fix any problems.
+- **Limiting Terminating Errors**: Errors that stop the entire process are kept to a minimum. They only occur in critical scenarios where further processing would lead to invalid results or corrupt data. Examples include missing required parameters, encountering unreadable files, or insufficient write permissions for output directories.
+  
+- **Providing Warnings with Varying Severity Levels**: Warnings are issued to inform users of potential problems that do not immediately stop the process but may affect the output or require user attention. These warnings can be controlled through the `--debug` flag, which allows users to choose between `info`, `warn`, `debug`, `error`, and `trace` levels of verbosity, based on their needs. For example:
+  - `info`: General information about the processing.
+  - `warn`: Non-critical issues that need attention.
+  - `debug`: Detailed output for diagnosing problems.
+  - `error`: Critical errors that prevent proper execution.
+  - `trace`: Most verbose output for step-by-step troubleshooting.
 
-The [MRGT](@) comes with documentation that enables developers to ascertain its correct functioning (e.g. by using a test set of files, test scripts that exercise its parameters, etc.), and also enables them to deploy the tool in a git repo and author/modify CI-pipes to use that deployment.
+:::warning The `-d` (`--debug`) option may not yet work as specified.
+:::
 
-## Notes
+- **Helpful Suggestions for Resolution**: Whenever an error or warning is generated, the [MRGT](@) provides context and actionable suggestions to help the user resolve the issue. This includes potential fixes for file format errors, missing fields, and configuration issues.
 
-[^previous]: The algorithm ensures that an [MRG entry](@) for a [term](@) that is a [synonym](@) of another [term](@) identical to the [MRG entry](@) for that other [term](@), but if the [curated text](@) that specifies the [synonym](@) has additional [front matter](@) (e.g. a slightly modified `glossaryText` field), that [front matter](@) is retained in the [MRG entry](@). It is up to the [author](@) of the [curated text](@) to make sure this does not pose any problems, and up to the [ICT](@) to do appropriate checks.
+### Common Logging Scenarios
+
+The [MRGT](@) logs conditions that prevent it from properly executing tasks, such as:
+
+- **Obtaining the `scopedir` from a `scopetag`**: If the `scopetag` does not resolve to a valid directory, a warning or error is logged.
+- **Parsing a curated text**: Issues may arise if the text is not in the expected format (e.g., invalid YAML front matter or markdown errors), which will be logged with details to assist the user in correcting the format.
+- **Resolving terms, scope tags, group tags, or version tags**: If these elements cannot be resolved due to mismatches or missing entries in the [SAF](@), warnings or errors are logged.
+- **Writing the output**: Problems such as lacking write permissions for the designated location are logged as errors.
+
+### Leveraging Logging for Troubleshooting
+
+- **Adjust Logging Levels**: Use the `--debug` flag to set the desired verbosity level when running the tool. For detailed debugging, use `debug` or `trace` levels to see internal state information, variable values, and detailed stack traces.
+- **Review Log Messages**: Analyze the log messages to pinpoint where issues occur. For example, a message like "Failed to parse curated text at `path/to/file`" not only indicates the file but often provides the line or character position where the parsing failed.
+- **Follow Suggestions**: Each warning or error message includes suggestions for resolving the problem. These may involve correcting file paths, adjusting configurations, or ensuring dependencies are met.
+
+### Developer Support and Continuous Integration (CI)
+
+- The [MRGT](@) comes with comprehensive documentation that enables developers to verify its correct functioning. This includes guidelines for setting up test environments, using test scripts to validate parameter handling, and examples of common use cases.
+- The tool is designed to be easily integrated into a CI/CD pipeline, allowing for automated testing and deployment in git repositories. Developers can configure CI pipelines to run the [MRGT](@) with various configurations and ensure that any updates or changes do not introduce new issues.
+
+By effectively using the error handling, warnings, and logging mechanisms provided by the [MRGT](@), users can efficiently identify and resolve issues, ensuring smooth and reliable generation of [MRGs](@).

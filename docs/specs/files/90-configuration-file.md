@@ -85,14 +85,17 @@ Parameters that can be used by most, if not all tools can be put both in tool-sp
 | `scopedir: <path>`      | Y | Path of the scope directory where the SAF is located. |
 | `onNotExist: <action>`  | n | The action in case something that is necessary for further processing didn't exist. |
 
-The `<action>` parameter can take the following values.
+<details>
+  <summary>`onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
-| `'throw'`  | An error is thrown (an exception is raised), and processing will stop. |
-| `'warn'`   | A message is displayed (and logged) and processing continues. |
-| `'log'`    | A message is written to a log(file) and processing continues. |
-| `'ignore'` | Processing continues as if nothing happened. |
+| `'throw'`  | an error is thrown (an exception is raised), and processing will stop. |
+| `'warn'`   | a message is displayed (and logged) and processing continues. |
+| `'log'`    | a message is written to a log(file) and processing continues. |
+| `'ignore'` | processing continues as if nothing happened. |
+
+</details>
 
 </TabItem>
 
@@ -103,16 +106,18 @@ Parameters that are specific to the [MRG Import tool](@) can be put in the YAML 
 | MRG Import Parameters   | Req'd | Description |
 | :---------------------- | :---: | :---------- |
 | `onNotExist: <action>`  | n | The action in case an MRG file unexpectedly does not exist. |
-| `prune: <bool>`         | n | If `<bool>` is `true`, remove all [MRG](@) files in the [glossarydir](@) where the scopetag is not administered in the [SAF](@). |
 
-The `<action>` parameter can take the following values.
+<details>
+  <summary>`onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
-| `'throw'`  | An error is thrown (an exception is raised), and processing will stop. |
-| `'warn'`   | A message is displayed (and logged) and processing continues. |
-| `'log'`    | A message is written to a log(file) and processing continues. |
-| `'ignore'` | Processing continues as if nothing happened. |
+| `'throw'`  | an error is thrown (an exception is raised), and processing will stop. |
+| `'warn'`   | a message is displayed (and logged) and processing continues. |
+| `'log'`    | a message is written to a log(file) and processing continues. |
+| `'ignore'` | processing continues as if nothing happened. |
+
+</details>
 
 </TabItem>
 
@@ -132,18 +137,19 @@ See https://github.com/tno-terminology-design/tev2-tools/issues/6
 | `prune: <bool>`        | n | If `<bool>` is `true`, remove all [MRG](@) files in the local scope from the [glossarydir](@) where the vsntag (or altvsntag) is not administered in the [SAF](@) |
 -->
 
-The `<action>` parameter can take the following values.
+<details>
+  <summary>`onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
-| `'throw'`  | An error is thrown (an exception is raised), and processing will stop. |
-| `'warn'`   | A message is displayed (and logged) and processing continues. |
-| `'log'`    | A message is written to a log(file) and processing continues. |
-| `'ignore'` | Processing continues as if nothing happened. |
+| `'throw'`  | an error is thrown (an exception is raised), and processing will stop. |
+| `'warn'`   | a message is displayed (and logged) and processing continues. |
+| `'log'`    | a message is written to a log(file) and processing continues. |
+| `'ignore'` | processing continues as if nothing happened. |
 
-The `<macromap>` parameter
+</details>
 
-The `<macromap>` parameter is a (YAML) list of [form phrase macros](@) (it is a [form phrase macro map(@)). 
+The `<macromap>` parameter is a (YAML) list of [form phrase macros](@) (it is a [form phrase macro map](@)). 
 
 Here is an example of the `mrgt` section of the config file that contains a [macro map](@).
 
@@ -176,15 +182,6 @@ Parameters that are specific to the [hrgt](hrgt@) can be put in the YAML section
 Multiple [converters](@) can be specified, as `converter[1]`, `converter[2]`, etc.
 All [converters](@) that are specified will be executed for every [MRG entry](@)
 in the [MRG](@) for which the [HRG](@) is created.
-
-The `<action>` parameter can take the following values.
-
-| `<action>` | Description |
-| :--------- | :---------- |
-| `'throw'`  | An error is thrown (an exception is raised), and processing will stop. |
-| `'warn'`   | A message is displayed (and logged) and processing continues. |
-| `'log'`    | A message is written to a log(file) and processing continues. |
-| `'ignore'` | Processing continues as if nothing happened. |
 
 </TabItem>
 

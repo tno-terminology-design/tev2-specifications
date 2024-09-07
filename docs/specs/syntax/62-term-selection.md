@@ -55,12 +55,12 @@ Take care to properly nest quotes (as in the 'rename' instruction of the example
 | `"[ <f1>, <f2>, ... ]"`       | Create an [MRG entry](@) from *every* [curated text](@) that [matches](form-phrase#matching@) any of the [form phrases](@) `<f<i>>`. |
 | `"<key> [ <v1>, <v2>, ... ]"` | Create an [MRG entry](@) from every [curated text](@) that has a [header](@) with a field named `<key>`, and whose value matches any of the specified values `<v<i>>`.[^1] |
 
-[^1]: 'matching' means that [<mark>TBD: specify the matching algorithm, in particular when the field itself is an arry, such as `grouptags`, `headingids`, etc.</mark>]
+[^1]: 'matching' means that [<mark>TBD: specify the matching algorithm, in particular when the field itself is an array, such as `grouptags`, `headingids`, etc.</mark>].
 
 :::tip Adding terms from other scopes
-By adding `@<tid>` to any of the above instructions, you specify that the [MRG entries](@) that are to be selected must originate from the [terminology](@) that the [terminology identifier](@) `<tid>` identifies.
+By adding a [terminology identifier](@) `@<tid>` to any of the above instructions, you specify that the [MRG entries](@) that are to be selected must originate from the [terminology](@) that this [terminology identifier](@) `<tid>` identifies.
 
-The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) from the (default version) of the [MRG] as it exists in the [scope](@) `essif-lab`. Of course, `essif-lab` must be defined as a [scopetag](@) in one of the entries of the [scopes section](/docs/specs/files/saf#scopes) of the [SAF](@).
+The instruction `"[ party, actor ]@essif-lab"` will copy all [MRG entries](@) from the (default version) of the [MRG](@) as it exists in the [scope](@) `essif-lab`. Of course, `essif-lab` must be defined as a [scopetag](@) in one of the entries of the [scopes section](/docs/specs/files/saf#scopes) of the [SAF](@).
 :::
 
 <details>

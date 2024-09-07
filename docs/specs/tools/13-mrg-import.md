@@ -90,7 +90,8 @@ If a configuration file used, the long version of the parameter must be used (wi
 | `-V`, `--version`              | n | output the version number of the tool. |
 | `-h`, `--help`                 | n | display help for command. |
 
-The `<action>` parameter can take the following values:
+<details>
+  <summary>`-e`, `--onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
@@ -98,6 +99,8 @@ The `<action>` parameter can take the following values:
 | `'warn'`   | a message is displayed (and logged) and processing continues. |
 | `'log'`    | a message is written to a log(file) and processing continues. |
 | `'ignore'` | processing continues as if nothing happened. |
+
+</details>
 
 ## Running the Tool
 

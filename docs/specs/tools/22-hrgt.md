@@ -86,20 +86,26 @@ If a [configuration file](/docs/specs/files/configuration-file) used, the long v
 | Parameter                                | Req'd | Description |
 | :--------------------------------------- | :---: | :---------- |
 | `-V`, `--version`                          | n | output the version number of the tool. |
+| `-h`, `--help`                             | n | display help for command. |
 | `-c`, `--config <path>`                    | n | Path (including the filename) of the tool's (YAML) [configuration file](/docs/specs/files/configuration-file). |
-| `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
 | `-s`, `--scopedir <path>`                  | Y | Path of the scope directory where the SAF is located. |
+| `-o`, `--output <dir>`                     | Y | (Root) directory for output files to be written. |
+| `-f`, `--force`                            | n | Allow overwriting of existing files. |
 | `--int`, `--interpreter <type> or <regex>` | n | Specifies the [interpreter](@) to be used to detect [MRGRefs](@). This can either be a predefined interpreter, or a [regex](@). |
 | `--con[n]`, `--converter[n] <type> or <hexpr>`[^1] | n | Specifies the [converter](@) to be used to produce [HRG lists](@). This can either be a predefined converter, or a [handlebars template](@). See [HRGT Converters](#hrgt-converters) for details.  |
 | `--con[error]`, `--converter[error] <type> or <hexpr>` | n | Specifies the [converter](@) to be used to replace the [MRGRef](@) with in case the associated [MRG](@) file could not be found. |
 | `--sort`, `--sorter <type> or <hexpr>`     | n | Specifies the value to be used to sort [HRG lists](@). This can either be a predefined value, or a [handlebars template](@). |
 | `-e`, `--onNotExist <action>`              | n | The action in case a `vsntag` was specified, but wasn't found in the SAF. |
-| `-f`, `--force`                            | n | Allow overwriting of existing files. |
-| `-h`, `--help`                             | n | display help for command. |
 
 [^1]: Multiple converters may be specified by appending a number to the parameter key, e.g., `converter[1]: <template>` `converter[2]: <template>`, where `n` specifies the order in which converters are applied to every [MRG entry](@). Using `converter`, without a number, is equal to using `converter[1]`.
 
-The `<action>` parameter can take the following values:
+:::info Editor's Note
+The `-d` (`--debug`) option needs to be added when implemented.
+Note that this option should work the same for all tools, which currently is certainly not the case.
+:::
+
+<details>
+  <summary>`-e`, `--onNotExist` Actions</summary>
 
 | `<action>` | Description |
 | :--------- | :---------- |
@@ -107,6 +113,8 @@ The `<action>` parameter can take the following values:
 | `'warn'`   | a message is displayed (and logged) and processing continues. |
 | `'log'`    | a message is written to a log(file) and processing continues. |
 | `'ignore'` | processing continues as if nothing happened. |
+
+</details>
 
 ## HRG Generation {#what-it-does}
 

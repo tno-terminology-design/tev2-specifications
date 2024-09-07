@@ -1,6 +1,7 @@
 *.swp
 node_modules
 build
+docs/testdir
 
 .docusaurus
 .cache-loader

@@ -1828,7 +1828,7 @@ entries:
       - "running-the-tool"
       - "constructing-provisional-mrg"
       - "step-by-step-process"
-      - "phase-2:-post-processing-[synonyms](#post-processing-synonyms)"
+      - "synonym-processing"
       - "step-by-step-process"
       - "mrg-filenames"
       - "step-by-step-process"

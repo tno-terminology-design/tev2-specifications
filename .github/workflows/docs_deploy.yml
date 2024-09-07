@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20 # Updated to Node.js 20
 
       # TNO Terminology Design tools
       - name: Install terminology tools globally
@@ -44,6 +44,9 @@ jobs:
         with:
           commit_message: Update MRGs
           file_pattern: 'docs/glossaries/mrg.*.yaml'
+      
+      - name: Update Browserslist DB # Added step to update browserslist database
+        run: npx update-browserslist-db@latest --yes
       
       - name: Install Dependencies
         run: npm install

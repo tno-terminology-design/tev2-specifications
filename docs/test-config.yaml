@@ -22,14 +22,16 @@ hrgt:
   converter[2]: "{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\n\nSee: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\n\n{{else}}{{log level='silent'}}{{/if}}"  # add HRG-entries for abbreviations (i.e. that have a non-empty `glossaryAbbr` field)
   input:                         # glob pattern for files to be processed
     - "tev2-glossary.md"
-    - "tev2-glossaries-demo.md"
+#   - "tev2-glossaries-demo.md"
 
 ## Term Reference Resolution Tool
 trrt:
   interpreter: default           # `default`, `alt`, or regex
-  converter: html-hovertext-link # `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`, mustache/handlebars template
+  # converter: html-hovertext-link # `markdown-link`, `html-link`, `html-hovertext-link`, `html-glossarytext-link`, mustache/handlebars template
+  converter: '<a href="{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}" title="{{#if entry.hoverText}}{{entry.hoverText}}{{else}}{{#if entry.glossaryTerm}}{{entry.glossaryTerm}}{{else}}{{capFirst entry.term}}{{/if}}: {{noRefs entry.glossaryText type="markdown"}}{{/if}}">{{ref.showtext}}</a>'
   # The below is to be replaced with the converters as defined in the SAF:
   # converter[error]: remove-termref-and-log-error
   converter[error]: "{{ref.showtext}}{{log 'TRRT error converter:' err.dir '/' err.file '@' err.line ':' err.pos '[' ref.showtext ']' level='warn'}}"
+  output: .
   input:                         # glob pattern for files to be processed
-    - "**/*.md"
+    - "testdir/*.md"

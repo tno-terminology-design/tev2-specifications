@@ -6,10 +6,10 @@ displayed_sidebar: tev2SideBar
 term: synonym
 termType: concept
 isa: term
-glossaryTerm: Synonym (of a [term](@))
+glossaryTerm: Synonym (of a term)
 glossaryText: "a [term](@) that has the same (or sufficiently similar) meaning as another [term](@) (i.e., the [term](@) of which it is a [synonym](@)."
 grouptags: [ ]
-formPhrases: [ "synonym{ss}" ]
+formPhrases: [ "synonym{ss}, synonym (of a term)" ]
 # Origins/Acknowledgements
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"

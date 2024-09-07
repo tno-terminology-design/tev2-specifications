@@ -3,6 +3,9 @@ id: term-identifiers
 sidebar_label: Term Identifiers
 date: 20230915
 ---
+
+import APITable from '@site/src/components/APITable';
+
 # Term Identifier
 
 A **Term Identifier** is a [text](identifier@essif-lab) that is used for identifying a [semantic unit](@) within a designated [terminology](@). This means that it can be used for selecting an [MRG entry](@) that exists in the [MRG](@) associated with that [terminology](@). It does NOT mean that any such text will actually identify such an [MRG entry](@). [Term identifiers](@) can be ambiguous (refer to multiple [MRG entries](@)). It is also possible that a [term identifier](@) does not identify any such [MRG entry](@). 

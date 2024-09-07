@@ -47,7 +47,7 @@ There's a lot of duplication in syntax specs. For example, the [SAF spec](docs/s
 The tool can be installed from the command line and made globally available by executing
 
 <details>
-  <summary><Mark>This section is written when there's an actual tool to install</Mark></summary>
+  <summary><mark>This section is written when there's an actual tool to install</mark></summary>
 
 We expect that it will be something like
 

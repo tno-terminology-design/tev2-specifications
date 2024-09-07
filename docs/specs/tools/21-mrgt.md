@@ -182,7 +182,7 @@ An [MRG](@) SHOULD NOT have two (or more) [MRG entries](@) that have a same elem
 6. **Resulting [Provisional MRG](@):**
    - The output of Phase 1 is a **[provisional MRG](@)** for each version specified. These [provisional MRGs](@) serve as intermediate representations that will be refined, validated, and finalized in subsequent phases.
 
-### Phase 2: Post-Processing [Synonyms](#post-processing-synonyms)
+### Phase 2: Synonym Processing {#synonym-processing}
 
 In Phase 2, the [MRGT](@) tool processes [synonyms](@) in the [provisional MRG](@) to ensure that terms defined as synonyms of other terms are correctly handled and represented. This phase **can only begin** after all [provisional MRGs](@) have been fully constructed and stored in the [glossarydir](@) of the [current scope](@) during Phase 1, because only then all (provisional) MRG entries will be available that `synonymOf` fields refer to.
 

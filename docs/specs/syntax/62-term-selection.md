@@ -12,6 +12,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+export const mark = ({children}) => (
+  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
+    {children}
+  </span> );
+
 A [term selection instruction](@) is a specification for the [MRGT](@) to modify the [provisional MRG](@) that it is working with should be modified. This documents specifies the syntax for the various instructions.
 
 [Term selection instructions](@) are used in the [`versions` section](/docs/specs/files/saf#versions) of the [SAF](@), where the various [MRG](@) (versions) for the [scope](@) are defined.

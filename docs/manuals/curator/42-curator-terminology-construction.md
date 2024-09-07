@@ -9,6 +9,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+export const mark = ({children}) => (
+  <span style={{ color:'black', backgroundColor:'yellow', padding:'0.2rem', borderRadius:'2px', }}>
+    {children}
+  </span> );
+
 # Terminology Construction
 
 [Curators](@) need the ability to construct one or more (versions of) [terminologies](@) for any [scope](@) they [curate](@). Creating a [terminology](@) consists of

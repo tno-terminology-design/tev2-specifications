@@ -10,7 +10,7 @@ glossaryTerm: "Handlebars Object"
 glossaryText: "a data object, that serves as the source of (context dependent) data from which a text is produced according to the specifications of a [Handlebars template](@)."
 glossaryNotes:
 - "The [converter profile](@) of a [text conversion tool](@) specifies the structure (type) of the data objects that it will pass to its [converters](@)"
-formPhrases: [ "handlebar{ss}-object{ss}", "converter-profile-object{ss}" ]
+formPhrases: [ "handlebar{ss}-object{ss}" ]
 # Origins/Acknowledgements
 attribution: "[TNO Terminology Design](https://tno-terminology-design.github.io/tev2-specifications/docs)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"
@@ -21,6 +21,8 @@ originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?
 A **Handlebars Object** is a data object, that serves as the source of (context dependent) data from which a text is produced according to the specifications of a [Handlebars template](@).
 
 Within [TEv2](@), [Handlebars objects](@) are used by the [text conversion tools](@). The [converter profile](@) of each such tool [specifies the type (classes)](converter-profile#object-spec@) of the [objects](handlebars-object@) that will be presented to the [converter](@).
+
+See also: [Converter Profile Object](@).
 
 ## Example:
 

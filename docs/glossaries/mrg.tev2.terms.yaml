@@ -255,6 +255,9 @@ entries:
     headingids:
       - "converter-profile"
       - "object-spec"
+      - "in-this-section,-you-will-find-the-entire-mrg-to-which-the-entry-belongs"
+      - "we-haven't-put-that-in-this-example-to-keep-it-manageable."
+      - "see-the-specifications-of-mrg-files-for-their-construciton."
       - "`int`-fields"
       - "`ref`-fields"
       - "`entry`-fields"

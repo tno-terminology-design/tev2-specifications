@@ -83,18 +83,9 @@ entry:
   termid: "concept:converter-profile"
   vsntag: "documentation"
 mrg:
-  scopetag: "tev2"
-  scopedir: "https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs"
-  curatedir: "terms"
-  glossarydir: "glossaries"
-  defaultvsn: "documentation"
-  website: "https://tno-terminology-design.github.io/tev2-specifications/docs"
-  navpath: "/terms"
-  navid: "id"
-  license: "LICENSE.md"
-  vsntag: "documentation"
-  altvsntags:
-    - "latest"
+#  In this section, you will find the entire MRG to which the Entry belongs
+#  We haven't put that in this example to keep it manageable.
+#  See the specifications of MRG files for their construciton.
 saf:
   scope:
     scopetag: mve
@@ -251,7 +242,6 @@ ref:
 
 </Tabs>
 
-
 ### `entry` fields
 
 The `entry` section of a converter profile specifies the particulars of the [MRG entry](@) that was selected. If no [MRG entry](@) was selected, this section is empty, or does not exist.
@@ -298,33 +288,11 @@ entry:
 
 ### `mrg` fields
 
-The `mrg` section of a converter profile contains the [terminology section](/docs/specs/files/mrg#terminology) of the [MRG](@) to which the selected [MRG entry](@) belongs. If the [MRG](@) could not be found, this section may be empty, or nonexistent.
-
-<details>
-  <summary>Example of `entry` field</summary>
-
-~~~ yaml
-mrg:
-  scopetag: "tev2"
-  scopedir: "https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs"
-  curatedir: "terms"
-  glossarydir: "glossaries"
-  defaultvsn: "documentation"
-  website: "https://tno-terminology-design.github.io/tev2-specifications/docs"
-  navpath: "/terms"
-  navid: "id"
-  license: "LICENSE.md"
-  vsntag: "documentation"
-  altvsntags:
-    - "latest"
-~~~
-
-</details>
+The `mrg` section of a converter profile contains the entire [MRG](@) in which the [MRG entry](@) is located. See the section [MRG structure](/docs/specs/files/mrg#structure) for the details.
 
 ### `saf` fields
 
-The `saf` section of a converter profile specifies the entire [SAF](@), as specified [here](/docs/specs/files/saf) of [current scope](@). Examples are given there as well.
-
+The `saf` section of a converter profile contains the entire [SAF](@) of the [current scope](@). See the section [Scope Aministration File (SAF)](/docs/specs/files/saf) for the details.
 
 ### `err` fields
 

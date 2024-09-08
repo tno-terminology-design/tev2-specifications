@@ -250,7 +250,7 @@ Converters can use the [TEv2 helper functions](@) and [block helpers](https://ha
 <a href="{{localize entry.navurl}}">{{capFirst entry.term}}</a>
 
 {{#if entry.glossaryText}}
-  *Text derived from the {{mrg.scopetag}} glossary at {{mrg.website}}.*
+  *Text derived from the {{mrg.terminlogy.scopetag}} glossary at {{mrg.terminlogy.website}}.*
   {{entry.glossaryText}}
 {{else}}
   No description available here at {{err.file}}, please see {{entry.navurl}}.

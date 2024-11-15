@@ -220,6 +220,19 @@ The website context is specified by the `website` value of the [MRG](@) in the c
 
 The helper `localize` parses the value it was given as a URL and compares it to the `website` value of the [MRG](@) in the converter profile. If both the `host` values (e.g., tno-terminology-design.github.io) match, the `pathname` of the URL is returned. If the given value cannot be interpreted as a URL, or the `host` values do not match, the input value is returned. This can be useful in situations where external links (URL's pointing to a website other than the current `host`) are handled differently from internal links.
 
+## `sort` {#sort}
+
+The function of the helper `sort` is to alphabetically sort an array of texts. 
+
+```ts title="Examples for 'sort'"
+// Input (entry.sources): [ "aap", "noot", "mies", "wim", "zus", "jet" ]
+{{#each (sort sources)}}<br/>- {{this}}{{/each}}
+// Output: "ex-ample"
+<br/>- aap<br/>- jet<br/>- mies<br/>- noot<br/>- wim<br/>- zus
+```
+
+The helper `regularize` converts the input string into a [regularized text](@), according to the [regularization process](regularized-text#regularization-process@).
+
 ## `ifValue` {#ifvalue}
 
 The `ifValue` helper allows you to conditionally display text based on various comparisons. This can be useful for showing or hiding content depending on specific values, statuses, or other conditions.

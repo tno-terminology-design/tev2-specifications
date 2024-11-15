@@ -1037,6 +1037,7 @@ entries:
       - "norefs"
       - "regularize"
       - "localize"
+      - "sort"
       - "ifvalue"
       - "`equals`"
       - "example:-display-a-warning-for-deprecated-terms"

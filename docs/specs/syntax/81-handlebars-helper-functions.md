@@ -231,7 +231,7 @@ The function of the helper `sort` is to alphabetically sort an array of texts.
 <br/>- aap<br/>- jet<br/>- mies<br/>- noot<br/>- wim<br/>- zus
 ```
 
-The helper `regularize` converts the input string into a [regularized text](@), according to the [regularization process](regularized-text#regularization-process@).
+The helper `sort` converts the array of strings that is its input, into an alphabetically sorted list strings, which can then be looped over by `#each`.
 
 ## `ifValue` {#ifvalue}
 
